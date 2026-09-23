@@ -1,3 +1,0 @@
-# Command Server Watch
-
-Threat actors leave infrastructure running longer than they should. command-server-watch tracks it — active command-and-control servers, known malicious hosts, and beacon endpoints identified in the wild. Data is sourced from open threat intelligence, updated continuously, and published without a key or quota. Built for defenders, researchers, and anyone mapping adversary infrastructure in the open.
