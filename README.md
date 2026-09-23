@@ -1,9 +1,10 @@
 # Aggregator
 
 ```bash
-cd src
-~/venv/bin/python -m aggregator
+go run ./cmd/aggregator
 ```
+
+Flags: `-sources` (default `sources.json`), `-out` (default `out/`), `-env` (default `.env`).
 
 - https://tracker.viriback.com/
 - https://threatfox.abuse.ch/browse/
@@ -13,8 +14,7 @@ cd src
 # Tracker
 
 ```bash
-cd src
-~/venv/bin/python -m tracker
+go run ./cmd/tracker
 ```
 
 - [Hunting C2 with Shodan by Michael Koczwara](https://michaelkoczwara.medium.com/hunting-c2-with-shodan-223ca250d06f)
@@ -28,3 +28,9 @@ cd src
 - [https://gi7w0rm.medium.com/the-curious-case-of-the-7777-botnet-86e3464c3ffd](https://gi7w0rm.medium.com/the-curious-case-of-the-7777-botnet-86e3464c3ffd)
 - [https://twitter.com/Glacius_/status/1731699013873799209](https://twitter.com/Glacius_/status/1731699013873799209)
 - [https://www.team-cymru.com/post/botnet-7777-are-you-betting-on-a-compromised-router](https://www.team-cymru.com/post/botnet-7777-are-you-betting-on-a-compromised-router)
+
+# Tests
+
+```bash
+go test ./...
+```
