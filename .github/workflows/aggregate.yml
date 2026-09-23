@@ -22,11 +22,13 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            # Source code lives on main, which scheduled runs are triggered from
+            # Source code lives on main, which scheduled runs are triggered from.
+            # BOT_PAT lets the stats step push back to main
             - name: Checkout source code
               uses: actions/checkout@v4
               with:
                   fetch-depth: 1
+                  token: ${{ secrets.BOT_PAT }}
 
             # Check out straight into the aggregator's output directory so it
             # merges new results into the existing files
@@ -50,6 +52,7 @@ jobs:
                   ABUSECH_API_KEY: ${{ secrets.ABUSECH_API_KEY }}
 
             - name: Commit and push data branch
+              id: data
               working-directory: out
               run: |
                   git config user.name "HoardCTI [bot]"
@@ -60,7 +63,38 @@ jobs:
 
                   if git diff --staged --quiet; then
                     echo "No changes to commit"
+                    echo "changed=false" >> "$GITHUB_OUTPUT"
                   else
                     git commit -m "Update C2 - $(date -u +'%Y-%m-%d %H:%M:%S')"
                     git push origin "HEAD:$DATA_BRANCH"
+                    echo "changed=true" >> "$GITHUB_OUTPUT"
                   fi
+
+            # Only when the data changed, so last_edit is the last data update
+            # and main doesn't get an empty commit every hour. Skipped on manual
+            # runs from other branches so they never push to main.
+            - name: Update stats.json and push to main
+              if: steps.data.outputs.changed == 'true' && github.ref == 'refs/heads/main'
+              run: |
+                  # Every IP is stored as exactly one .json file
+                  SERVERS=0
+                  for dir in out/ipv4 out/ipv6; do
+                    if [ -d "$dir" ]; then
+                      SERVERS=$((SERVERS + $(find "$dir" -type f -name '*.json' | wc -l)))
+                    fi
+                  done
+
+                  LAST_EDIT=$(date -u +'%d %b %Y, %H:%M UTC')
+
+                  printf '{\n    "servers": "%s",\n    "last_edit": "%s"\n}\n' "$SERVERS" "$LAST_EDIT" > stats.json
+                  cat stats.json
+
+                  git config user.name "HoardCTI [bot]"
+                  git config user.email "admin@hoardcti.com"
+
+                  git add stats.json
+                  git commit -m "Update stats - $SERVERS servers"
+
+                  # Pick up anything pushed to main while this run was going
+                  git pull --rebase origin main
+                  git push origin HEAD:main
