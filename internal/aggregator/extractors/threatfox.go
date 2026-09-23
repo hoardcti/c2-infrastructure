@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -44,7 +45,9 @@ func ThreatFox(ctx context.Context, client *http.Client, url string, query map[s
 	defer resp.Body.Close()
 
 	if http.StatusOK != resp.StatusCode {
-		return nil, fmt.Errorf("failed to fetch from %s (HTTP %d)", url, resp.StatusCode)
+		// abuse.ch explains auth failures in the body, e.g. {"query_status": "unknown_auth_key"}
+		detail, _ := io.ReadAll(io.LimitReader(resp.Body, 512))
+		return nil, fmt.Errorf("failed to fetch from %s (HTTP %d): %s", url, resp.StatusCode, strings.Join(strings.Fields(string(detail)), " "))
 	}
 
 	var jsonResponse map[string]any

@@ -6,6 +6,7 @@ import (
 	"io"
 	"net/http"
 	"net/http/httptest"
+	"strings"
 	"testing"
 )
 
@@ -173,6 +174,20 @@ func TestThreatFoxErrors(t *testing.T) {
 				t.Error("ThreatFox() error = nil, want error")
 			}
 		})
+	}
+}
+
+func TestThreatFoxHTTPErrorIncludesBody(t *testing.T) {
+	srv, _, _ := threatFoxServer(t, http.StatusForbidden, "{\n    \"query_status\": \"unknown_auth_key\"\n}")
+
+	_, err := ThreatFox(context.Background(), srv.Client(), srv.URL, validQuery)
+	if nil == err {
+		t.Fatal("ThreatFox() error = nil, want error")
+	}
+
+	want := `(HTTP 403): { "query_status": "unknown_auth_key" }`
+	if false == strings.HasSuffix(err.Error(), want) {
+		t.Errorf("error = %q, want suffix %q", err, want)
 	}
 }
 
