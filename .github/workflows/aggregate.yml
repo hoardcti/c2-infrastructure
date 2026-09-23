@@ -1,0 +1,83 @@
+name: Aggregate
+
+on:
+    schedule:
+        - cron: "0 * * * *"
+    workflow_dispatch: # Allow manual trigger
+
+# Pushes go through BOT_PAT, so the default token only needs to read
+permissions:
+    contents: read
+
+# Never let two runs push to the data branch at the same time
+concurrency:
+    group: aggregate
+    cancel-in-progress: false
+
+env:
+    # Directory on the workflow branch that holds the Go module
+    CODE_DIR: new
+    DATA_BRANCH: data
+
+jobs:
+    aggregate:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout workflow branch
+              uses: actions/checkout@v4
+              with:
+                  ref: workflow
+                  fetch-depth: 1
+
+            - name: Check whether the data branch exists
+              id: data
+              run: |
+                  if git ls-remote --exit-code --heads origin "$DATA_BRANCH" > /dev/null; then
+                    echo "exists=true" >> "$GITHUB_OUTPUT"
+                  else
+                    echo "exists=false" >> "$GITHUB_OUTPUT"
+                  fi
+
+            # Check out straight into the aggregator's output directory so it
+            # merges new results into the existing files
+            - name: Checkout data branch into out/
+              uses: actions/checkout@v4
+              with:
+                  ref: ${{ steps.data.outputs.exists == 'true' && env.DATA_BRANCH || github.event.repository.default_branch }}
+                  path: out
+                  fetch-depth: 1
+                  token: ${{ secrets.BOT_PAT }}
+
+            - name: Create data branch
+              if: steps.data.outputs.exists != 'true'
+              working-directory: out
+              run: git switch --orphan "$DATA_BRANCH"
+
+            - name: Setup Go
+              uses: actions/setup-go@v5
+              with:
+                  go-version-file: ${{ env.CODE_DIR }}/go.mod
+                  cache: false # No dependencies, so there is no go.sum to key on
+
+            - name: Run Aggregate
+              working-directory: ${{ env.CODE_DIR }}
+              run: go run ./cmd/aggregator -out "$GITHUB_WORKSPACE/out"
+              env:
+                  ABUSE_CH_KEY: ${{ secrets.ABUSE_CH_KEY }}
+
+            - name: Commit and push data branch
+              working-directory: out
+              run: |
+                  git config user.name "HoardCTI [bot]"
+                  git config user.email "admin@hoardcti.com"
+
+                  # Add all files (new, modified, deleted)
+                  git add -A
+
+                  if git diff --staged --quiet; then
+                    echo "No changes to commit"
+                  else
+                    git commit -m "Update C2 - $(date -u +'%Y-%m-%d %H:%M:%S')"
+                    git push origin "HEAD:$DATA_BRANCH"
+                  fi

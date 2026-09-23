@@ -1,0 +1,266 @@
+{
+    "aggregator": {
+        "git": [
+            {
+                "name": "criminalip",
+                "url": "https://github.com/criminalip/C2-Daily-Feed",
+                "url_raw": "https://raw.githubusercontent.com/criminalip/C2-Daily-Feed/refs/heads/main/",
+                "file_format": "YYYY-MM-DD.csv",
+                "type": "csv",
+                "metadata": {
+                    "cron": "10 1 * * *"
+                }
+            }
+        ],
+        "json": [
+            {
+                "name": "feodotracker",
+                "url": "https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.json"
+            }
+        ],
+        "csv": [
+            {
+                "name": "viribacktracker",
+                "url": "https://tracker.viriback.com/last30.php"
+            }
+        ],
+        "api": [
+            {
+                "name": "threatfox",
+                "url": "https://threatfox-api.abuse.ch/api/v1/",
+                "query": {
+                    "query": "taginfo",
+                    "tag": "c2 ",
+                    "days": 1,
+                    "limit": 1000
+                }
+            }
+        ]
+    },
+    "tracker": {
+        "censys": [
+            {
+                "name": "Metasploit C2",
+                "flag": "c2_metasploit",
+                "fragments": {
+                    "metasploit_tls_subject": {
+                        "or": [
+                            {
+                                "field": "services.tls.certificates.leaf_data.subject.organization",
+                                "eq": "Rapid7"
+                            },
+                            {
+                                "field": "services.tls.certificates.leaf_data.subject.common_name",
+                                "eq": "MetasploitSelfSignedCA"
+                            }
+                        ]
+                    }
+                },
+                "query": {
+                    "or": [
+                        {
+                            "and": [
+                                {
+                                    "field": "services.http.response.html_title",
+                                    "eq": "Metasploit"
+                                },
+                                {
+                                    "ref": "metasploit_tls_subject"
+                                }
+                            ]
+                        },
+                        {
+                            "field": "services.jarm.fingerprint",
+                            "in": [
+                                "07d14d16d21d21d00042d43d000000aa99ce74e2c6d013c745aa52b5cc042d",
+                                "07d14d16d21d21d07c42d43d000000f50d155305214cf247147c43c0f1a823"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Cobalt Strike C2",
+                "flag": "c2_cobaltstrike",
+                "query": {
+                    "or": [
+                        {
+                            "field": "services.certificate",
+                            "in": [
+                                "64257fc0fac31c01a5ccd816c73ea86e639260da1604d04db869bb603c2886e6",
+                                "87f2085c32b6a2cc709b365f55873e207a9caa10bffecf2fd16d3cf9d94d390c"
+                            ]
+                        },
+                        {
+                            "field": "services.tls.certificates.leaf_data.issuer.common_name",
+                            "eq": "Major Cobalt Strike"
+                        },
+                        {
+                            "field": "services.tls.certificates.leaf_data.subject.common_name",
+                            "eq": "Major Cobalt Strike"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Merlin C2",
+                "flag": "c2_merlin",
+                "query": {
+                    "field": "services.jarm.fingerprint",
+                    "eq": "29d21b20d29d29d21c41d21b21b41d494e0df9532e75299f15ba73156cee38"
+                }
+            },
+            {
+                "name": "Mythic C2",
+                "flag": "c2_mythic",
+                "query": {
+                    "scope": "services",
+                    "and": [
+                        {
+                            "field": "port",
+                            "eq": 7443
+                        },
+                        {
+                            "field": "tls.certificates.leaf_data.subject.organization",
+                            "eq": "Mythic"
+                        }
+                    ]
+                }
+            }
+        ],
+        "shodan": [
+            {
+                "name": "Metasploit C2",
+                "flag": "c2_metasploit",
+                "queries": [
+                    "http.favicon.hash: -127886975",
+                    "ssl:MetasploitSelfSignedCA",
+                    "http.html: \"msf4\""
+                ]
+            },
+            {
+                "name": "Cobalt Strike C2",
+                "flag": "c2_cobaltstrike",
+                "queries": [
+                    "ssl.jarm: 07d14d16d21d21d07c42d41d00041d24a458a375eef0c576d23a7bab9a9fb1+port: 443,",
+                    "ssl.cert.serial: 146473198",
+                    "product: \"Cobalt Strike Beacon\"",
+                    "http.html: \"cs4.4\""
+                ]
+            },
+            {
+                "name": "Covenant C2",
+                "flag": "c2_covenant",
+                "queries": [
+                    "http.favicon.hash: -737603591",
+                    "ssl:Covenant",
+                    "http.component:Blazor"
+                ]
+            },
+            {
+                "name": "Sliver C2",
+                "flag": "c2_sliver",
+                "queries": [
+                    "http.html: \"sliver-client\"",
+                    "ssl:multiplayer ssl:operators",
+                    "product: \"Sliver C2\"\"HTTP/1.1 404 Not Found\"\"Cache-Control: no-store, no-cache, must-revalidate\"\"Content-Length: 0\" -\"Server:\" -\"Pragma:\""
+                ]
+            },
+            {
+                "name": "Mythic C2",
+                "flag": "c2_mytic",
+                "queries": [
+                    "ssl:Mythic port: 7443",
+                    "http.favicon.hash: -859291042"
+                ]
+            },
+            {
+                "name": "PoshC2",
+                "flag": "c2_poshc2",
+                "queries": [
+                    "ssl:P18055077"
+                ]
+            },
+            {
+                "name": "Brute Ratel C4",
+                "flag": "c2_bruteratel",
+                "queries": [
+                    "http.html_hash: -1957161625",
+                    "product: \"Brute Ratel C4\""
+                ]
+            },
+            {
+                "name": "Deimos C2",
+                "flag": "c2_deimos",
+                "queries": [
+                    "http.html_hash: -14029177"
+                ]
+            },
+            {
+                "name": "PANDA C2",
+                "flag": "c2_panda",
+                "queries": [
+                    "http.html:\"PANDA\" http.html:\"layui\""
+                ]
+            },
+            {
+                "name": "AcridRain Stealer",
+                "flag": "c2_acridrain",
+                "queries": [
+                    "http.html:\"AcridRain Stealer\""
+                ]
+            },
+            {
+                "name": "Grand Misha (aka Misha Stealer)",
+                "flag": "c2_grandmisha",
+                "queries": [
+                    "http.title:\"misha\" http.component:\"UIKit\""
+                ]
+            },
+            {
+                "name": "Patriot Stealer",
+                "flag": "c2_patriot",
+                "queries": [
+                    "http.favicon.hash: 274603478",
+                    "http.html: \"patriotstealer\""
+                ]
+            },
+            {
+                "name": "RAXNET Bitcoin Stealer",
+                "flag": "c2_raxnet",
+                "queries": [
+                    "http.favicon.hash:-1236243965"
+                ]
+            },
+            {
+                "name": "Titan Stealer",
+                "flag": "c2_titan",
+                "queries": [
+                    "http.html:\"Titan Stealer\""
+                ]
+            },
+            {
+                "name": "Collector Stealer",
+                "flag": "c2_collectorstealer",
+                "queries": [
+                    "http.html: \"Collector Stealer\"",
+                    "http.html: \"getmineteam\""
+                ]
+            },
+            {
+                "name": "Mystic Stealer",
+                "flag": "c2_mysticstealer",
+                "queries": [
+                    "http.html: \"Mystic Stealer\""
+                ]
+            },
+            {
+                "name": "PowerSploit Windows PowerShell Exploitation",
+                "flag": "c2_powersploit",
+                "queries": [
+                    "http.html: \"PowerSploit\""
+                ]
+            }
+        ]
+    }
+}
