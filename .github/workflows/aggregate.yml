@@ -15,8 +15,6 @@ concurrency:
     cancel-in-progress: false
 
 env:
-    # Directory on the workflow branch that holds the Go module
-    CODE_DIR: new
     DATA_BRANCH: data
 
 jobs:
@@ -24,45 +22,30 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout workflow branch
+            # Source code lives on main, which scheduled runs are triggered from
+            - name: Checkout source code
               uses: actions/checkout@v4
               with:
-                  ref: workflow
                   fetch-depth: 1
-
-            - name: Check whether the data branch exists
-              id: data
-              run: |
-                  if git ls-remote --exit-code --heads origin "$DATA_BRANCH" > /dev/null; then
-                    echo "exists=true" >> "$GITHUB_OUTPUT"
-                  else
-                    echo "exists=false" >> "$GITHUB_OUTPUT"
-                  fi
 
             # Check out straight into the aggregator's output directory so it
             # merges new results into the existing files
             - name: Checkout data branch into out/
               uses: actions/checkout@v4
               with:
-                  ref: ${{ steps.data.outputs.exists == 'true' && env.DATA_BRANCH || github.event.repository.default_branch }}
+                  ref: ${{ env.DATA_BRANCH }}
                   path: out
                   fetch-depth: 1
                   token: ${{ secrets.BOT_PAT }}
 
-            - name: Create data branch
-              if: steps.data.outputs.exists != 'true'
-              working-directory: out
-              run: git switch --orphan "$DATA_BRANCH"
-
             - name: Setup Go
               uses: actions/setup-go@v5
               with:
-                  go-version-file: ${{ env.CODE_DIR }}/go.mod
+                  go-version-file: go.mod
                   cache: false # No dependencies, so there is no go.sum to key on
 
             - name: Run Aggregate
-              working-directory: ${{ env.CODE_DIR }}
-              run: go run ./cmd/aggregator -out "$GITHUB_WORKSPACE/out"
+              run: go run ./cmd/aggregator -out out
               env:
                   ABUSE_CH_KEY: ${{ secrets.ABUSE_CH_KEY }}
 
