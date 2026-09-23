@@ -84,6 +84,9 @@ jobs:
                     fi
                   done
 
+                  # Thousands separators, e.g. 3204 -> 3,204
+                  SERVERS=$(echo "$SERVERS" | sed -E ':a; s/([0-9])([0-9]{3})($|,)/\1,\2\3/; ta')
+
                   LAST_EDIT=$(date -u +'%d %b %Y, %H:%M UTC')
 
                   printf '{\n    "servers": "%s",\n    "last_edit": "%s"\n}\n' "$SERVERS" "$LAST_EDIT" > stats.json
