@@ -47,7 +47,7 @@ jobs:
             - name: Run Aggregate
               run: go run ./cmd/aggregator -out out
               env:
-                  ABUSE_CH_KEY: ${{ secrets.ABUSE_CH_KEY }}
+                  ABUSECH_API_KEY: ${{ secrets.ABUSECH_API_KEY }}
 
             - name: Commit and push data branch
               working-directory: out

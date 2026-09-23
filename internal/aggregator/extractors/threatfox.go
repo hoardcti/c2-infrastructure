@@ -16,7 +16,7 @@ import (
 )
 
 // ThreatFox queries the ThreatFox API with query and returns a payload for
-// every ip:port IOC in the response. The API key is read from ABUSE_CH_KEY.
+// every ip:port IOC in the response. The API key is read from ABUSECH_API_KEY.
 func ThreatFox(ctx context.Context, client *http.Client, url string, query map[string]any) ([]payload.Payload, error) {
 	if false == truthy(query["limit"]) || false == truthy(query["query"]) {
 		return nil, errors.New("invalid query: missing 'limit' or 'query' fields")
@@ -35,7 +35,7 @@ func ThreatFox(ctx context.Context, client *http.Client, url string, query map[s
 	}
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("Content-Type", "application/json")
-	req.Header.Set("Auth-Key", os.Getenv("ABUSE_CH_KEY"))
+	req.Header.Set("Auth-Key", os.Getenv("ABUSECH_API_KEY"))
 
 	resp, err := client.Do(req)
 	if nil != err {

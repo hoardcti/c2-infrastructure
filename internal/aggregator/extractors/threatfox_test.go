@@ -39,7 +39,7 @@ func threatFoxServer(t *testing.T, status int, response string) (*httptest.Serve
 var validQuery = map[string]any{"query": "taginfo", "tag": "c2 ", "days": float64(1), "limit": float64(1000)}
 
 func TestThreatFox(t *testing.T) {
-	t.Setenv("ABUSE_CH_KEY", "secret")
+	t.Setenv("ABUSECH_API_KEY", "secret")
 
 	response := `{
 		"query_status": "ok",
