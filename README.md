@@ -1,14 +1,14 @@
-# command-server-watch
+# c2-infrastructure
 
 Collects command and control (C2) server IPs from public threat intelligence sources and emits them as normalised Hoard CTI records.
 
-![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhoardcti%2Fcommand-server-watch%2Frefs%2Fheads%2Fmain%2Fstats.json&query=servers&label=C2%20Servers&color=A1BC98&style=flat-square) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhoardcti%2Fcommand-server-watch%2Frefs%2Fheads%2Fmain%2Fstats.json&query=last_edit&label=Last%20Updated&color=A1BC98&style=flat-square)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhoardcti%2Fc2-infrastructure%2Frefs%2Fheads%2Fmain%2Fstats.json&query=servers&label=C2%20Servers&color=A1BC98&style=flat-square) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhoardcti%2Fc2-infrastructure%2Frefs%2Fheads%2Fmain%2Fstats.json&query=last_edit&label=Last%20Updated&color=A1BC98&style=flat-square)
 
 ## Overview
 
 Security tooling often needs to answer one question quickly: *is this IP a known C2 server, and what is it running?* Public trackers publish this data in different formats, field names and timestamp conventions, so every consumer ends up writing the same parsers.
 
-[`command-server-watch`](https://github.com/hoardcti/command-server-watch) is a Hoard CTI source module. It pulls C2 indicators from upstream trackers every hour and stores each IP as its own JSON file, merging sightings from every source that reports it.
+[`c2-infrastructure`](https://github.com/hoardcti/c2-infrastructure) is a Hoard CTI source module. It pulls C2 indicators from upstream trackers every hour and stores each IP as its own JSON file, merging sightings from every source that reports it.
 
 It records what public feeds report. It does not scan, probe or connect to the listed servers.
 
@@ -75,8 +75,8 @@ To run it on a fork, add these repository secrets:
 For local development, build from source (requires Go 1.24 or later):
 
 ```bash
-git clone https://github.com/hoardcti/command-server-watch.git
-cd command-server-watch
+git clone https://github.com/hoardcti/c2-infrastructure.git
+cd c2-infrastructure
 go build ./...
 ```
 
@@ -107,16 +107,16 @@ Lookups accept IPv4 and IPv6 addresses, in any IPv6 notation. Responses are cach
 > [!WARNING]
 > Storing output on the `data` branch is **temporary**. The storage and distribution mechanism will change as Hoard CTI's architecture is finalised. Do not build production integrations against the `data` branch or its layout — use the API above.
 
-All collected data is currently committed to the [`data`](https://github.com/hoardcti/command-server-watch/tree/data) branch as one JSON file per IP, laid out as described in [Output](#output).
+All collected data is currently committed to the [`data`](https://github.com/hoardcti/c2-infrastructure/tree/data) branch as one JSON file per IP, laid out as described in [Output](#output).
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/hoardcti/command-server-watch/data/ipv4/1/15/76/39.json
+curl -fsSL https://raw.githubusercontent.com/hoardcti/c2-infrastructure/data/ipv4/1/15/76/39.json
 ```
 
 Fetch the whole dataset:
 
 ```bash
-git clone --branch data --single-branch --depth 1 https://github.com/hoardcti/command-server-watch.git command-server-watch-data
+git clone --branch data --single-branch --depth 1 https://github.com/hoardcti/c2-infrastructure.git c2-infrastructure-data
 ```
 
 ## Development
