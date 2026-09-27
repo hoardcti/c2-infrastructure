@@ -101,6 +101,15 @@ repositories are expected to have a real test suite wired into
 [`.github/workflows/ci.yml`](.github/workflows/ci.yml) — the CI file ships with
 workflow linting and scanner tests already, and you extend it.
 
+This repository's Go code follows the
+[hoardCTI Go style guide](https://style.hoardcti.com/v1/golang/). Run every check
+the Go CI job runs (tidy, format, lint, `go fix`, tests with 100% coverage,
+`govulncheck` and the build) with:
+
+```bash
+make check
+```
+
 ## Never commit credentials
 
 The secret scanner runs on every pull request and on a schedule across the

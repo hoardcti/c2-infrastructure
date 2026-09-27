@@ -1,7 +1,8 @@
 # Outputs
 out/
 
-# Binaries
+# Binaries (make build writes to bin/)
+/bin/
 /aggregator
 /tracker
 *.exe
@@ -18,3 +19,12 @@ coverage.*
 # Environments
 .env
 .envrc
+
+# Go workspaces point at local directories and are never committed
+go.work
+go.work.sum
+
+# Editor settings belong in each developer's own configuration
+.vscode/
+.idea/
+.nvim.lua
