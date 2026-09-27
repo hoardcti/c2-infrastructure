@@ -1,116 +1,75 @@
-package extractors
+package aggregator
 
 import (
-	"regexp"
+	"errors"
+	"net/http"
+	"strings"
 	"testing"
+	"testing/iotest"
 
-	"github.com/doodad-labs/command-server-watch/internal/payload"
+	"github.com/google/go-cmp/cmp"
 )
 
-// isoFormat matches the output of payload.ISOFormat.
-var isoFormat = regexp.MustCompile(`^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{6})?$`)
+// TestReadCSVRows checks that the header is dropped, quoted fields and CRLF line endings are
+// read, and rows with the wrong number of columns are skipped with a warning.
+func TestReadCSVRows(test *testing.T) {
+	test.Parallel()
 
-// assertSingleResult checks the fields every extractor sets identically.
-func assertSingleResult(t *testing.T, p payload.Payload, ip, source, flag string) payload.Result {
-	t.Helper()
-
-	if ip != p.IP {
-		t.Errorf("ip = %q, want %q", p.IP, ip)
-	}
-	if 1 != len(p.Flags) || flag != p.Flags[0] {
-		t.Errorf("flags = %v, want [%s]", p.Flags, flag)
-	}
-	if 1 != len(p.Results) {
-		t.Fatalf("len(results) = %d, want 1", len(p.Results))
-	}
-
-	r := p.Results[0]
-	if source != r.Source {
-		t.Errorf("source = %q, want %q", r.Source, source)
-	}
-	if 1 != len(r.Flags) || flag != r.Flags[0] {
-		t.Errorf("result flags = %v, want [%s]", r.Flags, flag)
-	}
-	if false == isoFormat.MatchString(r.Datetime) {
-		t.Errorf("datetime = %q, not isoformat", r.Datetime)
-	}
-
-	return r
-}
-
-func TestSkipFirstLine(t *testing.T) {
-	tests := []struct {
+	testCases := []struct {
 		name string
-		in   string
-		want string
+		body string
+		want [][]string
+		// wantLog is a warning the logs must contain, if any.
+		wantLog string
 	}{
-		{"lf", "h\na\nb", "a\nb"},
-		{"crlf", "h\r\na\r\nb", "a\r\nb"},
-		{"cr", "h\ra", "a"},
-		{"header only", "header", ""},
-		{"header with newline", "header\n", ""},
-		{"empty", "", ""},
+		{name: "rows", body: "a,b\n1,2\n\"x,y\",z\n", want: [][]string{{"1", "2"}, {"x,y", "z"}}},
+		{name: "crlf line endings", body: "a,b\r\n1,2\r\n", want: [][]string{{"1", "2"}}},
+		// Stray quotes inside unquoted fields are kept as text rather than failing the feed.
+		{name: "stray quote", body: "a,b\n1\"2,3\n", want: [][]string{{"1\"2", "3"}}},
+		{name: "header only", body: "a,b\n", want: [][]string{}},
+		{name: "empty body"},
+		{
+			name:    "short row skipped",
+			body:    "a,b\n1\n2,3\n",
+			want:    [][]string{{"2", "3"}},
+			wantLog: `level=WARN msg="skipping malformed CSV row" source=test row_number=2 column_count=1`,
+		},
+		// The header's own column count doesn't matter.
+		{name: "short header", body: "header\n1,2\n", want: [][]string{{"1", "2"}}},
 	}
 
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := skipFirstLine(tt.in); tt.want != got {
-				t.Errorf("skipFirstLine(%q) = %q, want %q", tt.in, got, tt.want)
+	for _, testCase := range testCases {
+		// The function literal is a closure over testCase. Each loop iteration has its own
+		// testCase, so the parallel subtests never share one.
+		test.Run(testCase.name, func(subtest *testing.T) {
+			subtest.Parallel()
+
+			aggregator, logs := newTestAggregator(subtest, &http.Client{})
+
+			got, err := aggregator.readCSVRows(subtest.Context(), "test", strings.NewReader(testCase.body), 2)
+			if nil != err {
+				subtest.Fatalf("readCSVRows(%q) error = %v, want nil", testCase.body, err)
+			}
+
+			if diff := cmp.Diff(testCase.want, got); "" != diff {
+				subtest.Errorf("readCSVRows(%q) mismatch (-want +got):\n%s", testCase.body, diff)
+			}
+
+			if !strings.Contains(logs.String(), testCase.wantLog) {
+				subtest.Errorf("readCSVRows(%q) logs = %q, want them to contain %q", testCase.body, logs, testCase.wantLog)
 			}
 		})
 	}
 }
 
-func TestReadCSVRows(t *testing.T) {
-	rows, err := readCSVRows("a,b\n1,2\n\"x,y\",z\n", 2)
-	if nil != err {
-		t.Fatal(err)
-	}
+// TestReadCSVRowsReadError checks that a body that can't be read fails the feed.
+func TestReadCSVRowsReadError(test *testing.T) {
+	test.Parallel()
 
-	if 2 != len(rows) || "1" != rows[0][0] || "x,y" != rows[1][0] {
-		t.Errorf("rows = %q", rows)
-	}
+	aggregator, _ := newTestAggregator(test, &http.Client{})
+	readErr := errors.New("connection reset")
 
-	if _, err := readCSVRows("a,b\n1,2,3\n", 2); nil == err {
-		t.Error("readCSVRows with wrong field count error = nil, want error")
-	}
-}
-
-func TestRequireKeys(t *testing.T) {
-	obj := map[string]any{"a": 1, "b": nil}
-
-	if err := requireKeys(obj, "a", "b"); nil != err {
-		t.Errorf("requireKeys() error = %v, want nil (null values count as present)", err)
-	}
-	if err := requireKeys(obj, "a", "c"); nil == err {
-		t.Error("requireKeys() error = nil, want error for missing key")
-	}
-}
-
-func TestStringField(t *testing.T) {
-	obj := map[string]any{"s": "value", "n": 1.0}
-
-	if got, err := stringField(obj, "s"); nil != err || "value" != got {
-		t.Errorf("stringField(s) = (%q, %v)", got, err)
-	}
-	if _, err := stringField(obj, "n"); nil == err {
-		t.Error("stringField(n) error = nil, want error for non-string")
-	}
-	if _, err := stringField(obj, "missing"); nil == err {
-		t.Error("stringField(missing) error = nil, want error")
-	}
-}
-
-func TestGetOr(t *testing.T) {
-	obj := map[string]any{"present": "v", "null": nil}
-
-	if got := getOr(obj, "present", "def"); "v" != got {
-		t.Errorf("getOr(present) = %v", got)
-	}
-	if got := getOr(obj, "null", "def"); nil != got {
-		t.Errorf("getOr(null) = %v, want nil", got)
-	}
-	if got := getOr(obj, "missing", "def"); "def" != got {
-		t.Errorf("getOr(missing) = %v, want def", got)
+	if _, err := aggregator.readCSVRows(test.Context(), "test", iotest.ErrReader(readErr), 2); !errors.Is(err, readErr) {
+		test.Errorf("readCSVRows() of a failing body error = %v, want %v", err, readErr)
 	}
 }

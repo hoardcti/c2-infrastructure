@@ -26,7 +26,7 @@ It is intended for:
 | [ViriBack C2 Tracker](https://tracker.viriback.com/) | Disabled | C2 panels from the last 30 days: family, panel URL, first seen |
 | [Criminal IP C2 Daily Feed](https://github.com/criminalip/C2-Daily-Feed) | Disabled | Daily C2 list: family, port, score, country, scan time |
 
-Disabled sources are implemented but switched off in `Aggregator.Run` ([`internal/aggregator/aggregator.go`](internal/aggregator/aggregator.go)).
+Disabled sources are implemented and tested but switched off with `"enabled": false` in [`sources.json`](sources.json).
 
 ### Output
 
@@ -72,12 +72,12 @@ To run it on a fork, add these repository secrets:
 | `ABUSECH_API_KEY` | abuse.ch Auth-Key, from the [abuse.ch authentication portal](https://auth.abuse.ch/) |
 | `BOT_PAT` | Token with write access, used to push to the `data` and `main` branches |
 
-For local development, build from source (requires Go 1.24 or later):
+For local development, build from source. `go.mod` pins Go 1.27.1; with an older Go installed, leave `GOTOOLCHAIN` at its default (`auto`) and the `go` command downloads the pinned version:
 
 ```bash
 git clone https://github.com/hoardcti/c2-infrastructure.git
 cd c2-infrastructure
-go build ./...
+make build
 ```
 
 ## Usage
@@ -128,21 +128,22 @@ ABUSECH_API_KEY=your-key
 ```
 
 ```bash
-# Run (flags: -sources, default sources.json; -out, default out; -env, default .env)
-go run ./cmd/aggregator
+# Build bin/aggregator and run it
+make build
+./bin/aggregator
 
-# Build
-go build ./...
+# Run every check CI runs: tidy, format, lint, go fix, tests with 100% coverage, govulncheck, build
+make check
 
-# Test
-go test ./...
-
-# Vet and check formatting
-go vet ./...
-test -z "$(gofmt -l .)"
+# List the other targets
+make help
 ```
 
-Sources are configured in [`sources.json`](sources.json). To add one, write an extractor in [`internal/aggregator/extractors/`](internal/aggregator/extractors/) and register it in `registry.go` under the source's name.
+`aggregator` takes `-sources` (default `sources.json`), `-out` (default `out`), `-env` (default `.env`), `-log` (`text` or `json`) and `-level` (`debug`, `info`, `warn` or `error`); `./bin/aggregator -h` describes them. It exits with 0 on success, 1 when a source fails and 2 on a usage or configuration error.
+
+The code follows the [hoardCTI Go style guide](https://style.hoardcti.com/v1/golang/); see [`AGENTS.md`](AGENTS.md) for the house rules that differ from common Go style.
+
+Sources are configured in [`sources.json`](sources.json). To add one, write an extractor in [`internal/aggregator/`](internal/aggregator/), register it under the source's name in `New` ([`aggregator.go`](internal/aggregator/aggregator.go)), and add the source to `sources.json` with `"enabled": true`.
 
 Never commit Auth-Keys. Supply them through environment variables or `.env` only.
 

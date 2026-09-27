@@ -1,338 +1,545 @@
 package aggregator
 
 import (
-	"encoding/json"
+	"errors"
+	"io/fs"
+	"net/netip"
 	"os"
 	"path/filepath"
 	"slices"
+	"strings"
 	"testing"
 	"time"
 
-	"github.com/doodad-labs/command-server-watch/internal/payload"
+	"github.com/google/go-cmp/cmp"
 )
 
-func newResult(source, datetime string, flags []string, metadata map[string]any) payload.Result {
-	return payload.Result{Source: source, Datetime: datetime, Flags: flags, Metadata: metadata}
-}
+// TestNewStoreCreatesDirectory checks that a missing output directory is created.
+func TestNewStoreCreatesDirectory(test *testing.T) {
+	test.Parallel()
 
-func readPayload(t *testing.T, path string) payload.Payload {
-	t.Helper()
+	outputDirectory := filepath.Join(test.TempDir(), "new", "out")
 
-	data, err := os.ReadFile(path)
+	store, err := NewStore(outputDirectory)
 	if nil != err {
-		t.Fatal(err)
+		test.Fatalf("NewStore(%q) error = %v, want nil", outputDirectory, err)
 	}
 
-	var p payload.Payload
-	if err := json.Unmarshal(data, &p); nil != err {
-		t.Fatal(err)
+	if err := store.Close(); nil != err {
+		test.Errorf("Close() error = %v, want nil", err)
 	}
 
-	return p
+	if info, err := os.Stat(outputDirectory); nil != err || !info.IsDir() {
+		test.Errorf("NewStore(%q) didn't create the directory: %v", outputDirectory, err)
+	}
 }
 
-func TestValidatePayload(t *testing.T) {
-	tests := []struct {
+// TestNewStoreErrors checks that an output directory that can't be created or opened is
+// reported.
+func TestNewStoreErrors(test *testing.T) {
+	test.Parallel()
+
+	test.Run("path is a file", func(subtest *testing.T) {
+		subtest.Parallel()
+
+		filePath := filepath.Join(subtest.TempDir(), "file")
+		if err := os.WriteFile(filePath, nil, 0o600); nil != err {
+			subtest.Fatalf("creating file: %v", err)
+		}
+
+		if _, err := NewStore(filePath); nil == err {
+			subtest.Errorf("NewStore(%q) error = nil, want error", filePath)
+		}
+	})
+
+	test.Run("directory can't be opened", func(subtest *testing.T) {
+		subtest.Parallel()
+
+		if 0 == os.Geteuid() {
+			subtest.Skip("root can open any directory")
+		}
+
+		lockedDirectory := filepath.Join(subtest.TempDir(), "locked")
+		if err := os.Mkdir(lockedDirectory, 0o000); nil != err {
+			subtest.Fatalf("creating locked directory: %v", err)
+		}
+
+		if _, err := NewStore(lockedDirectory); nil == err {
+			subtest.Errorf("NewStore(%q) error = nil, want error", lockedDirectory)
+		}
+	})
+}
+
+// TestStoreSavePayloadNewFile checks that the first sighting of an address is written as is,
+// at the path that mirrors the address.
+func TestStoreSavePayloadNewFile(test *testing.T) {
+	test.Parallel()
+
+	store := newTestStore(test)
+	payload := newTestPayload("10.0.0.1", "source", fixedTime, `{"port":"443"}`, "z", "a")
+
+	if err := store.SavePayload(payload); nil != err {
+		test.Fatalf("SavePayload() error = %v, want nil", err)
+	}
+
+	// The flags aren't sorted on the first write: nothing has been merged yet.
+	if diff := cmp.Diff(payload, readStoredPayload(test, store, "10.0.0.1"), payloadComparison); "" != diff {
+		test.Errorf("stored payload mismatch (-want +got):\n%s", diff)
+	}
+
+	info, err := store.root.Stat(filepath.Join("ipv4", "10", "0", "0", "1.json"))
+	if nil != err {
+		test.Fatalf("stat of stored file: %v", err)
+	}
+
+	if OUTPUT_FILE_PERMISSIONS != info.Mode().Perm() {
+		test.Errorf("stored file permissions = %v, want %v", info.Mode().Perm(), fs.FileMode(OUTPUT_FILE_PERMISSIONS))
+	}
+}
+
+// TestStoreSavePayloadMerges checks that a second sighting is merged into the existing file.
+func TestStoreSavePayloadMerges(test *testing.T) {
+	test.Parallel()
+
+	store := newTestStore(test)
+	laterTime := fixedTime.Add(time.Hour)
+
+	for _, payload := range []Payload{
+		newTestPayload("10.0.0.1", "first", fixedTime, `{}`, "a"),
+		newTestPayload("10.0.0.1", "second", laterTime, `{}`, "b"),
+	} {
+		if err := store.SavePayload(payload); nil != err {
+			test.Fatalf("SavePayload() error = %v, want nil", err)
+		}
+	}
+
+	want := Payload{
+		IP:    netip.MustParseAddr("10.0.0.1"),
+		Flags: []string{"a", "b"},
+		Results: []Result{
+			{Source: "first", Datetime: isoTime(fixedTime), Flags: []string{"a"}, Metadata: []byte(`{}`)},
+			{Source: "second", Datetime: isoTime(laterTime), Flags: []string{"b"}, Metadata: []byte(`{}`)},
+		},
+	}
+	if diff := cmp.Diff(want, readStoredPayload(test, store, "10.0.0.1"), payloadComparison); "" != diff {
+		test.Errorf("merged payload mismatch (-want +got):\n%s", diff)
+	}
+}
+
+// TestStoreSavePayloadSkipsDatetimeOnlyChange checks that a repeated sighting doesn't rewrite
+// the file, so the published data doesn't change every hour.
+func TestStoreSavePayloadSkipsDatetimeOnlyChange(test *testing.T) {
+	test.Parallel()
+
+	store := newTestStore(test)
+	name := filepath.Join("ipv4", "10", "0", "0", "1.json")
+
+	if err := store.SavePayload(newTestPayload("10.0.0.1", "source", fixedTime, `{"port": 443}`, "a")); nil != err {
+		test.Fatalf("first SavePayload() error = %v, want nil", err)
+	}
+
+	// Backdate the file so a rewrite would show in its modification time.
+	backdated := fixedTime.Add(-time.Hour)
+	if err := store.root.Chtimes(name, backdated, backdated); nil != err {
+		test.Fatalf("backdating stored file: %v", err)
+	}
+
+	// The same sighting an hour later, with the metadata written differently.
+	repeated := newTestPayload("10.0.0.1", "source", fixedTime.Add(time.Hour), `{"port":443.0}`, "a")
+	if err := store.SavePayload(repeated); nil != err {
+		test.Fatalf("second SavePayload() error = %v, want nil", err)
+	}
+
+	info, err := store.root.Stat(name)
+	if nil != err {
+		test.Fatalf("stat of stored file: %v", err)
+	}
+
+	if !backdated.Equal(info.ModTime()) {
+		test.Errorf("stored file modified at %v, want it left alone at %v", info.ModTime(), backdated)
+	}
+}
+
+// TestStoreSavePayloadErrors checks that payloads that can't be stored, and files that can't
+// be read or written, are reported.
+func TestStoreSavePayloadErrors(test *testing.T) {
+	test.Parallel()
+
+	validPayload := newTestPayload("10.0.0.1", "source", fixedTime, `{}`, "a")
+
+	testCases := []struct {
 		name string
-		p    payload.Payload
-		want bool
+		// prepare sets up the output directory before the payload is saved.
+		prepare func(root *os.Root) error
+		payload Payload
+		// wantInvalid is true when the error must wrap errInvalidPayload.
+		wantInvalid bool
 	}{
-		{"valid", payload.Payload{IP: "1.2.3.4", Flags: []string{}, Results: []payload.Result{}}, true},
-		{"nil flags", payload.Payload{IP: "1.2.3.4", Results: []payload.Result{}}, false},
-		{"nil results", payload.Payload{IP: "1.2.3.4", Flags: []string{}}, false},
-		{"bad ip", payload.Payload{IP: "nope", Flags: []string{}, Results: []payload.Result{}}, false},
-		{"empty ip", payload.Payload{Flags: []string{}, Results: []payload.Result{}}, false},
+		{name: "zero address", payload: Payload{Results: validPayload.Results}, wantInvalid: true},
+		{
+			name:        "zoned address",
+			payload:     Payload{IP: netip.MustParseAddr("fe80::1%eth0"), Results: validPayload.Results},
+			wantInvalid: true,
+		},
+		{name: "no results", payload: Payload{IP: validPayload.IP}, wantInvalid: true},
+		{
+			name:    "directory blocked by a file",
+			prepare: func(root *os.Root) error { return root.WriteFile("ipv4", nil, 0o600) },
+			payload: validPayload,
+		},
+		{
+			name: "file is a directory",
+			prepare: func(root *os.Root) error {
+				return root.MkdirAll(filepath.Join("ipv4", "10", "0", "0", "1.json"), 0o700)
+			},
+			payload: validPayload,
+		},
+		{
+			name: "existing file isn't JSON",
+			prepare: func(root *os.Root) error {
+				if err := root.MkdirAll(filepath.Join("ipv4", "10", "0", "0"), 0o700); nil != err {
+					return err
+				}
+
+				return root.WriteFile(filepath.Join("ipv4", "10", "0", "0", "1.json"), []byte("{not json"), 0o600)
+			},
+			payload: validPayload,
+		},
 	}
 
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := validatePayload(tt.p); tt.want != got {
-				t.Errorf("validatePayload() = %v, want %v", got, tt.want)
+	for _, testCase := range testCases {
+		// The function literal is a closure over testCase. Each loop iteration has its own
+		// testCase, so the parallel subtests never share one.
+		test.Run(testCase.name, func(subtest *testing.T) {
+			subtest.Parallel()
+
+			store := newTestStore(subtest)
+			prepareOutputDirectory(subtest, store, testCase.prepare)
+
+			err := store.SavePayload(testCase.payload)
+			if nil == err {
+				subtest.Fatal("SavePayload() error = nil, want error")
+			}
+
+			if testCase.wantInvalid != errors.Is(err, errInvalidPayload) {
+				subtest.Errorf("SavePayload() error = %v, want errInvalidPayload %v", err, testCase.wantInvalid)
 			}
 		})
 	}
 }
 
-func TestIPToPath(t *testing.T) {
-	s := &Store{Dir: "root"}
+// TestAddressFileName checks the file path of IPv4, IPv6 and IPv4-mapped IPv6 addresses.
+func TestAddressFileName(test *testing.T) {
+	test.Parallel()
 
-	tests := []struct {
-		ip   string
-		want string
+	testCases := []struct {
+		address string
+		want    string
 	}{
-		{"192.168.1.1", filepath.Join("root", "ipv4", "192", "168", "1", "1.json")},
-		{"2001:db8:85a3::8a2e:370:7334", filepath.Join("root", "ipv6", "2001", "0db8", "85a3", "0000", "0000", "8a2e", "0370", "7334.json")},
-		{"::1", filepath.Join("root", "ipv6", "0000", "0000", "0000", "0000", "0000", "0000", "0000", "0001.json")},
-		{"::ffff:1.2.3.4", filepath.Join("root", "ipv6", "0000", "0000", "0000", "0000", "0000", "ffff", "0102", "0304.json")},
-		{"2001:DB8::ABCD", filepath.Join("root", "ipv6", "2001", "0db8", "0000", "0000", "0000", "0000", "0000", "abcd.json")},
+		{address: "192.168.1.1", want: filepath.Join("ipv4", "192", "168", "1", "1.json")},
+		{
+			address: "2001:db8:85a3::8a2e:370:7334",
+			want:    filepath.Join("ipv6", "2001", "0db8", "85a3", "0000", "0000", "8a2e", "0370", "7334.json"),
+		},
+		{address: "::1", want: filepath.Join("ipv6", "0000", "0000", "0000", "0000", "0000", "0000", "0000", "0001.json")},
+		{
+			address: "::ffff:1.2.3.4",
+			want:    filepath.Join("ipv6", "0000", "0000", "0000", "0000", "0000", "ffff", "0102", "0304.json"),
+		},
+		{address: "2001:DB8::ABCD", want: filepath.Join("ipv6", "2001", "0db8", "0000", "0000", "0000", "0000", "0000", "abcd.json")},
 	}
 
-	for _, tt := range tests {
-		t.Run(tt.ip, func(t *testing.T) {
-			got, err := s.ipToPath(tt.ip)
-			if nil != err {
-				t.Fatal(err)
-			}
-			if tt.want != got {
-				t.Errorf("ipToPath(%q) = %q, want %q", tt.ip, got, tt.want)
+	for _, testCase := range testCases {
+		test.Run(testCase.address, func(subtest *testing.T) {
+			subtest.Parallel()
+
+			if got := addressFileName(netip.MustParseAddr(testCase.address)); testCase.want != got {
+				subtest.Errorf("addressFileName(%s) = %q, want %q", testCase.address, got, testCase.want)
 			}
 		})
 	}
-
-	if _, err := s.ipToPath("bogus"); nil == err {
-		t.Error("ipToPath(bogus) error = nil, want error")
-	}
 }
 
-func TestMergeInto(t *testing.T) {
-	existing := payload.Payload{
-		IP:    "1.2.3.4",
+// TestMergeInto checks that flags are combined and sorted, and that a repeated result keeps
+// its position and first-collected datetime but takes the newer metadata.
+func TestMergeInto(test *testing.T) {
+	test.Parallel()
+
+	laterTime := fixedTime.Add(time.Hour)
+	existing := Payload{
 		Flags: []string{"b", "a"},
-		Results: []payload.Result{
-			newResult("s1", "old", []string{"a"}, map[string]any{"v": "1"}),
-			newResult("s2", "old2", []string{"b"}, nil),
+		Results: []Result{
+			{Source: "s1", Datetime: isoTime(fixedTime), Flags: []string{"a"}, Metadata: []byte(`{"v":"1"}`)},
+			{Source: "s2", Datetime: isoTime(fixedTime), Flags: []string{"b"}},
 		},
 	}
-	newer := payload.Payload{
-		IP:    "1.2.3.4",
+	newer := Payload{
 		Flags: []string{"c", "a"},
-		Results: []payload.Result{
-			newResult("s1", "new", []string{"a"}, map[string]any{"v": "2"}),
-			newResult("s3", "new3", []string{"c"}, nil),
+		Results: []Result{
+			{Source: "s1", Datetime: isoTime(laterTime), Flags: []string{"a"}, Metadata: []byte(`{"v":"2"}`)},
+			{Source: "s3", Datetime: isoTime(laterTime), Flags: []string{"c"}},
 		},
 	}
 
 	mergeInto(&existing, newer)
 
-	if want := []string{"a", "b", "c"}; false == slices.Equal(want, existing.Flags) {
-		t.Errorf("flags = %v, want %v", existing.Flags, want)
+	want := Payload{
+		Flags: []string{"a", "b", "c"},
+		Results: []Result{
+			{Source: "s1", Datetime: isoTime(fixedTime), Flags: []string{"a"}, Metadata: []byte(`{"v":"2"}`)},
+			{Source: "s2", Datetime: isoTime(fixedTime), Flags: []string{"b"}},
+			{Source: "s3", Datetime: isoTime(laterTime), Flags: []string{"c"}},
+		},
+	}
+	if diff := cmp.Diff(want, existing, payloadComparison); "" != diff {
+		test.Errorf("mergeInto() mismatch (-want +got):\n%s", diff)
 	}
 
-	if 3 != len(existing.Results) {
-		t.Fatalf("len(results) = %d, want 3", len(existing.Results))
-	}
-
-	first := existing.Results[0]
-	if "s1" != first.Source || "old" != first.Datetime || "2" != first.Metadata["v"] {
-		t.Errorf("duplicate result = %+v, want new metadata with original datetime", first)
-	}
-
-	if "s2" != existing.Results[1].Source || "s3" != existing.Results[2].Source {
-		t.Errorf("result order = %s, %s; want s2, s3", existing.Results[1].Source, existing.Results[2].Source)
-	}
-
-	if "new" != newer.Results[0].Datetime {
-		t.Errorf("mergeInto mutated the incoming payload")
+	if !laterTime.Equal(time.Time(newer.Results[0].Datetime)) {
+		test.Error("mergeInto() changed the newer payload's datetime")
 	}
 }
 
-func TestMergeIntoDatetimeOnlyPreservedWhenBothSet(t *testing.T) {
-	existing := payload.Payload{Results: []payload.Result{newResult("s", "", []string{"a"}, nil)}}
-	newer := payload.Payload{Results: []payload.Result{newResult("s", "new", []string{"a"}, nil)}}
+// TestMergeIntoDatetimeKeptOnlyWhenBothSet checks that a result without a datetime takes the
+// newer one's.
+func TestMergeIntoDatetimeKeptOnlyWhenBothSet(test *testing.T) {
+	test.Parallel()
+
+	existing := Payload{Results: []Result{{Source: "s", Flags: []string{"a"}}}}
+	newer := Payload{Results: []Result{{Source: "s", Datetime: isoTime(fixedTime), Flags: []string{"a"}}}}
 
 	mergeInto(&existing, newer)
 
-	if "new" != existing.Results[0].Datetime {
-		t.Errorf("datetime = %q, want %q", existing.Results[0].Datetime, "new")
+	if !fixedTime.Equal(time.Time(existing.Results[0].Datetime)) {
+		test.Errorf("mergeInto() datetime = %v, want %v", time.Time(existing.Results[0].Datetime), fixedTime)
 	}
 }
 
-func TestMergeIntoCollapsesExistingDuplicates(t *testing.T) {
-	existing := payload.Payload{Results: []payload.Result{
-		newResult("s", "first", []string{"a", "b"}, nil),
-		newResult("s", "second", []string{"b", "a"}, nil),
+// TestMergeIntoCollapsesExistingDuplicates checks that duplicate results already in a file are
+// reduced to one, keeping the last.
+func TestMergeIntoCollapsesExistingDuplicates(test *testing.T) {
+	test.Parallel()
+
+	laterTime := fixedTime.Add(time.Hour)
+	existing := Payload{Results: []Result{
+		{Source: "s", Datetime: isoTime(fixedTime), Flags: []string{"a", "b"}},
+		{Source: "s", Datetime: isoTime(laterTime), Flags: []string{"b", "a"}},
 	}}
 
-	mergeInto(&existing, payload.Payload{})
+	mergeInto(&existing, Payload{})
 
-	if 1 != len(existing.Results) || "second" != existing.Results[0].Datetime {
-		t.Errorf("results = %+v, want single entry keeping the last duplicate", existing.Results)
+	want := []Result{{Source: "s", Datetime: isoTime(laterTime), Flags: []string{"b", "a"}}}
+	if diff := cmp.Diff(want, existing.Results, payloadComparison); "" != diff {
+		test.Errorf("mergeInto() results mismatch (-want +got):\n%s", diff)
 	}
 }
 
-func TestOnlyDatetimeChanged(t *testing.T) {
-	base := payload.Payload{
-		Flags:   []string{"a"},
-		Results: []payload.Result{newResult("s", "t1", []string{"a"}, map[string]any{"port": float64(443)})},
-	}
+// TestResultKey checks which results count as duplicates.
+func TestResultKey(test *testing.T) {
+	test.Parallel()
 
-	tests := []struct {
-		name  string
-		after payload.Payload
-		want  bool
+	base := Result{Source: "a", Flags: []string{"x", "y"}}
+
+	testCases := []struct {
+		name     string
+		other    Result
+		wantSame bool
 	}{
-		{"identical", base, true},
-		{"datetime only", payload.Payload{
-			Flags:   []string{"a"},
-			Results: []payload.Result{newResult("s", "t2", []string{"a"}, map[string]any{"port": float64(443)})},
-		}, true},
-		{"int vs float metadata", payload.Payload{
-			Flags:   []string{"a"},
-			Results: []payload.Result{newResult("s", "t1", []string{"a"}, map[string]any{"port": 443})},
-		}, true},
-		{"flags changed", payload.Payload{
-			Flags:   []string{"a", "b"},
-			Results: base.Results,
-		}, false},
-		{"result added", payload.Payload{
-			Flags:   []string{"a"},
-			Results: append(slices.Clone(base.Results), newResult("x", "t", nil, nil)),
-		}, false},
-		{"metadata changed", payload.Payload{
-			Flags:   []string{"a"},
-			Results: []payload.Result{newResult("s", "t1", []string{"a"}, map[string]any{"port": 80})},
-		}, false},
-		{"source changed", payload.Payload{
-			Flags:   []string{"a"},
-			Results: []payload.Result{newResult("z", "t1", []string{"a"}, map[string]any{"port": 443})},
-		}, false},
-		{"result flags changed", payload.Payload{
-			Flags:   []string{"a"},
-			Results: []payload.Result{newResult("s", "t1", []string{"b"}, map[string]any{"port": 443})},
-		}, false},
+		{name: "identical", other: Result{Source: "a", Flags: []string{"x", "y"}}, wantSame: true},
+		{name: "flag order ignored", other: Result{Source: "a", Flags: []string{"y", "x"}}, wantSame: true},
+		{name: "repeated flags ignored", other: Result{Source: "a", Flags: []string{"x", "y", "x"}}, wantSame: true},
+		{name: "datetime ignored", other: Result{Source: "a", Flags: []string{"x", "y"}, Datetime: isoTime(fixedTime)}, wantSame: true},
+		{name: "metadata ignored", other: Result{Source: "a", Flags: []string{"x", "y"}, Metadata: []byte(`{"k":1}`)}, wantSame: true},
+		{name: "different source", other: Result{Source: "b", Flags: []string{"x", "y"}}},
+		{name: "different flags", other: Result{Source: "a", Flags: []string{"x"}}},
+		// Without a separator, source "ax" with flag "y" would look like source "a" with "x", "y".
+		{name: "flag not confused with source", other: Result{Source: "ax", Flags: []string{"y"}}},
 	}
 
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := onlyDatetimeChanged(base, tt.after); tt.want != got {
-				t.Errorf("onlyDatetimeChanged() = %v, want %v", got, tt.want)
+	for _, testCase := range testCases {
+		test.Run(testCase.name, func(subtest *testing.T) {
+			subtest.Parallel()
+
+			if got := resultKey(base) == resultKey(testCase.other); testCase.wantSame != got {
+				subtest.Errorf("resultKey(%+v) == resultKey(%+v) is %v, want %v", base, testCase.other, got, testCase.wantSame)
 			}
 		})
 	}
 }
 
-func TestClonePayload(t *testing.T) {
-	p := payload.Payload{IP: "1.2.3.4", Flags: []string{"a"}, Results: []payload.Result{newResult("s", "t", nil, nil)}}
-	c := clonePayload(p)
+// TestResultKeyDoesNotChangeFlags checks that sorting the flags for the key leaves the
+// result's own flags alone.
+func TestResultKeyDoesNotChangeFlags(test *testing.T) {
+	test.Parallel()
 
-	c.Flags[0] = "changed"
-	c.Results[0].Source = "changed"
+	result := Result{Source: "a", Flags: []string{"z", "a", "z"}}
+	resultKey(result)
 
-	if "a" != p.Flags[0] || "s" != p.Results[0].Source {
-		t.Errorf("clonePayload shares slices with the original: %+v", p)
+	if want := []string{"z", "a", "z"}; !slices.Equal(want, result.Flags) {
+		test.Errorf("resultKey() changed the flags to %v, want %v", result.Flags, want)
 	}
 }
 
-func TestWriteJSON(t *testing.T) {
-	path := filepath.Join(t.TempDir(), "out.json")
+// TestOnlyDatetimeChanged checks which differences make a file worth rewriting.
+func TestOnlyDatetimeChanged(test *testing.T) {
+	test.Parallel()
 
-	if err := writeJSON(path, map[string]any{"url": "http://x/?a=1&b=<2>"}); nil != err {
-		t.Fatal(err)
+	laterTime := fixedTime.Add(time.Hour)
+	base := newTestPayload("1.2.3.4", "s", fixedTime, `{"port": 443, "name": "x"}`, "a")
+
+	testCases := []struct {
+		name  string
+		after Payload
+		want  bool
+	}{
+		{name: "identical", after: base, want: true},
+		{name: "datetime only", after: newTestPayload("1.2.3.4", "s", laterTime, `{"port": 443, "name": "x"}`, "a"), want: true},
+		// Files written by Python have their metadata keys in a different order.
+		{name: "metadata key order", after: newTestPayload("1.2.3.4", "s", fixedTime, `{"name":"x","port":443}`, "a"), want: true},
+		{name: "metadata number format", after: newTestPayload("1.2.3.4", "s", fixedTime, `{"port": 443.0, "name": "x"}`, "a"), want: true},
+		{name: "metadata changed", after: newTestPayload("1.2.3.4", "s", fixedTime, `{"port": 80, "name": "x"}`, "a")},
+		{name: "invalid metadata", after: newTestPayload("1.2.3.4", "s", fixedTime, `{"port":`, "a")},
+		{name: "flags changed", after: Payload{Flags: []string{"a", "b"}, Results: base.Results}},
+		{name: "result added", after: newTestPayload("1.2.3.4", "s", fixedTime, `{"port": 443, "name": "x"}`, "a", "b")},
+		{name: "source changed", after: newTestPayload("1.2.3.4", "other", fixedTime, `{"port": 443, "name": "x"}`, "a")},
+		{name: "result flags changed", after: Payload{Flags: base.Flags, Results: []Result{{Source: "s", Flags: []string{"b"}}}}},
 	}
 
-	got, err := os.ReadFile(path)
-	if nil != err {
-		t.Fatal(err)
-	}
+	for _, testCase := range testCases {
+		test.Run(testCase.name, func(subtest *testing.T) {
+			subtest.Parallel()
 
-	want := "{\n    \"url\": \"http://x/?a=1&b=<2>\"\n}\n"
-	if want != string(got) {
-		t.Errorf("file = %q, want %q", got, want)
-	}
-}
-
-func TestSavePayloadNewFile(t *testing.T) {
-	s := &Store{Dir: t.TempDir()}
-	p := payload.Payload{
-		IP:      "10.0.0.1",
-		Flags:   []string{"z", "a"},
-		Results: []payload.Result{newResult("s", "t", []string{"z", "a"}, map[string]any{"k": "v"})},
-	}
-
-	if err := s.SavePayload(p); nil != err {
-		t.Fatal(err)
-	}
-
-	got := readPayload(t, filepath.Join(s.Dir, "ipv4", "10", "0", "0", "1.json"))
-
-	// First write stores the payload as-is, without sorting flags
-	if "10.0.0.1" != got.IP || false == slices.Equal([]string{"z", "a"}, got.Flags) || 1 != len(got.Results) {
-		t.Errorf("stored payload = %+v", got)
+			if got := onlyDatetimeChanged(base, testCase.after); testCase.want != got {
+				subtest.Errorf("onlyDatetimeChanged(%+v, %+v) = %v, want %v", base, testCase.after, got, testCase.want)
+			}
+		})
 	}
 }
 
-func TestSavePayloadMerges(t *testing.T) {
-	s := &Store{Dir: t.TempDir()}
-	path := filepath.Join(s.Dir, "ipv4", "10", "0", "0", "1.json")
+// TestClonePayload checks that changing a clone's slices leaves the original alone.
+func TestClonePayload(test *testing.T) {
+	test.Parallel()
 
-	first := payload.Payload{IP: "10.0.0.1", Flags: []string{"a"}, Results: []payload.Result{newResult("s1", "t1", []string{"a"}, nil)}}
-	second := payload.Payload{IP: "10.0.0.1", Flags: []string{"b"}, Results: []payload.Result{newResult("s2", "t2", []string{"b"}, nil)}}
+	original := newTestPayload("1.2.3.4", "s", fixedTime, `{}`, "a")
+	clone := clonePayload(original)
 
-	if err := s.SavePayload(first); nil != err {
-		t.Fatal(err)
-	}
-	if err := s.SavePayload(second); nil != err {
-		t.Fatal(err)
-	}
+	clone.Flags[0] = "changed"
+	clone.Results[0].Source = "changed"
 
-	got := readPayload(t, path)
-	if false == slices.Equal([]string{"a", "b"}, got.Flags) || 2 != len(got.Results) {
-		t.Errorf("merged payload = %+v", got)
+	if "a" != original.Flags[0] || "s" != original.Results[0].Source {
+		test.Errorf("clonePayload() shares slices with the original: %+v", original)
 	}
 }
 
-func TestSavePayloadSkipsDatetimeOnlyChange(t *testing.T) {
-	s := &Store{Dir: t.TempDir()}
-	path := filepath.Join(s.Dir, "ipv4", "10", "0", "0", "1.json")
+// TestWritePayloadErrors checks that metadata that isn't valid JSON is refused rather than
+// written.
+func TestWritePayloadErrors(test *testing.T) {
+	test.Parallel()
 
-	p := payload.Payload{IP: "10.0.0.1", Flags: []string{"a"}, Results: []payload.Result{newResult("s", "t1", []string{"a"}, map[string]any{"port": 443})}}
-	if err := s.SavePayload(p); nil != err {
-		t.Fatal(err)
+	store := newTestStore(test)
+	payload := newTestPayload("1.2.3.4", "s", fixedTime, `{"port":`, "a")
+
+	if err := writePayload(store.root, "payload.json", payload); nil == err {
+		test.Error("writePayload() with invalid metadata error = nil, want error")
 	}
 
-	// Backdate the file so any rewrite is detectable via mtime
-	past := time.Now().Add(-time.Hour).Truncate(time.Second)
-	if err := os.Chtimes(path, past, past); nil != err {
-		t.Fatal(err)
-	}
-
-	p.Results = []payload.Result{newResult("s", "t2", []string{"a"}, map[string]any{"port": 443})}
-	if err := s.SavePayload(p); nil != err {
-		t.Fatal(err)
-	}
-
-	info, err := os.Stat(path)
-	if nil != err {
-		t.Fatal(err)
-	}
-	if false == info.ModTime().Equal(past) {
-		t.Error("file was rewritten for a datetime-only change")
-	}
-
-	if got := readPayload(t, path); "t1" != got.Results[0].Datetime {
-		t.Errorf("datetime = %q, want original %q", got.Results[0].Datetime, "t1")
+	if _, err := store.root.Stat("payload.json"); !errors.Is(err, fs.ErrNotExist) {
+		test.Errorf("writePayload() left a file behind: stat error = %v", err)
 	}
 }
 
-func TestSavePayloadIgnoresInvalid(t *testing.T) {
-	s := &Store{Dir: t.TempDir()}
+// TestWriteFileAtomically checks that a file is replaced whole, with no temporary file left
+// behind.
+func TestWriteFileAtomically(test *testing.T) {
+	test.Parallel()
 
-	if err := s.SavePayload(payload.Payload{IP: "not-an-ip", Flags: []string{}, Results: []payload.Result{}}); nil != err {
-		t.Fatalf("SavePayload(invalid) error = %v, want nil", err)
+	store := newTestStore(test)
+
+	for _, content := range []string{"first", "second"} {
+		if err := writeFileAtomically(store.root, "file.json", []byte(content)); nil != err {
+			test.Fatalf("writeFileAtomically(%q) error = %v, want nil", content, err)
+		}
 	}
 
-	entries, err := os.ReadDir(s.Dir)
-	if nil != err {
-		t.Fatal(err)
+	written, err := store.root.ReadFile("file.json")
+	if nil != err || "second" != string(written) {
+		test.Errorf("file content = (%q, %v), want %q", written, err, "second")
 	}
-	if 0 != len(entries) {
-		t.Errorf("invalid payload created files: %v", entries)
+
+	if _, err := store.root.Stat("file.json" + TEMPORARY_FILE_SUFFIX); !errors.Is(err, fs.ErrNotExist) {
+		test.Errorf("temporary file left behind: stat error = %v", err)
 	}
 }
 
-func TestSavePayloadCorruptExisting(t *testing.T) {
-	s := &Store{Dir: t.TempDir()}
-	path := filepath.Join(s.Dir, "ipv4", "10", "0", "0", "1.json")
+// TestWriteFileAtomicallyErrors checks that failed writes are reported, that their temporary
+// files are cleaned up, and that a temporary file that can't be removed is reported too.
+func TestWriteFileAtomicallyErrors(test *testing.T) {
+	test.Parallel()
 
-	if err := os.MkdirAll(filepath.Dir(path), 0o755); nil != err {
-		t.Fatal(err)
-	}
-	if err := os.WriteFile(path, []byte("{not json"), 0o644); nil != err {
-		t.Fatal(err)
+	testCases := []struct {
+		name string
+		// prepare sets up the output directory before the write.
+		prepare func(root *os.Root) error
+		// fileName is the file being written.
+		fileName string
+		// wantRemoveError is true when removing the temporary file must fail too.
+		wantRemoveError bool
+		// wantTemporaryFile is true when the temporary path must still exist afterwards.
+		wantTemporaryFile bool
+	}{
+		// The temporary file is never created, so there is nothing to remove.
+		{name: "missing directory", fileName: filepath.Join("missing", "file.json")},
+		// The temporary file is written, the rename fails, and the temporary file is removed.
+		{
+			name:     "target is a directory",
+			prepare:  func(root *os.Root) error { return root.MkdirAll(filepath.Join("file.json", "child"), 0o700) },
+			fileName: "file.json",
+		},
+		// A non-empty directory in the temporary file's place can be neither written nor removed.
+		{
+			name: "temporary path is a non-empty directory",
+			prepare: func(root *os.Root) error {
+				return root.MkdirAll(filepath.Join("file.json"+TEMPORARY_FILE_SUFFIX, "child"), 0o700)
+			},
+			fileName:          "file.json",
+			wantRemoveError:   true,
+			wantTemporaryFile: true,
+		},
 	}
 
-	p := payload.Payload{IP: "10.0.0.1", Flags: []string{}, Results: []payload.Result{}}
-	if err := s.SavePayload(p); nil == err {
-		t.Error("SavePayload over corrupt file error = nil, want error")
+	for _, testCase := range testCases {
+		test.Run(testCase.name, func(subtest *testing.T) {
+			subtest.Parallel()
+
+			store := newTestStore(subtest)
+			prepareOutputDirectory(subtest, store, testCase.prepare)
+
+			err := writeFileAtomically(store.root, testCase.fileName, []byte("content"))
+			if nil == err {
+				subtest.Fatal("writeFileAtomically() error = nil, want error")
+			}
+
+			if gotRemoveError := strings.Contains(err.Error(), "removing"); testCase.wantRemoveError != gotRemoveError {
+				subtest.Errorf("writeFileAtomically() error = %v, want a removal error %v", err, testCase.wantRemoveError)
+			}
+
+			_, statErr := store.root.Stat(testCase.fileName + TEMPORARY_FILE_SUFFIX)
+			if gotTemporaryFile := nil == statErr; testCase.wantTemporaryFile != gotTemporaryFile {
+				subtest.Errorf("temporary path exists = %v, want %v", gotTemporaryFile, testCase.wantTemporaryFile)
+			}
+		})
+	}
+}
+
+// prepareOutputDirectory runs prepare, if it's set, on the store's output directory.
+func prepareOutputDirectory(testingContext testing.TB, store *Store, prepare func(root *os.Root) error) {
+	testingContext.Helper()
+
+	if nil == prepare {
+		return
+	}
+
+	if err := prepare(store.root); nil != err {
+		testingContext.Fatalf("preparing output directory: %v", err)
 	}
 }

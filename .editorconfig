@@ -1,0 +1,31 @@
+# EditorConfig for the hoardCTI Go style guide (GO-EDT-004). https://editorconfig.org
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+max_line_length = 100
+
+[*.go]
+indent_style = tab
+indent_size = 4
+
+[{go.mod,go.sum}]
+indent_style = tab
+
+[Makefile]
+indent_style = tab
+
+# Four spaces, matching the workflows, sources.json and the published data files.
+[*.{yml,yaml,json}]
+indent_style = space
+indent_size = 4
+
+[testdata/**]
+# Fixtures are kept byte-for-byte as the upstream sent them.
+trim_trailing_whitespace = unset
+insert_final_newline = unset
+end_of_line = unset

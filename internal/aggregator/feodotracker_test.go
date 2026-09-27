@@ -1,78 +1,121 @@
-package extractors
+package aggregator
 
-import "testing"
+import (
+	"bytes"
+	"log/slog"
+	"net/http"
+	"strings"
+	"testing"
 
-func TestFeodoTracker(t *testing.T) {
+	"github.com/google/go-cmp/cmp"
+)
+
+// TestAggregatorExtractFeodoTracker checks a real Feodo Tracker blocklist: the published
+// fields are passed through and the others are dropped.
+func TestAggregatorExtractFeodoTracker(test *testing.T) {
+	test.Parallel()
+
+	aggregator, logs := newTestAggregator(test, &http.Client{})
+
+	payloads, err := aggregator.extractFeodoTracker(test.Context(), bytes.NewReader(readTestdata(test, "feodotracker.json")))
+	if nil != err {
+		test.Fatalf("extractFeodoTracker() error = %v, want nil", err)
+	}
+
+	// The published files have always had these keys in this order.
+	wantMetadata := `{"country":"US","firstSeen":"2025-12-30 13:56:31","lastOnline":"2026-03-12",` +
+		`"hostname":"ec2-50-16-16-211.compute-1.amazonaws.com","port":443}`
+	want := []Payload{newTestPayload("50.16.16.211", FEODOTRACKER_SOURCE_NAME, fixedTime, wantMetadata, "qakbot")}
+
+	if diff := cmp.Diff(want, payloads, payloadComparison); "" != diff {
+		test.Fatalf("extractFeodoTracker() mismatch (-want +got):\n%s", diff)
+	}
+
+	if wantMetadata != string(payloads[0].Results[0].Metadata) {
+		test.Errorf("extractFeodoTracker() metadata = %s, want %s", payloads[0].Results[0].Metadata, wantMetadata)
+	}
+
+	if 0 != logs.Len() {
+		test.Errorf("extractFeodoTracker() logged %q, want nothing for a valid blocklist", logs)
+	}
+}
+
+// TestAggregatorExtractFeodoTrackerEntries checks that a null hostname stays null, and that
+// malformed entries are skipped with a warning.
+func TestAggregatorExtractFeodoTrackerEntries(test *testing.T) {
+	test.Parallel()
+
+	aggregator, logs := newTestAggregator(test, &http.Client{})
 	body := `[
-		{
-			"ip_address": "1.2.3.4",
-			"port": 443,
-			"status": "online",
-			"hostname": null,
-			"country": "US",
-			"first_seen": "2026-01-01 00:00:00",
-			"last_online": "2026-05-19",
-			"malware": "QakBot"
-		}
+		{"ip_address": "1.2.3.4", "port": 443, "hostname": null, "country": "US", "first_seen": "a", "last_online": "b", "malware": "QakBot"},
+		1,
+		{"ip_address": "not-an-ip", "malware": "QakBot"},
+		{"ip_address": "1.2.3.5", "port": "443", "malware": "QakBot"},
+		{"ip_address": "1.2.3.6"}
 	]`
 
-	payloads, err := FeodoTracker(body)
+	payloads, err := aggregator.extractFeodoTracker(test.Context(), strings.NewReader(body))
 	if nil != err {
-		t.Fatal(err)
-	}
-	if 1 != len(payloads) {
-		t.Fatalf("len(payloads) = %d, want 1", len(payloads))
+		test.Fatalf("extractFeodoTracker() error = %v, want nil", err)
 	}
 
-	r := assertSingleResult(t, payloads[0], "1.2.3.4", "feodotracker", "qakbot")
+	wantMetadata := `{"country":"US","firstSeen":"a","lastOnline":"b","hostname":null,"port":443}`
+	want := []Payload{newTestPayload("1.2.3.4", FEODOTRACKER_SOURCE_NAME, fixedTime, wantMetadata, "qakbot")}
 
-	if "US" != r.Metadata["country"] {
-		t.Errorf("country = %v", r.Metadata["country"])
+	if diff := cmp.Diff(want, payloads, payloadComparison); "" != diff {
+		test.Errorf("extractFeodoTracker() mismatch (-want +got):\n%s", diff)
 	}
-	if "2026-01-01 00:00:00" != r.Metadata["firstSeen"] {
-		t.Errorf("firstSeen = %v", r.Metadata["firstSeen"])
-	}
-	if "2026-05-19" != r.Metadata["lastOnline"] {
-		t.Errorf("lastOnline = %v", r.Metadata["lastOnline"])
-	}
-	if hostname, ok := r.Metadata["hostname"]; false == ok || nil != hostname {
-		t.Errorf("hostname = %v (present %v), want null", hostname, ok)
-	}
-	if float64(443) != r.Metadata["port"] {
-		t.Errorf("port = %v, want 443", r.Metadata["port"])
-	}
-	if _, ok := r.Metadata["status"]; ok {
-		t.Error("unexpected status field copied into metadata")
+
+	if wantWarnings := 4; wantWarnings != strings.Count(logs.String(), "level=WARN") {
+		test.Errorf("extractFeodoTracker() logs = %q, want %d warnings", logs, wantWarnings)
 	}
 }
 
-func TestFeodoTrackerEmpty(t *testing.T) {
-	payloads, err := FeodoTracker("[]")
-	if nil != err {
-		t.Fatal(err)
-	}
-	if 0 != len(payloads) {
-		t.Errorf("len(payloads) = %d, want 0", len(payloads))
-	}
-}
+// TestAggregatorExtractFeodoTrackerErrors checks that a body that isn't a JSON list fails the
+// whole blocklist.
+func TestAggregatorExtractFeodoTrackerErrors(test *testing.T) {
+	test.Parallel()
 
-func TestFeodoTrackerErrors(t *testing.T) {
-	tests := []struct {
+	testCases := []struct {
 		name string
 		body string
 	}{
-		{"invalid json", "{"},
-		{"not a list", `{"ip_address": "1.2.3.4"}`},
-		{"missing key", `[{"ip_address": "1.2.3.4", "malware": "x"}]`},
-		{"non-string malware", `[{"ip_address": "1.2.3.4", "malware": 1, "country": "", "first_seen": "", "last_online": "", "hostname": null, "port": 1}]`},
-		{"non-string ip", `[{"ip_address": 1, "malware": "x", "country": "", "first_seen": "", "last_online": "", "hostname": null, "port": 1}]`},
+		{name: "invalid json", body: "["},
+		{name: "not a list", body: `{"ip_address": "1.2.3.4"}`},
 	}
 
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if _, err := FeodoTracker(tt.body); nil == err {
-				t.Error("FeodoTracker() error = nil, want error")
+	for _, testCase := range testCases {
+		// The function literal is a closure over testCase. Each loop iteration has its own
+		// testCase, so the parallel subtests never share one.
+		test.Run(testCase.name, func(subtest *testing.T) {
+			subtest.Parallel()
+
+			aggregator, _ := newTestAggregator(subtest, &http.Client{})
+			if _, err := aggregator.extractFeodoTracker(subtest.Context(), strings.NewReader(testCase.body)); nil == err {
+				subtest.Errorf("extractFeodoTracker(%q) error = nil, want error", testCase.body)
 			}
 		})
 	}
+}
+
+// FuzzAggregatorExtractFeodoTracker checks that extractFeodoTracker never panics, and only
+// returns storable payloads from Feodo Tracker, whatever the blocklist contains.
+func FuzzAggregatorExtractFeodoTracker(fuzzer *testing.F) {
+	fuzzer.Add(readTestdata(fuzzer, "feodotracker.json"))
+	fuzzer.Add([]byte(`[{"ip_address": "::1", "malware": "X", "hostname": "h", "port": -1}]`))
+	fuzzer.Add([]byte(`[null, [], {}]`))
+
+	aggregator, _ := newTestAggregator(fuzzer, &http.Client{})
+	aggregator.logger = slog.New(slog.DiscardHandler)
+
+	fuzzer.Fuzz(func(test *testing.T, body []byte) {
+		payloads, err := aggregator.extractFeodoTracker(test.Context(), bytes.NewReader(body))
+		if nil != err {
+			return // Rejecting a malformed blocklist is allowed; panicking isn't.
+		}
+
+		for _, payload := range payloads {
+			checkExtractedPayload(test, payload, FEODOTRACKER_SOURCE_NAME)
+		}
+	})
 }

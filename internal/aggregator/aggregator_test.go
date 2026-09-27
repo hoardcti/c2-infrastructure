@@ -3,289 +3,399 @@ package aggregator
 import (
 	"bytes"
 	"context"
+	"errors"
+	"fmt"
 	"io"
-	"log"
+	"log/slog"
 	"net/http"
-	"net/http/httptest"
 	"os"
-	"path/filepath"
 	"strings"
-	"sync/atomic"
 	"testing"
 	"time"
 
-	"github.com/doodad-labs/command-server-watch/internal/aggregator/extractors"
+	"github.com/google/go-cmp/cmp"
 )
 
-const criminalIPBody = "IP,flag,port,score,country,scanTime\n1.2.3.4,Cobalt Strike,443,Critical,US,2026-05-19\n"
+// TestAPIKeyRedacts checks that an API key never appears when printed or logged.
+func TestAPIKeyRedacts(test *testing.T) {
+	test.Parallel()
 
-// newTestAggregator returns an Aggregator writing to a temp dir with a fixed
-// clock, plus the buffer its logs are written to.
-func newTestAggregator(t *testing.T) (*Aggregator, *bytes.Buffer) {
-	t.Helper()
+	key := APIKey("secret-key")
 
 	var logs bytes.Buffer
-	a := New(t.TempDir())
-	a.Logger = log.New(&logs, "", 0)
-	a.Now = func() time.Time { return time.Date(2026, 5, 9, 12, 0, 0, 0, time.UTC) }
+	slog.New(slog.NewJSONHandler(&logs, nil)).Info("test", "key", key)
 
-	return a, &logs
-}
-
-// serve starts a server that replies to every request with status and body,
-// counting the requests it receives and recording the last path.
-func serve(t *testing.T, status int, body string) (*httptest.Server, *atomic.Int32, *atomic.Value) {
-	t.Helper()
-
-	var hits atomic.Int32
-	var path atomic.Value
-
-	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		hits.Add(1)
-		path.Store(r.URL.Path)
-		w.WriteHeader(status)
-		io.WriteString(w, body)
-	}))
-	t.Cleanup(srv.Close)
-
-	return srv, &hits, &path
-}
-
-func ipv4File(a *Aggregator, octets ...string) string {
-	last := len(octets) - 1
-	elems := append([]string{a.Store.Dir, "ipv4"}, octets[:last]...)
-
-	return filepath.Join(append(elems, octets[last]+".json")...)
-}
-
-func assertExists(t *testing.T, path string, want bool) {
-	t.Helper()
-
-	_, err := os.Stat(path)
-	if got := nil == err; want != got {
-		t.Errorf("%s exists = %v, want %v", path, got, want)
+	for _, output := range []string{key.String(), fmt.Sprintf("%v %s", key, key), logs.String()} {
+		if strings.Contains(output, "secret-key") || !strings.Contains(output, REDACTED) {
+			test.Errorf("output %q shows the key, want it redacted", output)
+		}
 	}
 }
 
-func TestLoadSources(t *testing.T) {
-	path := filepath.Join(t.TempDir(), "sources.json")
-	content := `{
-		"aggregator": {
-			"git": [{"name": "g", "url": "u", "url_raw": "r/", "file_format": "YYYY.csv", "type": "csv", "metadata": {"cron": "* * * * *"}}],
-			"json": [{"name": "j", "url": "ju"}],
-			"api": [{"name": "a", "url": "au", "query": {"limit": 10}}]
-		},
-		"tracker": {"shodan": []}
-	}`
-	if err := os.WriteFile(path, []byte(content), 0o644); nil != err {
-		t.Fatal(err)
-	}
+// TestNewAppliesOptions checks the defaults and that each option sets its value.
+func TestNewAppliesOptions(test *testing.T) {
+	test.Parallel()
 
-	sources, err := LoadSources(path)
+	store := newTestStore(test)
+	httpClient := &http.Client{}
+
+	defaults, err := New(Sources{}, store, httpClient)
 	if nil != err {
-		t.Fatal(err)
+		test.Fatalf("New() error = %v, want nil", err)
 	}
 
-	if 1 != len(sources.Git) || "r/" != sources.Git[0].URLRaw || "YYYY.csv" != sources.Git[0].FileFormat || "* * * * *" != sources.Git[0].Metadata["cron"] {
-		t.Errorf("git sources = %+v", sources.Git)
+	if DEFAULT_USER_AGENT != defaults.userAgent || "" != defaults.abusechAPIKey || nil == defaults.logger || nil == defaults.now {
+		test.Errorf("New() defaults = %+v, want the default user agent, no key, a logger and a clock", defaults)
 	}
-	if 1 != len(sources.JSON) || "ju" != sources.JSON[0].URL {
-		t.Errorf("json sources = %+v", sources.JSON)
-	}
-	if 0 != len(sources.CSV) {
-		t.Errorf("csv sources = %+v, want none", sources.CSV)
-	}
-	if 1 != len(sources.API) || float64(10) != sources.API[0].Query["limit"] {
-		t.Errorf("api sources = %+v", sources.API)
-	}
-}
 
-func TestLoadSourcesRepoConfig(t *testing.T) {
-	sources, err := LoadSources(filepath.Join("..", "..", DefaultSourcesFile))
+	logger := slog.New(slog.DiscardHandler)
+	configured, err := New(Sources{}, store, httpClient, WithLogger(logger), WithUserAgent("agent"), WithAbusechAPIKey("key"))
 	if nil != err {
-		t.Fatal(err)
+		test.Fatalf("New() with options error = %v, want nil", err)
 	}
 
-	if 0 == len(sources.Git) || 0 == len(sources.JSON) || 0 == len(sources.CSV) || 0 == len(sources.API) {
-		t.Errorf("repo sources.json is missing a source group: %+v", sources)
-	}
-}
-
-func TestLoadSourcesErrors(t *testing.T) {
-	dir := t.TempDir()
-
-	if _, err := LoadSources(filepath.Join(dir, "missing.json")); nil == err {
-		t.Error("LoadSources(missing) error = nil, want error")
-	}
-
-	bad := filepath.Join(dir, "bad.json")
-	if err := os.WriteFile(bad, []byte("{"), 0o644); nil != err {
-		t.Fatal(err)
-	}
-	if _, err := LoadSources(bad); nil == err {
-		t.Error("LoadSources(bad json) error = nil, want error")
+	isConfigured := logger == configured.logger && "agent" == configured.userAgent && "key" == configured.abusechAPIKey
+	if !isConfigured || httpClient != configured.httpClient || store != configured.store {
+		test.Errorf("New() with options = %+v, want every option applied", configured)
 	}
 }
 
-func TestNew(t *testing.T) {
-	a := New("dir")
+// TestNewRejectsInvalidSources checks that every problem with an enabled source is reported by
+// New, before any work starts, and that disabled sources aren't checked.
+func TestNewRejectsInvalidSources(test *testing.T) {
+	test.Parallel()
 
-	if nil == a.Client || nil == a.Logger || nil == a.Now || "dir" != a.Store.Dir {
-		t.Errorf("New() = %+v, want all fields set", a)
-	}
-}
+	validQuery := APIQuery{Query: "taginfo", Limit: 1}
 
-func TestBuildURL(t *testing.T) {
-	a, _ := newTestAggregator(t)
-
-	tests := []struct {
-		format string
-		want   string
-	}{
-		{"YYYY-MM-DD.csv", "https://raw.example/2026-05-09.csv"},
-		{"DD.MM.YYYY", "https://raw.example/09.05.2026"},
-		{"static.csv", "https://raw.example/static.csv"},
-	}
-
-	for _, tt := range tests {
-		t.Run(tt.format, func(t *testing.T) {
-			got := a.buildURL(Source{URLRaw: "https://raw.example/", FileFormat: tt.format})
-			if tt.want != got {
-				t.Errorf("buildURL() = %q, want %q", got, tt.want)
-			}
-		})
-	}
-}
-
-func TestProcessGitSource(t *testing.T) {
-	a, _ := newTestAggregator(t)
-	srv, _, path := serve(t, http.StatusOK, criminalIPBody)
-
-	a.processGitSource(context.Background(), Source{Name: "criminalip", URLRaw: srv.URL + "/feed/", FileFormat: "YYYY-MM-DD.csv"})
-
-	if got := path.Load(); "/feed/2026-05-09.csv" != got {
-		t.Errorf("requested path = %v, want /feed/2026-05-09.csv", got)
-	}
-	assertExists(t, ipv4File(a, "1", "2", "3", "4"), true)
-}
-
-func TestProcessFeedSource(t *testing.T) {
-	srv, _, _ := serve(t, http.StatusOK, criminalIPBody)
-
-	a, logs := newTestAggregator(t)
-	a.processFeedSource(context.Background(), Source{Name: "criminalip"}, srv.URL)
-
-	assertExists(t, ipv4File(a, "1", "2", "3", "4"), true)
-	if 0 != logs.Len() {
-		t.Errorf("unexpected logs: %s", logs)
-	}
-}
-
-func TestProcessFeedSourceFailures(t *testing.T) {
-	ok, _, _ := serve(t, http.StatusOK, criminalIPBody)
-	notFound, _, _ := serve(t, http.StatusNotFound, criminalIPBody)
-	garbage, _, _ := serve(t, http.StatusOK, "header\nnot,enough\n")
-
-	closed := httptest.NewServer(http.NotFoundHandler())
-	closedURL := closed.URL
-	closed.Close()
-
-	tests := []struct {
+	testCases := []struct {
 		name    string
-		source  string
-		url     string
-		wantLog string
+		sources Sources
+		// wantErr is part of the error New must return, or "" when New must succeed.
+		wantErr string
 	}{
-		{"http error", "criminalip", notFound.URL, "(HTTP 404)"},
-		{"unreachable", "criminalip", closedURL, "Failed to fetch criminalip"},
-		{"bad url", "criminalip", "://bad", "Failed to fetch criminalip"},
-		{"unknown extractor", "nope", ok.URL, "No extractor registered for source: nope"},
-		{"extractor error", "criminalip", garbage.URL, "Failed to extract criminalip"},
+		{name: "disabled sources aren't checked", sources: Sources{JSON: []Source{{Name: "unknown"}}}},
+		{name: "unknown git source", sources: Sources{Git: []Source{{Name: "unknown", Enabled: true}}}, wantErr: "no extractor"},
+		{
+			name:    "git url_raw not https",
+			sources: Sources{Git: []Source{{Name: CRIMINALIP_SOURCE_NAME, Enabled: true, URLRaw: "http://example.com/", FileFormat: "x"}}},
+			wantErr: "url_raw",
+		},
+		{
+			name:    "git file_format missing",
+			sources: Sources{Git: []Source{{Name: CRIMINALIP_SOURCE_NAME, Enabled: true, URLRaw: "https://example.com/"}}},
+			wantErr: "file_format",
+		},
+		{name: "unknown json source", sources: Sources{JSON: []Source{{Name: "unknown", Enabled: true}}}, wantErr: "no extractor"},
+		{
+			name:    "csv url unparsable",
+			sources: Sources{CSV: []Source{{Name: VIRIBACKTRACKER_SOURCE_NAME, Enabled: true, URL: "https://[::1"}}},
+			wantErr: "parsing URL",
+		},
+		{name: "json url relative", sources: Sources{JSON: []Source{{Name: FEODOTRACKER_SOURCE_NAME, Enabled: true, URL: "/feed"}}}, wantErr: "url"},
+		{name: "unknown api source", sources: Sources{API: []Source{{Name: "unknown", Enabled: true}}}, wantErr: "no extractor"},
+		{name: "api url missing", sources: Sources{API: []Source{{Name: THREATFOX_SOURCE_NAME, Enabled: true, Query: validQuery}}}, wantErr: "url"},
+		{
+			name:    "api query missing",
+			sources: Sources{API: []Source{{Name: THREATFOX_SOURCE_NAME, Enabled: true, URL: "https://example.com/"}}},
+			wantErr: "query",
+		},
+		{
+			name:    "threatfox without key",
+			sources: Sources{API: []Source{{Name: THREATFOX_SOURCE_NAME, Enabled: true, URL: "https://example.com/", Query: validQuery}}},
+			wantErr: "ABUSECH_API_KEY",
+		},
+		{
+			name: "every problem reported",
+			sources: Sources{
+				Git: []Source{{Name: "first", Enabled: true}},
+				API: []Source{{Name: "second", Enabled: true}},
+			},
+			wantErr: `source "first": no extractor for this source name` + "\n" + `source "second": no extractor for this source name`,
+		},
 	}
 
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			a, logs := newTestAggregator(t)
-			a.processFeedSource(context.Background(), Source{Name: tt.source}, tt.url)
+	for _, testCase := range testCases {
+		// The function literal is a closure over testCase. Each loop iteration has its own
+		// testCase, so the parallel subtests never share one.
+		test.Run(testCase.name, func(subtest *testing.T) {
+			subtest.Parallel()
 
-			if false == strings.Contains(logs.String(), tt.wantLog) {
-				t.Errorf("logs = %q, want to contain %q", logs, tt.wantLog)
+			_, err := New(testCase.sources, newTestStore(subtest), &http.Client{})
+
+			if "" == testCase.wantErr {
+				if nil != err {
+					subtest.Errorf("New() error = %v, want nil", err)
+				}
+
+				return
 			}
-			assertExists(t, ipv4File(a, "1", "2", "3", "4"), false)
+
+			if nil == err || !strings.Contains(err.Error(), testCase.wantErr) {
+				subtest.Errorf("New() error = %v, want it to contain %q", err, testCase.wantErr)
+			}
 		})
 	}
 }
 
-func TestProcessAPISource(t *testing.T) {
-	srv, _, _ := serve(t, http.StatusOK, `{"query_status": "ok", "data": [
-		{"ioc": "5.6.7.8:443", "ioc_type": "ip:port", "malware_printable": "Sliver", "first_seen": "2026-05-09 00:00:00 UTC"}
-	]}`)
+// TestNewRequiresDependencies checks that New refuses a missing store or HTTP client.
+func TestNewRequiresDependencies(test *testing.T) {
+	test.Parallel()
 
-	a, logs := newTestAggregator(t)
-	a.processAPISource(context.Background(), Source{
-		Name:  "threatfox",
-		URL:   srv.URL,
-		Query: map[string]any{"query": "taginfo", "limit": float64(1)},
+	if _, err := New(Sources{}, nil, &http.Client{}); nil == err {
+		test.Error("New() without a store error = nil, want error")
+	}
+
+	if _, err := New(Sources{}, newTestStore(test), nil); nil == err {
+		test.Error("New() without an HTTP client error = nil, want error")
+	}
+}
+
+// TestAggregatorNewJobUnknownKind checks that a source whose kind isn't known is refused.
+func TestAggregatorNewJobUnknownKind(test *testing.T) {
+	test.Parallel()
+
+	aggregator, _ := newTestAggregator(test, &http.Client{})
+
+	if _, err := aggregator.newJob(Source{Name: CRIMINALIP_SOURCE_NAME, kind: "ftp"}); nil == err {
+		test.Error(`newJob() with kind "ftp" error = nil, want error`)
+	}
+}
+
+// TestAggregatorRun checks a run over one source of every kind: each is fetched the right way
+// and every payload is stored.
+func TestAggregatorRun(test *testing.T) {
+	test.Parallel()
+
+	gitUpstream := newFakeUpstream(test, http.StatusOK, string(readTestdata(test, "criminalip.csv")))
+	jsonUpstream := newFakeUpstream(test, http.StatusOK, string(readTestdata(test, "feodotracker.json")))
+	csvUpstream := newFakeUpstream(test, http.StatusOK, string(readTestdata(test, "viribacktracker.csv")))
+	apiUpstream := newFakeUpstream(test, http.StatusOK, string(readTestdata(test, "threatfox_taginfo.json")))
+
+	// Every fake upstream uses the same test certificate, so one client reaches them all.
+	aggregator := newRunTestAggregator(test, apiUpstream.server.Client(), Sources{
+		Git: []Source{{
+			Name:       CRIMINALIP_SOURCE_NAME,
+			Enabled:    true,
+			URLRaw:     gitUpstream.server.URL + "/feed/",
+			FileFormat: "YYYY-MM-DD.csv",
+		}},
+		JSON: []Source{{Name: FEODOTRACKER_SOURCE_NAME, Enabled: true, URL: jsonUpstream.server.URL}},
+		CSV:  []Source{{Name: VIRIBACKTRACKER_SOURCE_NAME, Enabled: true, URL: csvUpstream.server.URL}},
+		API:  []Source{{Name: THREATFOX_SOURCE_NAME, Enabled: true, URL: apiUpstream.server.URL, Query: validThreatFoxQuery}},
 	})
 
-	assertExists(t, ipv4File(a, "5", "6", "7", "8"), true)
-	if strings.Contains(logs.String(), "Failed") {
-		t.Errorf("unexpected failure logs: %s", logs)
-	}
-}
-
-func TestProcessAPISourceFailures(t *testing.T) {
-	a, logs := newTestAggregator(t)
-
-	a.processAPISource(context.Background(), Source{Name: "nope"})
-	if false == strings.Contains(logs.String(), "No extractor registered for source: nope") {
-		t.Errorf("logs = %q, want missing extractor warning", logs)
-	}
-
-	logs.Reset()
-
-	// A nil query is passed as empty, which threatfox rejects
-	a.processAPISource(context.Background(), Source{Name: "threatfox", URL: "http://127.0.0.1:0"})
-	if false == strings.Contains(logs.String(), "Failed to extract threatfox") {
-		t.Errorf("logs = %q, want extraction failure", logs)
-	}
-}
-
-func TestRunOnlyProcessesAPISources(t *testing.T) {
-	feed, feedHits, _ := serve(t, http.StatusOK, criminalIPBody)
-	api, apiHits, _ := serve(t, http.StatusOK, `{"query_status": "ok", "data": []}`)
-
-	a, _ := newTestAggregator(t)
-	a.Run(context.Background(), Sources{
-		Git:  []Source{{Name: "criminalip", URLRaw: feed.URL + "/", FileFormat: "x.csv"}},
-		JSON: []Source{{Name: "feodotracker", URL: feed.URL}},
-		CSV:  []Source{{Name: "viribacktracker", URL: feed.URL}},
-		API:  []Source{{Name: "threatfox", URL: api.URL, Query: map[string]any{"query": "taginfo", "limit": float64(1)}}},
-	})
-
-	if 0 != feedHits.Load() {
-		t.Errorf("feed sources were fetched %d times, want 0 (disabled)", feedHits.Load())
-	}
-	if 1 != apiHits.Load() {
-		t.Errorf("api source was fetched %d times, want 1", apiHits.Load())
-	}
-}
-
-func TestSaveLogsFailures(t *testing.T) {
-	a, logs := newTestAggregator(t)
-
-	// Block the ipv4 directory with a file so MkdirAll fails
-	if err := os.WriteFile(filepath.Join(a.Store.Dir, "ipv4"), nil, 0o644); nil != err {
-		t.Fatal(err)
-	}
-
-	payloads, err := extractors.CriminalIP(criminalIPBody)
+	storedCount, err := aggregator.Run(test.Context())
 	if nil != err {
-		t.Fatal(err)
+		test.Fatalf("Run() error = %v, want nil", err)
 	}
-	a.save(payloads)
 
-	if false == strings.Contains(logs.String(), "Failed to save payload for 1.2.3.4") {
-		t.Errorf("logs = %q, want save failure", logs)
+	// 5 Criminal IP rows, 1 Feodo Tracker entry, 5 ViriBack rows and 3 ThreatFox indicators.
+	if 14 != storedCount {
+		test.Errorf("Run() stored %d payloads, want 14", storedCount)
+	}
+
+	// The Git source's file is named after the fixed clock's date.
+	if requests := gitUpstream.received(); 1 != len(requests) || "/feed/2026-05-09.csv" != requests[0].path {
+		test.Errorf("Run() Git requests = %+v, want one for /feed/2026-05-09.csv", requests)
+	}
+
+	for _, address := range []string{"35.172.12.146", "50.16.16.211", "47.105.68.108", "94.230.141.123"} {
+		readStoredPayload(test, aggregator.store, address)
+	}
+
+	// Both ThreatFox indicators for 155.94.154.152 end up in one file.
+	if stored := readStoredPayload(test, aggregator.store, "155.94.154.152"); 2 != len(stored.Results) {
+		test.Errorf("stored payload for 155.94.154.152 has %d results, want 2", len(stored.Results))
+	}
+}
+
+// TestAggregatorRunContinuesAfterFailures checks that a failing source doesn't stop the others,
+// and that every failure is returned.
+func TestAggregatorRunContinuesAfterFailures(test *testing.T) {
+	test.Parallel()
+
+	failingUpstream := newFakeUpstream(test, http.StatusBadGateway, "down")
+	workingUpstream := newFakeUpstream(test, http.StatusOK, string(readTestdata(test, "viribacktracker.csv")))
+
+	aggregator := newRunTestAggregator(test, workingUpstream.server.Client(), Sources{
+		JSON: []Source{{Name: FEODOTRACKER_SOURCE_NAME, Enabled: true, URL: failingUpstream.server.URL}},
+		CSV:  []Source{{Name: VIRIBACKTRACKER_SOURCE_NAME, Enabled: true, URL: workingUpstream.server.URL}},
+		API:  []Source{{Name: THREATFOX_SOURCE_NAME, Enabled: true, URL: failingUpstream.server.URL, Query: validThreatFoxQuery}},
+	})
+
+	storedCount, err := aggregator.Run(test.Context())
+	if 5 != storedCount {
+		test.Errorf("Run() stored %d payloads, want the 5 from the working source", storedCount)
+	}
+
+	for _, wantFailure := range []string{`processing source "feodotracker"`, `processing source "threatfox"`} {
+		if nil == err || !strings.Contains(err.Error(), wantFailure) {
+			test.Errorf("Run() error = %v, want it to contain %q", err, wantFailure)
+		}
+	}
+}
+
+// TestAggregatorRunStopsWhenCancelled checks that a cancelled run doesn't start another source.
+func TestAggregatorRunStopsWhenCancelled(test *testing.T) {
+	test.Parallel()
+
+	upstream := newFakeUpstream(test, http.StatusOK, string(readTestdata(test, "viribacktracker.csv")))
+	aggregator := newRunTestAggregator(test, upstream.server.Client(), Sources{
+		CSV: []Source{{Name: VIRIBACKTRACKER_SOURCE_NAME, Enabled: true, URL: upstream.server.URL}},
+	})
+
+	ctx, cancel := context.WithCancel(test.Context())
+	cancel()
+
+	storedCount, err := aggregator.Run(ctx)
+	if 0 != storedCount || !errors.Is(err, context.Canceled) {
+		test.Errorf("Run() after cancelling = (%d, %v), want (0, context.Canceled)", storedCount, err)
+	}
+
+	if requests := upstream.received(); 0 != len(requests) {
+		test.Errorf("Run() after cancelling sent %d requests, want 0", len(requests))
+	}
+}
+
+// TestAggregatorProcessSourceLogsCounts checks the summary logged for each source.
+func TestAggregatorProcessSourceLogsCounts(test *testing.T) {
+	test.Parallel()
+
+	aggregator, logs := newTestAggregator(test, &http.Client{})
+	job := sourceJob{
+		source: Source{Name: "test"},
+		collect: func(context.Context) ([]Payload, error) {
+			return []Payload{newTestPayload("1.2.3.4", "test", fixedTime, `{}`, "a")}, nil
+		},
+	}
+
+	storedCount, err := aggregator.processSource(test.Context(), job)
+	if nil != err || 1 != storedCount {
+		test.Errorf("processSource() = (%d, %v), want (1, nil)", storedCount, err)
+	}
+
+	wantLog := `level=INFO msg="source processed" source=test payload_count=1 stored_count=1`
+	if !strings.Contains(logs.String(), wantLog) {
+		test.Errorf("processSource() logs = %q, want them to contain %q", logs, wantLog)
+	}
+}
+
+// TestAggregatorSaveAll checks that a payload that can't be stored doesn't stop the others, and
+// that every failure is returned.
+func TestAggregatorSaveAll(test *testing.T) {
+	test.Parallel()
+
+	aggregator, _ := newTestAggregator(test, &http.Client{})
+	payloads := []Payload{
+		newTestPayload("1.1.1.1", "test", fixedTime, `{}`, "a"),
+		{IP: newTestPayload("2.2.2.2", "", fixedTime, "", "a").IP},
+		newTestPayload("3.3.3.3", "test", fixedTime, `{}`, "a"),
+	}
+
+	storedCount, err := aggregator.saveAll(test.Context(), payloads)
+	if 2 != storedCount || !errors.Is(err, errInvalidPayload) || !strings.Contains(err.Error(), `"2.2.2.2"`) {
+		test.Errorf("saveAll() = (%d, %v), want (2, an invalid payload error for 2.2.2.2)", storedCount, err)
+	}
+}
+
+// TestAggregatorSaveAllStopsWhenCancelled checks that nothing more is stored once the run is
+// cancelled.
+func TestAggregatorSaveAllStopsWhenCancelled(test *testing.T) {
+	test.Parallel()
+
+	aggregator, _ := newTestAggregator(test, &http.Client{})
+
+	ctx, cancel := context.WithCancel(test.Context())
+	cancel()
+
+	storedCount, err := aggregator.saveAll(ctx, []Payload{newTestPayload("1.1.1.1", "test", fixedTime, `{}`, "a")})
+	if 0 != storedCount || !errors.Is(err, context.Canceled) {
+		test.Errorf("saveAll() after cancelling = (%d, %v), want (0, context.Canceled)", storedCount, err)
+	}
+
+	if _, statErr := aggregator.store.root.Stat("ipv4"); !errors.Is(statErr, os.ErrNotExist) {
+		test.Errorf("saveAll() after cancelling wrote files: stat error = %v", statErr)
+	}
+}
+
+// TestAggregatorCollectErrors checks that feed URLs that can't be built or requested fail the
+// source.
+func TestAggregatorCollectErrors(test *testing.T) {
+	test.Parallel()
+
+	aggregator, _ := newTestAggregator(test, &http.Client{})
+	extract := func(context.Context, io.Reader) ([]Payload, error) { return nil, nil }
+
+	if _, err := aggregator.collectGitFile(test.Context(), Source{URLRaw: "https://[::1", FileFormat: "x"}, extract); nil == err {
+		test.Error("collectGitFile() with an unparsable url_raw error = nil, want error")
+	}
+
+	if _, err := aggregator.collectFeed(test.Context(), "https://[::1", extract); nil == err {
+		test.Error("collectFeed() with an unparsable URL error = nil, want error")
+	}
+}
+
+// TestValidateUpstreamURL checks that only absolute https URLs are accepted.
+func TestValidateUpstreamURL(test *testing.T) {
+	test.Parallel()
+
+	testCases := []struct {
+		name    string
+		rawURL  string
+		wantErr bool
+	}{
+		{name: "https", rawURL: "https://threatfox-api.abuse.ch/api/v1/"},
+		{name: "http", rawURL: "http://threatfox-api.abuse.ch/api/v1/", wantErr: true},
+		{name: "no host", rawURL: "https:///path", wantErr: true},
+		{name: "relative", rawURL: "api/v1/", wantErr: true},
+		{name: "empty", rawURL: "", wantErr: true},
+		{name: "unparsable", rawURL: "https://[::1", wantErr: true},
+	}
+
+	for _, testCase := range testCases {
+		test.Run(testCase.name, func(subtest *testing.T) {
+			subtest.Parallel()
+
+			if err := validateUpstreamURL(testCase.rawURL); testCase.wantErr != (nil != err) {
+				subtest.Errorf("validateUpstreamURL(%q) error = %v, want error %v", testCase.rawURL, err, testCase.wantErr)
+			}
+		})
+	}
+}
+
+// newRunTestAggregator returns an Aggregator for sources with a fixed clock and a store in a
+// new temporary directory, sending requests with httpClient.
+func newRunTestAggregator(testingContext testing.TB, httpClient *http.Client, sources Sources) *Aggregator {
+	testingContext.Helper()
+
+	aggregator, err := New(sources, newTestStore(testingContext), httpClient, WithAbusechAPIKey("key"))
+	if nil != err {
+		testingContext.Fatalf("New() error = %v, want nil", err)
+	}
+
+	aggregator.now = func() time.Time { return fixedTime }
+
+	return aggregator
+}
+
+// TestAggregatorRunStoresExpectedPayload checks one stored file from a run end to end.
+func TestAggregatorRunStoresExpectedPayload(test *testing.T) {
+	test.Parallel()
+
+	upstream := newFakeUpstream(test, http.StatusOK, string(readTestdata(test, "feodotracker.json")))
+	aggregator := newRunTestAggregator(test, upstream.server.Client(), Sources{
+		JSON: []Source{{Name: FEODOTRACKER_SOURCE_NAME, Enabled: true, URL: upstream.server.URL}},
+	})
+
+	if _, err := aggregator.Run(test.Context()); nil != err {
+		test.Fatalf("Run() error = %v, want nil", err)
+	}
+
+	wantMetadata := `{"country":"US","firstSeen":"2025-12-30 13:56:31","lastOnline":"2026-03-12",` +
+		`"hostname":"ec2-50-16-16-211.compute-1.amazonaws.com","port":443}`
+	want := newTestPayload("50.16.16.211", FEODOTRACKER_SOURCE_NAME, fixedTime, wantMetadata, "qakbot")
+
+	if diff := cmp.Diff(want, readStoredPayload(test, aggregator.store, "50.16.16.211"), payloadComparison); "" != diff {
+		test.Errorf("stored payload mismatch (-want +got):\n%s", diff)
 	}
 }

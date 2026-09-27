@@ -16,24 +16,30 @@ concurrency:
 
 env:
     DATA_BRANCH: data
+    # Use exactly the toolchain pinned in go.mod, and build a static binary
+    GOTOOLCHAIN: local
+    CGO_ENABLED: "0"
 
 jobs:
     aggregate:
         runs-on: ubuntu-latest
+        timeout-minutes: 30
 
         steps:
             # Source code lives on main, which scheduled runs are triggered from.
-            # BOT_PAT lets the stats step push back to main
+            # BOT_PAT lets the stats step push back to main, so its credentials
+            # are kept (persist-credentials defaults to true)
             - name: Checkout source code
-              uses: actions/checkout@v4
+              uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
               with:
                   fetch-depth: 1
                   token: ${{ secrets.BOT_PAT }}
 
             # Check out straight into the aggregator's output directory so it
-            # merges new results into the existing files
+            # merges new results into the existing files. Its credentials are
+            # kept too, for pushing the data branch
             - name: Checkout data branch into out/
-              uses: actions/checkout@v4
+              uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
               with:
                   ref: ${{ env.DATA_BRANCH }}
                   path: out
@@ -41,18 +47,25 @@ jobs:
                   token: ${{ secrets.BOT_PAT }}
 
             - name: Setup Go
-              uses: actions/setup-go@v5
+              uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
               with:
                   go-version-file: go.mod
-                  cache: false # No dependencies, so there is no go.sum to key on
+                  cache: true
 
+            # Build once with the same flags as CI, then run the binary
+            - name: Build
+              run: make build
+
+            # Exits 1 if any source fails; the steps below still publish what
+            # the other sources stored, and the run is marked as failed
             - name: Run Aggregate
-              run: go run ./cmd/aggregator -out out
+              run: ./bin/aggregator -out out -log json
               env:
                   ABUSECH_API_KEY: ${{ secrets.ABUSECH_API_KEY }}
 
             - name: Commit and push data branch
               id: data
+              if: ${{ !cancelled() }}
               working-directory: out
               run: |
                   git config user.name "HoardCTI [bot]"
@@ -74,7 +87,7 @@ jobs:
             # and main doesn't get an empty commit every hour. Skipped on manual
             # runs from other branches so they never push to main.
             - name: Update stats.json and push to main
-              if: steps.data.outputs.changed == 'true' && github.ref == 'refs/heads/main'
+              if: ${{ !cancelled() && steps.data.outputs.changed == 'true' && github.ref == 'refs/heads/main' }}
               run: |
                   # Every IP is stored as exactly one .json file
                   SERVERS=0

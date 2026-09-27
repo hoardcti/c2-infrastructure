@@ -1,68 +1,56 @@
-package extractors
+package aggregator
 
 import (
+	"context"
 	"encoding/csv"
 	"fmt"
-	"strings"
+	"io"
 )
 
-// skipFirstLine returns body with its first line (the header row) removed.
-func skipFirstLine(body string) string {
-	i := strings.IndexAny(body, "\r\n")
-	if -1 == i {
-		return ""
-	}
-
-	// Treat \r\n as a single line break
-	if '\r' == body[i] && i+1 < len(body) && '\n' == body[i+1] {
-		i++
-	}
-
-	return body[i+1:]
-}
-
-// readCSVRows parses a CSV body, skipping its header row, and requires every
-// record to have exactly fields columns.
-func readCSVRows(body string, fields int) ([][]string, error) {
-	reader := csv.NewReader(strings.NewReader(skipFirstLine(body)))
-	reader.FieldsPerRecord = fields
+// readCSVRows reads a CSV feed body and returns its rows without the header row. Rows that
+// don't have exactly columnCount columns are skipped with a warning, so one malformed row
+// doesn't stop the rest of the feed being published.
+func (aggregator *Aggregator) readCSVRows(
+	ctx context.Context,
+	sourceName string,
+	body io.Reader,
+	columnCount int,
+) ([][]string, error) {
+	reader := csv.NewReader(body)
+	// Column counts are checked row by row below instead of by the reader, so that a malformed
+	// row is skipped rather than failing the whole feed, and the header may differ.
+	reader.FieldsPerRecord = -1
+	// Feeds sometimes contain stray quotes inside unquoted fields; read them as literal text.
 	reader.LazyQuotes = true
 
-	rows, err := reader.ReadAll()
+	// With LazyQuotes and no fixed column count, reading fails only when body itself does.
+	records, err := reader.ReadAll()
 	if nil != err {
-		return nil, fmt.Errorf("parse csv: %w", err)
+		return nil, fmt.Errorf("reading CSV: %w", err)
+	}
+
+	if 0 == len(records) {
+		return nil, nil
+	}
+
+	// The first record is the header row. Row numbers in warnings count it as row 1.
+	rows := make([][]string, 0, len(records)-1)
+
+	for index, record := range records[1:] {
+		if columnCount != len(record) {
+			aggregator.logger.WarnContext(
+				ctx,
+				"skipping malformed CSV row",
+				"source", sourceName,
+				"row_number", index+2,
+				"column_count", len(record),
+			)
+
+			continue
+		}
+
+		rows = append(rows, record)
 	}
 
 	return rows, nil
-}
-
-// requireKeys returns an error naming the first key missing from obj.
-func requireKeys(obj map[string]any, keys ...string) error {
-	for _, key := range keys {
-		if _, ok := obj[key]; false == ok {
-			return fmt.Errorf("missing key %q", key)
-		}
-	}
-
-	return nil
-}
-
-// stringField returns obj[key] as a string, or an error if it is not one.
-func stringField(obj map[string]any, key string) (string, error) {
-	s, ok := obj[key].(string)
-	if false == ok {
-		return "", fmt.Errorf("field %q is %T, want string", key, obj[key])
-	}
-
-	return s, nil
-}
-
-// getOr mirrors Python's dict.get(key, def): it returns def only when key is
-// absent, so an explicit JSON null is passed through as nil.
-func getOr(obj map[string]any, key string, def any) any {
-	if v, ok := obj[key]; ok {
-		return v
-	}
-
-	return def
 }

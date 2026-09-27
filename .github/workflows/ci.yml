@@ -1,0 +1,86 @@
+name: CI
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+    # Weekly, so newly disclosed vulnerabilities are found even when nobody
+    # is pushing (GO-SEC-008)
+    schedule:
+        - cron: "0 5 * * 1"
+    workflow_dispatch:
+
+permissions:
+    contents: read
+
+concurrency:
+    group: ci-${{ github.ref }}
+    cancel-in-progress: true
+
+jobs:
+    detect:
+        name: Detect languages
+        runs-on: ubuntu-latest
+        timeout-minutes: 5
+        outputs:
+            go: ${{ steps.detect.outputs.go }}
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+              with:
+                  persist-credentials: false
+
+            - name: Detect
+              id: detect
+              run: |
+                  if [ -f go.mod ]; then echo "go=true" >> "$GITHUB_OUTPUT"; else echo "go=false" >> "$GITHUB_OUTPUT"; fi
+
+    go:
+        name: Go checks
+        needs: detect
+        if: needs.detect.outputs.go == 'true'
+        runs-on: ubuntu-latest
+        timeout-minutes: 20
+        env:
+            GOTOOLCHAIN: local
+            CGO_ENABLED: "0"
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+              with:
+                  persist-credentials: false
+
+            - name: Set up Go
+              uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+              with:
+                  go-version-file: go.mod
+                  cache: true
+
+            - name: Dependencies are tidy
+              run: make tidy-check
+
+            - name: Code is formatted
+              run: make fmt-check
+
+            - name: Lint
+              run: make lint
+
+            - name: Modernisers applied
+              run: make fix-check
+
+            - name: Generated code is up to date
+              run: make generate-check
+
+            # The Makefile turns cgo back on for this step: the race detector needs it
+            - name: Tests and coverage
+              run: make cover
+
+            - name: Coverage summary
+              if: always()
+              run: go tool go-test-coverage --config=.testcoverage.yml >> "$GITHUB_STEP_SUMMARY"
+
+            - name: Vulnerabilities
+              run: make vuln
+
+            - name: Build
+              run: make build

@@ -1,0 +1,342 @@
+# golangci-lint v2 configuration for hoardCTI Go repositories.
+#
+# Source: hoardcti/golang-style-guide, appendices/configs/.golangci.yml
+# Every enabled linter lists the guide rules it enforces. Copy this file to the
+# repository root unchanged; project-specific exceptions go at the end under
+# "exclusions" with a comment explaining each one.
+#
+# STATUS: starting point. This file has not been run against a real repository
+# yet (see CHANGELOG). Run `go tool golangci-lint config verify` when adopting it.
+
+version: "2"
+
+run:
+  # Match go.mod; the linters then understand every language feature in use.
+  go: "1.27"
+  # Resolve paths (such as the ruleguard rules file) relative to go.mod.
+  relative-path-mode: gomod
+  timeout: 5m
+
+linters:
+  # Start from nothing and enable each linter explicitly (N2), so upgrading
+  # golangci-lint never adds rules without anyone noticing.
+  default: none
+  enable:
+    # --- Correctness ---
+    - errcheck # GO-ERR-002, GO-ERR-011
+    - govet # GO-SYN-002 (copylocks), GO-CTX-005 (lostcancel), GO-NAM-015 (shadow)
+    - ineffassign
+    - staticcheck # GO-CTL-003 (S1002) and many correctness checks
+    - unused # GO-DOC-020 (dead code)
+    - bodyclose # GO-HTP-004
+    - contextcheck # GO-CTX-001
+    - containedctx # GO-CTX-002
+    - copyloopvar # GO-CTL-016
+    - errorlint # GO-ERR-009
+    - exhaustive # GO-CTL-013
+    - forcetypeassert # GO-IFC-006
+    - nilerr
+    - nilnesserr
+    - nilnil
+    - noctx # GO-HTP-003
+    - recvcheck # GO-FUN-006
+    - unparam
+    - wastedassign
+    - makezero
+    - durationcheck # GO-TIM-006
+
+    # --- Security ---
+    - gosec # GO-SEC-*, GO-FIL-004, GO-TYP-018
+
+    # --- Errors ---
+    - wrapcheck # GO-ERR-006
+    - errname # GO-NAM-020
+    - errchkjson
+
+    # --- Naming and style ---
+    - revive # GO-DOC-001, GO-DOC-004, GO-NAM-001..005, GO-NAM-011
+    - gocritic # GO-CTL-001 (ruleguard Yoda rules), GO-CTL-008
+    - varnamelen # GO-NAM-007, GO-NAM-008
+    - predeclared # GO-NAM-016
+    - importas # GO-IMP-002
+    - tagliatelle # GO-EXT-001
+    - misspell # GO-DOC-015 (UK spelling)
+    - godot # GO-DOC-015
+    - nolintlint # every //nolint names a linter and gives a reason
+    - usestdlibvars # GO-HTP-006
+    - mnd # GO-FMT-009
+    - dupword
+
+    # --- Complexity ---
+    - funlen # GO-FUN-007
+    - gocognit # GO-FUN-007
+    - nestif # GO-CTL-009
+    - nakedret # GO-FUN-003
+
+    # --- Architecture ---
+    - gochecknoinits # GO-DEC-007
+    - gochecknoglobals # GO-DEC-008
+    - ireturn # GO-IFC-004
+    - forbidigo # GO-LOG-001, GO-LIB-005, GO-SPT-003, GO-TST-010
+    - gomoddirectives # GO-MOD-004
+    - depguard # GO-MOD-008, GO-LIB-003
+
+    # --- Modern Go ---
+    - modernize # GO-MDN-002
+    - intrange # GO-CTL-015
+    - perfsprint # GO-LIB-001
+    - usetesting # GO-TST-013
+    - sloglint # GO-LOG-004, GO-LOG-005, GO-LOG-006
+
+    # --- Tests ---
+    - thelper # GO-TST-012
+    - tparallel # GO-TST-014
+    - paralleltest # GO-TST-014
+
+  settings:
+    govet:
+      enable-all: true
+      disable:
+        # Field alignment makes structs harder to read for a negligible saving.
+        - fieldalignment
+      settings:
+        shadow:
+          # GO-NAM-015: report shadowing; err/ctx in if-init statements pass
+          # because non-strict mode ignores shadows that are never used after.
+          strict: false
+
+    staticcheck:
+      checks:
+        - all
+        # ST1003 enforces MixedCaps constants and bans underscores; hoardCTI
+        # uses SCREAMING_SNAKE constants (GO-NAM-005) and SHA3_384 (GO-NAM-003).
+        - -ST1003
+        # Package comment content is checked by revive instead.
+        - -ST1000
+        # ST1017 rejects Yoda conditions, which hoardCTI requires (GO-CTL-001).
+        - -ST1017
+
+    revive:
+      enable-all-rules: false
+      rules:
+        - name: exported # GO-DOC-004 (exported names)
+        - name: package-comments # GO-DOC-001
+        - name: var-naming # GO-NAM-001, GO-NAM-002, GO-NAM-005
+          # [allowlist of initialisms], [blocklist], [options]: allow SCREAMING_SNAKE constants.
+          arguments: [[], [], [{ upper-case-const: true }]]
+        - name: receiver-naming # GO-NAM-011: consistent receivers (no max length).
+        - name: indent-error-flow # GO-CTL-007
+        - name: superfluous-else # GO-CTL-008
+        - name: early-return # GO-CTL-009
+        - name: unused-parameter
+        - name: use-any # GO-DEC-012
+        - name: redefines-builtin-id # GO-NAM-016
+        - name: import-shadowing # GO-NAM-016
+        - name: error-strings # GO-ERR-003
+        - name: error-naming # GO-NAM-020
+        - name: context-as-argument # GO-FUN-001
+        - name: unexported-return # GO-IFC-004
+
+    gocritic:
+      enable-all: true
+      disabled-checks:
+        # GO-CTL-001: hoardCTI requires Yoda style; this check demands the opposite.
+        - yodaStyleExpr
+        # Named results are allowed for documentation (GO-FUN-002).
+        - unnamedResult
+        # Allowed on purpose for readability of boolean expressions.
+        - boolExprSimplify
+        # hugeParam/rangeValCopy suggest pointers for performance (GO-TYP-016, GO-PRF-001).
+        - hugeParam
+        - rangeValCopy
+        # Documentation wording is checked in review (GO-DOC-013).
+        - commentedOutCode
+        - whyNoLint
+      settings:
+        ruleguard:
+          # GO-CTL-001..003: the Yoda rules. See ruleguard/rules.go.
+          rules: "${base-path}/ruleguard/rules.go"
+          failOn: all
+
+    errcheck:
+      exclude-functions:
+        # Command output written to the injected stdout and stderr (GO-CLI-004).
+        - fmt.Fprintf
+        - fmt.Fprintln
+        # Closing a response body that was only read (GO-ERR-011, GO-HTP-004).
+        - (io.ReadCloser).Close
+
+    varnamelen:
+      # GO-NAM-007/008: names shorter than 3 characters must be on the allowlist.
+      min-name-length: 3
+      max-distance: 5
+      check-receiver: true
+      check-return: true
+      check-type-param: true
+      ignore-names:
+        - err
+        - ctx
+        - ok
+        - i
+        - j
+        - k
+        - v
+        - w
+        - r
+        - id
+        - db
+        - tx
+        - fn
+        - n
+
+    tagliatelle:
+      case:
+        rules:
+          json: snake # GO-EXT-001
+        # Upstream API types keep upstream casing (GO-EXT-002); exclude those
+        # packages below under exclusions.
+
+    misspell:
+      locale: UK # GO-DOC-015
+
+    godot:
+      scope: all # GO-DOC-015: every comment, not just declarations.
+      period: true
+      # Doc comments start with the name they document (GO-DOC-005), which is lower case for
+      # unexported names, so the capital-letter check would reject them.
+      capital: false
+
+    thelper:
+      # Testing parameters are named test, benchmark, fuzzer and testingContext (GO-NAM-009),
+      # not t, b, f and tb, so only the Helper() checks are kept.
+      test:
+        name: false
+      benchmark:
+        name: false
+      tb:
+        name: false
+      fuzz:
+        name: false
+
+    nolintlint:
+      require-explanation: true
+      require-specific: true
+
+    mnd:
+      ignored-numbers:
+        - "0"
+        - "1"
+        - "2"
+      ignored-functions:
+        - strconv.*
+        - time.Date
+
+    funlen:
+      lines: 80 # GO-FUN-007
+      statements: 50
+
+    gocognit:
+      min-complexity: 15 # GO-FUN-007
+
+    nestif:
+      # GO-CTL-009: report any nesting that could be flattened.
+      min-complexity: 2
+
+    nakedret:
+      max-func-lines: 0 # GO-FUN-003: no naked returns at all.
+
+    exhaustive:
+      default-signifies-exhaustive: false # GO-CTL-013
+
+    sloglint:
+      no-mixed-args: true # GO-LOG-005
+      static-msg: true # GO-LOG-004
+      key-naming-case: snake # GO-LOG-005
+      context: scope # GO-LOG-006: use *Context methods where a ctx is in scope.
+      no-global: all # GO-LOG-002
+
+    forbidigo:
+      analyze-types: true
+      forbid:
+        - pattern: ^(fmt\.Print(f|ln)?|print|println)$
+          msg: "log with slog (GO-LOG-001); write command output with fmt.Fprint to the injected stdout (GO-CLI-004)"
+        - pattern: ^log\.
+          msg: "use log/slog (GO-LOG-001)"
+        - pattern: ^reflect\.DeepEqual$
+          msg: "use cmp.Diff (GO-TST-010)"
+        - pattern: ^time\.Sleep$
+          msg: "tests use testing/synctest (GO-SPT-003); production code waits with select on ctx.Done() (GO-CHN-004)"
+        - pattern: ^http\.(Get|Post|Head|PostForm|DefaultClient)$
+          msg: "use an injected *http.Client with a timeout (GO-HTP-001)"
+        - pattern: ^errors\.As$
+          msg: "use errors.AsType (GO-ERR-009)"
+
+    depguard:
+      rules:
+        banned:
+          deny:
+            - pkg: math/rand$
+              desc: "use math/rand/v2 or crypto/rand (GO-LIB-005)"
+            - pkg: io/ioutil
+              desc: "use io and os (GO-MDN-003)"
+            - pkg: unsafe
+              desc: "unsafe is banned (GO-RST-001)"
+            - pkg: reflect
+              desc: "reflect is banned (GO-RST-002)"
+            - pkg: github.com/google/uuid
+              desc: "use the standard uuid package (GO-LIB-003)"
+            - pkg: github.com/pkg/errors
+              desc: "use the standard errors package (GO-ERR-005)"
+            - pkg: github.com/stretchr/testify
+              desc: "use the standard testing package and go-cmp (GO-TST-010)"
+
+    gomoddirectives:
+      replace-local: false
+      retract-allow-no-explanation: false
+
+  exclusions:
+    # Generated code is exempt from style rules (GO-GEN-004).
+    generated: strict
+    rules:
+      # Test files may use literal numbers, longer functions and package-level
+      # test flags (GO-TDF-005).
+      - path: _test\.go
+        linters:
+          - mnd
+          - funlen
+          - dupword
+          - gochecknoglobals
+          - wrapcheck
+      # fmt.Print is allowed in package main for command output.
+      - path: ^cmd/
+        linters:
+          - forbidigo
+        text: "fmt\\.Print"
+      # Upstream API types keep upstream JSON casing (GO-EXT-002).
+      # Add one rule per upstream package, for example:
+      # - path: ^internal/abusech/
+      #   linters: [tagliatelle]
+      # The published metadata keys firstSeen, lastOnline and scanTime predate GO-EXT-001. They
+      # are kept so old and new files have the same format; renaming them is a data migration.
+      - path: ^internal/aggregator/
+        linters:
+          - tagliatelle
+        text: "got '(firstSeen|lastOnline|scanTime)'"
+
+formatters:
+  enable:
+    - gofumpt # GO-FMT-001
+    - gci # GO-IMP-001
+  settings:
+    gofumpt:
+      # Must match the module path in go.mod.
+      module-path: github.com/hoardcti/c2-infrastructure
+      extra-rules: false
+    gci:
+      sections:
+        - standard
+        - default
+        - prefix(github.com/hoardcti)
+      custom-order: true
+  exclusions:
+    generated: strict

@@ -1,0 +1,23 @@
+# go-test-coverage configuration (GO-COV-001 to GO-COV-007).
+# https://github.com/vladopajic/go-test-coverage
+#
+# The profile is produced by `make cover`:
+#   go test -race -shuffle=on -timeout=5m \
+#     -covermode=atomic -coverpkg=./... -coverprofile=cover.out ./...
+
+profile: cover.out
+
+threshold:
+  # Every package, and the module as a whole, must be fully covered (R4).
+  package: 100
+  total: 100
+
+exclude:
+  paths:
+    # Generated code (GO-COV-007).
+    - _string\.go$
+    - ^.*mock_.*\.go$
+    - \.pb\.go$
+
+# Statements marked with a `// coverage-ignore -- <reason>` comment directly after
+# an opening brace are excluded (GO-COV-005). Every such comment is reviewed.
