@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "168.222.97.15",
+    "first_seen": "2026-05-28T13:33:04.496771Z",
+    "last_seen": "2026-05-28T13:33:04.496771Z",
     "flags": [
         "xworm"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-05-28T13:33:04.496771",
-            "flags": [
-                "xworm"
-            ],
-            "metadata": {
-                "firstSeen": "2026-04-15T06:00:40",
-                "port": "8001",
-                "reference": "https://tria.ge/260415-f44c4saw4y",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.xworm",
-                "id": "1791444",
-                "ioc": "168.222.97.15:8001",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-05-28T13:33:04.496771Z",
+            "observations": [
+                {
+                    "first_observed": "2026-05-28T13:33:04.496771Z",
+                    "last_observed": "2026-05-28T13:33:04.496771Z",
+                    "flags": [
+                        "xworm"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-04-15T06:00:40",
+                        "port": "8001",
+                        "reference": "https://tria.ge/260415-f44c4saw4y",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.xworm",
+                        "id": "1791444",
+                        "ioc": "168.222.97.15:8001",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

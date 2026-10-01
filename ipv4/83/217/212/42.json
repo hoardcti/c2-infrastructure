@@ -1,24 +1,78 @@
 {
+    "schema_version": 2,
     "ip": "83.217.212.42",
+    "first_seen": "2026-09-09T08:41:32.906037Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown rat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-09T08:41:32.906037",
-            "flags": [
-                "unknown rat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-09T07:14:20",
-                "port": "38471",
-                "reference": "https://www.virustotal.com/gui/file/119e0c06d0b37be3a897f4cbc4e3a8ffbce8a27643a09ebef0952b5bc4f0e54d/behavior",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown_rat",
-                "id": "1905526",
-                "ioc": "83.217.212.42:38471",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:41Z",
+                    "last_observed": "2026-10-01T12:21:41Z",
+                    "data": {
+                        "asn": "AS48282",
+                        "as_name": "Hosting technology LTD",
+                        "as_domain": "vdsina.ru",
+                        "country_code": "RU",
+                        "country": "Russia",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-09T08:41:32.906037Z",
+                    "last_observed": "2026-09-09T08:41:32.906037Z",
+                    "flags": [
+                        "unknown rat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-09T07:14:20",
+                        "port": "38471",
+                        "reference": "https://www.virustotal.com/gui/file/119e0c06d0b37be3a897f4cbc4e3a8ffbce8a27643a09ebef0952b5bc4f0e54d/behavior",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown_rat",
+                        "id": "1905526",
+                        "ioc": "83.217.212.42:38471",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1905526",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown rat"
+                    ],
+                    "data": {
+                        "ioc": "83.217.212.42:38471",
+                        "port": 38471,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown RAT",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown_rat",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-09T07:14:20Z",
+                        "reference": "https://www.virustotal.com/gui/file/119e0c06d0b37be3a897f4cbc4e3a8ffbce8a27643a09ebef0952b5bc4f0e54d/behavior",
+                        "tags": [
+                            "Android",
+                            "apk",
+                            "c2",
+                            "telegram"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

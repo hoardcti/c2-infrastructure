@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "18.158.198.90",
+    "first_seen": "2026-05-28T13:33:04.492806Z",
+    "last_seen": "2026-05-28T13:33:04.492806Z",
     "flags": [
         "sliver"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-05-28T13:33:04.492806",
-            "flags": [
-                "sliver"
-            ],
-            "metadata": {
-                "firstSeen": "2026-05-12T14:49:58",
-                "port": "443",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
-                "id": "1811260",
-                "ioc": "18.158.198.90:443",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-05-28T13:33:04.492806Z",
+            "observations": [
+                {
+                    "first_observed": "2026-05-28T13:33:04.492806Z",
+                    "last_observed": "2026-05-28T13:33:04.492806Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-05-12T14:49:58",
+                        "port": "443",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "id": "1811260",
+                        "ioc": "18.158.198.90:443",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,106 @@
 {
+    "schema_version": 2,
     "ip": "217.60.103.120",
+    "first_seen": "2026-09-24T18:54:43.535821Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-24T18:54:43.535821",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-24T18:42:13",
-                "id": "1932368",
-                "ioc": "217.60.103.120:2404",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "port": "2404",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:15Z",
+                    "last_observed": "2026-10-01T12:23:15Z",
+                    "data": {
+                        "ports": [
+                            445
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:14Z",
+                    "last_observed": "2026-10-01T12:20:14Z",
+                    "data": {
+                        "asn": "AS209373",
+                        "as_name": "SWISSNET LLC",
+                        "as_domain": "swissnetwork.io",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "217.60.103.0/24",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "217.60.103.0/24",
+                        "sblid": "SBL699567",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-24T18:54:43.535821Z",
+                    "last_observed": "2026-09-24T18:54:43.535821Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-24T18:42:13",
+                        "id": "1932368",
+                        "ioc": "217.60.103.120:2404",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "port": "2404",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1932368",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "217.60.103.120:2404",
+                        "port": 2404,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-24T18:42:13Z",
+                        "reference": null,
+                        "tags": [
+                            "RemcosHolder",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

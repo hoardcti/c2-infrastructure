@@ -1,24 +1,54 @@
 {
+    "schema_version": 2,
     "ip": "154.19.37.231",
+    "first_seen": "2026-09-01T07:20:43.749829Z",
+    "last_seen": "2026-09-01T07:20:43.749829Z",
     "flags": [
         "remus"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-01T07:20:43.749829",
-            "flags": [
-                "remus"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-01T06:10:29",
-                "port": "6271",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
-                "id": "1892313",
-                "ioc": "154.19.37.231:6271",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:57Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:57Z",
+                    "last_observed": "2026-10-01T12:21:57Z",
+                    "data": {
+                        "asn": "AS55688",
+                        "as_name": "PT. Beon Intermedia",
+                        "as_domain": "beon.co.id",
+                        "country_code": "ID",
+                        "country": "Indonesia",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-09-01T07:20:43.749829Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-01T07:20:43.749829Z",
+                    "last_observed": "2026-09-01T07:20:43.749829Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-01T06:10:29",
+                        "port": "6271",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "id": "1892313",
+                        "ioc": "154.19.37.231:6271",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

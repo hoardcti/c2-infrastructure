@@ -1,24 +1,88 @@
 {
+    "schema_version": 2,
     "ip": "155.103.70.232",
+    "first_seen": "2026-09-01T13:09:00.527171Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-01T13:09:00.527171",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-30T08:15:53",
-                "port": "14444",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1942761",
-                "ioc": "155.103.70.232:14444",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:56Z",
+                    "last_observed": "2026-10-01T12:21:56Z",
+                    "data": {
+                        "asn": "AS44382",
+                        "as_name": "Fiba Cloud Operation Company, LLC",
+                        "as_domain": "fibacloud.com",
+                        "country_code": "TR",
+                        "country": "Turkey",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "155.103.68.0/22",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "155.103.68.0/22",
+                        "sblid": "SBL698394",
+                        "rir": "arin"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-01T13:09:00.527171Z",
+                    "last_observed": "2026-09-01T13:09:00.527171Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-30T08:15:53",
+                        "port": "14444",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1942761",
+                        "ioc": "155.103.70.232:14444",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1942761",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "155.103.70.232:14444",
+                        "port": 14444,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-30T08:15:53Z",
+                        "reference": null,
+                        "tags": [
+                            "REMOTEHOST",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

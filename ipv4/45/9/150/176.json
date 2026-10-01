@@ -1,24 +1,132 @@
 {
+    "schema_version": 2,
     "ip": "45.9.150.176",
+    "first_seen": "2026-09-27T13:42:15.183622Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-27T13:42:15.183622",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-27T10:00:37",
-                "id": "1938711",
-                "ioc": "45.9.150.176:4332",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "port": "4332",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:22:54Z",
+                    "last_observed": "2026-10-01T12:22:54Z",
+                    "data": {
+                        "ports": [
+                            2,
+                            25,
+                            80,
+                            110,
+                            443,
+                            465,
+                            993,
+                            8080
+                        ],
+                        "hostnames": [
+                            "mail.allswaps.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:exim:exim:4.96",
+                            "cpe:/a:f5:nginx",
+                            "cpe:/a:openbsd:openssh:9.2p1",
+                            "cpe:/o:debian:debian_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2022-3559",
+                            "CVE-2022-3620",
+                            "CVE-2023-42114",
+                            "CVE-2023-42115",
+                            "CVE-2023-42116",
+                            "CVE-2023-42117",
+                            "CVE-2023-42119",
+                            "CVE-2023-51766",
+                            "CVE-2024-39929",
+                            "CVE-2025-30232",
+                            "CVE-2025-67896",
+                            "CVE-2026-40684",
+                            "CVE-2026-40685",
+                            "CVE-2026-40686",
+                            "CVE-2026-40687",
+                            "CVE-2026-48840",
+                            "CVE-2026-66140",
+                            "CVE-2026-66141"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:10Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:10Z",
+                    "last_observed": "2026-10-01T12:20:10Z",
+                    "data": {
+                        "asn": "AS49447",
+                        "as_name": "Nice IT Services Group Inc.",
+                        "as_domain": "as49447.net",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-27T13:42:15.183622Z",
+                    "last_observed": "2026-09-27T13:42:15.183622Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-27T10:00:37",
+                        "id": "1938711",
+                        "ioc": "45.9.150.176:4332",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "port": "4332",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1938711",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "45.9.150.176:4332",
+                        "port": 4332,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-27T10:00:37Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "remcos",
+                            "tor25t"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

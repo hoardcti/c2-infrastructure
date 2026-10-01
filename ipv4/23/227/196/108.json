@@ -1,24 +1,78 @@
 {
+    "schema_version": 2,
     "ip": "23.227.196.108",
+    "first_seen": "2026-09-11T08:37:52.239733Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "cobalt strike"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-11T08:37:52.239733",
-            "flags": [
-                "cobalt strike"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-11T05:12:26",
-                "port": "58443",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
-                "id": "1911782",
-                "ioc": "23.227.196.108:58443",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:34Z",
+                    "last_observed": "2026-10-01T12:21:34Z",
+                    "data": {
+                        "asn": "AS29802",
+                        "as_name": "HIVELOCITY, Inc.",
+                        "as_domain": "hivelocity.net",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-11T08:37:52.239733Z",
+                    "last_observed": "2026-09-11T08:37:52.239733Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-11T05:12:26",
+                        "port": "58443",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "id": "1911782",
+                        "ioc": "23.227.196.108:58443",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1911782",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "23.227.196.108:58443",
+                        "port": 58443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-11T05:12:26Z",
+                        "reference": null,
+                        "tags": [
+                            "29802",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

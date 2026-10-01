@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "184.75.208.10",
+    "first_seen": "2026-09-07T08:58:29.095423Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-07T08:58:29.095423",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-07T08:18:08",
-                "port": "49006",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1903440",
-                "ioc": "184.75.208.10:49006",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:46Z",
+                    "last_observed": "2026-10-01T12:21:46Z",
+                    "data": {
+                        "asn": "AS32489",
+                        "as_name": "Amanah Tech Inc.",
+                        "as_domain": "amanah.com",
+                        "country_code": "CA",
+                        "country": "Canada",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-07T08:58:29.095423Z",
+                    "last_observed": "2026-09-07T08:58:29.095423Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-07T08:18:08",
+                        "port": "49006",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1903440",
+                        "ioc": "184.75.208.10:49006",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1903440",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "184.75.208.10:49006",
+                        "port": 49006,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-07T08:18:08Z",
+                        "reference": null,
+                        "tags": [
+                            "ONYXX_SA",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

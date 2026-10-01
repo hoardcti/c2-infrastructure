@@ -1,24 +1,47 @@
 {
+    "schema_version": 2,
     "ip": "94.154.43.175",
+    "first_seen": "2026-08-09T06:55:40.437665Z",
+    "last_seen": "2026-08-09T06:55:40.437665Z",
     "flags": [
         "mirai"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-09T06:55:40.437665",
-            "flags": [
-                "mirai"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-09T06:30:53",
-                "port": "6794",
-                "reference": "",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.mirai",
-                "id": "1871191",
-                "ioc": "94.154.43.175:6794",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "94.154.43.0/24",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "94.154.43.0/24",
+                        "sblid": "SBL699296",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-08-09T06:55:40.437665Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-09T06:55:40.437665Z",
+                    "last_observed": "2026-08-09T06:55:40.437665Z",
+                    "flags": [
+                        "mirai"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-09T06:30:53",
+                        "port": "6794",
+                        "reference": "",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.mirai",
+                        "id": "1871191",
+                        "ioc": "94.154.43.175:6794",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

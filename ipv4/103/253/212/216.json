@@ -1,24 +1,100 @@
 {
+    "schema_version": 2,
     "ip": "103.253.212.216",
+    "first_seen": "2026-09-14T11:57:26.199565Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "adaptixc2"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199565",
-            "flags": [
-                "adaptixc2"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:18:06",
-                "port": "4443",
-                "reference": "https://www.shodan.io/host/103.253.212.216#4443",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.adaptix_c2",
-                "id": "1917591",
-                "ioc": "103.253.212.216:4443",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:26Z",
+                    "last_observed": "2026-10-01T12:21:26Z",
+                    "data": {
+                        "asn": "AS58487",
+                        "as_name": "CV. Rumahweb Indonesia",
+                        "as_domain": "rumahweb.co.id",
+                        "country_code": "ID",
+                        "country": "Indonesia",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.199565Z",
+                    "last_observed": "2026-09-14T11:57:26.199565Z",
+                    "flags": [
+                        "adaptixc2"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:18:06",
+                        "port": "4443",
+                        "reference": "https://www.shodan.io/host/103.253.212.216#4443",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.adaptix_c2",
+                        "id": "1917591",
+                        "ioc": "103.253.212.216:4443",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917593",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "adaptixc2"
+                    ],
+                    "data": {
+                        "ioc": "103.253.212.216:4321",
+                        "port": 4321,
+                        "threat_type": "botnet_cc",
+                        "malware": "AdaptixC2",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.adaptix_c2",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:18:06Z",
+                        "reference": "https://www.shodan.io/host/103.253.212.216#4321",
+                        "tags": [
+                            "AdaptixC2",
+                            "c2",
+                            "shodan"
+                        ]
+                    }
+                },
+                {
+                    "key": "1917591",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "adaptixc2"
+                    ],
+                    "data": {
+                        "ioc": "103.253.212.216:4443",
+                        "port": 4443,
+                        "threat_type": "botnet_cc",
+                        "malware": "AdaptixC2",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.adaptix_c2",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:18:06Z",
+                        "reference": "https://www.shodan.io/host/103.253.212.216#4443",
+                        "tags": [
+                            "AdaptixC2",
+                            "c2",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

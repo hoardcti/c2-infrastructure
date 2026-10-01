@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "52.15.97.37",
+    "first_seen": "2026-09-14T11:57:26.199937Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199937",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:14:34",
-                "port": "443",
-                "reference": "https://www.shodan.io/host/52.15.97.37#443",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1917549",
-                "ioc": "52.15.97.37:443",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:18Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:18Z",
+                    "last_observed": "2026-10-01T12:21:18Z",
+                    "data": {
+                        "asn": "AS16509",
+                        "as_name": "Amazon.com, Inc.",
+                        "as_domain": "amazon.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.199937Z",
+                    "last_observed": "2026-09-14T11:57:26.199937Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:14:34",
+                        "port": "443",
+                        "reference": "https://www.shodan.io/host/52.15.97.37#443",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1917549",
+                        "ioc": "52.15.97.37:443",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917549",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "52.15.97.37:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:14:34Z",
+                        "reference": "https://www.shodan.io/host/52.15.97.37#443",
+                        "tags": [
+                            "PowerSploit",
+                            "c2",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

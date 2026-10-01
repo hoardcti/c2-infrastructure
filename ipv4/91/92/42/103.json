@@ -1,24 +1,47 @@
 {
+    "schema_version": 2,
     "ip": "91.92.42.103",
+    "first_seen": "2026-05-28T13:33:04.489053Z",
+    "last_seen": "2026-05-28T13:33:04.489053Z",
     "flags": [
         "asyncrat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-05-28T13:33:04.489053",
-            "flags": [
-                "asyncrat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-05-26T04:23:22",
-                "port": "6606",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat",
-                "id": "1818497",
-                "ioc": "91.92.42.103:6606",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": [
+                {
+                    "key": "91.92.42.0/24",
+                    "first_observed": "2026-10-01T12:19:59Z",
+                    "last_observed": "2026-10-01T12:19:59Z",
+                    "data": {
+                        "cidr": "91.92.42.0/24",
+                        "sblid": "SBL699857",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-05-28T13:33:04.489053Z",
+            "observations": [
+                {
+                    "first_observed": "2026-05-28T13:33:04.489053Z",
+                    "last_observed": "2026-05-28T13:33:04.489053Z",
+                    "flags": [
+                        "asyncrat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-05-26T04:23:22",
+                        "port": "6606",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat",
+                        "id": "1818497",
+                        "ioc": "91.92.42.103:6606",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

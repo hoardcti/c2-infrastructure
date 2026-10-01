@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "103.227.225.194",
+    "first_seen": "2026-09-14T11:57:26.200274Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "sliver"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.200274",
-            "flags": [
-                "sliver"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:13:54",
-                "port": "31337",
-                "reference": "https://www.shodan.io/host/103.227.225.194#31337",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
-                "id": "1917505",
-                "ioc": "103.227.225.194:31337",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:09Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:09Z",
+                    "last_observed": "2026-10-01T12:21:09Z",
+                    "data": {
+                        "asn": "AS148996",
+                        "as_name": "GLOBAL COMMUNICATION NETWORK LIMITED",
+                        "as_domain": "hkglobalnetwork.com",
+                        "country_code": "TW",
+                        "country": "Taiwan",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.200274Z",
+                    "last_observed": "2026-09-14T11:57:26.200274Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:13:54",
+                        "port": "31337",
+                        "reference": "https://www.shodan.io/host/103.227.225.194#31337",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "id": "1917505",
+                        "ioc": "103.227.225.194:31337",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917505",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "103.227.225.194:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:13:54Z",
+                        "reference": "https://www.shodan.io/host/103.227.225.194#31337",
+                        "tags": [
+                            "c2",
+                            "shodan",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

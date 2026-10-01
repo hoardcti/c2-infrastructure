@@ -1,24 +1,147 @@
 {
+    "schema_version": 2,
     "ip": "144.172.110.154",
+    "first_seen": "2026-09-23T16:40:16.251033Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-23T16:40:16.251033",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-21T16:25:27",
-                "port": "8085",
-                "reference": "https://github.com/RealJDEX/BrickFi",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1926642",
-                "ioc": "144.172.110.154:8085",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:57Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:57Z",
+                    "last_observed": "2026-10-01T12:23:57Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            8087
+                        ],
+                        "hostnames": [
+                            "154.110.172.144.static.cloudzy.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:23Z",
+                    "last_observed": "2026-10-01T12:20:23Z",
+                    "data": {
+                        "asn": "AS14956",
+                        "as_name": "RouterHosting LLC",
+                        "as_domain": "cloudzy.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-23T16:40:16.251033Z",
+                    "last_observed": "2026-09-23T16:40:16.251033Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-21T16:25:27",
+                        "port": "8085",
+                        "reference": "https://github.com/RealJDEX/BrickFi",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1926642",
+                        "ioc": "144.172.110.154:8085",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1926644",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "144.172.110.154:8087",
+                        "port": 8087,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 95,
+                        "first_seen": "2026-09-21T16:25:27Z",
+                        "reference": "https://github.com/RealJDEX/BrickFi",
+                        "tags": [
+                            "NodeJS",
+                            "c2",
+                            "contagious-interview"
+                        ]
+                    }
+                },
+                {
+                    "key": "1926643",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "144.172.110.154:8086",
+                        "port": 8086,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 95,
+                        "first_seen": "2026-09-21T16:25:27Z",
+                        "reference": "https://github.com/RealJDEX/BrickFi",
+                        "tags": [
+                            "NodeJS",
+                            "c2",
+                            "contagious-interview"
+                        ]
+                    }
+                },
+                {
+                    "key": "1926642",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "144.172.110.154:8085",
+                        "port": 8085,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 95,
+                        "first_seen": "2026-09-21T16:25:27Z",
+                        "reference": "https://github.com/RealJDEX/BrickFi",
+                        "tags": [
+                            "NodeJS",
+                            "c2",
+                            "contagious-interview"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

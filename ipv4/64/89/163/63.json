@@ -1,24 +1,87 @@
 {
+    "schema_version": 2,
     "ip": "64.89.163.63",
+    "first_seen": "2026-09-14T21:42:49.014855Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "overlord rat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T21:42:49.014855",
-            "flags": [
-                "overlord rat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T14:17:49",
-                "port": "5173",
-                "reference": "",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.overlord",
-                "id": "1917839",
-                "ioc": "64.89.163.63:5173",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:35Z",
+                    "last_observed": "2026-10-01T12:20:35Z",
+                    "data": {
+                        "asn": "AS401626",
+                        "as_name": "Netiface America, Inc.",
+                        "as_domain": "netiface.io",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "64.89.160.0/22",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "64.89.160.0/22",
+                        "sblid": "SBL692143",
+                        "rir": "arin"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T21:42:49.014855Z",
+                    "last_observed": "2026-09-14T21:42:49.014855Z",
+                    "flags": [
+                        "overlord rat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T14:17:49",
+                        "port": "5173",
+                        "reference": "",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.overlord",
+                        "id": "1917839",
+                        "ioc": "64.89.163.63:5173",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917839",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "overlord rat"
+                    ],
+                    "data": {
+                        "ioc": "64.89.163.63:5173",
+                        "port": 5173,
+                        "threat_type": "botnet_cc",
+                        "malware": "Overlord RAT",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.overlord",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T14:17:49Z",
+                        "reference": "",
+                        "tags": [
+                            "Overlord",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,89 @@
 {
+    "schema_version": 2,
     "ip": "122.10.115.27",
+    "first_seen": "2026-09-17T05:47:58.088022Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "cobalt strike"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-17T05:47:58.088022",
-            "flags": [
-                "cobalt strike"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-17T05:41:42",
-                "port": "9999",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
-                "id": "1921420",
-                "ioc": "122.10.115.27:9999",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:28Z",
+                    "last_observed": "2026-10-01T12:20:28Z",
+                    "data": {
+                        "asn": "AS24544",
+                        "as_name": "Law's Cloud Infrastructure Limited",
+                        "as_domain": "cloudie.hk",
+                        "country_code": "HK",
+                        "country": "Hong Kong",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "122.10.112.0/21",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "122.10.112.0/21",
+                        "sblid": "SBL675897",
+                        "rir": "apnic"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-17T05:47:58.088022Z",
+                    "last_observed": "2026-09-17T05:47:58.088022Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-17T05:41:42",
+                        "port": "9999",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "id": "1921420",
+                        "ioc": "122.10.115.27:9999",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1921420",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "122.10.115.27:9999",
+                        "port": 9999,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-17T05:41:42Z",
+                        "reference": null,
+                        "tags": [
+                            "24544",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

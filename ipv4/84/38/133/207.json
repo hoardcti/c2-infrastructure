@@ -1,24 +1,150 @@
 {
+    "schema_version": 2,
     "ip": "84.38.133.207",
+    "first_seen": "2026-09-30T06:27:09.127083Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-30T06:27:09.127083",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-30T05:49:49",
-                "port": "2404",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1942052",
-                "ioc": "84.38.133.207:2404",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T12:25:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:25:24Z",
+                    "last_observed": "2026-10-01T12:25:24Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "SIA RixHost",
+                        "domain": "rixhost.lv",
+                        "country_code": "NL",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:18Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:03Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:03Z",
+                    "last_observed": "2026-10-01T12:20:03Z",
+                    "data": {
+                        "asn": "AS203557",
+                        "as_name": "SIA RixHost",
+                        "as_domain": "rixhost.lv",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-01T12:30:42Z",
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-30T06:27:09.127083Z",
+                    "last_observed": "2026-09-30T06:27:09.127083Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-30T05:49:49",
+                        "port": "2404",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1942052",
+                        "ioc": "84.38.133.207:2404",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1942052",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "84.38.133.207:2404",
+                        "port": 2404,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-30T05:49:49Z",
+                        "reference": null,
+                        "tags": [
+                            "$ony",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-01T12:24:36Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T12:35:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:35:30Z",
+                    "last_observed": "2026-10-01T12:35:30Z",
+                    "data": {
+                        "as_owner": "SIA RixHost",
+                        "asn": 203557,
+                        "network": "84.38.133.0/24",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

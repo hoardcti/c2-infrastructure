@@ -1,24 +1,88 @@
 {
+    "schema_version": 2,
     "ip": "217.60.102.6",
+    "first_seen": "2026-09-14T11:57:26.199542Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "adaptixc2"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199542",
-            "flags": [
-                "adaptixc2"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:18:07",
-                "port": "10001",
-                "reference": "https://www.shodan.io/host/217.60.102.6#10001",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.adaptix_c2",
-                "id": "1917596",
-                "ioc": "217.60.102.6:10001",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:26Z",
+                    "last_observed": "2026-10-01T12:21:26Z",
+                    "data": {
+                        "asn": "AS209373",
+                        "as_name": "SWISSNET LLC",
+                        "as_domain": "swissnetwork.io",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "217.60.102.0/24",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "217.60.102.0/24",
+                        "sblid": "SBL699566",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.199542Z",
+                    "last_observed": "2026-09-14T11:57:26.199542Z",
+                    "flags": [
+                        "adaptixc2"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:18:07",
+                        "port": "10001",
+                        "reference": "https://www.shodan.io/host/217.60.102.6#10001",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.adaptix_c2",
+                        "id": "1917596",
+                        "ioc": "217.60.102.6:10001",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917596",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "adaptixc2"
+                    ],
+                    "data": {
+                        "ioc": "217.60.102.6:10001",
+                        "port": 10001,
+                        "threat_type": "botnet_cc",
+                        "malware": "AdaptixC2",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.adaptix_c2",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:18:07Z",
+                        "reference": "https://www.shodan.io/host/217.60.102.6#10001",
+                        "tags": [
+                            "AdaptixC2",
+                            "c2",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

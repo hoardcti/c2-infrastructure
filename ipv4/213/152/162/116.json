@@ -1,24 +1,54 @@
 {
+    "schema_version": 2,
     "ip": "213.152.162.116",
+    "first_seen": "2026-09-02T08:26:42.978464Z",
+    "last_seen": "2026-09-02T08:26:42.978464Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-02T08:26:42.978464",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-02T07:10:46",
-                "port": "49006",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1893031",
-                "ioc": "213.152.162.116:49006",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:53Z",
+                    "last_observed": "2026-10-01T12:21:53Z",
+                    "data": {
+                        "asn": "AS49453",
+                        "as_name": "Global Layer B.V.",
+                        "as_domain": "global-layer.com",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-09-02T08:26:42.978464Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-02T08:26:42.978464Z",
+                    "last_observed": "2026-09-02T08:26:42.978464Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-02T07:10:46",
+                        "port": "49006",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1893031",
+                        "ioc": "213.152.162.116:49006",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

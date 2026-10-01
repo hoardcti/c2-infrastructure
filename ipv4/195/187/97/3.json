@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "195.187.97.3",
+    "first_seen": "2026-09-14T11:57:26.199967Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199967",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:14:33",
-                "port": "8444",
-                "reference": "https://www.shodan.io/host/195.187.97.3#8444",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1917545",
-                "ioc": "195.187.97.3:8444",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:17Z",
+                    "last_observed": "2026-10-01T12:21:17Z",
+                    "data": {
+                        "asn": "AS1887",
+                        "as_name": "NAUKOWA I AKADEMICKA SIEC KOMPUTEROWA - PANSTWOWY INSTYTUT BADAWCZY",
+                        "as_domain": "nask.pl",
+                        "country_code": "PL",
+                        "country": "Poland",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.199967Z",
+                    "last_observed": "2026-09-14T11:57:26.199967Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:14:33",
+                        "port": "8444",
+                        "reference": "https://www.shodan.io/host/195.187.97.3#8444",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1917545",
+                        "ioc": "195.187.97.3:8444",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917545",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "195.187.97.3:8444",
+                        "port": 8444,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:14:33Z",
+                        "reference": "https://www.shodan.io/host/195.187.97.3#8444",
+                        "tags": [
+                            "PowerSploit",
+                            "c2",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

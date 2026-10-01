@@ -1,24 +1,91 @@
 {
+    "schema_version": 2,
     "ip": "45.125.66.67",
+    "first_seen": "2026-09-26T07:19:05.901902Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "aisuru"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-26T07:19:05.901902",
-            "flags": [
-                "aisuru"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-26T06:20:23",
-                "id": "1934345",
-                "ioc": "45.125.66.67:8001",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
-                "port": "8001",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:59Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:11Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:11Z",
+                    "last_observed": "2026-10-01T12:20:11Z",
+                    "data": {
+                        "asn": "AS133398",
+                        "as_name": "Tele Asia Limited",
+                        "as_domain": "tele-asia.net",
+                        "country_code": "LT",
+                        "country": "Lithuania",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "45.125.66.0/24",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "45.125.66.0/24",
+                        "sblid": "SBL625544",
+                        "rir": "apnic"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-26T07:19:05.901902Z",
+                    "last_observed": "2026-09-26T07:19:05.901902Z",
+                    "flags": [
+                        "aisuru"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-26T06:20:23",
+                        "id": "1934345",
+                        "ioc": "45.125.66.67:8001",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
+                        "port": "8001",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1934345",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "aisuru"
+                    ],
+                    "data": {
+                        "ioc": "45.125.66.67:8001",
+                        "port": 8001,
+                        "threat_type": "botnet_cc",
+                        "malware": "Aisuru",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-26T06:20:23Z",
+                        "reference": null,
+                        "tags": [
+                            "AISURU",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

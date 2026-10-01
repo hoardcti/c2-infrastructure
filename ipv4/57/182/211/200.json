@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "57.182.211.200",
+    "first_seen": "2026-09-14T11:57:26.199527Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "brute ratel c4"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199527",
-            "flags": [
-                "brute ratel c4"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:18:36",
-                "port": "80",
-                "reference": "https://www.shodan.io/host/57.182.211.200#80",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.brute_ratel_c4",
-                "id": "1917598",
-                "ioc": "57.182.211.200:80",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:27Z",
+                    "last_observed": "2026-10-01T12:21:27Z",
+                    "data": {
+                        "asn": "AS16509",
+                        "as_name": "Amazon.com, Inc.",
+                        "as_domain": "amazon.com",
+                        "country_code": "JP",
+                        "country": "Japan",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.199527Z",
+                    "last_observed": "2026-09-14T11:57:26.199527Z",
+                    "flags": [
+                        "brute ratel c4"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:18:36",
+                        "port": "80",
+                        "reference": "https://www.shodan.io/host/57.182.211.200#80",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.brute_ratel_c4",
+                        "id": "1917598",
+                        "ioc": "57.182.211.200:80",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917598",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "brute ratel c4"
+                    ],
+                    "data": {
+                        "ioc": "57.182.211.200:80",
+                        "port": 80,
+                        "threat_type": "botnet_cc",
+                        "malware": "Brute Ratel C4",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.brute_ratel_c4",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:18:36Z",
+                        "reference": "https://www.shodan.io/host/57.182.211.200#80",
+                        "tags": [
+                            "BruteRatel",
+                            "c2",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

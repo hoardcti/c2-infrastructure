@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "180.131.145.13",
+    "first_seen": "2026-07-07T10:55:56.443979Z",
+    "last_seen": "2026-07-07T10:55:56.443979Z",
     "flags": [
         "crimson rat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-07-07T10:55:56.443979",
-            "flags": [
-                "crimson rat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-07-07T08:21:25",
-                "port": "2020",
-                "reference": "",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.crimson",
-                "id": "1845957",
-                "ioc": "180.131.145.13:2020",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-07-07T10:55:56.443979Z",
+            "observations": [
+                {
+                    "first_observed": "2026-07-07T10:55:56.443979Z",
+                    "last_observed": "2026-07-07T10:55:56.443979Z",
+                    "flags": [
+                        "crimson rat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-07-07T08:21:25",
+                        "port": "2020",
+                        "reference": "",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.crimson",
+                        "id": "1845957",
+                        "ioc": "180.131.145.13:2020",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

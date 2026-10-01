@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "37.187.222.170",
+    "first_seen": "2026-08-18T12:44:02.839638Z",
+    "last_seen": "2026-08-18T12:44:02.839638Z",
     "flags": [
         "nimplant"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-18T12:44:02.839638",
-            "flags": [
-                "nimplant"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-18T12:08:52",
-                "port": "80",
-                "reference": "https://www.shodan.io/host/37.187.222.170#80",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.nimplant",
-                "id": "1880827",
-                "ioc": "37.187.222.170:80",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-08-18T12:44:02.839638Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-18T12:44:02.839638Z",
+                    "last_observed": "2026-08-18T12:44:02.839638Z",
+                    "flags": [
+                        "nimplant"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-18T12:08:52",
+                        "port": "80",
+                        "reference": "https://www.shodan.io/host/37.187.222.170#80",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.nimplant",
+                        "id": "1880827",
+                        "ioc": "37.187.222.170:80",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

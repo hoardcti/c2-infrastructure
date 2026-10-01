@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "147.90.182.30",
+    "first_seen": "2026-09-07T08:58:29.095618Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-07T08:58:29.095618",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-07T05:44:22",
-                "port": "4411",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1903234",
-                "ioc": "147.90.182.30:4411",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:44Z",
+                    "last_observed": "2026-10-01T12:21:44Z",
+                    "data": {
+                        "asn": "AS210558",
+                        "as_name": "1337 Services GmbH",
+                        "as_domain": "rdp.sh",
+                        "country_code": "HK",
+                        "country": "Hong Kong",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-07T08:58:29.095618Z",
+                    "last_observed": "2026-09-07T08:58:29.095618Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-07T05:44:22",
+                        "port": "4411",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1903234",
+                        "ioc": "147.90.182.30:4411",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1903234",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "147.90.182.30:4411",
+                        "port": 4411,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-07T05:44:22Z",
+                        "reference": null,
+                        "tags": [
+                            "FUDBIO-S",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

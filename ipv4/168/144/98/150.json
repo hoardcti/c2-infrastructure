@@ -1,24 +1,98 @@
 {
+    "schema_version": 2,
     "ip": "168.144.98.150",
+    "first_seen": "2026-09-24T09:14:50.536641Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "aisuru"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-24T09:14:50.536641",
-            "flags": [
-                "aisuru"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-24T04:49:52",
-                "id": "1931255",
-                "ioc": "168.144.98.150:8443",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
-                "port": "8443",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:19Z",
+                    "last_observed": "2026-10-01T12:23:19Z",
+                    "data": {
+                        "ports": [
+                            123
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:ntp:ntp:3"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:15Z",
+                    "last_observed": "2026-10-01T12:20:15Z",
+                    "data": {
+                        "asn": "AS14061",
+                        "as_name": "DigitalOcean, LLC",
+                        "as_domain": "digitalocean.com",
+                        "country_code": "SG",
+                        "country": "Singapore",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-24T09:14:50.536641Z",
+                    "last_observed": "2026-09-24T09:14:50.536641Z",
+                    "flags": [
+                        "aisuru"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-24T04:49:52",
+                        "id": "1931255",
+                        "ioc": "168.144.98.150:8443",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
+                        "port": "8443",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1931255",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "aisuru"
+                    ],
+                    "data": {
+                        "ioc": "168.144.98.150:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Aisuru",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-24T04:49:52Z",
+                        "reference": null,
+                        "tags": [
+                            "AISURU",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,259 @@
 {
+    "schema_version": 2,
     "ip": "217.64.148.147",
+    "first_seen": "2026-10-01T08:43:48.066717Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-10-01T08:43:48.066717",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-10-01T08:14:20",
-                "port": "64562",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1943672",
-                "ioc": "217.64.148.147:64562",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T12:24:52Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:24:52Z",
+                    "last_observed": "2026-10-01T12:24:52Z",
+                    "data": {
+                        "abuse_confidence_score": 16,
+                        "total_reports": 4,
+                        "distinct_reporters": 4,
+                        "last_reported_at": "2026-08-31T06:57:09Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "OVPN Stockholm",
+                        "domain": "ovpn.com",
+                        "country_code": "SE",
+                        "hostnames": [
+                            "217-64-148-147.pool.ovpn.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:02Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:00Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:00Z",
+                    "last_observed": "2026-10-01T12:20:00Z",
+                    "data": {
+                        "asn": "AS42675",
+                        "as_name": "Obehosting AB",
+                        "as_domain": "obe.net",
+                        "country_code": "SE",
+                        "country": "Sweden",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-01T12:26:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:26:40Z",
+                    "last_observed": "2026-10-01T12:26:40Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS42675 obehosting ab",
+                        "country_code": "SE",
+                        "pulse_count": 8,
+                        "pulses": [
+                            {
+                                "id": "6332cf1a23bcbe29376dd7f8",
+                                "name": "test",
+                                "created": "2022-09-27T10:23:22.741Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "TOR",
+                                    "VPN"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6332cf1eb661e99f29463ea9",
+                                "name": "test",
+                                "created": "2022-09-27T10:23:26.101Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "TOR",
+                                    "VPN"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6332cf1f45c79fe03627602a",
+                                "name": "test",
+                                "created": "2022-09-27T10:23:27.48Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "TOR",
+                                    "VPN"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6332cf1fd4bd729c69c7f1b3",
+                                "name": "test",
+                                "created": "2022-09-27T10:23:27.338Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "TOR",
+                                    "VPN"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6332cf20458211fcc5a56bd3",
+                                "name": "test",
+                                "created": "2022-09-27T10:23:28.226Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "TOR",
+                                    "VPN"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "63fcc41d530908115a276999",
+                                "name": "20230227 Most Active Threat Indicator",
+                                "created": "2023-02-27T14:54:21.257Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "australia",
+                                    "cambodia",
+                                    "canada",
+                                    "china",
+                                    "federation",
+                                    "india",
+                                    "sweden",
+                                    "united",
+                                    "united kingdom",
+                                    "vietnam"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "65411f600bb6c07e51bdc0e0",
+                                "name": "20231031 Most Active Threat Indicators",
+                                "created": "2023-10-31T15:38:08.643Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "656f339291d72cdd20564601",
+                                "name": "20231205 Most Active Threat Indicators",
+                                "created": "2023-12-05T14:28:34.803Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-01T12:30:10Z",
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T08:43:48.066717Z",
+                    "last_observed": "2026-10-01T08:43:48.066717Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-10-01T08:14:20",
+                        "port": "64562",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1943672",
+                        "ioc": "217.64.148.147:64562",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1943672",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "217.64.148.147:64562",
+                        "port": 64562,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-01T08:14:20Z",
+                        "reference": null,
+                        "tags": [
+                            "WINWIN",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-01T12:24:04Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T12:31:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:31:30Z",
+                    "last_observed": "2026-10-01T12:31:30Z",
+                    "data": {
+                        "as_owner": "Obehosting AB",
+                        "asn": 42675,
+                        "network": "217.64.148.0/23",
+                        "country": "SE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

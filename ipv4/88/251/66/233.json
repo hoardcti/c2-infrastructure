@@ -1,24 +1,105 @@
 {
+    "schema_version": 2,
     "ip": "88.251.66.233",
+    "first_seen": "2026-09-29T08:08:11.427482Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "asyncrat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-29T08:08:11.427482",
-            "flags": [
-                "asyncrat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-29T06:28:18",
-                "port": "2000",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat",
-                "id": "1941399",
-                "ioc": "88.251.66.233:2000",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T12:25:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:25:54Z",
+                    "last_observed": "2026-10-01T12:25:54Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Fixed Line ISP",
+                        "isp": "Turk Telekomunikasyon Anonim Sirketi",
+                        "domain": "turktelekom.com.tr",
+                        "country_code": "TR",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:33Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:06Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:06Z",
+                    "last_observed": "2026-10-01T12:20:06Z",
+                    "data": {
+                        "asn": "AS9121",
+                        "as_name": "Turk Telekomunikasyon Anonim Sirketi",
+                        "as_domain": "turktelekom.com.tr",
+                        "country_code": "TR",
+                        "country": "Turkey",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-29T08:08:11.427482Z",
+                    "last_observed": "2026-09-29T08:08:11.427482Z",
+                    "flags": [
+                        "asyncrat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-29T06:28:18",
+                        "port": "2000",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat",
+                        "id": "1941399",
+                        "ioc": "88.251.66.233:2000",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1941399",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "asyncrat"
+                    ],
+                    "data": {
+                        "ioc": "88.251.66.233:2000",
+                        "port": 2000,
+                        "threat_type": "botnet_cc",
+                        "malware": "AsyncRAT",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-29T06:28:18Z",
+                        "reference": null,
+                        "tags": [
+                            "9121",
+                            "asyncrat",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

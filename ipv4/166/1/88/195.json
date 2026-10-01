@@ -1,24 +1,108 @@
 {
+    "schema_version": 2,
     "ip": "166.1.88.195",
+    "first_seen": "2026-09-29T08:08:11.427482Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remus"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-29T08:08:11.427482",
-            "flags": [
-                "remus"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-29T06:28:53",
-                "port": "4529",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
-                "id": "1941168",
-                "ioc": "166.1.88.195:4529",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:22:39Z",
+                    "last_observed": "2026-10-01T12:22:39Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            443
+                        ],
+                        "hostnames": [
+                            "asesoriasmirasur.cl",
+                            "host-590f5d.ns.truo.co",
+                            "www.asesoriasmirasur.cl"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.28.3",
+                            "cpe:/a:openbsd:openssh:10.2p1",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:07Z",
+                    "last_observed": "2026-10-01T12:20:07Z",
+                    "data": {
+                        "asn": "AS16276",
+                        "as_name": "OVH SAS",
+                        "as_domain": "ovhcloud.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-29T08:08:11.427482Z",
+                    "last_observed": "2026-09-29T08:08:11.427482Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-29T06:28:53",
+                        "port": "4529",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "id": "1941168",
+                        "ioc": "166.1.88.195:4529",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1941168",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "ioc": "166.1.88.195:4529",
+                        "port": 4529,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remus",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-29T06:28:53Z",
+                        "reference": null,
+                        "tags": [
+                            "5a4378fb90db39f09c7b18d1f314e645",
+                            "Remus",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

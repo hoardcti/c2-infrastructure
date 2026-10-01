@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "46.235.168.58",
+    "first_seen": "2026-09-14T11:57:26.201614Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "cobalt strike"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.201614",
-            "flags": [
-                "cobalt strike"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:11:42",
-                "port": "50050",
-                "reference": "https://www.shodan.io/host/46.235.168.58#50050",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
-                "id": "1917341",
-                "ioc": "46.235.168.58:50050",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:39Z",
+                    "last_observed": "2026-10-01T12:20:39Z",
+                    "data": {
+                        "asn": "AS13009",
+                        "as_name": "Redcentric Solutions Ltd",
+                        "as_domain": "redcentricplc.com",
+                        "country_code": "GB",
+                        "country": "United Kingdom",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.201614Z",
+                    "last_observed": "2026-09-14T11:57:26.201614Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:11:42",
+                        "port": "50050",
+                        "reference": "https://www.shodan.io/host/46.235.168.58#50050",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "id": "1917341",
+                        "ioc": "46.235.168.58:50050",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917341",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "46.235.168.58:50050",
+                        "port": 50050,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:11:42Z",
+                        "reference": "https://www.shodan.io/host/46.235.168.58#50050",
+                        "tags": [
+                            "CobaltStrike",
+                            "c2",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

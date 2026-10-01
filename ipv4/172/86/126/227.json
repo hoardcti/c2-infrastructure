@@ -1,24 +1,152 @@
 {
+    "schema_version": 2,
     "ip": "172.86.126.227",
+    "first_seen": "2026-09-23T16:40:16.251124Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-23T16:40:16.251124",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-18T05:05:41",
-                "port": "8085",
-                "reference": "https://github.com/chainbits13/realfraction",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1923473",
-                "ioc": "172.86.126.227:8085",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:32Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:32Z",
+                    "last_observed": "2026-10-01T12:23:32Z",
+                    "data": {
+                        "ports": [
+                            21,
+                            22,
+                            8085,
+                            8086,
+                            8087
+                        ],
+                        "hostnames": [
+                            "227.126.86.172.static.cloudzy.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:expressjs:express",
+                            "cpe:/a:nodejs:node.js",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:18Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:18Z",
+                    "last_observed": "2026-10-01T12:20:18Z",
+                    "data": {
+                        "asn": "AS14956",
+                        "as_name": "RouterHosting LLC",
+                        "as_domain": "cloudzy.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-23T16:40:16.251124Z",
+                    "last_observed": "2026-09-23T16:40:16.251124Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-18T05:05:41",
+                        "port": "8085",
+                        "reference": "https://github.com/chainbits13/realfraction",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1923473",
+                        "ioc": "172.86.126.227:8085",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1923475",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "172.86.126.227:8087",
+                        "port": 8087,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 90,
+                        "first_seen": "2026-09-18T05:05:41Z",
+                        "reference": "https://github.com/chainbits13/realfraction",
+                        "tags": [
+                            "NodeJS",
+                            "c2",
+                            "contagious-interview"
+                        ]
+                    }
+                },
+                {
+                    "key": "1923474",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "172.86.126.227:8086",
+                        "port": 8086,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 90,
+                        "first_seen": "2026-09-18T05:05:41Z",
+                        "reference": "https://github.com/chainbits13/realfraction",
+                        "tags": [
+                            "NodeJS",
+                            "c2",
+                            "contagious-interview"
+                        ]
+                    }
+                },
+                {
+                    "key": "1923473",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "172.86.126.227:8085",
+                        "port": 8085,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 90,
+                        "first_seen": "2026-09-18T05:05:41Z",
+                        "reference": "https://github.com/chainbits13/realfraction",
+                        "tags": [
+                            "NodeJS",
+                            "c2",
+                            "contagious-interview"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "31.156.181.5",
+    "first_seen": "2026-09-14T11:57:26.199519Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "brute ratel c4"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199519",
-            "flags": [
-                "brute ratel c4"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:18:36",
-                "port": "9002",
-                "reference": "https://www.shodan.io/host/31.156.181.5#9002",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.brute_ratel_c4",
-                "id": "1917599",
-                "ioc": "31.156.181.5:9002",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:27Z",
+                    "last_observed": "2026-10-01T12:21:27Z",
+                    "data": {
+                        "asn": "AS30722",
+                        "as_name": "Fastweb SpA",
+                        "as_domain": "fastweb.it",
+                        "country_code": "IT",
+                        "country": "Italy",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.199519Z",
+                    "last_observed": "2026-09-14T11:57:26.199519Z",
+                    "flags": [
+                        "brute ratel c4"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:18:36",
+                        "port": "9002",
+                        "reference": "https://www.shodan.io/host/31.156.181.5#9002",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.brute_ratel_c4",
+                        "id": "1917599",
+                        "ioc": "31.156.181.5:9002",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917599",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "brute ratel c4"
+                    ],
+                    "data": {
+                        "ioc": "31.156.181.5:9002",
+                        "port": 9002,
+                        "threat_type": "botnet_cc",
+                        "malware": "Brute Ratel C4",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.brute_ratel_c4",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:18:36Z",
+                        "reference": "https://www.shodan.io/host/31.156.181.5#9002",
+                        "tags": [
+                            "BruteRatel",
+                            "c2",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

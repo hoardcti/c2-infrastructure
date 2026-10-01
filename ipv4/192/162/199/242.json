@@ -1,24 +1,88 @@
 {
+    "schema_version": 2,
     "ip": "192.162.199.242",
+    "first_seen": "2026-09-14T21:42:49.014919Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T21:42:49.014919",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T12:03:48",
-                "port": "5000",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1917324",
-                "ioc": "192.162.199.242:5000",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:34Z",
+                    "last_observed": "2026-10-01T12:20:34Z",
+                    "data": {
+                        "asn": "AS214351",
+                        "as_name": "FEMO IT SOLUTIONS LIMITED",
+                        "as_domain": "as214351.com",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "192.162.199.0/24",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "192.162.199.0/24",
+                        "sblid": "SBL694563",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T21:42:49.014919Z",
+                    "last_observed": "2026-09-14T21:42:49.014919Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T12:03:48",
+                        "port": "5000",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1917324",
+                        "ioc": "192.162.199.242:5000",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917324",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "192.162.199.242:5000",
+                        "port": 5000,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-14T12:03:48Z",
+                        "reference": null,
+                        "tags": [
+                            "5000",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

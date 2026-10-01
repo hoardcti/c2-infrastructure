@@ -1,24 +1,104 @@
 {
+    "schema_version": 2,
     "ip": "124.223.177.82",
+    "first_seen": "2026-09-23T16:40:16.251094Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "cobalt strike"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-23T16:40:16.251094",
-            "flags": [
-                "cobalt strike"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-20T05:32:37",
-                "id": "1924724",
-                "ioc": "124.223.177.82:80",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
-                "port": "80",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:37Z",
+                    "last_observed": "2026-10-01T12:23:37Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            443,
+                            1080,
+                            9999
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:helpsystems:cobalt_strike",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:19Z",
+                    "last_observed": "2026-10-01T12:20:19Z",
+                    "data": {
+                        "asn": "AS45090",
+                        "as_name": "Shenzhen Tencent Computer Systems Company Limited",
+                        "as_domain": "tencent.com",
+                        "country_code": "CN",
+                        "country": "China",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-23T16:40:16.251094Z",
+                    "last_observed": "2026-09-23T16:40:16.251094Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-20T05:32:37",
+                        "id": "1924724",
+                        "ioc": "124.223.177.82:80",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "port": "80",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1924724",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "124.223.177.82:80",
+                        "port": 80,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-20T05:32:37Z",
+                        "reference": null,
+                        "tags": [
+                            "45090",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,147 @@
 {
+    "schema_version": 2,
     "ip": "144.172.107.50",
+    "first_seen": "2026-09-23T16:40:16.251037Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-23T16:40:16.251037",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-21T16:25:14",
-                "port": "8087",
-                "reference": "https://github.com/rsaw409/DeFi",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1926647",
-                "ioc": "144.172.107.50:8087",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:56Z",
+                    "last_observed": "2026-10-01T12:23:56Z",
+                    "data": {
+                        "ports": [
+                            8085,
+                            8087
+                        ],
+                        "hostnames": [
+                            "50.107.172.144.static.cloudzy.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:expressjs:express",
+                            "cpe:/a:nodejs:node.js"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:22Z",
+                    "last_observed": "2026-10-01T12:20:22Z",
+                    "data": {
+                        "asn": "AS14956",
+                        "as_name": "RouterHosting LLC",
+                        "as_domain": "cloudzy.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-23T16:40:16.251037Z",
+                    "last_observed": "2026-09-23T16:40:16.251037Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-21T16:25:14",
+                        "port": "8087",
+                        "reference": "https://github.com/rsaw409/DeFi",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1926647",
+                        "ioc": "144.172.107.50:8087",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1926645",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "144.172.107.50:8085",
+                        "port": 8085,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 95,
+                        "first_seen": "2026-09-21T16:25:26Z",
+                        "reference": "https://github.com/rsaw409/DeFi",
+                        "tags": [
+                            "NodeJS",
+                            "c2",
+                            "contagious-interview"
+                        ]
+                    }
+                },
+                {
+                    "key": "1926646",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "144.172.107.50:8086",
+                        "port": 8086,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 95,
+                        "first_seen": "2026-09-21T16:25:25Z",
+                        "reference": "https://github.com/rsaw409/DeFi",
+                        "tags": [
+                            "NodeJS",
+                            "c2",
+                            "contagious-interview"
+                        ]
+                    }
+                },
+                {
+                    "key": "1926647",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "144.172.107.50:8087",
+                        "port": 8087,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 95,
+                        "first_seen": "2026-09-21T16:25:14Z",
+                        "reference": "https://github.com/rsaw409/DeFi",
+                        "tags": [
+                            "NodeJS",
+                            "c2",
+                            "contagious-interview"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,155 @@
 {
+    "schema_version": 2,
     "ip": "217.60.195.161",
+    "first_seen": "2026-09-23T16:40:16.251138Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "aisuru"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-23T16:40:16.251138",
-            "flags": [
-                "aisuru"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-17T14:13:39",
-                "id": "1923195",
-                "ioc": "217.60.195.161:8001",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
-                "port": "8001",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:28Z",
+                    "last_observed": "2026-10-01T12:23:28Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            2345,
+                            3001,
+                            8443
+                        ],
+                        "hostnames": [
+                            "bhj8s83dsg1g.server.swissnetwork.io"
+                        ],
+                        "cpes": [
+                            "cpe:/a:apache:http_server:2.4.66",
+                            "cpe:/a:openbsd:openssh:10.2p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "open-dir",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2007-4723",
+                            "CVE-2009-0796",
+                            "CVE-2009-2299",
+                            "CVE-2011-1176",
+                            "CVE-2011-2688",
+                            "CVE-2012-3526",
+                            "CVE-2012-4001",
+                            "CVE-2012-4360",
+                            "CVE-2013-0941",
+                            "CVE-2013-0942",
+                            "CVE-2013-2765",
+                            "CVE-2013-4365",
+                            "CVE-2026-23918",
+                            "CVE-2026-24072",
+                            "CVE-2026-28780",
+                            "CVE-2026-29167",
+                            "CVE-2026-29168",
+                            "CVE-2026-29169",
+                            "CVE-2026-29170",
+                            "CVE-2026-33006",
+                            "CVE-2026-33007",
+                            "CVE-2026-33523",
+                            "CVE-2026-33857",
+                            "CVE-2026-34032",
+                            "CVE-2026-34059",
+                            "CVE-2026-34355",
+                            "CVE-2026-34356",
+                            "CVE-2026-42535",
+                            "CVE-2026-42536",
+                            "CVE-2026-43951",
+                            "CVE-2026-44119",
+                            "CVE-2026-44185",
+                            "CVE-2026-44186",
+                            "CVE-2026-44631",
+                            "CVE-2026-48913",
+                            "CVE-2026-49975"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:17Z",
+                    "last_observed": "2026-10-01T12:20:17Z",
+                    "data": {
+                        "asn": "AS209373",
+                        "as_name": "SWISSNET LLC",
+                        "as_domain": "swissnetwork.io",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "217.60.195.0/24",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "217.60.195.0/24",
+                        "sblid": "SBL697968",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-23T16:40:16.251138Z",
+                    "last_observed": "2026-09-23T16:40:16.251138Z",
+                    "flags": [
+                        "aisuru"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-17T14:13:39",
+                        "id": "1923195",
+                        "ioc": "217.60.195.161:8001",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
+                        "port": "8001",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1923195",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "aisuru"
+                    ],
+                    "data": {
+                        "ioc": "217.60.195.161:8001",
+                        "port": 8001,
+                        "threat_type": "botnet_cc",
+                        "malware": "Aisuru",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-17T14:13:39Z",
+                        "reference": null,
+                        "tags": [
+                            "AISURU",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

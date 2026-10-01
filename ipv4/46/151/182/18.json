@@ -1,24 +1,47 @@
 {
+    "schema_version": 2,
     "ip": "46.151.182.18",
+    "first_seen": "2026-05-28T13:33:04.497336Z",
+    "last_seen": "2026-05-28T13:33:04.497336Z",
     "flags": [
         "xworm"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-05-28T13:33:04.497336",
-            "flags": [
-                "xworm"
-            ],
-            "metadata": {
-                "firstSeen": "2026-04-14T06:01:08",
-                "port": "5500",
-                "reference": "https://tria.ge/260414-dwlf8aew6v",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.xworm",
-                "id": "1785521",
-                "ioc": "46.151.182.18:5500",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": [
+                {
+                    "key": "46.151.182.0/24",
+                    "first_observed": "2026-10-01T12:19:59Z",
+                    "last_observed": "2026-10-01T12:19:59Z",
+                    "data": {
+                        "cidr": "46.151.182.0/24",
+                        "sblid": "SBL692140",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-05-28T13:33:04.497336Z",
+            "observations": [
+                {
+                    "first_observed": "2026-05-28T13:33:04.497336Z",
+                    "last_observed": "2026-05-28T13:33:04.497336Z",
+                    "flags": [
+                        "xworm"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-04-14T06:01:08",
+                        "port": "5500",
+                        "reference": "https://tria.ge/260414-dwlf8aew6v",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.xworm",
+                        "id": "1785521",
+                        "ioc": "46.151.182.18:5500",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

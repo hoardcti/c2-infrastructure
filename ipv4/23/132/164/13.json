@@ -1,24 +1,47 @@
 {
+    "schema_version": 2,
     "ip": "23.132.164.13",
+    "first_seen": "2026-07-02T07:32:36.570901Z",
+    "last_seen": "2026-07-02T07:32:36.570901Z",
     "flags": [
         "cobalt strike"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-07-02T07:32:36.570901",
-            "flags": [
-                "cobalt strike"
-            ],
-            "metadata": {
-                "firstSeen": "2026-07-02T05:00:09",
-                "port": "44444",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
-                "id": "1843356",
-                "ioc": "23.132.164.13:44444",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": [
+                {
+                    "key": "23.132.164.0/24",
+                    "first_observed": "2026-10-01T12:19:59Z",
+                    "last_observed": "2026-10-01T12:19:59Z",
+                    "data": {
+                        "cidr": "23.132.164.0/24",
+                        "sblid": "SBL688228",
+                        "rir": "arin"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-07-02T07:32:36.570901Z",
+            "observations": [
+                {
+                    "first_observed": "2026-07-02T07:32:36.570901Z",
+                    "last_observed": "2026-07-02T07:32:36.570901Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-07-02T05:00:09",
+                        "port": "44444",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "id": "1843356",
+                        "ioc": "23.132.164.13:44444",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,111 @@
 {
+    "schema_version": 2,
     "ip": "143.92.38.221",
+    "first_seen": "2026-09-24T09:14:50.536635Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-24T09:14:50.536635",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-24T04:58:44",
-                "id": "1931090",
-                "ioc": "143.92.38.221:8151",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "port": "8151",
-                "reference": "https://x.com/devmihaylov/status/2102883134996189479",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:22Z",
+                    "last_observed": "2026-10-01T12:23:22Z",
+                    "data": {
+                        "ports": [
+                            7788,
+                            8151,
+                            8443
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:f5:nginx"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:16Z",
+                    "last_observed": "2026-10-01T12:20:16Z",
+                    "data": {
+                        "asn": "AS152194",
+                        "as_name": "CTG Server Limited",
+                        "as_domain": "ctgserver.net",
+                        "country_code": "HK",
+                        "country": "Hong Kong",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "143.92.32.0/20",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "143.92.32.0/20",
+                        "sblid": "SBL654967",
+                        "rir": "apnic"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-24T09:14:50.536635Z",
+                    "last_observed": "2026-09-24T09:14:50.536635Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-24T04:58:44",
+                        "id": "1931090",
+                        "ioc": "143.92.38.221:8151",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "port": "8151",
+                        "reference": "https://x.com/devmihaylov/status/2102883134996189479",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1931090",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "143.92.38.221:8151",
+                        "port": 8151,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-24T04:58:44Z",
+                        "reference": "https://x.com/devmihaylov/status/2102883134996189479",
+                        "tags": [
+                            "Endpoint-Central",
+                            "ManageEngine",
+                            "RMM-abuse",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

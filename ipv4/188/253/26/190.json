@@ -1,24 +1,98 @@
 {
+    "schema_version": 2,
     "ip": "188.253.26.190",
+    "first_seen": "2026-09-24T18:54:43.53583Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-24T18:54:43.535830",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-24T16:15:37",
-                "id": "1932352",
-                "ioc": "188.253.26.190:443",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "port": "443",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:13Z",
+                    "last_observed": "2026-10-01T12:23:13Z",
+                    "data": {
+                        "ports": [
+                            22
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:14Z",
+                    "last_observed": "2026-10-01T12:20:14Z",
+                    "data": {
+                        "asn": "AS42532",
+                        "as_name": "SIA VEESP",
+                        "as_domain": "veesp.com",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-24T18:54:43.53583Z",
+                    "last_observed": "2026-09-24T18:54:43.53583Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-24T16:15:37",
+                        "id": "1932352",
+                        "ioc": "188.253.26.190:443",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "port": "443",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1932352",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "188.253.26.190:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-24T16:15:37Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "cucumber-v2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

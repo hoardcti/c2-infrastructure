@@ -1,24 +1,78 @@
 {
+    "schema_version": 2,
     "ip": "2.27.22.130",
+    "first_seen": "2026-09-09T08:41:32.906088Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown rat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-09T08:41:32.906088",
-            "flags": [
-                "unknown rat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-09T07:14:17",
-                "port": "8434",
-                "reference": "https://www.virustotal.com/gui/file/119e0c06d0b37be3a897f4cbc4e3a8ffbce8a27643a09ebef0952b5bc4f0e54d/detection",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown_rat",
-                "id": "1905541",
-                "ioc": "2.27.22.130:8434",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:40Z",
+                    "last_observed": "2026-10-01T12:21:40Z",
+                    "data": {
+                        "asn": "AS215439",
+                        "as_name": "PLAY2GO INTERNATIONAL LIMITED",
+                        "as_domain": "play2go.cloud",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-09T08:41:32.906088Z",
+                    "last_observed": "2026-09-09T08:41:32.906088Z",
+                    "flags": [
+                        "unknown rat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-09T07:14:17",
+                        "port": "8434",
+                        "reference": "https://www.virustotal.com/gui/file/119e0c06d0b37be3a897f4cbc4e3a8ffbce8a27643a09ebef0952b5bc4f0e54d/detection",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown_rat",
+                        "id": "1905541",
+                        "ioc": "2.27.22.130:8434",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1905541",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown rat"
+                    ],
+                    "data": {
+                        "ioc": "2.27.22.130:8434",
+                        "port": 8434,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown RAT",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown_rat",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-09T07:14:17Z",
+                        "reference": "https://www.virustotal.com/gui/file/119e0c06d0b37be3a897f4cbc4e3a8ffbce8a27643a09ebef0952b5bc4f0e54d/detection",
+                        "tags": [
+                            "Android",
+                            "apk",
+                            "c2",
+                            "telegram"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

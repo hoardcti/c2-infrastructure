@@ -1,24 +1,78 @@
 {
+    "schema_version": 2,
     "ip": "91.92.153.119",
+    "first_seen": "2026-09-14T11:57:26.201159Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.201159",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:12:49",
-                "port": "8443",
-                "reference": "https://www.shodan.io/host/91.92.153.119#8443",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1917393",
-                "ioc": "91.92.153.119:8443",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:47Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:47Z",
+                    "last_observed": "2026-10-01T12:20:47Z",
+                    "data": {
+                        "asn": "AS61098",
+                        "as_name": "Akenes SA",
+                        "as_domain": "exoscale.ch",
+                        "country_code": "CH",
+                        "country": "Switzerland",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.201159Z",
+                    "last_observed": "2026-09-14T11:57:26.201159Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:12:49",
+                        "port": "8443",
+                        "reference": "https://www.shodan.io/host/91.92.153.119#8443",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1917393",
+                        "ioc": "91.92.153.119:8443",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917393",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "91.92.153.119:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:12:49Z",
+                        "reference": "https://www.shodan.io/host/91.92.153.119#8443",
+                        "tags": [
+                            "GoPhish",
+                            "c2",
+                            "phishing",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

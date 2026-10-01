@@ -1,24 +1,160 @@
 {
+    "schema_version": 2,
     "ip": "72.61.149.25",
+    "first_seen": "2026-09-30T13:27:57.320062Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remus"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-30T13:27:57.320062",
-            "flags": [
-                "remus"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-30T12:21:48",
-                "port": "9837",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
-                "id": "1942871",
-                "ioc": "72.61.149.25:9837",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T12:25:08Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:25:08Z",
+                    "last_observed": "2026-10-01T12:25:08Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Hostinger Operations UAB",
+                        "domain": "hostinger.com",
+                        "country_code": "MY",
+                        "hostnames": [
+                            "srv1086101.hstgr.cloud"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:10Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:01Z",
+                    "last_observed": "2026-10-01T12:20:01Z",
+                    "data": {
+                        "asn": "AS47583",
+                        "as_name": "Hostinger International Limited",
+                        "as_domain": "hostinger.com",
+                        "country_code": "MY",
+                        "country": "Malaysia",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-01T12:30:26Z",
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-30T13:27:57.320062Z",
+                    "last_observed": "2026-09-30T13:27:57.320062Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-30T12:21:48",
+                        "port": "9837",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "id": "1942871",
+                        "ioc": "72.61.149.25:9837",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1942871",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "ioc": "72.61.149.25:9837",
+                        "port": 9837,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remus",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-30T12:21:48Z",
+                        "reference": null,
+                        "tags": [
+                            "Remus",
+                            "a8fad2c9b12a4c0cb3baf1bfbfc23e60",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-01T12:24:20Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T12:33:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:33:30Z",
+                    "last_observed": "2026-10-01T12:33:30Z",
+                    "data": {
+                        "as_owner": "Hostinger International Limited",
+                        "asn": 47583,
+                        "network": "72.60.0.0/15",
+                        "country": "MY",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 89,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "3fd3fd00000000000043d43d00043dc3b2afa8a5ec09b510a8559aff7899fb",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

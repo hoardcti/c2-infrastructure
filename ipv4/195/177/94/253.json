@@ -1,24 +1,103 @@
 {
+    "schema_version": 2,
     "ip": "195.177.94.253",
+    "first_seen": "2026-09-24T14:45:15.495161Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-24T14:45:15.495161",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-24T11:50:24",
-                "id": "1932245",
-                "ioc": "195.177.94.253:4332",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "port": "4332",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:16Z",
+                    "last_observed": "2026-10-01T12:23:16Z",
+                    "data": {
+                        "ports": [
+                            445,
+                            3389,
+                            5985
+                        ],
+                        "hostnames": [
+                            "253.94.177.195.in-addr.arpa"
+                        ],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:14Z",
+                    "last_observed": "2026-10-01T12:20:14Z",
+                    "data": {
+                        "asn": "AS214961",
+                        "as_name": "Stellar Group SAS",
+                        "as_domain": "stellar-group.fr",
+                        "country_code": "FR",
+                        "country": "France",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-24T14:45:15.495161Z",
+                    "last_observed": "2026-09-24T14:45:15.495161Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-24T11:50:24",
+                        "id": "1932245",
+                        "ioc": "195.177.94.253:4332",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "port": "4332",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1932245",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "195.177.94.253:4332",
+                        "port": 4332,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-24T11:50:24Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "remcos",
+                            "tor25t"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

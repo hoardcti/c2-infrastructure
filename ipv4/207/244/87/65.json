@@ -1,24 +1,102 @@
 {
+    "schema_version": 2,
     "ip": "207.244.87.65",
+    "first_seen": "2026-09-23T16:40:16.251052Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-23T16:40:16.251052",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-21T07:13:25",
-                "id": "1926351",
-                "ioc": "207.244.87.65:2404",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "port": "2404",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:49Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:49Z",
+                    "last_observed": "2026-10-01T12:23:49Z",
+                    "data": {
+                        "ports": [
+                            443,
+                            2404,
+                            3389,
+                            5985
+                        ],
+                        "hostnames": [
+                            "escaladizzy.top"
+                        ],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:21Z",
+                    "last_observed": "2026-10-01T12:20:21Z",
+                    "data": {
+                        "asn": "AS30633",
+                        "as_name": "Leaseweb USA, Inc.",
+                        "as_domain": "leaseweb.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-23T16:40:16.251052Z",
+                    "last_observed": "2026-09-23T16:40:16.251052Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-21T07:13:25",
+                        "id": "1926351",
+                        "ioc": "207.244.87.65:2404",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "port": "2404",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1926351",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "207.244.87.65:2404",
+                        "port": 2404,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-21T07:13:25Z",
+                        "reference": null,
+                        "tags": [
+                            "REMOTEHOST",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

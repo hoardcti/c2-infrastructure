@@ -1,24 +1,54 @@
 {
+    "schema_version": 2,
     "ip": "23.26.4.70",
+    "first_seen": "2026-09-02T08:26:42.978568Z",
+    "last_seen": "2026-09-02T08:26:42.978568Z",
     "flags": [
         "remus"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-02T08:26:42.978568",
-            "flags": [
-                "remus"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-02T05:50:07",
-                "port": "8321",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
-                "id": "1892714",
-                "ioc": "23.26.4.70:8321",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:52Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:52Z",
+                    "last_observed": "2026-10-01T12:21:52Z",
+                    "data": {
+                        "asn": "AS402429",
+                        "as_name": "Raff Technologies LLC",
+                        "as_domain": "rafftechnologies.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-09-02T08:26:42.978568Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-02T08:26:42.978568Z",
+                    "last_observed": "2026-09-02T08:26:42.978568Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-02T05:50:07",
+                        "port": "8321",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "id": "1892714",
+                        "ioc": "23.26.4.70:8321",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

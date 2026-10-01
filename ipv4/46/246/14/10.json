@@ -1,24 +1,122 @@
 {
+    "schema_version": 2,
     "ip": "46.246.14.10",
+    "first_seen": "2026-09-29T15:32:27.027385Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-29T15:32:27.027385",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-29T12:10:42",
-                "port": "5987",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1941649",
-                "ioc": "46.246.14.10:5987",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T12:25:42Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:25:42Z",
+                    "last_observed": "2026-10-01T12:25:42Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2026-01-09T11:13:15Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Sanco Group LTD",
+                        "domain": "frootvpn.com",
+                        "country_code": "SE",
+                        "hostnames": [
+                            "c-46-246-14-10.ip4.frootvpn.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:22:27Z",
+                    "last_observed": "2026-10-01T12:22:27Z",
+                    "data": {
+                        "ports": [
+                            3702
+                        ],
+                        "hostnames": [
+                            "c-46-246-14-10.ip4.frootvpn.com"
+                        ],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:05Z",
+                    "last_observed": "2026-10-01T12:20:05Z",
+                    "data": {
+                        "asn": "AS42708",
+                        "as_name": "Glesys AB",
+                        "as_domain": "glesys.com",
+                        "country_code": "SE",
+                        "country": "Sweden",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-29T15:32:27.027385Z",
+                    "last_observed": "2026-09-29T15:32:27.027385Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-29T12:10:42",
+                        "port": "5987",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1941649",
+                        "ioc": "46.246.14.10:5987",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1941649",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "46.246.14.10:5987",
+                        "port": 5987,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-29T12:10:42Z",
+                        "reference": null,
+                        "tags": [
+                            "NMUOnAPUAPU",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

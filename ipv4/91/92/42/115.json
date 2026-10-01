@@ -1,24 +1,65 @@
 {
+    "schema_version": 2,
     "ip": "91.92.42.115",
+    "first_seen": "2026-09-01T07:20:43.749868Z",
+    "last_seen": "2026-09-01T07:20:43.749868Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-01T07:20:43.749868",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-01T05:11:52",
-                "port": "2418",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1891972",
-                "ioc": "91.92.42.115:2418",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:57Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:57Z",
+                    "last_observed": "2026-10-01T12:21:57Z",
+                    "data": {
+                        "asn": "AS197170",
+                        "as_name": "TechTies Inc.",
+                        "as_domain": "tech-ties.net",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "91.92.42.0/24",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "91.92.42.0/24",
+                        "sblid": "SBL699857",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-09-01T07:20:43.749868Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-01T07:20:43.749868Z",
+                    "last_observed": "2026-09-01T07:20:43.749868Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-01T05:11:52",
+                        "port": "2418",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1891972",
+                        "ioc": "91.92.42.115:2418",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

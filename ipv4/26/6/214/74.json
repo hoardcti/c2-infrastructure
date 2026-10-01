@@ -1,24 +1,120 @@
 {
+    "schema_version": 2,
     "ip": "26.6.214.74",
+    "first_seen": "2026-09-14T11:57:26.199345Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "asyncrat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199345",
-            "flags": [
-                "asyncrat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:51:28",
-                "port": "6606",
-                "reference": "",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat",
-                "id": "1917643",
-                "ioc": "26.6.214.74:6606",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:29Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:29Z",
+                    "last_observed": "2026-10-01T12:21:29Z",
+                    "data": {
+                        "asn": "AS749",
+                        "as_name": "United States Department of Defense (DoD)",
+                        "as_domain": "mail.mil",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.199345Z",
+                    "last_observed": "2026-09-14T11:57:26.199345Z",
+                    "flags": [
+                        "asyncrat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:51:28",
+                        "port": "6606",
+                        "reference": "",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat",
+                        "id": "1917643",
+                        "ioc": "26.6.214.74:6606",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917645",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "asyncrat"
+                    ],
+                    "data": {
+                        "ioc": "26.6.214.74:8808",
+                        "port": 8808,
+                        "threat_type": "botnet_cc",
+                        "malware": "AsyncRAT",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:51:28Z",
+                        "reference": "",
+                        "tags": [
+                            "asyncrat",
+                            "c2"
+                        ]
+                    }
+                },
+                {
+                    "key": "1917644",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "asyncrat"
+                    ],
+                    "data": {
+                        "ioc": "26.6.214.74:7707",
+                        "port": 7707,
+                        "threat_type": "botnet_cc",
+                        "malware": "AsyncRAT",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:51:28Z",
+                        "reference": "",
+                        "tags": [
+                            "asyncrat",
+                            "c2"
+                        ]
+                    }
+                },
+                {
+                    "key": "1917643",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "asyncrat"
+                    ],
+                    "data": {
+                        "ioc": "26.6.214.74:6606",
+                        "port": 6606,
+                        "threat_type": "botnet_cc",
+                        "malware": "AsyncRAT",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:51:28Z",
+                        "reference": "",
+                        "tags": [
+                            "asyncrat",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "178.157.59.195",
+    "first_seen": "2026-08-18T12:44:02.842803Z",
+    "last_seen": "2026-08-18T12:44:02.842803Z",
     "flags": [
         "cobalt strike"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-18T12:44:02.842803",
-            "flags": [
-                "cobalt strike"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-18T11:58:05",
-                "port": "50050",
-                "reference": "https://www.shodan.io/host/178.157.59.195#50050",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
-                "id": "1880305",
-                "ioc": "178.157.59.195:50050",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-08-18T12:44:02.842803Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-18T12:44:02.842803Z",
+                    "last_observed": "2026-08-18T12:44:02.842803Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-18T11:58:05",
+                        "port": "50050",
+                        "reference": "https://www.shodan.io/host/178.157.59.195#50050",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "id": "1880305",
+                        "ioc": "178.157.59.195:50050",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

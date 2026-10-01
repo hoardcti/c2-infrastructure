@@ -1,24 +1,78 @@
 {
+    "schema_version": 2,
     "ip": "45.136.13.196",
+    "first_seen": "2026-09-14T11:57:26.201089Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.201089",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:12:51",
-                "port": "8080",
-                "reference": "https://www.shodan.io/host/45.136.13.196#8080",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1917402",
-                "ioc": "45.136.13.196:8080",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:49Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:49Z",
+                    "last_observed": "2026-10-01T12:20:49Z",
+                    "data": {
+                        "asn": "AS139659",
+                        "as_name": "LUCIDACLOUD LIMITED",
+                        "as_domain": "yecaoyun.com",
+                        "country_code": "HK",
+                        "country": "Hong Kong",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.201089Z",
+                    "last_observed": "2026-09-14T11:57:26.201089Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:12:51",
+                        "port": "8080",
+                        "reference": "https://www.shodan.io/host/45.136.13.196#8080",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1917402",
+                        "ioc": "45.136.13.196:8080",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917402",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "45.136.13.196:8080",
+                        "port": 8080,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:12:51Z",
+                        "reference": "https://www.shodan.io/host/45.136.13.196#8080",
+                        "tags": [
+                            "GoPhish",
+                            "c2",
+                            "phishing",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

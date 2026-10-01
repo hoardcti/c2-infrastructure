@@ -1,24 +1,126 @@
 {
+    "schema_version": 2,
     "ip": "166.88.134.75",
+    "first_seen": "2026-09-23T16:40:16.251038Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-23T16:40:16.251038",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-21T16:25:13",
-                "port": "443",
-                "reference": "https://github.com/VPRoyal/bloxhq",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1926649",
-                "ioc": "166.88.134.75:443",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:55Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:55Z",
+                    "last_observed": "2026-10-01T12:23:55Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443,
+                            5985
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:expressjs:express",
+                            "cpe:/a:f5:nginx:1.31.4",
+                            "cpe:/a:nodejs:node.js"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:22Z",
+                    "last_observed": "2026-10-01T12:20:22Z",
+                    "data": {
+                        "asn": "AS149440",
+                        "as_name": "Evoxt Sdn. Bhd.",
+                        "as_domain": "evoxt.com",
+                        "country_code": "GB",
+                        "country": "United Kingdom",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-23T16:40:16.251038Z",
+                    "last_observed": "2026-09-23T16:40:16.251038Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-21T16:25:13",
+                        "port": "443",
+                        "reference": "https://github.com/VPRoyal/bloxhq",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1926649",
+                        "ioc": "166.88.134.75:443",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1926648",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "166.88.134.75:80",
+                        "port": 80,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-21T16:25:25Z",
+                        "reference": "https://github.com/VPRoyal/bloxhq",
+                        "tags": [
+                            "NodeJS",
+                            "NullReceiver",
+                            "c2",
+                            "contagious-interview"
+                        ]
+                    }
+                },
+                {
+                    "key": "1926649",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "166.88.134.75:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-21T16:25:13Z",
+                        "reference": "https://github.com/VPRoyal/bloxhq",
+                        "tags": [
+                            "NodeJS",
+                            "NullReceiver",
+                            "c2",
+                            "contagious-interview"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

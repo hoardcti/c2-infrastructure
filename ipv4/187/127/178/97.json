@@ -1,24 +1,106 @@
 {
+    "schema_version": 2,
     "ip": "187.127.178.97",
+    "first_seen": "2026-09-30T06:27:09.127083Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remus"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-30T06:27:09.127083",
-            "flags": [
-                "remus"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-30T05:49:11",
-                "port": "9832",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
-                "id": "1942302",
-                "ioc": "187.127.178.97:9832",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T12:25:36Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:25:36Z",
+                    "last_observed": "2026-10-01T12:25:36Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Hostinger Operations UAB",
+                        "domain": "hostinger.com",
+                        "country_code": "IN",
+                        "hostnames": [
+                            "srv1738588.hstgr.cloud"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:24Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:04Z",
+                    "last_observed": "2026-10-01T12:20:04Z",
+                    "data": {
+                        "asn": "AS47583",
+                        "as_name": "Hostinger International Limited",
+                        "as_domain": "hostinger.com",
+                        "country_code": "IN",
+                        "country": "India",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-30T06:27:09.127083Z",
+                    "last_observed": "2026-09-30T06:27:09.127083Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-30T05:49:11",
+                        "port": "9832",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "id": "1942302",
+                        "ioc": "187.127.178.97:9832",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1942302",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "ioc": "187.127.178.97:9832",
+                        "port": 9832,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remus",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-30T05:49:11Z",
+                        "reference": null,
+                        "tags": [
+                            "Remus",
+                            "a6e35b22fe3b66b64d31d4856b5bea31",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

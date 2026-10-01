@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "147.124.212.137",
+    "first_seen": "2026-09-14T21:42:49.014912Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T21:42:49.014912",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T12:03:48",
-                "port": "34214",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1917325",
-                "ioc": "147.124.212.137:34214",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:34Z",
+                    "last_observed": "2026-10-01T12:20:34Z",
+                    "data": {
+                        "asn": "AS396073",
+                        "as_name": "Majestic Hosting Solutions, LLC",
+                        "as_domain": "spinservers.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T21:42:49.014912Z",
+                    "last_observed": "2026-09-14T21:42:49.014912Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T12:03:48",
+                        "port": "34214",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1917325",
+                        "ioc": "147.124.212.137:34214",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917325",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "147.124.212.137:34214",
+                        "port": 34214,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-14T12:03:48Z",
+                        "reference": null,
+                        "tags": [
+                            "FMT",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

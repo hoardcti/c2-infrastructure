@@ -1,24 +1,101 @@
 {
+    "schema_version": 2,
     "ip": "43.156.187.96",
+    "first_seen": "2026-09-25T07:23:15.534135Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-25T07:23:15.534135",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-25T06:28:11",
-                "id": "1932471",
-                "ioc": "43.156.187.96:2404",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "port": "2404",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:10Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:10Z",
+                    "last_observed": "2026-10-01T12:23:10Z",
+                    "data": {
+                        "ports": [
+                            445,
+                            3389,
+                            5985
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:13Z",
+                    "last_observed": "2026-10-01T12:20:13Z",
+                    "data": {
+                        "asn": "AS132203",
+                        "as_name": "Tencent Building, Kejizhongyi Avenue",
+                        "as_domain": "tencent.com",
+                        "country_code": "SG",
+                        "country": "Singapore",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-25T07:23:15.534135Z",
+                    "last_observed": "2026-09-25T07:23:15.534135Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-25T06:28:11",
+                        "id": "1932471",
+                        "ioc": "43.156.187.96:2404",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "port": "2404",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1932471",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "43.156.187.96:2404",
+                        "port": 2404,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-25T06:28:11Z",
+                        "reference": null,
+                        "tags": [
+                            "REMOTEHOST",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

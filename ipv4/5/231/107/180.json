@@ -1,24 +1,98 @@
 {
+    "schema_version": 2,
     "ip": "5.231.107.180",
+    "first_seen": "2026-09-23T16:40:16.251044Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "ottercookie"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-23T16:40:16.251044",
-            "flags": [
-                "ottercookie"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-21T16:24:49",
-                "id": "1926653",
-                "ioc": "5.231.107.180:3000",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/js.otter_cookie",
-                "port": "3000",
-                "reference": "https://github.com/Sabbirnde/Nava/blob/081742b82a89438bb34aea5fbe79971072740ad8/src/utils/errorHandler.js",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:54Z",
+                    "last_observed": "2026-10-01T12:23:54Z",
+                    "data": {
+                        "ports": [
+                            5985
+                        ],
+                        "hostnames": [
+                            "orange-elephant-37703.zap.cloud"
+                        ],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:22Z",
+                    "last_observed": "2026-10-01T12:20:22Z",
+                    "data": {
+                        "asn": "AS206996",
+                        "as_name": "ZAP-Hosting GmbH",
+                        "as_domain": "zap-hosting.com",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-23T16:40:16.251044Z",
+                    "last_observed": "2026-09-23T16:40:16.251044Z",
+                    "flags": [
+                        "ottercookie"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-21T16:24:49",
+                        "id": "1926653",
+                        "ioc": "5.231.107.180:3000",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/js.otter_cookie",
+                        "port": "3000",
+                        "reference": "https://github.com/Sabbirnde/Nava/blob/081742b82a89438bb34aea5fbe79971072740ad8/src/utils/errorHandler.js",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1926653",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "ottercookie"
+                    ],
+                    "data": {
+                        "ioc": "5.231.107.180:3000",
+                        "port": 3000,
+                        "threat_type": "botnet_cc",
+                        "malware": "OtterCookie",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/js.otter_cookie",
+                        "confidence_level": 80,
+                        "first_seen": "2026-09-21T16:24:49Z",
+                        "reference": "https://github.com/Sabbirnde/Nava/blob/081742b82a89438bb34aea5fbe79971072740ad8/src/utils/errorHandler.js",
+                        "tags": [
+                            "NodeJS",
+                            "OtterCookie",
+                            "c2",
+                            "contagious-interview"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

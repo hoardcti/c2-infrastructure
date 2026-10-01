@@ -1,24 +1,99 @@
 {
+    "schema_version": 2,
     "ip": "147.90.182.42",
+    "first_seen": "2026-09-28T15:08:48.856052Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-28T15:08:48.856052",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-28T10:27:52",
-                "port": "2404",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1940898",
-                "ioc": "147.90.182.42:2404",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:22:45Z",
+                    "last_observed": "2026-10-01T12:22:45Z",
+                    "data": {
+                        "ports": [
+                            445,
+                            3389,
+                            5985
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:08Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:08Z",
+                    "last_observed": "2026-10-01T12:20:08Z",
+                    "data": {
+                        "asn": "AS210558",
+                        "as_name": "1337 Services GmbH",
+                        "as_domain": "rdp.sh",
+                        "country_code": "HK",
+                        "country": "Hong Kong",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-28T15:08:48.856052Z",
+                    "last_observed": "2026-09-28T15:08:48.856052Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-28T10:27:52",
+                        "port": "2404",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1940898",
+                        "ioc": "147.90.182.42:2404",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1940898",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "147.90.182.42:2404",
+                        "port": 2404,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-28T10:27:52Z",
+                        "reference": null,
+                        "tags": [
+                            "REMOTEHOST",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

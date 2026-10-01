@@ -1,24 +1,76 @@
 {
+    "schema_version": 2,
     "ip": "31.6.50.206",
+    "first_seen": "2026-09-14T11:57:26.199193Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "xworm"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199193",
-            "flags": [
-                "xworm"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:56:06",
-                "port": "2017",
-                "reference": "",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.xworm",
-                "id": "1917696",
-                "ioc": "31.6.50.206:2017",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:30Z",
+                    "last_observed": "2026-10-01T12:21:30Z",
+                    "data": {
+                        "asn": "AS213200",
+                        "as_name": "Ferdinand Zink trading as Tube-Hosting",
+                        "as_domain": "tube-hosting.com",
+                        "country_code": "SA",
+                        "country": "Saudi Arabia",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.199193Z",
+                    "last_observed": "2026-09-14T11:57:26.199193Z",
+                    "flags": [
+                        "xworm"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:56:06",
+                        "port": "2017",
+                        "reference": "",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.xworm",
+                        "id": "1917696",
+                        "ioc": "31.6.50.206:2017",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917696",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "xworm"
+                    ],
+                    "data": {
+                        "ioc": "31.6.50.206:2017",
+                        "port": 2017,
+                        "threat_type": "botnet_cc",
+                        "malware": "XWorm",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.xworm",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:56:06Z",
+                        "reference": "",
+                        "tags": [
+                            "XWorm",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

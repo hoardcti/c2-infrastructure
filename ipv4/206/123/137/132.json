@@ -1,24 +1,100 @@
 {
+    "schema_version": 2,
     "ip": "206.123.137.132",
+    "first_seen": "2026-09-07T08:58:29.095471Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-07T08:58:29.095471",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-07T06:15:22",
-                "port": "56090",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1903390",
-                "ioc": "206.123.137.132:56090",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:45Z",
+                    "last_observed": "2026-10-01T12:21:45Z",
+                    "data": {
+                        "asn": "AS9009",
+                        "as_name": "M247 Europe SRL",
+                        "as_domain": "m247global.com",
+                        "country_code": "SE",
+                        "country": "Sweden",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-07T08:58:29.095471Z",
+                    "last_observed": "2026-09-07T08:58:29.095471Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-07T06:15:22",
+                        "port": "56090",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1903390",
+                        "ioc": "206.123.137.132:56090",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1923917",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "206.123.137.132:57484",
+                        "port": 57484,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-18T13:17:45Z",
+                        "reference": null,
+                        "tags": [
+                            "Port$$",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                },
+                {
+                    "key": "1903390",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "206.123.137.132:56090",
+                        "port": 56090,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-07T06:15:22Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "remcos",
+                            "septguops"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

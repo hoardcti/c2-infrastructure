@@ -1,24 +1,98 @@
 {
+    "schema_version": 2,
     "ip": "124.72.180.167",
+    "first_seen": "2026-09-14T11:57:26.199253Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "dcrat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199253",
-            "flags": [
-                "dcrat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:52:07",
-                "port": "55130",
-                "reference": "",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.dcrat",
-                "id": "1917657",
-                "ioc": "124.72.180.167:55130",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:29Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:29Z",
+                    "last_observed": "2026-10-01T12:21:29Z",
+                    "data": {
+                        "asn": "AS4134",
+                        "as_name": "CHINANET BACKBONE",
+                        "as_domain": "chinatelecom.com.cn",
+                        "country_code": "CN",
+                        "country": "China",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.199253Z",
+                    "last_observed": "2026-09-14T11:57:26.199253Z",
+                    "flags": [
+                        "dcrat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:52:07",
+                        "port": "55130",
+                        "reference": "",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.dcrat",
+                        "id": "1917657",
+                        "ioc": "124.72.180.167:55130",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917658",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "dcrat"
+                    ],
+                    "data": {
+                        "ioc": "124.72.180.167:8848",
+                        "port": 8848,
+                        "threat_type": "botnet_cc",
+                        "malware": "DCRat",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.dcrat",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:52:07Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "dcrat"
+                        ]
+                    }
+                },
+                {
+                    "key": "1917657",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "dcrat"
+                    ],
+                    "data": {
+                        "ioc": "124.72.180.167:55130",
+                        "port": 55130,
+                        "threat_type": "botnet_cc",
+                        "malware": "DCRat",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.dcrat",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:52:07Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "dcrat"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

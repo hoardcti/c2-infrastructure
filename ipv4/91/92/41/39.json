@@ -1,24 +1,226 @@
 {
+    "schema_version": 2,
     "ip": "91.92.41.39",
+    "first_seen": "2026-09-30T18:57:36.497176Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-30T18:57:36.497176",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-30T14:49:39",
-                "port": "2026",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1942927",
-                "ioc": "91.92.41.39:2026",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T12:25:02Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:25:02Z",
+                    "last_observed": "2026-10-01T12:25:02Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2026-02-04T09:00:34Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "SINO WORLDWIDE TRADING LIMITED",
+                        "domain": "sinoworldwidetrading.com",
+                        "country_code": "NL",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:22:07Z",
+                    "last_observed": "2026-10-01T12:22:07Z",
+                    "data": {
+                        "ports": [
+                            5357
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:01Z",
+                    "last_observed": "2026-10-01T12:20:01Z",
+                    "data": {
+                        "asn": "AS211443",
+                        "as_name": "SINO WORLDWIDE TRADING LIMITED",
+                        "as_domain": "i-sino.com",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-01T12:29:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:29:41Z",
+                    "last_observed": "2026-10-01T12:29:41Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS25211 euro crypt eood",
+                        "country_code": "BG",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "697e97b7b78ff64d0d1d4852",
+                                "name": "OpenCTI_Export_2026-02",
+                                "created": "2026-02-01T00:00:55.684Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "2026-02",
+                                    "Automated",
+                                    "OpenCTI"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-01T12:30:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:30:20Z",
+                    "last_observed": "2026-10-01T12:30:20Z",
+                    "data": {
+                        "org": "Euro Crypt EOOD",
+                        "isp": "NTT America, Inc.",
+                        "asn": "AS2914",
+                        "os": null,
+                        "country_code": "BG",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 5357,
+                                "transport": "tcp",
+                                "http_title": "Service Unavailable"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-30T18:57:36.497176Z",
+                    "last_observed": "2026-09-30T18:57:36.497176Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-30T14:49:39",
+                        "port": "2026",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1942927",
+                        "ioc": "91.92.41.39:2026",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1942927",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "91.92.41.39:2026",
+                        "port": 2026,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-30T14:49:39Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "remcos",
+                            "remote"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-01T12:24:14Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T12:32:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:32:44Z",
+                    "last_observed": "2026-10-01T12:32:44Z",
+                    "data": {
+                        "as_owner": "Sino Worldwide Trading Limited",
+                        "asn": 211443,
+                        "network": "91.92.41.0/24",
+                        "country": "BG",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 2,
+                            "undetected": 35,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Chong Lua Dao",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

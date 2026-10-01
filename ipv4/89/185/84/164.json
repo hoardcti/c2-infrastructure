@@ -1,24 +1,54 @@
 {
+    "schema_version": 2,
     "ip": "89.185.84.164",
+    "first_seen": "2026-09-03T22:19:56.018369Z",
+    "last_seen": "2026-09-03T22:19:56.018369Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-03T22:19:56.018369",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-03T20:17:38",
-                "port": "23189",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1893891",
-                "ioc": "89.185.84.164:23189",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:48Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:48Z",
+                    "last_observed": "2026-10-01T12:21:48Z",
+                    "data": {
+                        "asn": "AS215540",
+                        "as_name": "GLOBAL CONNECTIVITY SOLUTIONS LLP",
+                        "as_domain": "globconnex.com",
+                        "country_code": "GB",
+                        "country": "United Kingdom",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-09-03T22:19:56.018369Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-03T22:19:56.018369Z",
+                    "last_observed": "2026-09-03T22:19:56.018369Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-03T20:17:38",
+                        "port": "23189",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1893891",
+                        "ioc": "89.185.84.164:23189",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

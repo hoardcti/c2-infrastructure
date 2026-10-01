@@ -1,24 +1,65 @@
 {
+    "schema_version": 2,
     "ip": "172.111.131.3",
+    "first_seen": "2026-09-03T11:57:12.495884Z",
+    "last_seen": "2026-09-03T11:57:12.495884Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-03T11:57:12.495884",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-03T09:52:15",
-                "port": "56090",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1893756",
-                "ioc": "172.111.131.3:56090",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:48Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:48Z",
+                    "last_observed": "2026-10-01T12:21:48Z",
+                    "data": {
+                        "asn": "AS3223",
+                        "as_name": "Voxility LLP",
+                        "as_domain": "voxility.com",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "172.111.128.0/17",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "172.111.128.0/17",
+                        "sblid": "SBL688605",
+                        "rir": "arin"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-09-03T11:57:12.495884Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-03T11:57:12.495884Z",
+                    "last_observed": "2026-09-03T11:57:12.495884Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-03T09:52:15",
+                        "port": "56090",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1893756",
+                        "ioc": "172.111.131.3:56090",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

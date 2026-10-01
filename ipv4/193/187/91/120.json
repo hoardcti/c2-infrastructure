@@ -1,24 +1,54 @@
 {
+    "schema_version": 2,
     "ip": "193.187.91.120",
+    "first_seen": "2026-08-31T17:55:12.169513Z",
+    "last_seen": "2026-08-31T17:55:12.169513Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-31T17:55:12.169513",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-31T15:46:44",
-                "port": "51842",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1891918",
-                "ioc": "193.187.91.120:51842",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:59Z",
+                    "last_observed": "2026-10-01T12:21:59Z",
+                    "data": {
+                        "asn": "AS42675",
+                        "as_name": "Obehosting AB",
+                        "as_domain": "obe.net",
+                        "country_code": "SE",
+                        "country": "Sweden",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-08-31T17:55:12.169513Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-31T17:55:12.169513Z",
+                    "last_observed": "2026-08-31T17:55:12.169513Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-31T15:46:44",
+                        "port": "51842",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1891918",
+                        "ioc": "193.187.91.120:51842",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

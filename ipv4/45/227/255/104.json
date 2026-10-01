@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "45.227.255.104",
+    "first_seen": "2026-09-14T11:57:26.199689Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "sectoprat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199689",
-            "flags": [
-                "sectoprat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:15:32",
-                "port": "5000",
-                "reference": "https://www.shodan.io/host/45.227.255.104#5000",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sectop_rat",
-                "id": "1917581",
-                "ioc": "45.227.255.104:5000",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:24Z",
+                    "last_observed": "2026-10-01T12:21:24Z",
+                    "data": {
+                        "asn": "AS43350",
+                        "as_name": "NForce Entertainment B.V.",
+                        "as_domain": "nforce.com",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.199689Z",
+                    "last_observed": "2026-09-14T11:57:26.199689Z",
+                    "flags": [
+                        "sectoprat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:15:32",
+                        "port": "5000",
+                        "reference": "https://www.shodan.io/host/45.227.255.104#5000",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sectop_rat",
+                        "id": "1917581",
+                        "ioc": "45.227.255.104:5000",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917581",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "sectoprat"
+                    ],
+                    "data": {
+                        "ioc": "45.227.255.104:5000",
+                        "port": 5000,
+                        "threat_type": "botnet_cc",
+                        "malware": "SectopRAT",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sectop_rat",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:15:32Z",
+                        "reference": "https://www.shodan.io/host/45.227.255.104#5000",
+                        "tags": [
+                            "c2",
+                            "sectop",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "213.165.47.49",
+    "first_seen": "2026-05-28T13:33:04.495493Z",
+    "last_seen": "2026-05-28T13:33:04.495493Z",
     "flags": [
         "stealc"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-05-28T13:33:04.495493",
-            "flags": [
-                "stealc"
-            ],
-            "metadata": {
-                "firstSeen": "2026-05-04T17:29:03",
-                "port": "80",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.stealc",
-                "id": "1805936",
-                "ioc": "213.165.47.49:80",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-05-28T13:33:04.495493Z",
+            "observations": [
+                {
+                    "first_observed": "2026-05-28T13:33:04.495493Z",
+                    "last_observed": "2026-05-28T13:33:04.495493Z",
+                    "flags": [
+                        "stealc"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-05-04T17:29:03",
+                        "port": "80",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.stealc",
+                        "id": "1805936",
+                        "ioc": "213.165.47.49:80",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

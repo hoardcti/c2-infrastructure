@@ -1,24 +1,78 @@
 {
+    "schema_version": 2,
     "ip": "42.193.108.41",
+    "first_seen": "2026-09-14T11:57:26.201047Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.201047",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:12:53",
-                "port": "3333",
-                "reference": "https://www.shodan.io/host/42.193.108.41#3333",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1917407",
-                "ioc": "42.193.108.41:3333",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:50Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:50Z",
+                    "last_observed": "2026-10-01T12:20:50Z",
+                    "data": {
+                        "asn": "AS45090",
+                        "as_name": "Shenzhen Tencent Computer Systems Company Limited",
+                        "as_domain": "tencent.com",
+                        "country_code": "CN",
+                        "country": "China",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.201047Z",
+                    "last_observed": "2026-09-14T11:57:26.201047Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:12:53",
+                        "port": "3333",
+                        "reference": "https://www.shodan.io/host/42.193.108.41#3333",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1917407",
+                        "ioc": "42.193.108.41:3333",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917407",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "42.193.108.41:3333",
+                        "port": 3333,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:12:53Z",
+                        "reference": "https://www.shodan.io/host/42.193.108.41#3333",
+                        "tags": [
+                            "GoPhish",
+                            "c2",
+                            "phishing",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

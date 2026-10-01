@@ -1,24 +1,54 @@
 {
+    "schema_version": 2,
     "ip": "178.128.201.199",
+    "first_seen": "2026-08-31T17:55:12.169634Z",
+    "last_seen": "2026-08-31T17:55:12.169634Z",
     "flags": [
         "aisuru"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-31T17:55:12.169634",
-            "flags": [
-                "aisuru"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-01T05:11:46",
-                "id": "1892041",
-                "ioc": "178.128.201.199:8080",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
-                "port": "8080",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:57Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:57Z",
+                    "last_observed": "2026-10-01T12:21:57Z",
+                    "data": {
+                        "asn": "AS14061",
+                        "as_name": "DigitalOcean, LLC",
+                        "as_domain": "digitalocean.com",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-08-31T17:55:12.169634Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-31T17:55:12.169634Z",
+                    "last_observed": "2026-08-31T17:55:12.169634Z",
+                    "flags": [
+                        "aisuru"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-01T05:11:46",
+                        "id": "1892041",
+                        "ioc": "178.128.201.199:8080",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
+                        "port": "8080",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

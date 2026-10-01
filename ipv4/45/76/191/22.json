@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "45.76.191.22",
+    "first_seen": "2026-09-14T11:57:26.199535Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "adaptixc2"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199535",
-            "flags": [
-                "adaptixc2"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:18:07",
-                "port": "4848",
-                "reference": "https://www.shodan.io/host/45.76.191.22#4848",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.adaptix_c2",
-                "id": "1917597",
-                "ioc": "45.76.191.22:4848",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:26Z",
+                    "last_observed": "2026-10-01T12:21:26Z",
+                    "data": {
+                        "asn": "AS20473",
+                        "as_name": "The Constant Company, LLC",
+                        "as_domain": "vultr.com",
+                        "country_code": "SG",
+                        "country": "Singapore",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.199535Z",
+                    "last_observed": "2026-09-14T11:57:26.199535Z",
+                    "flags": [
+                        "adaptixc2"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:18:07",
+                        "port": "4848",
+                        "reference": "https://www.shodan.io/host/45.76.191.22#4848",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.adaptix_c2",
+                        "id": "1917597",
+                        "ioc": "45.76.191.22:4848",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917597",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "adaptixc2"
+                    ],
+                    "data": {
+                        "ioc": "45.76.191.22:4848",
+                        "port": 4848,
+                        "threat_type": "botnet_cc",
+                        "malware": "AdaptixC2",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.adaptix_c2",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:18:07Z",
+                        "reference": "https://www.shodan.io/host/45.76.191.22#4848",
+                        "tags": [
+                            "AdaptixC2",
+                            "c2",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

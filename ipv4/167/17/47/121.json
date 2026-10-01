@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "167.17.47.121",
+    "first_seen": "2026-09-14T11:57:26.199572Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "adaptixc2"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199572",
-            "flags": [
-                "adaptixc2"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:18:06",
-                "port": "1337",
-                "reference": "https://www.shodan.io/host/167.17.47.121#1337",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.adaptix_c2",
-                "id": "1917592",
-                "ioc": "167.17.47.121:1337",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:26Z",
+                    "last_observed": "2026-10-01T12:21:26Z",
+                    "data": {
+                        "asn": "AS43180",
+                        "as_name": "Trunk Networks LTD",
+                        "as_domain": "trunk-networks.net",
+                        "country_code": "SG",
+                        "country": "Singapore",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.199572Z",
+                    "last_observed": "2026-09-14T11:57:26.199572Z",
+                    "flags": [
+                        "adaptixc2"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:18:06",
+                        "port": "1337",
+                        "reference": "https://www.shodan.io/host/167.17.47.121#1337",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.adaptix_c2",
+                        "id": "1917592",
+                        "ioc": "167.17.47.121:1337",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917592",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "adaptixc2"
+                    ],
+                    "data": {
+                        "ioc": "167.17.47.121:1337",
+                        "port": 1337,
+                        "threat_type": "botnet_cc",
+                        "malware": "AdaptixC2",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.adaptix_c2",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:18:06Z",
+                        "reference": "https://www.shodan.io/host/167.17.47.121#1337",
+                        "tags": [
+                            "AdaptixC2",
+                            "c2",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

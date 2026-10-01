@@ -1,24 +1,100 @@
 {
+    "schema_version": 2,
     "ip": "143.244.130.3",
+    "first_seen": "2026-09-23T16:40:16.251006Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remus"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-23T16:40:16.251006",
-            "flags": [
-                "remus"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-17T11:24:08",
-                "port": "8291",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
-                "id": "1923106",
-                "ioc": "143.244.130.3:8291",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:24Z",
+                    "last_observed": "2026-10-01T12:20:24Z",
+                    "data": {
+                        "asn": "AS14061",
+                        "as_name": "DigitalOcean, LLC",
+                        "as_domain": "digitalocean.com",
+                        "country_code": "IN",
+                        "country": "India",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-23T16:40:16.251006Z",
+                    "last_observed": "2026-09-23T16:40:16.251006Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-17T11:24:08",
+                        "port": "8291",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "id": "1923106",
+                        "ioc": "143.244.130.3:8291",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1927312",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "ioc": "143.244.130.3:6527",
+                        "port": 6527,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remus",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-22T11:00:28Z",
+                        "reference": null,
+                        "tags": [
+                            "5a4378fb90db39f09c7b18d1f314e645",
+                            "Remus",
+                            "c2"
+                        ]
+                    }
+                },
+                {
+                    "key": "1923106",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "ioc": "143.244.130.3:8291",
+                        "port": 8291,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remus",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-17T11:24:08Z",
+                        "reference": null,
+                        "tags": [
+                            "0f81469cc7638ba7c82eaddbd6b3c20a",
+                            "Remus",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

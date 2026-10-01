@@ -1,24 +1,78 @@
 {
+    "schema_version": 2,
     "ip": "113.44.88.182",
+    "first_seen": "2026-09-14T11:57:26.201114Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.201114",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:12:51",
-                "port": "3333",
-                "reference": "https://www.shodan.io/host/113.44.88.182#3333",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1917399",
-                "ioc": "113.44.88.182:3333",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:48Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:48Z",
+                    "last_observed": "2026-10-01T12:20:48Z",
+                    "data": {
+                        "asn": "AS55990",
+                        "as_name": "Huawei Cloud Service data center",
+                        "as_domain": "huaweicloud.com",
+                        "country_code": "CN",
+                        "country": "China",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.201114Z",
+                    "last_observed": "2026-09-14T11:57:26.201114Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:12:51",
+                        "port": "3333",
+                        "reference": "https://www.shodan.io/host/113.44.88.182#3333",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1917399",
+                        "ioc": "113.44.88.182:3333",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917399",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "113.44.88.182:3333",
+                        "port": 3333,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:12:51Z",
+                        "reference": "https://www.shodan.io/host/113.44.88.182#3333",
+                        "tags": [
+                            "GoPhish",
+                            "c2",
+                            "phishing",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

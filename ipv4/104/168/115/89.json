@@ -1,24 +1,54 @@
 {
+    "schema_version": 2,
     "ip": "104.168.115.89",
+    "first_seen": "2026-09-01T17:38:20.078263Z",
+    "last_seen": "2026-09-01T17:38:20.078263Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-01T17:38:20.078263",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-01T13:38:40",
-                "id": "1892476",
-                "ioc": "104.168.115.89:4553",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "port": "4553",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:53Z",
+                    "last_observed": "2026-10-01T12:21:53Z",
+                    "data": {
+                        "asn": "AS36352",
+                        "as_name": "HostPapa",
+                        "as_domain": "colocrossing.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-09-01T17:38:20.078263Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-01T17:38:20.078263Z",
+                    "last_observed": "2026-09-01T17:38:20.078263Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-01T13:38:40",
+                        "id": "1892476",
+                        "ioc": "104.168.115.89:4553",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "port": "4553",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,88 @@
 {
+    "schema_version": 2,
     "ip": "36.255.97.191",
+    "first_seen": "2026-09-11T08:37:52.239631Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-11T08:37:52.239631",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-11T07:33:05",
-                "port": "6030",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1912132",
-                "ioc": "36.255.97.191:6030",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:35Z",
+                    "last_observed": "2026-10-01T12:21:35Z",
+                    "data": {
+                        "asn": "AS36680",
+                        "as_name": "Netiface LLC",
+                        "as_domain": "abusehandler.net",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "36.255.97.0/24",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "36.255.97.0/24",
+                        "sblid": "SBL693107",
+                        "rir": "apnic"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-11T08:37:52.239631Z",
+                    "last_observed": "2026-09-11T08:37:52.239631Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-11T07:33:05",
+                        "port": "6030",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1912132",
+                        "ioc": "36.255.97.191:6030",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1912132",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "36.255.97.191:6030",
+                        "port": 6030,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-11T07:33:05Z",
+                        "reference": null,
+                        "tags": [
+                            "Culinan",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

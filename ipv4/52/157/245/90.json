@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "52.157.245.90",
+    "first_seen": "2026-06-02T17:24:04.158043Z",
+    "last_seen": "2026-06-02T17:24:04.158043Z",
     "flags": [
         "shadowpad"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-06-02T17:24:04.158043",
-            "flags": [
-                "shadowpad"
-            ],
-            "metadata": {
-                "firstSeen": "2026-06-02T14:04:34",
-                "port": "8083",
-                "reference": "https://www.shodan.io/host/52.157.245.90#8083",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.shadowpad",
-                "id": "1821223",
-                "ioc": "52.157.245.90:8083",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-06-02T17:24:04.158043Z",
+            "observations": [
+                {
+                    "first_observed": "2026-06-02T17:24:04.158043Z",
+                    "last_observed": "2026-06-02T17:24:04.158043Z",
+                    "flags": [
+                        "shadowpad"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-06-02T14:04:34",
+                        "port": "8083",
+                        "reference": "https://www.shodan.io/host/52.157.245.90#8083",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.shadowpad",
+                        "id": "1821223",
+                        "ioc": "52.157.245.90:8083",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

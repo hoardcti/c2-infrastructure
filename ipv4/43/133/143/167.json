@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "43.133.143.167",
+    "first_seen": "2026-07-14T15:22:43.452279Z",
+    "last_seen": "2026-07-14T15:22:43.452279Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-07-14T15:22:43.452279",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-07-14T14:57:22",
-                "port": "34567",
-                "reference": "https://github.com/deepfield/public-research/blob/main/jackskid/report.md",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1850395",
-                "ioc": "43.133.143.167:34567",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-07-14T15:22:43.452279Z",
+            "observations": [
+                {
+                    "first_observed": "2026-07-14T15:22:43.452279Z",
+                    "last_observed": "2026-07-14T15:22:43.452279Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-07-14T14:57:22",
+                        "port": "34567",
+                        "reference": "https://github.com/deepfield/public-research/blob/main/jackskid/report.md",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1850395",
+                        "ioc": "43.133.143.167:34567",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

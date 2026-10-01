@@ -1,24 +1,54 @@
 {
+    "schema_version": 2,
     "ip": "86.106.84.167",
+    "first_seen": "2026-09-03T22:19:56.018428Z",
+    "last_seen": "2026-09-03T22:19:56.018428Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-03T22:19:56.018428",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-03T20:17:23",
-                "port": "13309",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1893955",
-                "ioc": "86.106.84.167:13309",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:48Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:48Z",
+                    "last_observed": "2026-10-01T12:21:48Z",
+                    "data": {
+                        "asn": "AS9009",
+                        "as_name": "M247 Europe SRL",
+                        "as_domain": "m247global.com",
+                        "country_code": "CH",
+                        "country": "Switzerland",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-09-03T22:19:56.018428Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-03T22:19:56.018428Z",
+                    "last_observed": "2026-09-03T22:19:56.018428Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-03T20:17:23",
+                        "port": "13309",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1893955",
+                        "ioc": "86.106.84.167:13309",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

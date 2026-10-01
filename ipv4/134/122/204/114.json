@@ -1,24 +1,93 @@
 {
+    "schema_version": 2,
     "ip": "134.122.204.114",
+    "first_seen": "2026-09-24T09:14:50.536636Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-24T09:14:50.536636",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-24T04:58:43",
-                "id": "1931091",
-                "ioc": "134.122.204.114:8151",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "port": "8151",
-                "reference": "https://x.com/devmihaylov/status/2102883134996189479",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:21Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:15Z",
+                    "last_observed": "2026-10-01T12:20:15Z",
+                    "data": {
+                        "asn": "AS152194",
+                        "as_name": "CTG Server Limited",
+                        "as_domain": "ctgserver.net",
+                        "country_code": "HK",
+                        "country": "Hong Kong",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "134.122.128.0/17",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "134.122.128.0/17",
+                        "sblid": "SBL657510",
+                        "rir": "apnic"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-24T09:14:50.536636Z",
+                    "last_observed": "2026-09-24T09:14:50.536636Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-24T04:58:43",
+                        "id": "1931091",
+                        "ioc": "134.122.204.114:8151",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "port": "8151",
+                        "reference": "https://x.com/devmihaylov/status/2102883134996189479",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1931091",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "134.122.204.114:8151",
+                        "port": 8151,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-24T04:58:43Z",
+                        "reference": "https://x.com/devmihaylov/status/2102883134996189479",
+                        "tags": [
+                            "Endpoint-Central",
+                            "ManageEngine",
+                            "RMM-abuse",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,108 @@
 {
+    "schema_version": 2,
     "ip": "47.94.56.71",
+    "first_seen": "2026-09-25T07:23:15.534139Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "cobalt strike"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-25T07:23:15.534139",
-            "flags": [
-                "cobalt strike"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-25T06:28:06",
-                "id": "1932545",
-                "ioc": "47.94.56.71:8443",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
-                "port": "8443",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:08Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:08Z",
+                    "last_observed": "2026-10-01T12:23:08Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            7000,
+                            8080,
+                            8443,
+                            8900
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:cloudflare:cloudflare",
+                            "cpe:/a:helpsystems:cobalt_strike",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:13Z",
+                    "last_observed": "2026-10-01T12:20:13Z",
+                    "data": {
+                        "asn": "AS37963",
+                        "as_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
+                        "as_domain": "alibabagroup.com",
+                        "country_code": "CN",
+                        "country": "China",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-25T07:23:15.534139Z",
+                    "last_observed": "2026-09-25T07:23:15.534139Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-25T06:28:06",
+                        "id": "1932545",
+                        "ioc": "47.94.56.71:8443",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "port": "8443",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1932545",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "47.94.56.71:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-25T06:28:06Z",
+                        "reference": null,
+                        "tags": [
+                            "37963",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

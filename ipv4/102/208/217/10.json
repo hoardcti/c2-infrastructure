@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "102.208.217.10",
+    "first_seen": "2026-07-29T07:42:55.203579Z",
+    "last_seen": "2026-07-29T07:42:55.203579Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-07-29T07:42:55.203579",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-07-29T07:41:12",
-                "port": "8443",
-                "reference": "https://bazaar.abuse.ch/sample/376f66963489712e9cf479b7bd7540f24bc3019a712ac1b341466515e81a9b88/",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1862616",
-                "ioc": "102.208.217.10:8443",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-07-29T07:42:55.203579Z",
+            "observations": [
+                {
+                    "first_observed": "2026-07-29T07:42:55.203579Z",
+                    "last_observed": "2026-07-29T07:42:55.203579Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-07-29T07:41:12",
+                        "port": "8443",
+                        "reference": "https://bazaar.abuse.ch/sample/376f66963489712e9cf479b7bd7540f24bc3019a712ac1b341466515e81a9b88/",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1862616",
+                        "ioc": "102.208.217.10:8443",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

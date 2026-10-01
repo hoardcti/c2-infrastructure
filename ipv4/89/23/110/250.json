@@ -1,24 +1,59 @@
 {
+    "schema_version": 2,
     "ip": "89.23.110.250",
+    "first_seen": "2026-08-18T12:44:02.839771Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "adaptixc2"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-18T12:44:02.839771",
-            "flags": [
-                "adaptixc2"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:18:06",
-                "port": "9443",
-                "reference": "https://www.shodan.io/host/89.23.110.250#9443",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.adaptix_c2",
-                "id": "1917595",
-                "ioc": "89.23.110.250:9443",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-18T12:44:02.839771Z",
+                    "last_observed": "2026-08-18T12:44:02.839771Z",
+                    "flags": [
+                        "adaptixc2"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:18:06",
+                        "port": "9443",
+                        "reference": "https://www.shodan.io/host/89.23.110.250#9443",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.adaptix_c2",
+                        "id": "1917595",
+                        "ioc": "89.23.110.250:9443",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917595",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "adaptixc2"
+                    ],
+                    "data": {
+                        "ioc": "89.23.110.250:9443",
+                        "port": 9443,
+                        "threat_type": "botnet_cc",
+                        "malware": "AdaptixC2",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.adaptix_c2",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:18:06Z",
+                        "reference": "https://www.shodan.io/host/89.23.110.250#9443",
+                        "tags": [
+                            "AdaptixC2",
+                            "c2",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

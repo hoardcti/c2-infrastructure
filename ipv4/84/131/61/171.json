@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "84.131.61.171",
+    "first_seen": "2026-09-14T11:57:26.199446Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "ghost rat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199446",
-            "flags": [
-                "ghost rat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:20:27",
-                "port": "80",
-                "reference": "https://www.shodan.io/host/84.131.61.171#80",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.ghost_rat",
-                "id": "1917605",
-                "ioc": "84.131.61.171:80",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:28Z",
+                    "last_observed": "2026-10-01T12:21:28Z",
+                    "data": {
+                        "asn": "AS3320",
+                        "as_name": "Deutsche Telekom AG",
+                        "as_domain": "telekom.de",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.199446Z",
+                    "last_observed": "2026-09-14T11:57:26.199446Z",
+                    "flags": [
+                        "ghost rat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:20:27",
+                        "port": "80",
+                        "reference": "https://www.shodan.io/host/84.131.61.171#80",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.ghost_rat",
+                        "id": "1917605",
+                        "ioc": "84.131.61.171:80",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917605",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "ghost rat"
+                    ],
+                    "data": {
+                        "ioc": "84.131.61.171:80",
+                        "port": 80,
+                        "threat_type": "botnet_cc",
+                        "malware": "Ghost RAT",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.ghost_rat",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:20:27Z",
+                        "reference": "https://www.shodan.io/host/84.131.61.171#80",
+                        "tags": [
+                            "Gh0st",
+                            "c2",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "46.183.223.30",
+    "first_seen": "2026-09-23T16:40:16.251011Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-23T16:40:16.251011",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-22T08:30:54",
-                "id": "1927254",
-                "ioc": "46.183.223.30:465",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "port": "465",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:24Z",
+                    "last_observed": "2026-10-01T12:20:24Z",
+                    "data": {
+                        "asn": "AS52048",
+                        "as_name": "SIA RixHost",
+                        "as_domain": "rixhost.lv",
+                        "country_code": "LV",
+                        "country": "Latvia",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-23T16:40:16.251011Z",
+                    "last_observed": "2026-09-23T16:40:16.251011Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-22T08:30:54",
+                        "id": "1927254",
+                        "ioc": "46.183.223.30:465",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "port": "465",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1927254",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "46.183.223.30:465",
+                        "port": 465,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-22T08:30:54Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "host",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

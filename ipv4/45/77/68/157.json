@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "45.77.68.157",
+    "first_seen": "2026-09-16T09:06:59.354374Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remus"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-16T09:06:59.354374",
-            "flags": [
-                "remus"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-16T06:24:39",
-                "port": "7289",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
-                "id": "1920857",
-                "ioc": "45.77.68.157:7289",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:29Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:29Z",
+                    "last_observed": "2026-10-01T12:20:29Z",
+                    "data": {
+                        "asn": "AS20473",
+                        "as_name": "The Constant Company, LLC",
+                        "as_domain": "vultr.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-16T09:06:59.354374Z",
+                    "last_observed": "2026-09-16T09:06:59.354374Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-16T06:24:39",
+                        "port": "7289",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "id": "1920857",
+                        "ioc": "45.77.68.157:7289",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1920857",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "ioc": "45.77.68.157:7289",
+                        "port": 7289,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remus",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-16T06:24:39Z",
+                        "reference": null,
+                        "tags": [
+                            "65b650d78cbf74f17a1f5c139d5ab278",
+                            "Remus",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

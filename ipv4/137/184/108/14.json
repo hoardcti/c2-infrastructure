@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "137.184.108.14",
+    "first_seen": "2026-09-04T10:43:04.015761Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remus"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-04T10:43:04.015761",
-            "flags": [
-                "remus"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-08T15:05:31",
-                "port": "9895",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
-                "id": "1905498",
-                "ioc": "137.184.108.14:9895",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:47Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:47Z",
+                    "last_observed": "2026-10-01T12:21:47Z",
+                    "data": {
+                        "asn": "AS14061",
+                        "as_name": "DigitalOcean, LLC",
+                        "as_domain": "digitalocean.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-04T10:43:04.015761Z",
+                    "last_observed": "2026-09-04T10:43:04.015761Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-08T15:05:31",
+                        "port": "9895",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "id": "1905498",
+                        "ioc": "137.184.108.14:9895",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1905498",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "ioc": "137.184.108.14:9895",
+                        "port": 9895,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remus",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-08T15:05:31Z",
+                        "reference": null,
+                        "tags": [
+                            "819f0e5932b5bcb78eba457c2af4661d",
+                            "Remus",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

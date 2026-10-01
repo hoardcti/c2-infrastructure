@@ -1,24 +1,78 @@
 {
+    "schema_version": 2,
     "ip": "160.179.176.98",
+    "first_seen": "2026-09-23T16:40:16.251023Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "meterpreter"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-23T16:40:16.251023",
-            "flags": [
-                "meterpreter"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-22T04:58:48",
-                "id": "1927014",
-                "ioc": "160.179.176.98:2222",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.meterpreter",
-                "port": "2222",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:23Z",
+                    "last_observed": "2026-10-01T12:20:23Z",
+                    "data": {
+                        "asn": "AS36903",
+                        "as_name": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
+                        "as_domain": "iam.ma",
+                        "country_code": "MA",
+                        "country": "Morocco",
+                        "continent_code": "AF",
+                        "continent": "Africa"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-23T16:40:16.251023Z",
+                    "last_observed": "2026-09-23T16:40:16.251023Z",
+                    "flags": [
+                        "meterpreter"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-22T04:58:48",
+                        "id": "1927014",
+                        "ioc": "160.179.176.98:2222",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.meterpreter",
+                        "port": "2222",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1927014",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "meterpreter"
+                    ],
+                    "data": {
+                        "ioc": "160.179.176.98:2222",
+                        "port": 2222,
+                        "threat_type": "botnet_cc",
+                        "malware": "Meterpreter",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.meterpreter",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-22T04:58:48Z",
+                        "reference": null,
+                        "tags": [
+                            "36903",
+                            "MetaSploit",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

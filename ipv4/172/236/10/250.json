@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "172.236.10.250",
+    "first_seen": "2026-06-02T17:24:04.157936Z",
+    "last_seen": "2026-06-02T17:24:04.157936Z",
     "flags": [
         "havoc"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-06-02T17:24:04.157936",
-            "flags": [
-                "havoc"
-            ],
-            "metadata": {
-                "firstSeen": "2026-06-02T14:06:11",
-                "port": "443",
-                "reference": "https://www.shodan.io/host/172.236.10.250#443",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.havoc",
-                "id": "1821233",
-                "ioc": "172.236.10.250:443",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-06-02T17:24:04.157936Z",
+            "observations": [
+                {
+                    "first_observed": "2026-06-02T17:24:04.157936Z",
+                    "last_observed": "2026-06-02T17:24:04.157936Z",
+                    "flags": [
+                        "havoc"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-06-02T14:06:11",
+                        "port": "443",
+                        "reference": "https://www.shodan.io/host/172.236.10.250#443",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.havoc",
+                        "id": "1821233",
+                        "ioc": "172.236.10.250:443",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

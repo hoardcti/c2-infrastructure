@@ -1,19 +1,42 @@
 {
+    "schema_version": 2,
     "ip": "130.12.180.135",
+    "first_seen": "2026-05-28T10:21:14.803452Z",
+    "last_seen": "2026-05-28T10:21:14.803452Z",
     "flags": [
         "needle"
     ],
-    "results": [
-        {
-            "source": "viribacktracker",
-            "datetime": "2026-05-28T10:21:14.803452",
-            "flags": [
-                "needle"
-            ],
-            "metadata": {
-                "firstSeen": "2026-05-25T00:00:00",
-                "login": "http://130.12.180.135:3000/auth"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": [
+                {
+                    "key": "130.12.180.0/22",
+                    "first_observed": "2026-10-01T12:19:59Z",
+                    "last_observed": "2026-10-01T12:19:59Z",
+                    "data": {
+                        "cidr": "130.12.180.0/22",
+                        "sblid": "SBL690641",
+                        "rir": "arin"
+                    }
+                }
+            ]
+        },
+        "viribacktracker": {
+            "last_checked": "2026-05-28T10:21:14.803452Z",
+            "observations": [
+                {
+                    "first_observed": "2026-05-28T10:21:14.803452Z",
+                    "last_observed": "2026-05-28T10:21:14.803452Z",
+                    "flags": [
+                        "needle"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-05-25T00:00:00",
+                        "login": "http://130.12.180.135:3000/auth"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

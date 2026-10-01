@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "93.95.115.186",
+    "first_seen": "2026-06-10T10:00:39.366769Z",
+    "last_seen": "2026-06-10T10:00:39.366769Z",
     "flags": [
         "mirai"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-06-10T10:00:39.366769",
-            "flags": [
-                "mirai"
-            ],
-            "metadata": {
-                "firstSeen": "2026-06-10T08:29:49",
-                "port": "49384",
-                "reference": "",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.mirai",
-                "id": "1825789",
-                "ioc": "93.95.115.186:49384",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-06-10T10:00:39.366769Z",
+            "observations": [
+                {
+                    "first_observed": "2026-06-10T10:00:39.366769Z",
+                    "last_observed": "2026-06-10T10:00:39.366769Z",
+                    "flags": [
+                        "mirai"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-06-10T08:29:49",
+                        "port": "49384",
+                        "reference": "",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.mirai",
+                        "id": "1825789",
+                        "ioc": "93.95.115.186:49384",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

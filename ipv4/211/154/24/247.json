@@ -1,24 +1,76 @@
 {
+    "schema_version": 2,
     "ip": "211.154.24.247",
+    "first_seen": "2026-09-14T11:57:26.199244Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "dcrat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199244",
-            "flags": [
-                "dcrat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:52:07",
-                "port": "4462",
-                "reference": "",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.dcrat",
-                "id": "1917659",
-                "ioc": "211.154.24.247:4462",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:29Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:29Z",
+                    "last_observed": "2026-10-01T12:21:29Z",
+                    "data": {
+                        "asn": "AS146817",
+                        "as_name": "Hubei Feixun Network Co., Ltd",
+                        "as_domain": "qq.com",
+                        "country_code": "CN",
+                        "country": "China",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.199244Z",
+                    "last_observed": "2026-09-14T11:57:26.199244Z",
+                    "flags": [
+                        "dcrat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:52:07",
+                        "port": "4462",
+                        "reference": "",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.dcrat",
+                        "id": "1917659",
+                        "ioc": "211.154.24.247:4462",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917659",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "dcrat"
+                    ],
+                    "data": {
+                        "ioc": "211.154.24.247:4462",
+                        "port": 4462,
+                        "threat_type": "botnet_cc",
+                        "malware": "DCRat",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.dcrat",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:52:07Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "dcrat"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

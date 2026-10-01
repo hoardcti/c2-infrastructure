@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "103.140.186.26",
+    "first_seen": "2026-09-23T16:40:16.250969Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-23T16:40:16.250969",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-23T15:03:28",
-                "id": "1929669",
-                "ioc": "103.140.186.26:21290",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "port": "21290",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:27Z",
+                    "last_observed": "2026-10-01T12:20:27Z",
+                    "data": {
+                        "asn": "AS206804",
+                        "as_name": "EstNOC OU",
+                        "as_domain": "estnoc.ee",
+                        "country_code": "SG",
+                        "country": "Singapore",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-23T16:40:16.250969Z",
+                    "last_observed": "2026-09-23T16:40:16.250969Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-23T15:03:28",
+                        "id": "1929669",
+                        "ioc": "103.140.186.26:21290",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "port": "21290",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1929669",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "103.140.186.26:21290",
+                        "port": 21290,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-23T15:03:28Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "remcos",
+                            "zynaktiv"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

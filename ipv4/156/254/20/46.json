@@ -1,24 +1,102 @@
 {
+    "schema_version": 2,
     "ip": "156.254.20.46",
+    "first_seen": "2026-09-13T09:02:16.81047Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "cobalt strike"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-13T09:02:16.810470",
-            "flags": [
-                "cobalt strike"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-13T06:33:54",
-                "port": "5996",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
-                "id": "1916053",
-                "ioc": "156.254.20.46:5996",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:30Z",
+                    "last_observed": "2026-10-01T12:21:30Z",
+                    "data": {
+                        "asn": "AS153706",
+                        "as_name": "Stack Network Sdn. Bhd.",
+                        "as_domain": "stackpork.com",
+                        "country_code": "HK",
+                        "country": "Hong Kong",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-13T09:02:16.81047Z",
+                    "last_observed": "2026-09-13T09:02:16.81047Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-13T06:33:54",
+                        "port": "5996",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "id": "1916053",
+                        "ioc": "156.254.20.46:5996",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1916054",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "156.254.20.46:5998",
+                        "port": 5998,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-13T06:33:54Z",
+                        "reference": null,
+                        "tags": [
+                            "400619",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                },
+                {
+                    "key": "1916053",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "156.254.20.46:5996",
+                        "port": 5996,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-13T06:33:54Z",
+                        "reference": null,
+                        "tags": [
+                            "400619",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

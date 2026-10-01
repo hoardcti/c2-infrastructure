@@ -1,24 +1,88 @@
 {
+    "schema_version": 2,
     "ip": "172.111.232.235",
+    "first_seen": "2026-09-07T08:58:29.09563Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-07T08:58:29.095630",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-07T05:44:19",
-                "port": "65070",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1903237",
-                "ioc": "172.111.232.235:65070",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:44Z",
+                    "last_observed": "2026-10-01T12:21:44Z",
+                    "data": {
+                        "asn": "AS7040",
+                        "as_name": "Netminders Server Hosting",
+                        "as_domain": "net-minders.com",
+                        "country_code": "CA",
+                        "country": "Canada",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "172.111.128.0/17",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "172.111.128.0/17",
+                        "sblid": "SBL688605",
+                        "rir": "arin"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-07T08:58:29.09563Z",
+                    "last_observed": "2026-09-07T08:58:29.09563Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-07T05:44:19",
+                        "port": "65070",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1903237",
+                        "ioc": "172.111.232.235:65070",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1903237",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "172.111.232.235:65070",
+                        "port": 65070,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-07T05:44:19Z",
+                        "reference": null,
+                        "tags": [
+                            "Nexus 27-08-26",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

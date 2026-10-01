@@ -1,24 +1,97 @@
 {
+    "schema_version": 2,
     "ip": "5.175.182.85",
+    "first_seen": "2026-09-23T16:40:16.251049Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-23T16:40:16.251049",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-21T09:19:39",
-                "id": "1926365",
-                "ioc": "5.175.182.85:2404",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "port": "2404",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:51Z",
+                    "last_observed": "2026-10-01T12:23:51Z",
+                    "data": {
+                        "ports": [
+                            3389
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:21Z",
+                    "last_observed": "2026-10-01T12:20:21Z",
+                    "data": {
+                        "asn": "AS200051",
+                        "as_name": "VPSLab Networks",
+                        "as_domain": "vpslab.cloud",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-23T16:40:16.251049Z",
+                    "last_observed": "2026-09-23T16:40:16.251049Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-21T09:19:39",
+                        "id": "1926365",
+                        "ioc": "5.175.182.85:2404",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "port": "2404",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1926365",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "5.175.182.85:2404",
+                        "port": 2404,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-21T09:19:39Z",
+                        "reference": null,
+                        "tags": [
+                            "14 AUGUST 2026",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

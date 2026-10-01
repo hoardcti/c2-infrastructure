@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "191.93.113.119",
+    "first_seen": "2026-09-11T17:33:37.239722Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-11T17:33:37.239722",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-11T13:38:17",
-                "port": "2404",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1912255",
-                "ioc": "191.93.113.119:2404",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:34Z",
+                    "last_observed": "2026-10-01T12:21:34Z",
+                    "data": {
+                        "asn": "AS13489",
+                        "as_name": "UNE EPM TELECOMUNICACIONES S.A.",
+                        "as_domain": "une.com.co",
+                        "country_code": "CO",
+                        "country": "Colombia",
+                        "continent_code": "SA",
+                        "continent": "South America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-11T17:33:37.239722Z",
+                    "last_observed": "2026-09-11T17:33:37.239722Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-11T13:38:17",
+                        "port": "2404",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1912255",
+                        "ioc": "191.93.113.119:2404",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1912255",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "191.93.113.119:2404",
+                        "port": 2404,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-11T13:38:17Z",
+                        "reference": null,
+                        "tags": [
+                            "PASA",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

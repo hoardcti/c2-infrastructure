@@ -1,24 +1,78 @@
 {
+    "schema_version": 2,
     "ip": "115.245.115.158",
+    "first_seen": "2026-09-09T08:41:32.906138Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "quasar rat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-09T08:41:32.906138",
-            "flags": [
-                "quasar rat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-09T07:14:02",
-                "port": "8443",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.quasar_rat",
-                "id": "1905713",
-                "ioc": "115.245.115.158:8443",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:40Z",
+                    "last_observed": "2026-10-01T12:21:40Z",
+                    "data": {
+                        "asn": "AS55836",
+                        "as_name": "Reliance Jio Infocomm Limited",
+                        "as_domain": "jio.com",
+                        "country_code": "IN",
+                        "country": "India",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-09T08:41:32.906138Z",
+                    "last_observed": "2026-09-09T08:41:32.906138Z",
+                    "flags": [
+                        "quasar rat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-09T07:14:02",
+                        "port": "8443",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.quasar_rat",
+                        "id": "1905713",
+                        "ioc": "115.245.115.158:8443",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1905713",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "quasar rat"
+                    ],
+                    "data": {
+                        "ioc": "115.245.115.158:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Quasar RAT",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.quasar_rat",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-09T07:14:02Z",
+                        "reference": null,
+                        "tags": [
+                            "55836",
+                            "c2",
+                            "censys",
+                            "quasar"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

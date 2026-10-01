@@ -1,24 +1,47 @@
 {
+    "schema_version": 2,
     "ip": "176.65.132.246",
+    "first_seen": "2026-05-28T13:33:04.495267Z",
+    "last_seen": "2026-05-28T13:33:04.495267Z",
     "flags": [
         "quasar rat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-05-28T13:33:04.495267",
-            "flags": [
-                "quasar rat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-05-06T06:01:18",
-                "port": "9999",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.quasar_rat",
-                "id": "1807369",
-                "ioc": "176.65.132.246:9999",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": [
+                {
+                    "key": "176.65.132.0/24",
+                    "first_observed": "2026-10-01T12:19:59Z",
+                    "last_observed": "2026-10-01T12:19:59Z",
+                    "data": {
+                        "cidr": "176.65.132.0/24",
+                        "sblid": "SBL686258",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-05-28T13:33:04.495267Z",
+            "observations": [
+                {
+                    "first_observed": "2026-05-28T13:33:04.495267Z",
+                    "last_observed": "2026-05-28T13:33:04.495267Z",
+                    "flags": [
+                        "quasar rat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-05-06T06:01:18",
+                        "port": "9999",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.quasar_rat",
+                        "id": "1807369",
+                        "ioc": "176.65.132.246:9999",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

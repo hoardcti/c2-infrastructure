@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "151.242.187.122",
+    "first_seen": "2026-08-25T07:42:40.171359Z",
+    "last_seen": "2026-08-25T07:42:40.171359Z",
     "flags": [
         "raspberrypibotnet"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-25T07:42:40.171359",
-            "flags": [
-                "raspberrypibotnet"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-25T06:48:11",
-                "port": "8081",
-                "reference": "https://threatfox.abuse.ch/browse/tag/ElPatrono1337/",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.raspberrypibotnet",
-                "id": "1886596",
-                "ioc": "151.242.187.122:8081",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-08-25T07:42:40.171359Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-25T07:42:40.171359Z",
+                    "last_observed": "2026-08-25T07:42:40.171359Z",
+                    "flags": [
+                        "raspberrypibotnet"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-25T06:48:11",
+                        "port": "8081",
+                        "reference": "https://threatfox.abuse.ch/browse/tag/ElPatrono1337/",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.raspberrypibotnet",
+                        "id": "1886596",
+                        "ioc": "151.242.187.122:8081",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

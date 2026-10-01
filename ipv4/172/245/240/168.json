@@ -1,24 +1,78 @@
 {
+    "schema_version": 2,
     "ip": "172.245.240.168",
+    "first_seen": "2026-09-14T11:57:26.200473Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.200473",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:13:14",
-                "port": "8333",
-                "reference": "https://www.shodan.io/host/172.245.240.168#8333",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1917480",
-                "ioc": "172.245.240.168:8333",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:04Z",
+                    "last_observed": "2026-10-01T12:21:04Z",
+                    "data": {
+                        "asn": "AS36352",
+                        "as_name": "HostPapa",
+                        "as_domain": "colocrossing.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.200473Z",
+                    "last_observed": "2026-09-14T11:57:26.200473Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:13:14",
+                        "port": "8333",
+                        "reference": "https://www.shodan.io/host/172.245.240.168#8333",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1917480",
+                        "ioc": "172.245.240.168:8333",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917480",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "172.245.240.168:8333",
+                        "port": 8333,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:13:14Z",
+                        "reference": "https://www.shodan.io/host/172.245.240.168#8333",
+                        "tags": [
+                            "GoPhish",
+                            "c2",
+                            "phishing",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

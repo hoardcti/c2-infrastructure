@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "82.22.77.179",
+    "first_seen": "2026-06-09T20:58:08.644948Z",
+    "last_seen": "2026-06-09T20:58:08.644948Z",
     "flags": [
         "nanocore rat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-06-09T20:58:08.644948",
-            "flags": [
-                "nanocore rat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-06-09T18:45:11",
-                "port": "54984",
-                "reference": "https://urlhaus.abuse.ch/url/3861859/",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.nanocore",
-                "id": "1825588",
-                "ioc": "82.22.77.179:54984",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-06-09T20:58:08.644948Z",
+            "observations": [
+                {
+                    "first_observed": "2026-06-09T20:58:08.644948Z",
+                    "last_observed": "2026-06-09T20:58:08.644948Z",
+                    "flags": [
+                        "nanocore rat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-06-09T18:45:11",
+                        "port": "54984",
+                        "reference": "https://urlhaus.abuse.ch/url/3861859/",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.nanocore",
+                        "id": "1825588",
+                        "ioc": "82.22.77.179:54984",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

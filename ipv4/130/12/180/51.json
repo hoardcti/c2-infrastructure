@@ -1,24 +1,47 @@
 {
+    "schema_version": 2,
     "ip": "130.12.180.51",
+    "first_seen": "2026-08-10T07:40:25.624469Z",
+    "last_seen": "2026-08-10T07:40:25.624469Z",
     "flags": [
         "redtail"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-10T07:40:25.624469",
-            "flags": [
-                "redtail"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-10T06:17:50",
-                "port": "43782",
-                "reference": "",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.redtail",
-                "id": "1871445",
-                "ioc": "130.12.180.51:43782",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "130.12.180.0/22",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "130.12.180.0/22",
+                        "sblid": "SBL690641",
+                        "rir": "arin"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-08-10T07:40:25.624469Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-10T07:40:25.624469Z",
+                    "last_observed": "2026-08-10T07:40:25.624469Z",
+                    "flags": [
+                        "redtail"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-10T06:17:50",
+                        "port": "43782",
+                        "reference": "",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.redtail",
+                        "id": "1871445",
+                        "ioc": "130.12.180.51:43782",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

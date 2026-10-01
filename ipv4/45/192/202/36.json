@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "45.192.202.36",
+    "first_seen": "2026-09-14T11:57:26.201556Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "cobalt strike"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.201556",
-            "flags": [
-                "cobalt strike"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:11:44",
-                "port": "50050",
-                "reference": "https://www.shodan.io/host/45.192.202.36#50050",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
-                "id": "1917347",
-                "ioc": "45.192.202.36:50050",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:40Z",
+                    "last_observed": "2026-10-01T12:20:40Z",
+                    "data": {
+                        "asn": "AS401615",
+                        "as_name": "ACCK LLC",
+                        "as_domain": "acck.io",
+                        "country_code": "JP",
+                        "country": "Japan",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.201556Z",
+                    "last_observed": "2026-09-14T11:57:26.201556Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:11:44",
+                        "port": "50050",
+                        "reference": "https://www.shodan.io/host/45.192.202.36#50050",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "id": "1917347",
+                        "ioc": "45.192.202.36:50050",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917347",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "45.192.202.36:50050",
+                        "port": 50050,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:11:44Z",
+                        "reference": "https://www.shodan.io/host/45.192.202.36#50050",
+                        "tags": [
+                            "CobaltStrike",
+                            "c2",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

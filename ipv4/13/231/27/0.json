@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "13.231.27.0",
+    "first_seen": "2026-08-26T06:48:07.855034Z",
+    "last_seen": "2026-08-26T06:48:07.855034Z",
     "flags": [
         "brute ratel c4"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-26T06:48:07.855034",
-            "flags": [
-                "brute ratel c4"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-26T05:46:26",
-                "port": "80",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.brute_ratel_c4",
-                "id": "1887900",
-                "ioc": "13.231.27.0:80",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-08-26T06:48:07.855034Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-26T06:48:07.855034Z",
+                    "last_observed": "2026-08-26T06:48:07.855034Z",
+                    "flags": [
+                        "brute ratel c4"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-26T05:46:26",
+                        "port": "80",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.brute_ratel_c4",
+                        "id": "1887900",
+                        "ioc": "13.231.27.0:80",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

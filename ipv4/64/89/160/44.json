@@ -1,24 +1,57 @@
 {
+    "schema_version": 2,
     "ip": "64.89.160.44",
+    "first_seen": "2026-05-31T08:45:34.983499Z",
+    "last_seen": "2026-05-31T08:45:34.983499Z",
     "flags": [
         "asyncrat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-05-31T08:45:34.983499",
-            "flags": [
-                "asyncrat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-05-31T06:48:28",
-                "port": "1000",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat",
-                "id": "1820214",
-                "ioc": "64.89.160.44:1000",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": [
+                {
+                    "key": "64.89.160.0/23",
+                    "first_observed": "2026-10-01T12:19:59Z",
+                    "last_observed": "2026-10-01T12:19:59Z",
+                    "data": {
+                        "cidr": "64.89.160.0/23",
+                        "sblid": "SBL692141",
+                        "rir": "arin"
+                    }
+                },
+                {
+                    "key": "64.89.160.0/22",
+                    "first_observed": "2026-10-01T12:19:59Z",
+                    "last_observed": "2026-10-01T12:19:59Z",
+                    "data": {
+                        "cidr": "64.89.160.0/22",
+                        "sblid": "SBL692143",
+                        "rir": "arin"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-05-31T08:45:34.983499Z",
+            "observations": [
+                {
+                    "first_observed": "2026-05-31T08:45:34.983499Z",
+                    "last_observed": "2026-05-31T08:45:34.983499Z",
+                    "flags": [
+                        "asyncrat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-05-31T06:48:28",
+                        "port": "1000",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat",
+                        "id": "1820214",
+                        "ioc": "64.89.160.44:1000",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

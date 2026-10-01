@@ -1,41 +1,99 @@
 {
+    "schema_version": 2,
     "ip": "154.37.218.73",
+    "first_seen": "2026-08-29T12:23:09.424236Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "cobalt strike",
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-29T12:23:09.424236",
-            "flags": [
-                "cobalt strike"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-29T05:55:03",
-                "id": "1890880",
-                "ioc": "154.37.218.73:12580",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
-                "port": "12580",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
         },
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199618",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:17:00",
-                "port": "8080",
-                "reference": "https://www.shodan.io/host/154.37.218.73#8080",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1917589",
-                "ioc": "154.37.218.73:8080",
-                "threat_type": "botnet_cc"
-            }
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-29T12:23:09.424236Z",
+                    "last_observed": "2026-08-29T12:23:09.424236Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-29T05:55:03",
+                        "id": "1890880",
+                        "ioc": "154.37.218.73:12580",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "port": "12580",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "first_observed": "2026-09-14T11:57:26.199618Z",
+                    "last_observed": "2026-09-14T11:57:26.199618Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:17:00",
+                        "port": "8080",
+                        "reference": "https://www.shodan.io/host/154.37.218.73#8080",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1917589",
+                        "ioc": "154.37.218.73:8080",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917590",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "154.37.218.73:4433",
+                        "port": 4433,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:17:01Z",
+                        "reference": "https://www.shodan.io/host/154.37.218.73#4433",
+                        "tags": [
+                            "RedGuard",
+                            "c2",
+                            "shodan"
+                        ]
+                    }
+                },
+                {
+                    "key": "1917589",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "154.37.218.73:8080",
+                        "port": 8080,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:17:00Z",
+                        "reference": "https://www.shodan.io/host/154.37.218.73#8080",
+                        "tags": [
+                            "RedGuard",
+                            "c2",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

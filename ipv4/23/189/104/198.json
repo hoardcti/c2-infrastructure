@@ -1,24 +1,218 @@
 {
+    "schema_version": 2,
     "ip": "23.189.104.198",
+    "first_seen": "2026-09-30T18:57:36.497176Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-30T18:57:36.497176",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-30T17:06:42",
-                "port": "2445",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1942970",
-                "ioc": "23.189.104.198:2445",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T12:25:00Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:25:00Z",
+                    "last_observed": "2026-10-01T12:25:00Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Angin Segar Ventures LLC",
+                        "domain": "anginsegar.top",
+                        "country_code": "DE",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:06Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:22:06Z",
+                    "last_observed": "2026-10-01T12:22:06Z",
+                    "data": {
+                        "ports": [
+                            2404
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:00Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:00Z",
+                    "last_observed": "2026-10-01T12:20:00Z",
+                    "data": {
+                        "asn": "AS214172",
+                        "as_name": "DePowered Limited",
+                        "as_domain": "rifty.org",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-01T12:29:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:29:41Z",
+                    "last_observed": "2026-10-01T12:29:41Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-01T12:30:18Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:30:18Z",
+                    "last_observed": "2026-10-01T12:30:18Z",
+                    "data": {
+                        "org": "Angin Segar Ventures LLC",
+                        "isp": "M-TELECOM S. de R.L.",
+                        "asn": "AS214172",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 2404,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-30T18:57:36.497176Z",
+                    "last_observed": "2026-09-30T18:57:36.497176Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-30T17:06:42",
+                        "port": "2445",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1942970",
+                        "ioc": "23.189.104.198:2445",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1942970",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "23.189.104.198:2445",
+                        "port": 2445,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-30T17:06:42Z",
+                        "reference": null,
+                        "tags": [
+                            "Yok",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-01T12:24:12Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T12:32:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:32:30Z",
+                    "last_observed": "2026-10-01T12:32:30Z",
+                    "data": {
+                        "as_owner": "DePowered Limited",
+                        "asn": 214172,
+                        "network": "23.189.104.0/24",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 1,
+                            "undetected": 35,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

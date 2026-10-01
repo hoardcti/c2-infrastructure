@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "100.106.194.93",
+    "first_seen": "2026-05-28T13:33:04.496726Z",
+    "last_seen": "2026-05-28T13:33:04.496726Z",
     "flags": [
         "quasar rat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-05-28T13:33:04.496726",
-            "flags": [
-                "quasar rat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-04-15T12:43:56",
-                "port": "4782",
-                "reference": "https://tria.ge/260415-mbhz2aew6z",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.quasar_rat",
-                "id": "1792027",
-                "ioc": "100.106.194.93:4782",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-05-28T13:33:04.496726Z",
+            "observations": [
+                {
+                    "first_observed": "2026-05-28T13:33:04.496726Z",
+                    "last_observed": "2026-05-28T13:33:04.496726Z",
+                    "flags": [
+                        "quasar rat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-04-15T12:43:56",
+                        "port": "4782",
+                        "reference": "https://tria.ge/260415-mbhz2aew6z",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.quasar_rat",
+                        "id": "1792027",
+                        "ioc": "100.106.194.93:4782",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

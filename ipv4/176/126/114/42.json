@@ -1,24 +1,99 @@
 {
+    "schema_version": 2,
     "ip": "176.126.114.42",
+    "first_seen": "2026-09-25T07:23:15.534137Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-25T07:23:15.534137",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-25T06:28:10",
-                "id": "1932506",
-                "ioc": "176.126.114.42:2404",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "port": "2404",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:09Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:09Z",
+                    "last_observed": "2026-10-01T12:23:09Z",
+                    "data": {
+                        "ports": [
+                            135,
+                            445,
+                            5357
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:13Z",
+                    "last_observed": "2026-10-01T12:20:13Z",
+                    "data": {
+                        "asn": "AS3258",
+                        "as_name": "xTom Japan Corporation",
+                        "as_domain": "xtom.com",
+                        "country_code": "JP",
+                        "country": "Japan",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-25T07:23:15.534137Z",
+                    "last_observed": "2026-09-25T07:23:15.534137Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-25T06:28:10",
+                        "id": "1932506",
+                        "ioc": "176.126.114.42:2404",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "port": "2404",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1932506",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "176.126.114.42:2404",
+                        "port": 2404,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-25T06:28:10Z",
+                        "reference": null,
+                        "tags": [
+                            "REMOTEHOST",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

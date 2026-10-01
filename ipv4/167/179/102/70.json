@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "167.179.102.70",
+    "first_seen": "2026-06-02T17:24:04.1578Z",
+    "last_seen": "2026-06-02T17:24:04.1578Z",
     "flags": [
         "netwire rc"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-06-02T17:24:04.157800",
-            "flags": [
-                "netwire rc"
-            ],
-            "metadata": {
-                "firstSeen": "2026-06-02T14:33:17",
-                "port": "8888",
-                "reference": "",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.netwire",
-                "id": "1821391",
-                "ioc": "167.179.102.70:8888",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-06-02T17:24:04.1578Z",
+            "observations": [
+                {
+                    "first_observed": "2026-06-02T17:24:04.1578Z",
+                    "last_observed": "2026-06-02T17:24:04.1578Z",
+                    "flags": [
+                        "netwire rc"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-06-02T14:33:17",
+                        "port": "8888",
+                        "reference": "",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.netwire",
+                        "id": "1821391",
+                        "ioc": "167.179.102.70:8888",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

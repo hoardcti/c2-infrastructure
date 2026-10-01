@@ -1,24 +1,47 @@
 {
+    "schema_version": 2,
     "ip": "45.156.87.174",
+    "first_seen": "2026-07-14T11:24:50.456611Z",
+    "last_seen": "2026-07-14T11:24:50.456611Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-07-14T11:24:50.456611",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-07-14T09:49:55",
-                "port": "6969",
-                "reference": "https://github.com/deepfield/public-research/blob/main/katana/report.md",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1850193",
-                "ioc": "45.156.87.174:6969",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": [
+                {
+                    "key": "45.156.87.0/24",
+                    "first_observed": "2026-10-01T12:19:59Z",
+                    "last_observed": "2026-10-01T12:19:59Z",
+                    "data": {
+                        "cidr": "45.156.87.0/24",
+                        "sblid": "SBL688017",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-07-14T11:24:50.456611Z",
+            "observations": [
+                {
+                    "first_observed": "2026-07-14T11:24:50.456611Z",
+                    "last_observed": "2026-07-14T11:24:50.456611Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-07-14T09:49:55",
+                        "port": "6969",
+                        "reference": "https://github.com/deepfield/public-research/blob/main/katana/report.md",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1850193",
+                        "ioc": "45.156.87.174:6969",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

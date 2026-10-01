@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "173.249.23.17",
+    "first_seen": "2026-09-14T11:57:26.199658Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "empire downloader"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199658",
-            "flags": [
-                "empire downloader"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:16:23",
-                "port": "1337",
-                "reference": "https://www.shodan.io/host/173.249.23.17#1337",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.empire_downloader",
-                "id": "1917585",
-                "ioc": "173.249.23.17:1337",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:25Z",
+                    "last_observed": "2026-10-01T12:21:25Z",
+                    "data": {
+                        "asn": "AS51167",
+                        "as_name": "Contabo GmbH",
+                        "as_domain": "contabo.com",
+                        "country_code": "FR",
+                        "country": "France",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.199658Z",
+                    "last_observed": "2026-09-14T11:57:26.199658Z",
+                    "flags": [
+                        "empire downloader"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:16:23",
+                        "port": "1337",
+                        "reference": "https://www.shodan.io/host/173.249.23.17#1337",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.empire_downloader",
+                        "id": "1917585",
+                        "ioc": "173.249.23.17:1337",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917585",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "empire downloader"
+                    ],
+                    "data": {
+                        "ioc": "173.249.23.17:1337",
+                        "port": 1337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Empire Downloader",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.empire_downloader",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:16:23Z",
+                        "reference": "https://www.shodan.io/host/173.249.23.17#1337",
+                        "tags": [
+                            "StarKillerC2",
+                            "c2",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

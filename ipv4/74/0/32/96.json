@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "74.0.32.96",
+    "first_seen": "2026-08-18T12:44:02.840227Z",
+    "last_seen": "2026-08-18T12:44:02.840227Z",
     "flags": [
         "sliver"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-18T12:44:02.840227",
-            "flags": [
-                "sliver"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-18T12:01:43",
-                "port": "4443",
-                "reference": "https://www.shodan.io/host/74.0.32.96#4443",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
-                "id": "1880697",
-                "ioc": "74.0.32.96:4443",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-08-18T12:44:02.840227Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-18T12:44:02.840227Z",
+                    "last_observed": "2026-08-18T12:44:02.840227Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-18T12:01:43",
+                        "port": "4443",
+                        "reference": "https://www.shodan.io/host/74.0.32.96#4443",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "id": "1880697",
+                        "ioc": "74.0.32.96:4443",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

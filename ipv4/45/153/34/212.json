@@ -1,24 +1,47 @@
 {
+    "schema_version": 2,
     "ip": "45.153.34.212",
+    "first_seen": "2026-06-21T10:29:30.754268Z",
+    "last_seen": "2026-06-21T10:29:30.754268Z",
     "flags": [
         "xmrig"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-06-21T10:29:30.754268",
-            "flags": [
-                "xmrig"
-            ],
-            "metadata": {
-                "firstSeen": "2026-06-21T06:47:42",
-                "port": "8181",
-                "reference": "https://twitter.com/NullBlue67",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.xmrig",
-                "id": "1834524",
-                "ioc": "45.153.34.212:8181",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": [
+                {
+                    "key": "45.153.34.0/24",
+                    "first_observed": "2026-10-01T12:19:59Z",
+                    "last_observed": "2026-10-01T12:19:59Z",
+                    "data": {
+                        "cidr": "45.153.34.0/24",
+                        "sblid": "SBL679667",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-06-21T10:29:30.754268Z",
+            "observations": [
+                {
+                    "first_observed": "2026-06-21T10:29:30.754268Z",
+                    "last_observed": "2026-06-21T10:29:30.754268Z",
+                    "flags": [
+                        "xmrig"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-06-21T06:47:42",
+                        "port": "8181",
+                        "reference": "https://twitter.com/NullBlue67",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.xmrig",
+                        "id": "1834524",
+                        "ioc": "45.153.34.212:8181",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

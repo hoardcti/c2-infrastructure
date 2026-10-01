@@ -1,24 +1,102 @@
 {
+    "schema_version": 2,
     "ip": "185.215.151.9",
+    "first_seen": "2026-09-24T09:14:50.536632Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-24T09:14:50.536632",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-24T04:58:55",
-                "id": "1931073",
-                "ioc": "185.215.151.9:2404",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "port": "2404",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:24Z",
+                    "last_observed": "2026-10-01T12:23:24Z",
+                    "data": {
+                        "ports": [
+                            135,
+                            445,
+                            3389,
+                            5985
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:16Z",
+                    "last_observed": "2026-10-01T12:20:16Z",
+                    "data": {
+                        "asn": "AS135392",
+                        "as_name": "MillenialHost Limited",
+                        "as_domain": "mlnl.host",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-24T09:14:50.536632Z",
+                    "last_observed": "2026-09-24T09:14:50.536632Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-24T04:58:55",
+                        "id": "1931073",
+                        "ioc": "185.215.151.9:2404",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "port": "2404",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1931073",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "185.215.151.9:2404",
+                        "port": 2404,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-24T04:58:55Z",
+                        "reference": null,
+                        "tags": [
+                            "New Social Security Statement 2026",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

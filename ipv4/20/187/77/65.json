@@ -1,24 +1,54 @@
 {
+    "schema_version": 2,
     "ip": "20.187.77.65",
+    "first_seen": "2026-09-05T12:25:06.85059Z",
+    "last_seen": "2026-09-05T12:25:06.85059Z",
     "flags": [
         "unknown rat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-05T12:25:06.850590",
-            "flags": [
-                "unknown rat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-05T12:23:36",
-                "port": "443",
-                "reference": "https://kabir.au/blog/speedybee-bootcss-sub-store-malware-chain",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown_rat",
-                "id": "1901348",
-                "ioc": "20.187.77.65:443",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:47Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:47Z",
+                    "last_observed": "2026-10-01T12:21:47Z",
+                    "data": {
+                        "asn": "AS8075",
+                        "as_name": "Microsoft Corporation",
+                        "as_domain": "microsoft.com",
+                        "country_code": "HK",
+                        "country": "Hong Kong",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-09-05T12:25:06.85059Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-05T12:25:06.85059Z",
+                    "last_observed": "2026-09-05T12:25:06.85059Z",
+                    "flags": [
+                        "unknown rat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-05T12:23:36",
+                        "port": "443",
+                        "reference": "https://kabir.au/blog/speedybee-bootcss-sub-store-malware-chain",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown_rat",
+                        "id": "1901348",
+                        "ioc": "20.187.77.65:443",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

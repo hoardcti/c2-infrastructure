@@ -1,24 +1,155 @@
 {
+    "schema_version": 2,
     "ip": "43.226.229.122",
+    "first_seen": "2026-09-30T13:27:57.320062Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-30T13:27:57.320062",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-30T12:21:53",
-                "port": "2404",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1942843",
-                "ioc": "43.226.229.122:2404",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T12:25:06Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:25:06Z",
+                    "last_observed": "2026-10-01T12:25:06Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2026-04-22T22:00:14Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "GZ Systems Limited Australia Operations",
+                        "domain": "nova.net.pk",
+                        "country_code": "AU",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:09Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:01Z",
+                    "last_observed": "2026-10-01T12:20:01Z",
+                    "data": {
+                        "asn": "AS137409",
+                        "as_name": "GSL Networks Pty LTD",
+                        "as_domain": "globalsecurelayer.com",
+                        "country_code": "AU",
+                        "country": "Australia",
+                        "continent_code": "OC",
+                        "continent": "Oceania"
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-01T12:30:24Z",
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-30T13:27:57.320062Z",
+                    "last_observed": "2026-09-30T13:27:57.320062Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-30T12:21:53",
+                        "port": "2404",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1942843",
+                        "ioc": "43.226.229.122:2404",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1942843",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "43.226.229.122:2404",
+                        "port": 2404,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-30T12:21:53Z",
+                        "reference": null,
+                        "tags": [
+                            "REMOTEHOST",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-01T12:24:18Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T12:33:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:33:15Z",
+                    "last_observed": "2026-10-01T12:33:15Z",
+                    "data": {
+                        "as_owner": "GSL Networks Pty LTD",
+                        "asn": 137409,
+                        "network": "43.226.229.0/24",
+                        "country": "AU",
+                        "continent": "OC",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 0,
+                            "undetected": 37,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

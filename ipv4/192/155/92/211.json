@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "192.155.92.211",
+    "first_seen": "2026-09-14T11:57:26.200075Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "sliver"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.200075",
-            "flags": [
-                "sliver"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:13:59",
-                "port": "31337",
-                "reference": "https://www.shodan.io/host/192.155.92.211#31337",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
-                "id": "1917531",
-                "ioc": "192.155.92.211:31337",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:14Z",
+                    "last_observed": "2026-10-01T12:21:14Z",
+                    "data": {
+                        "asn": "AS63949",
+                        "as_name": "Akamai Connected Cloud",
+                        "as_domain": "linode.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.200075Z",
+                    "last_observed": "2026-09-14T11:57:26.200075Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:13:59",
+                        "port": "31337",
+                        "reference": "https://www.shodan.io/host/192.155.92.211#31337",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "id": "1917531",
+                        "ioc": "192.155.92.211:31337",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917531",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "192.155.92.211:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:13:59Z",
+                        "reference": "https://www.shodan.io/host/192.155.92.211#31337",
+                        "tags": [
+                            "c2",
+                            "shodan",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

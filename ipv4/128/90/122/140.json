@@ -1,24 +1,97 @@
 {
+    "schema_version": 2,
     "ip": "128.90.122.140",
+    "first_seen": "2026-09-23T16:40:16.251136Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-23T16:40:16.251136",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-17T18:41:18",
-                "id": "1923385",
-                "ioc": "128.90.122.140:2015",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "port": "2015",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:29Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:29Z",
+                    "last_observed": "2026-10-01T12:23:29Z",
+                    "data": {
+                        "ports": [
+                            137
+                        ],
+                        "hostnames": [
+                            "undefined.hostname.localhost"
+                        ],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:17Z",
+                    "last_observed": "2026-10-01T12:20:17Z",
+                    "data": {
+                        "asn": "AS40861",
+                        "as_name": "Paradise Networks LLC",
+                        "as_domain": "paradisenetworks.net",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-23T16:40:16.251136Z",
+                    "last_observed": "2026-09-23T16:40:16.251136Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-17T18:41:18",
+                        "id": "1923385",
+                        "ioc": "128.90.122.140:2015",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "port": "2015",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1923385",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "128.90.122.140:2015",
+                        "port": 2015,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-17T18:41:18Z",
+                        "reference": null,
+                        "tags": [
+                            "CK-099",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

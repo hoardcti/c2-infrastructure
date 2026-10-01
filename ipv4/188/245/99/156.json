@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "188.245.99.156",
+    "first_seen": "2026-06-22T10:37:43.758569Z",
+    "last_seen": "2026-06-22T10:37:43.758569Z",
     "flags": [
         "tsunami"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-06-22T10:37:43.758569",
-            "flags": [
-                "tsunami"
-            ],
-            "metadata": {
-                "firstSeen": "2026-06-22T09:06:41",
-                "port": "10000",
-                "reference": "https://twitter.com/NullBlue67",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.tsunami",
-                "id": "1835456",
-                "ioc": "188.245.99.156:10000",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-06-22T10:37:43.758569Z",
+            "observations": [
+                {
+                    "first_observed": "2026-06-22T10:37:43.758569Z",
+                    "last_observed": "2026-06-22T10:37:43.758569Z",
+                    "flags": [
+                        "tsunami"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-06-22T09:06:41",
+                        "port": "10000",
+                        "reference": "https://twitter.com/NullBlue67",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.tsunami",
+                        "id": "1835456",
+                        "ioc": "188.245.99.156:10000",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

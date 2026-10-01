@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "168.245.203.112",
+    "first_seen": "2026-06-06T06:53:10.340924Z",
+    "last_seen": "2026-06-06T06:53:10.340924Z",
     "flags": [
         "meterpreter"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-06-06T06:53:10.340924",
-            "flags": [
-                "meterpreter"
-            ],
-            "metadata": {
-                "firstSeen": "2026-06-06T06:01:07",
-                "port": "3790",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.meterpreter",
-                "id": "1823702",
-                "ioc": "168.245.203.112:3790",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-06-06T06:53:10.340924Z",
+            "observations": [
+                {
+                    "first_observed": "2026-06-06T06:53:10.340924Z",
+                    "last_observed": "2026-06-06T06:53:10.340924Z",
+                    "flags": [
+                        "meterpreter"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-06-06T06:01:07",
+                        "port": "3790",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.meterpreter",
+                        "id": "1823702",
+                        "ioc": "168.245.203.112:3790",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

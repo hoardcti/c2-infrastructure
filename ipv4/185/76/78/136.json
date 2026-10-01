@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "185.76.78.136",
+    "first_seen": "2026-07-14T17:14:05.688174Z",
+    "last_seen": "2026-07-14T17:14:05.688174Z",
     "flags": [
         "dosia"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-07-14T17:14:05.688174",
-            "flags": [
-                "dosia"
-            ],
-            "metadata": {
-                "firstSeen": "2026-07-14T16:11:52",
-                "port": "80",
-                "reference": "https://github.com/deepfield/public-research/blob/main/ddosia/report.md",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.dosia",
-                "id": "1850413",
-                "ioc": "185.76.78.136:80",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-07-14T17:14:05.688174Z",
+            "observations": [
+                {
+                    "first_observed": "2026-07-14T17:14:05.688174Z",
+                    "last_observed": "2026-07-14T17:14:05.688174Z",
+                    "flags": [
+                        "dosia"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-07-14T16:11:52",
+                        "port": "80",
+                        "reference": "https://github.com/deepfield/public-research/blob/main/ddosia/report.md",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.dosia",
+                        "id": "1850413",
+                        "ioc": "185.76.78.136:80",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

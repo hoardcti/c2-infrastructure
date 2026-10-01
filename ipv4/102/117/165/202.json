@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "102.117.165.202",
+    "first_seen": "2026-09-14T11:57:26.199462Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199462",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:19:22",
-                "port": "7443",
-                "reference": "https://www.shodan.io/host/102.117.165.202#7443",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1917603",
-                "ioc": "102.117.165.202:7443",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:28Z",
+                    "last_observed": "2026-10-01T12:21:28Z",
+                    "data": {
+                        "asn": "AS23889",
+                        "as_name": "Mauritius Telecom Ltd",
+                        "as_domain": "telecom.mu",
+                        "country_code": "MU",
+                        "country": "Mauritius",
+                        "continent_code": "AF",
+                        "continent": "Africa"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.199462Z",
+                    "last_observed": "2026-09-14T11:57:26.199462Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:19:22",
+                        "port": "7443",
+                        "reference": "https://www.shodan.io/host/102.117.165.202#7443",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1917603",
+                        "ioc": "102.117.165.202:7443",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917603",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "102.117.165.202:7443",
+                        "port": 7443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:19:22Z",
+                        "reference": "https://www.shodan.io/host/102.117.165.202#7443",
+                        "tags": [
+                            "Mythic",
+                            "c2",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

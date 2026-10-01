@@ -1,24 +1,57 @@
 {
+    "schema_version": 2,
     "ip": "62.60.226.111",
+    "first_seen": "2026-07-14T11:24:50.456631Z",
+    "last_seen": "2026-07-14T11:24:50.456631Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-07-14T11:24:50.456631",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-07-14T09:49:53",
-                "port": "6969",
-                "reference": "https://github.com/deepfield/public-research/blob/main/katana/report.md",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1850194",
-                "ioc": "62.60.226.111:6969",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": [
+                {
+                    "key": "62.60.226.0/24",
+                    "first_observed": "2026-10-01T12:19:59Z",
+                    "last_observed": "2026-10-01T12:19:59Z",
+                    "data": {
+                        "cidr": "62.60.226.0/24",
+                        "sblid": "SBL697779",
+                        "rir": "ripencc"
+                    }
+                },
+                {
+                    "key": "62.60.226.0/24",
+                    "first_observed": "2026-10-01T12:19:59Z",
+                    "last_observed": "2026-10-01T12:19:59Z",
+                    "data": {
+                        "cidr": "62.60.226.0/24",
+                        "sblid": "SBL671779",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-07-14T11:24:50.456631Z",
+            "observations": [
+                {
+                    "first_observed": "2026-07-14T11:24:50.456631Z",
+                    "last_observed": "2026-07-14T11:24:50.456631Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-07-14T09:49:53",
+                        "port": "6969",
+                        "reference": "https://github.com/deepfield/public-research/blob/main/katana/report.md",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1850194",
+                        "ioc": "62.60.226.111:6969",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

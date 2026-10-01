@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "198.135.55.102",
+    "first_seen": "2026-09-07T08:58:29.095449Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-07T08:58:29.095449",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-07T08:18:07",
-                "port": "2404",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1903518",
-                "ioc": "198.135.55.102:2404",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:45Z",
+                    "last_observed": "2026-10-01T12:21:45Z",
+                    "data": {
+                        "asn": "AS396073",
+                        "as_name": "Majestic Hosting Solutions, LLC",
+                        "as_domain": "spinservers.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-07T08:58:29.095449Z",
+                    "last_observed": "2026-09-07T08:58:29.095449Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-07T08:18:07",
+                        "port": "2404",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1903518",
+                        "ioc": "198.135.55.102:2404",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1903518",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "198.135.55.102:2404",
+                        "port": 2404,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-07T08:18:07Z",
+                        "reference": null,
+                        "tags": [
+                            "Skype Business",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

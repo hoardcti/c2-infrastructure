@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "111.228.49.20",
+    "first_seen": "2026-09-10T05:44:36.898225Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "cobalt strike"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-10T05:44:36.898225",
-            "flags": [
-                "cobalt strike"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-10T05:13:50",
-                "port": "80",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
-                "id": "1906811",
-                "ioc": "111.228.49.20:80",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:37Z",
+                    "last_observed": "2026-10-01T12:21:37Z",
+                    "data": {
+                        "asn": "AS141679",
+                        "as_name": "China Telecom Beijing Tianjin Hebei Big Data Industry Park Branch",
+                        "as_domain": "chinatelecom.cn",
+                        "country_code": "CN",
+                        "country": "China",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-10T05:44:36.898225Z",
+                    "last_observed": "2026-09-10T05:44:36.898225Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-10T05:13:50",
+                        "port": "80",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "id": "1906811",
+                        "ioc": "111.228.49.20:80",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1906811",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "111.228.49.20:80",
+                        "port": 80,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-10T05:13:50Z",
+                        "reference": null,
+                        "tags": [
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

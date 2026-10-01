@@ -1,24 +1,54 @@
 {
+    "schema_version": 2,
     "ip": "185.215.151.34",
+    "first_seen": "2026-09-02T08:26:42.978539Z",
+    "last_seen": "2026-09-02T08:26:42.978539Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-02T08:26:42.978539",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-02T05:50:20",
-                "port": "8089",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1892663",
-                "ioc": "185.215.151.34:8089",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:52Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:52Z",
+                    "last_observed": "2026-10-01T12:21:52Z",
+                    "data": {
+                        "asn": "AS135392",
+                        "as_name": "MillenialHost Limited",
+                        "as_domain": "mlnl.host",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-09-02T08:26:42.978539Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-02T08:26:42.978539Z",
+                    "last_observed": "2026-09-02T08:26:42.978539Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-02T05:50:20",
+                        "port": "8089",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1892663",
+                        "ioc": "185.215.151.34:8089",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

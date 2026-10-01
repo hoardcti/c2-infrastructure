@@ -1,24 +1,81 @@
 {
+    "schema_version": 2,
     "ip": "94.154.40.106",
+    "first_seen": "2026-09-27T13:42:15.183627Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-27T13:42:15.183627",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-27T09:43:14",
-                "id": "1938694",
-                "ioc": "94.154.40.106:1413",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "port": "1413",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:53Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:10Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:10Z",
+                    "last_observed": "2026-10-01T12:20:10Z",
+                    "data": {
+                        "asn": "AS202412",
+                        "as_name": "Omegatech LTD",
+                        "as_domain": "omegatech.sc",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-27T13:42:15.183627Z",
+                    "last_observed": "2026-09-27T13:42:15.183627Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-27T09:43:14",
+                        "id": "1938694",
+                        "ioc": "94.154.40.106:1413",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "port": "1413",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1938694",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "94.154.40.106:1413",
+                        "port": 1413,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-27T09:43:14Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "remcos",
+                            "tor05g"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

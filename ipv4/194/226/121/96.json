@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "194.226.121.96",
+    "first_seen": "2026-07-14T11:24:50.456479Z",
+    "last_seen": "2026-07-14T11:24:50.456479Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-07-14T11:24:50.456479",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-07-14T09:50:04",
-                "port": "9090",
-                "reference": "https://github.com/deepfield/public-research/blob/main/mossadproxy/README.md",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1850165",
-                "ioc": "194.226.121.96:9090",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-07-14T11:24:50.456479Z",
+            "observations": [
+                {
+                    "first_observed": "2026-07-14T11:24:50.456479Z",
+                    "last_observed": "2026-07-14T11:24:50.456479Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-07-14T09:50:04",
+                        "port": "9090",
+                        "reference": "https://github.com/deepfield/public-research/blob/main/mossadproxy/README.md",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1850165",
+                        "ioc": "194.226.121.96:9090",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

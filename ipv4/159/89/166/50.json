@@ -1,24 +1,241 @@
 {
+    "schema_version": 2,
     "ip": "159.89.166.50",
+    "first_seen": "2026-09-30T06:27:09.127083Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remus"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-30T06:27:09.127083",
-            "flags": [
-                "remus"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-30T05:49:36",
-                "port": "8531",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
-                "id": "1942168",
-                "ioc": "159.89.166.50:8531",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T12:25:32Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:25:32Z",
+                    "last_observed": "2026-10-01T12:25:32Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2025-02-20T02:25:29Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "DigitalOcean, LLC",
+                        "domain": "digitalocean.com",
+                        "country_code": "IN",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:22:22Z",
+                    "last_observed": "2026-10-01T12:22:22Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            443,
+                            3000,
+                            3001,
+                            4000,
+                            4002,
+                            5001,
+                            7000,
+                            7001,
+                            8080,
+                            8085,
+                            27017
+                        ],
+                        "hostnames": [
+                            "itsneobot.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:eclipse:jetty:12.1.5",
+                            "cpe:/a:expressjs:express",
+                            "cpe:/a:f5:nginx:1.26.0",
+                            "cpe:/a:facebook:react",
+                            "cpe:/a:jenkins:jenkins:2.541.3",
+                            "cpe:/a:mongodb:mongodb:6.0.26",
+                            "cpe:/a:nodejs:node.js",
+                            "cpe:/a:openbsd:openssh:9.7p1",
+                            "cpe:/a:openssl:openssl:3.0.2",
+                            "cpe:/a:oracle:jre",
+                            "cpe:/a:vercel:next.js",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "database",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2009-1390",
+                            "CVE-2009-3765",
+                            "CVE-2009-3766",
+                            "CVE-2009-3767",
+                            "CVE-2014-8180",
+                            "CVE-2019-0190",
+                            "CVE-2022-1292",
+                            "CVE-2022-1343",
+                            "CVE-2022-1434",
+                            "CVE-2022-1473",
+                            "CVE-2022-2068",
+                            "CVE-2022-2097",
+                            "CVE-2022-3358",
+                            "CVE-2022-3602",
+                            "CVE-2022-3786",
+                            "CVE-2022-3996",
+                            "CVE-2022-4203",
+                            "CVE-2022-4304",
+                            "CVE-2022-4450",
+                            "CVE-2023-0215",
+                            "CVE-2023-0216",
+                            "CVE-2023-0217",
+                            "CVE-2023-0286",
+                            "CVE-2023-0401",
+                            "CVE-2023-0464",
+                            "CVE-2023-0465",
+                            "CVE-2023-0466",
+                            "CVE-2023-1255",
+                            "CVE-2023-2650",
+                            "CVE-2023-2975",
+                            "CVE-2023-3817",
+                            "CVE-2023-4807",
+                            "CVE-2023-5363",
+                            "CVE-2023-5678",
+                            "CVE-2023-6129",
+                            "CVE-2024-0727",
+                            "CVE-2024-6119",
+                            "CVE-2025-12657",
+                            "CVE-2025-14847",
+                            "CVE-2025-15467",
+                            "CVE-2025-23419",
+                            "CVE-2025-68160",
+                            "CVE-2025-69418",
+                            "CVE-2025-69419",
+                            "CVE-2025-69420",
+                            "CVE-2025-69421",
+                            "CVE-2026-10050",
+                            "CVE-2026-10051",
+                            "CVE-2026-11933",
+                            "CVE-2026-1605",
+                            "CVE-2026-22795",
+                            "CVE-2026-22796",
+                            "CVE-2026-2332",
+                            "CVE-2026-28387",
+                            "CVE-2026-28388",
+                            "CVE-2026-28389",
+                            "CVE-2026-28390",
+                            "CVE-2026-31789",
+                            "CVE-2026-31790",
+                            "CVE-2026-34180",
+                            "CVE-2026-34182",
+                            "CVE-2026-42766",
+                            "CVE-2026-42767",
+                            "CVE-2026-42770",
+                            "CVE-2026-45445",
+                            "CVE-2026-45446",
+                            "CVE-2026-45447",
+                            "CVE-2026-53435",
+                            "CVE-2026-53436",
+                            "CVE-2026-53437",
+                            "CVE-2026-53438",
+                            "CVE-2026-53439",
+                            "CVE-2026-53440",
+                            "CVE-2026-53441",
+                            "CVE-2026-53442",
+                            "CVE-2026-54874",
+                            "CVE-2026-5795",
+                            "CVE-2026-63072",
+                            "CVE-2026-63074",
+                            "CVE-2026-63076",
+                            "CVE-2026-6790",
+                            "CVE-2026-7383",
+                            "CVE-2026-75803",
+                            "CVE-2026-8053",
+                            "CVE-2026-8384",
+                            "CVE-2026-9076",
+                            "CVE-2026-9753"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:04Z",
+                    "last_observed": "2026-10-01T12:20:04Z",
+                    "data": {
+                        "asn": "AS14061",
+                        "as_name": "DigitalOcean, LLC",
+                        "as_domain": "digitalocean.com",
+                        "country_code": "IN",
+                        "country": "India",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-30T06:27:09.127083Z",
+                    "last_observed": "2026-09-30T06:27:09.127083Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-30T05:49:36",
+                        "port": "8531",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "id": "1942168",
+                        "ioc": "159.89.166.50:8531",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1942168",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "ioc": "159.89.166.50:8531",
+                        "port": 8531,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remus",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-30T05:49:36Z",
+                        "reference": null,
+                        "tags": [
+                            "5a4378fb90db39f09c7b18d1f314e645",
+                            "Remus",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-01T12:24:44Z",
+            "observations": []
         }
-    ]
+    }
 }

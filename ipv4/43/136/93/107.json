@@ -1,24 +1,129 @@
 {
+    "schema_version": 2,
     "ip": "43.136.93.107",
+    "first_seen": "2026-09-23T16:40:16.251133Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "cobalt strike"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-23T16:40:16.251133",
-            "flags": [
-                "cobalt strike"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-18T05:04:42",
-                "id": "1923750",
-                "ioc": "43.136.93.107:8080",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
-                "port": "8080",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:30Z",
+                    "last_observed": "2026-10-01T12:23:30Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            8080
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:apache:http_server:2.4.67",
+                            "cpe:/a:helpsystems:cobalt_strike",
+                            "cpe:/o:debian:debian_linux"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [
+                            "CVE-2007-4723",
+                            "CVE-2009-0796",
+                            "CVE-2009-2299",
+                            "CVE-2011-1176",
+                            "CVE-2011-2688",
+                            "CVE-2012-3526",
+                            "CVE-2012-4001",
+                            "CVE-2012-4360",
+                            "CVE-2013-0941",
+                            "CVE-2013-0942",
+                            "CVE-2013-2765",
+                            "CVE-2013-4365",
+                            "CVE-2026-29167",
+                            "CVE-2026-29170",
+                            "CVE-2026-34355",
+                            "CVE-2026-34356",
+                            "CVE-2026-42535",
+                            "CVE-2026-42536",
+                            "CVE-2026-43951",
+                            "CVE-2026-44119",
+                            "CVE-2026-44185",
+                            "CVE-2026-44186",
+                            "CVE-2026-44631",
+                            "CVE-2026-48913",
+                            "CVE-2026-49975"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:17Z",
+                    "last_observed": "2026-10-01T12:20:17Z",
+                    "data": {
+                        "asn": "AS45090",
+                        "as_name": "Shenzhen Tencent Computer Systems Company Limited",
+                        "as_domain": "tencent.com",
+                        "country_code": "CN",
+                        "country": "China",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-23T16:40:16.251133Z",
+                    "last_observed": "2026-09-23T16:40:16.251133Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-18T05:04:42",
+                        "id": "1923750",
+                        "ioc": "43.136.93.107:8080",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "port": "8080",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1923750",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "43.136.93.107:8080",
+                        "port": 8080,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-18T05:04:42Z",
+                        "reference": null,
+                        "tags": [
+                            "45090",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

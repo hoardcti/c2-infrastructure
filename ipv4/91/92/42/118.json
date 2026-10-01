@@ -1,24 +1,47 @@
 {
+    "schema_version": 2,
     "ip": "91.92.42.118",
+    "first_seen": "2026-08-18T12:44:02.842696Z",
+    "last_seen": "2026-08-18T12:44:02.842696Z",
     "flags": [
         "cobalt strike"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-18T12:44:02.842696",
-            "flags": [
-                "cobalt strike"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-18T11:58:09",
-                "port": "50050",
-                "reference": "https://www.shodan.io/host/91.92.42.118#50050",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
-                "id": "1880321",
-                "ioc": "91.92.42.118:50050",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "91.92.42.0/24",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "91.92.42.0/24",
+                        "sblid": "SBL699857",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-08-18T12:44:02.842696Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-18T12:44:02.842696Z",
+                    "last_observed": "2026-08-18T12:44:02.842696Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-18T11:58:09",
+                        "port": "50050",
+                        "reference": "https://www.shodan.io/host/91.92.42.118#50050",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "id": "1880321",
+                        "ioc": "91.92.42.118:50050",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

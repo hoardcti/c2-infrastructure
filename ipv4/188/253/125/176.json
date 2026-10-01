@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "188.253.125.176",
+    "first_seen": "2026-09-14T11:57:26.201314Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "cobalt strike"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.201314",
-            "flags": [
-                "cobalt strike"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:11:51",
-                "port": "8443",
-                "reference": "https://www.shodan.io/host/188.253.125.176#8443",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
-                "id": "1917374",
-                "ioc": "188.253.125.176:8443",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:44Z",
+                    "last_observed": "2026-10-01T12:20:44Z",
+                    "data": {
+                        "asn": "AS38136",
+                        "as_name": "Akari Networks",
+                        "as_domain": "akari.hk",
+                        "country_code": "SG",
+                        "country": "Singapore",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.201314Z",
+                    "last_observed": "2026-09-14T11:57:26.201314Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:11:51",
+                        "port": "8443",
+                        "reference": "https://www.shodan.io/host/188.253.125.176#8443",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "id": "1917374",
+                        "ioc": "188.253.125.176:8443",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917374",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "188.253.125.176:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:11:51Z",
+                        "reference": "https://www.shodan.io/host/188.253.125.176#8443",
+                        "tags": [
+                            "CobaltStrike",
+                            "c2",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

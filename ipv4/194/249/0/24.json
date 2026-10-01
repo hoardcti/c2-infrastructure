@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "194.249.0.24",
+    "first_seen": "2026-09-14T11:57:26.19979Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199790",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:15:07",
-                "port": "8089",
-                "reference": "https://www.shodan.io/host/194.249.0.24#8089",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1917568",
-                "ioc": "194.249.0.24:8089",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:22Z",
+                    "last_observed": "2026-10-01T12:21:22Z",
+                    "data": {
+                        "asn": "AS2107",
+                        "as_name": "ARNES",
+                        "as_domain": "arnes.si",
+                        "country_code": "SI",
+                        "country": "Slovenia",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.19979Z",
+                    "last_observed": "2026-09-14T11:57:26.19979Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:15:07",
+                        "port": "8089",
+                        "reference": "https://www.shodan.io/host/194.249.0.24#8089",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1917568",
+                        "ioc": "194.249.0.24:8089",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917568",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "194.249.0.24:8089",
+                        "port": 8089,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:15:07Z",
+                        "reference": "https://www.shodan.io/host/194.249.0.24#8089",
+                        "tags": [
+                            "c2",
+                            "locust",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

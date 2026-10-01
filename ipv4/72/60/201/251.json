@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "72.60.201.251",
+    "first_seen": "2026-08-27T16:07:29.589993Z",
+    "last_seen": "2026-08-27T16:07:29.589993Z",
     "flags": [
         "remus"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-27T16:07:29.589993",
-            "flags": [
-                "remus"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-27T11:45:47",
-                "port": "6527",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
-                "id": "1889232",
-                "ioc": "72.60.201.251:6527",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-08-27T16:07:29.589993Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-27T16:07:29.589993Z",
+                    "last_observed": "2026-08-27T16:07:29.589993Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-27T11:45:47",
+                        "port": "6527",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "id": "1889232",
+                        "ioc": "72.60.201.251:6527",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

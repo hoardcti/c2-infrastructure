@@ -1,24 +1,78 @@
 {
+    "schema_version": 2,
     "ip": "175.143.5.145",
+    "first_seen": "2026-09-14T11:57:26.200878Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.200878",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:12:58",
-                "port": "3333",
-                "reference": "https://www.shodan.io/host/175.143.5.145#3333",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1917428",
-                "ioc": "175.143.5.145:3333",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:54Z",
+                    "last_observed": "2026-10-01T12:20:54Z",
+                    "data": {
+                        "asn": "AS4788",
+                        "as_name": "TM TECHNOLOGY SERVICES SDN. BHD.",
+                        "as_domain": "tm.com.my",
+                        "country_code": "MY",
+                        "country": "Malaysia",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.200878Z",
+                    "last_observed": "2026-09-14T11:57:26.200878Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:12:58",
+                        "port": "3333",
+                        "reference": "https://www.shodan.io/host/175.143.5.145#3333",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1917428",
+                        "ioc": "175.143.5.145:3333",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917428",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "175.143.5.145:3333",
+                        "port": 3333,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:12:58Z",
+                        "reference": "https://www.shodan.io/host/175.143.5.145#3333",
+                        "tags": [
+                            "GoPhish",
+                            "c2",
+                            "phishing",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

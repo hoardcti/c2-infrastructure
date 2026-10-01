@@ -1,24 +1,76 @@
 {
+    "schema_version": 2,
     "ip": "174.129.92.184",
+    "first_seen": "2026-09-23T16:40:16.251013Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "grandoreiro"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-23T16:40:16.251013",
-            "flags": [
-                "grandoreiro"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-22T08:30:53",
-                "id": "1927256",
-                "ioc": "174.129.92.184:8809",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.grandoreiro",
-                "port": "8809",
-                "reference": "",
-                "threat_type": "payload_delivery"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:24Z",
+                    "last_observed": "2026-10-01T12:20:24Z",
+                    "data": {
+                        "asn": "AS14618",
+                        "as_name": "Amazon.com, Inc.",
+                        "as_domain": "amazon.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-23T16:40:16.251013Z",
+                    "last_observed": "2026-09-23T16:40:16.251013Z",
+                    "flags": [
+                        "grandoreiro"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-22T08:30:53",
+                        "id": "1927256",
+                        "ioc": "174.129.92.184:8809",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.grandoreiro",
+                        "port": "8809",
+                        "reference": "",
+                        "threat_type": "payload_delivery"
+                    }
+                },
+                {
+                    "key": "1927256",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "grandoreiro"
+                    ],
+                    "data": {
+                        "ioc": "174.129.92.184:8809",
+                        "port": 8809,
+                        "threat_type": "payload_delivery",
+                        "malware": "Grandoreiro",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.grandoreiro",
+                        "confidence_level": 75,
+                        "first_seen": "2026-09-22T08:30:53Z",
+                        "reference": "",
+                        "tags": [
+                            "Grandoreiro",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

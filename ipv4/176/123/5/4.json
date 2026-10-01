@@ -1,24 +1,104 @@
 {
+    "schema_version": 2,
     "ip": "176.123.5.4",
+    "first_seen": "2026-09-23T16:40:16.25106Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "cobalt strike"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-23T16:40:16.251060",
-            "flags": [
-                "cobalt strike"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-21T07:10:47",
-                "id": "1926208",
-                "ioc": "176.123.5.4:443",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
-                "port": "443",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:45Z",
+                    "last_observed": "2026-10-01T12:23:45Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            443
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:helpsystems:cobalt_strike",
+                            "cpe:/a:openbsd:openssh:9.2p1",
+                            "cpe:/o:debian:debian_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:20Z",
+                    "last_observed": "2026-10-01T12:20:20Z",
+                    "data": {
+                        "asn": "AS200019",
+                        "as_name": "ALEXHOST SRL",
+                        "as_domain": "alexhost.com",
+                        "country_code": "MD",
+                        "country": "Moldova",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-23T16:40:16.25106Z",
+                    "last_observed": "2026-09-23T16:40:16.25106Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-21T07:10:47",
+                        "id": "1926208",
+                        "ioc": "176.123.5.4:443",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "port": "443",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1926208",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "176.123.5.4:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-21T07:10:47Z",
+                        "reference": null,
+                        "tags": [
+                            "200019",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

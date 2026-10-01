@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "144.172.104.22",
+    "first_seen": "2026-06-11T14:36:55.536844Z",
+    "last_seen": "2026-06-11T14:36:55.536844Z",
     "flags": [
         "empire downloader"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-06-11T14:36:55.536844",
-            "flags": [
-                "empire downloader"
-            ],
-            "metadata": {
-                "firstSeen": "2026-06-11T12:45:41",
-                "port": "1337",
-                "reference": "https://www.shodan.io/host/144.172.104.22#1337",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.empire_downloader",
-                "id": "1830281",
-                "ioc": "144.172.104.22:1337",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-06-11T14:36:55.536844Z",
+            "observations": [
+                {
+                    "first_observed": "2026-06-11T14:36:55.536844Z",
+                    "last_observed": "2026-06-11T14:36:55.536844Z",
+                    "flags": [
+                        "empire downloader"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-06-11T12:45:41",
+                        "port": "1337",
+                        "reference": "https://www.shodan.io/host/144.172.104.22#1337",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.empire_downloader",
+                        "id": "1830281",
+                        "ioc": "144.172.104.22:1337",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,120 @@
 {
+    "schema_version": 2,
     "ip": "38.9.96.236",
+    "first_seen": "2026-09-29T08:08:11.427482Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-29T08:08:11.427482",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-29T07:15:55",
-                "port": "2707",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1941561",
-                "ioc": "38.9.96.236:2707",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T12:25:50Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:25:50Z",
+                    "last_observed": "2026-10-01T12:25:50Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Rica Web Services",
+                        "domain": "servarica.com",
+                        "country_code": "CA",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:22:31Z",
+                    "last_observed": "2026-10-01T12:22:31Z",
+                    "data": {
+                        "ports": [
+                            135,
+                            445,
+                            5985
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:05Z",
+                    "last_observed": "2026-10-01T12:20:05Z",
+                    "data": {
+                        "asn": "AS26832",
+                        "as_name": "Rica Web Services",
+                        "as_domain": "servarica.com",
+                        "country_code": "CA",
+                        "country": "Canada",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-29T08:08:11.427482Z",
+                    "last_observed": "2026-09-29T08:08:11.427482Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-29T07:15:55",
+                        "port": "2707",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1941561",
+                        "ioc": "38.9.96.236:2707",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1941561",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "38.9.96.236:2707",
+                        "port": 2707,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-29T07:15:55Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "mkv V1 1new",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

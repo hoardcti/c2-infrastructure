@@ -1,24 +1,78 @@
 {
+    "schema_version": 2,
     "ip": "128.90.136.65",
+    "first_seen": "2026-09-10T05:44:36.898234Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "asyncrat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-10T05:44:36.898234",
-            "flags": [
-                "asyncrat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-10T05:13:49",
-                "port": "4444",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat",
-                "id": "1906813",
-                "ioc": "128.90.136.65:4444",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:37Z",
+                    "last_observed": "2026-10-01T12:21:37Z",
+                    "data": {
+                        "asn": "AS22363",
+                        "as_name": "Powerhouse Management, Inc.",
+                        "as_domain": "phmgmt.com",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-10T05:44:36.898234Z",
+                    "last_observed": "2026-09-10T05:44:36.898234Z",
+                    "flags": [
+                        "asyncrat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-10T05:13:49",
+                        "port": "4444",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat",
+                        "id": "1906813",
+                        "ioc": "128.90.136.65:4444",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1906813",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "asyncrat"
+                    ],
+                    "data": {
+                        "ioc": "128.90.136.65:4444",
+                        "port": 4444,
+                        "threat_type": "botnet_cc",
+                        "malware": "AsyncRAT",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-10T05:13:49Z",
+                        "reference": null,
+                        "tags": [
+                            "22363",
+                            "asyncrat",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

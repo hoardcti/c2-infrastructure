@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "45.227.254.77",
+    "first_seen": "2026-08-18T12:44:02.839694Z",
+    "last_seen": "2026-08-18T12:44:02.839694Z",
     "flags": [
         "sectoprat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-18T12:44:02.839694",
-            "flags": [
-                "sectoprat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-18T12:05:31",
-                "port": "5000",
-                "reference": "https://www.shodan.io/host/45.227.254.77#5000",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sectop_rat",
-                "id": "1880785",
-                "ioc": "45.227.254.77:5000",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-08-18T12:44:02.839694Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-18T12:44:02.839694Z",
+                    "last_observed": "2026-08-18T12:44:02.839694Z",
+                    "flags": [
+                        "sectoprat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-18T12:05:31",
+                        "port": "5000",
+                        "reference": "https://www.shodan.io/host/45.227.254.77#5000",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sectop_rat",
+                        "id": "1880785",
+                        "ioc": "45.227.254.77:5000",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

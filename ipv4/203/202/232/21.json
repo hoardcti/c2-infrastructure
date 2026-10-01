@@ -1,24 +1,98 @@
 {
+    "schema_version": 2,
     "ip": "203.202.232.21",
+    "first_seen": "2026-09-26T07:19:05.901899Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-26T07:19:05.901899",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-26T06:20:28",
-                "id": "1934189",
-                "ioc": "203.202.232.21:21290",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "port": "21290",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:02Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:02Z",
+                    "last_observed": "2026-10-01T12:23:02Z",
+                    "data": {
+                        "ports": [
+                            135,
+                            445
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:12Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:12Z",
+                    "last_observed": "2026-10-01T12:20:12Z",
+                    "data": {
+                        "asn": "AS44382",
+                        "as_name": "Fiba Cloud Operation Company, LLC",
+                        "as_domain": "fibacloud.com",
+                        "country_code": "TR",
+                        "country": "Turkey",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-26T07:19:05.901899Z",
+                    "last_observed": "2026-09-26T07:19:05.901899Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-26T06:20:28",
+                        "id": "1934189",
+                        "ioc": "203.202.232.21:21290",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "port": "21290",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1934189",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "203.202.232.21:21290",
+                        "port": 21290,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-26T06:20:28Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "remcos",
+                            "zynaktiv"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "34.27.195.76",
+    "first_seen": "2026-06-19T06:20:33.76168Z",
+    "last_seen": "2026-06-19T06:20:33.76168Z",
     "flags": [
         "ngioweb"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-06-19T06:20:33.761680",
-            "flags": [
-                "ngioweb"
-            ],
-            "metadata": {
-                "firstSeen": "2026-06-19T05:57:14",
-                "port": "443",
-                "reference": "",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.ngioweb",
-                "id": "1833832",
-                "ioc": "34.27.195.76:443",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-06-19T06:20:33.76168Z",
+            "observations": [
+                {
+                    "first_observed": "2026-06-19T06:20:33.76168Z",
+                    "last_observed": "2026-06-19T06:20:33.76168Z",
+                    "flags": [
+                        "ngioweb"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-06-19T05:57:14",
+                        "port": "443",
+                        "reference": "",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.ngioweb",
+                        "id": "1833832",
+                        "ioc": "34.27.195.76:443",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

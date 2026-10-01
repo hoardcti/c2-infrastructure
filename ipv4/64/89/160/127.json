@@ -1,24 +1,75 @@
 {
+    "schema_version": 2,
     "ip": "64.89.160.127",
+    "first_seen": "2026-09-01T13:09:00.527154Z",
+    "last_seen": "2026-09-01T13:09:00.527154Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-01T13:09:00.527154",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-02T05:50:08",
-                "id": "1892715",
-                "ioc": "64.89.160.127:2404",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "port": "2404",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:56Z",
+                    "last_observed": "2026-10-01T12:21:56Z",
+                    "data": {
+                        "asn": "AS403005",
+                        "as_name": "Blatant Technologies, LLC",
+                        "as_domain": "blatant.host",
+                        "country_code": "SC",
+                        "country": "Seychelles",
+                        "continent_code": "AF",
+                        "continent": "Africa"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "64.89.160.0/23",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "64.89.160.0/23",
+                        "sblid": "SBL692141",
+                        "rir": "arin"
+                    }
+                },
+                {
+                    "key": "64.89.160.0/22",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "64.89.160.0/22",
+                        "sblid": "SBL692143",
+                        "rir": "arin"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-09-01T13:09:00.527154Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-01T13:09:00.527154Z",
+                    "last_observed": "2026-09-01T13:09:00.527154Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-02T05:50:08",
+                        "id": "1892715",
+                        "ioc": "64.89.160.127:2404",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "port": "2404",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "89.124.109.242",
+    "first_seen": "2026-05-29T15:32:32.235908Z",
+    "last_seen": "2026-05-29T15:32:32.235908Z",
     "flags": [
         "clearfake"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-05-29T15:32:32.235908",
-            "flags": [
-                "clearfake"
-            ],
-            "metadata": {
-                "firstSeen": "2026-05-29T15:32:02",
-                "port": "7000",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/js.clearfake",
-                "id": "1819829",
-                "ioc": "89.124.109.242:7000",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-05-29T15:32:32.235908Z",
+            "observations": [
+                {
+                    "first_observed": "2026-05-29T15:32:32.235908Z",
+                    "last_observed": "2026-05-29T15:32:32.235908Z",
+                    "flags": [
+                        "clearfake"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-05-29T15:32:02",
+                        "port": "7000",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/js.clearfake",
+                        "id": "1819829",
+                        "ioc": "89.124.109.242:7000",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

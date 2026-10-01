@@ -1,41 +1,53 @@
 {
+    "schema_version": 2,
     "ip": "103.141.235.248",
+    "first_seen": "2026-08-19T06:41:44.221774Z",
+    "last_seen": "2026-08-20T16:34:24.572893Z",
     "flags": [
         "hypeagent",
         "unknown stealer"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-19T06:41:44.221774",
-            "flags": [
-                "unknown stealer"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-19T06:06:00",
-                "port": "7080",
-                "reference": "https://infosec.exchange/@RecklessPush38671/117118098460752628",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown_stealer",
-                "id": "1881380",
-                "ioc": "103.141.235.248:7080",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
         },
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-20T16:34:24.572893",
-            "flags": [
-                "hypeagent"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-19T06:06:00",
-                "port": "7080",
-                "reference": "https://infosec.exchange/@RecklessPush38671/117118098460752628",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.hype_agent",
-                "id": "1881380",
-                "ioc": "103.141.235.248:7080",
-                "threat_type": "botnet_cc"
-            }
+        "threatfox": {
+            "last_checked": "2026-08-20T16:34:24.572893Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-19T06:41:44.221774Z",
+                    "last_observed": "2026-08-19T06:41:44.221774Z",
+                    "flags": [
+                        "unknown stealer"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-19T06:06:00",
+                        "port": "7080",
+                        "reference": "https://infosec.exchange/@RecklessPush38671/117118098460752628",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown_stealer",
+                        "id": "1881380",
+                        "ioc": "103.141.235.248:7080",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "first_observed": "2026-08-20T16:34:24.572893Z",
+                    "last_observed": "2026-08-20T16:34:24.572893Z",
+                    "flags": [
+                        "hypeagent"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-19T06:06:00",
+                        "port": "7080",
+                        "reference": "https://infosec.exchange/@RecklessPush38671/117118098460752628",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.hype_agent",
+                        "id": "1881380",
+                        "ioc": "103.141.235.248:7080",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

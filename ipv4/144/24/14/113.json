@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "144.24.14.113",
+    "first_seen": "2026-08-19T12:45:05.258905Z",
+    "last_seen": "2026-08-19T12:45:05.258905Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-19T12:45:05.258905",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-19T11:46:03",
-                "port": "7005",
-                "reference": "",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1882250",
-                "ioc": "144.24.14.113:7005",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-08-19T12:45:05.258905Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-19T12:45:05.258905Z",
+                    "last_observed": "2026-08-19T12:45:05.258905Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-19T11:46:03",
+                        "port": "7005",
+                        "reference": "",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1882250",
+                        "ioc": "144.24.14.113:7005",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

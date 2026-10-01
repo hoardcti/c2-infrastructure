@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "172.232.87.244",
+    "first_seen": "2026-09-14T11:57:26.199745Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199745",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:15:09",
-                "port": "8089",
-                "reference": "https://www.shodan.io/host/172.232.87.244#8089",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1917574",
-                "ioc": "172.232.87.244:8089",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:23Z",
+                    "last_observed": "2026-10-01T12:21:23Z",
+                    "data": {
+                        "asn": "AS63949",
+                        "as_name": "Akamai Connected Cloud",
+                        "as_domain": "linode.com",
+                        "country_code": "IN",
+                        "country": "India",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.199745Z",
+                    "last_observed": "2026-09-14T11:57:26.199745Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:15:09",
+                        "port": "8089",
+                        "reference": "https://www.shodan.io/host/172.232.87.244#8089",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1917574",
+                        "ioc": "172.232.87.244:8089",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917574",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "172.232.87.244:8089",
+                        "port": 8089,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:15:09Z",
+                        "reference": "https://www.shodan.io/host/172.232.87.244#8089",
+                        "tags": [
+                            "c2",
+                            "locust",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

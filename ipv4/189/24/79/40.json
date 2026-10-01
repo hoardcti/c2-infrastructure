@@ -1,24 +1,78 @@
 {
+    "schema_version": 2,
     "ip": "189.24.79.40",
+    "first_seen": "2026-09-13T09:02:16.810447Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "cobalt strike"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-13T09:02:16.810447",
-            "flags": [
-                "cobalt strike"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-13T06:33:55",
-                "port": "8112",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
-                "id": "1916051",
-                "ioc": "189.24.79.40:8112",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:31Z",
+                    "last_observed": "2026-10-01T12:21:31Z",
+                    "data": {
+                        "asn": "AS979",
+                        "as_name": "NetLab Global",
+                        "as_domain": "as979.net",
+                        "country_code": "HK",
+                        "country": "Hong Kong",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-13T09:02:16.810447Z",
+                    "last_observed": "2026-09-13T09:02:16.810447Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-13T06:33:55",
+                        "port": "8112",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "id": "1916051",
+                        "ioc": "189.24.79.40:8112",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1916051",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "189.24.79.40:8112",
+                        "port": 8112,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-13T06:33:55Z",
+                        "reference": null,
+                        "tags": [
+                            "7738",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

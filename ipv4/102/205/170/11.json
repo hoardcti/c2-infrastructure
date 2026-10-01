@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "102.205.170.11",
+    "first_seen": "2026-08-15T16:23:16.866464Z",
+    "last_seen": "2026-08-15T16:23:16.866464Z",
     "flags": [
         "quasar rat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-15T16:23:16.866464",
-            "flags": [
-                "quasar rat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-15T15:43:04",
-                "port": "8147",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.quasar_rat",
-                "id": "1876206",
-                "ioc": "102.205.170.11:8147",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-08-15T16:23:16.866464Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-15T16:23:16.866464Z",
+                    "last_observed": "2026-08-15T16:23:16.866464Z",
+                    "flags": [
+                        "quasar rat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-15T15:43:04",
+                        "port": "8147",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.quasar_rat",
+                        "id": "1876206",
+                        "ioc": "102.205.170.11:8147",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

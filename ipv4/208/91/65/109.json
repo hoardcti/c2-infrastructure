@@ -1,24 +1,54 @@
 {
+    "schema_version": 2,
     "ip": "208.91.65.109",
+    "first_seen": "2026-09-01T07:20:43.749901Z",
+    "last_seen": "2026-09-01T07:20:43.749901Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-01T07:20:43.749901",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-01T05:11:48",
-                "port": "2404",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1892035",
-                "ioc": "208.91.65.109:2404",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:56Z",
+                    "last_observed": "2026-10-01T12:21:56Z",
+                    "data": {
+                        "asn": "AS40861",
+                        "as_name": "Paradise Networks LLC",
+                        "as_domain": "paradisenetworks.net",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-09-01T07:20:43.749901Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-01T07:20:43.749901Z",
+                    "last_observed": "2026-09-01T07:20:43.749901Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-01T05:11:48",
+                        "port": "2404",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1892035",
+                        "ioc": "208.91.65.109:2404",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

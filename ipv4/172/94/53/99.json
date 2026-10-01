@@ -1,24 +1,166 @@
 {
+    "schema_version": 2,
     "ip": "172.94.53.99",
+    "first_seen": "2026-10-01T08:43:48.066717Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-10-01T08:43:48.066717",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-10-01T08:14:20",
-                "port": "65070",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1943673",
-                "ioc": "172.94.53.99:65070",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T12:24:50Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:24:50Z",
+                    "last_observed": "2026-10-01T12:24:50Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "M247-FR",
+                        "domain": "virtualine.org",
+                        "country_code": "FR",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:01Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:19:59Z",
+                    "last_observed": "2026-10-01T12:19:59Z",
+                    "data": {
+                        "asn": "AS9009",
+                        "as_name": "M247 Europe SRL",
+                        "as_domain": "m247global.com",
+                        "country_code": "FR",
+                        "country": "France",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-01T12:26:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:26:33Z",
+                    "last_observed": "2026-10-01T12:26:33Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS212238 datacamp limited",
+                        "country_code": "AO",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-01T12:30:08Z",
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T08:43:48.066717Z",
+                    "last_observed": "2026-10-01T08:43:48.066717Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-10-01T08:14:20",
+                        "port": "65070",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1943673",
+                        "ioc": "172.94.53.99:65070",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1943673",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "172.94.53.99:65070",
+                        "port": 65070,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-01T08:14:20Z",
+                        "reference": null,
+                        "tags": [
+                            "Oct-1-2026",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-01T12:24:02Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T12:31:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:31:15Z",
+                    "last_observed": "2026-10-01T12:31:15Z",
+                    "data": {
+                        "as_owner": "M247 Europe SRL",
+                        "asn": 9009,
+                        "network": "172.94.52.0/23",
+                        "country": "FR",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 39,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

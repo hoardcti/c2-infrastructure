@@ -1,24 +1,82 @@
 {
+    "schema_version": 2,
     "ip": "168.245.203.185",
+    "first_seen": "2026-09-23T16:40:16.251095Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "meterpreter"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-23T16:40:16.251095",
-            "flags": [
-                "meterpreter"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-20T05:32:36",
-                "id": "1924731",
-                "ioc": "168.245.203.185:3790",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.meterpreter",
-                "port": "3790",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:36Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:18Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:18Z",
+                    "last_observed": "2026-10-01T12:20:18Z",
+                    "data": {
+                        "asn": "AS58580",
+                        "as_name": "Fastrack Technology",
+                        "as_domain": "fastracktechnology.com.au",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-23T16:40:16.251095Z",
+                    "last_observed": "2026-09-23T16:40:16.251095Z",
+                    "flags": [
+                        "meterpreter"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-20T05:32:36",
+                        "id": "1924731",
+                        "ioc": "168.245.203.185:3790",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.meterpreter",
+                        "port": "3790",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1924731",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "meterpreter"
+                    ],
+                    "data": {
+                        "ioc": "168.245.203.185:3790",
+                        "port": 3790,
+                        "threat_type": "botnet_cc",
+                        "malware": "Meterpreter",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.meterpreter",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-20T05:32:36Z",
+                        "reference": null,
+                        "tags": [
+                            "58580",
+                            "MetaSploit",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,54 @@
 {
+    "schema_version": 2,
     "ip": "51.195.113.99",
+    "first_seen": "2026-09-06T10:21:54.567143Z",
+    "last_seen": "2026-09-06T10:21:54.567143Z",
     "flags": [
         "remus"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-06T10:21:54.567143",
-            "flags": [
-                "remus"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-06T06:19:52",
-                "port": "3267",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
-                "id": "1901906",
-                "ioc": "51.195.113.99:3267",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:46Z",
+                    "last_observed": "2026-10-01T12:21:46Z",
+                    "data": {
+                        "asn": "AS16276",
+                        "as_name": "OVH SAS",
+                        "as_domain": "ovhcloud.com",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-09-06T10:21:54.567143Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-06T10:21:54.567143Z",
+                    "last_observed": "2026-09-06T10:21:54.567143Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-06T06:19:52",
+                        "port": "3267",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "id": "1901906",
+                        "ioc": "51.195.113.99:3267",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

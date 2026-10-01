@@ -1,24 +1,47 @@
 {
+    "schema_version": 2,
     "ip": "217.60.195.33",
+    "first_seen": "2026-08-27T16:07:29.589827Z",
+    "last_seen": "2026-08-27T16:07:29.589827Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-27T16:07:29.589827",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-03T05:39:11",
-                "id": "1893643",
-                "ioc": "217.60.195.33:17545",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "port": "17545",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "217.60.195.0/24",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "217.60.195.0/24",
+                        "sblid": "SBL697968",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-08-27T16:07:29.589827Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-27T16:07:29.589827Z",
+                    "last_observed": "2026-08-27T16:07:29.589827Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-03T05:39:11",
+                        "id": "1893643",
+                        "ioc": "217.60.195.33:17545",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "port": "17545",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

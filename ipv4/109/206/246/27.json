@@ -1,24 +1,47 @@
 {
+    "schema_version": 2,
     "ip": "109.206.246.27",
+    "first_seen": "2026-08-18T12:44:02.841225Z",
+    "last_seen": "2026-08-18T12:44:02.841225Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-18T12:44:02.841225",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-18T12:00:11",
-                "port": "3333",
-                "reference": "https://www.shodan.io/host/109.206.246.27#3333",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1880542",
-                "ioc": "109.206.246.27:3333",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "109.206.244.0/22",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "109.206.244.0/22",
+                        "sblid": "SBL686370",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-08-18T12:44:02.841225Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-18T12:44:02.841225Z",
+                    "last_observed": "2026-08-18T12:44:02.841225Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-18T12:00:11",
+                        "port": "3333",
+                        "reference": "https://www.shodan.io/host/109.206.246.27#3333",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1880542",
+                        "ioc": "109.206.246.27:3333",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

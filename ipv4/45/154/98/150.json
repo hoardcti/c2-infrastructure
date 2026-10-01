@@ -1,24 +1,87 @@
 {
+    "schema_version": 2,
     "ip": "45.154.98.150",
+    "first_seen": "2026-09-14T11:57:26.199219Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199219",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:54:45",
-                "port": "2404",
-                "reference": "",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1917685",
-                "ioc": "45.154.98.150:2404",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:30Z",
+                    "last_observed": "2026-10-01T12:21:30Z",
+                    "data": {
+                        "asn": "AS210558",
+                        "as_name": "1337 Services GmbH",
+                        "as_domain": "rdp.sh",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "45.154.98.0/24",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "45.154.98.0/24",
+                        "sblid": "SBL687510",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.199219Z",
+                    "last_observed": "2026-09-14T11:57:26.199219Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:54:45",
+                        "port": "2404",
+                        "reference": "",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1917685",
+                        "ioc": "45.154.98.150:2404",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917685",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "45.154.98.150:2404",
+                        "port": 2404,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:54:45Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

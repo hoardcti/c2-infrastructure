@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "142.132.249.138",
+    "first_seen": "2026-09-08T10:41:33.499289Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remus"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-08T10:41:33.499289",
-            "flags": [
-                "remus"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-08T06:22:27",
-                "port": "6237",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
-                "id": "1905052",
-                "ioc": "142.132.249.138:6237",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:41Z",
+                    "last_observed": "2026-10-01T12:21:41Z",
+                    "data": {
+                        "asn": "AS24940",
+                        "as_name": "Hetzner Online GmbH",
+                        "as_domain": "hetzner.de",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-08T10:41:33.499289Z",
+                    "last_observed": "2026-09-08T10:41:33.499289Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-08T06:22:27",
+                        "port": "6237",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "id": "1905052",
+                        "ioc": "142.132.249.138:6237",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1905052",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "ioc": "142.132.249.138:6237",
+                        "port": 6237,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remus",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-08T06:22:27Z",
+                        "reference": null,
+                        "tags": [
+                            "9e236440a888641f560a7abe43083771",
+                            "Remus",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

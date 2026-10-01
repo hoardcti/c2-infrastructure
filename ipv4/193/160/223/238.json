@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "193.160.223.238",
+    "first_seen": "2026-09-10T14:51:47.319011Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-10T14:51:47.319011",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-10T11:08:00",
-                "port": "31896",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1907083",
-                "ioc": "193.160.223.238:31896",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:36Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:36Z",
+                    "last_observed": "2026-10-01T12:21:36Z",
+                    "data": {
+                        "asn": "AS47447",
+                        "as_name": "23M GmbH",
+                        "as_domain": "23m.com",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-10T14:51:47.319011Z",
+                    "last_observed": "2026-09-10T14:51:47.319011Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-10T11:08:00",
+                        "port": "31896",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1907083",
+                        "ioc": "193.160.223.238:31896",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1907083",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "193.160.223.238:31896",
+                        "port": 31896,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-10T11:08:00Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "fake",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

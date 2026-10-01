@@ -1,24 +1,47 @@
 {
+    "schema_version": 2,
     "ip": "134.122.136.2",
+    "first_seen": "2026-08-13T10:05:31.36473Z",
+    "last_seen": "2026-08-13T10:05:31.36473Z",
     "flags": [
         "unidentified vbs 001"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-13T10:05:31.364730",
-            "flags": [
-                "unidentified vbs 001"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-13T08:30:44",
-                "port": "8383",
-                "reference": "https://www.microsoft.com/en-us/security/blog/2026/03/31/whatsapp-malware-campaign-delivers-vbs-payloads-msi-backdoors/",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/vbs.unidentified_001",
-                "id": "1873486",
-                "ioc": "134.122.136.2:8383",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "134.122.128.0/17",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "134.122.128.0/17",
+                        "sblid": "SBL657510",
+                        "rir": "apnic"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-08-13T10:05:31.36473Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-13T10:05:31.36473Z",
+                    "last_observed": "2026-08-13T10:05:31.36473Z",
+                    "flags": [
+                        "unidentified vbs 001"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-13T08:30:44",
+                        "port": "8383",
+                        "reference": "https://www.microsoft.com/en-us/security/blog/2026/03/31/whatsapp-malware-campaign-delivers-vbs-payloads-msi-backdoors/",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/vbs.unidentified_001",
+                        "id": "1873486",
+                        "ioc": "134.122.136.2:8383",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

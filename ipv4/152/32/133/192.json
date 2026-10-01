@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "152.32.133.192",
+    "first_seen": "2026-08-20T06:43:49.273668Z",
+    "last_seen": "2026-08-20T06:43:49.273668Z",
     "flags": [
         "adaptixc2"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-20T06:43:49.273668",
-            "flags": [
-                "adaptixc2"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-20T05:41:15",
-                "port": "7001",
-                "reference": "https://www.shodan.io/host/152.32.133.192#7001",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.adaptix_c2",
-                "id": "1882911",
-                "ioc": "152.32.133.192:7001",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-08-20T06:43:49.273668Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-20T06:43:49.273668Z",
+                    "last_observed": "2026-08-20T06:43:49.273668Z",
+                    "flags": [
+                        "adaptixc2"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-20T05:41:15",
+                        "port": "7001",
+                        "reference": "https://www.shodan.io/host/152.32.133.192#7001",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.adaptix_c2",
+                        "id": "1882911",
+                        "ioc": "152.32.133.192:7001",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

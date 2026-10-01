@@ -1,24 +1,78 @@
 {
+    "schema_version": 2,
     "ip": "185.229.90.106",
+    "first_seen": "2026-09-14T11:57:26.201017Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.201017",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:12:54",
-                "port": "8081",
-                "reference": "https://www.shodan.io/host/185.229.90.106#8081",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1917411",
-                "ioc": "185.229.90.106:8081",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:51Z",
+                    "last_observed": "2026-10-01T12:20:51Z",
+                    "data": {
+                        "asn": "AS207143",
+                        "as_name": "hosttech GmbH",
+                        "as_domain": "hosttech.eu",
+                        "country_code": "CH",
+                        "country": "Switzerland",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.201017Z",
+                    "last_observed": "2026-09-14T11:57:26.201017Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:12:54",
+                        "port": "8081",
+                        "reference": "https://www.shodan.io/host/185.229.90.106#8081",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1917411",
+                        "ioc": "185.229.90.106:8081",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917411",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "185.229.90.106:8081",
+                        "port": 8081,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:12:54Z",
+                        "reference": "https://www.shodan.io/host/185.229.90.106#8081",
+                        "tags": [
+                            "GoPhish",
+                            "c2",
+                            "phishing",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

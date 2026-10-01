@@ -1,24 +1,81 @@
 {
+    "schema_version": 2,
     "ip": "2.25.246.239",
+    "first_seen": "2026-09-26T07:19:05.9019Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-26T07:19:05.901900",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-26T06:20:26",
-                "id": "1934260",
-                "ioc": "2.25.246.239:2466",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "port": "2466",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:01Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:11Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:11Z",
+                    "last_observed": "2026-10-01T12:20:11Z",
+                    "data": {
+                        "asn": "AS47583",
+                        "as_name": "Hostinger International Limited",
+                        "as_domain": "hostinger.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-26T07:19:05.9019Z",
+                    "last_observed": "2026-09-26T07:19:05.9019Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-26T06:20:26",
+                        "id": "1934260",
+                        "ioc": "2.25.246.239:2466",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "port": "2466",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1934260",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "2.25.246.239:2466",
+                        "port": 2466,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-26T06:20:26Z",
+                        "reference": null,
+                        "tags": [
+                            "COLPro",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

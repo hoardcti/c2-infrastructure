@@ -1,24 +1,122 @@
 {
+    "schema_version": 2,
     "ip": "128.90.103.163",
+    "first_seen": "2026-09-29T20:33:46.132131Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-29T20:33:46.132131",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-29T16:36:43",
-                "port": "2015",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1941969",
-                "ioc": "128.90.103.163:2015",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T12:25:38Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:25:38Z",
+                    "last_observed": "2026-10-01T12:25:38Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2022-12-23T16:17:07Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Commercial",
+                        "isp": "Unus, Inc.",
+                        "domain": "unusid.com",
+                        "country_code": "US",
+                        "hostnames": [
+                            "undefined.hostname.localhost"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:22:25Z",
+                    "last_observed": "2026-10-01T12:22:25Z",
+                    "data": {
+                        "ports": [
+                            135
+                        ],
+                        "hostnames": [
+                            "undefined.hostname.localhost"
+                        ],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:04Z",
+                    "last_observed": "2026-10-01T12:20:04Z",
+                    "data": {
+                        "asn": "AS40861",
+                        "as_name": "Paradise Networks LLC",
+                        "as_domain": "paradisenetworks.net",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-29T20:33:46.132131Z",
+                    "last_observed": "2026-09-29T20:33:46.132131Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-29T16:36:43",
+                        "port": "2015",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1941969",
+                        "ioc": "128.90.103.163:2015",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1941969",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "128.90.103.163:2015",
+                        "port": 2015,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-29T16:36:43Z",
+                        "reference": null,
+                        "tags": [
+                            "CK-099",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

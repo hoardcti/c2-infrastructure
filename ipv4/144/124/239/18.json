@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "144.124.239.18",
+    "first_seen": "2026-07-13T10:26:10.040791Z",
+    "last_seen": "2026-07-13T10:26:10.040791Z",
     "flags": [
         "aisuru"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-07-13T10:26:10.040791",
-            "flags": [
-                "aisuru"
-            ],
-            "metadata": {
-                "firstSeen": "2026-07-31T12:06:17",
-                "port": "8443",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
-                "id": "1866063",
-                "ioc": "144.124.239.18:8443",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-07-13T10:26:10.040791Z",
+            "observations": [
+                {
+                    "first_observed": "2026-07-13T10:26:10.040791Z",
+                    "last_observed": "2026-07-13T10:26:10.040791Z",
+                    "flags": [
+                        "aisuru"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-07-31T12:06:17",
+                        "port": "8443",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
+                        "id": "1866063",
+                        "ioc": "144.124.239.18:8443",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

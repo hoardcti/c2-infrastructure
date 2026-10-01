@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "164.92.146.175",
+    "first_seen": "2026-07-03T12:15:13.836864Z",
+    "last_seen": "2026-07-03T12:15:13.836864Z",
     "flags": [
         "kimwolf"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-07-03T12:15:13.836864",
-            "flags": [
-                "kimwolf"
-            ],
-            "metadata": {
-                "firstSeen": "2026-07-03T11:01:48",
-                "port": "25001",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/apk.kimwolf",
-                "id": "1843994",
-                "ioc": "164.92.146.175:25001",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-07-03T12:15:13.836864Z",
+            "observations": [
+                {
+                    "first_observed": "2026-07-03T12:15:13.836864Z",
+                    "last_observed": "2026-07-03T12:15:13.836864Z",
+                    "flags": [
+                        "kimwolf"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-07-03T11:01:48",
+                        "port": "25001",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/apk.kimwolf",
+                        "id": "1843994",
+                        "ioc": "164.92.146.175:25001",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

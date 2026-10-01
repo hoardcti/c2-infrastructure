@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "172.94.85.54",
+    "first_seen": "2026-09-09T08:41:32.906155Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-09T08:41:32.906155",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-09T07:13:36",
-                "port": "3013",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1905842",
-                "ioc": "172.94.85.54:3013",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:39Z",
+                    "last_observed": "2026-10-01T12:21:39Z",
+                    "data": {
+                        "asn": "AS45671",
+                        "as_name": "Wholesale Services Provider",
+                        "as_domain": "serversaustralia.com.au",
+                        "country_code": "AU",
+                        "country": "Australia",
+                        "continent_code": "OC",
+                        "continent": "Oceania"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-09T08:41:32.906155Z",
+                    "last_observed": "2026-09-09T08:41:32.906155Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-09T07:13:36",
+                        "port": "3013",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1905842",
+                        "ioc": "172.94.85.54:3013",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1905842",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "172.94.85.54:3013",
+                        "port": 3013,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-09T07:13:36Z",
+                        "reference": null,
+                        "tags": [
+                            "PAROSH NEW June",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,54 @@
 {
+    "schema_version": 2,
     "ip": "208.64.33.69",
+    "first_seen": "2026-09-02T08:26:42.978416Z",
+    "last_seen": "2026-09-02T08:26:42.978416Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-02T08:26:42.978416",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-02T08:18:14",
-                "port": "2088",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1893032",
-                "ioc": "208.64.33.69:2088",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:53Z",
+                    "last_observed": "2026-10-01T12:21:53Z",
+                    "data": {
+                        "asn": "AS35592",
+                        "as_name": "Coolhousing s.r.o.",
+                        "as_domain": "coolhousing.net",
+                        "country_code": "CZ",
+                        "country": "Czechia",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-09-02T08:26:42.978416Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-02T08:26:42.978416Z",
+                    "last_observed": "2026-09-02T08:26:42.978416Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-02T08:18:14",
+                        "port": "2088",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1893032",
+                        "ioc": "208.64.33.69:2088",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

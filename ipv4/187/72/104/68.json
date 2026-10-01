@@ -1,24 +1,78 @@
 {
+    "schema_version": 2,
     "ip": "187.72.104.68",
+    "first_seen": "2026-09-14T11:57:26.201271Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.201271",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:12:46",
-                "port": "443",
-                "reference": "https://www.shodan.io/host/187.72.104.68#443",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1917379",
-                "ioc": "187.72.104.68:443",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:45Z",
+                    "last_observed": "2026-10-01T12:20:45Z",
+                    "data": {
+                        "asn": "AS16735",
+                        "as_name": "ALGAR TELECOM S/A",
+                        "as_domain": "algar.com.br",
+                        "country_code": "BR",
+                        "country": "Brazil",
+                        "continent_code": "SA",
+                        "continent": "South America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.201271Z",
+                    "last_observed": "2026-09-14T11:57:26.201271Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:12:46",
+                        "port": "443",
+                        "reference": "https://www.shodan.io/host/187.72.104.68#443",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1917379",
+                        "ioc": "187.72.104.68:443",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917379",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "187.72.104.68:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:12:46Z",
+                        "reference": "https://www.shodan.io/host/187.72.104.68#443",
+                        "tags": [
+                            "GoPhish",
+                            "c2",
+                            "phishing",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

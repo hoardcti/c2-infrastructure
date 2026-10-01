@@ -1,21 +1,33 @@
 {
+    "schema_version": 2,
     "ip": "35.179.229.71",
+    "first_seen": "2026-05-25T23:02:45.104372Z",
+    "last_seen": "2026-05-25T23:02:45.104372Z",
     "flags": [
         "c2_havoc"
     ],
-    "results": [
-        {
-            "source": "criminalip",
-            "datetime": "2026-05-25T23:02:45.104372",
-            "flags": [
-                "c2_havoc"
-            ],
-            "metadata": {
-                "port": "80",
-                "score": "Critical/Critical",
-                "country": "gb",
-                "scanTime": "2026-05-21 00:14:04"
-            }
+    "sources": {
+        "criminalip": {
+            "last_checked": "2026-05-25T23:02:45.104372Z",
+            "observations": [
+                {
+                    "first_observed": "2026-05-25T23:02:45.104372Z",
+                    "last_observed": "2026-05-25T23:02:45.104372Z",
+                    "flags": [
+                        "c2_havoc"
+                    ],
+                    "data": {
+                        "port": "80",
+                        "score": "Critical/Critical",
+                        "country": "gb",
+                        "scanTime": "2026-05-21 00:14:04"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
         }
-    ]
+    }
 }

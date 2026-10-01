@@ -1,24 +1,89 @@
 {
+    "schema_version": 2,
     "ip": "5.175.189.139",
+    "first_seen": "2026-09-14T11:57:26.201002Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.201002",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:12:54",
-                "port": "3333",
-                "reference": "https://www.shodan.io/host/5.175.189.139#3333",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1917413",
-                "ioc": "5.175.189.139:3333",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:51Z",
+                    "last_observed": "2026-10-01T12:20:51Z",
+                    "data": {
+                        "asn": "AS206479",
+                        "as_name": "AceRDP Ltd",
+                        "as_domain": "acerdp.io",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "5.175.189.0/24",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "5.175.189.0/24",
+                        "sblid": "SBL699033",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.201002Z",
+                    "last_observed": "2026-09-14T11:57:26.201002Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:12:54",
+                        "port": "3333",
+                        "reference": "https://www.shodan.io/host/5.175.189.139#3333",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1917413",
+                        "ioc": "5.175.189.139:3333",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917413",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "5.175.189.139:3333",
+                        "port": 3333,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:12:54Z",
+                        "reference": "https://www.shodan.io/host/5.175.189.139#3333",
+                        "tags": [
+                            "GoPhish",
+                            "c2",
+                            "phishing",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,78 @@
 {
+    "schema_version": 2,
     "ip": "210.245.3.114",
+    "first_seen": "2026-09-14T11:57:26.200773Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.200773",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:13:02",
-                "port": "3333",
-                "reference": "https://www.shodan.io/host/210.245.3.114#3333",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1917442",
-                "ioc": "210.245.3.114:3333",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:57Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:57Z",
+                    "last_observed": "2026-10-01T12:20:57Z",
+                    "data": {
+                        "asn": "AS18403",
+                        "as_name": "FPT Telecom Company",
+                        "as_domain": "fpt.vn",
+                        "country_code": "VN",
+                        "country": "Vietnam",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.200773Z",
+                    "last_observed": "2026-09-14T11:57:26.200773Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:13:02",
+                        "port": "3333",
+                        "reference": "https://www.shodan.io/host/210.245.3.114#3333",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1917442",
+                        "ioc": "210.245.3.114:3333",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917442",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "210.245.3.114:3333",
+                        "port": 3333,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:13:02Z",
+                        "reference": "https://www.shodan.io/host/210.245.3.114#3333",
+                        "tags": [
+                            "GoPhish",
+                            "c2",
+                            "phishing",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,204 @@
 {
+    "schema_version": 2,
     "ip": "46.246.84.25",
+    "first_seen": "2026-10-01T08:43:48.066717Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-10-01T08:43:48.066717",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-10-01T05:17:52",
-                "port": "5987",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1943296",
-                "ioc": "46.246.84.25:5987",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T12:24:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:24:46Z",
+                    "last_observed": "2026-10-01T12:24:46Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2025-10-21T00:03:12Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Sanco Group LTD",
+                        "domain": "frootvpn.com",
+                        "country_code": "SE",
+                        "hostnames": [
+                            "c-46-246-84-25.ip4.frootvpn.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-01T12:21:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:59Z",
+                    "last_observed": "2026-10-01T12:21:59Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            137
+                        ],
+                        "hostnames": [
+                            "c-46-246-84-25.ip4.frootvpn.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:microsoft:asp.net",
+                            "cpe:/a:microsoft:internet_information_services",
+                            "cpe:/a:microsoft:internet_information_services:10.0",
+                            "cpe:/o:microsoft:windows"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:19:59Z",
+                    "last_observed": "2026-10-01T12:19:59Z",
+                    "data": {
+                        "asn": "AS42708",
+                        "as_name": "Glesys AB",
+                        "as_domain": "glesys.com",
+                        "country_code": "SE",
+                        "country": "Sweden",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-01T12:26:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:26:05Z",
+                    "last_observed": "2026-10-01T12:26:05Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS42708 glesys ab",
+                        "country_code": "SE",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "68aa3a53d440a94377569eb9",
+                                "name": "Remcos",
+                                "created": "2025-08-23T22:01:55.319Z",
+                                "tlp": "white",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-01T12:30:04Z",
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T08:43:48.066717Z",
+                    "last_observed": "2026-10-01T08:43:48.066717Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-10-01T05:17:52",
+                        "port": "5987",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1943296",
+                        "ioc": "46.246.84.25:5987",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1943296",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "46.246.84.25:5987",
+                        "port": 5987,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-01T05:17:52Z",
+                        "reference": null,
+                        "tags": [
+                            "NMUOnAPUAPU",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-01T12:23:59Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T12:30:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:30:45Z",
+                    "last_observed": "2026-10-01T12:30:45Z",
+                    "data": {
+                        "as_owner": "Glesys AB",
+                        "asn": 42708,
+                        "network": "46.246.64.0/18",
+                        "country": "SE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 34,
+                            "harmless": 55,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

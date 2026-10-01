@@ -1,24 +1,133 @@
 {
+    "schema_version": 2,
     "ip": "138.226.247.152",
+    "first_seen": "2026-09-23T16:40:16.251046Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "ottercookie"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-23T16:40:16.251046",
-            "flags": [
-                "ottercookie"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-18T05:05:38",
-                "port": "80",
-                "reference": "https://github.com/Sabbirnde/Nava/blob/081742b82a89438bb34aea5fbe79971072740ad8/src/utils/errorHandler.js",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/js.otter_cookie",
-                "id": "1923479",
-                "ioc": "138.226.247.152:80",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:53Z",
+                    "last_observed": "2026-10-01T12:23:53Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            135,
+                            443,
+                            3389,
+                            5357,
+                            5985,
+                            5986
+                        ],
+                        "hostnames": [
+                            "dedicated.sollutium.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:expressjs:express",
+                            "cpe:/a:nodejs:node.js"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:22Z",
+                    "last_observed": "2026-10-01T12:20:22Z",
+                    "data": {
+                        "asn": "AS43641",
+                        "as_name": "SOLLUTIUM EU Sp z.o.o.",
+                        "as_domain": "sollutium.com",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-23T16:40:16.251046Z",
+                    "last_observed": "2026-09-23T16:40:16.251046Z",
+                    "flags": [
+                        "ottercookie"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-18T05:05:38",
+                        "port": "80",
+                        "reference": "https://github.com/Sabbirnde/Nava/blob/081742b82a89438bb34aea5fbe79971072740ad8/src/utils/errorHandler.js",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/js.otter_cookie",
+                        "id": "1923479",
+                        "ioc": "138.226.247.152:80",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1926654",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "ottercookie"
+                    ],
+                    "data": {
+                        "ioc": "138.226.247.152:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "OtterCookie",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/js.otter_cookie",
+                        "confidence_level": 80,
+                        "first_seen": "2026-09-21T16:24:48Z",
+                        "reference": "https://github.com/Sabbirnde/Nava/blob/081742b82a89438bb34aea5fbe79971072740ad8/src/utils/errorHandler.js",
+                        "tags": [
+                            "NodeJS",
+                            "OtterCookie",
+                            "c2",
+                            "contagious-interview"
+                        ]
+                    }
+                },
+                {
+                    "key": "1923479",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "ottercookie"
+                    ],
+                    "data": {
+                        "ioc": "138.226.247.152:80",
+                        "port": 80,
+                        "threat_type": "botnet_cc",
+                        "malware": "OtterCookie",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/js.otter_cookie",
+                        "confidence_level": 95,
+                        "first_seen": "2026-09-18T05:05:38Z",
+                        "reference": "https://github.com/Sabbirnde/Nava/blob/081742b82a89438bb34aea5fbe79971072740ad8/src/utils/errorHandler.js",
+                        "tags": [
+                            "NodeJS",
+                            "OtterCookie",
+                            "c2",
+                            "contagious-interview"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

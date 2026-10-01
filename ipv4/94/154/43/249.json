@@ -1,41 +1,64 @@
 {
+    "schema_version": 2,
     "ip": "94.154.43.249",
+    "first_seen": "2026-08-24T07:59:29.930394Z",
+    "last_seen": "2026-08-27T16:07:29.59Z",
     "flags": [
         "aisuru",
         "mirai"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-24T07:59:29.930394",
-            "flags": [
-                "mirai"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-24T07:46:06",
-                "port": "2327",
-                "reference": "",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.mirai",
-                "id": "1885883",
-                "ioc": "94.154.43.249:2327",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "94.154.43.0/24",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "94.154.43.0/24",
+                        "sblid": "SBL699296",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
         },
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-27T16:07:29.590000",
-            "flags": [
-                "aisuru"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-27T07:22:35",
-                "port": "8001",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
-                "id": "1888320",
-                "ioc": "94.154.43.249:8001",
-                "threat_type": "botnet_cc"
-            }
+        "threatfox": {
+            "last_checked": "2026-08-27T16:07:29.59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-24T07:59:29.930394Z",
+                    "last_observed": "2026-08-24T07:59:29.930394Z",
+                    "flags": [
+                        "mirai"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-24T07:46:06",
+                        "port": "2327",
+                        "reference": "",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.mirai",
+                        "id": "1885883",
+                        "ioc": "94.154.43.249:2327",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "first_observed": "2026-08-27T16:07:29.59Z",
+                    "last_observed": "2026-08-27T16:07:29.59Z",
+                    "flags": [
+                        "aisuru"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-27T07:22:35",
+                        "port": "8001",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
+                        "id": "1888320",
+                        "ioc": "94.154.43.249:8001",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

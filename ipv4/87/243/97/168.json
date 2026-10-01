@@ -1,24 +1,77 @@
 {
+    "schema_version": 2,
     "ip": "87.243.97.168",
+    "first_seen": "2026-09-14T11:57:26.199511Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "darkcomet"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-14T11:57:26.199511",
-            "flags": [
-                "darkcomet"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-14T11:18:52",
-                "port": "1604",
-                "reference": "https://www.shodan.io/host/87.243.97.168#1604",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.darkcomet",
-                "id": "1917600",
-                "ioc": "87.243.97.168:1604",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:27Z",
+                    "last_observed": "2026-10-01T12:21:27Z",
+                    "data": {
+                        "asn": "AS8866",
+                        "as_name": "Vivacom Bulgaria EAD",
+                        "as_domain": "vivacom.bg",
+                        "country_code": "BG",
+                        "country": "Bulgaria",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-14T11:57:26.199511Z",
+                    "last_observed": "2026-09-14T11:57:26.199511Z",
+                    "flags": [
+                        "darkcomet"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-14T11:18:52",
+                        "port": "1604",
+                        "reference": "https://www.shodan.io/host/87.243.97.168#1604",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.darkcomet",
+                        "id": "1917600",
+                        "ioc": "87.243.97.168:1604",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1917600",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "darkcomet"
+                    ],
+                    "data": {
+                        "ioc": "87.243.97.168:1604",
+                        "port": 1604,
+                        "threat_type": "botnet_cc",
+                        "malware": "DarkComet",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.darkcomet",
+                        "confidence_level": 50,
+                        "first_seen": "2026-09-14T11:18:52Z",
+                        "reference": "https://www.shodan.io/host/87.243.97.168#1604",
+                        "tags": [
+                            "c2",
+                            "darkcomet",
+                            "shodan"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

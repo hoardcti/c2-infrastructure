@@ -1,24 +1,65 @@
 {
+    "schema_version": 2,
     "ip": "172.111.232.230",
+    "first_seen": "2026-09-02T08:26:42.978597Z",
+    "last_seen": "2026-09-02T08:26:42.978597Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-02T08:26:42.978597",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-02T05:49:34",
-                "port": "65070",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1892951",
-                "ioc": "172.111.232.230:65070",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:52Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:52Z",
+                    "last_observed": "2026-10-01T12:21:52Z",
+                    "data": {
+                        "asn": "AS7040",
+                        "as_name": "Netminders Server Hosting",
+                        "as_domain": "net-minders.com",
+                        "country_code": "CA",
+                        "country": "Canada",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "172.111.128.0/17",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "172.111.128.0/17",
+                        "sblid": "SBL688605",
+                        "rir": "arin"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-09-02T08:26:42.978597Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-02T08:26:42.978597Z",
+                    "last_observed": "2026-09-02T08:26:42.978597Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-02T05:49:34",
+                        "port": "65070",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1892951",
+                        "ioc": "172.111.232.230:65070",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

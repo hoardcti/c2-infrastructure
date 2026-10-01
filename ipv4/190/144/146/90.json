@@ -1,24 +1,1173 @@
 {
+    "schema_version": 2,
     "ip": "190.144.146.90",
+    "first_seen": "2026-09-30T22:56:17.027609Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-30T22:56:17.027609",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-30T19:00:27",
-                "port": "5510",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1943175",
-                "ioc": "190.144.146.90:5510",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T12:24:58Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:24:58Z",
+                    "last_observed": "2026-10-01T12:24:58Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2025-12-11T20:32:50Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Fixed Line ISP",
+                        "isp": "Telmex Colombia S.A.",
+                        "domain": "telmexla.net.co",
+                        "country_code": "CO",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:22:05Z",
+                    "last_observed": "2026-10-01T12:22:05Z",
+                    "data": {
+                        "ports": [
+                            3389
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:00Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:00Z",
+                    "last_observed": "2026-10-01T12:20:00Z",
+                    "data": {
+                        "asn": "AS14080",
+                        "as_name": "Telmex Colombia S.A.",
+                        "as_domain": "claro.com.co",
+                        "country_code": "CO",
+                        "country": "Colombia",
+                        "continent_code": "SA",
+                        "continent": "South America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-01T12:29:36Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:29:36Z",
+                    "last_observed": "2026-10-01T12:29:36Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS14080 telmex colombia s.a.",
+                        "country_code": "CO",
+                        "pulse_count": 50,
+                        "pulses": [
+                            {
+                                "id": "654e38ed47abf8664ae89057",
+                                "name": "Remcos - C2 IP/Domain Tracker",
+                                "created": "2023-11-10T14:06:37.777Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "Remcos",
+                                    "remote access trojan"
+                                ],
+                                "malware_families": [
+                                    "Remcos"
+                                ]
+                            },
+                            {
+                                "id": "672f6ed2b564f00b7c5cb13f",
+                                "name": "Threatfox Recent Additions",
+                                "created": "2024-11-09T14:16:50.032Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6927d4c1611927c371ffd3cb",
+                                "name": "DugganUSA Master Threat Feed - Live Blocked IPs with MITRE ATT&CK (Auto-Updated)",
+                                "created": "2025-11-27T04:34:07.511Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "auto-updated",
+                                    "blocked-ips",
+                                    "dugganusa",
+                                    "github",
+                                    "infostealer",
+                                    "isp-reputation",
+                                    "mitre-attack",
+                                    "pattern-32",
+                                    "pattern-38",
+                                    "rhadamanthys",
+                                    "ssl-enrichment",
+                                    "stealc",
+                                    "stix-2.1",
+                                    "supply-chain",
+                                    "threat-intelligence"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "697bc0fce096446800316be4",
+                                "name": "OSINT Volley 2026-01-29 - Vidar/ClearFake/Unknown malware",
+                                "created": "2026-01-29T20:20:12.105Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "clearfake",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Lumma Stealer",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697bc7fd080500b986ef757f",
+                                "name": "OSINT Volley 2026-01-29 - Vidar/ClearFake/Unknown malware",
+                                "created": "2026-01-29T20:50:05.914Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "clearfake",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Lumma Stealer",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697bcf095815cf8ec1a1235c",
+                                "name": "OSINT Volley 2026-01-29 - Vidar/ClearFake/Unknown malware",
+                                "created": "2026-01-29T21:20:08.763Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "clearfake",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Lumma Stealer",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697bd6143091ba9580f97f9a",
+                                "name": "OSINT Volley 2026-01-29 - Vidar/ClearFake/Unknown malware",
+                                "created": "2026-01-29T21:50:12.238Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "clearfake",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Lumma Stealer",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697bdd17c1cf4ebb1b23dd53",
+                                "name": "OSINT Volley 2026-01-29 - Vidar/ClearFake/Unknown malware",
+                                "created": "2026-01-29T22:20:07.53Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "clearfake",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Lumma Stealer",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697be41d160ac58aa1b951ac",
+                                "name": "OSINT Volley 2026-01-29 - Vidar/ClearFake/Unknown malware",
+                                "created": "2026-01-29T22:50:05.246Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "clearfake",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Lumma Stealer",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697beb24300a5cf74815b261",
+                                "name": "OSINT Volley 2026-01-29 - Vidar/ClearFake/Unknown malware",
+                                "created": "2026-01-29T23:20:04.878Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "clearfake",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Lumma Stealer",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697bf22e4696bb7e8055a4a0",
+                                "name": "OSINT Volley 2026-01-29 - Vidar/Unknown malware/ClearFake",
+                                "created": "2026-01-29T23:50:06.559Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "clearfake",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "AsyncRAT",
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697bf934ce6d8de337f3928e",
+                                "name": "OSINT Volley 2026-01-30 - Vidar/Unknown malware/ClearFake",
+                                "created": "2026-01-30T00:20:04.3Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "clearfake",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "AsyncRAT",
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697c003e41f80a886cf38e24",
+                                "name": "OSINT Volley 2026-01-30 - Vidar/Unknown malware/ClearFake",
+                                "created": "2026-01-30T00:50:06.111Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "clearfake",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "AsyncRAT",
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697c0742e638fc3e328a81aa",
+                                "name": "OSINT Volley 2026-01-30 - Vidar/Unknown malware/ClearFake",
+                                "created": "2026-01-30T01:20:02.269Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "clearfake",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "AsyncRAT",
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697c0e4fe341bbe6f83faf71",
+                                "name": "OSINT Volley 2026-01-30 - Vidar/Unknown malware/ClearFake",
+                                "created": "2026-01-30T01:50:07.44Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "clearfake",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "AsyncRAT",
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697c15556651cda77a421040",
+                                "name": "OSINT Volley 2026-01-30 - Vidar/Unknown malware/ClearFake",
+                                "created": "2026-01-30T02:20:05.403Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "clearfake",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "AsyncRAT",
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697c2369cc840d13bb4e4137",
+                                "name": "OSINT Volley 2026-01-30 - Vidar/Unknown malware/ClearFake",
+                                "created": "2026-01-30T03:20:09.479Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "clearfake",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "AsyncRAT",
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697c2a6fc018e1bf05c215f5",
+                                "name": "OSINT Volley 2026-01-30 - Vidar/Unknown malware/ClearFake",
+                                "created": "2026-01-30T03:50:06.999Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "clearfake",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "AsyncRAT",
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697c3174aadc826ec88b12ab",
+                                "name": "OSINT Volley 2026-01-30 - Vidar/Unknown malware/ClearFake",
+                                "created": "2026-01-30T04:20:04.227Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "clearfake",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "AsyncRAT",
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697c3882d9d4ffaaaf2ace0a",
+                                "name": "OSINT Volley 2026-01-30 - Vidar/Unknown malware/ClearFake",
+                                "created": "2026-01-30T04:50:10.118Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "clearfake",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "AsyncRAT",
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697c3f82ee7f9e022f6c74bb",
+                                "name": "OSINT Volley 2026-01-30 - Vidar/Unknown malware/ClearFake",
+                                "created": "2026-01-30T05:20:02.817Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "clearfake",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "AsyncRAT",
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697c4690bd9fc123376c97eb",
+                                "name": "OSINT Volley 2026-01-30 - Vidar/Unknown malware/ClearFake",
+                                "created": "2026-01-30T05:50:08.623Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "clearfake",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "AsyncRAT",
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697c4d95f7ad046eebba8764",
+                                "name": "OSINT Volley 2026-01-30 - Vidar/Unknown malware/ClearFake",
+                                "created": "2026-01-30T06:20:05.25Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "clearfake",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Lumma Stealer",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697c5ba7371ffa2a6c0ce0c4",
+                                "name": "OSINT Volley 2026-01-30 - Vidar/Unknown malware/Cobalt Strike",
+                                "created": "2026-01-30T07:20:07.373Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "cobalt-strike",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Lumma Stealer",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697c62ad11742e391188f118",
+                                "name": "OSINT Volley 2026-01-30 - Unknown malware/Vidar/Cobalt Strike",
+                                "created": "2026-01-30T07:50:05.342Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "cobalt-strike",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Lumma Stealer",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697c70c0fe44c4a1d89d5d3d",
+                                "name": "OSINT Volley 2026-01-30 - Unknown Stealer/Unknown malware/Vidar",
+                                "created": "2026-01-30T08:50:08.182Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "unknown-stealer",
+                                    "vidar"
+                                ],
+                                "malware_families": [
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Unknown Stealer",
+                                    "Unknown malware",
+                                    "Vidar"
+                                ]
+                            },
+                            {
+                                "id": "697c77c5b49336f48b3f0bc3",
+                                "name": "OSINT Volley 2026-01-30 - Unknown Stealer/Unknown malware/Cobalt Strike",
+                                "created": "2026-01-30T09:20:05.029Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "c2-infrastructure",
+                                    "cobalt-strike",
+                                    "osint-volley",
+                                    "threatfox",
+                                    "unknown-malware",
+                                    "unknown-stealer"
+                                ],
+                                "malware_families": [
+                                    "ClearFake",
+                                    "Cobalt Strike",
+                                    "Lumma Stealer",
+                                    "Unknown Stealer",
+                                    "Unknown malware"
+                                ]
+                            },
+                            {
+                                "id": "697c8add79f0ee985f890cf2",
+                                "name": "ThreatFox Hunt: Remcos IOCs - 2026-01-30",
+                                "created": "2026-01-30T10:41:33.197Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated-hunt",
+                                    "commodity-rat",
+                                    "dugganusa",
+                                    "pattern-49",
+                                    "remcos",
+                                    "threatfox"
+                                ],
+                                "malware_families": [
+                                    "Remcos"
+                                ]
+                            },
+                            {
+                                "id": "697cd168d617837b28c22fb2",
+                                "name": "ThreatFox Hunt: Remcos IOCs - 2026-01-30",
+                                "created": "2026-01-30T15:42:32.52Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated-hunt",
+                                    "commodity-rat",
+                                    "dugganusa",
+                                    "pattern-49",
+                                    "remcos",
+                                    "threatfox"
+                                ],
+                                "malware_families": [
+                                    "Remcos"
+                                ]
+                            },
+                            {
+                                "id": "697cd3aa9d9dd9c8d6dcb07f",
+                                "name": "ThreatFox Hunt: Remcos IOCs - 2026-01-30",
+                                "created": "2026-01-30T15:52:10.977Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated-hunt",
+                                    "commodity-rat",
+                                    "dugganusa",
+                                    "pattern-49",
+                                    "remcos",
+                                    "threatfox"
+                                ],
+                                "malware_families": [
+                                    "Remcos"
+                                ]
+                            },
+                            {
+                                "id": "697cec2e128be048e66bc51f",
+                                "name": "ThreatFox Hunt: Remcos IOCs - 2026-01-30",
+                                "created": "2026-01-30T17:36:46.251Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated-hunt",
+                                    "commodity-rat",
+                                    "dugganusa",
+                                    "pattern-49",
+                                    "remcos",
+                                    "threatfox"
+                                ],
+                                "malware_families": [
+                                    "Remcos"
+                                ]
+                            },
+                            {
+                                "id": "697cf29d1b8dd9966207d0c2",
+                                "name": "ThreatFox Hunt: Remcos IOCs - 2026-01-30",
+                                "created": "2026-01-30T18:04:13.617Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated-hunt",
+                                    "commodity-rat",
+                                    "dugganusa",
+                                    "pattern-49",
+                                    "remcos",
+                                    "threatfox"
+                                ],
+                                "malware_families": [
+                                    "Remcos"
+                                ]
+                            },
+                            {
+                                "id": "697d56263dcbc2f1afed40e3",
+                                "name": "ThreatFox Hunt: Remcos IOCs - 2026-01-31",
+                                "created": "2026-01-31T01:08:54.162Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated-hunt",
+                                    "commodity-rat",
+                                    "dugganusa",
+                                    "pattern-49",
+                                    "remcos",
+                                    "threatfox"
+                                ],
+                                "malware_families": [
+                                    "Remcos"
+                                ]
+                            },
+                            {
+                                "id": "697d56ba54939efd0c00fdac",
+                                "name": "ThreatFox Hunt: Remcos IOCs - 2026-01-31",
+                                "created": "2026-01-31T01:11:22.743Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated-hunt",
+                                    "commodity-rat",
+                                    "dugganusa",
+                                    "pattern-49",
+                                    "remcos",
+                                    "threatfox"
+                                ],
+                                "malware_families": [
+                                    "Remcos"
+                                ]
+                            },
+                            {
+                                "id": "697d57f7a6dbc93acc14ea02",
+                                "name": "ThreatFox Hunt: Remcos IOCs - 2026-01-31",
+                                "created": "2026-01-31T01:16:39.652Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated-hunt",
+                                    "commodity-rat",
+                                    "dugganusa",
+                                    "pattern-49",
+                                    "remcos",
+                                    "threatfox"
+                                ],
+                                "malware_families": [
+                                    "Remcos"
+                                ]
+                            },
+                            {
+                                "id": "697d5d35eaa9416ca9f12d7d",
+                                "name": "ThreatFox Hunt: Remcos IOCs - 2026-01-31",
+                                "created": "2026-01-31T01:39:01.803Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated-hunt",
+                                    "commodity-rat",
+                                    "dugganusa",
+                                    "pattern-49",
+                                    "remcos",
+                                    "threatfox"
+                                ],
+                                "malware_families": [
+                                    "Remcos"
+                                ]
+                            },
+                            {
+                                "id": "697d71c262e7c27324a3ebbe",
+                                "name": "ThreatFox Hunt: Remcos IOCs - 2026-01-31",
+                                "created": "2026-01-31T03:06:42.887Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated-hunt",
+                                    "commodity-rat",
+                                    "dugganusa",
+                                    "pattern-49",
+                                    "remcos",
+                                    "threatfox"
+                                ],
+                                "malware_families": [
+                                    "Remcos"
+                                ]
+                            },
+                            {
+                                "id": "697e299cc182d4bc491da00f",
+                                "name": "ThreatFox Hunt: Remcos IOCs - 2026-01-31",
+                                "created": "2026-01-31T16:11:08.808Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated-hunt",
+                                    "commodity-rat",
+                                    "dugganusa",
+                                    "pattern-49",
+                                    "remcos",
+                                    "threatfox"
+                                ],
+                                "malware_families": [
+                                    "Remcos"
+                                ]
+                            },
+                            {
+                                "id": "697e299fef724af56e56b50f",
+                                "name": "Oz Batch: 50 IOCs (avg BDE: 85)",
+                                "created": "2026-01-31T16:11:11.659Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "DugganUSA",
+                                    "auto-generated"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "697e2ac849ba8ec6e1b44275",
+                                "name": "Oz Batch: 50 IOCs (avg BDE: 85)",
+                                "created": "2026-01-31T16:16:08.461Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "DugganUSA",
+                                    "auto-generated"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "697e2ac8bd90c881970b05e2",
+                                "name": "ThreatFox Hunt: Remcos IOCs - 2026-01-31",
+                                "created": "2026-01-31T16:16:08.189Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated-hunt",
+                                    "commodity-rat",
+                                    "dugganusa",
+                                    "pattern-49",
+                                    "remcos",
+                                    "threatfox"
+                                ],
+                                "malware_families": [
+                                    "Remcos"
+                                ]
+                            },
+                            {
+                                "id": "697e2c102d876ab160c1588e",
+                                "name": "Oz Batch: 50 IOCs (avg BDE: 85)",
+                                "created": "2026-01-31T16:21:36.494Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "DugganUSA",
+                                    "auto-generated"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "697e2c1137e92dff3016296f",
+                                "name": "ThreatFox Hunt: Remcos IOCs - 2026-01-31",
+                                "created": "2026-01-31T16:21:37.144Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated-hunt",
+                                    "commodity-rat",
+                                    "dugganusa",
+                                    "pattern-49",
+                                    "remcos",
+                                    "threatfox"
+                                ],
+                                "malware_families": [
+                                    "Remcos"
+                                ]
+                            },
+                            {
+                                "id": "697e334ef3063eea1e890699",
+                                "name": "Oz Batch: 50 IOCs (avg BDE: 85)",
+                                "created": "2026-01-31T16:52:30.873Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "DugganUSA",
+                                    "auto-generated"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "697e33509e94c2c466891036",
+                                "name": "ThreatFox Hunt: Remcos IOCs - 2026-01-31",
+                                "created": "2026-01-31T16:52:32.16Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated-hunt",
+                                    "commodity-rat",
+                                    "dugganusa",
+                                    "pattern-49",
+                                    "remcos",
+                                    "threatfox"
+                                ],
+                                "malware_families": [
+                                    "Remcos"
+                                ]
+                            },
+                            {
+                                "id": "697e3dd55393f9209a20f9ea",
+                                "name": "ThreatFox Hunt: Remcos IOCs - 2026-01-31",
+                                "created": "2026-01-31T17:37:25.37Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated-hunt",
+                                    "commodity-rat",
+                                    "dugganusa",
+                                    "pattern-49",
+                                    "remcos",
+                                    "threatfox"
+                                ],
+                                "malware_families": [
+                                    "Remcos"
+                                ]
+                            },
+                            {
+                                "id": "697e3dd64e4a6ab945285495",
+                                "name": "Oz Batch: 50 IOCs (avg BDE: 85)",
+                                "created": "2026-01-31T17:37:26.215Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "DugganUSA",
+                                    "auto-generated"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "697e3e6a942f427be2f59cd7",
+                                "name": "Oz Batch: 50 IOCs (avg BDE: 85)",
+                                "created": "2026-01-31T17:39:54.409Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "DugganUSA",
+                                    "auto-generated"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "697e3e6c2e7842e7896d2087",
+                                "name": "ThreatFox Hunt: Remcos IOCs - 2026-01-31",
+                                "created": "2026-01-31T17:39:56.654Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated-hunt",
+                                    "commodity-rat",
+                                    "dugganusa",
+                                    "pattern-49",
+                                    "remcos",
+                                    "threatfox"
+                                ],
+                                "malware_families": [
+                                    "Remcos"
+                                ]
+                            },
+                            {
+                                "id": "6a5e28c60876ef7822a6dce3",
+                                "name": "Nov9,,2024-May14,2025 credit ameermane title Threatfox Recent Additions",
+                                "created": "2026-07-20T13:55:18.967Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-01T12:30:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:30:16Z",
+                    "last_observed": "2026-10-01T12:30:16Z",
+                    "data": {
+                        "org": "Telmex Colombia S.A.",
+                        "isp": "Telmex Colombia S.A.",
+                        "asn": "AS14080",
+                        "os": "Windows (build 10.0.19041)",
+                        "country_code": "CO",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "7a276bf0fdde51654184957e067641820759f2d11dc47272f671dd342da4dfa2",
+                                "certificate_subject": "DESKTOP-7M8MFET",
+                                "certificate_issuer": "DESKTOP-7M8MFET"
+                            },
+                            {
+                                "port": 6020,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-30T22:56:17.027609Z",
+                    "last_observed": "2026-09-30T22:56:17.027609Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-30T19:00:27",
+                        "port": "5510",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1943175",
+                        "ioc": "190.144.146.90:5510",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1943175",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "190.144.146.90:5510",
+                        "port": 5510,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-30T19:00:27Z",
+                        "reference": null,
+                        "tags": [
+                            "AGOSTO 05 MUCHACHA 2026",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-01T12:24:10Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T12:32:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:32:15Z",
+                    "last_observed": "2026-10-01T12:32:15Z",
+                    "data": {
+                        "as_owner": "Telmex Colombia S.A.",
+                        "asn": 14080,
+                        "network": "190.144.128.0/19",
+                        "country": "CO",
+                        "continent": "SA",
+                        "regional_internet_registry": "LACNIC",
+                        "reputation": -14,
+                        "analysis_stats": {
+                            "malicious": 7,
+                            "suspicious": 1,
+                            "undetected": 36,
+                            "harmless": 47,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "CyRadar",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Sophos",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 4
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

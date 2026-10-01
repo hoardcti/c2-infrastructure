@@ -1,24 +1,1221 @@
 {
+    "schema_version": 2,
     "ip": "176.65.132.117",
+    "first_seen": "2026-09-30T22:56:17.027609Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-30T22:56:17.027609",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-30T19:00:27",
-                "port": "2245",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1943177",
-                "ioc": "176.65.132.117:2245",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T12:24:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:24:56Z",
+                    "last_observed": "2026-10-01T12:24:56Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-07-17T14:11:47Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "TechTies Inc.",
+                        "domain": "tech-ties.net",
+                        "country_code": "NL",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:22:04Z",
+                    "last_observed": "2026-10-01T12:22:04Z",
+                    "data": {
+                        "ports": [
+                            111,
+                            4444
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:00Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:00Z",
+                    "last_observed": "2026-10-01T12:20:00Z",
+                    "data": {
+                        "asn": "AS197170",
+                        "as_name": "TechTies Inc.",
+                        "as_domain": "tech-ties.net",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-01T12:28:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:28:13Z",
+                    "last_observed": "2026-10-01T12:28:13Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS56325 diogelo ltd.",
+                        "country_code": "DE",
+                        "pulse_count": 50,
+                        "pulses": [
+                            {
+                                "id": "5de8ad9a8b95247cfa55def7",
+                                "name": "PurpleSynapz",
+                                "created": "2019-12-05T07:11:22.913Z",
+                                "tlp": "white",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "60ece5998a5b54a5ffe75cb4",
+                                "name": "SSH Brute-Force Honeypot Live",
+                                "created": "2021-07-13T01:00:09.665Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "Brute-Force",
+                                    "Bruteforce",
+                                    "Honeypot",
+                                    "SSH"
+                                ],
+                                "malware_families": [
+                                    "#LowFi:BRUTE:Win32/Iminent",
+                                    "SSH Brute-Force"
+                                ]
+                            },
+                            {
+                                "id": "69cc672eba03f3b7260a59d6",
+                                "name": "Honeypot Data – T-Pot - Sydney, Australia - April 2026",
+                                "created": "2026-04-01T00:30:38.31Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "cowrie",
+                                    "dionaea",
+                                    "fatt",
+                                    "honeypot",
+                                    "honeytrap",
+                                    "mailoney",
+                                    "p0f",
+                                    "sensor-tagged",
+                                    "sentrypeer",
+                                    "suricata",
+                                    "tanner",
+                                    "tpot"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "69eaadceefac7b7d30269b87",
+                                "name": "yfyfytfytfyjhghgiuygytfyttrdtrdtrduygguy",
+                                "created": "2026-04-23T23:39:58.207Z",
+                                "tlp": "white",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "69eb28168e016e41b2c14370",
+                                "name": "Vultr Melbourne (Australia) Port Scanning Hosts for 2026-04-23",
+                                "created": "2026-04-24T08:21:42.697Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners",
+                                    "vultr"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "69eb2864b430a42ec4edba04",
+                                "name": "DigitalOcean London (UK) Port Scanning Hosts for 2026-04-23",
+                                "created": "2026-04-24T08:22:59.8Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "digital ocean",
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "69ebf39bde367f38c467c3ea",
+                                "name": "HoneyAI — SSH + Web Honeypot Live Feed",
+                                "created": "2026-04-24T22:50:03.908Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "automated",
+                                    "brute-force",
+                                    "cowrie",
+                                    "honeypot",
+                                    "opencanary",
+                                    "raspberry-pi",
+                                    "scanner",
+                                    "ssh"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "69ec79e78094a6b077a0cb35",
+                                "name": "Vultr Tokyo (Japan) Port Scanning Hosts for 2026-04-24",
+                                "created": "2026-04-25T08:23:03.958Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners",
+                                    "vultr"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "69ec7a204b1d8d2b6371fe03",
+                                "name": "DigitalOcean London (UK) Port Scanning Hosts for 2026-04-24",
+                                "created": "2026-04-25T08:24:00.697Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "digital ocean",
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "69ed8dd7906b4320e46c120d",
+                                "name": "URLHaus data - 25-04-2026 (Part 1)",
+                                "created": "2026-04-26T04:00:23.245Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "32-bit",
+                                    "ArechClient",
+                                    "Arechclient2",
+                                    "BlankGrabber",
+                                    "ClearFake",
+                                    "CoinMiner",
+                                    "DDoSAgent",
+                                    "LummaStealer",
+                                    "MetaStealer",
+                                    "Mozi",
+                                    "NetSupport",
+                                    "PowerPC",
+                                    "RISC-V",
+                                    "SectopRAT",
+                                    "SilverFox",
+                                    "SmartLoader",
+                                    "SuperH",
+                                    "ZigClipper",
+                                    "archive",
+                                    "arm",
+                                    "ascii",
+                                    "elf",
+                                    "exe",
+                                    "gafgyt",
+                                    "hajime",
+                                    "lua",
+                                    "m68k",
+                                    "mips",
+                                    "mirai",
+                                    "mossadbotnet",
+                                    "opendir",
+                                    "powershell",
+                                    "ps1",
+                                    "pw-6622",
+                                    "rat",
+                                    "script",
+                                    "sh",
+                                    "shellcode",
+                                    "ua-wget",
+                                    "wraith",
+                                    "wraith-scan",
+                                    "x86",
+                                    "x86_64",
+                                    "zip"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "69ed8dd831bb252df8cc27f7",
+                                "name": "URLHaus data - 25-04-2026 (Part 2)",
+                                "created": "2026-04-26T04:00:24.603Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "32-bit",
+                                    "ArechClient",
+                                    "Arechclient2",
+                                    "BlankGrabber",
+                                    "ClearFake",
+                                    "CoinMiner",
+                                    "DDoSAgent",
+                                    "LummaStealer",
+                                    "MetaStealer",
+                                    "Mozi",
+                                    "NetSupport",
+                                    "PowerPC",
+                                    "RISC-V",
+                                    "SectopRAT",
+                                    "SilverFox",
+                                    "SmartLoader",
+                                    "SuperH",
+                                    "ZigClipper",
+                                    "archive",
+                                    "arm",
+                                    "ascii",
+                                    "elf",
+                                    "exe",
+                                    "gafgyt",
+                                    "hajime",
+                                    "lua",
+                                    "m68k",
+                                    "mips",
+                                    "mirai",
+                                    "mossadbotnet",
+                                    "opendir",
+                                    "powershell",
+                                    "ps1",
+                                    "pw-6622",
+                                    "rat",
+                                    "script",
+                                    "sh",
+                                    "shellcode",
+                                    "ua-wget",
+                                    "wraith",
+                                    "wraith-scan",
+                                    "x86",
+                                    "x86_64",
+                                    "zip"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "69edcbb609c0d9a841c158a4",
+                                "name": "Vultr Melbourne (Australia) Port Scanning Hosts for 2026-04-25",
+                                "created": "2026-04-26T08:24:22.629Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners",
+                                    "vultr"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "69edcbd1a8c490d779a63458",
+                                "name": "Vultr Tokyo (Japan) Port Scanning Hosts for 2026-04-25",
+                                "created": "2026-04-26T08:24:49.514Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners",
+                                    "vultr"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "69f29693641a096ab81c595a",
+                                "name": "adfdfsdf",
+                                "created": "2026-04-29T23:38:59.754Z",
+                                "tlp": "white",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "69f2969502b04669a17719d1",
+                                "name": "adfdfsdf",
+                                "created": "2026-04-29T23:39:01.929Z",
+                                "tlp": "white",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "69f3f0a060504b28997ba460",
+                                "name": "SSH & Telnet → Attacker IPs - Australia - May 2026",
+                                "created": "2026-05-01T00:15:28.874Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "honeypot",
+                                    "ssh",
+                                    "telnet",
+                                    "tpot"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "69f4022bbc9f2eb63058f951",
+                                "name": "Honeypot Data – T-Pot - Sydney, Australia - May 2026",
+                                "created": "2026-05-01T01:30:19.093Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "cowrie",
+                                    "dionaea",
+                                    "fatt",
+                                    "honeypot",
+                                    "honeytrap",
+                                    "mailoney",
+                                    "p0f",
+                                    "sensor-tagged",
+                                    "sentrypeer",
+                                    "suricata",
+                                    "tanner",
+                                    "tpot"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "69fbd7ae1c22ba0d3e8aa078",
+                                "name": "2026-05-06 Fail2Ban 6508bcb1-2f11-4908-95e9-6a17938cbfa1",
+                                "created": "2026-05-07T00:07:10.852Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "69fd29641c4610b0b5b3e356",
+                                "name": "2026-05-07 Fail2Ban aef9af84-1fa2-422b-a3f4-21cb7444b201",
+                                "created": "2026-05-08T00:08:04.634Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "69ffcd477ffc02259811a8d5",
+                                "name": "2026-05-09 Fail2Ban 66e0e30b-8cb7-4a37-a725-b5973fd8361b",
+                                "created": "2026-05-10T00:11:51.616Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a02e2c72631c9eed88708b3",
+                                "name": "Vultr Paris (France) Port Scanning Hosts for 2026-05-11",
+                                "created": "2026-05-12T08:20:23.471Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners",
+                                    "vultr"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a030781e5afde6a50a07517",
+                                "name": "Global Threat Feed: Live Perimeter Telemetry",
+                                "created": "2026-05-12T10:57:05.377Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "Credential-Harvesting",
+                                    "ENV-Hunting",
+                                    "Nginx",
+                                    "Scanner",
+                                    "Zero-Day"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a03c13866075fda02e8df35",
+                                "name": "2026-05-12 Fail2Ban d7632d38-6e07-46cb-8280-5a9f8f0b331a",
+                                "created": "2026-05-13T00:09:28.435Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a0565002efb3f8d3d72c138",
+                                "name": "Global Threat Feed: Live Perimeter Telemetry",
+                                "created": "2026-05-14T06:00:32.848Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "Credential-Harvesting",
+                                    "ENV-Hunting",
+                                    "Nginx",
+                                    "Scanner",
+                                    "Zero-Day"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a06621eccf89d9d5f86679c",
+                                "name": "Global Threat Feed: Live Perimeter Telemetry",
+                                "created": "2026-05-15T00:00:30.163Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "Credential-Harvesting",
+                                    "ENV-Hunting",
+                                    "Nginx",
+                                    "Scanner",
+                                    "Zero-Day"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a066425d036e6d47cf04df6",
+                                "name": "2026-05-14 Fail2Ban 865edb3d-a241-4fae-82d4-373a9f39922f",
+                                "created": "2026-05-15T00:09:09.722Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a06b68e271e7a4fd7a850cd",
+                                "name": "Global Threat Feed: Live Perimeter Telemetry",
+                                "created": "2026-05-15T06:00:46.539Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "Credential-Harvesting",
+                                    "ENV-Hunting",
+                                    "Nginx",
+                                    "Scanner",
+                                    "Zero-Day"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a070ae1bc2f79bcf6cce7a0",
+                                "name": "Global Threat Feed: Live Perimeter Telemetry",
+                                "created": "2026-05-15T12:00:33.547Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "Credential-Harvesting",
+                                    "ENV-Hunting",
+                                    "Nginx",
+                                    "Scanner",
+                                    "Zero-Day"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a08292cc9e1635c77f0ac13",
+                                "name": "DigitalOcean Toronto (CA) SSH Bruteforce Hosts for 2026-05-15",
+                                "created": "2026-05-16T08:22:04.925Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "bruteforce",
+                                    "digital ocean",
+                                    "honeypot",
+                                    "ssh"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a0853f42ca1631e4449df33",
+                                "name": "Global Threat Feed: Live Perimeter Telemetry",
+                                "created": "2026-05-16T11:24:36.884Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "Credential-Harvesting",
+                                    "ENV-Hunting",
+                                    "Nginx",
+                                    "Scanner",
+                                    "Zero-Day"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a09f4125d660b0f5d4ed554",
+                                "name": "Project_Gifted1_Worker_ubuntu-m-2vcpu-16gb-ams3-01_2026-05-17",
+                                "created": "2026-05-17T17:00:02.583Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "Project_Gifted1",
+                                    "Worker_Strike"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a0a584482b9aa565203f2cd",
+                                "name": "2026-05-17 Fail2Ban b238230c-94d9-4c39-8de9-63fa6a2b5a3a",
+                                "created": "2026-05-18T00:07:32.832Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a0fb65d1948a4b8e30f010f",
+                                "name": "SOHO Router Scanning",
+                                "created": "2026-05-22T01:50:17.952Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "Inbound Scan"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a1cd294fcfdf46842616af3",
+                                "name": "Honeypot Data – T-Pot - Sydney, Australia - June 2026",
+                                "created": "2026-06-01T00:30:12.677Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "cowrie",
+                                    "dionaea",
+                                    "fatt",
+                                    "honeypot",
+                                    "honeytrap",
+                                    "mailoney",
+                                    "p0f",
+                                    "sensor-tagged",
+                                    "sentrypeer",
+                                    "suricata",
+                                    "tanner",
+                                    "tpot"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a21bd3ea24ceb50ffc76437",
+                                "name": "Gifted1 Live Perimeter Threat Intelligence Feed",
+                                "created": "2026-06-04T18:00:30.1Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "Blocklist",
+                                    "Malicious-IP",
+                                    "Scanner",
+                                    "Threat-Intel"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a267b99b65e7737f4981a71",
+                                "name": "DigitalOcean London (UK) Port Scanning Hosts for 2026-06-07",
+                                "created": "2026-06-08T08:21:45.928Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "digital ocean",
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a2d12e344c7d8758403889e",
+                                "name": "DigitalOcean Toronto (CA) Port Scanning Hosts for 2026-06-12",
+                                "created": "2026-06-13T08:20:51.784Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "digital ocean",
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a2e6465c032db28a0fedb64",
+                                "name": "DigitalOcean Toronto (CA) Port Scanning Hosts for 2026-06-13",
+                                "created": "2026-06-14T08:20:53.598Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "digital ocean",
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a2fb612420d666a85e8df5f",
+                                "name": "DigitalOcean Toronto (CA) Port Scanning Hosts for 2026-06-14",
+                                "created": "2026-06-15T08:21:38.078Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "digital ocean",
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a3258e716811023b631eea1",
+                                "name": "DigitalOcean Toronto (CA) Port Scanning Hosts for 2026-06-16",
+                                "created": "2026-06-17T08:20:54.889Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "digital ocean",
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a3ce4fa88986da6eb283fdc",
+                                "name": "DigitalOcean Toronto (CA) Port Scanning Hosts for 2026-06-24",
+                                "created": "2026-06-25T08:21:14.555Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "digital ocean",
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a3e36496a7e9ba05687442a",
+                                "name": "DigitalOcean Toronto (CA) Port Scanning Hosts for 2026-06-25",
+                                "created": "2026-06-26T08:20:25.365Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "digital ocean",
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a3f880f99065be4f593e46e",
+                                "name": "DigitalOcean London (UK) Port Scanning Hosts for 2026-06-26",
+                                "created": "2026-06-27T08:21:35.929Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "digital ocean",
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a408aefcbac59a54fb23053",
+                                "name": "ThreatIntelligenceAggregator.org Honeypot - Brute Force Indicators",
+                                "created": "2026-06-28T02:46:04.372Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "Brute-Force",
+                                    "Honeypot",
+                                    "RDP",
+                                    "SSH",
+                                    "ThreatIntel",
+                                    "bruteforce"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a40d9608d08c7ffda7aa308",
+                                "name": "DigitalOcean Toronto (CA) Port Scanning Hosts for 2026-06-27",
+                                "created": "2026-06-28T08:20:48.979Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "digital ocean",
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a422ad459904f4f14f7ea8d",
+                                "name": "DigitalOcean Toronto (CA) Port Scanning Hosts for 2026-06-28",
+                                "created": "2026-06-29T08:20:36.928Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "digital ocean",
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a437c67a2333e419d10a992",
+                                "name": "DigitalOcean Toronto (CA) Port Scanning Hosts for 2026-06-29",
+                                "created": "2026-06-30T08:20:55.482Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "digital ocean",
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a44cdbbe9c1cef4b5798c8a",
+                                "name": "Vultr Melbourne (Australia) Port Scanning Hosts for 2026-06-30",
+                                "created": "2026-07-01T08:20:11.578Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners",
+                                    "vultr"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6ab1154cf5b45b5181f8d341",
+                                "name": "DesckVB",
+                                "created": "2026-09-21T11:30:20.563Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "Desck VB",
+                                    "DesckVB"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6ab253237ea9e5496e541a11",
+                                "name": "EbeeSep2026 Pt4",
+                                "created": "2026-09-22T10:06:27.521Z",
+                                "adversary": "PAYLOAD ransomware, Rapuncel, XMRig Miner in Windows Registry, TraderTraitor, OilAlpha",
+                                "tlp": "white",
+                                "tags": [
+                                    "filehashmd5",
+                                    "filehashsha1",
+                                    "filehashsha256"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-01T12:30:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:30:14Z",
+                    "last_observed": "2026-10-01T12:30:14Z",
+                    "data": {
+                        "org": "TechTies Inc.",
+                        "isp": "TechTies Inc.",
+                        "asn": "AS197170",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 111,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 111,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 4444,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "176.65.132.0/24",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "176.65.132.0/24",
+                        "sblid": "SBL686258",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-30T22:56:17.027609Z",
+                    "last_observed": "2026-09-30T22:56:17.027609Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-30T19:00:27",
+                        "port": "2245",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1943177",
+                        "ioc": "176.65.132.117:2245",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1943177",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "176.65.132.117:2245",
+                        "port": 2245,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-30T19:00:27Z",
+                        "reference": null,
+                        "tags": [
+                            "Freshlogs.ddns",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-01T12:24:08Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:24:08Z",
+                    "last_observed": "2026-10-01T12:24:08Z",
+                    "data": {
+                        "urlhaus_reference": "https://urlhaus.abuse.ch/host/176.65.132.117/",
+                        "first_seen": "2026-04-22T02:38:04Z",
+                        "url_count": 18,
+                        "blacklists": {
+                            "spamhaus_dbl": "not listed",
+                            "surbl": "not listed"
+                        },
+                        "urls": [
+                            {
+                                "id": "3828203",
+                                "url": "http://176.65.132.117/main_arm7",
+                                "status": "offline",
+                                "date_added": "2026-04-22T02:38:20Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "elf",
+                                    "mirai",
+                                    "ua-wget"
+                                ]
+                            },
+                            {
+                                "id": "3828204",
+                                "url": "http://176.65.132.117/main_x86",
+                                "status": "offline",
+                                "date_added": "2026-04-22T02:38:20Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "elf",
+                                    "mirai",
+                                    "ua-wget"
+                                ]
+                            },
+                            {
+                                "id": "3828205",
+                                "url": "http://176.65.132.117/main_x86_64",
+                                "status": "offline",
+                                "date_added": "2026-04-22T02:38:20Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "elf",
+                                    "mirai",
+                                    "ua-wget"
+                                ]
+                            },
+                            {
+                                "id": "3828206",
+                                "url": "http://176.65.132.117/main_arm6",
+                                "status": "offline",
+                                "date_added": "2026-04-22T02:38:20Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "elf",
+                                    "mirai",
+                                    "ua-wget"
+                                ]
+                            },
+                            {
+                                "id": "3828207",
+                                "url": "http://176.65.132.117/debug.dbg",
+                                "status": "offline",
+                                "date_added": "2026-04-22T02:38:20Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "elf",
+                                    "mirai",
+                                    "ua-wget"
+                                ]
+                            },
+                            {
+                                "id": "3828208",
+                                "url": "http://176.65.132.117/main_ppc",
+                                "status": "offline",
+                                "date_added": "2026-04-22T02:38:20Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "elf",
+                                    "mirai",
+                                    "ua-wget"
+                                ]
+                            },
+                            {
+                                "id": "3828209",
+                                "url": "http://176.65.132.117/main_arm5",
+                                "status": "offline",
+                                "date_added": "2026-04-22T02:38:20Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "elf",
+                                    "mirai",
+                                    "ua-wget"
+                                ]
+                            },
+                            {
+                                "id": "3828211",
+                                "url": "http://176.65.132.117/main_mips",
+                                "status": "offline",
+                                "date_added": "2026-04-22T02:39:17Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "elf",
+                                    "mirai",
+                                    "ua-wget"
+                                ]
+                            },
+                            {
+                                "id": "3828212",
+                                "url": "http://176.65.132.117/main_sh4",
+                                "status": "offline",
+                                "date_added": "2026-04-22T02:39:17Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "elf",
+                                    "mirai",
+                                    "ua-wget"
+                                ]
+                            },
+                            {
+                                "id": "3828213",
+                                "url": "http://176.65.132.117/main_m68k",
+                                "status": "offline",
+                                "date_added": "2026-04-22T02:39:17Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "elf",
+                                    "mirai",
+                                    "ua-wget"
+                                ]
+                            },
+                            {
+                                "id": "3828214",
+                                "url": "http://176.65.132.117/main_arm",
+                                "status": "offline",
+                                "date_added": "2026-04-22T02:39:17Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "elf",
+                                    "mirai",
+                                    "ua-wget"
+                                ]
+                            },
+                            {
+                                "id": "3831349",
+                                "url": "http://176.65.132.117/dlr.arm",
+                                "status": "offline",
+                                "date_added": "2026-04-25T14:34:07Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "mirai",
+                                    "wraith-scan"
+                                ]
+                            },
+                            {
+                                "id": "3831350",
+                                "url": "http://176.65.132.117/dlr.mips",
+                                "status": "offline",
+                                "date_added": "2026-04-25T14:34:07Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "mirai",
+                                    "wraith-scan"
+                                ]
+                            },
+                            {
+                                "id": "3831351",
+                                "url": "http://176.65.132.117/main_mpsl",
+                                "status": "offline",
+                                "date_added": "2026-04-25T14:34:07Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "mirai",
+                                    "wraith-scan"
+                                ]
+                            },
+                            {
+                                "id": "3831373",
+                                "url": "http://176.65.132.117/dlr.arm5",
+                                "status": "offline",
+                                "date_added": "2026-04-25T14:35:27Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "mirai",
+                                    "wraith-scan"
+                                ]
+                            },
+                            {
+                                "id": "3831379",
+                                "url": "http://176.65.132.117/dlr.arm6",
+                                "status": "offline",
+                                "date_added": "2026-04-25T14:35:29Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "mirai",
+                                    "wraith-scan"
+                                ]
+                            },
+                            {
+                                "id": "3831419",
+                                "url": "http://176.65.132.117/dlr.arm7",
+                                "status": "offline",
+                                "date_added": "2026-04-25T14:36:10Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "mirai",
+                                    "wraith-scan"
+                                ]
+                            },
+                            {
+                                "id": "3831461",
+                                "url": "http://176.65.132.117/dlr.mpsl",
+                                "status": "offline",
+                                "date_added": "2026-04-25T14:37:39Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "mirai",
+                                    "wraith-scan"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T12:32:00Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:32:00Z",
+                    "last_observed": "2026-10-01T12:32:00Z",
+                    "data": {
+                        "as_owner": "TechTies Inc.",
+                        "asn": 197170,
+                        "network": "176.65.132.0/24",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -14,
+                        "analysis_stats": {
+                            "malicious": 10,
+                            "suspicious": 3,
+                            "undetected": 31,
+                            "harmless": 47,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "CyRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "ESET",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Emsisoft",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Forcepoint ThreatSeeker",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "VIPRE",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Webroot",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 4
+                        },
+                        "tags": [],
+                        "jarm": "28d28d28d00028d00042d42d000000e1ea2a807a629b496b664cf07ad7c08d",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

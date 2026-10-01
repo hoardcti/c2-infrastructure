@@ -1,21 +1,33 @@
 {
+    "schema_version": 2,
     "ip": "20.218.127.242",
+    "first_seen": "2026-05-20T22:24:18.861294Z",
+    "last_seen": "2026-05-20T22:24:18.861294Z",
     "flags": [
         "c2_meshagent"
     ],
-    "results": [
-        {
-            "source": "criminalip",
-            "datetime": "2026-05-20T22:24:18.861294",
-            "flags": [
-                "c2_meshagent"
-            ],
-            "metadata": {
-                "port": "41079",
-                "score": "Critical/Critical",
-                "country": "de",
-                "scanTime": "2026-05-18 01:34:26"
-            }
+    "sources": {
+        "criminalip": {
+            "last_checked": "2026-05-20T22:24:18.861294Z",
+            "observations": [
+                {
+                    "first_observed": "2026-05-20T22:24:18.861294Z",
+                    "last_observed": "2026-05-20T22:24:18.861294Z",
+                    "flags": [
+                        "c2_meshagent"
+                    ],
+                    "data": {
+                        "port": "41079",
+                        "score": "Critical/Critical",
+                        "country": "de",
+                        "scanTime": "2026-05-18 01:34:26"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
         }
-    ]
+    }
 }

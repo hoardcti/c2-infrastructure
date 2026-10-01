@@ -1,24 +1,122 @@
 {
+    "schema_version": 2,
     "ip": "45.198.224.102",
+    "first_seen": "2026-09-28T15:08:48.856052Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-28T15:08:48.856052",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-28T11:34:55",
-                "port": "8080",
-                "reference": "",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1940930",
-                "ioc": "45.198.224.102:8080",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:22:43Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:22:43Z",
+                    "last_observed": "2026-10-01T12:22:43Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            25565
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:08Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:08Z",
+                    "last_observed": "2026-10-01T12:20:08Z",
+                    "data": {
+                        "asn": "AS215925",
+                        "as_name": "VPSVAULT.HOST LTD",
+                        "as_domain": "vpsvault.host",
+                        "country_code": "CA",
+                        "country": "Canada",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-28T15:08:48.856052Z",
+                    "last_observed": "2026-09-28T15:08:48.856052Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-28T11:34:55",
+                        "port": "8080",
+                        "reference": "",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1940930",
+                        "ioc": "45.198.224.102:8080",
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1940931",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "45.198.224.102:2139",
+                        "port": 2139,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-28T11:34:55Z",
+                        "reference": "",
+                        "tags": [
+                            "botnet",
+                            "c2",
+                            "kushnet"
+                        ]
+                    }
+                },
+                {
+                    "key": "1940930",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "45.198.224.102:8080",
+                        "port": 8080,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-28T11:34:55Z",
+                        "reference": "",
+                        "tags": [
+                            "botnet",
+                            "c2",
+                            "kushnet"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

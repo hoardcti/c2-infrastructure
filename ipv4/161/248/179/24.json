@@ -1,24 +1,106 @@
 {
+    "schema_version": 2,
     "ip": "161.248.179.24",
+    "first_seen": "2026-09-23T16:40:16.25109Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-23T16:40:16.251090",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-20T05:32:54",
-                "id": "1924685",
-                "ioc": "161.248.179.24:2404",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "port": "2404",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:39Z",
+                    "last_observed": "2026-10-01T12:23:39Z",
+                    "data": {
+                        "ports": [
+                            135
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:19Z",
+                    "last_observed": "2026-10-01T12:20:19Z",
+                    "data": {
+                        "asn": "AS150895",
+                        "as_name": "EZ TECHNOLOGY COMPANY LIMITED",
+                        "as_domain": "eztech.com.vn",
+                        "country_code": "VN",
+                        "country": "Vietnam",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "161.248.178.0/23",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "161.248.178.0/23",
+                        "sblid": "SBL687556",
+                        "rir": "apnic"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-23T16:40:16.25109Z",
+                    "last_observed": "2026-09-23T16:40:16.25109Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-20T05:32:54",
+                        "id": "1924685",
+                        "ioc": "161.248.179.24:2404",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "port": "2404",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1924685",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "161.248.179.24:2404",
+                        "port": 2404,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-20T05:32:54Z",
+                        "reference": null,
+                        "tags": [
+                            "REMOTEHOST",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

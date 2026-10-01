@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "42.193.244.172",
+    "first_seen": "2026-05-28T13:33:04.492089Z",
+    "last_seen": "2026-05-28T13:33:04.492089Z",
     "flags": [
         "cobalt strike"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-05-28T13:33:04.492089",
-            "flags": [
-                "cobalt strike"
-            ],
-            "metadata": {
-                "firstSeen": "2026-05-12T14:51:10",
-                "port": "2083",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
-                "id": "1811200",
-                "ioc": "42.193.244.172:2083",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-05-28T13:33:04.492089Z",
+            "observations": [
+                {
+                    "first_observed": "2026-05-28T13:33:04.492089Z",
+                    "last_observed": "2026-05-28T13:33:04.492089Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-05-12T14:51:10",
+                        "port": "2083",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "id": "1811200",
+                        "ioc": "42.193.244.172:2083",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,54 @@
 {
+    "schema_version": 2,
     "ip": "184.107.115.238",
+    "first_seen": "2026-09-03T11:57:12.495858Z",
+    "last_seen": "2026-09-03T11:57:12.495858Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-03T11:57:12.495858",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-03T10:13:21",
-                "port": "2404",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1893783",
-                "ioc": "184.107.115.238:2404",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:49Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:49Z",
+                    "last_observed": "2026-10-01T12:21:49Z",
+                    "data": {
+                        "asn": "AS32613",
+                        "as_name": "Leaseweb Canada Inc.",
+                        "as_domain": "leaseweb.ca",
+                        "country_code": "CA",
+                        "country": "Canada",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-09-03T11:57:12.495858Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-03T11:57:12.495858Z",
+                    "last_observed": "2026-09-03T11:57:12.495858Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-03T10:13:21",
+                        "port": "2404",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1893783",
+                        "ioc": "184.107.115.238:2404",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

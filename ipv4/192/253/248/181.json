@@ -1,24 +1,47 @@
 {
+    "schema_version": 2,
     "ip": "192.253.248.181",
+    "first_seen": "2026-05-28T13:33:04.489017Z",
+    "last_seen": "2026-05-28T13:33:04.489017Z",
     "flags": [
         "odyssey stealer"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-05-28T13:33:04.489017",
-            "flags": [
-                "odyssey stealer"
-            ],
-            "metadata": {
-                "firstSeen": "2026-05-26T15:06:03",
-                "port": "80",
-                "reference": "https://www.virustotal.com/gui/file/0a308e7805ce5263f07df08b52488b573b89e91971138ab8f3003624b3a3f809",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/osx.odyssey_stealer",
-                "id": "1818809",
-                "ioc": "192.253.248.181:80",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": [
+                {
+                    "key": "192.253.248.0/24",
+                    "first_observed": "2026-10-01T12:19:59Z",
+                    "last_observed": "2026-10-01T12:19:59Z",
+                    "data": {
+                        "cidr": "192.253.248.0/24",
+                        "sblid": "SBL692904",
+                        "rir": "arin"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-05-28T13:33:04.489017Z",
+            "observations": [
+                {
+                    "first_observed": "2026-05-28T13:33:04.489017Z",
+                    "last_observed": "2026-05-28T13:33:04.489017Z",
+                    "flags": [
+                        "odyssey stealer"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-05-26T15:06:03",
+                        "port": "80",
+                        "reference": "https://www.virustotal.com/gui/file/0a308e7805ce5263f07df08b52488b573b89e91971138ab8f3003624b3a3f809",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/osx.odyssey_stealer",
+                        "id": "1818809",
+                        "ioc": "192.253.248.181:80",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

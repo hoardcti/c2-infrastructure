@@ -1,24 +1,47 @@
 {
+    "schema_version": 2,
     "ip": "45.74.7.158",
+    "first_seen": "2026-08-30T07:56:15.354563Z",
+    "last_seen": "2026-08-30T07:56:15.354563Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-30T07:56:15.354563",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-30T07:09:43",
-                "port": "4332",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1891127",
-                "ioc": "45.74.7.158:4332",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "45.74.7.0/24",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "45.74.7.0/24",
+                        "sblid": "SBL696401",
+                        "rir": "arin"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-08-30T07:56:15.354563Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-30T07:56:15.354563Z",
+                    "last_observed": "2026-08-30T07:56:15.354563Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-30T07:09:43",
+                        "port": "4332",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1891127",
+                        "ioc": "45.74.7.158:4332",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

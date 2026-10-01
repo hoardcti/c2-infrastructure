@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "51.52.39.37",
+    "first_seen": "2026-08-18T12:44:02.840147Z",
+    "last_seen": "2026-08-18T12:44:02.840147Z",
     "flags": [
         "unknown malware"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-18T12:44:02.840147",
-            "flags": [
-                "unknown malware"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-18T12:01:49",
-                "port": "8080",
-                "reference": "https://www.shodan.io/host/51.52.39.37#8080",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1880710",
-                "ioc": "51.52.39.37:8080",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-08-18T12:44:02.840147Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-18T12:44:02.840147Z",
+                    "last_observed": "2026-08-18T12:44:02.840147Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-18T12:01:49",
+                        "port": "8080",
+                        "reference": "https://www.shodan.io/host/51.52.39.37#8080",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "id": "1880710",
+                        "ioc": "51.52.39.37:8080",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

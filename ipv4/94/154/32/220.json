@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "94.154.32.220",
+    "first_seen": "2026-08-15T16:23:16.866518Z",
+    "last_seen": "2026-08-15T16:23:16.866518Z",
     "flags": [
         "asyncrat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-08-15T16:23:16.866518",
-            "flags": [
-                "asyncrat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-08-15T15:43:03",
-                "port": "80",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat",
-                "id": "1876209",
-                "ioc": "94.154.32.220:80",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-08-15T16:23:16.866518Z",
+            "observations": [
+                {
+                    "first_observed": "2026-08-15T16:23:16.866518Z",
+                    "last_observed": "2026-08-15T16:23:16.866518Z",
+                    "flags": [
+                        "asyncrat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-08-15T15:43:03",
+                        "port": "80",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat",
+                        "id": "1876209",
+                        "ioc": "94.154.32.220:80",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

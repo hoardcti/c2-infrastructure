@@ -1,24 +1,65 @@
 {
+    "schema_version": 2,
     "ip": "141.98.10.154",
+    "first_seen": "2026-09-06T13:57:34.875418Z",
+    "last_seen": "2026-09-06T13:57:34.875418Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-06T13:57:34.875418",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-06T13:17:30",
-                "port": "2404",
-                "reference": null,
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1902183",
-                "ioc": "141.98.10.154:2404",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:21:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:21:46Z",
+                    "last_observed": "2026-10-01T12:21:46Z",
+                    "data": {
+                        "asn": "AS209605",
+                        "as_name": "UAB Host Baltic",
+                        "as_domain": "serveroffer.lt",
+                        "country_code": "LT",
+                        "country": "Lithuania",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": [
+                {
+                    "key": "141.98.10.0/24",
+                    "first_observed": "2026-10-01T12:19:58Z",
+                    "last_observed": "2026-10-01T12:19:58Z",
+                    "data": {
+                        "cidr": "141.98.10.0/24",
+                        "sblid": "SBL694569",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-09-06T13:57:34.875418Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-06T13:57:34.875418Z",
+                    "last_observed": "2026-09-06T13:57:34.875418Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-06T13:17:30",
+                        "port": "2404",
+                        "reference": null,
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "id": "1902183",
+                        "ioc": "141.98.10.154:2404",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

@@ -1,24 +1,102 @@
 {
+    "schema_version": 2,
     "ip": "206.123.132.73",
+    "first_seen": "2026-09-25T13:26:49.944075Z",
+    "last_seen": "2026-10-01T12:19:51Z",
     "flags": [
         "remcos"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-09-25T13:26:49.944075",
-            "flags": [
-                "remcos"
-            ],
-            "metadata": {
-                "firstSeen": "2026-09-25T11:47:17",
-                "id": "1932753",
-                "ioc": "206.123.132.73:2301",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "port": "2301",
-                "reference": null,
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T12:23:06Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:23:06Z",
+                    "last_observed": "2026-10-01T12:23:06Z",
+                    "data": {
+                        "ports": [
+                            135,
+                            137,
+                            443,
+                            902,
+                            3389,
+                            9031
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-01T12:20:12Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T12:20:12Z",
+                    "last_observed": "2026-10-01T12:20:12Z",
+                    "data": {
+                        "asn": "AS212238",
+                        "as_name": "Datacamp Limited",
+                        "as_domain": "datacamp.co.uk",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-01T12:19:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-09-25T13:26:49.944075Z",
+                    "last_observed": "2026-09-25T13:26:49.944075Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-09-25T11:47:17",
+                        "id": "1932753",
+                        "ioc": "206.123.132.73:2301",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "port": "2301",
+                        "reference": null,
+                        "threat_type": "botnet_cc"
+                    }
+                },
+                {
+                    "key": "1932753",
+                    "first_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T12:19:51Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "206.123.132.73:2301",
+                        "port": 2301,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-09-25T11:47:17Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "nuevos 07",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
         }
-    ]
+    }
 }

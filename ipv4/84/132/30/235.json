@@ -1,24 +1,36 @@
 {
+    "schema_version": 2,
     "ip": "84.132.30.235",
+    "first_seen": "2026-06-02T17:24:04.157916Z",
+    "last_seen": "2026-06-02T17:24:04.157916Z",
     "flags": [
         "ghost rat"
     ],
-    "results": [
-        {
-            "source": "threatfox",
-            "datetime": "2026-06-02T17:24:04.157916",
-            "flags": [
-                "ghost rat"
-            ],
-            "metadata": {
-                "firstSeen": "2026-06-02T14:08:35",
-                "port": "80",
-                "reference": "https://www.shodan.io/host/84.132.30.235#80",
-                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.ghost_rat",
-                "id": "1821235",
-                "ioc": "84.132.30.235:80",
-                "threat_type": "botnet_cc"
-            }
+    "sources": {
+        "spamhaus": {
+            "last_checked": "2026-10-01T12:19:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-06-02T17:24:04.157916Z",
+            "observations": [
+                {
+                    "first_observed": "2026-06-02T17:24:04.157916Z",
+                    "last_observed": "2026-06-02T17:24:04.157916Z",
+                    "flags": [
+                        "ghost rat"
+                    ],
+                    "data": {
+                        "firstSeen": "2026-06-02T14:08:35",
+                        "port": "80",
+                        "reference": "https://www.shodan.io/host/84.132.30.235#80",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.ghost_rat",
+                        "id": "1821235",
+                        "ioc": "84.132.30.235:80",
+                        "threat_type": "botnet_cc"
+                    }
+                }
+            ]
         }
-    ]
+    }
 }
