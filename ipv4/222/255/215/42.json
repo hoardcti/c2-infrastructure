@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "222.255.215.42",
     "first_seen": "2026-09-14T11:57:26.201484Z",
-    "last_seen": "2026-10-01T16:10:48Z",
+    "last_seen": "2026-10-01T21:41:09Z",
     "flags": [
         "cobalt strike"
     ],
@@ -71,12 +71,110 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-01T21:51:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T21:51:44Z",
+                    "last_observed": "2026-10-01T21:51:44Z",
+                    "data": {
+                        "org": "VietNam Data Communication Company",
+                        "isp": "VNPT Corp",
+                        "asn": "AS45899",
+                        "os": null,
+                        "country_code": "VN",
+                        "hostnames": [
+                            "ctf.actvn.edu.vn",
+                            "static.vnpt.vn"
+                        ],
+                        "domains": [
+                            "actvn.edu.vn",
+                            "vnpt.vn"
+                        ],
+                        "tags": [
+                            "c2",
+                            "eol-product",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "KMA CTF 2026",
+                                "jarm": "15d3fd16d29d29d00042d43d000000fbc10435df141b3459e26f69e76d5947",
+                                "certificate_sha256": "517dcf20673e6e557a9a4cc8d32b9782903821db71741c128f3fcc6684906ca2",
+                                "certificate_subject": "ctf.actvn.edu.vn",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 2096,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 7000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 21116,
+                                "transport": "tcp",
+                                "product": "RustDesk"
+                            },
+                            {
+                                "port": 30005,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "87f2085c32b6a2cc709b365f55873e207a9caa10bffecf2fd16d3cf9d94d390c"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "4d7a055b35f3834e2fec4625f3a0738a5e206f1e3bb818b4b823799daf551183",
+                                "certificate_subject": "Major Cobalt Strike",
+                                "certificate_organisation": "cobaltstrike",
+                                "certificate_issuer": "Major Cobalt Strike"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T16:10:48Z",
+            "last_checked": "2026-10-01T21:41:09Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.201484Z",
@@ -97,7 +195,7 @@
                 {
                     "key": "1917356",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T16:10:48Z",
+                    "last_observed": "2026-10-01T21:41:09Z",
                     "flags": [
                         "cobalt strike"
                     ],

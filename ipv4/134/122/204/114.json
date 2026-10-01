@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "134.122.204.114",
     "first_seen": "2026-09-24T09:14:50.536636Z",
-    "last_seen": "2026-10-01T16:10:48Z",
+    "last_seen": "2026-10-01T21:41:09Z",
     "flags": [
         "unknown malware"
     ],
@@ -75,7 +75,7 @@
             ]
         },
         "threatfox": {
-            "last_checked": "2026-10-01T16:10:48Z",
+            "last_checked": "2026-10-01T21:41:09Z",
             "observations": [
                 {
                     "first_observed": "2026-09-24T09:14:50.536636Z",
@@ -96,7 +96,7 @@
                 {
                     "key": "1931091",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T16:10:48Z",
+                    "last_observed": "2026-10-01T21:41:09Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -122,6 +122,75 @@
         "urlhaus": {
             "last_checked": "2026-10-01T16:15:14Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T21:54:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T21:54:16Z",
+                    "last_observed": "2026-10-01T21:54:16Z",
+                    "data": {
+                        "as_owner": "CTG Server Limited",
+                        "asn": 152194,
+                        "network": "134.122.192.0/18",
+                        "country": "JP",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -12,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 2,
+                            "undetected": 31,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Forcepoint ThreatSeeker",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 2
+                        },
+                        "tags": [],
+                        "jarm": "3fd3fd0003fd3fd21c42d42d000000bdfc58c9a46434368cf60aa440385763",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

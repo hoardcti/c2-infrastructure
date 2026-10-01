@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "151.244.228.91",
     "first_seen": "2026-09-14T11:57:26.201306Z",
-    "last_seen": "2026-10-01T16:10:48Z",
+    "last_seen": "2026-10-01T21:41:09Z",
     "flags": [
         "cobalt strike"
     ],
@@ -60,12 +60,109 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-01T21:52:10Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T21:52:10Z",
+                    "last_observed": "2026-10-01T21:52:10Z",
+                    "data": {
+                        "org": "DIAMOND IP BROKERS FZCO",
+                        "isp": "FREAKHOSTING LTD",
+                        "asn": "AS215703",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "officesrv.com"
+                        ],
+                        "domains": [
+                            "officesrv.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Microsoft IIS httpd",
+                                "version": "10.0"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Microsoft IIS httpd",
+                                "version": "10.0",
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "af30a7e245fa6177f74e436c4e9f53c242e1e452a3b58a7f7aeddf570b2acd68",
+                                "certificate_subject": "officesrv.com",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 4434,
+                                "transport": "tcp",
+                                "product": "Microsoft IIS httpd",
+                                "version": "10.0",
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "af30a7e245fa6177f74e436c4e9f53c242e1e452a3b58a7f7aeddf570b2acd68",
+                                "certificate_subject": "officesrv.com",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 4443,
+                                "transport": "tcp",
+                                "product": "Microsoft IIS httpd",
+                                "version": "10.0",
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "af30a7e245fa6177f74e436c4e9f53c242e1e452a3b58a7f7aeddf570b2acd68",
+                                "certificate_subject": "officesrv.com",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "Microsoft IIS httpd",
+                                "version": "10.0"
+                            },
+                            {
+                                "port": 8085,
+                                "transport": "tcp",
+                                "product": "Microsoft IIS httpd",
+                                "version": "10.0"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "b2c48b913336ad29c90bc6efb0e021b3da558bc8e9eb23d87df805b7bf8ac290",
+                                "certificate_subject": "Major Cobalt Strike",
+                                "certificate_organisation": "cobaltstrike",
+                                "certificate_issuer": "Major Cobalt Strike"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T16:10:48Z",
+            "last_checked": "2026-10-01T21:41:09Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.201306Z",
@@ -86,7 +183,7 @@
                 {
                     "key": "1917375",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T16:10:48Z",
+                    "last_observed": "2026-10-01T21:41:09Z",
                     "flags": [
                         "cobalt strike"
                     ],
@@ -109,7 +206,7 @@
                 {
                     "key": "1917368",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T16:10:48Z",
+                    "last_observed": "2026-10-01T21:41:09Z",
                     "flags": [
                         "cobalt strike"
                     ],
@@ -132,7 +229,7 @@
                 {
                     "key": "1917367",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T16:10:48Z",
+                    "last_observed": "2026-10-01T21:41:09Z",
                     "flags": [
                         "cobalt strike"
                     ],
@@ -155,7 +252,7 @@
                 {
                     "key": "1917363",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T16:10:48Z",
+                    "last_observed": "2026-10-01T21:41:09Z",
                     "flags": [
                         "cobalt strike"
                     ],

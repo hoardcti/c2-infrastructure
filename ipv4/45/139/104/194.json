@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "45.139.104.194",
     "first_seen": "2026-09-24T14:45:15.495152Z",
-    "last_seen": "2026-10-01T16:10:48Z",
+    "last_seen": "2026-10-01T21:41:09Z",
     "flags": [
         "remcos"
     ],
@@ -92,7 +92,7 @@
             ]
         },
         "threatfox": {
-            "last_checked": "2026-10-01T16:10:48Z",
+            "last_checked": "2026-10-01T21:41:09Z",
             "observations": [
                 {
                     "first_observed": "2026-09-24T14:45:15.495152Z",
@@ -113,7 +113,7 @@
                 {
                     "key": "1932276",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T16:10:48Z",
+                    "last_observed": "2026-10-01T21:41:09Z",
                     "flags": [
                         "remcos"
                     ],
@@ -138,6 +138,55 @@
         "urlhaus": {
             "last_checked": "2026-10-01T16:15:08Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T21:53:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T21:53:31Z",
+                    "last_observed": "2026-10-01T21:53:31Z",
+                    "data": {
+                        "as_owner": "49.3 Networking LLC",
+                        "asn": 399979,
+                        "network": "45.139.104.0/24",
+                        "country": "BG",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 0,
+                            "undetected": 34,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Forcepoint ThreatSeeker",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "29d29d00029d29d00042d42d0000002059a3b916699461c5923779b77cf06b",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "91.92.153.119",
     "first_seen": "2026-09-14T11:57:26.201159Z",
-    "last_seen": "2026-10-01T16:10:48Z",
+    "last_seen": "2026-10-01T21:41:09Z",
     "flags": [
         "unknown malware"
     ],
@@ -49,12 +49,66 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-01T21:52:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T21:52:46Z",
+                    "last_observed": "2026-10-01T21:52:46Z",
+                    "data": {
+                        "org": "Exoscale Open Cloud GV2",
+                        "isp": "exoscale Akenes SA",
+                        "asn": "AS61098",
+                        "os": null,
+                        "country_code": "CH",
+                        "hostnames": [
+                            "praxo.ch"
+                        ],
+                        "domains": [
+                            "praxo.ch"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "2226be7a9ad004e85f0fccb445555b6a5b1224001afe1206c577920f2d20a3ae",
+                                "certificate_subject": "*.praxo.ch",
+                                "certificate_issuer": "GandiCert"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "2226be7a9ad004e85f0fccb445555b6a5b1224001afe1206c577920f2d20a3ae",
+                                "certificate_subject": "*.praxo.ch",
+                                "certificate_issuer": "GandiCert"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T16:10:48Z",
+            "last_checked": "2026-10-01T21:41:09Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.201159Z",
@@ -75,7 +129,7 @@
                 {
                     "key": "1917393",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T16:10:48Z",
+                    "last_observed": "2026-10-01T21:41:09Z",
                     "flags": [
                         "unknown malware"
                     ],

@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "143.92.38.221",
     "first_seen": "2026-09-24T09:14:50.536635Z",
-    "last_seen": "2026-10-01T16:10:48Z",
+    "last_seen": "2026-10-01T21:41:09Z",
     "flags": [
         "unknown malware"
     ],
@@ -93,7 +93,7 @@
             ]
         },
         "threatfox": {
-            "last_checked": "2026-10-01T16:10:48Z",
+            "last_checked": "2026-10-01T21:41:09Z",
             "observations": [
                 {
                     "first_observed": "2026-09-24T09:14:50.536635Z",
@@ -114,7 +114,7 @@
                 {
                     "key": "1931090",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T16:10:48Z",
+                    "last_observed": "2026-10-01T21:41:09Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -140,6 +140,65 @@
         "urlhaus": {
             "last_checked": "2026-10-01T16:15:16Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T21:54:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T21:54:31Z",
+                    "last_observed": "2026-10-01T21:54:31Z",
+                    "data": {
+                        "as_owner": "CTG Server Limited",
+                        "asn": 152194,
+                        "network": "143.92.32.0/21",
+                        "country": "SG",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -12,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 1,
+                            "undetected": 33,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Chong Lua Dao",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Forcepoint ThreatSeeker",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 2
+                        },
+                        "tags": [],
+                        "jarm": "2ad2ad16d2ad2ad22c42d42d00000078e356c38fb85055d97a8bed930c8956",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

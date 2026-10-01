@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "168.245.203.185",
     "first_seen": "2026-09-23T16:40:16.251095Z",
-    "last_seen": "2026-10-01T16:10:48Z",
+    "last_seen": "2026-10-01T21:41:09Z",
     "flags": [
         "meterpreter"
     ],
@@ -64,7 +64,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T16:10:48Z",
+            "last_checked": "2026-10-01T21:41:09Z",
             "observations": [
                 {
                     "first_observed": "2026-09-23T16:40:16.251095Z",
@@ -85,7 +85,7 @@
                 {
                     "key": "1924731",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T16:10:48Z",
+                    "last_observed": "2026-10-01T21:41:09Z",
                     "flags": [
                         "meterpreter"
                     ],
@@ -111,6 +111,69 @@
         "urlhaus": {
             "last_checked": "2026-10-01T16:15:44Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T21:58:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T21:58:01Z",
+                    "last_observed": "2026-10-01T21:58:01Z",
+                    "data": {
+                        "as_owner": "Fastrack Technology",
+                        "asn": 58580,
+                        "network": "168.245.200.0/22",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 1,
+                            "undetected": 33,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Criminal IP",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "152.42.173.73",
     "first_seen": "2026-09-24T09:14:50.536639Z",
-    "last_seen": "2026-10-01T16:10:48Z",
+    "last_seen": "2026-10-01T21:41:09Z",
     "flags": [
         "aisuru"
     ],
@@ -64,7 +64,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T16:10:48Z",
+            "last_checked": "2026-10-01T21:41:09Z",
             "observations": [
                 {
                     "first_observed": "2026-09-24T09:14:50.536639Z",
@@ -85,7 +85,7 @@
                 {
                     "key": "1931193",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T16:10:48Z",
+                    "last_observed": "2026-10-01T21:41:09Z",
                     "flags": [
                         "aisuru"
                     ],
@@ -109,6 +109,59 @@
         "urlhaus": {
             "last_checked": "2026-10-01T16:15:12Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T21:54:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T21:54:01Z",
+                    "last_observed": "2026-10-01T21:54:01Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "152.42.128.0/17",
+                        "country": "SG",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 50,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

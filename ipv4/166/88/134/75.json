@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "166.88.134.75",
     "first_seen": "2026-09-23T16:40:16.251038Z",
-    "last_seen": "2026-10-01T16:10:48Z",
+    "last_seen": "2026-10-01T21:41:09Z",
     "flags": [
         "unknown malware"
     ],
@@ -84,7 +84,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T16:10:48Z",
+            "last_checked": "2026-10-01T21:41:09Z",
             "observations": [
                 {
                     "first_observed": "2026-09-23T16:40:16.251038Z",
@@ -105,7 +105,7 @@
                 {
                     "key": "1926648",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T16:10:48Z",
+                    "last_observed": "2026-10-01T21:41:09Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -129,7 +129,7 @@
                 {
                     "key": "1926649",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T16:10:48Z",
+                    "last_observed": "2026-10-01T21:41:09Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -147,6 +147,56 @@
                             "NullReceiver",
                             "c2",
                             "contagious-interview"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-01T21:45:49Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T21:45:49Z",
+                    "last_observed": "2026-10-01T21:45:49Z",
+                    "data": {
+                        "urlhaus_reference": "https://urlhaus.abuse.ch/host/166.88.134.75/",
+                        "first_seen": "2026-09-27T14:06:11Z",
+                        "url_count": 3,
+                        "blacklists": {
+                            "spamhaus_dbl": "not listed",
+                            "surbl": "not listed"
+                        },
+                        "urls": [
+                            {
+                                "id": "3923813",
+                                "url": "http://166.88.134.75:443/0x/js",
+                                "status": "offline",
+                                "date_added": "2026-09-27T14:06:16Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "DPRK"
+                                ]
+                            },
+                            {
+                                "id": "3923820",
+                                "url": "http://166.88.134.75:443/0x/cls",
+                                "status": "offline",
+                                "date_added": "2026-09-27T14:13:16Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "DPRK"
+                                ]
+                            },
+                            {
+                                "id": "3923821",
+                                "url": "http://166.88.134.75:443/0x/ls",
+                                "status": "offline",
+                                "date_added": "2026-09-27T14:13:16Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "DPRK"
+                                ]
+                            }
                         ]
                     }
                 }

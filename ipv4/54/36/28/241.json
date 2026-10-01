@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "54.36.28.241",
     "first_seen": "2026-09-14T11:57:26.201249Z",
-    "last_seen": "2026-10-01T16:10:48Z",
+    "last_seen": "2026-10-01T21:41:09Z",
     "flags": [
         "unknown malware"
     ],
@@ -76,12 +76,104 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-01T21:52:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T21:52:24Z",
+                    "last_observed": "2026-10-01T21:52:24Z",
+                    "data": {
+                        "org": "S.L. Dolbuck",
+                        "isp": "OVH SAS",
+                        "asn": "AS16276",
+                        "os": null,
+                        "country_code": "FR",
+                        "hostnames": [
+                            "ip241.ip-54-36-28.eu"
+                        ],
+                        "domains": [
+                            "ip-54-36-28.eu"
+                        ],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2015-9251",
+                            "CVE-2016-10735",
+                            "CVE-2018-14040",
+                            "CVE-2018-14042",
+                            "CVE-2018-20676",
+                            "CVE-2018-20677",
+                            "CVE-2019-11358",
+                            "CVE-2019-8331",
+                            "CVE-2020-11022",
+                            "CVE-2020-11023",
+                            "CVE-2024-21490"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.3p1 Debian 5"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "Gophish - Login"
+                            },
+                            {
+                                "port": 8025,
+                                "transport": "tcp",
+                                "http_title": "MailHog"
+                            },
+                            {
+                                "port": 8081,
+                                "transport": "tcp",
+                                "product": "BaseHTTPServer",
+                                "version": "0.6",
+                                "http_title": "Simulacro de concienciación — Dolbuck Ciberseguridad"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "SimpleHTTPServer",
+                                "version": "0.6",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "Login — Dolbuck Ciberseguridad",
+                                "jarm": "2ad2ad0002ad2ad00042d42d000000ad9bf51cc3f5a1e29eecb81d0c7b06eb",
+                                "certificate_sha256": "34be5be3221a7297adf93ea7c70b45c3155a32ea234c3d12559f768099d5fd4e",
+                                "certificate_subject": "pentesting-dashboard",
+                                "certificate_organisation": "IA-Pentesting",
+                                "certificate_issuer": "pentesting-dashboard"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T16:10:48Z",
+            "last_checked": "2026-10-01T21:41:09Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.201249Z",
@@ -102,7 +194,7 @@
                 {
                     "key": "1917382",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T16:10:48Z",
+                    "last_observed": "2026-10-01T21:41:09Z",
                     "flags": [
                         "unknown malware"
                     ],

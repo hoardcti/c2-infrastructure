@@ -2,11 +2,45 @@
     "schema_version": 2,
     "ip": "93.123.109.79",
     "first_seen": "2026-09-08T05:39:29.692117Z",
-    "last_seen": "2026-10-01T16:10:48Z",
+    "last_seen": "2026-10-01T21:41:09Z",
     "flags": [
         "meterpreter"
     ],
     "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T21:43:48Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T21:43:48Z",
+                    "last_observed": "2026-10-01T21:43:48Z",
+                    "data": {
+                        "ports": [
+                            135,
+                            137,
+                            139,
+                            445,
+                            3389,
+                            3790,
+                            5985,
+                            8000
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:encode:uvicorn",
+                            "cpe:/a:f5:nginx",
+                            "cpe:/a:python:python"
+                        ],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ]
+                    }
+                }
+            ]
+        },
         "ipinfo": {
             "last_checked": "2026-10-01T12:21:41Z",
             "observations": [
@@ -41,7 +75,7 @@
             ]
         },
         "threatfox": {
-            "last_checked": "2026-10-01T16:10:48Z",
+            "last_checked": "2026-10-01T21:41:09Z",
             "observations": [
                 {
                     "first_observed": "2026-09-08T05:39:29.692117Z",
@@ -62,7 +96,7 @@
                 {
                     "key": "1904074",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T16:10:48Z",
+                    "last_observed": "2026-10-01T21:41:09Z",
                     "flags": [
                         "meterpreter"
                     ],

@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "167.17.47.252",
     "first_seen": "2026-09-14T11:57:26.201606Z",
-    "last_seen": "2026-10-01T16:10:48Z",
+    "last_seen": "2026-10-01T21:41:09Z",
     "flags": [
         "cobalt strike"
     ],
@@ -79,12 +79,118 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-01T21:51:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T21:51:20Z",
+                    "last_observed": "2026-10-01T21:51:20Z",
+                    "data": {
+                        "org": "Oak Point Partners",
+                        "isp": "",
+                        "asn": "",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "252.47.17.167.sg6.servers.guru"
+                        ],
+                        "domains": [
+                            "servers.guru"
+                        ],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2009-2940",
+                            "CVE-2009-3720",
+                            "CVE-2020-29396",
+                            "CVE-2021-32052",
+                            "CVE-2023-27043",
+                            "CVE-2024-6232",
+                            "CVE-2024-7592",
+                            "CVE-2024-9287",
+                            "CVE-2025-12084",
+                            "CVE-2025-12781",
+                            "CVE-2025-13462",
+                            "CVE-2025-13836",
+                            "CVE-2025-13837",
+                            "CVE-2026-0864",
+                            "CVE-2026-15308",
+                            "CVE-2026-3087",
+                            "CVE-2026-3644",
+                            "CVE-2026-4519",
+                            "CVE-2026-6019",
+                            "CVE-2026-7210"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "AkamaiGHost"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "AkamaiGHost",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "3597c32bc8aa6072f5017a868e04faa51e102a116cf8f199a6c463f5fe14e260",
+                                "certificate_subject": "*.akamaiedge.net",
+                                "certificate_organisation": "Akamai Technologies Inc",
+                                "certificate_issuer": "*.akamaiedge.net"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "BaseHTTPServer",
+                                "version": "0.6"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "BaseHTTPServer",
+                                "version": "0.6"
+                            },
+                            {
+                                "port": 8888,
+                                "transport": "tcp",
+                                "product": "BaseHTTPServer",
+                                "version": "0.6"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "5d8b7ada3a4f9e2e98214f7378a3823a4509f0c7dd7e38a71b2b9cdcd7e761e6",
+                                "certificate_subject": "*.microsoft.com",
+                                "certificate_organisation": "Microsoft Corporation",
+                                "certificate_issuer": "*.microsoft.com"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T16:10:48Z",
+            "last_checked": "2026-10-01T21:41:09Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.201606Z",
@@ -105,7 +211,7 @@
                 {
                     "key": "1917342",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T16:10:48Z",
+                    "last_observed": "2026-10-01T21:41:09Z",
                     "flags": [
                         "cobalt strike"
                     ],
@@ -128,7 +234,7 @@
                 {
                     "key": "1917326",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T16:10:48Z",
+                    "last_observed": "2026-10-01T21:41:09Z",
                     "flags": [
                         "cobalt strike"
                     ],
