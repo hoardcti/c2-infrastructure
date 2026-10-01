@@ -1,12 +1,13 @@
 package aggregator
 
 import (
+	"context"
+	"encoding/json/jsontext"
 	"errors"
 	"io/fs"
 	"net/netip"
 	"os"
 	"path/filepath"
-	"slices"
 	"strings"
 	"testing"
 	"time"
@@ -14,7 +15,7 @@ import (
 	"github.com/google/go-cmp/cmp"
 )
 
-// TestNewStoreCreatesDirectory checks that a missing output directory is created.
+// TestNewStoreCreatesDirectory checks that NewStore creates a missing output directory.
 func TestNewStoreCreatesDirectory(test *testing.T) {
 	test.Parallel()
 
@@ -34,8 +35,7 @@ func TestNewStoreCreatesDirectory(test *testing.T) {
 	}
 }
 
-// TestNewStoreErrors checks that an output directory that can't be created or opened is
-// reported.
+// TestNewStoreErrors checks that an output directory that can't be created or opened fails.
 func TestNewStoreErrors(test *testing.T) {
 	test.Parallel()
 
@@ -70,386 +70,411 @@ func TestNewStoreErrors(test *testing.T) {
 	})
 }
 
-// TestStoreSavePayloadNewFile checks that the first sighting of an address is written as is,
-// at the path that mirrors the address.
-func TestStoreSavePayloadNewFile(test *testing.T) {
+// TestStoreUpdateKeepsCompleteHistory checks that updates are persisted, merged into the one
+// file for the address, and never overwrite what's already stored.
+func TestStoreUpdateKeepsCompleteHistory(test *testing.T) {
 	test.Parallel()
 
 	store := newTestStore(test)
-	payload := newTestPayload("10.0.0.1", "source", fixedTime, `{"port":"443"}`, "z", "a")
+	address := netip.MustParseAddr("192.0.2.1")
+	later := fixedTime.Add(time.Hour)
 
-	if err := store.SavePayload(payload); nil != err {
-		test.Fatalf("SavePayload() error = %v, want nil", err)
+	updates := []struct {
+		source string
+		report Report
+		at     time.Time
+	}{
+		{source: "shodan", report: newTestReport("", `{"port":443,"service":"nginx"}`), at: fixedTime},
+		{source: "threatfox", report: newTestReport("1", `{"port":443}`, "sliver"), at: fixedTime},
+		{source: "shodan", report: newTestReport("", `{"port":443,"service":"Apache"}`), at: later},
 	}
 
-	// The flags aren't sorted on the first write: nothing has been merged yet.
-	if diff := cmp.Diff(payload, readStoredPayload(test, store, "10.0.0.1"), payloadComparison); "" != diff {
-		test.Errorf("stored payload mismatch (-want +got):\n%s", diff)
-	}
-
-	info, err := store.root.Stat(filepath.Join("ipv4", "10", "0", "0", "1.json"))
-	if nil != err {
-		test.Fatalf("stat of stored file: %v", err)
-	}
-
-	if OUTPUT_FILE_PERMISSIONS != info.Mode().Perm() {
-		test.Errorf("stored file permissions = %v, want %v", info.Mode().Perm(), fs.FileMode(OUTPUT_FILE_PERMISSIONS))
-	}
-}
-
-// TestStoreSavePayloadMerges checks that a second sighting is merged into the existing file.
-func TestStoreSavePayloadMerges(test *testing.T) {
-	test.Parallel()
-
-	store := newTestStore(test)
-	laterTime := fixedTime.Add(time.Hour)
-
-	for _, payload := range []Payload{
-		newTestPayload("10.0.0.1", "first", fixedTime, `{}`, "a"),
-		newTestPayload("10.0.0.1", "second", laterTime, `{}`, "b"),
-	} {
-		if err := store.SavePayload(payload); nil != err {
-			test.Fatalf("SavePayload() error = %v, want nil", err)
+	for _, update := range updates {
+		isWritten, err := store.Update(address, func(record *Record) {
+			record.addReports(update.source, []Report{update.report}, update.at)
+		})
+		if nil != err || !isWritten {
+			test.Fatalf("Update(%s) = (%v, %v), want the file written", update.source, isWritten, err)
 		}
 	}
 
-	want := Payload{
-		IP:    netip.MustParseAddr("10.0.0.1"),
-		Flags: []string{"a", "b"},
-		Results: []Result{
-			{Source: "first", Datetime: isoTime(fixedTime), Flags: []string{"a"}, Metadata: []byte(`{}`)},
-			{Source: "second", Datetime: isoTime(laterTime), Flags: []string{"b"}, Metadata: []byte(`{}`)},
-		},
-	}
-	if diff := cmp.Diff(want, readStoredPayload(test, store, "10.0.0.1"), payloadComparison); "" != diff {
-		test.Errorf("merged payload mismatch (-want +got):\n%s", diff)
-	}
-}
+	stored := readStoredRecord(test, store, "192.0.2.1")
 
-// TestStoreSavePayloadSkipsDatetimeOnlyChange checks that a repeated sighting doesn't rewrite
-// the file, so the published data doesn't change every hour.
-func TestStoreSavePayloadSkipsDatetimeOnlyChange(test *testing.T) {
-	test.Parallel()
-
-	store := newTestStore(test)
-	name := filepath.Join("ipv4", "10", "0", "0", "1.json")
-
-	if err := store.SavePayload(newTestPayload("10.0.0.1", "source", fixedTime, `{"port": 443}`, "a")); nil != err {
-		test.Fatalf("first SavePayload() error = %v, want nil", err)
+	shodanHistory := stored.Sources["shodan"].Observations
+	isNginxKept := 2 == len(shodanHistory) &&
+		cmp.Equal(jsontext.Value(`{"port":443,"service":"nginx"}`), shodanHistory[0].Data, recordComparison)
+	if !isNginxKept {
+		test.Errorf("stored shodan history = %+v, want the nginx observation kept before the Apache one", shodanHistory)
 	}
 
-	// Backdate the file so a rewrite would show in its modification time.
-	backdated := fixedTime.Add(-time.Hour)
-	if err := store.root.Chtimes(name, backdated, backdated); nil != err {
-		test.Fatalf("backdating stored file: %v", err)
+	if 1 != len(stored.Sources["threatfox"].Observations) || !fixedTime.Equal(stored.FirstSeen) {
+		test.Errorf("stored record = %+v, want the threatfox observation and its first_seen", stored)
 	}
 
-	// The same sighting an hour later, with the metadata written differently.
-	repeated := newTestPayload("10.0.0.1", "source", fixedTime.Add(time.Hour), `{"port":443.0}`, "a")
-	if err := store.SavePayload(repeated); nil != err {
-		test.Fatalf("second SavePayload() error = %v, want nil", err)
-	}
-
-	info, err := store.root.Stat(name)
-	if nil != err {
-		test.Fatalf("stat of stored file: %v", err)
-	}
-
-	if !backdated.Equal(info.ModTime()) {
-		test.Errorf("stored file modified at %v, want it left alone at %v", info.ModTime(), backdated)
+	// Every address has exactly one file: the one under ipv4/.
+	files := listStoreFiles(test, store)
+	if diff := cmp.Diff([]string{filepath.Join("ipv4", "192", "0", "2", "1.json")}, files); "" != diff {
+		test.Errorf("store files mismatch (-want +got):\n%s", diff)
 	}
 }
 
-// TestStoreSavePayloadErrors checks that payloads that can't be stored, and files that can't
-// be read or written, are reported.
-func TestStoreSavePayloadErrors(test *testing.T) {
-	test.Parallel()
-
-	validPayload := newTestPayload("10.0.0.1", "source", fixedTime, `{}`, "a")
-
-	testCases := []struct {
-		name string
-		// prepare sets up the output directory before the payload is saved.
-		prepare func(root *os.Root) error
-		payload Payload
-		// wantInvalid is true when the error must wrap errInvalidPayload.
-		wantInvalid bool
-	}{
-		{name: "zero address", payload: Payload{Results: validPayload.Results}, wantInvalid: true},
-		{
-			name:        "zoned address",
-			payload:     Payload{IP: netip.MustParseAddr("fe80::1%eth0"), Results: validPayload.Results},
-			wantInvalid: true,
-		},
-		{name: "no results", payload: Payload{IP: validPayload.IP}, wantInvalid: true},
-		{
-			name:    "directory blocked by a file",
-			prepare: func(root *os.Root) error { return root.WriteFile("ipv4", nil, 0o600) },
-			payload: validPayload,
-		},
-		{
-			name: "file is a directory",
-			prepare: func(root *os.Root) error {
-				return root.MkdirAll(filepath.Join("ipv4", "10", "0", "0", "1.json"), 0o700)
-			},
-			payload: validPayload,
-		},
-		{
-			name: "existing file isn't JSON",
-			prepare: func(root *os.Root) error {
-				if err := root.MkdirAll(filepath.Join("ipv4", "10", "0", "0"), 0o700); nil != err {
-					return err
-				}
-
-				return root.WriteFile(filepath.Join("ipv4", "10", "0", "0", "1.json"), []byte("{not json"), 0o600)
-			},
-			payload: validPayload,
-		},
-	}
-
-	for _, testCase := range testCases {
-		// The function literal is a closure over testCase. Each loop iteration has its own
-		// testCase, so the parallel subtests never share one.
-		test.Run(testCase.name, func(subtest *testing.T) {
-			subtest.Parallel()
-
-			store := newTestStore(subtest)
-			prepareOutputDirectory(subtest, store, testCase.prepare)
-
-			err := store.SavePayload(testCase.payload)
-			if nil == err {
-				subtest.Fatal("SavePayload() error = nil, want error")
-			}
-
-			if testCase.wantInvalid != errors.Is(err, errInvalidPayload) {
-				subtest.Errorf("SavePayload() error = %v, want errInvalidPayload %v", err, testCase.wantInvalid)
-			}
-		})
-	}
-}
-
-// TestAddressFileName checks the file path of IPv4, IPv6 and IPv4-mapped IPv6 addresses.
-func TestAddressFileName(test *testing.T) {
+// TestStoreUpdateLayout checks the file each kind of address is stored in, and that the file
+// ends with a newline and has the current schema version.
+func TestStoreUpdateLayout(test *testing.T) {
 	test.Parallel()
 
 	testCases := []struct {
-		address string
-		want    string
+		address  string
+		wantName string
 	}{
-		{address: "192.168.1.1", want: filepath.Join("ipv4", "192", "168", "1", "1.json")},
-		{
-			address: "2001:db8:85a3::8a2e:370:7334",
-			want:    filepath.Join("ipv6", "2001", "0db8", "85a3", "0000", "0000", "8a2e", "0370", "7334.json"),
-		},
-		{address: "::1", want: filepath.Join("ipv6", "0000", "0000", "0000", "0000", "0000", "0000", "0000", "0001.json")},
-		{
-			address: "::ffff:1.2.3.4",
-			want:    filepath.Join("ipv6", "0000", "0000", "0000", "0000", "0000", "ffff", "0102", "0304.json"),
-		},
-		{address: "2001:DB8::ABCD", want: filepath.Join("ipv6", "2001", "0db8", "0000", "0000", "0000", "0000", "0000", "abcd.json")},
+		{address: "1.15.76.39", wantName: filepath.Join("ipv4", "1", "15", "76", "39.json")},
+		{address: "2001:db8::8a2e:370:7334", wantName: filepath.Join("ipv6", "2001", "0db8", "0000", "0000", "0000", "8a2e", "0370", "7334.json")},
 	}
 
 	for _, testCase := range testCases {
 		test.Run(testCase.address, func(subtest *testing.T) {
 			subtest.Parallel()
 
-			if got := addressFileName(netip.MustParseAddr(testCase.address)); testCase.want != got {
-				subtest.Errorf("addressFileName(%s) = %q, want %q", testCase.address, got, testCase.want)
+			store := newTestStore(subtest)
+			address := netip.MustParseAddr(testCase.address)
+
+			if _, err := store.Update(address, func(record *Record) { record.addReports("feed", nil, fixedTime) }); nil != err {
+				subtest.Fatalf("Update(%s) error = %v, want nil", testCase.address, err)
+			}
+
+			content, err := store.root.ReadFile(testCase.wantName)
+			if nil != err {
+				subtest.Fatalf("reading %q: %v", testCase.wantName, err)
+			}
+
+			isCurrentFormat := strings.HasSuffix(string(content), "}\n") && strings.Contains(string(content), `"schema_version": 2`)
+			if !isCurrentFormat {
+				subtest.Errorf("stored file = %s, want version 2 ending with a newline", content)
 			}
 		})
 	}
 }
 
-// TestMergeInto checks that flags are combined and sorted, and that a repeated result keeps
-// its position and first-collected datetime but takes the newer metadata.
-func TestMergeInto(test *testing.T) {
-	test.Parallel()
-
-	laterTime := fixedTime.Add(time.Hour)
-	existing := Payload{
-		Flags: []string{"b", "a"},
-		Results: []Result{
-			{Source: "s1", Datetime: isoTime(fixedTime), Flags: []string{"a"}, Metadata: []byte(`{"v":"1"}`)},
-			{Source: "s2", Datetime: isoTime(fixedTime), Flags: []string{"b"}},
-		},
-	}
-	newer := Payload{
-		Flags: []string{"c", "a"},
-		Results: []Result{
-			{Source: "s1", Datetime: isoTime(laterTime), Flags: []string{"a"}, Metadata: []byte(`{"v":"2"}`)},
-			{Source: "s3", Datetime: isoTime(laterTime), Flags: []string{"c"}},
-		},
-	}
-
-	mergeInto(&existing, newer)
-
-	want := Payload{
-		Flags: []string{"a", "b", "c"},
-		Results: []Result{
-			{Source: "s1", Datetime: isoTime(fixedTime), Flags: []string{"a"}, Metadata: []byte(`{"v":"2"}`)},
-			{Source: "s2", Datetime: isoTime(fixedTime), Flags: []string{"b"}},
-			{Source: "s3", Datetime: isoTime(laterTime), Flags: []string{"c"}},
-		},
-	}
-	if diff := cmp.Diff(want, existing, payloadComparison); "" != diff {
-		test.Errorf("mergeInto() mismatch (-want +got):\n%s", diff)
-	}
-
-	if !laterTime.Equal(time.Time(newer.Results[0].Datetime)) {
-		test.Error("mergeInto() changed the newer payload's datetime")
-	}
-}
-
-// TestMergeIntoDatetimeKeptOnlyWhenBothSet checks that a result without a datetime takes the
-// newer one's.
-func TestMergeIntoDatetimeKeptOnlyWhenBothSet(test *testing.T) {
-	test.Parallel()
-
-	existing := Payload{Results: []Result{{Source: "s", Flags: []string{"a"}}}}
-	newer := Payload{Results: []Result{{Source: "s", Datetime: isoTime(fixedTime), Flags: []string{"a"}}}}
-
-	mergeInto(&existing, newer)
-
-	if !fixedTime.Equal(time.Time(existing.Results[0].Datetime)) {
-		test.Errorf("mergeInto() datetime = %v, want %v", time.Time(existing.Results[0].Datetime), fixedTime)
-	}
-}
-
-// TestMergeIntoCollapsesExistingDuplicates checks that duplicate results already in a file are
-// reduced to one, keeping the last.
-func TestMergeIntoCollapsesExistingDuplicates(test *testing.T) {
-	test.Parallel()
-
-	laterTime := fixedTime.Add(time.Hour)
-	existing := Payload{Results: []Result{
-		{Source: "s", Datetime: isoTime(fixedTime), Flags: []string{"a", "b"}},
-		{Source: "s", Datetime: isoTime(laterTime), Flags: []string{"b", "a"}},
-	}}
-
-	mergeInto(&existing, Payload{})
-
-	want := []Result{{Source: "s", Datetime: isoTime(laterTime), Flags: []string{"b", "a"}}}
-	if diff := cmp.Diff(want, existing.Results, payloadComparison); "" != diff {
-		test.Errorf("mergeInto() results mismatch (-want +got):\n%s", diff)
-	}
-}
-
-// TestResultKey checks which results count as duplicates.
-func TestResultKey(test *testing.T) {
-	test.Parallel()
-
-	base := Result{Source: "a", Flags: []string{"x", "y"}}
-
-	testCases := []struct {
-		name     string
-		other    Result
-		wantSame bool
-	}{
-		{name: "identical", other: Result{Source: "a", Flags: []string{"x", "y"}}, wantSame: true},
-		{name: "flag order ignored", other: Result{Source: "a", Flags: []string{"y", "x"}}, wantSame: true},
-		{name: "repeated flags ignored", other: Result{Source: "a", Flags: []string{"x", "y", "x"}}, wantSame: true},
-		{name: "datetime ignored", other: Result{Source: "a", Flags: []string{"x", "y"}, Datetime: isoTime(fixedTime)}, wantSame: true},
-		{name: "metadata ignored", other: Result{Source: "a", Flags: []string{"x", "y"}, Metadata: []byte(`{"k":1}`)}, wantSame: true},
-		{name: "different source", other: Result{Source: "b", Flags: []string{"x", "y"}}},
-		{name: "different flags", other: Result{Source: "a", Flags: []string{"x"}}},
-		// Without a separator, source "ax" with flag "y" would look like source "a" with "x", "y".
-		{name: "flag not confused with source", other: Result{Source: "ax", Flags: []string{"y"}}},
-	}
-
-	for _, testCase := range testCases {
-		test.Run(testCase.name, func(subtest *testing.T) {
-			subtest.Parallel()
-
-			if got := resultKey(base) == resultKey(testCase.other); testCase.wantSame != got {
-				subtest.Errorf("resultKey(%+v) == resultKey(%+v) is %v, want %v", base, testCase.other, got, testCase.wantSame)
-			}
-		})
-	}
-}
-
-// TestResultKeyDoesNotChangeFlags checks that sorting the flags for the key leaves the
-// result's own flags alone.
-func TestResultKeyDoesNotChangeFlags(test *testing.T) {
-	test.Parallel()
-
-	result := Result{Source: "a", Flags: []string{"z", "a", "z"}}
-	resultKey(result)
-
-	if want := []string{"z", "a", "z"}; !slices.Equal(want, result.Flags) {
-		test.Errorf("resultKey() changed the flags to %v, want %v", result.Flags, want)
-	}
-}
-
-// TestOnlyDatetimeChanged checks which differences make a file worth rewriting.
-func TestOnlyDatetimeChanged(test *testing.T) {
-	test.Parallel()
-
-	laterTime := fixedTime.Add(time.Hour)
-	base := newTestPayload("1.2.3.4", "s", fixedTime, `{"port": 443, "name": "x"}`, "a")
-
-	testCases := []struct {
-		name  string
-		after Payload
-		want  bool
-	}{
-		{name: "identical", after: base, want: true},
-		{name: "datetime only", after: newTestPayload("1.2.3.4", "s", laterTime, `{"port": 443, "name": "x"}`, "a"), want: true},
-		// Files written by Python have their metadata keys in a different order.
-		{name: "metadata key order", after: newTestPayload("1.2.3.4", "s", fixedTime, `{"name":"x","port":443}`, "a"), want: true},
-		{name: "metadata number format", after: newTestPayload("1.2.3.4", "s", fixedTime, `{"port": 443.0, "name": "x"}`, "a"), want: true},
-		{name: "metadata changed", after: newTestPayload("1.2.3.4", "s", fixedTime, `{"port": 80, "name": "x"}`, "a")},
-		{name: "invalid metadata", after: newTestPayload("1.2.3.4", "s", fixedTime, `{"port":`, "a")},
-		{name: "flags changed", after: Payload{Flags: []string{"a", "b"}, Results: base.Results}},
-		{name: "result added", after: newTestPayload("1.2.3.4", "s", fixedTime, `{"port": 443, "name": "x"}`, "a", "b")},
-		{name: "source changed", after: newTestPayload("1.2.3.4", "other", fixedTime, `{"port": 443, "name": "x"}`, "a")},
-		{name: "result flags changed", after: Payload{Flags: base.Flags, Results: []Result{{Source: "s", Flags: []string{"b"}}}}},
-	}
-
-	for _, testCase := range testCases {
-		test.Run(testCase.name, func(subtest *testing.T) {
-			subtest.Parallel()
-
-			if got := onlyDatetimeChanged(base, testCase.after); testCase.want != got {
-				subtest.Errorf("onlyDatetimeChanged(%+v, %+v) = %v, want %v", base, testCase.after, got, testCase.want)
-			}
-		})
-	}
-}
-
-// TestClonePayload checks that changing a clone's slices leaves the original alone.
-func TestClonePayload(test *testing.T) {
-	test.Parallel()
-
-	original := newTestPayload("1.2.3.4", "s", fixedTime, `{}`, "a")
-	clone := clonePayload(original)
-
-	clone.Flags[0] = "changed"
-	clone.Results[0].Source = "changed"
-
-	if "a" != original.Flags[0] || "s" != original.Results[0].Source {
-		test.Errorf("clonePayload() shares slices with the original: %+v", original)
-	}
-}
-
-// TestWritePayloadErrors checks that metadata that isn't valid JSON is refused rather than
-// written.
-func TestWritePayloadErrors(test *testing.T) {
+// TestStoreUpdateSkipsUnchangedRecord checks that a record left exactly as it was isn't
+// rewritten, so nothing changes in Git.
+func TestStoreUpdateSkipsUnchangedRecord(test *testing.T) {
 	test.Parallel()
 
 	store := newTestStore(test)
-	payload := newTestPayload("1.2.3.4", "s", fixedTime, `{"port":`, "a")
-
-	if err := writePayload(store.root, "payload.json", payload); nil == err {
-		test.Error("writePayload() with invalid metadata error = nil, want error")
+	address := netip.MustParseAddr("192.0.2.1")
+	addReport := func(record *Record) {
+		record.addReports("feed", []Report{newTestReport("1", `{"port":443}`, "sliver")}, fixedTime)
 	}
 
-	if _, err := store.root.Stat("payload.json"); !errors.Is(err, fs.ErrNotExist) {
-		test.Errorf("writePayload() left a file behind: stat error = %v", err)
+	if isWritten, err := store.Update(address, addReport); nil != err || !isWritten {
+		test.Fatalf("first Update() = (%v, %v), want the file written", isWritten, err)
+	}
+
+	if isWritten, err := store.Update(address, addReport); nil != err || isWritten {
+		test.Errorf("repeated Update() = (%v, %v), want no write", isWritten, err)
 	}
 }
 
-// TestWriteFileAtomically checks that a file is replaced whole, with no temporary file left
-// behind.
+// TestStoreUpdateMigratesVersion1 checks that a version 1 file keeps every result when it's
+// updated in the current format.
+func TestStoreUpdateMigratesVersion1(test *testing.T) {
+	test.Parallel()
+
+	store := newTestStore(test)
+	address := netip.MustParseAddr("155.94.154.152")
+	writeStoreFile(test, store, addressFileName(address), readTestdata(test, "published_threatfox.json"))
+
+	isWritten, err := store.Update(address, func(record *Record) {
+		record.addReports("threatfox", []Report{newTestReport("1917357", `{"port":50050}`, "cobalt strike")}, fixedTime)
+	})
+	if nil != err || !isWritten {
+		test.Fatalf("Update() = (%v, %v), want the file written", isWritten, err)
+	}
+
+	observations := readStoredRecord(test, store, "155.94.154.152").Sources["threatfox"].Observations
+	if 3 != len(observations) || !strings.Contains(string(observations[0].Data), "firstSeen") {
+		test.Errorf("stored observations = %+v, want both version 1 results kept and the new one added", observations)
+	}
+}
+
+// TestStoreUpdateErrors checks that an unusable address or stored file fails without changing
+// anything.
+func TestStoreUpdateErrors(test *testing.T) {
+	test.Parallel()
+
+	validAddress := netip.MustParseAddr("192.0.2.1")
+	validName := addressFileName(validAddress)
+
+	testCases := []struct {
+		name    string
+		address netip.Addr
+		// prepare sets up the output directory before the update.
+		prepare func(testingContext testing.TB, store *Store)
+		// change is the update; by default it adds an empty check.
+		change func(record *Record)
+		// wantErr is part of the error Update must return.
+		wantErr string
+	}{
+		{name: "zero address", wantErr: "can't be stored"},
+		{name: "zoned address", address: netip.MustParseAddr("fe80::1%eth0"), wantErr: "can't be stored"},
+		{name: "IPv4-mapped address", address: netip.MustParseAddr("::ffff:192.0.2.1"), wantErr: "can't be stored"},
+		{
+			name:    "corrupt file",
+			address: validAddress,
+			prepare: func(testingContext testing.TB, store *Store) {
+				testingContext.Helper()
+				writeStoreFile(testingContext, store, validName, []byte("{"))
+			},
+			wantErr: "decoding",
+		},
+		{
+			name:    "file describes another address",
+			address: validAddress,
+			prepare: func(testingContext testing.TB, store *Store) {
+				testingContext.Helper()
+				writeStoreFile(testingContext, store, validName, []byte(`{"schema_version": 2, "ip": "192.0.2.2"}`))
+			},
+			wantErr: "describes",
+		},
+		{
+			name:    "file can't be read",
+			address: validAddress,
+			prepare: func(testingContext testing.TB, store *Store) {
+				testingContext.Helper()
+				writeStoreFile(testingContext, store, filepath.Join(validName, "child"), nil)
+			},
+			wantErr: "reading",
+		},
+		{
+			name:    "record can't be encoded",
+			address: validAddress,
+			change: func(record *Record) {
+				record.Sources["feed"] = SourceHistory{Observations: []Observation{{Data: jsontext.Value("{")}}}
+			},
+			wantErr: "encoding",
+		},
+		{
+			name:    "file can't be replaced",
+			address: validAddress,
+			prepare: func(testingContext testing.TB, store *Store) {
+				testingContext.Helper()
+				// A directory where the temporary file goes can be neither written nor removed.
+				writeStoreFile(testingContext, store, filepath.Join(validName+TEMPORARY_FILE_SUFFIX, "child"), nil)
+			},
+			wantErr: "writing",
+		},
+	}
+
+	for _, testCase := range testCases {
+		test.Run(testCase.name, func(subtest *testing.T) {
+			subtest.Parallel()
+
+			store := newTestStore(subtest)
+			if nil != testCase.prepare {
+				testCase.prepare(subtest, store)
+			}
+
+			change := testCase.change
+			if nil == change {
+				change = func(record *Record) { record.addReports("feed", nil, fixedTime) }
+			}
+
+			isWritten, err := store.Update(testCase.address, change)
+			if nil == err || isWritten || !strings.Contains(err.Error(), testCase.wantErr) {
+				subtest.Errorf("Update() = (%v, %v), want an error containing %q and no write", isWritten, err, testCase.wantErr)
+			}
+		})
+	}
+}
+
+// TestStoreUpdateDirectoryCantBeCreated checks that a record whose directory can't be created
+// fails without a write.
+func TestStoreUpdateDirectoryCantBeCreated(test *testing.T) {
+	test.Parallel()
+
+	if 0 == os.Geteuid() {
+		test.Skip("root can write to any directory")
+	}
+
+	store := newTestStore(test)
+	if err := store.root.Mkdir("ipv4", 0o500); nil != err {
+		test.Fatalf("creating read-only ipv4: %v", err)
+	}
+
+	isWritten, err := store.Update(netip.MustParseAddr("192.0.2.1"), func(record *Record) { record.addReports("feed", nil, fixedTime) })
+	if nil == err || isWritten || !strings.Contains(err.Error(), "creating directory") {
+		test.Errorf("Update() = (%v, %v), want a directory error and no write", isWritten, err)
+	}
+}
+
+// TestStoreIndex checks that every record in the ipv4 and ipv6 trees is listed with its
+// sources' last attempts, that other files are ignored, and that version 1 files are upgraded.
+func TestStoreIndex(test *testing.T) {
+	test.Parallel()
+
+	store := newTestStore(test)
+	checkedAt := fixedTime.Add(-time.Hour)
+
+	for _, address := range []string{"2001:db8::1", "192.0.2.1"} {
+		if _, err := store.Update(netip.MustParseAddr(address), func(record *Record) {
+			record.addReports("feed", []Report{newTestReport("1", `{}`, "sliver")}, fixedTime)
+			record.addReports("shodan", nil, checkedAt)
+		}); nil != err {
+			test.Fatalf("Update(%s) error = %v, want nil", address, err)
+		}
+	}
+
+	legacyName := addressFileName(netip.MustParseAddr("155.94.154.152"))
+	writeStoreFile(test, store, legacyName, readTestdata(test, "published_threatfox.json"))
+	writeStoreFile(test, store, filepath.Join(".git", "config.json"), []byte("{"))
+	writeStoreFile(test, store, filepath.Join("ipv4", "README.md"), []byte("not a record"))
+	writeStoreFile(test, store, "stats.json", []byte("{"))
+
+	entries, err := store.index(test.Context(), []string{"feed", "shodan", "ipinfo"})
+	if nil != err {
+		test.Fatalf("index() error = %v, want nil", err)
+	}
+
+	legacyCollected := time.Date(2026, 9, 14, 11, 57, 26, 200758000, time.UTC)
+	want := []indexEntry{
+		{
+			address:      netip.MustParseAddr("155.94.154.152"),
+			firstSeen:    legacyCollected,
+			lastAttempts: map[string]time.Time{},
+		},
+		{
+			address:      netip.MustParseAddr("192.0.2.1"),
+			firstSeen:    fixedTime,
+			lastAttempts: map[string]time.Time{"feed": fixedTime, "shodan": checkedAt},
+		},
+		{
+			address:      netip.MustParseAddr("2001:db8::1"),
+			firstSeen:    fixedTime,
+			lastAttempts: map[string]time.Time{"feed": fixedTime, "shodan": checkedAt},
+		},
+	}
+	if diff := cmp.Diff(want, entries, cmp.AllowUnexported(indexEntry{}), recordComparison); "" != diff {
+		test.Errorf("index() mismatch (-want +got):\n%s", diff)
+	}
+
+	upgraded, err := store.root.ReadFile(legacyName)
+	if nil != err || !strings.Contains(string(upgraded), `"schema_version": 2`) {
+		test.Errorf("version 1 file after index() = (%s, %v), want it upgraded", upgraded, err)
+	}
+}
+
+// TestStoreIndexWithoutRecords checks that an output directory without ipv4 or ipv6 trees has
+// no entries and isn't an error.
+func TestStoreIndexWithoutRecords(test *testing.T) {
+	test.Parallel()
+
+	entries, err := newTestStore(test).index(test.Context(), nil)
+	if nil != err || 0 != len(entries) {
+		test.Errorf("index() of an empty store = (%v, %v), want no entries and no error", entries, err)
+	}
+}
+
+// TestStoreIndexReportsBadFilesAndContinues checks that a file that can't be indexed is
+// reported, and the files after it are still indexed.
+func TestStoreIndexReportsBadFilesAndContinues(test *testing.T) {
+	test.Parallel()
+
+	store := newTestStore(test)
+	writeStoreFile(test, store, filepath.Join("ipv4", "1", "1", "1", "1.json"), []byte("{"))
+	writeStoreFile(test, store, filepath.Join("ipv4", "1", "1", "1", "not-an-address.json"), []byte("{}"))
+	writeStoreFile(test, store, filepath.Join("ipv4", "1", "1", "1", "01.json"), []byte("{}"))
+	writeStoreFile(test, store, filepath.Join("ipv6", "1.2.3.4.json"), []byte("{}"))
+
+	// A version 1 file whose upgrade can't be written, because a directory blocks the
+	// temporary file.
+	legacyName := addressFileName(netip.MustParseAddr("155.94.154.152"))
+	writeStoreFile(test, store, legacyName, readTestdata(test, "published_threatfox.json"))
+	writeStoreFile(test, store, filepath.Join(legacyName+TEMPORARY_FILE_SUFFIX, "child"), nil)
+
+	if _, err := store.Update(netip.MustParseAddr("9.9.9.9"), func(record *Record) { record.addReports("feed", nil, fixedTime) }); nil != err {
+		test.Fatalf("Update() error = %v, want nil", err)
+	}
+
+	entries, err := store.index(test.Context(), []string{"feed"})
+	if 1 != len(entries) || netip.MustParseAddr("9.9.9.9") != entries[0].address {
+		test.Errorf("index() entries = %+v, want only 9.9.9.9", entries)
+	}
+
+	for _, want := range []string{"decoding", "not-an-address.json", "01.json", "1.2.3.4.json", "upgrading"} {
+		if nil == err || !strings.Contains(err.Error(), want) {
+			test.Errorf("index() error = %v, want it to mention %q", err, want)
+		}
+	}
+}
+
+// TestStoreIndexUnreadableDirectory checks that a directory that can't be listed is reported.
+func TestStoreIndexUnreadableDirectory(test *testing.T) {
+	test.Parallel()
+
+	if 0 == os.Geteuid() {
+		test.Skip("root can read any directory")
+	}
+
+	store := newTestStore(test)
+	if err := store.root.Mkdir("ipv4", OUTPUT_DIRECTORY_PERMISSIONS); nil != err {
+		test.Fatalf("creating ipv4: %v", err)
+	}
+
+	if err := store.root.Mkdir(filepath.Join("ipv4", "locked"), 0o000); nil != err {
+		test.Fatalf("creating locked directory: %v", err)
+	}
+
+	// Cleanup restores the permissions so the temporary directory can be removed.
+	test.Cleanup(func() {
+		if err := store.root.Chmod(filepath.Join("ipv4", "locked"), OUTPUT_DIRECTORY_PERMISSIONS); nil != err {
+			test.Errorf("unlocking directory: %v", err)
+		}
+	})
+
+	if _, err := store.index(test.Context(), nil); nil == err || !strings.Contains(err.Error(), "listing") {
+		test.Errorf("index() error = %v, want a listing error", err)
+	}
+}
+
+// TestStoreIndexCancelled checks that indexing stops when the context is cancelled.
+func TestStoreIndexCancelled(test *testing.T) {
+	test.Parallel()
+
+	store := newTestStore(test)
+	if _, err := store.Update(netip.MustParseAddr("192.0.2.1"), func(record *Record) { record.addReports("feed", nil, fixedTime) }); nil != err {
+		test.Fatalf("Update() error = %v, want nil", err)
+	}
+
+	ctx, cancel := context.WithCancel(test.Context())
+	cancel()
+
+	if _, err := store.index(ctx, nil); !errors.Is(err, context.Canceled) {
+		test.Errorf("index() of a cancelled context error = %v, want %v", err, context.Canceled)
+	}
+}
+
+// TestAddressFromFileName checks that only names addressFileName produces are accepted.
+func TestAddressFromFileName(test *testing.T) {
+	test.Parallel()
+
+	for _, address := range []string{"1.2.3.4", "2001:db8::1", "::"} {
+		parsed := netip.MustParseAddr(address)
+		// fs.WalkDir paths always use forward slashes.
+		name := filepath.ToSlash(addressFileName(parsed))
+
+		if got, err := addressFromFileName(name); nil != err || parsed != got {
+			test.Errorf("addressFromFileName(%q) = (%v, %v), want %v", name, got, err, parsed)
+		}
+	}
+
+	for _, name := range []string{"ipv4/1/2/3.json", "ipv4/1/2/3/04.json", "ipv5/1/2/3/4.json", "1.2.3.4.json", "ipv6/1/2/3/4.json"} {
+		if _, err := addressFromFileName(name); nil == err {
+			test.Errorf("addressFromFileName(%q) error = nil, want error", name)
+		}
+	}
+}
+
+// TestWriteFileAtomically checks that a write replaces the file and leaves no temporary file.
 func TestWriteFileAtomically(test *testing.T) {
 	test.Parallel()
 
@@ -471,8 +496,8 @@ func TestWriteFileAtomically(test *testing.T) {
 	}
 }
 
-// TestWriteFileAtomicallyErrors checks that failed writes are reported, that their temporary
-// files are cleaned up, and that a temporary file that can't be removed is reported too.
+// TestWriteFileAtomicallyErrors checks that a failed write is reported and cleans up after
+// itself where it can.
 func TestWriteFileAtomicallyErrors(test *testing.T) {
 	test.Parallel()
 
@@ -531,7 +556,7 @@ func TestWriteFileAtomicallyErrors(test *testing.T) {
 	}
 }
 
-// prepareOutputDirectory runs prepare, if it's set, on the store's output directory.
+// prepareOutputDirectory runs prepare, if set, on store's directory before a test.
 func prepareOutputDirectory(testingContext testing.TB, store *Store, prepare func(root *os.Root) error) {
 	testingContext.Helper()
 
@@ -542,4 +567,24 @@ func prepareOutputDirectory(testingContext testing.TB, store *Store, prepare fun
 	if err := prepare(store.root); nil != err {
 		testingContext.Fatalf("preparing output directory: %v", err)
 	}
+}
+
+// listStoreFiles returns the path of every file in store's directory, in lexical order.
+func listStoreFiles(testingContext testing.TB, store *Store) []string {
+	testingContext.Helper()
+
+	var files []string
+
+	err := fs.WalkDir(store.root.FS(), ".", func(name string, entry fs.DirEntry, err error) error {
+		if nil == err && !entry.IsDir() {
+			files = append(files, filepath.FromSlash(name))
+		}
+
+		return err
+	})
+	if nil != err {
+		testingContext.Fatalf("listing store files: %v", err)
+	}
+
+	return files
 }

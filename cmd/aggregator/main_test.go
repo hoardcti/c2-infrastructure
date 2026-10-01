@@ -2,24 +2,30 @@ package main
 
 import (
 	"bytes"
+	"encoding/json/jsontext"
 	"encoding/json/v2"
+	"log/slog"
+	"net/http"
 	"os"
 	"path/filepath"
 	"runtime/debug"
 	"strings"
 	"testing"
+
+	"github.com/hoardcti/c2-infrastructure/internal/aggregator"
 )
 
 // DISABLED_SOURCES is a sources file whose only source is disabled.
-const DISABLED_SOURCES = `{"aggregator": {"api": [{"name": "threatfox", "enabled": false}]}}`
+const DISABLED_SOURCES = `{"aggregator": {"feeds": [{"name": "threatfox", "enabled": false}]}}`
 
 // UNREACHABLE_THREATFOX_SOURCES enables ThreatFox at an address nothing listens on, so the run
 // fails at run time rather than while checking the configuration.
-const UNREACHABLE_THREATFOX_SOURCES = `{"aggregator": {"api": [{
+const UNREACHABLE_THREATFOX_SOURCES = `{"aggregator": {"feeds": [{
 	"name": "threatfox",
 	"enabled": true,
 	"url": "https://127.0.0.1:1/api/v1/",
-	"query": {"query": "taginfo", "limit": 1}
+	"requests_per_minute": 60,
+	"options": {"query": "taginfo", "limit": 1}
 }]}}`
 
 // TestRunWithNoEnabledSources checks a successful run: it reports on stdout, logs to stderr and
@@ -40,8 +46,8 @@ func TestRunWithNoEnabledSources(test *testing.T) {
 		test.Fatalf("run(%q) = %d, want %d; stderr: %s", arguments, exitCode, EXIT_SUCCESS, &stderr)
 	}
 
-	if "stored 0 payloads\n" != stdout.String() {
-		test.Errorf("run(%q) stdout = %q, want %q", arguments, &stdout, "stored 0 payloads\n")
+	if "wrote 0 records\n" != stdout.String() {
+		test.Errorf("run(%q) stdout = %q, want %q", arguments, &stdout, "wrote 0 records\n")
 	}
 
 	if !strings.Contains(stderr.String(), `msg="aggregation finished"`) {
@@ -97,8 +103,8 @@ func TestRunFailsWhenASourceFails(test *testing.T) {
 		test.Fatalf("run(%q) = %d, want %d; stderr: %s", arguments, exitCode, EXIT_FAILURE, &stderr)
 	}
 
-	if "stored 0 payloads\n" != stdout.String() {
-		test.Errorf("run(%q) stdout = %q, want %q", arguments, &stdout, "stored 0 payloads\n")
+	if "wrote 0 records\n" != stdout.String() {
+		test.Errorf("run(%q) stdout = %q, want %q", arguments, &stdout, "wrote 0 records\n")
 	}
 
 	// Every line is a JSON log entry; the failure is logged exactly once.
@@ -229,8 +235,16 @@ func TestRunUsageErrors(test *testing.T) {
 		},
 		{
 			name:       "invalid sources",
-			arguments:  []string{"-env", missingEnvFile, "-out", filepath.Join(directory, "out"), "-sources", writeTestFile(test, directory, "invalid.json", `{"aggregator": {"json": [{"name": "unknown", "enabled": true}]}}`)},
+			arguments:  []string{"-env", missingEnvFile, "-out", filepath.Join(directory, "out"), "-sources", writeTestFile(test, directory, "invalid.json", `{"aggregator": {"feeds": [{"name": "unknown", "enabled": true}]}}`)},
 			wantStderr: "checking sources failed",
+		},
+		{
+			name: "source name used twice",
+			arguments: []string{"-env", missingEnvFile, "-out", filepath.Join(directory, "out"), "-sources", writeTestFile(test, directory, "twice.json", `{"aggregator": {"feeds": [
+				{"name": "feodotracker", "enabled": true, "url": "https://example.com/", "requests_per_minute": 1},
+				{"name": "feodotracker", "enabled": true, "url": "https://example.com/", "requests_per_minute": 1}
+			]}}`)},
+			wantStderr: "used twice",
 		},
 	}
 
@@ -355,4 +369,142 @@ func writeTestFile(testingContext testing.TB, directory, name, content string) s
 	}
 
 	return path
+}
+
+// allSources is a configuration that enables every source the command knows, each with valid
+// settings.
+func allSources() aggregator.Configuration {
+	feed := func(name, options string) aggregator.SourceConfig {
+		return aggregator.SourceConfig{
+			Name: name, Enabled: true, URL: "https://example.com/", RequestsPerMinute: 1, Options: jsontext.Value(options),
+		}
+	}
+	enricher := func(name, options string) aggregator.SourceConfig {
+		config := feed(name, options)
+		config.MaxLookups, config.RefreshAfterHours, config.MaxMinutesPerRun = 1, 1, 1
+
+		return config
+	}
+
+	return aggregator.Configuration{
+		Feeds: []aggregator.SourceConfig{
+			feed("threatfox", `{"query": "taginfo", "limit": 1}`),
+			feed("feodotracker", ""),
+			feed("viribacktracker", ""),
+			feed("criminalip", `{"file_format": "YYYY-MM-DD.csv"}`),
+			{Name: "disabled", URL: "anything"},
+		},
+		Enrichers: []aggregator.SourceConfig{
+			enricher("urlhaus", ""),
+			enricher("spamhaus", `{"ipv6_url": "https://example.com/v6"}`),
+			enricher("internetdb", ""),
+			enricher("ipinfo", ""),
+			enricher("virustotal", ""),
+			enricher("abuseipdb", ""),
+			enricher("otx", ""),
+			enricher("shodan", ""),
+		},
+	}
+}
+
+// allAPIKeys sets every credential variable to a test value.
+func allAPIKeys() map[string]aggregator.APIKey {
+	apiKeys := map[string]aggregator.APIKey{}
+	for _, variable := range credentialVariables() {
+		apiKeys[variable] = "test-key"
+	}
+
+	return apiKeys
+}
+
+// newTestDependencies returns the dependencies of a test with the given credentials.
+func newTestDependencies(apiKeys map[string]aggregator.APIKey) sourceDependencies {
+	return sourceDependencies{
+		apiKeys:    apiKeys,
+		httpClient: &http.Client{},
+		userAgent:  "test",
+		logger:     slog.New(slog.DiscardHandler),
+	}
+}
+
+// TestNewSourceOptionsBuildsEverySource checks that every source the command knows can be
+// built, that disabled sources are skipped, and that the aggregator accepts them all.
+func TestNewSourceOptionsBuildsEverySource(test *testing.T) {
+	test.Parallel()
+
+	options, err := newSourceOptions(allSources(), newTestDependencies(allAPIKeys()))
+	if nil != err || 12 != len(options) {
+		test.Fatalf("newSourceOptions() = (%d options, %v), want 12 and no error", len(options), err)
+	}
+
+	store, err := aggregator.NewStore(test.TempDir())
+	if nil != err {
+		test.Fatalf("NewStore() error = %v, want nil", err)
+	}
+
+	test.Cleanup(func() {
+		if err := store.Close(); nil != err {
+			test.Errorf("Close() error = %v, want nil", err)
+		}
+	})
+
+	if _, err := aggregator.New(store, options...); nil != err {
+		test.Errorf("aggregator.New() error = %v, want nil", err)
+	}
+}
+
+// TestNewSourceOptionsReportsEveryProblem checks the problems newSourceOptions finds, all
+// reported at once: missing credentials, unknown names, invalid schedules, rates and URLs.
+func TestNewSourceOptionsReportsEveryProblem(test *testing.T) {
+	test.Parallel()
+
+	sources := allSources()
+	sources.Feeds = append(sources.Feeds, aggregator.SourceConfig{Name: "unknownfeed", Enabled: true, RequestsPerMinute: 1})
+	sources.Feeds[1].URL = "http://example.com/"
+	sources.Enrichers = append(
+		sources.Enrichers,
+		aggregator.SourceConfig{Name: "unknownenricher", Enabled: true, RequestsPerMinute: 1, MaxLookups: 1, RefreshAfterHours: 1, MaxMinutesPerRun: 1},
+		aggregator.SourceConfig{Name: "noschedule", Enabled: true},
+	)
+	sources.Enrichers[2].RequestsPerMinute = 0
+	sources.Enrichers[3].URL = "http://example.com/"
+
+	// Only the IPinfo token is set, so every other keyed source is missing its credential.
+	_, err := newSourceOptions(sources, newTestDependencies(map[string]aggregator.APIKey{IPINFO_TOKEN_VARIABLE: "token"}))
+
+	for _, want := range []string{
+		`source "threatfox": the ABUSECH_API_KEY environment variable is required`,
+		`source "feodotracker": checking url`,
+		`source "unknownfeed": no source has this name`,
+		`source "urlhaus": the ABUSECH_API_KEY environment variable is required`,
+		`source "internetdb": checking requests_per_minute`,
+		`source "ipinfo": checking url`,
+		`source "virustotal": the VIRUSTOTAL_API_KEY environment variable is required`,
+		`source "abuseipdb": the ABUSEIPDB_API_KEY environment variable is required`,
+		`source "otx": the OTX_API_KEY environment variable is required`,
+		`source "shodan": the SHODAN_API_KEY environment variable is required`,
+		`source "unknownenricher": no source has this name`,
+		`source "noschedule": checking schedule`,
+	} {
+		if nil == err || !strings.Contains(err.Error(), want) {
+			test.Errorf("newSourceOptions() error = %v, want it to contain %q", err, want)
+		}
+	}
+}
+
+// TestReadAPIKeys checks that every credential is read from the environment. It doesn't run
+// in parallel because it changes the process environment.
+func TestReadAPIKeys(test *testing.T) {
+	test.Setenv(ABUSECH_API_KEY_VARIABLE, "value of "+ABUSECH_API_KEY_VARIABLE)
+	test.Setenv(IPINFO_TOKEN_VARIABLE, "value of "+IPINFO_TOKEN_VARIABLE)
+	test.Setenv(VIRUSTOTAL_API_KEY_VARIABLE, "value of "+VIRUSTOTAL_API_KEY_VARIABLE)
+	test.Setenv(ABUSEIPDB_API_KEY_VARIABLE, "value of "+ABUSEIPDB_API_KEY_VARIABLE)
+	test.Setenv(OTX_API_KEY_VARIABLE, "value of "+OTX_API_KEY_VARIABLE)
+	test.Setenv(SHODAN_API_KEY_VARIABLE, "value of "+SHODAN_API_KEY_VARIABLE)
+
+	for variable, value := range readAPIKeys() {
+		if aggregator.APIKey("value of "+variable) != value {
+			test.Errorf("readAPIKeys()[%s] = %q, want the environment's value", variable, string(value))
+		}
+	}
 }

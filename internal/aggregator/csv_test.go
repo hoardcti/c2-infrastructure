@@ -1,11 +1,10 @@
 package aggregator
 
 import (
-	"errors"
-	"net/http"
+	"bytes"
+	"log/slog"
 	"strings"
 	"testing"
-	"testing/iotest"
 
 	"github.com/google/go-cmp/cmp"
 )
@@ -26,6 +25,8 @@ func TestReadCSVRows(test *testing.T) {
 		{name: "crlf line endings", body: "a,b\r\n1,2\r\n", want: [][]string{{"1", "2"}}},
 		// Stray quotes inside unquoted fields are kept as text rather than failing the feed.
 		{name: "stray quote", body: "a,b\n1\"2,3\n", want: [][]string{{"1\"2", "3"}}},
+		// So is an unterminated quoted field at the end of the feed.
+		{name: "unterminated quote", body: "a,b\n1,\"2\n", want: [][]string{{"1", "2\n"}}},
 		{name: "header only", body: "a,b\n", want: [][]string{}},
 		{name: "empty body"},
 		{
@@ -44,32 +45,19 @@ func TestReadCSVRows(test *testing.T) {
 		test.Run(testCase.name, func(subtest *testing.T) {
 			subtest.Parallel()
 
-			aggregator, logs := newTestAggregator(subtest, &http.Client{})
+			var logs bytes.Buffer
 
-			got, err := aggregator.readCSVRows(subtest.Context(), "test", strings.NewReader(testCase.body), 2)
-			if nil != err {
-				subtest.Fatalf("readCSVRows(%q) error = %v, want nil", testCase.body, err)
-			}
+			logger := slog.New(slog.NewTextHandler(&logs, nil))
 
-			if diff := cmp.Diff(testCase.want, got); "" != diff {
-				subtest.Errorf("readCSVRows(%q) mismatch (-want +got):\n%s", testCase.body, diff)
+			got := ReadCSVRows(subtest.Context(), logger, "test", []byte(testCase.body), 2)
+
+			if diff := cmp.Diff(testCase.want, got, recordComparison); "" != diff {
+				subtest.Errorf("ReadCSVRows(%q) mismatch (-want +got):\n%s", testCase.body, diff)
 			}
 
 			if !strings.Contains(logs.String(), testCase.wantLog) {
-				subtest.Errorf("readCSVRows(%q) logs = %q, want them to contain %q", testCase.body, logs, testCase.wantLog)
+				subtest.Errorf("ReadCSVRows(%q) logs = %q, want them to contain %q", testCase.body, logs.String(), testCase.wantLog)
 			}
 		})
-	}
-}
-
-// TestReadCSVRowsReadError checks that a body that can't be read fails the feed.
-func TestReadCSVRowsReadError(test *testing.T) {
-	test.Parallel()
-
-	aggregator, _ := newTestAggregator(test, &http.Client{})
-	readErr := errors.New("connection reset")
-
-	if _, err := aggregator.readCSVRows(test.Context(), "test", iotest.ErrReader(readErr), 2); !errors.Is(err, readErr) {
-		test.Errorf("readCSVRows() of a failing body error = %v, want %v", err, readErr)
 	}
 }

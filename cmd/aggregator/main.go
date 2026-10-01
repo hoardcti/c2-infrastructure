@@ -1,5 +1,9 @@
-// Command aggregator fetches the C2 feeds enabled in sources.json and stores every reported IP
-// address as a JSON file under the output directory, merging new sightings into existing files.
+// Command aggregator collects C2 intelligence from the sources enabled in sources.json and
+// keeps one JSON record per IP address under the output directory. Each record holds every
+// observation every source has reported about the address, so its whole history is kept.
+//
+// Feeds (such as ThreatFox) run first and add C2 servers; enrichers (such as Shodan or
+// VirusTotal) then look up addresses in the dataset within their configured budgets.
 //
 // Usage:
 //
@@ -13,14 +17,19 @@
 //	-log      log format, "text" or "json" (default "text")
 //	-level    minimum log level: "debug", "info", "warn" or "error" (default "info")
 //
-// Environment:
+// Environment (each is required only while a source that uses it is enabled):
 //
-//	ABUSECH_API_KEY  the abuse.ch Auth-Key; required while the threatfox source is enabled
+//	ABUSECH_API_KEY     abuse.ch Auth-Key, for threatfox and urlhaus
+//	IPINFO_TOKEN        IPinfo token, for ipinfo
+//	VIRUSTOTAL_API_KEY  VirusTotal key, for virustotal
+//	ABUSEIPDB_API_KEY   AbuseIPDB key, for abuseipdb
+//	OTX_API_KEY         AlienVault OTX key, for otx
+//	SHODAN_API_KEY      Shodan key, for shodan
 //
-// It prints the number of stored payloads to standard output and logs to standard error.
+// It prints the number of record files written to standard output and logs to standard error.
 //
 // Exit codes: 0 on success, 1 on a runtime failure such as an unreachable upstream, 2 on a
-// usage error such as an unknown flag or an invalid sources file.
+// usage error such as an unknown flag, an invalid sources file or a missing key.
 //
 // Example:
 //
@@ -45,6 +54,18 @@ import (
 	"github.com/joho/godotenv"
 
 	"github.com/hoardcti/c2-infrastructure/internal/aggregator"
+	"github.com/hoardcti/c2-infrastructure/internal/aggregator/abuseipdb"
+	"github.com/hoardcti/c2-infrastructure/internal/aggregator/criminalip"
+	"github.com/hoardcti/c2-infrastructure/internal/aggregator/feodotracker"
+	"github.com/hoardcti/c2-infrastructure/internal/aggregator/internetdb"
+	"github.com/hoardcti/c2-infrastructure/internal/aggregator/ipinfo"
+	"github.com/hoardcti/c2-infrastructure/internal/aggregator/otx"
+	"github.com/hoardcti/c2-infrastructure/internal/aggregator/shodan"
+	"github.com/hoardcti/c2-infrastructure/internal/aggregator/spamhaus"
+	"github.com/hoardcti/c2-infrastructure/internal/aggregator/threatfox"
+	"github.com/hoardcti/c2-infrastructure/internal/aggregator/urlhaus"
+	"github.com/hoardcti/c2-infrastructure/internal/aggregator/viribacktracker"
+	"github.com/hoardcti/c2-infrastructure/internal/aggregator/virustotal"
 )
 
 // Exit codes returned by run.
@@ -74,8 +95,6 @@ const (
 	LOG_FORMAT_JSON = "json"
 	// DEFAULT_LOG_FORMAT is the log format when -log isn't given.
 	DEFAULT_LOG_FORMAT = LOG_FORMAT_TEXT
-	// ABUSECH_API_KEY_VARIABLE is the environment variable holding the abuse.ch Auth-Key.
-	ABUSECH_API_KEY_VARIABLE = "ABUSECH_API_KEY"
 	// DEFAULT_HTTP_TIMEOUT bounds each upstream request, including reading the response.
 	DEFAULT_HTTP_TIMEOUT = 2 * time.Minute
 	// USER_AGENT_PRODUCT starts the User-Agent sent upstream; the program's version follows.
@@ -91,6 +110,25 @@ const (
 	VCS_REVISION_SETTING = "vcs.revision"
 )
 
+// Environment variables holding the sources' credentials.
+const (
+	// ABUSECH_API_KEY_VARIABLE holds the abuse.ch Auth-Key, used by ThreatFox and URLhaus.
+	ABUSECH_API_KEY_VARIABLE = "ABUSECH_API_KEY"
+	// IPINFO_TOKEN_VARIABLE holds the IPinfo token.
+	IPINFO_TOKEN_VARIABLE = "IPINFO_TOKEN"
+	// VIRUSTOTAL_API_KEY_VARIABLE holds the VirusTotal key.
+	VIRUSTOTAL_API_KEY_VARIABLE = "VIRUSTOTAL_API_KEY"
+	// ABUSEIPDB_API_KEY_VARIABLE holds the AbuseIPDB key.
+	ABUSEIPDB_API_KEY_VARIABLE = "ABUSEIPDB_API_KEY"
+	// OTX_API_KEY_VARIABLE holds the AlienVault OTX key.
+	OTX_API_KEY_VARIABLE = "OTX_API_KEY"
+	// SHODAN_API_KEY_VARIABLE holds the Shodan key.
+	SHODAN_API_KEY_VARIABLE = "SHODAN_API_KEY"
+)
+
+// errUnknownSource is returned for an enabled source whose name no package handles.
+var errUnknownSource = errors.New("no source has this name")
+
 // configuration holds every setting the command needs, resolved from flags, the environment
 // and defaults.
 type configuration struct {
@@ -102,8 +140,9 @@ type configuration struct {
 	logFormat string
 	// logLevel is the minimum level logged.
 	logLevel slog.Level
-	// abusechAPIKey authenticates ThreatFox requests; empty when unset.
-	abusechAPIKey aggregator.APIKey
+	// apiKeys maps each credential's environment variable to its value; a variable that is
+	// unset or empty is missing.
+	apiKeys map[string]aggregator.APIKey
 }
 
 // main runs the command and exits with its exit code. os.Exit skips deferred calls, so it's
@@ -134,14 +173,26 @@ func run(ctx context.Context, arguments []string, stdout, stderr io.Writer) int 
 	logger := newLogger(settings.logFormat, settings.logLevel, stderr)
 	version := buildVersion()
 
-	sources, err := aggregator.LoadSources(settings.sourcesPath)
+	sources, err := aggregator.LoadConfiguration(settings.sourcesPath)
 	if nil != err {
 		logger.ErrorContext(ctx, "loading sources failed", "error", err)
 
 		return EXIT_USAGE
 	}
 
-	// Build the dependencies once and pass them down.
+	// Build the dependencies once and pass them down. Every source shares one HTTP client.
+	sourceOptions, err := newSourceOptions(sources, sourceDependencies{
+		apiKeys:    settings.apiKeys,
+		httpClient: newHTTPClient(),
+		userAgent:  USER_AGENT_PRODUCT + version + USER_AGENT_CONTACT,
+		logger:     logger,
+	})
+	if nil != err {
+		logger.ErrorContext(ctx, "checking sources failed", "error", err)
+
+		return EXIT_USAGE
+	}
+
 	store, err := aggregator.NewStore(settings.outputDirectory)
 	if nil != err {
 		logger.ErrorContext(ctx, "opening output directory failed", "error", err)
@@ -156,14 +207,7 @@ func run(ctx context.Context, arguments []string, stdout, stderr io.Writer) int 
 		}
 	}()
 
-	sourceAggregator, err := aggregator.New(
-		sources,
-		store,
-		newHTTPClient(),
-		aggregator.WithLogger(logger),
-		aggregator.WithUserAgent(USER_AGENT_PRODUCT+version+USER_AGENT_CONTACT),
-		aggregator.WithAbusechAPIKey(settings.abusechAPIKey),
-	)
+	sourceAggregator, err := aggregator.New(store, append(sourceOptions, aggregator.WithLogger(logger))...)
 	if nil != err {
 		logger.ErrorContext(ctx, "checking sources failed", "error", err)
 
@@ -173,8 +217,8 @@ func run(ctx context.Context, arguments []string, stdout, stderr io.Writer) int 
 	// Do the work and report the outcome once. The count is printed even after a failure,
 	// because the sources that succeeded were still stored.
 	logger.InfoContext(ctx, "aggregation started", "version", version)
-	storedCount, err := sourceAggregator.Run(ctx)
-	fmt.Fprintf(stdout, "stored %d payloads\n", storedCount)
+	writtenCount, err := sourceAggregator.Run(ctx)
+	fmt.Fprintf(stdout, "wrote %d records\n", writtenCount)
 
 	if nil != err {
 		logger.ErrorContext(ctx, "aggregation failed", "error", err)
@@ -230,8 +274,26 @@ func loadConfiguration(arguments []string, stderr io.Writer) (configuration, err
 		outputDirectory: *outputDirectory,
 		logFormat:       *logFormat,
 		logLevel:        logLevel,
-		abusechAPIKey:   aggregator.APIKey(os.Getenv(ABUSECH_API_KEY_VARIABLE)),
+		apiKeys:         readAPIKeys(),
 	}, nil
+}
+
+// readAPIKeys reads every credential variable from the environment.
+func readAPIKeys() map[string]aggregator.APIKey {
+	apiKeys := map[string]aggregator.APIKey{}
+
+	for _, variable := range []string{
+		ABUSECH_API_KEY_VARIABLE,
+		IPINFO_TOKEN_VARIABLE,
+		VIRUSTOTAL_API_KEY_VARIABLE,
+		ABUSEIPDB_API_KEY_VARIABLE,
+		OTX_API_KEY_VARIABLE,
+		SHODAN_API_KEY_VARIABLE,
+	} {
+		apiKeys[variable] = aggregator.APIKey(os.Getenv(variable))
+	}
+
+	return apiKeys
 }
 
 // newLogger builds the program's logger, writing to stderr in the given format, which is
@@ -279,4 +341,170 @@ func versionFromBuildInfo(buildInfo *debug.BuildInfo, ok bool) string {
 // covers the whole exchange, including reading the body.
 func newHTTPClient() *http.Client {
 	return &http.Client{Timeout: DEFAULT_HTTP_TIMEOUT}
+}
+
+// sourceDependencies is what every source is built with.
+type sourceDependencies struct {
+	// apiKeys maps each credential's environment variable to its value.
+	apiKeys map[string]aggregator.APIKey
+	// httpClient is shared by every source.
+	httpClient *http.Client
+	// userAgent is sent with every request.
+	userAgent string
+	// logger receives the sources' warnings.
+	logger *slog.Logger
+}
+
+// newSourceOptions builds an aggregator option for every enabled source in sources, feeds first.
+// Every problem is reported at once, before any work starts.
+func newSourceOptions(sources aggregator.Configuration, dependencies sourceDependencies) ([]aggregator.Option, error) {
+	var (
+		options  []aggregator.Option
+		problems []error
+	)
+
+	// The function literal is a closure: it appends to options and problems from here.
+	add := func(config aggregator.SourceConfig, newOption func(aggregator.SourceConfig, sourceDependencies) (aggregator.Option, error)) {
+		if !config.Enabled {
+			return
+		}
+
+		option, err := newOption(config, dependencies)
+		if nil != err {
+			problems = append(problems, fmt.Errorf("source %q: %w", config.Name, err))
+
+			return
+		}
+
+		options = append(options, option)
+	}
+
+	for _, config := range sources.Feeds {
+		add(config, newFeedOption)
+	}
+
+	for _, config := range sources.Enrichers {
+		add(config, newEnricherOption)
+	}
+
+	return options, errors.Join(problems...)
+}
+
+// newFeedOption builds the feed named in config.
+func newFeedOption(config aggregator.SourceConfig, dependencies sourceDependencies) (aggregator.Option, error) {
+	apiKey, upstream, err := dependencies.prepare(config)
+	if nil != err {
+		return nil, err
+	}
+
+	logger := dependencies.logger
+
+	// The function literal is a closure: it uses config from here. A failed constructor
+	// returns a nil pointer, which it never stores because err is set.
+	feedOption := func(feed aggregator.Feed, err error) (aggregator.Option, error) {
+		if nil != err {
+			return nil, err
+		}
+
+		return aggregator.WithFeed(config.Name, feed), nil
+	}
+
+	switch config.Name {
+	case threatfox.SOURCE_NAME:
+		return feedOption(threatfox.New(config, upstream, apiKey, logger))
+	case feodotracker.SOURCE_NAME:
+		return feedOption(feodotracker.New(config, upstream, logger))
+	case viribacktracker.SOURCE_NAME:
+		return feedOption(viribacktracker.New(config, upstream, logger))
+	case criminalip.SOURCE_NAME:
+		return feedOption(criminalip.New(config, upstream, logger))
+	}
+
+	return nil, errUnknownSource
+}
+
+// newEnricherOption builds the enricher named in config, with its schedule.
+func newEnricherOption(config aggregator.SourceConfig, dependencies sourceDependencies) (aggregator.Option, error) {
+	schedule, err := config.Schedule()
+	if nil != err {
+		return nil, fmt.Errorf("checking schedule: %w", err)
+	}
+
+	apiKey, upstream, err := dependencies.prepare(config)
+	if nil != err {
+		return nil, err
+	}
+
+	// The function literal is a closure: it uses config and schedule from here. A failed
+	// constructor returns a nil pointer, which it never stores because err is set.
+	enricherOption := func(enricher aggregator.Enricher, err error) (aggregator.Option, error) {
+		if nil != err {
+			return nil, err
+		}
+
+		return aggregator.WithEnricher(config.Name, enricher, schedule), nil
+	}
+
+	switch config.Name {
+	case urlhaus.SOURCE_NAME:
+		return enricherOption(urlhaus.New(config, upstream, apiKey))
+	case spamhaus.SOURCE_NAME:
+		return enricherOption(spamhaus.New(config, upstream))
+	case internetdb.SOURCE_NAME:
+		return enricherOption(internetdb.New(config, upstream))
+	case ipinfo.SOURCE_NAME:
+		return enricherOption(ipinfo.New(config, upstream, apiKey))
+	case virustotal.SOURCE_NAME:
+		return enricherOption(virustotal.New(config, upstream, apiKey))
+	case abuseipdb.SOURCE_NAME:
+		return enricherOption(abuseipdb.New(config, upstream, apiKey))
+	case otx.SOURCE_NAME:
+		return enricherOption(otx.New(config, upstream, apiKey))
+	case shodan.SOURCE_NAME:
+		return enricherOption(shodan.New(config, upstream, apiKey))
+	}
+
+	return nil, errUnknownSource
+}
+
+// prepare returns the credential the source named in config needs, if any, and an Upstream
+// that sends its requests at its configured rate and keeps the credential out of errors. It
+// fails if the source needs a credential that isn't set.
+func (dependencies sourceDependencies) prepare(
+	config aggregator.SourceConfig,
+) (aggregator.APIKey, *aggregator.Upstream, error) {
+	// A source missing from the map needs no credential: the comma-ok form reports whether the
+	// name is in the map.
+	variable, needsKey := credentialVariables()[config.Name]
+
+	apiKey := dependencies.apiKeys[variable]
+	if needsKey && "" == apiKey {
+		return "", nil, fmt.Errorf("the %s environment variable is required", variable)
+	}
+
+	upstream, err := aggregator.NewUpstream(
+		dependencies.httpClient,
+		config.RequestsPerMinute,
+		aggregator.WithUserAgent(dependencies.userAgent),
+		aggregator.WithRedactedSecret(apiKey),
+	)
+	if nil != err {
+		return "", nil, fmt.Errorf("checking requests_per_minute: %w", err)
+	}
+
+	return apiKey, upstream, nil
+}
+
+// credentialVariables maps each source that needs a credential to the environment variable
+// that holds it.
+func credentialVariables() map[string]string {
+	return map[string]string{
+		threatfox.SOURCE_NAME:  ABUSECH_API_KEY_VARIABLE,
+		urlhaus.SOURCE_NAME:    ABUSECH_API_KEY_VARIABLE,
+		ipinfo.SOURCE_NAME:     IPINFO_TOKEN_VARIABLE,
+		virustotal.SOURCE_NAME: VIRUSTOTAL_API_KEY_VARIABLE,
+		abuseipdb.SOURCE_NAME:  ABUSEIPDB_API_KEY_VARIABLE,
+		otx.SOURCE_NAME:        OTX_API_KEY_VARIABLE,
+		shodan.SOURCE_NAME:     SHODAN_API_KEY_VARIABLE,
+	}
 }

@@ -5,16 +5,74 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"io"
 	"log/slog"
 	"net/http"
-	"os"
+	"net/netip"
 	"strings"
 	"testing"
+	"testing/synctest"
 	"time"
 
 	"github.com/google/go-cmp/cmp"
 )
+
+// testSchedule lets an enricher look up every address in a test, once a day.
+var testSchedule = Schedule{MaxLookups: 100, RefreshAfter: 24 * time.Hour, MaxDuration: time.Hour}
+
+// fakeFeed is a feed that returns fixed sightings, or an error.
+type fakeFeed struct {
+	// sightings are returned by every Collect.
+	sightings []Sighting
+	// err is returned by every Collect, when set.
+	err error
+}
+
+// Collect returns the fixed sightings or error. Having this method makes fakeFeed a Feed.
+func (feed fakeFeed) Collect(_ context.Context) ([]Sighting, error) {
+	return feed.sightings, feed.err
+}
+
+// fakeEnricher is an enricher whose answers come from a function, and which records every
+// address it's asked about. The aggregator looks addresses up one at a time, so it needs no
+// mutex.
+type fakeEnricher struct {
+	// lookup answers each lookup.
+	lookup func(ctx context.Context, address netip.Addr) ([]Report, error)
+	// addresses holds every address looked up, in order.
+	addresses []netip.Addr
+}
+
+// Lookup records address and answers with lookup. Having this method makes *fakeEnricher an
+// Enricher.
+func (enricher *fakeEnricher) Lookup(ctx context.Context, address netip.Addr) ([]Report, error) {
+	enricher.addresses = append(enricher.addresses, address)
+
+	return enricher.lookup(ctx, address)
+}
+
+// newTestAggregator returns an Aggregator with a fixed clock that stores in store, built with
+// options. Its logs, at every level, go to the returned buffer.
+func newTestAggregator(testingContext testing.TB, store *Store, options ...Option) (*Aggregator, *bytes.Buffer) {
+	testingContext.Helper()
+
+	var logs bytes.Buffer
+
+	logger := slog.New(slog.NewTextHandler(&logs, &slog.HandlerOptions{Level: slog.LevelDebug}))
+
+	aggregator, err := New(store, append(options, WithLogger(logger))...)
+	if nil != err {
+		testingContext.Fatalf("New() error = %v, want nil", err)
+	}
+
+	aggregator.now = func() time.Time { return fixedTime }
+
+	return aggregator, &logs
+}
+
+// newSighting returns a sighting of address with one report.
+func newSighting(address, key, data string, flags ...string) Sighting {
+	return Sighting{Address: netip.MustParseAddr(address), Report: newTestReport(key, data, flags...)}
+}
 
 // TestAPIKeyRedacts checks that an API key never appears when printed or logged.
 func TestAPIKeyRedacts(test *testing.T) {
@@ -32,370 +90,448 @@ func TestAPIKeyRedacts(test *testing.T) {
 	}
 }
 
-// TestNewAppliesOptions checks the defaults and that each option sets its value.
-func TestNewAppliesOptions(test *testing.T) {
-	test.Parallel()
-
-	store := newTestStore(test)
-	httpClient := &http.Client{}
-
-	defaults, err := New(Sources{}, store, httpClient)
-	if nil != err {
-		test.Fatalf("New() error = %v, want nil", err)
-	}
-
-	if DEFAULT_USER_AGENT != defaults.userAgent || "" != defaults.abusechAPIKey || nil == defaults.logger || nil == defaults.now {
-		test.Errorf("New() defaults = %+v, want the default user agent, no key, a logger and a clock", defaults)
-	}
-
-	logger := slog.New(slog.DiscardHandler)
-	configured, err := New(Sources{}, store, httpClient, WithLogger(logger), WithUserAgent("agent"), WithAbusechAPIKey("key"))
-	if nil != err {
-		test.Fatalf("New() with options error = %v, want nil", err)
-	}
-
-	isConfigured := logger == configured.logger && "agent" == configured.userAgent && "key" == configured.abusechAPIKey
-	if !isConfigured || httpClient != configured.httpClient || store != configured.store {
-		test.Errorf("New() with options = %+v, want every option applied", configured)
-	}
-}
-
-// TestNewRejectsInvalidSources checks that every problem with an enabled source is reported by
-// New, before any work starts, and that disabled sources aren't checked.
+// TestNewRejectsInvalidSources checks that every problem with the sources is reported by New,
+// before any work starts.
 func TestNewRejectsInvalidSources(test *testing.T) {
 	test.Parallel()
 
-	validQuery := APIQuery{Query: "taginfo", Limit: 1}
+	if _, err := New(nil); nil == err {
+		test.Error("New(nil store) error = nil, want error")
+	}
+
+	store := newTestStore(test)
+	enricher := &fakeEnricher{}
 
 	testCases := []struct {
 		name    string
-		sources Sources
-		// wantErr is part of the error New must return, or "" when New must succeed.
+		options []Option
+		// wantErr is part of the error New must return.
 		wantErr string
 	}{
-		{name: "disabled sources aren't checked", sources: Sources{JSON: []Source{{Name: "unknown"}}}},
-		{name: "unknown git source", sources: Sources{Git: []Source{{Name: "unknown", Enabled: true}}}, wantErr: "no extractor"},
+		{name: "empty name", options: []Option{WithFeed("", fakeFeed{})}, wantErr: `source name ""`},
 		{
-			name:    "git url_raw not https",
-			sources: Sources{Git: []Source{{Name: CRIMINALIP_SOURCE_NAME, Enabled: true, URLRaw: "http://example.com/", FileFormat: "x"}}},
-			wantErr: "url_raw",
+			name:    "name used twice",
+			options: []Option{WithFeed("shodan", fakeFeed{}), WithEnricher("shodan", enricher, testSchedule)},
+			wantErr: `source name "shodan" is empty or used twice`,
 		},
 		{
-			name:    "git file_format missing",
-			sources: Sources{Git: []Source{{Name: CRIMINALIP_SOURCE_NAME, Enabled: true, URLRaw: "https://example.com/"}}},
-			wantErr: "file_format",
-		},
-		{name: "unknown json source", sources: Sources{JSON: []Source{{Name: "unknown", Enabled: true}}}, wantErr: "no extractor"},
-		{
-			name:    "csv url unparsable",
-			sources: Sources{CSV: []Source{{Name: VIRIBACKTRACKER_SOURCE_NAME, Enabled: true, URL: "https://[::1"}}},
-			wantErr: "parsing URL",
-		},
-		{name: "json url relative", sources: Sources{JSON: []Source{{Name: FEODOTRACKER_SOURCE_NAME, Enabled: true, URL: "/feed"}}}, wantErr: "url"},
-		{name: "unknown api source", sources: Sources{API: []Source{{Name: "unknown", Enabled: true}}}, wantErr: "no extractor"},
-		{name: "api url missing", sources: Sources{API: []Source{{Name: THREATFOX_SOURCE_NAME, Enabled: true, Query: validQuery}}}, wantErr: "url"},
-		{
-			name:    "api query missing",
-			sources: Sources{API: []Source{{Name: THREATFOX_SOURCE_NAME, Enabled: true, URL: "https://example.com/"}}},
-			wantErr: "query",
+			name:    "schedule without lookups",
+			options: []Option{WithEnricher("shodan", enricher, Schedule{RefreshAfter: time.Hour, MaxDuration: time.Hour})},
+			wantErr: "schedule must be positive",
 		},
 		{
-			name:    "threatfox without key",
-			sources: Sources{API: []Source{{Name: THREATFOX_SOURCE_NAME, Enabled: true, URL: "https://example.com/", Query: validQuery}}},
-			wantErr: "ABUSECH_API_KEY",
-		},
-		{
-			name: "every problem reported",
-			sources: Sources{
-				Git: []Source{{Name: "first", Enabled: true}},
-				API: []Source{{Name: "second", Enabled: true}},
-			},
-			wantErr: `source "first": no extractor for this source name` + "\n" + `source "second": no extractor for this source name`,
+			name:    "schedule without a time budget",
+			options: []Option{WithEnricher("shodan", enricher, Schedule{MaxLookups: 1, RefreshAfter: time.Hour})},
+			wantErr: "schedule must be positive",
 		},
 	}
 
 	for _, testCase := range testCases {
-		// The function literal is a closure over testCase. Each loop iteration has its own
-		// testCase, so the parallel subtests never share one.
 		test.Run(testCase.name, func(subtest *testing.T) {
 			subtest.Parallel()
 
-			_, err := New(testCase.sources, newTestStore(subtest), &http.Client{})
-
-			if "" == testCase.wantErr {
-				if nil != err {
-					subtest.Errorf("New() error = %v, want nil", err)
-				}
-
-				return
-			}
-
-			if nil == err || !strings.Contains(err.Error(), testCase.wantErr) {
-				subtest.Errorf("New() error = %v, want it to contain %q", err, testCase.wantErr)
+			if _, err := New(store, testCase.options...); nil == err || !strings.Contains(err.Error(), testCase.wantErr) {
+				subtest.Errorf("New() error = %v, want one containing %q", err, testCase.wantErr)
 			}
 		})
 	}
 }
 
-// TestNewRequiresDependencies checks that New refuses a missing store or HTTP client.
-func TestNewRequiresDependencies(test *testing.T) {
+// TestAggregatorRunCombinesSources checks a whole run: feeds add addresses, several sources
+// report the same address under their own names, enrichers look up every address including
+// the new ones, and a failing feed doesn't stop the others.
+func TestAggregatorRunCombinesSources(test *testing.T) {
 	test.Parallel()
 
-	if _, err := New(Sources{}, nil, &http.Client{}); nil == err {
-		test.Error("New() without a store error = nil, want error")
+	store := newTestStore(test)
+	enricher := &fakeEnricher{lookup: func(_ context.Context, address netip.Addr) ([]Report, error) {
+		return []Report{newTestReport("", `{"looked_up":"`+address.String()+`"}`)}, nil
+	}}
+
+	aggregator, logs := newTestAggregator(
+		test,
+		store,
+		WithFeed("threatfox", fakeFeed{sightings: []Sighting{
+			newSighting("192.0.2.1", "1", `{"port":443}`, "sliver"),
+			newSighting("192.0.2.1", "2", `{"port":8443}`, "sliver"),
+			newSighting("192.0.2.2", "3", `{"port":80}`, "cobalt strike"),
+		}}),
+		WithFeed("broken", fakeFeed{err: errors.New("upstream down")}),
+		WithFeed("feodotracker", fakeFeed{sightings: []Sighting{newSighting("192.0.2.1", "443", `{"port":443}`, "qakbot")}}),
+		WithEnricher("shodan", enricher, testSchedule),
+	)
+
+	writtenCount, err := aggregator.Run(test.Context())
+	if nil == err || !strings.Contains(err.Error(), `processing feed "broken": collecting: upstream down`) {
+		test.Errorf("Run() error = %v, want only the broken feed's failure", err)
 	}
 
-	if _, err := New(Sources{}, newTestStore(test), nil); nil == err {
-		test.Error("New() without an HTTP client error = nil, want error")
-	}
-}
-
-// TestAggregatorNewJobUnknownKind checks that a source whose kind isn't known is refused.
-func TestAggregatorNewJobUnknownKind(test *testing.T) {
-	test.Parallel()
-
-	aggregator, _ := newTestAggregator(test, &http.Client{})
-
-	if _, err := aggregator.newJob(Source{Name: CRIMINALIP_SOURCE_NAME, kind: "ftp"}); nil == err {
-		test.Error(`newJob() with kind "ftp" error = nil, want error`)
-	}
-}
-
-// TestAggregatorRun checks a run over one source of every kind: each is fetched the right way
-// and every payload is stored.
-func TestAggregatorRun(test *testing.T) {
-	test.Parallel()
-
-	gitUpstream := newFakeUpstream(test, http.StatusOK, string(readTestdata(test, "criminalip.csv")))
-	jsonUpstream := newFakeUpstream(test, http.StatusOK, string(readTestdata(test, "feodotracker.json")))
-	csvUpstream := newFakeUpstream(test, http.StatusOK, string(readTestdata(test, "viribacktracker.csv")))
-	apiUpstream := newFakeUpstream(test, http.StatusOK, string(readTestdata(test, "threatfox_taginfo.json")))
-
-	// Every fake upstream uses the same test certificate, so one client reaches them all.
-	aggregator := newRunTestAggregator(test, apiUpstream.server.Client(), Sources{
-		Git: []Source{{
-			Name:       CRIMINALIP_SOURCE_NAME,
-			Enabled:    true,
-			URLRaw:     gitUpstream.server.URL + "/feed/",
-			FileFormat: "YYYY-MM-DD.csv",
-		}},
-		JSON: []Source{{Name: FEODOTRACKER_SOURCE_NAME, Enabled: true, URL: jsonUpstream.server.URL}},
-		CSV:  []Source{{Name: VIRIBACKTRACKER_SOURCE_NAME, Enabled: true, URL: csvUpstream.server.URL}},
-		API:  []Source{{Name: THREATFOX_SOURCE_NAME, Enabled: true, URL: apiUpstream.server.URL, Query: validThreatFoxQuery}},
-	})
-
-	storedCount, err := aggregator.Run(test.Context())
-	if nil != err {
-		test.Fatalf("Run() error = %v, want nil", err)
+	// Two addresses from threatfox, one from feodotracker and two from shodan.
+	if 5 != writtenCount {
+		test.Errorf("Run() wrote %d files, want 5", writtenCount)
 	}
 
-	// 5 Criminal IP rows, 1 Feodo Tracker entry, 5 ViriBack rows and 3 ThreatFox indicators.
-	if 14 != storedCount {
-		test.Errorf("Run() stored %d payloads, want 14", storedCount)
-	}
+	record := readStoredRecord(test, store, "192.0.2.1")
 
-	// The Git source's file is named after the fixed clock's date.
-	if requests := gitUpstream.received(); 1 != len(requests) || "/feed/2026-05-09.csv" != requests[0].path {
-		test.Errorf("Run() Git requests = %+v, want one for /feed/2026-05-09.csv", requests)
-	}
-
-	for _, address := range []string{"35.172.12.146", "50.16.16.211", "47.105.68.108", "94.230.141.123"} {
-		readStoredPayload(test, aggregator.store, address)
-	}
-
-	// Both ThreatFox indicators for 155.94.154.152 end up in one file.
-	if stored := readStoredPayload(test, aggregator.store, "155.94.154.152"); 2 != len(stored.Results) {
-		test.Errorf("stored payload for 155.94.154.152 has %d results, want 2", len(stored.Results))
-	}
-}
-
-// TestAggregatorRunContinuesAfterFailures checks that a failing source doesn't stop the others,
-// and that every failure is returned.
-func TestAggregatorRunContinuesAfterFailures(test *testing.T) {
-	test.Parallel()
-
-	failingUpstream := newFakeUpstream(test, http.StatusBadGateway, "down")
-	workingUpstream := newFakeUpstream(test, http.StatusOK, string(readTestdata(test, "viribacktracker.csv")))
-
-	aggregator := newRunTestAggregator(test, workingUpstream.server.Client(), Sources{
-		JSON: []Source{{Name: FEODOTRACKER_SOURCE_NAME, Enabled: true, URL: failingUpstream.server.URL}},
-		CSV:  []Source{{Name: VIRIBACKTRACKER_SOURCE_NAME, Enabled: true, URL: workingUpstream.server.URL}},
-		API:  []Source{{Name: THREATFOX_SOURCE_NAME, Enabled: true, URL: failingUpstream.server.URL, Query: validThreatFoxQuery}},
-	})
-
-	storedCount, err := aggregator.Run(test.Context())
-	if 5 != storedCount {
-		test.Errorf("Run() stored %d payloads, want the 5 from the working source", storedCount)
-	}
-
-	for _, wantFailure := range []string{`processing source "feodotracker"`, `processing source "threatfox"`} {
-		if nil == err || !strings.Contains(err.Error(), wantFailure) {
-			test.Errorf("Run() error = %v, want it to contain %q", err, wantFailure)
+	wantObservationCounts := map[string]int{"threatfox": 2, "feodotracker": 1, "shodan": 1}
+	for source, wantCount := range wantObservationCounts {
+		if wantCount != len(record.Sources[source].Observations) {
+			test.Errorf("source %q has %d observations, want %d", source, len(record.Sources[source].Observations), wantCount)
 		}
 	}
-}
 
-// TestAggregatorRunStopsWhenCancelled checks that a cancelled run doesn't start another source.
-func TestAggregatorRunStopsWhenCancelled(test *testing.T) {
-	test.Parallel()
-
-	upstream := newFakeUpstream(test, http.StatusOK, string(readTestdata(test, "viribacktracker.csv")))
-	aggregator := newRunTestAggregator(test, upstream.server.Client(), Sources{
-		CSV: []Source{{Name: VIRIBACKTRACKER_SOURCE_NAME, Enabled: true, URL: upstream.server.URL}},
-	})
-
-	ctx, cancel := context.WithCancel(test.Context())
-	cancel()
-
-	storedCount, err := aggregator.Run(ctx)
-	if 0 != storedCount || !errors.Is(err, context.Canceled) {
-		test.Errorf("Run() after cancelling = (%d, %v), want (0, context.Canceled)", storedCount, err)
+	if diff := cmp.Diff([]string{"qakbot", "sliver"}, record.Flags); "" != diff {
+		test.Errorf("record flags mismatch (-want +got):\n%s", diff)
 	}
 
-	if requests := upstream.received(); 0 != len(requests) {
-		test.Errorf("Run() after cancelling sent %d requests, want 0", len(requests))
-	}
-}
-
-// TestAggregatorProcessSourceLogsCounts checks the summary logged for each source.
-func TestAggregatorProcessSourceLogsCounts(test *testing.T) {
-	test.Parallel()
-
-	aggregator, logs := newTestAggregator(test, &http.Client{})
-	job := sourceJob{
-		source: Source{Name: "test"},
-		collect: func(context.Context) ([]Payload, error) {
-			return []Payload{newTestPayload("1.2.3.4", "test", fixedTime, `{}`, "a")}, nil
-		},
+	wantAddresses := []netip.Addr{netip.MustParseAddr("192.0.2.1"), netip.MustParseAddr("192.0.2.2")}
+	if diff := cmp.Diff(wantAddresses, enricher.addresses, recordComparison); "" != diff {
+		test.Errorf("enricher addresses mismatch (-want +got):\n%s", diff)
 	}
 
-	storedCount, err := aggregator.processSource(test.Context(), job)
-	if nil != err || 1 != storedCount {
-		test.Errorf("processSource() = (%d, %v), want (1, nil)", storedCount, err)
+	for _, want := range []string{
+		`msg="feed processed" source=threatfox sighting_count=3 address_count=2 written_count=2`,
+		`msg="enricher processed" source=shodan due_count=2 lookup_count=2 written_count=2 out_of_time=false`,
+	} {
+		if !strings.Contains(logs.String(), want) {
+			test.Errorf("Run() logs = %q, want them to contain %q", logs.String(), want)
+		}
 	}
 
-	wantLog := `level=INFO msg="source processed" source=test payload_count=1 stored_count=1`
-	if !strings.Contains(logs.String(), wantLog) {
-		test.Errorf("processSource() logs = %q, want them to contain %q", logs, wantLog)
+	// A second run reports the same things, so only last_observed and last_checked could
+	// change, and the clock is fixed: nothing is written.
+	if writtenCount, _ := aggregator.Run(test.Context()); 0 != writtenCount {
+		test.Errorf("repeated Run() wrote %d files, want 0", writtenCount)
 	}
 }
 
-// TestAggregatorSaveAll checks that a payload that can't be stored doesn't stop the others, and
-// that every failure is returned.
-func TestAggregatorSaveAll(test *testing.T) {
+// TestAggregatorRunEnricherFailures checks how lookup failures are handled: recorded on the
+// address and skipped, or stopping the enricher when every later lookup would fail too.
+func TestAggregatorRunEnricherFailures(test *testing.T) {
 	test.Parallel()
 
-	aggregator, _ := newTestAggregator(test, &http.Client{})
-	payloads := []Payload{
-		newTestPayload("1.1.1.1", "test", fixedTime, `{}`, "a"),
-		{IP: newTestPayload("2.2.2.2", "", fixedTime, "", "a").IP},
-		newTestPayload("3.3.3.3", "test", fixedTime, `{}`, "a"),
-	}
-
-	storedCount, err := aggregator.saveAll(test.Context(), payloads)
-	if 2 != storedCount || !errors.Is(err, errInvalidPayload) || !strings.Contains(err.Error(), `"2.2.2.2"`) {
-		test.Errorf("saveAll() = (%d, %v), want (2, an invalid payload error for 2.2.2.2)", storedCount, err)
-	}
-}
-
-// TestAggregatorSaveAllStopsWhenCancelled checks that nothing more is stored once the run is
-// cancelled.
-func TestAggregatorSaveAllStopsWhenCancelled(test *testing.T) {
-	test.Parallel()
-
-	aggregator, _ := newTestAggregator(test, &http.Client{})
-
-	ctx, cancel := context.WithCancel(test.Context())
-	cancel()
-
-	storedCount, err := aggregator.saveAll(ctx, []Payload{newTestPayload("1.1.1.1", "test", fixedTime, `{}`, "a")})
-	if 0 != storedCount || !errors.Is(err, context.Canceled) {
-		test.Errorf("saveAll() after cancelling = (%d, %v), want (0, context.Canceled)", storedCount, err)
-	}
-
-	if _, statErr := aggregator.store.root.Stat("ipv4"); !errors.Is(statErr, os.ErrNotExist) {
-		test.Errorf("saveAll() after cancelling wrote files: stat error = %v", statErr)
-	}
-}
-
-// TestAggregatorCollectErrors checks that feed URLs that can't be built or requested fail the
-// source.
-func TestAggregatorCollectErrors(test *testing.T) {
-	test.Parallel()
-
-	aggregator, _ := newTestAggregator(test, &http.Client{})
-	extract := func(context.Context, io.Reader) ([]Payload, error) { return nil, nil }
-
-	if _, err := aggregator.collectGitFile(test.Context(), Source{URLRaw: "https://[::1", FileFormat: "x"}, extract); nil == err {
-		test.Error("collectGitFile() with an unparsable url_raw error = nil, want error")
-	}
-
-	if _, err := aggregator.collectFeed(test.Context(), "https://[::1", extract); nil == err {
-		test.Error("collectFeed() with an unparsable URL error = nil, want error")
-	}
-}
-
-// TestValidateUpstreamURL checks that only absolute https URLs are accepted.
-func TestValidateUpstreamURL(test *testing.T) {
-	test.Parallel()
+	addresses := []string{"192.0.2.1", "192.0.2.2", "192.0.2.3", "192.0.2.4", "192.0.2.5", "192.0.2.6", "192.0.2.7"}
+	transientErr := errors.New("timeout")
 
 	testCases := []struct {
-		name    string
-		rawURL  string
-		wantErr bool
+		name string
+		// failing returns the error for a lookup of address, or nil.
+		failing func(address netip.Addr) error
+		// wantLookups is how many addresses are looked up before the enricher stops.
+		wantLookups int
+		// wantRecordedErrors is how many addresses get a last_error.
+		wantRecordedErrors int
+		// wantStopped is true when the enricher must stop early.
+		wantStopped bool
 	}{
-		{name: "https", rawURL: "https://threatfox-api.abuse.ch/api/v1/"},
-		{name: "http", rawURL: "http://threatfox-api.abuse.ch/api/v1/", wantErr: true},
-		{name: "no host", rawURL: "https:///path", wantErr: true},
-		{name: "relative", rawURL: "api/v1/", wantErr: true},
-		{name: "empty", rawURL: "", wantErr: true},
-		{name: "unparsable", rawURL: "https://[::1", wantErr: true},
+		{
+			name: "one address fails",
+			failing: func(address netip.Addr) error {
+				if netip.MustParseAddr("192.0.2.3") == address {
+					return transientErr
+				}
+
+				return nil
+			},
+			wantLookups: 7, wantRecordedErrors: 1,
+		},
+		{
+			name:        "rejected key stops at once",
+			failing:     func(netip.Addr) error { return &StatusError{StatusCode: http.StatusUnauthorized} },
+			wantLookups: 1, wantStopped: true,
+		},
+		{
+			name: "used-up quota stops at once",
+			failing: func(netip.Addr) error {
+				return fmt.Errorf("querying: %w", &StatusError{StatusCode: http.StatusTooManyRequests})
+			},
+			wantLookups: 1, wantStopped: true,
+		},
+		{
+			name:        "repeated failures stop the enricher",
+			failing:     func(netip.Addr) error { return transientErr },
+			wantLookups: MAX_CONSECUTIVE_LOOKUP_FAILURES, wantRecordedErrors: MAX_CONSECUTIVE_LOOKUP_FAILURES, wantStopped: true,
+		},
 	}
 
 	for _, testCase := range testCases {
 		test.Run(testCase.name, func(subtest *testing.T) {
 			subtest.Parallel()
 
-			if err := validateUpstreamURL(testCase.rawURL); testCase.wantErr != (nil != err) {
-				subtest.Errorf("validateUpstreamURL(%q) error = %v, want error %v", testCase.rawURL, err, testCase.wantErr)
+			store := newTestStore(subtest)
+			enricher := &fakeEnricher{lookup: func(_ context.Context, address netip.Addr) ([]Report, error) {
+				return nil, testCase.failing(address)
+			}}
+
+			// Each address is first added by a feed, so it's in the dataset.
+			aggregator, _ := newTestAggregator(subtest, store, WithFeed("feed", sightingsFeed(addresses...)), WithEnricher("shodan", enricher, testSchedule))
+
+			_, err := aggregator.Run(subtest.Context())
+			if nil == err || testCase.wantStopped != strings.Contains(err.Error(), "stopping the source") {
+				subtest.Errorf("Run() error = %v, want a failure (stopping: %v)", err, testCase.wantStopped)
+			}
+
+			if testCase.wantLookups != len(enricher.addresses) {
+				subtest.Errorf("Run() looked up %d addresses, want %d", len(enricher.addresses), testCase.wantLookups)
+			}
+
+			if recordedErrors := countRecordedErrors(subtest, store, "shodan", addresses); testCase.wantRecordedErrors != recordedErrors {
+				subtest.Errorf("Run() recorded %d errors, want %d", recordedErrors, testCase.wantRecordedErrors)
 			}
 		})
 	}
 }
 
-// newRunTestAggregator returns an Aggregator for sources with a fixed clock and a store in a
-// new temporary directory, sending requests with httpClient.
-func newRunTestAggregator(testingContext testing.TB, httpClient *http.Client, sources Sources) *Aggregator {
-	testingContext.Helper()
-
-	aggregator, err := New(sources, newTestStore(testingContext), httpClient, WithAbusechAPIKey("key"))
-	if nil != err {
-		testingContext.Fatalf("New() error = %v, want nil", err)
+// sightingsFeed returns a feed that reports each address with one flagged report.
+func sightingsFeed(addresses ...string) fakeFeed {
+	var sightings []Sighting
+	for _, address := range addresses {
+		sightings = append(sightings, newSighting(address, "1", `{}`, "sliver"))
 	}
 
-	aggregator.now = func() time.Time { return fixedTime }
-
-	return aggregator
+	return fakeFeed{sightings: sightings}
 }
 
-// TestAggregatorRunStoresExpectedPayload checks one stored file from a run end to end.
-func TestAggregatorRunStoresExpectedPayload(test *testing.T) {
-	test.Parallel()
+// countRecordedErrors returns how many of addresses have a last_error from sourceName.
+func countRecordedErrors(testingContext testing.TB, store *Store, sourceName string, addresses []string) int {
+	testingContext.Helper()
 
-	upstream := newFakeUpstream(test, http.StatusOK, string(readTestdata(test, "feodotracker.json")))
-	aggregator := newRunTestAggregator(test, upstream.server.Client(), Sources{
-		JSON: []Source{{Name: FEODOTRACKER_SOURCE_NAME, Enabled: true, URL: upstream.server.URL}},
-	})
+	recordedErrors := 0
 
-	if _, err := aggregator.Run(test.Context()); nil != err {
-		test.Fatalf("Run() error = %v, want nil", err)
+	for _, address := range addresses {
+		if "" != readStoredRecord(testingContext, store, address).Sources[sourceName].LastError.Message {
+			recordedErrors++
+		}
 	}
 
-	wantMetadata := `{"country":"US","firstSeen":"2025-12-30 13:56:31","lastOnline":"2026-03-12",` +
-		`"hostname":"ec2-50-16-16-211.compute-1.amazonaws.com","port":443}`
-	want := newTestPayload("50.16.16.211", FEODOTRACKER_SOURCE_NAME, fixedTime, wantMetadata, "qakbot")
+	return recordedErrors
+}
 
-	if diff := cmp.Diff(want, readStoredPayload(test, aggregator.store, "50.16.16.211"), payloadComparison); "" != diff {
-		test.Errorf("stored payload mismatch (-want +got):\n%s", diff)
+// TestAggregatorRunEnricherTimeBudget checks that an enricher stops quietly once its time
+// budget is used up, without recording the interrupted lookup. Time is controlled by
+// testing/synctest, so the minutes take no real time.
+func TestAggregatorRunEnricherTimeBudget(test *testing.T) {
+	test.Parallel()
+
+	synctest.Test(test, func(test *testing.T) {
+		store := newTestStore(test)
+
+		// Each lookup takes a minute, unless its context ends first.
+		enricher := &fakeEnricher{lookup: func(ctx context.Context, _ netip.Addr) ([]Report, error) {
+			timer := time.NewTimer(time.Minute)
+			defer timer.Stop()
+
+			select {
+			case <-timer.C:
+				return nil, nil
+			case <-ctx.Done():
+				return nil, fmt.Errorf("waiting: %w", ctx.Err())
+			}
+		}}
+
+		schedule := testSchedule
+		schedule.MaxDuration = 150 * time.Second
+
+		feed := sightingsFeed("192.0.2.1", "192.0.2.2", "192.0.2.3", "192.0.2.4")
+		aggregator, logs := newTestAggregator(test, store, WithFeed("feed", feed), WithEnricher("slow", enricher, schedule))
+
+		if _, err := aggregator.Run(test.Context()); nil != err {
+			test.Errorf("Run() error = %v, want nil: a used-up budget isn't a failure", err)
+		}
+
+		// Two lookups finish; the third is cut short and the fourth never starts.
+		if 3 != len(enricher.addresses) || !strings.Contains(logs.String(), "lookup_count=3 written_count=2 out_of_time=true") {
+			test.Errorf("Run() looked up %v with logs %q, want two finished lookups and the budget reported", enricher.addresses, logs.String())
+		}
+
+		if _, wasChecked := readStoredRecord(test, store, "192.0.2.3").Sources["slow"]; wasChecked {
+			test.Error("the interrupted lookup was stored, want it left for the next run")
+		}
+	})
+}
+
+// TestAggregatorRunCancelled checks that a cancelled run stops before the next source,
+// address or lookup, and reports the cancellation.
+func TestAggregatorRunCancelled(test *testing.T) {
+	test.Parallel()
+
+	sightings := []Sighting{newSighting("192.0.2.1", "1", `{}`, "sliver"), newSighting("192.0.2.2", "1", `{}`, "sliver")}
+
+	test.Run("before the feeds", func(subtest *testing.T) {
+		subtest.Parallel()
+
+		ctx, cancel := context.WithCancel(subtest.Context())
+		cancel()
+
+		aggregator, _ := newTestAggregator(subtest, newTestStore(subtest), WithFeed("feed", fakeFeed{sightings: sightings}))
+		if writtenCount, err := aggregator.Run(ctx); !errors.Is(err, context.Canceled) || 0 != writtenCount {
+			subtest.Errorf("Run() = (%d, %v), want nothing written and %v", writtenCount, err, context.Canceled)
+		}
+	})
+
+	test.Run("while storing a feed", func(subtest *testing.T) {
+		subtest.Parallel()
+
+		ctx, cancel := context.WithCancel(subtest.Context())
+		feed := cancellingFeed{cancel: cancel, sightings: sightings}
+
+		aggregator, _ := newTestAggregator(subtest, newTestStore(subtest), WithFeed("feed", feed))
+		if writtenCount, err := aggregator.Run(ctx); !errors.Is(err, context.Canceled) || 0 != writtenCount {
+			subtest.Errorf("Run() = (%d, %v), want nothing written and %v", writtenCount, err, context.Canceled)
+		}
+	})
+
+	test.Run("during the enrichers", func(subtest *testing.T) {
+		subtest.Parallel()
+
+		ctx, cancel := context.WithCancel(subtest.Context())
+		first := &fakeEnricher{lookup: func(context.Context, netip.Addr) ([]Report, error) {
+			cancel()
+
+			return nil, nil
+		}}
+		second := &fakeEnricher{}
+
+		aggregator, _ := newTestAggregator(
+			subtest,
+			newTestStore(subtest),
+			WithFeed("feed", fakeFeed{sightings: sightings}),
+			WithEnricher("first", first, testSchedule),
+			WithEnricher("second", second, testSchedule),
+		)
+
+		_, err := aggregator.Run(ctx)
+		if !errors.Is(err, context.Canceled) || 1 != len(first.addresses) || 0 != len(second.addresses) {
+			subtest.Errorf("Run() error = %v after %d and %d lookups, want %v after one lookup", err, len(first.addresses), len(second.addresses), context.Canceled)
+		}
+	})
+}
+
+// cancellingFeed is a feed that cancels the run while returning its sightings.
+type cancellingFeed struct {
+	// cancel cancels the run's context.
+	cancel context.CancelFunc
+	// sightings are returned by Collect.
+	sightings []Sighting
+}
+
+// Collect cancels the run and returns the sightings.
+func (feed cancellingFeed) Collect(_ context.Context) ([]Sighting, error) {
+	feed.cancel()
+
+	return feed.sightings, nil
+}
+
+// TestAggregatorRunStoreFailures checks that records that can't be stored are reported without
+// stopping the other addresses or sources.
+func TestAggregatorRunStoreFailures(test *testing.T) {
+	test.Parallel()
+
+	store := newTestStore(test)
+
+	// The enricher breaks the file of the address it's looking up, so storing the result fails.
+	enricher := &fakeEnricher{lookup: func(_ context.Context, address netip.Addr) ([]Report, error) {
+		if netip.MustParseAddr("192.0.2.1") == address {
+			writeStoreFile(test, store, addressFileName(address), []byte("{"))
+		}
+
+		return nil, nil
+	}}
+
+	aggregator, _ := newTestAggregator(
+		test,
+		store,
+		WithFeed("feed", fakeFeed{sightings: []Sighting{
+			{Report: newTestReport("1", `{}`, "sliver")}, // The zero address can't be stored.
+			newSighting("192.0.2.1", "1", `{}`, "sliver"),
+			newSighting("192.0.2.2", "1", `{}`, "sliver"),
+		}}),
+		WithEnricher("shodan", enricher, testSchedule),
+	)
+
+	writtenCount, err := aggregator.Run(test.Context())
+
+	for _, want := range []string{`storing sightings of "invalid IP"`, `storing lookup of "192.0.2.1"`} {
+		if nil == err || !strings.Contains(err.Error(), want) {
+			test.Errorf("Run() error = %v, want it to contain %q", err, want)
+		}
+	}
+
+	// Both feed sightings and the lookup of 192.0.2.2 are stored.
+	if 3 != writtenCount {
+		test.Errorf("Run() wrote %d files, want 3", writtenCount)
+	}
+}
+
+// TestAggregatorRunIndexFailure checks that a stored file that can't be indexed is reported,
+// and the other addresses are still enriched.
+func TestAggregatorRunIndexFailure(test *testing.T) {
+	test.Parallel()
+
+	store := newTestStore(test)
+	writeStoreFile(test, store, addressFileName(netip.MustParseAddr("192.0.2.9")), []byte("{"))
+
+	enricher := &fakeEnricher{lookup: func(context.Context, netip.Addr) ([]Report, error) { return nil, nil }}
+	aggregator, _ := newTestAggregator(
+		test,
+		store,
+		WithFeed("feed", fakeFeed{sightings: []Sighting{newSighting("192.0.2.1", "1", `{}`, "sliver")}}),
+		WithEnricher("shodan", enricher, testSchedule),
+	)
+
+	_, err := aggregator.Run(test.Context())
+	if nil == err || !strings.Contains(err.Error(), "indexing records") || 1 != len(enricher.addresses) {
+		test.Errorf("Run() = %v after looking up %v, want the index failure and 192.0.2.1 enriched", err, enricher.addresses)
+	}
+}
+
+// TestSelectDueAddresses checks which addresses are due and their order: never-tried
+// addresses first, newest first_seen first, then the longest-waiting, up to the budget.
+func TestSelectDueAddresses(test *testing.T) {
+	test.Parallel()
+
+	schedule := Schedule{MaxLookups: 4, RefreshAfter: 24 * time.Hour, MaxDuration: time.Hour}
+	entry := func(address string, firstSeen time.Time, lastAttempt time.Time) indexEntry {
+		attempts := map[string]time.Time{}
+		if !lastAttempt.IsZero() {
+			attempts["shodan"] = lastAttempt
+		}
+
+		return indexEntry{address: netip.MustParseAddr(address), firstSeen: firstSeen, lastAttempts: attempts}
+	}
+
+	entries := []indexEntry{
+		entry("192.0.2.1", fixedTime.Add(-48*time.Hour), fixedTime.Add(-30*time.Hour)), // Due, waiting 30 hours.
+		entry("192.0.2.2", fixedTime.Add(-48*time.Hour), fixedTime.Add(-time.Hour)),    // Checked recently.
+		entry("192.0.2.3", fixedTime.Add(-time.Hour), time.Time{}),                     // Never tried, newest.
+		entry("192.0.2.4", fixedTime.Add(-48*time.Hour), time.Time{}),                  // Never tried, older.
+		entry("192.0.2.5", fixedTime.Add(-48*time.Hour), fixedTime.Add(-24*time.Hour)), // Due, exactly 24 hours.
+		entry("192.0.2.6", fixedTime.Add(-48*time.Hour), fixedTime.Add(-26*time.Hour)), // Due, but over budget.
+		entry("192.0.2.7", fixedTime.Add(-48*time.Hour), time.Time{}),                  // Never tried, ties with .4.
+	}
+
+	got := selectDueAddresses(entries, "shodan", schedule, fixedTime)
+
+	want := []netip.Addr{
+		netip.MustParseAddr("192.0.2.3"),
+		netip.MustParseAddr("192.0.2.4"),
+		netip.MustParseAddr("192.0.2.7"),
+		netip.MustParseAddr("192.0.2.1"),
+	}
+	if diff := cmp.Diff(want, got, recordComparison); "" != diff {
+		test.Errorf("selectDueAddresses() mismatch (-want +got):\n%s", diff)
+	}
+
+	if due := selectDueAddresses(nil, "shodan", schedule, fixedTime); 0 != len(due) {
+		test.Errorf("selectDueAddresses(nil) = %v, want none", due)
+	}
+}
+
+// TestCompareBooleans checks that false sorts before true.
+func TestCompareBooleans(test *testing.T) {
+	test.Parallel()
+
+	if 0 != compareBooleans(true, true) || -1 != compareBooleans(false, true) || 1 != compareBooleans(true, false) {
+		test.Error("compareBooleans() doesn't order false before true")
 	}
 }

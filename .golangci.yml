@@ -312,16 +312,12 @@ linters:
         linters:
           - forbidigo
         text: "fmt\\.Print"
-      # Upstream API types keep upstream JSON casing (GO-EXT-002).
-      # Add one rule per upstream package, for example:
-      # - path: ^internal/abusech/
-      #   linters: [tagliatelle]
-      # The published metadata keys firstSeen, lastOnline and scanTime predate GO-EXT-001. They
-      # are kept so old and new files have the same format; renaming them is a data migration.
-      - path: ^internal/aggregator/
+      # Upstream API types keep upstream JSON casing (GO-EXT-002). AbuseIPDB's response uses
+      # camelCase keys; only those are excused, so the snake_case data it stores is still checked.
+      - path: ^internal/aggregator/abuseipdb/
         linters:
           - tagliatelle
-        text: "got '(firstSeen|lastOnline|scanTime)'"
+        text: "got '[a-z]+[A-Z][A-Za-z]*'"
 
 formatters:
   enable:

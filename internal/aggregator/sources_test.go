@@ -1,132 +1,178 @@
 package aggregator
 
 import (
-	"net/http"
+	"encoding/json/jsontext"
 	"os"
 	"path/filepath"
+	"strings"
 	"testing"
+	"time"
 
 	"github.com/google/go-cmp/cmp"
 )
 
-// REPOSITORY_SOURCES_PATH is the repository's own sources file, relative to this package.
-const REPOSITORY_SOURCES_PATH = "../../sources.json"
-
-// TestLoadSources checks that every group and field of the aggregator section is read, and
-// that other sections and unknown fields are ignored.
-func TestLoadSources(test *testing.T) {
+// TestLoadConfiguration checks that the aggregator section is read and other sections, such as
+// the tracker's, are ignored.
+func TestLoadConfiguration(test *testing.T) {
 	test.Parallel()
 
-	path := filepath.Join(test.TempDir(), "sources.json")
-	content := `{
+	path := writeConfigurationFile(test, `{
 		"aggregator": {
-			"git": [{"name": "g", "enabled": true, "url": "u", "url_raw": "r/", "file_format": "YYYY.csv", "type": "csv"}],
-			"json": [{"name": "j", "url": "ju"}],
-			"api": [{"name": "a", "enabled": true, "url": "au", "query": {"query": "taginfo", "tag": "c2", "days": 1, "limit": 10}}]
+			"feeds": [{"name": "threatfox", "enabled": true, "url": "https://example.com/", "requests_per_minute": 10, "options": {"query": "taginfo"}}],
+			"enrichers": [{"name": "ipinfo", "enabled": false, "url": "https://example.com/", "requests_per_minute": 60, "max_lookups": 5, "refresh_after_hours": 24, "max_minutes_per_run": 2}]
 		},
-		"tracker": {"censys": []}
-	}`
-	if err := os.WriteFile(path, []byte(content), 0o600); nil != err {
-		test.Fatalf("writing sources file: %v", err)
-	}
+		"tracker": {"censys": [{"name": "anything"}]}
+	}`)
 
-	got, err := LoadSources(path)
+	configuration, err := LoadConfiguration(path)
 	if nil != err {
-		test.Fatalf("LoadSources(%q) error = %v, want nil", path, err)
+		test.Fatalf("LoadConfiguration() error = %v, want nil", err)
 	}
 
-	want := Sources{
-		Git:  []Source{{Name: "g", Enabled: true, URL: "u", URLRaw: "r/", FileFormat: "YYYY.csv"}},
-		JSON: []Source{{Name: "j", URL: "ju"}},
-		API:  []Source{{Name: "a", Enabled: true, URL: "au", Query: APIQuery{Query: "taginfo", Tag: "c2", Days: 1, Limit: 10}}},
+	want := Configuration{
+		Feeds: []SourceConfig{{
+			Name: "threatfox", Enabled: true, URL: "https://example.com/", RequestsPerMinute: 10,
+			Options: jsontext.Value(`{"query": "taginfo"}`),
+		}},
+		Enrichers: []SourceConfig{{
+			Name: "ipinfo", URL: "https://example.com/", RequestsPerMinute: 60,
+			MaxLookups: 5, RefreshAfterHours: 24, MaxMinutesPerRun: 2,
+		}},
 	}
-	if diff := cmp.Diff(want, got, cmp.AllowUnexported(Source{})); "" != diff {
-		test.Errorf("LoadSources(%q) mismatch (-want +got):\n%s", path, diff)
+	if diff := cmp.Diff(want, configuration, recordComparison); "" != diff {
+		test.Errorf("LoadConfiguration() mismatch (-want +got):\n%s", diff)
 	}
 }
 
-// TestLoadSourcesErrors checks that a missing or malformed sources file is reported.
-func TestLoadSourcesErrors(test *testing.T) {
+// TestLoadConfigurationErrors checks the files LoadConfiguration refuses.
+func TestLoadConfigurationErrors(test *testing.T) {
 	test.Parallel()
 
-	directory := test.TempDir()
-	malformedPath := filepath.Join(directory, "malformed.json")
-	if err := os.WriteFile(malformedPath, []byte("{"), 0o600); nil != err {
-		test.Fatalf("writing malformed sources file: %v", err)
+	testCases := []struct {
+		name    string
+		content string
+		// wantErr is part of the error LoadConfiguration must return.
+		wantErr string
+	}{
+		{name: "not JSON", content: `{`, wantErr: "decoding sources file"},
+		{name: "no aggregator section", content: `{"tracker": {}}`, wantErr: "no aggregator section"},
+		// A mistyped setting must fail at start-up, not be silently ignored.
+		{name: "unknown setting", content: `{"aggregator": {"feeds": [{"name": "x", "enabeld": true}]}}`, wantErr: "enabeld"},
 	}
 
-	for _, path := range []string{filepath.Join(directory, "missing.json"), malformedPath} {
-		if _, err := LoadSources(path); nil == err {
-			test.Errorf("LoadSources(%q) error = nil, want error", path)
+	for _, testCase := range testCases {
+		test.Run(testCase.name, func(subtest *testing.T) {
+			subtest.Parallel()
+
+			_, err := LoadConfiguration(writeConfigurationFile(subtest, testCase.content))
+			if nil == err || !strings.Contains(err.Error(), testCase.wantErr) {
+				subtest.Errorf("LoadConfiguration(%s) error = %v, want one containing %q", testCase.content, err, testCase.wantErr)
+			}
+		})
+	}
+
+	if _, err := LoadConfiguration(filepath.Join(test.TempDir(), "missing.json")); nil == err {
+		test.Error("LoadConfiguration(missing file) error = nil, want error")
+	}
+}
+
+// TestRepositoryConfiguration checks the repository's own sources.json: it loads, and every
+// enricher has a valid schedule whose daily lookups stay within its free quota where one is
+// documented.
+func TestRepositoryConfiguration(test *testing.T) {
+	test.Parallel()
+
+	configuration, err := LoadConfiguration(filepath.Join("..", "..", "sources.json"))
+	if nil != err {
+		test.Fatalf("LoadConfiguration(sources.json) error = %v, want nil", err)
+	}
+
+	// Daily quotas of the free tiers, from KEY.md. The workflow runs every hour.
+	dailyQuotas := map[string]int{"virustotal": 500, "abuseipdb": 1000}
+
+	for _, enricher := range configuration.Enrichers {
+		if _, err := enricher.Schedule(); nil != err {
+			test.Errorf("enricher %q schedule error = %v, want nil", enricher.Name, err)
+		}
+
+		if quota, ok := dailyQuotas[enricher.Name]; ok && 24*enricher.MaxLookups > quota {
+			test.Errorf("enricher %q looks up %d addresses a day, over its quota of %d", enricher.Name, 24*enricher.MaxLookups, quota)
 		}
 	}
 }
 
-// TestLoadSourcesRepositoryFile checks that the repository's own sources file is valid, and
-// that exactly the sources that were running before the enabled field existed are enabled.
-func TestLoadSourcesRepositoryFile(test *testing.T) {
+// TestSourceConfigSchedule checks that a complete schedule is converted, and an incomplete one
+// refused.
+func TestSourceConfigSchedule(test *testing.T) {
 	test.Parallel()
 
-	sources, err := LoadSources(REPOSITORY_SOURCES_PATH)
-	if nil != err {
-		test.Fatalf("LoadSources(%q) error = %v, want nil", REPOSITORY_SOURCES_PATH, err)
+	schedule, err := SourceConfig{MaxLookups: 5, RefreshAfterHours: 24, MaxMinutesPerRun: 3}.Schedule()
+	want := Schedule{MaxLookups: 5, RefreshAfter: 24 * time.Hour, MaxDuration: 3 * time.Minute}
+
+	if nil != err || want != schedule {
+		test.Errorf("Schedule() = (%+v, %v), want %+v", schedule, err, want)
 	}
 
-	var enabledNames []string
-	for _, source := range sources.enabled() {
-		enabledNames = append(enabledNames, source.Name)
-	}
-
-	if diff := cmp.Diff([]string{THREATFOX_SOURCE_NAME}, enabledNames); "" != diff {
-		test.Errorf("enabled sources mismatch (-want +got):\n%s", diff)
-	}
-
-	// Every source, enabled or not, must pass the checks New makes.
-	allEnabled := Sources{
-		Git:  enableAll(sources.Git),
-		JSON: enableAll(sources.JSON),
-		CSV:  enableAll(sources.CSV),
-		API:  enableAll(sources.API),
-	}
-	if _, err := New(allEnabled, newTestStore(test), &http.Client{}, WithAbusechAPIKey("key")); nil != err {
-		test.Errorf("New() with every repository source enabled error = %v, want nil", err)
+	for _, config := range []SourceConfig{
+		{RefreshAfterHours: 1, MaxMinutesPerRun: 1},
+		{MaxLookups: 1, MaxMinutesPerRun: 1},
+		{MaxLookups: 1, RefreshAfterHours: 1},
+	} {
+		if _, err := config.Schedule(); nil == err {
+			test.Errorf("Schedule() of %+v error = nil, want error", config)
+		}
 	}
 }
 
-// enableAll returns copies of sources with every source enabled.
-func enableAll(sources []Source) []Source {
-	enabledSources := make([]Source, 0, len(sources))
-	for _, source := range sources {
-		source.Enabled = true
-		enabledSources = append(enabledSources, source)
-	}
-
-	return enabledSources
-}
-
-// TestSourcesEnabled checks that only enabled sources are returned, in processing order and
-// labelled with their group.
-func TestSourcesEnabled(test *testing.T) {
+// TestDecodeOptions checks that options are decoded strictly, and that missing options leave
+// the defaults alone.
+func TestDecodeOptions(test *testing.T) {
 	test.Parallel()
 
-	sources := Sources{
-		Git:  []Source{{Name: "git", Enabled: true}, {Name: "git-disabled"}},
-		JSON: []Source{{Name: "json", Enabled: true}},
-		CSV:  []Source{{Name: "csv", Enabled: true}},
-		API:  []Source{{Name: "api-disabled"}, {Name: "api", Enabled: true}},
+	// options is a source's own settings type.
+	type options struct {
+		// Days is a setting with a default.
+		Days int `json:"days"`
 	}
 
-	want := []Source{
-		{Name: "git", Enabled: true, kind: SOURCE_KIND_GIT},
-		{Name: "json", Enabled: true, kind: SOURCE_KIND_JSON},
-		{Name: "csv", Enabled: true, kind: SOURCE_KIND_CSV},
-		{Name: "api", Enabled: true, kind: SOURCE_KIND_API},
-	}
-	if diff := cmp.Diff(want, sources.enabled(), cmp.AllowUnexported(Source{})); "" != diff {
-		test.Errorf("enabled() mismatch (-want +got):\n%s", diff)
+	decoded := options{Days: 7}
+	if err := DecodeOptions(nil, &decoded); nil != err || 7 != decoded.Days {
+		test.Errorf("DecodeOptions(nil) = (%+v, %v), want the default kept", decoded, err)
 	}
 
-	if "" != sources.Git[0].kind {
-		test.Error("enabled() labelled the original sources")
+	if err := DecodeOptions(jsontext.Value(`{"days": 1}`), &decoded); nil != err || 1 != decoded.Days {
+		test.Errorf("DecodeOptions(days 1) = (%+v, %v), want days 1", decoded, err)
 	}
+
+	if err := DecodeOptions(jsontext.Value(`{"dayz": 1}`), &decoded); nil == err {
+		test.Error("DecodeOptions(unknown field) error = nil, want error")
+	}
+}
+
+// TestParseUpstreamURL checks that only absolute https URLs are accepted.
+func TestParseUpstreamURL(test *testing.T) {
+	test.Parallel()
+
+	if parsed, err := ParseUpstreamURL("https://example.com/api/"); nil != err || "/api/" != parsed.Path {
+		test.Errorf("ParseUpstreamURL(https) = (%v, %v), want the parsed URL", parsed, err)
+	}
+
+	for _, rawURL := range []string{"http://example.com/", "/relative", "", "https://[::1"} {
+		if _, err := ParseUpstreamURL(rawURL); nil == err {
+			test.Errorf("ParseUpstreamURL(%q) error = nil, want error", rawURL)
+		}
+	}
+}
+
+// writeConfigurationFile writes content to a sources file in a temporary directory and returns
+// its path.
+func writeConfigurationFile(testingContext testing.TB, content string) string {
+	testingContext.Helper()
+
+	path := filepath.Join(testingContext.TempDir(), "sources.json")
+	if err := os.WriteFile(path, []byte(content), 0o600); nil != err {
+		testingContext.Fatalf("writing sources file: %v", err)
+	}
+
+	return path
 }

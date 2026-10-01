@@ -1,56 +1,64 @@
 package aggregator
 
 import (
+	"bytes"
 	"context"
 	"encoding/csv"
-	"fmt"
+	"errors"
 	"io"
+	"log/slog"
 )
 
-// readCSVRows reads a CSV feed body and returns its rows without the header row. Rows that
-// don't have exactly columnCount columns are skipped with a warning, so one malformed row
-// doesn't stop the rest of the feed being published.
-func (aggregator *Aggregator) readCSVRows(
+// ReadCSVRows reads a downloaded CSV feed and returns its rows without the header row. Rows
+// that don't have exactly columnCount columns are skipped with a warning to logger, so one
+// malformed row doesn't stop the rest of the feed being stored.
+func ReadCSVRows(
 	ctx context.Context,
+	logger *slog.Logger,
 	sourceName string,
-	body io.Reader,
+	body []byte,
 	columnCount int,
-) ([][]string, error) {
-	reader := csv.NewReader(body)
+) [][]string {
+	reader := csv.NewReader(bytes.NewReader(body))
 	// Column counts are checked row by row below instead of by the reader, so that a malformed
 	// row is skipped rather than failing the whole feed, and the header may differ.
 	reader.FieldsPerRecord = -1
 	// Feeds sometimes contain stray quotes inside unquoted fields; read them as literal text.
 	reader.LazyQuotes = true
 
-	// With LazyQuotes and no fixed column count, reading fails only when body itself does.
-	records, err := reader.ReadAll()
-	if nil != err {
-		return nil, fmt.Errorf("reading CSV: %w", err)
-	}
+	var rows [][]string
 
-	if 0 == len(records) {
-		return nil, nil
-	}
+	// The first record is the header row, so row numbers in warnings count it as row 1. The
+	// loop ends when the reader reaches the end of body.
+	for rowNumber := 1; ; rowNumber++ {
+		record, err := reader.Read()
+		if errors.Is(err, io.EOF) {
+			return rows
+		}
 
-	// The first record is the header row. Row numbers in warnings count it as row 1.
-	rows := make([][]string, 0, len(records)-1)
+		// With LazyQuotes and no fixed column count, reading fails only when the underlying
+		// reader does, and body is already in memory.
+		if nil != err { // coverage-ignore -- reading from memory never fails.
+			logger.WarnContext(ctx, "skipping unreadable CSV feed", "source", sourceName, "error", err)
 
-	for index, record := range records[1:] {
-		if columnCount != len(record) {
-			aggregator.logger.WarnContext(
+			return rows
+		}
+
+		isMalformed := columnCount != len(record)
+
+		switch {
+		case 1 == rowNumber:
+			// The header's own column count doesn't matter.
+		case isMalformed:
+			logger.WarnContext(
 				ctx,
 				"skipping malformed CSV row",
 				"source", sourceName,
-				"row_number", index+2,
+				"row_number", rowNumber,
 				"column_count", len(record),
 			)
-
-			continue
+		default:
+			rows = append(rows, record)
 		}
-
-		rows = append(rows, record)
 	}
-
-	return rows, nil
 }

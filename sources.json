@@ -1,43 +1,118 @@
 {
     "aggregator": {
-        "git": [
-            {
-                "name": "criminalip",
-                "enabled": false,
-                "url": "https://github.com/criminalip/C2-Daily-Feed",
-                "url_raw": "https://raw.githubusercontent.com/criminalip/C2-Daily-Feed/refs/heads/main/",
-                "file_format": "YYYY-MM-DD.csv",
-                "type": "csv",
-                "metadata": {
-                    "cron": "10 1 * * *"
-                }
-            }
-        ],
-        "json": [
-            {
-                "name": "feodotracker",
-                "enabled": false,
-                "url": "https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.json"
-            }
-        ],
-        "csv": [
-            {
-                "name": "viribacktracker",
-                "enabled": false,
-                "url": "https://tracker.viriback.com/last30.php"
-            }
-        ],
-        "api": [
+        "feeds": [
             {
                 "name": "threatfox",
                 "enabled": true,
                 "url": "https://threatfox-api.abuse.ch/api/v1/",
-                "query": {
+                "requests_per_minute": 10,
+                "options": {
                     "query": "taginfo",
                     "tag": "c2 ",
                     "days": 1,
                     "limit": 1000
                 }
+            },
+            {
+                "name": "feodotracker",
+                "enabled": false,
+                "url": "https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.json",
+                "requests_per_minute": 4
+            },
+            {
+                "name": "viribacktracker",
+                "enabled": false,
+                "url": "https://tracker.viriback.com/last30.php",
+                "requests_per_minute": 4
+            },
+            {
+                "name": "criminalip",
+                "enabled": false,
+                "url": "https://raw.githubusercontent.com/criminalip/C2-Daily-Feed/refs/heads/main/",
+                "requests_per_minute": 4,
+                "options": {
+                    "file_format": "YYYY-MM-DD.csv"
+                }
+            }
+        ],
+        "enrichers": [
+            {
+                "name": "spamhaus",
+                "enabled": true,
+                "url": "https://www.spamhaus.org/drop/drop_v4.json",
+                "requests_per_minute": 10,
+                "max_lookups": 5000,
+                "refresh_after_hours": 24,
+                "max_minutes_per_run": 2,
+                "options": {
+                    "ipv6_url": "https://www.spamhaus.org/drop/drop_v6.json"
+                }
+            },
+            {
+                "name": "ipinfo",
+                "enabled": true,
+                "url": "https://api.ipinfo.io/lite/",
+                "requests_per_minute": 300,
+                "max_lookups": 600,
+                "refresh_after_hours": 720,
+                "max_minutes_per_run": 4
+            },
+            {
+                "name": "internetdb",
+                "enabled": true,
+                "url": "https://internetdb.shodan.io/",
+                "requests_per_minute": 60,
+                "max_lookups": 120,
+                "refresh_after_hours": 168,
+                "max_minutes_per_run": 4
+            },
+            {
+                "name": "urlhaus",
+                "enabled": true,
+                "url": "https://urlhaus-api.abuse.ch/v1/host/",
+                "requests_per_minute": 30,
+                "max_lookups": 25,
+                "refresh_after_hours": 168,
+                "max_minutes_per_run": 2
+            },
+            {
+                "name": "abuseipdb",
+                "enabled": true,
+                "url": "https://api.abuseipdb.com/api/v2/check",
+                "requests_per_minute": 30,
+                "max_lookups": 40,
+                "refresh_after_hours": 168,
+                "max_minutes_per_run": 3,
+                "options": {
+                    "max_age_in_days": 90
+                }
+            },
+            {
+                "name": "otx",
+                "enabled": true,
+                "url": "https://otx.alienvault.com/api/v1/indicators/",
+                "requests_per_minute": 30,
+                "max_lookups": 100,
+                "refresh_after_hours": 168,
+                "max_minutes_per_run": 4
+            },
+            {
+                "name": "shodan",
+                "enabled": true,
+                "url": "https://api.shodan.io/shodan/host/",
+                "requests_per_minute": 30,
+                "max_lookups": 60,
+                "refresh_after_hours": 168,
+                "max_minutes_per_run": 3
+            },
+            {
+                "name": "virustotal",
+                "enabled": true,
+                "url": "https://www.virustotal.com/api/v3/ip_addresses/",
+                "requests_per_minute": 4,
+                "max_lookups": 20,
+                "refresh_after_hours": 720,
+                "max_minutes_per_run": 6
             }
         ]
     },

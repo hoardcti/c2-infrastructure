@@ -23,7 +23,9 @@ env:
 jobs:
     aggregate:
         runs-on: ubuntu-latest
-        timeout-minutes: 30
+        # The enrichers' time budgets in sources.json add up to 28 minutes at most, plus the
+        # feeds and the Git steps
+        timeout-minutes: 45
 
         steps:
             # Source code lives on main, which scheduled runs are triggered from.
@@ -57,11 +59,17 @@ jobs:
               run: make build
 
             # Exits 1 if any source fails; the steps below still publish what
-            # the other sources stored, and the run is marked as failed
+            # the other sources stored, and the run is marked as failed. Every
+            # enabled source's key must be set (see KEY.md)
             - name: Run Aggregate
               run: ./bin/aggregator -out out -log json
               env:
                   ABUSECH_API_KEY: ${{ secrets.ABUSECH_API_KEY }}
+                  IPINFO_TOKEN: ${{ secrets.IPINFO_TOKEN }}
+                  VIRUSTOTAL_API_KEY: ${{ secrets.VIRUSTOTAL_API_KEY }}
+                  ABUSEIPDB_API_KEY: ${{ secrets.ABUSEIPDB_API_KEY }}
+                  OTX_API_KEY: ${{ secrets.OTX_API_KEY }}
+                  SHODAN_API_KEY: ${{ secrets.SHODAN_API_KEY }}
 
             - name: Commit and push data branch
               id: data
