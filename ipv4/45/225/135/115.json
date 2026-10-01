@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "45.225.135.115",
     "first_seen": "2026-09-23T16:40:16.250994Z",
-    "last_seen": "2026-10-01T13:08:35Z",
+    "last_seen": "2026-10-01T13:40:54Z",
     "flags": [
         "remcos"
     ],
@@ -48,12 +48,63 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-01T13:52:52Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:52:52Z",
+                    "last_observed": "2026-10-01T13:52:52Z",
+                    "data": {
+                        "org": "RACK SPHERE HOSTING S.A.",
+                        "isp": "",
+                        "asn": "",
+                        "os": null,
+                        "country_code": "PA",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad22c2ad2ad2ad2adfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "d57a56f2715d1d3c43245fbead663e56f48ed464b29fbb1fa087f3f3b70f17dc",
+                                "certificate_subject": "WIN-TVJFV24LUKT",
+                                "certificate_issuer": "WIN-TVJFV24LUKT"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:08:35Z",
+            "last_checked": "2026-10-01T13:40:54Z",
             "observations": [
                 {
                     "first_observed": "2026-09-23T16:40:16.250994Z",
@@ -74,7 +125,7 @@
                 {
                     "key": "1927631",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:08:35Z",
+                    "last_observed": "2026-10-01T13:40:54Z",
                     "flags": [
                         "remcos"
                     ],

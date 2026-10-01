@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "45.133.180.18",
     "first_seen": "2026-09-28T21:42:30.96667Z",
-    "last_seen": "2026-10-01T13:08:35Z",
+    "last_seen": "2026-10-01T13:40:54Z",
     "flags": [
         "remcos"
     ],
@@ -181,7 +181,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:08:35Z",
+            "last_checked": "2026-10-01T13:40:54Z",
             "observations": [
                 {
                     "first_observed": "2026-09-28T21:42:30.96667Z",
@@ -202,7 +202,7 @@
                 {
                     "key": "1941096",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:08:35Z",
+                    "last_observed": "2026-10-01T13:40:54Z",
                     "flags": [
                         "remcos"
                     ],
@@ -227,6 +227,82 @@
         "urlhaus": {
             "last_checked": "2026-10-01T13:13:09Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T13:53:49Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:53:49Z",
+                    "last_observed": "2026-10-01T13:53:49Z",
+                    "data": {
+                        "as_owner": "M247 Europe SRL",
+                        "asn": 9009,
+                        "network": "45.133.180.0/22",
+                        "country": "MX",
+                        "continent": "NA",
+                        "regional_internet_registry": "LACNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 6,
+                            "suspicious": 2,
+                            "undetected": 32,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "GreyNoise",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [
+                            "suspicious-udp",
+                            "vpn"
+                        ],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

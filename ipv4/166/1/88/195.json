@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "166.1.88.195",
     "first_seen": "2026-09-29T08:08:11.427482Z",
-    "last_seen": "2026-10-01T13:08:35Z",
+    "last_seen": "2026-10-01T13:40:54Z",
     "flags": [
         "remus"
     ],
@@ -130,7 +130,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:08:35Z",
+            "last_checked": "2026-10-01T13:40:54Z",
             "observations": [
                 {
                     "first_observed": "2026-09-29T08:08:11.427482Z",
@@ -151,7 +151,7 @@
                 {
                     "key": "1941168",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:08:35Z",
+                    "last_observed": "2026-10-01T13:40:54Z",
                     "flags": [
                         "remus"
                     ],
@@ -176,6 +176,65 @@
         "urlhaus": {
             "last_checked": "2026-10-01T13:13:05Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T13:53:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:53:19Z",
+                    "last_observed": "2026-10-01T13:53:19Z",
+                    "data": {
+                        "as_owner": "OVH SAS",
+                        "asn": 16276,
+                        "network": "166.1.88.0/24",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 2,
+                            "undetected": 35,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

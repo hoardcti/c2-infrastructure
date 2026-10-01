@@ -2,11 +2,34 @@
     "schema_version": 2,
     "ip": "176.123.5.4",
     "first_seen": "2026-09-23T16:40:16.25106Z",
-    "last_seen": "2026-10-01T13:08:35Z",
+    "last_seen": "2026-10-01T13:40:54Z",
     "flags": [
         "cobalt strike"
     ],
     "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T13:46:42Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:46:42Z",
+                    "last_observed": "2026-10-01T13:46:42Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2022-02-11T14:14:18Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "ALEXHOST SRL",
+                        "domain": "alexhost.com",
+                        "country_code": "MD",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
         "internetdb": {
             "last_checked": "2026-10-01T12:23:45Z",
             "observations": [
@@ -51,12 +74,52 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-01T13:52:00Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:52:00Z",
+                    "last_observed": "2026-10-01T13:52:00Z",
+                    "data": {
+                        "org": "ALEXHOST SRL",
+                        "isp": "ALEXHOST SRL",
+                        "asn": "AS200019",
+                        "os": null,
+                        "country_code": "MD",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u10"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "87f2085c32b6a2cc709b365f55873e207a9caa10bffecf2fd16d3cf9d94d390c"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:08:35Z",
+            "last_checked": "2026-10-01T13:40:54Z",
             "observations": [
                 {
                     "first_observed": "2026-09-23T16:40:16.25106Z",
@@ -77,7 +140,7 @@
                 {
                     "key": "1926208",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:08:35Z",
+                    "last_observed": "2026-10-01T13:40:54Z",
                     "flags": [
                         "cobalt strike"
                     ],

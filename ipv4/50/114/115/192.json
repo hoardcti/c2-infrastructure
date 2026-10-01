@@ -2,11 +2,58 @@
     "schema_version": 2,
     "ip": "50.114.115.192",
     "first_seen": "2026-09-14T11:57:26.200821Z",
-    "last_seen": "2026-10-01T13:08:35Z",
+    "last_seen": "2026-10-01T13:40:54Z",
     "flags": [
         "unknown malware"
     ],
     "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T13:43:43Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:43:43Z",
+                    "last_observed": "2026-10-01T13:43:43Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            25,
+                            80,
+                            143,
+                            443,
+                            587,
+                            993,
+                            3333,
+                            4369
+                        ],
+                        "hostnames": [
+                            "125957.koara.live",
+                            "98497.koara.live",
+                            "admin-evotor.ru",
+                            "mail.vostok-eletra.ru",
+                            "vostok-eletra.ru",
+                            "www.admin-evotor.ru",
+                            "www.vostok-eletra.ru"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.24.0",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/a:postfix:postfix",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
         "ipinfo": {
             "last_checked": "2026-10-01T12:20:55Z",
             "observations": [
@@ -30,7 +77,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:08:35Z",
+            "last_checked": "2026-10-01T13:40:54Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200821Z",
@@ -51,7 +98,7 @@
                 {
                     "key": "1917436",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:08:35Z",
+                    "last_observed": "2026-10-01T13:40:54Z",
                     "flags": [
                         "unknown malware"
                     ],

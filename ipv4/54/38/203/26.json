@@ -2,11 +2,47 @@
     "schema_version": 2,
     "ip": "54.38.203.26",
     "first_seen": "2026-09-14T11:57:26.201176Z",
-    "last_seen": "2026-10-01T13:08:35Z",
+    "last_seen": "2026-10-01T13:40:54Z",
     "flags": [
         "unknown malware"
     ],
     "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T13:43:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:43:01Z",
+                    "last_observed": "2026-10-01T13:43:01Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443,
+                            4433,
+                            8080
+                        ],
+                        "hostnames": [
+                            "e-notification.pl",
+                            "mail.e-notification.pl"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.18.0",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "c2",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
         "ipinfo": {
             "last_checked": "2026-10-01T12:20:47Z",
             "observations": [
@@ -30,7 +66,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:08:35Z",
+            "last_checked": "2026-10-01T13:40:54Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.201176Z",
@@ -51,7 +87,7 @@
                 {
                     "key": "1917391",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:08:35Z",
+                    "last_observed": "2026-10-01T13:40:54Z",
                     "flags": [
                         "unknown malware"
                     ],

@@ -2,11 +2,36 @@
     "schema_version": 2,
     "ip": "217.60.195.161",
     "first_seen": "2026-09-23T16:40:16.251138Z",
-    "last_seen": "2026-10-01T13:08:35Z",
+    "last_seen": "2026-10-01T13:40:54Z",
     "flags": [
         "aisuru"
     ],
     "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T13:46:08Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:46:08Z",
+                    "last_observed": "2026-10-01T13:46:08Z",
+                    "data": {
+                        "abuse_confidence_score": 100,
+                        "total_reports": 204,
+                        "distinct_reporters": 84,
+                        "last_reported_at": "2026-09-30T06:30:08Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "SWISSNET LLC",
+                        "domain": "swissnetwork.co",
+                        "country_code": "NL",
+                        "hostnames": [
+                            "bhj8s83dsg1g.server.swissnetwork.io"
+                        ]
+                    }
+                }
+            ]
+        },
         "internetdb": {
             "last_checked": "2026-10-01T12:23:28Z",
             "observations": [
@@ -93,6 +118,13 @@
                 }
             ]
         },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-01T13:51:26Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": [
@@ -109,7 +141,7 @@
             ]
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:08:35Z",
+            "last_checked": "2026-10-01T13:40:54Z",
             "observations": [
                 {
                     "first_observed": "2026-09-23T16:40:16.251138Z",
@@ -130,7 +162,7 @@
                 {
                     "key": "1923195",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:08:35Z",
+                    "last_observed": "2026-10-01T13:40:54Z",
                     "flags": [
                         "aisuru"
                     ],

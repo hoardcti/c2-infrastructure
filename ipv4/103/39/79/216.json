@@ -2,11 +2,45 @@
     "schema_version": 2,
     "ip": "103.39.79.216",
     "first_seen": "2026-09-14T11:57:26.200705Z",
-    "last_seen": "2026-10-01T13:08:35Z",
+    "last_seen": "2026-10-01T13:40:54Z",
     "flags": [
         "unknown malware"
     ],
     "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T13:43:58Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:43:58Z",
+                    "last_observed": "2026-10-01T13:43:58Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            443,
+                            3333
+                        ],
+                        "hostnames": [
+                            "genlusafc.com",
+                            "www.genlusafc.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.24.0",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
         "ipinfo": {
             "last_checked": "2026-10-01T12:20:58Z",
             "observations": [
@@ -30,7 +64,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:08:35Z",
+            "last_checked": "2026-10-01T13:40:54Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200705Z",
@@ -51,7 +85,7 @@
                 {
                     "key": "1917451",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:08:35Z",
+                    "last_observed": "2026-10-01T13:40:54Z",
                     "flags": [
                         "unknown malware"
                     ],

@@ -2,11 +2,36 @@
     "schema_version": 2,
     "ip": "138.226.247.152",
     "first_seen": "2026-09-23T16:40:16.251046Z",
-    "last_seen": "2026-10-01T13:08:35Z",
+    "last_seen": "2026-10-01T13:40:54Z",
     "flags": [
         "ottercookie"
     ],
     "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T13:46:58Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:46:58Z",
+                    "last_observed": "2026-10-01T13:46:58Z",
+                    "data": {
+                        "abuse_confidence_score": 22,
+                        "total_reports": 9,
+                        "distinct_reporters": 8,
+                        "last_reported_at": "2026-08-15T21:30:54Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "AMS VPS",
+                        "domain": "sollutium.com",
+                        "country_code": "NL",
+                        "hostnames": [
+                            "dedicated.sollutium.com"
+                        ]
+                    }
+                }
+            ]
+        },
         "internetdb": {
             "last_checked": "2026-10-01T12:23:53Z",
             "observations": [
@@ -56,12 +81,19 @@
                 }
             ]
         },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-01T13:52:16Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:08:35Z",
+            "last_checked": "2026-10-01T13:40:54Z",
             "observations": [
                 {
                     "first_observed": "2026-09-23T16:40:16.251046Z",
@@ -82,7 +114,7 @@
                 {
                     "key": "1926654",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:08:35Z",
+                    "last_observed": "2026-10-01T13:40:54Z",
                     "flags": [
                         "ottercookie"
                     ],
@@ -106,7 +138,7 @@
                 {
                     "key": "1923479",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:08:35Z",
+                    "last_observed": "2026-10-01T13:40:54Z",
                     "flags": [
                         "ottercookie"
                     ],

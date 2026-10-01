@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "176.65.132.117",
     "first_seen": "2026-09-30T22:56:17.027609Z",
-    "last_seen": "2026-10-01T13:08:35Z",
+    "last_seen": "2026-10-01T13:40:54Z",
     "flags": [
         "remcos"
     ],
@@ -846,7 +846,7 @@
             ]
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:08:35Z",
+            "last_checked": "2026-10-01T13:40:54Z",
             "observations": [
                 {
                     "first_observed": "2026-09-30T22:56:17.027609Z",
@@ -867,7 +867,7 @@
                 {
                     "key": "1943177",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:08:35Z",
+                    "last_observed": "2026-10-01T13:40:54Z",
                     "flags": [
                         "remcos"
                     ],
@@ -882,6 +882,29 @@
                         "reference": null,
                         "tags": [
                             "Freshlogs.ddns",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                },
+                {
+                    "key": "1943854",
+                    "first_observed": "2026-10-01T13:40:54Z",
+                    "last_observed": "2026-10-01T13:40:54Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "176.65.132.117:11225",
+                        "port": 11225,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-01T13:33:34Z",
+                        "reference": null,
+                        "tags": [
+                            "REMOTEHOST",
                             "c2",
                             "remcos"
                         ]

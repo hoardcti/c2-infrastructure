@@ -2,11 +2,56 @@
     "schema_version": 2,
     "ip": "103.127.139.58",
     "first_seen": "2026-09-14T11:57:26.200622Z",
-    "last_seen": "2026-10-01T13:08:35Z",
+    "last_seen": "2026-10-01T13:40:54Z",
     "flags": [
         "unknown malware"
     ],
     "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T13:44:09Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:44:09Z",
+                    "last_observed": "2026-10-01T13:44:09Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            25,
+                            53,
+                            465,
+                            587,
+                            3100,
+                            3333,
+                            8080,
+                            8443
+                        ],
+                        "hostnames": [
+                            "dashboard.ayana-hospitality.com",
+                            "ip-58-139-127-103.wjv-1.biznetg.io",
+                            "mail.ayana-hospitality.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.18.0",
+                            "cpe:/a:f5:nginx:1.29.5",
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "open-dir",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
         "ipinfo": {
             "last_checked": "2026-10-01T12:21:01Z",
             "observations": [
@@ -30,7 +75,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:08:35Z",
+            "last_checked": "2026-10-01T13:40:54Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200622Z",
@@ -51,7 +96,7 @@
                 {
                     "key": "1917462",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:08:35Z",
+                    "last_observed": "2026-10-01T13:40:54Z",
                     "flags": [
                         "unknown malware"
                     ],
