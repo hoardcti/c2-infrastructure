@@ -133,10 +133,46 @@ func TestEnricherLookupNotFoundAndErrors(test *testing.T) {
 	}
 }
 
+// TestNewReportsAutonomousSystem checks that the asn is stored as "AS<number>" whichever form
+// Shodan sends: text for some hosts, a bare number for others (seen for 165.245.184.215 on
+// 2026-10-01), or null.
+func TestNewReportsAutonomousSystem(test *testing.T) {
+	test.Parallel()
+
+	testCases := []struct {
+		body string
+		want string
+	}{
+		{body: `{"asn": "AS45090"}`, want: "AS45090"},
+		{body: `{"asn": 14061}`, want: "AS14061"},
+		{body: `{"asn": null}`},
+		{body: `{}`},
+	}
+
+	for _, testCase := range testCases {
+		reports, err := newReports([]byte(testCase.body))
+		if nil != err {
+			test.Fatalf("newReports(%s) error = %v, want nil", testCase.body, err)
+		}
+
+		var got Data
+		if err := json.Unmarshal(reports[0].Data, &got); nil != err || testCase.want != got.ASN {
+			test.Errorf("newReports(%s) asn = (%q, %v), want %q", testCase.body, got.ASN, err, testCase.want)
+		}
+	}
+
+	for _, body := range []string{`{"asn": -1}`, `{"asn": 1.5}`, `{"asn": [1]}`} {
+		if _, err := newReports([]byte(body)); nil == err {
+			test.Errorf("newReports(%s) error = nil, want error", body)
+		}
+	}
+}
+
 // FuzzNewReports checks that newReports never panics, and that what it accepts is one report
 // with valid data.
 func FuzzNewReports(fuzzer *testing.F) {
 	fuzzer.Add([]byte(readTestdata(fuzzer, "1.15.76.39.json")))
+	fuzzer.Add([]byte(`{"asn": 14061}`))
 	fuzzer.Add([]byte(`{"data": [{"port": 443, "transport": "udp"}, {"port": 443, "transport": "tcp", "ssl": null, "http": {}}]}`))
 
 	fuzzer.Fuzz(func(test *testing.T, body []byte) {

@@ -24,6 +24,7 @@ import (
 	"net/netip"
 	"net/url"
 	"slices"
+	"strconv"
 
 	"github.com/hoardcti/c2-infrastructure/internal/aggregator"
 )
@@ -34,6 +35,9 @@ const (
 	SOURCE_NAME = "shodan"
 	// MAX_RESPONSE_BYTES bounds a response. Hosts with many services give a few MiB.
 	MAX_RESPONSE_BYTES = 16 << 20
+	// AUTONOMOUS_SYSTEM_PREFIX starts an autonomous system number written as text, as in
+	// "AS45090".
+	AUTONOMOUS_SYSTEM_PREFIX = "AS"
 )
 
 // Enricher looks addresses up in Shodan. Build one with New.
@@ -74,8 +78,9 @@ type host struct {
 	Org string `json:"org"`
 	// ISP is the internet service provider.
 	ISP string `json:"isp"`
-	// ASN is the autonomous system, such as "AS45090".
-	ASN string `json:"asn"`
+	// ASN is the autonomous system. Shodan sends it as "AS45090" for some hosts and as 45090
+	// for others, so it's read with autonomousSystem.
+	ASN autonomousSystem `json:"asn"`
 	// OS is the operating system Shodan detected, or null.
 	OS *string `json:"os"`
 	// CountryCode is the two-letter country code.
@@ -126,6 +131,34 @@ type banner struct {
 			Issuer certificateName `json:"issuer"`
 		} `json:"cert"`
 	} `json:"ssl"`
+}
+
+// autonomousSystem is an autonomous system number in the form "AS45090". Shodan writes it
+// either way, so both are accepted when decoding.
+type autonomousSystem string
+
+// UnmarshalJSON reads "AS45090", 45090 or null (stored as ""). encoding/json calls it to decode
+// an autonomousSystem; it needs a pointer receiver because it changes the value it's called on.
+func (system *autonomousSystem) UnmarshalJSON(data []byte) error {
+	// A pointer stays nil when Shodan sends null.
+	var text *string
+	if err := json.Unmarshal(data, &text); nil == err {
+		*system = ""
+		if nil != text {
+			*system = autonomousSystem(*text)
+		}
+
+		return nil
+	}
+
+	var number uint32
+	if err := json.Unmarshal(data, &number); nil != err {
+		return fmt.Errorf("decoding asn %q: %w", data, err)
+	}
+
+	*system = autonomousSystem(AUTONOMOUS_SYSTEM_PREFIX + strconv.FormatUint(uint64(number), 10))
+
+	return nil
 }
 
 // certificateName mirrors the stored parts of a certificate subject or issuer.
@@ -275,7 +308,7 @@ func newData(decoded host) Data {
 	return Data{
 		Org:         decoded.Org,
 		ISP:         decoded.ISP,
-		ASN:         decoded.ASN,
+		ASN:         string(decoded.ASN),
 		OS:          decoded.OS,
 		CountryCode: decoded.CountryCode,
 		Hostnames:   aggregator.SortedUnique(decoded.Hostnames),
