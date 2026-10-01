@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "64.227.117.205",
     "first_seen": "2026-09-29T08:08:11.427482Z",
-    "last_seen": "2026-10-01T12:19:51Z",
+    "last_seen": "2026-10-01T13:08:35Z",
     "flags": [
         "aisuru"
     ],
@@ -52,12 +52,16 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-01T13:19:08Z",
+            "observations": []
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T12:19:51Z",
+            "last_checked": "2026-10-01T13:08:35Z",
             "observations": [
                 {
                     "first_observed": "2026-09-29T08:08:11.427482Z",
@@ -78,7 +82,7 @@
                 {
                     "key": "1941296",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T13:08:35Z",
                     "flags": [
                         "aisuru"
                     ],
@@ -95,6 +99,58 @@
                             "AISURU",
                             "c2"
                         ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-01T13:12:51Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T13:23:55Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:23:55Z",
+                    "last_observed": "2026-10-01T13:23:55Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "64.227.0.0/17",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 1,
+                            "undetected": 35,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "GreyNoise",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
                     }
                 }
             ]

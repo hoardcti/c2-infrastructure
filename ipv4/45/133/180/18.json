@@ -2,11 +2,34 @@
     "schema_version": 2,
     "ip": "45.133.180.18",
     "first_seen": "2026-09-28T21:42:30.96667Z",
-    "last_seen": "2026-10-01T12:19:51Z",
+    "last_seen": "2026-10-01T13:08:35Z",
     "flags": [
         "remcos"
     ],
     "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T13:13:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:13:27Z",
+                    "last_observed": "2026-10-01T13:13:27Z",
+                    "data": {
+                        "abuse_confidence_score": 22,
+                        "total_reports": 9,
+                        "distinct_reporters": 7,
+                        "last_reported_at": "2026-09-17T05:17:29Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "M247 Europe SRL",
+                        "domain": "m247.com",
+                        "country_code": "US",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
         "internetdb": {
             "last_checked": "2026-10-01T12:22:41Z",
             "observations": [
@@ -59,12 +82,106 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-01T13:19:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:19:26Z",
+                    "last_observed": "2026-10-01T13:19:26Z",
+                    "data": {
+                        "org": "M247 Europe SRL",
+                        "isp": "M247 Europe SRL",
+                        "asn": "AS9009",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "vpn"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 53,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 389,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 465,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 500,
+                                "transport": "udp",
+                                "tags": [
+                                    "vpn"
+                                ]
+                            },
+                            {
+                                "port": 995,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 1194,
+                                "transport": "udp",
+                                "tags": [
+                                    "vpn"
+                                ]
+                            },
+                            {
+                                "port": 1195,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 1198,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 1337,
+                                "transport": "tcp",
+                                "jarm": "15d2ad16d29d29d00015d2ad15d29d3fe87b802002478c27f1c0da514dbf80",
+                                "certificate_sha256": "722c6e13d9432a3514db84ce37e7389294fe37ec72af1b7c574f38a68869a20a",
+                                "certificate_subject": "45.133.180.18",
+                                "certificate_issuer": "TorGuard VPN Server CA 2"
+                            },
+                            {
+                                "port": 1443,
+                                "transport": "tcp",
+                                "jarm": "15d2ad16d29d29d00015d2ad15d29d3fe87b802002478c27f1c0da514dbf80",
+                                "certificate_sha256": "722c6e13d9432a3514db84ce37e7389294fe37ec72af1b7c574f38a68869a20a",
+                                "certificate_subject": "45.133.180.18",
+                                "certificate_issuer": "TorGuard VPN Server CA 2"
+                            },
+                            {
+                                "port": 1701,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 9201,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T12:19:51Z",
+            "last_checked": "2026-10-01T13:08:35Z",
             "observations": [
                 {
                     "first_observed": "2026-09-28T21:42:30.96667Z",
@@ -85,7 +202,7 @@
                 {
                     "key": "1941096",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T13:08:35Z",
                     "flags": [
                         "remcos"
                     ],
@@ -106,6 +223,10 @@
                     }
                 }
             ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-01T13:13:09Z",
+            "observations": []
         }
     }
 }

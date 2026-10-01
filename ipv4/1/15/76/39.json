@@ -2,11 +2,45 @@
     "schema_version": 2,
     "ip": "1.15.76.39",
     "first_seen": "2026-09-14T11:57:26.201665Z",
-    "last_seen": "2026-10-01T12:19:51Z",
+    "last_seen": "2026-10-01T13:08:35Z",
     "flags": [
         "cobalt strike"
     ],
     "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T13:11:48Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:11:48Z",
+                    "last_observed": "2026-10-01T13:11:48Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            123,
+                            6789,
+                            8000,
+                            8080,
+                            8081,
+                            8443,
+                            50050
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:apache:tomcat",
+                            "cpe:/a:helpsystems:cobalt_strike",
+                            "cpe:/a:ntp:ntp:3",
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
         "ipinfo": {
             "last_checked": "2026-10-01T12:20:37Z",
             "observations": [
@@ -30,7 +64,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T12:19:51Z",
+            "last_checked": "2026-10-01T13:08:35Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.201665Z",
@@ -51,7 +85,7 @@
                 {
                     "key": "1917335",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T13:08:35Z",
                     "flags": [
                         "cobalt strike"
                     ],

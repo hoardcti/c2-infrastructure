@@ -2,11 +2,34 @@
     "schema_version": 2,
     "ip": "45.9.150.176",
     "first_seen": "2026-09-27T13:42:15.183622Z",
-    "last_seen": "2026-10-01T12:19:51Z",
+    "last_seen": "2026-10-01T13:08:35Z",
     "flags": [
         "remcos"
     ],
     "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T13:13:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:13:54Z",
+                    "last_observed": "2026-10-01T13:13:54Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Nice IT Services Group Inc.",
+                        "domain": "as49447.net",
+                        "country_code": "NL",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
         "internetdb": {
             "last_checked": "2026-10-01T12:22:54Z",
             "observations": [
@@ -80,12 +103,19 @@
                 }
             ]
         },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-01T13:19:52Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T12:19:51Z",
+            "last_checked": "2026-10-01T13:08:35Z",
             "observations": [
                 {
                     "first_observed": "2026-09-27T13:42:15.183622Z",
@@ -106,7 +136,7 @@
                 {
                     "key": "1938711",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T13:08:35Z",
                     "flags": [
                         "remcos"
                     ],

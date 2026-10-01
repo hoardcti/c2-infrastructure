@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "157.230.9.172",
     "first_seen": "2026-09-29T20:33:46.132131Z",
-    "last_seen": "2026-10-01T12:19:51Z",
+    "last_seen": "2026-10-01T13:08:35Z",
     "flags": [
         "aisuru"
     ],
@@ -52,12 +52,16 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-01T13:18:55Z",
+            "observations": []
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T12:19:51Z",
+            "last_checked": "2026-10-01T13:08:35Z",
             "observations": [
                 {
                     "first_observed": "2026-09-29T20:33:46.132131Z",
@@ -78,7 +82,7 @@
                 {
                     "key": "1941956",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T13:08:35Z",
                     "flags": [
                         "aisuru"
                     ],
@@ -95,6 +99,74 @@
                             "AISURU",
                             "c2"
                         ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-01T13:12:39Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T13:22:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:22:25Z",
+                    "last_observed": "2026-10-01T13:22:25Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "157.230.0.0/16",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 2,
+                            "undetected": 33,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Lumu",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "15d3fd16d21d21d00042d43d000000fe02290512647416dcf0a400ccbc0b6b",
+                        "crowdsourced_context": []
                     }
                 }
             ]

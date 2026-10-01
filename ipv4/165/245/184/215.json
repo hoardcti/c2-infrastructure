@@ -2,11 +2,34 @@
     "schema_version": 2,
     "ip": "165.245.184.215",
     "first_seen": "2026-09-28T06:30:05.312073Z",
-    "last_seen": "2026-10-01T12:19:51Z",
+    "last_seen": "2026-10-01T13:08:35Z",
     "flags": [
         "aisuru"
     ],
     "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T13:13:43Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:13:43Z",
+                    "last_observed": "2026-10-01T13:13:43Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2026-03-08T18:42:34Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "DigitalOcean, LLC",
+                        "domain": "digitalocean.com",
+                        "country_code": "SG",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
         "internetdb": {
             "last_checked": "2026-10-01T12:22:49Z",
             "observations": [
@@ -48,12 +71,19 @@
                 }
             ]
         },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-01T13:19:42Z",
+                "message": "decoding Shodan response: json: cannot unmarshal JSON number into Go string within \"/asn\""
+            },
+            "observations": []
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T12:19:51Z",
+            "last_checked": "2026-10-01T13:08:35Z",
             "observations": [
                 {
                     "first_observed": "2026-09-28T06:30:05.312073Z",
@@ -74,7 +104,7 @@
                 {
                     "key": "1940770",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T13:08:35Z",
                     "flags": [
                         "aisuru"
                     ],
@@ -96,7 +126,7 @@
                 {
                     "key": "1939694",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T13:08:35Z",
                     "flags": [
                         "aisuru"
                     ],

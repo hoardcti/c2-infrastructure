@@ -2,11 +2,48 @@
     "schema_version": 2,
     "ip": "158.101.136.18",
     "first_seen": "2026-09-14T11:57:26.201524Z",
-    "last_seen": "2026-10-01T12:19:51Z",
+    "last_seen": "2026-10-01T13:08:35Z",
     "flags": [
         "cobalt strike"
     ],
     "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T13:12:02Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:12:02Z",
+                    "last_observed": "2026-10-01T13:12:02Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            111,
+                            443,
+                            2049,
+                            3306,
+                            6443,
+                            9064,
+                            10250,
+                            50050
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:mariadb:mariadb:10.6.23-MariaDB-0ubuntu0.22.04.1",
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "database",
+                            "devops",
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
         "ipinfo": {
             "last_checked": "2026-10-01T12:20:40Z",
             "observations": [
@@ -30,7 +67,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T12:19:51Z",
+            "last_checked": "2026-10-01T13:08:35Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.201524Z",
@@ -51,7 +88,7 @@
                 {
                     "key": "1917351",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T13:08:35Z",
                     "flags": [
                         "cobalt strike"
                     ],

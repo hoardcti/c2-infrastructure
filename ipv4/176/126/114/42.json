@@ -2,11 +2,34 @@
     "schema_version": 2,
     "ip": "176.126.114.42",
     "first_seen": "2026-09-25T07:23:15.534137Z",
-    "last_seen": "2026-10-01T12:19:51Z",
+    "last_seen": "2026-10-01T13:08:35Z",
     "flags": [
         "remcos"
     ],
     "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T13:14:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:14:23Z",
+                    "last_observed": "2026-10-01T13:14:23Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "xTom GmbH",
+                        "domain": "xtom.com",
+                        "country_code": "JP",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
         "internetdb": {
             "last_checked": "2026-10-01T12:23:09Z",
             "observations": [
@@ -47,12 +70,50 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-01T13:20:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:20:22Z",
+                    "last_observed": "2026-10-01T13:20:22Z",
+                    "data": {
+                        "org": "xTom GmbH",
+                        "isp": "xTom Japan Corporation",
+                        "asn": "AS3258",
+                        "os": null,
+                        "country_code": "JP",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 5357,
+                                "transport": "tcp",
+                                "http_title": "Service Unavailable"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T12:19:51Z",
+            "last_checked": "2026-10-01T13:08:35Z",
             "observations": [
                 {
                     "first_observed": "2026-09-25T07:23:15.534137Z",
@@ -73,7 +134,7 @@
                 {
                     "key": "1932506",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T13:08:35Z",
                     "flags": [
                         "remcos"
                     ],

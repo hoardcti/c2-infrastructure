@@ -2,11 +2,34 @@
     "schema_version": 2,
     "ip": "45.198.224.102",
     "first_seen": "2026-09-28T15:08:48.856052Z",
-    "last_seen": "2026-10-01T12:19:51Z",
+    "last_seen": "2026-10-01T13:08:35Z",
     "flags": [
         "unknown malware"
     ],
     "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T13:13:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:13:31Z",
+                    "last_observed": "2026-10-01T13:13:31Z",
+                    "data": {
+                        "abuse_confidence_score": 9,
+                        "total_reports": 2,
+                        "distinct_reporters": 2,
+                        "last_reported_at": "2026-09-29T11:05:35Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "VPSVAULT.HOST LTD",
+                        "domain": "vpsvault.host",
+                        "country_code": "NL",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
         "internetdb": {
             "last_checked": "2026-10-01T12:22:43Z",
             "observations": [
@@ -47,12 +70,114 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-01T13:19:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:19:30Z",
+                    "last_observed": "2026-10-01T13:19:30Z",
+                    "data": {
+                        "org": "HOSTROYALE TECHNOLOGIES PRIVATE LIMITED",
+                        "isp": "HostRoyale Technologies Pvt Ltd",
+                        "asn": "AS203020",
+                        "os": "Linux",
+                        "country_code": "IN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [
+                            "CVE-2007-4723",
+                            "CVE-2009-0796",
+                            "CVE-2009-2299",
+                            "CVE-2011-1176",
+                            "CVE-2011-2688",
+                            "CVE-2012-3526",
+                            "CVE-2012-4001",
+                            "CVE-2012-4360",
+                            "CVE-2013-0941",
+                            "CVE-2013-0942",
+                            "CVE-2013-2765",
+                            "CVE-2013-4365",
+                            "CVE-2023-38709",
+                            "CVE-2024-24795",
+                            "CVE-2024-27316",
+                            "CVE-2024-36387",
+                            "CVE-2024-38472",
+                            "CVE-2024-38473",
+                            "CVE-2024-38474",
+                            "CVE-2024-38475",
+                            "CVE-2024-38476",
+                            "CVE-2024-38477",
+                            "CVE-2024-39573",
+                            "CVE-2024-40898",
+                            "CVE-2024-42516",
+                            "CVE-2024-43204",
+                            "CVE-2024-43394",
+                            "CVE-2024-47252",
+                            "CVE-2025-23048",
+                            "CVE-2025-49630",
+                            "CVE-2025-49812",
+                            "CVE-2025-53020",
+                            "CVE-2025-55753",
+                            "CVE-2025-58098",
+                            "CVE-2025-59775",
+                            "CVE-2025-65082",
+                            "CVE-2025-66200",
+                            "CVE-2026-24072",
+                            "CVE-2026-28780",
+                            "CVE-2026-29167",
+                            "CVE-2026-29168",
+                            "CVE-2026-29169",
+                            "CVE-2026-29170",
+                            "CVE-2026-33006",
+                            "CVE-2026-33007",
+                            "CVE-2026-33523",
+                            "CVE-2026-33857",
+                            "CVE-2026-34032",
+                            "CVE-2026-34059",
+                            "CVE-2026-34355",
+                            "CVE-2026-34356",
+                            "CVE-2026-42535",
+                            "CVE-2026-42536",
+                            "CVE-2026-43951",
+                            "CVE-2026-44119",
+                            "CVE-2026-44185",
+                            "CVE-2026-44186",
+                            "CVE-2026-44631",
+                            "CVE-2026-48913",
+                            "CVE-2026-49975"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "version": "2.4.58",
+                                "http_title": "KushNet | Architecture Repository"
+                            },
+                            {
+                                "port": 25565,
+                                "transport": "tcp",
+                                "product": "ELF Executable File",
+                                "version": "1"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T12:19:51Z",
+            "last_checked": "2026-10-01T13:08:35Z",
             "observations": [
                 {
                     "first_observed": "2026-09-28T15:08:48.856052Z",
@@ -73,7 +198,7 @@
                 {
                     "key": "1940931",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T13:08:35Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -96,7 +221,7 @@
                 {
                     "key": "1940930",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T13:08:35Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -113,6 +238,195 @@
                             "botnet",
                             "c2",
                             "kushnet"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-01T13:13:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:13:13Z",
+                    "last_observed": "2026-10-01T13:13:13Z",
+                    "data": {
+                        "urlhaus_reference": "https://urlhaus.abuse.ch/host/45.198.224.102/",
+                        "first_seen": "2026-09-28T11:38:10Z",
+                        "url_count": 13,
+                        "blacklists": {
+                            "spamhaus_dbl": "not listed",
+                            "surbl": "not listed"
+                        },
+                        "urls": [
+                            {
+                                "id": "3924314",
+                                "url": "http://45.198.224.102/kushnet.arm7",
+                                "status": "online",
+                                "date_added": "2026-09-28T11:38:28Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "botnet",
+                                    "elf",
+                                    "kushnet",
+                                    "mirai"
+                                ]
+                            },
+                            {
+                                "id": "3924315",
+                                "url": "http://45.198.224.102/kushnet.arm6",
+                                "status": "online",
+                                "date_added": "2026-09-28T11:38:31Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "botnet",
+                                    "elf",
+                                    "kushnet",
+                                    "mirai"
+                                ]
+                            },
+                            {
+                                "id": "3924316",
+                                "url": "http://45.198.224.102/kushnet.x32",
+                                "status": "online",
+                                "date_added": "2026-09-28T11:38:31Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "botnet",
+                                    "elf",
+                                    "kushnet",
+                                    "mirai"
+                                ]
+                            },
+                            {
+                                "id": "3924317",
+                                "url": "http://45.198.224.102/kushnet.m68k",
+                                "status": "online",
+                                "date_added": "2026-09-28T11:38:31Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "botnet",
+                                    "elf",
+                                    "kushnet",
+                                    "mirai"
+                                ]
+                            },
+                            {
+                                "id": "3924318",
+                                "url": "http://45.198.224.102/kushnet.arm4tl",
+                                "status": "online",
+                                "date_added": "2026-09-28T11:38:32Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "botnet",
+                                    "elf",
+                                    "kushnet",
+                                    "mirai"
+                                ]
+                            },
+                            {
+                                "id": "3924319",
+                                "url": "http://45.198.224.102/kushnet.arm4l",
+                                "status": "online",
+                                "date_added": "2026-09-28T11:38:32Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "botnet",
+                                    "elf",
+                                    "kushnet",
+                                    "mirai"
+                                ]
+                            },
+                            {
+                                "id": "3924320",
+                                "url": "http://45.198.224.102/kushnet.arm5",
+                                "status": "online",
+                                "date_added": "2026-09-28T11:38:32Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "botnet",
+                                    "elf",
+                                    "kushnet",
+                                    "mirai"
+                                ]
+                            },
+                            {
+                                "id": "3924321",
+                                "url": "http://45.198.224.102/kushnet.ppc440",
+                                "status": "online",
+                                "date_added": "2026-09-28T11:38:32Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "botnet",
+                                    "elf",
+                                    "kushnet",
+                                    "mirai"
+                                ]
+                            },
+                            {
+                                "id": "3924322",
+                                "url": "http://45.198.224.102/kushnet.ppc",
+                                "status": "online",
+                                "date_added": "2026-09-28T11:38:32Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "botnet",
+                                    "elf",
+                                    "kushnet",
+                                    "mirai"
+                                ]
+                            },
+                            {
+                                "id": "3924323",
+                                "url": "http://45.198.224.102/kushnet.mipsel",
+                                "status": "online",
+                                "date_added": "2026-09-28T11:38:33Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "botnet",
+                                    "elf",
+                                    "kushnet",
+                                    "mirai"
+                                ]
+                            },
+                            {
+                                "id": "3924324",
+                                "url": "http://45.198.224.102/kushnet.sh4",
+                                "status": "online",
+                                "date_added": "2026-09-28T11:38:33Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "botnet",
+                                    "elf",
+                                    "kushnet",
+                                    "mirai"
+                                ]
+                            },
+                            {
+                                "id": "3924325",
+                                "url": "http://45.198.224.102/kushnet.mips",
+                                "status": "online",
+                                "date_added": "2026-09-28T11:38:35Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "botnet",
+                                    "elf",
+                                    "kushnet",
+                                    "mirai"
+                                ]
+                            },
+                            {
+                                "id": "3924326",
+                                "url": "http://45.198.224.102/kushnet.x64-test",
+                                "status": "online",
+                                "date_added": "2026-09-28T11:38:59Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "botnet",
+                                    "elf",
+                                    "kushnet",
+                                    "mirai"
+                                ]
+                            }
                         ]
                     }
                 }

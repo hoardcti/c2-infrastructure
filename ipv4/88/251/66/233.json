@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "88.251.66.233",
     "first_seen": "2026-09-29T08:08:11.427482Z",
-    "last_seen": "2026-10-01T12:19:51Z",
+    "last_seen": "2026-10-01T13:08:35Z",
     "flags": [
         "asyncrat"
     ],
@@ -52,12 +52,19 @@
                 }
             ]
         },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-01T13:19:10Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T12:19:51Z",
+            "last_checked": "2026-10-01T13:08:35Z",
             "observations": [
                 {
                     "first_observed": "2026-09-29T08:08:11.427482Z",
@@ -78,7 +85,7 @@
                 {
                     "key": "1941399",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T12:19:51Z",
+                    "last_observed": "2026-10-01T13:08:35Z",
                     "flags": [
                         "asyncrat"
                     ],
@@ -97,6 +104,68 @@
                             "c2",
                             "censys"
                         ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-01T13:12:53Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T13:24:10Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T13:24:10Z",
+                    "last_observed": "2026-10-01T13:24:10Z",
+                    "data": {
+                        "as_owner": "Turk Telekom",
+                        "asn": 9121,
+                        "network": "88.248.0.0/14",
+                        "country": "TR",
+                        "continent": "AS",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 2,
+                            "undetected": 86,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
                     }
                 }
             ]
