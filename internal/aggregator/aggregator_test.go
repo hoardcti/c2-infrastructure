@@ -221,8 +221,12 @@ func TestAggregatorRunEnricherFailures(test *testing.T) {
 		wantLookups int
 		// wantRecordedErrors is how many addresses get a last_error.
 		wantRecordedErrors int
-		// wantStopped is true when the enricher must stop early.
-		wantStopped bool
+		// wantStopReason is part of the reason the enricher must stop early, or "" when it
+		// must carry on.
+		wantStopReason string
+		// wantRunSuccess is true when every failure is an expected rejection, which doesn't
+		// fail the run.
+		wantRunSuccess bool
 	}{
 		{
 			name: "one address fails",
@@ -238,19 +242,34 @@ func TestAggregatorRunEnricherFailures(test *testing.T) {
 		{
 			name:        "rejected key stops at once",
 			failing:     func(netip.Addr) error { return &StatusError{StatusCode: http.StatusUnauthorized} },
-			wantLookups: 1, wantStopped: true,
+			wantLookups: 1, wantStopReason: "the API key was rejected",
+		},
+		{
+			// Shodan's answer to a free key asking for a host.
+			name: "plan without access stops at once",
+			failing: func(netip.Addr) error {
+				return fmt.Errorf("querying Shodan: %w", &StatusError{StatusCode: http.StatusForbidden, Snippet: "Requires membership or higher to access"})
+			},
+			wantLookups: 1, wantStopReason: "upgrade the plan or disable the source in sources.json",
 		},
 		{
 			name: "used-up quota stops at once",
 			failing: func(netip.Addr) error {
 				return fmt.Errorf("querying: %w", &StatusError{StatusCode: http.StatusTooManyRequests})
 			},
-			wantLookups: 1, wantStopped: true,
+			wantLookups: 1, wantStopReason: "lower max_lookups",
 		},
 		{
 			name:        "repeated failures stop the enricher",
 			failing:     func(netip.Addr) error { return transientErr },
-			wantLookups: MAX_CONSECUTIVE_LOOKUP_FAILURES, wantRecordedErrors: MAX_CONSECUTIVE_LOOKUP_FAILURES, wantStopped: true,
+			wantLookups: MAX_CONSECUTIVE_LOOKUP_FAILURES, wantRecordedErrors: MAX_CONSECUTIVE_LOOKUP_FAILURES,
+			wantStopReason: "5 lookups in a row failed",
+		},
+		{
+			// Rejections are about each address alone, so they never stop the enricher.
+			name:        "rejected addresses don't stop the enricher",
+			failing:     func(netip.Addr) error { return &StatusError{StatusCode: http.StatusUnprocessableEntity} },
+			wantLookups: 7, wantRecordedErrors: 7, wantRunSuccess: true,
 		},
 	}
 
@@ -264,12 +283,10 @@ func TestAggregatorRunEnricherFailures(test *testing.T) {
 			}}
 
 			// Each address is first added by a feed, so it's in the dataset.
-			aggregator, _ := newTestAggregator(subtest, store, WithFeed("feed", sightingsFeed(addresses...)), WithEnricher("shodan", enricher, testSchedule))
+			aggregator, logs := newTestAggregator(subtest, store, WithFeed("feed", sightingsFeed(addresses...)), WithEnricher("shodan", enricher, testSchedule))
 
 			_, err := aggregator.Run(subtest.Context())
-			if nil == err || testCase.wantStopped != strings.Contains(err.Error(), "stopping the source") {
-				subtest.Errorf("Run() error = %v, want a failure (stopping: %v)", err, testCase.wantStopped)
-			}
+			checkEnricherFailure(subtest, err, logs.String(), testCase.wantStopReason, testCase.wantRunSuccess)
 
 			if testCase.wantLookups != len(enricher.addresses) {
 				subtest.Errorf("Run() looked up %d addresses, want %d", len(enricher.addresses), testCase.wantLookups)
@@ -279,6 +296,26 @@ func TestAggregatorRunEnricherFailures(test *testing.T) {
 				subtest.Errorf("Run() recorded %d errors, want %d", recordedErrors, testCase.wantRecordedErrors)
 			}
 		})
+	}
+}
+
+// checkEnricherFailure checks the outcome of a run whose enricher failed: an error with
+// wantStopReason when the enricher had to stop, no error but a logged warning when every
+// failure was an expected rejection, and otherwise an error without a stop.
+func checkEnricherFailure(testingContext testing.TB, err error, logs, wantStopReason string, wantRunSuccess bool) {
+	testingContext.Helper()
+
+	if wantRunSuccess {
+		if nil != err || !strings.Contains(logs, `msg="lookup rejected" source=shodan`) {
+			testingContext.Errorf("Run() = %v with logs %q, want no error and the rejections logged", err, logs)
+		}
+
+		return
+	}
+
+	isStopped := nil != err && strings.Contains(err.Error(), "stopping the source for the rest of this run")
+	if nil == err || ("" != wantStopReason) != isStopped || !strings.Contains(err.Error(), wantStopReason) {
+		testingContext.Errorf("Run() error = %v, want a failure with stop reason %q", err, wantStopReason)
 	}
 }
 

@@ -182,6 +182,70 @@ type retryTestCase struct {
 	wantMaximumWait time.Duration
 }
 
+// TestStatusErrorMeaning checks the kind of failure each status means, and that the message
+// gives the status, its meaning and the upstream's explanation.
+func TestStatusErrorMeaning(test *testing.T) {
+	test.Parallel()
+
+	testCases := []struct {
+		status int
+		want   error
+	}{
+		{status: http.StatusUnauthorized, want: ErrUnauthorised},
+		{status: http.StatusPaymentRequired, want: ErrForbidden},
+		{status: http.StatusForbidden, want: ErrForbidden},
+		{status: http.StatusTooManyRequests, want: ErrRateLimited},
+		{status: http.StatusNotFound, want: ErrNotFound},
+		{status: http.StatusBadRequest, want: ErrRejected},
+		{status: http.StatusUnprocessableEntity, want: ErrRejected},
+		{status: http.StatusInternalServerError, want: ErrUnavailable},
+		{status: http.StatusGatewayTimeout, want: ErrUnavailable},
+		// A redirect Go's client didn't follow is as unexpected as a server error.
+		{status: http.StatusFound, want: ErrUnavailable},
+	}
+
+	for _, testCase := range testCases {
+		statusError := &StatusError{StatusCode: testCase.status, Snippet: "explanation"}
+
+		if !errors.Is(statusError, testCase.want) {
+			test.Errorf("StatusError{%d} doesn't wrap %v", testCase.status, testCase.want)
+		}
+	}
+
+	forbidden := &StatusError{StatusCode: http.StatusForbidden, Snippet: `{"error": "Requires membership or higher to access"}`}
+	want := `HTTP 403 Forbidden: the API key's plan doesn't allow this request: "{\"error\": \"Requires membership or higher to access\"}"`
+
+	if want != forbidden.Error() {
+		test.Errorf("StatusError.Error() = %s, want %s", forbidden.Error(), want)
+	}
+}
+
+// TestUpstreamFetchCancelledRequestIsNotUnavailable checks that a request stopped by the
+// caller isn't reported as an unavailable upstream.
+func TestUpstreamFetchCancelledRequestIsNotUnavailable(test *testing.T) {
+	test.Parallel()
+
+	ctx, cancel := context.WithCancel(test.Context())
+	transport := roundTripFunc(func(*http.Request) (*http.Response, error) {
+		cancel()
+
+		return nil, context.Canceled
+	})
+
+	_, err := newTestUpstream(test, transport, TEST_REQUESTS_PER_MINUTE).Fetch(ctx, Request{Method: http.MethodGet, URL: "https://example.com/"}, 1024)
+	if !errors.Is(err, context.Canceled) || errors.Is(err, ErrUnavailable) {
+		test.Errorf("Fetch() of a cancelled request error = %v, want %v and not %v", err, context.Canceled, ErrUnavailable)
+	}
+}
+
+// roundTripFunc is an http.RoundTripper made from a function.
+type roundTripFunc func(request *http.Request) (*http.Response, error)
+
+// RoundTrip calls the function.
+func (function roundTripFunc) RoundTrip(request *http.Request) (*http.Response, error) {
+	return function(request)
+}
+
 // TestUpstreamFetchRetries checks which responses are retried, how long Fetch waits before
 // each retry, and that the last response is returned once the retries run out. Time is
 // controlled by testing/synctest, so the waits take no real time.
@@ -362,11 +426,14 @@ func TestUpstreamFetchFailures(test *testing.T) {
 		url       string
 		// wantErr is part of the error Fetch must return.
 		wantErr string
+		// wantUnavailable is true when the error must wrap ErrUnavailable.
+		wantUnavailable bool
 	}{
 		{
-			name:    "connection refused",
-			url:     "https://127.0.0.1:1/host/1.2.3.4?key=secret-key",
-			wantErr: `sending request to "https://127.0.0.1:1/host/1.2.3.4"`,
+			name:            "connection refused",
+			url:             "https://127.0.0.1:1/host/1.2.3.4?key=secret-key",
+			wantErr:         `sending request to "https://127.0.0.1:1/host/1.2.3.4"`,
+			wantUnavailable: true,
 		},
 		{name: "invalid URL", url: "https://[::1/?key=secret-key", wantErr: "building request"},
 		{
@@ -376,10 +443,11 @@ func TestUpstreamFetchFailures(test *testing.T) {
 			wantErr:   "larger than 4 bytes",
 		},
 		{
-			name:      "body can't be read",
-			transport: failingBodyTransport{},
-			url:       "https://example.com/",
-			wantErr:   "reading response body",
+			name:            "body can't be read",
+			transport:       failingBodyTransport{},
+			url:             "https://example.com/",
+			wantErr:         "reading response body",
+			wantUnavailable: true,
 		},
 	}
 
@@ -397,6 +465,10 @@ func TestUpstreamFetchFailures(test *testing.T) {
 			_, err := upstream.Fetch(subtest.Context(), Request{Method: http.MethodGet, URL: testCase.url}, 4)
 			if nil == err || !strings.Contains(err.Error(), testCase.wantErr) || strings.Contains(err.Error(), "secret-key") {
 				subtest.Errorf("Fetch() error = %v, want one containing %q and no key", err, testCase.wantErr)
+			}
+
+			if testCase.wantUnavailable != errors.Is(err, ErrUnavailable) {
+				subtest.Errorf("Fetch() error = %v, want it to mean unavailable: %v", err, testCase.wantUnavailable)
 			}
 		})
 	}

@@ -1,6 +1,7 @@
 package urlhaus
 
 import (
+	"errors"
 	"net/http"
 	"net/netip"
 	"net/url"
@@ -115,10 +116,14 @@ func TestEnricherLookupErrors(test *testing.T) {
 		response fakeupstream.Response
 		// wantErr is part of the error Lookup must return.
 		wantErr string
+		// wantKind is the kind of failure the error must mean, if any.
+		wantKind error
 	}{
-		{name: "error status", response: fakeupstream.Response{Status: http.StatusUnauthorized}, wantErr: "401"},
+		{name: "error status", response: fakeupstream.Response{Status: http.StatusUnauthorized}, wantErr: "401", wantKind: aggregator.ErrUnauthorised},
 		{name: "invalid json", response: fakeupstream.Response{Status: http.StatusOK, Body: `{`}, wantErr: "decoding"},
-		{name: "query failed", response: fakeupstream.Response{Status: http.StatusOK, Body: `{"query_status": "invalid_host"}`}, wantErr: "invalid_host"},
+		// URLhaus reports some failures in a 200 response.
+		{name: "unknown key", response: fakeupstream.Response{Status: http.StatusOK, Body: `{"query_status": "unknown_auth_key"}`}, wantErr: "unknown_auth_key", wantKind: aggregator.ErrUnauthorised},
+		{name: "host refused", response: fakeupstream.Response{Status: http.StatusOK, Body: `{"query_status": "invalid_host"}`}, wantErr: "invalid_host", wantKind: aggregator.ErrRejected},
 		{name: "bad first seen", response: fakeupstream.Response{Status: http.StatusOK, Body: `{"query_status": "ok", "firstseen": "today"}`}, wantErr: "firstseen"},
 		{
 			name:     "bad url count",
@@ -136,6 +141,10 @@ func TestEnricherLookupErrors(test *testing.T) {
 			_, err := newTestEnricher(subtest, server).Lookup(subtest.Context(), netip.MustParseAddr("192.0.2.1"))
 			if nil == err || !strings.Contains(err.Error(), testCase.wantErr) {
 				subtest.Errorf("Lookup() error = %v, want one containing %q", err, testCase.wantErr)
+			}
+
+			if nil != testCase.wantKind && !errors.Is(err, testCase.wantKind) {
+				subtest.Errorf("Lookup() error = %v, want it to mean %v", err, testCase.wantKind)
 			}
 		})
 	}

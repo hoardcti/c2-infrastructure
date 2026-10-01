@@ -2,6 +2,7 @@ package shodan
 
 import (
 	"encoding/json/v2"
+	"errors"
 	"net/http"
 	"net/netip"
 	"os"
@@ -106,6 +107,17 @@ func TestEnricherLookupNotFoundAndErrors(test *testing.T) {
 	notFound := fakeupstream.New(test, fakeupstream.Response{Status: http.StatusNotFound, Body: `{"error": "No information available for that IP."}`})
 	if reports, err := newTestEnricher(test, notFound).Lookup(test.Context(), netip.MustParseAddr("192.0.2.1")); nil != err || 0 != len(reports) {
 		test.Errorf("Lookup() of an unknown address = (%v, %v), want no reports and no error", reports, err)
+	}
+
+	// Shodan's answer when a free key asks for some hosts, recorded on 2026-10-01, is about
+	// that host, so it must be a rejection of this lookup rather than of the key.
+	forbidden := fakeupstream.New(test, fakeupstream.Response{Status: http.StatusForbidden, Body: `{"error": "Requires membership or higher to access"}`})
+
+	_, err := newTestEnricher(test, forbidden).Lookup(test.Context(), netip.MustParseAddr("192.0.2.1"))
+	isHostRejection := errors.Is(err, aggregator.ErrRejected) && !errors.Is(err, aggregator.ErrForbidden) &&
+		strings.Contains(err.Error(), "the key's plan doesn't include this host") && strings.Contains(err.Error(), "Requires membership")
+	if !isHostRejection {
+		test.Errorf("Lookup() of a host the free plan refuses error = %v, want %v and not %v", err, aggregator.ErrRejected, aggregator.ErrForbidden)
 	}
 
 	for _, response := range []fakeupstream.Response{

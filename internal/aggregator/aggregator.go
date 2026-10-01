@@ -327,8 +327,10 @@ func (aggregator *Aggregator) runFeed(ctx context.Context, source feedSource) (i
 //     a used-up quota (ErrRateLimited) would make every later lookup fail too, so the enricher
 //     stops for the rest of the run, with the reason and what to do about it. Nothing is
 //     recorded on the address, because the failure isn't about it.
-//   - A request the upstream rejected for this address alone (ErrRejected) is recorded as the
-//     source's last_error on the address, and the next address is looked up.
+//   - A request the upstream rejected for this address alone (ErrRejected), such as a host a
+//     free Shodan key may not see, is an expected answer rather than a failure of the run: it's
+//     recorded as the source's last_error on the address, logged as a warning, and the next
+//     address is looked up.
 //   - Any other failure, such as an unavailable upstream or an invalid response, is recorded on
 //     the address too, and stops the enricher once MAX_CONSECUTIVE_LOOKUP_FAILURES happen in a
 //     row, so an outage doesn't use up the whole run.
@@ -380,12 +382,22 @@ func (aggregator *Aggregator) runEnricher(
 			continue
 		}
 
-		failures = append(failures, fmt.Errorf("looking up %q: %w", address, lookupErr))
+		// A rejection is about this address alone: it says nothing about the upstream's health
+		// and doesn't fail the run. It's already stored on the address, and logged here.
+		if errors.Is(lookupErr, ErrRejected) {
+			aggregator.logger.WarnContext(
+				ctx,
+				"lookup rejected",
+				"source", source.name,
+				"address", address,
+				"error", lookupErr,
+			)
 
-		// A rejection is about this address alone, so it says nothing about the upstream's health.
-		if !errors.Is(lookupErr, ErrRejected) {
-			consecutiveFailures++
+			continue
 		}
+
+		failures = append(failures, fmt.Errorf("looking up %q: %w", address, lookupErr))
+		consecutiveFailures++
 
 		if reason := stopReason(lookupErr, consecutiveFailures); "" != reason {
 			failures = append(failures, fmt.Errorf("stopping the source for the rest of this run: %s", reason))

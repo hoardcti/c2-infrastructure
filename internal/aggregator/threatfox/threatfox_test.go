@@ -193,10 +193,14 @@ func TestFeedCollectErrors(test *testing.T) {
 		body   string
 		// wantErr is part of the error Collect must return.
 		wantErr string
+		// wantKind is the kind of failure the error must mean, if any.
+		wantKind error
 	}{
-		{name: "error status", status: http.StatusUnauthorized, body: `{}`, wantErr: "unexpected HTTP status 401"},
+		{name: "error status", status: http.StatusUnauthorized, body: `{}`, wantErr: "HTTP 401", wantKind: aggregator.ErrUnauthorised},
 		{name: "invalid json", status: http.StatusOK, body: `{`, wantErr: "decoding ThreatFox response"},
-		{name: "query failed", status: http.StatusOK, body: `{"query_status": "unknown_auth_key"}`, wantErr: `status "unknown_auth_key"`},
+		// abuse.ch reports an unknown key in a 200 response.
+		{name: "unknown key", status: http.StatusOK, body: `{"query_status": "unknown_auth_key"}`, wantErr: `status "unknown_auth_key"`, wantKind: aggregator.ErrUnauthorised},
+		{name: "query refused", status: http.StatusOK, body: `{"query_status": "illegal_tag"}`, wantErr: `status "illegal_tag"`, wantKind: aggregator.ErrRejected},
 		{name: "data not a list", status: http.StatusOK, body: `{"query_status": "ok", "data": "text"}`, wantErr: "decoding ThreatFox indicators"},
 	}
 
@@ -207,8 +211,13 @@ func TestFeedCollectErrors(test *testing.T) {
 			server := fakeupstream.New(subtest, fakeupstream.Response{Status: testCase.status, Body: testCase.body})
 			feed, _ := newTestFeed(subtest, server)
 
-			if _, err := feed.Collect(subtest.Context()); nil == err || !strings.Contains(err.Error(), testCase.wantErr) {
+			_, err := feed.Collect(subtest.Context())
+			if nil == err || !strings.Contains(err.Error(), testCase.wantErr) {
 				subtest.Errorf("Collect() error = %v, want one containing %q", err, testCase.wantErr)
+			}
+
+			if nil != testCase.wantKind && !errors.Is(err, testCase.wantKind) {
+				subtest.Errorf("Collect() error = %v, want it to mean %v", err, testCase.wantKind)
 			}
 		})
 	}

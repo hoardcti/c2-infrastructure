@@ -37,6 +37,8 @@ const (
 	OK_STATUS = "ok"
 	// NO_RESULTS_STATUS is the query_status of a host URLhaus doesn't know.
 	NO_RESULTS_STATUS = "no_results"
+	// UNKNOWN_AUTH_KEY_STATUS is the query_status abuse.ch gives for a key it doesn't know.
+	UNKNOWN_AUTH_KEY_STATUS = "unknown_auth_key"
 	// TIME_LAYOUT matches URLhaus timestamps, such as "2026-10-01 10:32:09 UTC".
 	TIME_LAYOUT = "2006-01-02 15:04:05 MST"
 )
@@ -175,12 +177,17 @@ func newReports(body []byte) ([]aggregator.Report, error) {
 		return nil, fmt.Errorf("decoding URLhaus response: %w", err)
 	}
 
+	// URLhaus can report a failed query in a 200 response, so its status is mapped to the same
+	// kinds of failure as HTTP statuses. Any other status, such as "invalid_host", is about
+	// this host alone.
 	switch decoded.QueryStatus {
 	case NO_RESULTS_STATUS:
 		return nil, nil
 	case OK_STATUS:
+	case UNKNOWN_AUTH_KEY_STATUS:
+		return nil, fmt.Errorf("URLhaus query failed with status %q: %w", decoded.QueryStatus, aggregator.ErrUnauthorised)
 	default:
-		return nil, fmt.Errorf("URLhaus query failed with status %q", decoded.QueryStatus)
+		return nil, fmt.Errorf("URLhaus query failed with status %q: %w", decoded.QueryStatus, aggregator.ErrRejected)
 	}
 
 	data, err := newData(decoded)

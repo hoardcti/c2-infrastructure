@@ -218,9 +218,20 @@ Enrichers look up IPs never checked by them first, newest `first_seen` first, th
 ### Rate limits and failures
 
 - Each source has its own rate limiter. `429`, `502`, `503` and `504` responses are retried up to three times with exponential backoff and jitter, honouring `Retry-After`. A `Retry-After` longer than two minutes means a quota is used up and isn't waited for.
-- A source that fails doesn't stop the others. A failed lookup is recorded in that IP's record as `last_error` and retried when the IP is next due.
-- An enricher stops for the rest of the run when its key is rejected (`401`, `402`, `403`), its quota is used up (`429`), five lookups in a row fail, or its time budget runs out.
-- The run exits with `1` if any source failed, after storing everything the other sources reported, so the workflow still publishes it.
+- A source that fails doesn't stop the others.
+- Every failure is classified by what it means, not just its status code. Sources map upstream quirks onto the same meanings, such as abuse.ch's `unknown_auth_key` in a `200` response, or Shodan's per-host `403`:
+
+  | Meaning | Typical response | What happens |
+  |---|---|---|
+  | Key rejected | `401`, abuse.ch `unknown_auth_key` | The source stops for the rest of the run; the error says to check the key. Nothing is recorded on the IP. |
+  | Plan doesn't allow it | `402`, `403` | The source stops; the error says to upgrade the plan or disable the source. |
+  | Quota used up | `429` after retries | The source stops; the error says to lower `max_lookups` or `requests_per_minute`. |
+  | Nothing known | `404`, `no_results` | Not a failure: the IP is marked as checked, with no observation. |
+  | This IP refused | Other `4xx` such as AbuseIPDB's `422`, Shodan's `403` for a host the free plan doesn't cover, URLhaus `invalid_host` | Recorded as `last_error` on the IP and logged as a warning; the run carries on and doesn't fail. |
+  | Upstream unavailable | `5xx`, timeouts, broken connections | Recorded as `last_error` on the IP and retried when it's next due. Five in a row stop the source. |
+
+- An enricher also stops quietly when its time budget runs out, leaving the rest for the next run.
+- The run exits with `1` if any source failed (anything but the expected answers above), after storing everything the other sources reported, so the workflow still publishes it.
 - API keys are never logged, never put in errors, and removed from upstream error messages. Shodan only accepts its key in the URL, so URLs in errors never include their query.
 
 ## Development

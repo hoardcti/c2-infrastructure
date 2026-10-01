@@ -5,6 +5,10 @@
 // Banner timestamps and raw banner text aren't stored: they change with every scan, so storing
 // them would record a "change" every time Shodan rescans an unchanged server.
 //
+// The free plan answers most host lookups, but refuses the minify option and some hosts with
+// 403 "Requires membership or higher to access". Lookups never ask for minify, and a refused
+// host is recorded on its address without stopping the source.
+//
 // It's a package of its own, imported only by the command, because it hides state the rest of
 // the program mustn't touch: the Shodan key and Shodan's response types (GO-PKG-004,
 // reason 3), like every source.
@@ -205,6 +209,16 @@ func (enricher *Enricher) Lookup(ctx context.Context, address netip.Addr) ([]agg
 	}, MAX_RESPONSE_BYTES)
 	if aggregator.IsNotFound(err) {
 		return nil, nil
+	}
+
+	// On the free plan Shodan answers most hosts but refuses some with 403 "Requires
+	// membership or higher to access" (seen 2026-10-01). That refusal is about this host, not
+	// the key, so it's reported as a rejected request: the aggregator records it on the
+	// address and carries on, instead of stopping the source as it does for other 403s. The
+	// status error isn't wrapped, so the result no longer counts as ErrForbidden; its
+	// explanation is kept in the message.
+	if statusError, ok := errors.AsType[*aggregator.StatusError](err); ok && http.StatusForbidden == statusError.StatusCode {
+		return nil, fmt.Errorf("querying Shodan: %w: the key's plan doesn't include this host: %q", aggregator.ErrRejected, statusError.Snippet)
 	}
 
 	if nil != err {

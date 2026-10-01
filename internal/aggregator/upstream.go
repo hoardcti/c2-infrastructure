@@ -265,19 +265,7 @@ func (upstream *Upstream) send(ctx context.Context, request Request, maxBodyByte
 
 	response, err := upstream.httpClient.Do(httpRequest)
 	if nil != err {
-		// Client.Do wraps its errors in a *url.Error, whose message includes the full URL. Some
-		// APIs, such as Shodan's, take the key in the URL, so only the inner error is kept and
-		// the URL is reported without its query.
-		if urlError, isURLError := errors.AsType[*url.Error](err); isURLError {
-			err = urlError.Err
-		}
-
-		// A request stopped by the caller's context says nothing about the upstream.
-		if nil != ctx.Err() {
-			return nil, fmt.Errorf("sending request to %q: %w", redactURL(httpRequest.URL), err)
-		}
-
-		return nil, fmt.Errorf("sending request to %q: %w: %w", redactURL(httpRequest.URL), ErrUnavailable, err)
+		return nil, newSendError(ctx, httpRequest.URL, err)
 	}
 	// defer runs Close when send returns, on every return path, so the connection is always
 	// released. Nothing is written to the body, so its Close error doesn't matter.
@@ -301,6 +289,23 @@ func (upstream *Upstream) send(ctx context.Context, request Request, maxBodyByte
 	}
 
 	return body, nil
+}
+
+// newSendError builds the error for a request that got no response. Client.Do wraps its errors
+// in a *url.Error, whose message includes the full URL; some APIs, such as Shodan's, take the
+// key in the URL, so only the inner error is kept and the URL is reported without its query.
+// The error wraps ErrUnavailable, unless the caller's context stopped the request, which says
+// nothing about the upstream.
+func newSendError(ctx context.Context, requestURL *url.URL, err error) error {
+	if urlError, isURLError := errors.AsType[*url.Error](err); isURLError {
+		err = urlError.Err
+	}
+
+	if nil != ctx.Err() {
+		return fmt.Errorf("sending request to %q: %w", redactURL(requestURL), err)
+	}
+
+	return fmt.Errorf("sending request to %q: %w: %w", redactURL(requestURL), ErrUnavailable, err)
 }
 
 // newStatusError builds the error for a response whose status isn't 200 OK.

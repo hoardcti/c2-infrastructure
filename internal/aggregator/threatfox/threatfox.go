@@ -41,6 +41,8 @@ const (
 	OK_STATUS = "ok"
 	// NO_RESULT_STATUS is the query_status of a successful query without results.
 	NO_RESULT_STATUS = "no_result"
+	// UNKNOWN_AUTH_KEY_STATUS is the query_status abuse.ch gives for a key it doesn't know.
+	UNKNOWN_AUTH_KEY_STATUS = "unknown_auth_key"
 	// IP_PORT_TYPE is the ioc_type of an "address:port" indicator, the only kind that describes
 	// an IP address.
 	IP_PORT_TYPE = "ip:port"
@@ -207,12 +209,16 @@ func (feed *Feed) convertResponse(ctx context.Context, responseBody []byte) ([]a
 		return nil, fmt.Errorf("decoding ThreatFox response: %w", err)
 	}
 
+	// abuse.ch can report a failed query in a 200 response, so its status is mapped to the
+	// same kinds of failure as HTTP statuses.
 	switch decoded.QueryStatus {
 	case NO_RESULT_STATUS:
 		return nil, nil
 	case OK_STATUS:
+	case UNKNOWN_AUTH_KEY_STATUS:
+		return nil, fmt.Errorf("ThreatFox query failed with status %q: %w", decoded.QueryStatus, aggregator.ErrUnauthorised)
 	default:
-		return nil, fmt.Errorf("ThreatFox query failed with status %q", decoded.QueryStatus)
+		return nil, fmt.Errorf("ThreatFox query failed with status %q: %w", decoded.QueryStatus, aggregator.ErrRejected)
 	}
 
 	// Data is null when there are no indicators, which decodes as an empty list.
