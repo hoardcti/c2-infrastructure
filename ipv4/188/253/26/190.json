@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "188.253.26.190",
     "first_seen": "2026-09-24T18:54:43.53583Z",
-    "last_seen": "2026-10-01T13:40:54Z",
+    "last_seen": "2026-10-01T16:10:48Z",
     "flags": [
         "remcos"
     ],
@@ -81,7 +81,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:40:54Z",
+            "last_checked": "2026-10-01T16:10:48Z",
             "observations": [
                 {
                     "first_observed": "2026-09-24T18:54:43.53583Z",
@@ -102,7 +102,7 @@
                 {
                     "key": "1932352",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:40:54Z",
+                    "last_observed": "2026-10-01T16:10:48Z",
                     "flags": [
                         "remcos"
                     ],
@@ -120,6 +120,69 @@
                             "cucumber-v2",
                             "remcos"
                         ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-01T16:14:58Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T16:27:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T16:27:01Z",
+                    "last_observed": "2026-10-01T16:27:01Z",
+                    "data": {
+                        "as_owner": "SIA VEESP",
+                        "asn": 42532,
+                        "network": "188.253.24.0/22",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 2,
+                            "undetected": 34,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "00000000000000000041d41d00041dfca7776ca76b617b3a9d4ec20cdd2c8c",
+                        "crowdsourced_context": []
                     }
                 }
             ]

@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "203.202.232.21",
     "first_seen": "2026-09-26T07:19:05.901899Z",
-    "last_seen": "2026-10-01T13:40:54Z",
+    "last_seen": "2026-10-01T16:10:48Z",
     "flags": [
         "remcos"
     ],
@@ -107,7 +107,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:40:54Z",
+            "last_checked": "2026-10-01T16:10:48Z",
             "observations": [
                 {
                     "first_observed": "2026-09-26T07:19:05.901899Z",
@@ -128,7 +128,7 @@
                 {
                     "key": "1934189",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:40:54Z",
+                    "last_observed": "2026-10-01T16:10:48Z",
                     "flags": [
                         "remcos"
                     ],
@@ -153,6 +153,60 @@
         "urlhaus": {
             "last_checked": "2026-10-01T13:45:28Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T16:24:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T16:24:17Z",
+                    "last_observed": "2026-10-01T16:24:17Z",
+                    "data": {
+                        "as_owner": "Fiba Cloud Operation Company, LLC",
+                        "asn": 44382,
+                        "network": "203.202.232.0/24",
+                        "country": "TR",
+                        "continent": "AS",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 1,
+                            "undetected": 35,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "2ad2ad0002ad2ad00042d42d0000005d86ccb1a0567e012264097a0315d7a7",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

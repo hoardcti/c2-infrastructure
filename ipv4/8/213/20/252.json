@@ -2,11 +2,51 @@
     "schema_version": 2,
     "ip": "8.213.20.252",
     "first_seen": "2026-09-14T11:57:26.199851Z",
-    "last_seen": "2026-10-01T13:40:54Z",
+    "last_seen": "2026-10-01T16:10:48Z",
     "flags": [
         "unknown malware"
     ],
     "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T16:13:42Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T16:13:42Z",
+                    "last_observed": "2026-10-01T16:13:42Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443,
+                            3000,
+                            3100,
+                            8085,
+                            8089,
+                            9090
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:f5:nginx",
+                            "cpe:/a:grafana:grafana:13.0.1%2bsecurity:01",
+                            "cpe:/a:squid-cache:squid:6.10"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "proxy",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2025-59362",
+                            "CVE-2025-62168",
+                            "CVE-2026-32748",
+                            "CVE-2026-33515",
+                            "CVE-2026-33526",
+                            "CVE-2026-47729",
+                            "CVE-2026-50012"
+                        ]
+                    }
+                }
+            ]
+        },
         "ipinfo": {
             "last_checked": "2026-10-01T12:21:20Z",
             "observations": [
@@ -30,7 +70,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:40:54Z",
+            "last_checked": "2026-10-01T16:10:48Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.199851Z",
@@ -51,7 +91,7 @@
                 {
                     "key": "1917560",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:40:54Z",
+                    "last_observed": "2026-10-01T16:10:48Z",
                     "flags": [
                         "unknown malware"
                     ],

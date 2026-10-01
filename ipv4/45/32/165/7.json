@@ -2,11 +2,62 @@
     "schema_version": 2,
     "ip": "45.32.165.7",
     "first_seen": "2026-09-14T11:57:26.200159Z",
-    "last_seen": "2026-10-01T13:40:54Z",
+    "last_seen": "2026-10-01T16:10:48Z",
     "flags": [
         "sliver"
     ],
     "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T16:13:02Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T16:13:02Z",
+                    "last_observed": "2026-10-01T16:13:02Z",
+                    "data": {
+                        "ports": [
+                            21,
+                            22,
+                            25,
+                            53,
+                            110,
+                            143,
+                            443,
+                            465,
+                            587,
+                            993,
+                            995,
+                            8043,
+                            8080,
+                            8090,
+                            8443,
+                            8880,
+                            8888,
+                            31337
+                        ],
+                        "hostnames": [
+                            "amcpc.xyz",
+                            "mail.amcpc.xyz",
+                            "www.amcpc.xyz"
+                        ],
+                        "cpes": [
+                            "cpe:/a:angularjs:angular.js",
+                            "cpe:/a:litespeedtech:litespeed_web_server",
+                            "cpe:/a:openbsd:openssh:8.2p1",
+                            "cpe:/a:postfix:postfix",
+                            "cpe:/a:pureftpd:pure-ftpd",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
         "ipinfo": {
             "last_checked": "2026-10-01T12:21:12Z",
             "observations": [
@@ -30,7 +81,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:40:54Z",
+            "last_checked": "2026-10-01T16:10:48Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200159Z",
@@ -51,7 +102,7 @@
                 {
                     "key": "1917520",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:40:54Z",
+                    "last_observed": "2026-10-01T16:10:48Z",
                     "flags": [
                         "sliver"
                     ],

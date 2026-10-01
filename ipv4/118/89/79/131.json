@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "118.89.79.131",
     "first_seen": "2026-09-14T11:57:26.201658Z",
-    "last_seen": "2026-10-01T13:40:54Z",
+    "last_seen": "2026-10-01T16:10:48Z",
     "flags": [
         "cobalt strike"
     ],
@@ -51,12 +51,62 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-01T16:22:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T16:22:53Z",
+                    "last_observed": "2026-10-01T16:22:53Z",
+                    "data": {
+                        "org": "Tencent cloud computing (Beijing) Co., Ltd.",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.14",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "5222d6b53b3d9e67aa5acd3ce944951ef75c02cafafa212462e27b04dd8fec31",
+                                "certificate_subject": "Major Cobalt Strike",
+                                "certificate_organisation": "cobaltstrike",
+                                "certificate_issuer": "Major Cobalt Strike"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:40:54Z",
+            "last_checked": "2026-10-01T16:10:48Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.201658Z",
@@ -77,7 +127,7 @@
                 {
                     "key": "1917336",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:40:54Z",
+                    "last_observed": "2026-10-01T16:10:48Z",
                     "flags": [
                         "cobalt strike"
                     ],

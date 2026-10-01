@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "176.126.114.42",
     "first_seen": "2026-09-25T07:23:15.534137Z",
-    "last_seen": "2026-10-01T13:40:54Z",
+    "last_seen": "2026-10-01T16:10:48Z",
     "flags": [
         "remcos"
     ],
@@ -113,7 +113,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:40:54Z",
+            "last_checked": "2026-10-01T16:10:48Z",
             "observations": [
                 {
                     "first_observed": "2026-09-25T07:23:15.534137Z",
@@ -134,7 +134,7 @@
                 {
                     "key": "1932506",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:40:54Z",
+                    "last_observed": "2026-10-01T16:10:48Z",
                     "flags": [
                         "remcos"
                     ],
@@ -159,6 +159,49 @@
         "urlhaus": {
             "last_checked": "2026-10-01T13:45:42Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-01T16:26:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T16:26:01Z",
+                    "last_observed": "2026-10-01T16:26:01Z",
+                    "data": {
+                        "as_owner": "xTom Japan Corporation",
+                        "asn": 3258,
+                        "network": "176.126.114.0/24",
+                        "country": "JP",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 0,
+                            "undetected": 36,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

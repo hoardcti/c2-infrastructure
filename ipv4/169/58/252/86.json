@@ -2,11 +2,44 @@
     "schema_version": 2,
     "ip": "169.58.252.86",
     "first_seen": "2026-09-14T11:57:26.200151Z",
-    "last_seen": "2026-10-01T13:40:54Z",
+    "last_seen": "2026-10-01T16:10:48Z",
     "flags": [
         "sliver"
     ],
     "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T16:13:03Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T16:13:03Z",
+                    "last_observed": "2026-10-01T16:13:03Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            8080,
+                            31337
+                        ],
+                        "hostnames": [
+                            "vmi3540595.contaboserver.net"
+                        ],
+                        "cpes": [
+                            "cpe:/a:microsoft:internet_information_services:7.5",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:microsoft:windows"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [
+                            "CVE-2010-1899",
+                            "CVE-2010-2730",
+                            "CVE-2010-3972"
+                        ]
+                    }
+                }
+            ]
+        },
         "ipinfo": {
             "last_checked": "2026-10-01T12:21:12Z",
             "observations": [
@@ -30,7 +63,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:40:54Z",
+            "last_checked": "2026-10-01T16:10:48Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200151Z",
@@ -51,7 +84,7 @@
                 {
                     "key": "1917521",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:40:54Z",
+                    "last_observed": "2026-10-01T16:10:48Z",
                     "flags": [
                         "sliver"
                     ],

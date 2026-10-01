@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "106.15.10.2",
     "first_seen": "2026-09-14T11:57:26.201696Z",
-    "last_seen": "2026-10-01T13:40:54Z",
+    "last_seen": "2026-10-01T16:10:48Z",
     "flags": [
         "cobalt strike"
     ],
@@ -58,12 +58,80 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-01T16:22:47Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T16:22:47Z",
+                    "last_observed": "2026-10-01T16:22:47Z",
+                    "data": {
+                        "org": "Aliyun Computing Co., LTD",
+                        "isp": "Hangzhou Alibaba Advertising Co.,Ltd.",
+                        "asn": "AS37963",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "eol-product",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2021-22116",
+                            "CVE-2021-32718",
+                            "CVE-2021-32719",
+                            "CVE-2022-31008",
+                            "CVE-2023-46118"
+                        ],
+                        "services": [
+                            {
+                                "port": 111,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 111,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 4369,
+                                "transport": "tcp",
+                                "product": "Erlang Port Mapper Daemon"
+                            },
+                            {
+                                "port": 5672,
+                                "transport": "tcp",
+                                "product": "RabbitMQ",
+                                "version": "3.3.5",
+                                "tags": [
+                                    "eol-product"
+                                ]
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "566826077b3c473fb10a0041e6a80ec5b9e725520c44956a6b9a23273711f025",
+                                "certificate_subject": "Major Cobalt Strike",
+                                "certificate_organisation": "cobaltstrike",
+                                "certificate_issuer": "Major Cobalt Strike"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:40:54Z",
+            "last_checked": "2026-10-01T16:10:48Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.201696Z",
@@ -84,7 +152,7 @@
                 {
                     "key": "1917331",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:40:54Z",
+                    "last_observed": "2026-10-01T16:10:48Z",
                     "flags": [
                         "cobalt strike"
                     ],

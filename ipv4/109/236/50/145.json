@@ -2,11 +2,41 @@
     "schema_version": 2,
     "ip": "109.236.50.145",
     "first_seen": "2026-09-14T11:57:26.200105Z",
-    "last_seen": "2026-10-01T13:40:54Z",
+    "last_seen": "2026-10-01T16:10:48Z",
     "flags": [
         "sliver"
     ],
     "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-01T16:13:09Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T16:13:09Z",
+                    "last_observed": "2026-10-01T16:13:09Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            91,
+                            995,
+                            8443,
+                            8888,
+                            31337
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:helpsystems:cobalt_strike",
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
         "ipinfo": {
             "last_checked": "2026-10-01T12:21:13Z",
             "observations": [
@@ -30,7 +60,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:40:54Z",
+            "last_checked": "2026-10-01T16:10:48Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200105Z",
@@ -51,7 +81,7 @@
                 {
                     "key": "1917527",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:40:54Z",
+                    "last_observed": "2026-10-01T16:10:48Z",
                     "flags": [
                         "sliver"
                     ],

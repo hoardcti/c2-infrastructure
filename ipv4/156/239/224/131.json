@@ -2,11 +2,34 @@
     "schema_version": 2,
     "ip": "156.239.224.131",
     "first_seen": "2026-09-16T09:06:59.354339Z",
-    "last_seen": "2026-10-01T13:40:54Z",
+    "last_seen": "2026-10-01T16:10:48Z",
     "flags": [
         "cobalt strike"
     ],
     "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-01T16:16:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T16:16:56Z",
+                    "last_observed": "2026-10-01T16:16:56Z",
+                    "data": {
+                        "abuse_confidence_score": 1,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-09-19T14:19:40Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "BINARY NETWORKS SOLUTIONS LLC",
+                        "domain": "larus.net",
+                        "country_code": "HK",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
         "internetdb": {
             "last_checked": "2026-10-01T13:11:10Z",
             "observations": [
@@ -58,12 +81,76 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-01T16:21:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-01T16:21:35Z",
+                    "last_observed": "2026-10-01T16:21:35Z",
+                    "data": {
+                        "org": "CORENET CLOUD SDN. BHD.",
+                        "isp": "CORENET CLOUD SDN. BHD.",
+                        "asn": "AS154321",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "eol-product",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.21.6",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "vulfocus"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "03cf2b4bcb49ea00e9e1413fc9ca3b895e7f810f5a9cf86f10f102ddedacbd8d",
+                                "certificate_subject": "Major Cobalt Strike",
+                                "certificate_organisation": "cobaltstrike",
+                                "certificate_issuer": "Major Cobalt Strike"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T13:40:54Z",
+            "last_checked": "2026-10-01T16:10:48Z",
             "observations": [
                 {
                     "first_observed": "2026-09-16T09:06:59.354339Z",
@@ -84,7 +171,7 @@
                 {
                     "key": "1920841",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T13:40:54Z",
+                    "last_observed": "2026-10-01T16:10:48Z",
                     "flags": [
                         "cobalt strike"
                     ],
