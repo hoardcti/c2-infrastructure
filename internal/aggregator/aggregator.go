@@ -17,7 +17,6 @@ import (
 	"errors"
 	"fmt"
 	"log/slog"
-	"net/http"
 	"net/netip"
 	"slices"
 	"time"
@@ -321,11 +320,21 @@ func (aggregator *Aggregator) runFeed(ctx context.Context, source feedSource) (i
 // runEnricher looks up the addresses that are due for one enricher and stores the results. It
 // returns how many files it wrote.
 //
-// A failed lookup is recorded in the address's record as the source's last_error and doesn't
-// stop the others. A failure that will affect every lookup stops the enricher for this run:
-// a rejected key (401, 402 or 403), a used-up quota (429 after retries), or
-// MAX_CONSECUTIVE_LOOKUP_FAILURES failures in a row. Once the enricher's time budget is used
-// up it stops quietly, leaving the remaining addresses due for the next run.
+// What happens after a failed lookup depends on what the failure means (see ErrUnauthorised and
+// the other kinds in upstream.go):
+//
+//   - A rejected key (ErrUnauthorised), a plan that doesn't allow the lookup (ErrForbidden) or
+//     a used-up quota (ErrRateLimited) would make every later lookup fail too, so the enricher
+//     stops for the rest of the run, with the reason and what to do about it. Nothing is
+//     recorded on the address, because the failure isn't about it.
+//   - A request the upstream rejected for this address alone (ErrRejected) is recorded as the
+//     source's last_error on the address, and the next address is looked up.
+//   - Any other failure, such as an unavailable upstream or an invalid response, is recorded on
+//     the address too, and stops the enricher once MAX_CONSECUTIVE_LOOKUP_FAILURES happen in a
+//     row, so an outage doesn't use up the whole run.
+//
+// Once the enricher's time budget is used up it stops quietly, leaving the remaining addresses
+// due for the next run.
 func (aggregator *Aggregator) runEnricher(
 	ctx context.Context,
 	source enricherSource,
@@ -372,10 +381,14 @@ func (aggregator *Aggregator) runEnricher(
 		}
 
 		failures = append(failures, fmt.Errorf("looking up %q: %w", address, lookupErr))
-		consecutiveFailures++
 
-		if stopsEnricher(lookupErr) || MAX_CONSECUTIVE_LOOKUP_FAILURES == consecutiveFailures {
-			failures = append(failures, errors.New("stopping the source for this run"))
+		// A rejection is about this address alone, so it says nothing about the upstream's health.
+		if !errors.Is(lookupErr, ErrRejected) {
+			consecutiveFailures++
+		}
+
+		if reason := stopReason(lookupErr, consecutiveFailures); "" != reason {
+			failures = append(failures, fmt.Errorf("stopping the source for the rest of this run: %s", reason))
 
 			break
 		}
@@ -433,19 +446,27 @@ func (aggregator *Aggregator) storeLookup(
 }
 
 // stopsEnricher reports whether err will make every later lookup fail too: the upstream
-// rejected the key or the plan (401, 402, 403), or a quota is used up (429 after retries).
+// rejected the key, the key's plan doesn't allow the lookup, or a quota is used up.
 func stopsEnricher(err error) bool {
-	statusError, isStatusError := errors.AsType[*StatusError](err)
-	if !isStatusError {
-		return false
+	return errors.Is(err, ErrUnauthorised) || errors.Is(err, ErrForbidden) || errors.Is(err, ErrRateLimited)
+}
+
+// stopReason returns why an enricher must stop after the lookup error err, the
+// consecutiveFailures-th failure in a row, with what the operator can do about it; or "" if it
+// can carry on.
+func stopReason(err error, consecutiveFailures int) string {
+	switch {
+	case errors.Is(err, ErrUnauthorised):
+		return "the API key was rejected; check the key in the environment (see KEY.md)"
+	case errors.Is(err, ErrForbidden):
+		return "the API key's plan doesn't allow these lookups; upgrade the plan or disable the source in sources.json (see KEY.md)"
+	case errors.Is(err, ErrRateLimited):
+		return "its rate limit or quota is used up; lower max_lookups or requests_per_minute in sources.json (see KEY.md)"
+	case MAX_CONSECUTIVE_LOOKUP_FAILURES <= consecutiveFailures:
+		return fmt.Sprintf("%d lookups in a row failed", consecutiveFailures)
 	}
 
-	return slices.Contains([]int{
-		http.StatusUnauthorized,
-		http.StatusPaymentRequired,
-		http.StatusForbidden,
-		http.StatusTooManyRequests,
-	}, statusError.StatusCode)
+	return ""
 }
 
 // selectDueAddresses returns the addresses an enricher should look up in this run, at most

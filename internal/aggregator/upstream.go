@@ -34,30 +34,83 @@ const (
 	SECONDS_PER_MINUTE = 60
 )
 
-// StatusError is returned by Upstream.Fetch for a response whose status isn't 200 OK. Sources
-// inspect it with errors.AsType, for example to treat 404 Not Found as "nothing known".
+// Kinds of upstream failure. Every error from Upstream.Fetch wraps exactly one of them, so
+// callers react to what a failure means rather than to a status code: errors.Is(err,
+// ErrForbidden) is true for any 402 or 403, from any upstream. Sources wrap them too, for
+// failures an upstream reports in a 200 response, such as abuse.ch's unknown_auth_key.
+var (
+	// ErrUnauthorised means the upstream rejected the credentials (401): the key is missing,
+	// wrong or revoked. Every later request would fail the same way.
+	ErrUnauthorised = errors.New("the upstream rejected the API key")
+	// ErrForbidden means the credentials are valid but their plan doesn't allow the request
+	// (402 or 403), such as a free Shodan key asking for a host. Every later request would
+	// fail the same way.
+	ErrForbidden = errors.New("the API key's plan doesn't allow this request")
+	// ErrRateLimited means the upstream's rate limit or quota is used up (429), after any
+	// retries Fetch was allowed to make.
+	ErrRateLimited = errors.New("the upstream's rate limit or quota is used up")
+	// ErrNotFound means the upstream knows nothing about what was asked (404). For a lookup
+	// API this isn't a failure, and sources turn it into "no reports" (see IsNotFound).
+	ErrNotFound = errors.New("the upstream has nothing for this request")
+	// ErrRejected means the upstream refused this particular request (any other 4xx, such as
+	// AbuseIPDB's 422 for an address it doesn't accept). Other requests may still succeed.
+	ErrRejected = errors.New("the upstream rejected this request")
+	// ErrUnavailable means the upstream couldn't answer: a 5xx status, a status outside the
+	// 4xx and 5xx ranges, or a network failure such as a timeout. It may recover later.
+	ErrUnavailable = errors.New("the upstream is unavailable")
+)
+
+// StatusError is returned by Upstream.Fetch for a response whose status isn't 200 OK. It wraps
+// the kind of failure its status means (see ErrUnauthorised and the others), and keeps the
+// details for the error message.
 type StatusError struct {
 	// StatusCode is the HTTP status, such as 429.
 	StatusCode int
 	// Snippet is the start of the response body with whitespace collapsed and secrets removed,
-	// because upstreams such as abuse.ch explain failures there.
+	// because upstreams such as Shodan and abuse.ch explain failures there.
 	Snippet string
 	// RetryAfter is the wait the upstream asked for in its Retry-After header, or 0.
 	RetryAfter time.Duration
 }
 
-// Error describes the failure. It has a pointer receiver, so only a *StatusError is an error.
+// Error describes the failure: the status, what it means, and the upstream's explanation, such
+// as `HTTP 403 Forbidden: the API key's plan doesn't allow this request: "{"error": "Requires
+// membership or higher to access"}"`. It has a pointer receiver, so only a *StatusError is an
+// error.
 func (statusError *StatusError) Error() string {
-	return fmt.Sprintf("unexpected HTTP status %d: %q", statusError.StatusCode, statusError.Snippet)
+	return fmt.Sprintf(
+		"HTTP %d %s: %v: %q",
+		statusError.StatusCode,
+		http.StatusText(statusError.StatusCode),
+		statusError.Unwrap(),
+		statusError.Snippet,
+	)
 }
 
-// IsNotFound reports whether err is, or wraps, a *StatusError for 404 Not Found. Lookup APIs
-// such as InternetDB answer 404 for an address they know nothing about, which isn't a failure.
-func IsNotFound(err error) bool {
-	// errors.AsType checks whether err is, or wraps, a *StatusError, and returns it if so.
-	statusError, isStatusError := errors.AsType[*StatusError](err)
+// Unwrap returns the kind of failure the status means. errors.Is calls it to look inside a
+// *StatusError.
+func (statusError *StatusError) Unwrap() error {
+	switch code := statusError.StatusCode; {
+	case http.StatusUnauthorized == code:
+		return ErrUnauthorised
+	case http.StatusPaymentRequired == code || http.StatusForbidden == code:
+		return ErrForbidden
+	case http.StatusTooManyRequests == code:
+		return ErrRateLimited
+	case http.StatusNotFound == code:
+		return ErrNotFound
+	case code >= http.StatusBadRequest && code < http.StatusInternalServerError:
+		return ErrRejected
+	default:
+		return ErrUnavailable
+	}
+}
 
-	return isStatusError && http.StatusNotFound == statusError.StatusCode
+// IsNotFound reports whether err means the upstream knows nothing about what was asked (see
+// ErrNotFound). Lookup APIs such as InternetDB answer 404 for an address they know nothing
+// about, which isn't a failure.
+func IsNotFound(err error) bool {
+	return errors.Is(err, ErrNotFound)
 }
 
 // Upstream sends a source's requests: it waits for the source's rate limit before every
@@ -142,8 +195,9 @@ type Request struct {
 }
 
 // Fetch sends request and returns the body of a 200 OK response, which must be at most
-// maxBodyBytes long. Any other status returns a *StatusError. Fetch is only for read-only
-// requests, which are safe to repeat: GETs, and POSTs that upstreams document as queries.
+// maxBodyBytes long. Any other status returns a *StatusError, and a network failure an error
+// wrapping ErrUnavailable. Fetch is only for read-only requests, which are safe to repeat:
+// GETs, and POSTs that upstreams document as queries.
 //
 // 429, 502, 503 and 504 responses are retried up to DEFAULT_MAX_RETRIES times, waiting for
 // the upstream's Retry-After or for an exponential backoff with jitter. A Retry-After longer
@@ -218,7 +272,12 @@ func (upstream *Upstream) send(ctx context.Context, request Request, maxBodyByte
 			err = urlError.Err
 		}
 
-		return nil, fmt.Errorf("sending request to %q: %w", redactURL(httpRequest.URL), err)
+		// A request stopped by the caller's context says nothing about the upstream.
+		if nil != ctx.Err() {
+			return nil, fmt.Errorf("sending request to %q: %w", redactURL(httpRequest.URL), err)
+		}
+
+		return nil, fmt.Errorf("sending request to %q: %w: %w", redactURL(httpRequest.URL), ErrUnavailable, err)
 	}
 	// defer runs Close when send returns, on every return path, so the connection is always
 	// released. Nothing is written to the body, so its Close error doesn't matter.
@@ -232,7 +291,9 @@ func (upstream *Upstream) send(ctx context.Context, request Request, maxBodyByte
 	// cut short.
 	body, err := io.ReadAll(io.LimitReader(response.Body, maxBodyBytes+1))
 	if nil != err {
-		return nil, fmt.Errorf("reading response body: %w", err)
+		// The connection broke part-way through, which is the upstream's or the network's
+		// failure rather than the request's.
+		return nil, fmt.Errorf("reading response body: %w: %w", ErrUnavailable, err)
 	}
 
 	if int64(len(body)) > maxBodyBytes {
