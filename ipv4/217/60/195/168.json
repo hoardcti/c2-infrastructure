@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "217.60.195.168",
     "first_seen": "2026-09-23T16:40:16.251001Z",
-    "last_seen": "2026-10-02T01:26:28Z",
+    "last_seen": "2026-10-02T08:11:22Z",
     "flags": [
         "remcos"
     ],
@@ -73,6 +73,57 @@
                 }
             ]
         },
+        "otx": {
+            "last_checked": "2026-10-02T08:17:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T08:17:39Z",
+                    "last_observed": "2026-10-02T08:17:39Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS43212 pejvak ertebatat atiyeh roshan company (p.j.s.)",
+                        "country_code": "IR",
+                        "pulse_count": 3,
+                        "pulses": [
+                            {
+                                "id": "6a21bd3ea24ceb50ffc76437",
+                                "name": "Gifted1 Live Perimeter Threat Intelligence Feed",
+                                "created": "2026-06-04T18:00:30.1Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "Blocklist",
+                                    "Malicious-IP",
+                                    "Scanner",
+                                    "Threat-Intel"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a379f3a6b133e8bebc61d4d",
+                                "name": "Vultr Melbourne (Australia) Port Scanning Hosts for 2026-06-20",
+                                "created": "2026-06-21T08:22:18.778Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners",
+                                    "vultr"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a3892d186dc8392794d7053",
+                                "name": "Malware Filter - Botnet List - 21-06-2026 (Part 5)",
+                                "created": "2026-06-22T01:41:37.08Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "shodan": {
             "last_error": {
                 "occurred_at": "2026-10-01T13:52:44Z",
@@ -96,7 +147,7 @@
             ]
         },
         "threatfox": {
-            "last_checked": "2026-10-02T01:26:28Z",
+            "last_checked": "2026-10-02T08:11:22Z",
             "observations": [
                 {
                     "first_observed": "2026-09-23T16:40:16.251001Z",
@@ -117,7 +168,7 @@
                 {
                     "key": "1927321",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T01:26:28Z",
+                    "last_observed": "2026-10-02T08:11:22Z",
                     "flags": [
                         "remcos"
                     ],
@@ -142,6 +193,94 @@
         "urlhaus": {
             "last_checked": "2026-10-02T01:29:40Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-02T08:24:50Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T08:24:50Z",
+                    "last_observed": "2026-10-02T08:24:50Z",
+                    "data": {
+                        "as_owner": "Swissnet LLC",
+                        "asn": 209373,
+                        "network": "217.60.195.0/24",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 10,
+                            "suspicious": 1,
+                            "undetected": 34,
+                            "harmless": 46,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Chong Lua Dao",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "CyRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Forcepoint ThreatSeeker",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

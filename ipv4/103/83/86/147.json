@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "103.83.86.147",
     "first_seen": "2026-09-16T14:37:55.590252Z",
-    "last_seen": "2026-10-02T01:26:28Z",
+    "last_seen": "2026-10-02T08:11:22Z",
     "flags": [
         "remcos"
     ],
@@ -70,6 +70,100 @@
                 }
             ]
         },
+        "otx": {
+            "last_checked": "2026-10-02T08:19:00Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T08:19:00Z",
+                    "last_observed": "2026-10-02T08:19:00Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS135824 gelexiy cab net",
+                        "country_code": "IN",
+                        "pulse_count": 3,
+                        "pulses": [
+                            {
+                                "id": "681161f229d2bc801dfcec70",
+                                "name": "URLHaus data - 29-04-2025",
+                                "created": "2025-04-29T23:34:10.888Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "200131",
+                                    "32-bit",
+                                    "AgentTesla",
+                                    "Amadey",
+                                    "AmosStealer",
+                                    "AsyncRAT",
+                                    "Aurotun",
+                                    "BABADEDA",
+                                    "ClearFake",
+                                    "ClickFix",
+                                    "CobaltStrike",
+                                    "CoinMiner",
+                                    "CryptOne",
+                                    "DDoSAgent",
+                                    "DarkTortilla",
+                                    "FakeCaptcha",
+                                    "Formbook",
+                                    "GuLoader",
+                                    "HijackLoader",
+                                    "Mozi",
+                                    "NetSupport",
+                                    "RemcosRAT",
+                                    "SocGholish",
+                                    "StealeriumStealer",
+                                    "StrelaStealer",
+                                    "arm",
+                                    "backdoor",
+                                    "bitbucket",
+                                    "booking",
+                                    "botnetdomain",
+                                    "censys",
+                                    "connectwise",
+                                    "ddos",
+                                    "dropped-by-LummaStealer",
+                                    "elf",
+                                    "encrypted",
+                                    "exe",
+                                    "hajime",
+                                    "jpg-base64-loader",
+                                    "lnk",
+                                    "macOS",
+                                    "macho",
+                                    "mips",
+                                    "mirai",
+                                    "opendir",
+                                    "sh",
+                                    "sshdkit",
+                                    "stegocampaign",
+                                    "ua-wget",
+                                    "xml-opendir",
+                                    "xworm",
+                                    "zip"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "683202092d4ff2099430b6d3",
+                                "name": "urlhaus 30days",
+                                "created": "2025-05-24T17:29:45.368Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "683d456be606fd17986e69c6",
+                                "name": "Katz & co",
+                                "created": "2025-06-02T06:32:11.464Z",
+                                "tlp": "white",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "shodan": {
             "last_error": {
                 "occurred_at": "2026-10-01T16:21:29Z",
@@ -93,7 +187,7 @@
             ]
         },
         "threatfox": {
-            "last_checked": "2026-10-02T01:26:28Z",
+            "last_checked": "2026-10-02T08:11:22Z",
             "observations": [
                 {
                     "first_observed": "2026-09-16T14:37:55.590252Z",
@@ -114,7 +208,7 @@
                 {
                     "key": "1921082",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T01:26:28Z",
+                    "last_observed": "2026-10-02T08:11:22Z",
                     "flags": [
                         "remcos"
                     ],
@@ -131,6 +225,44 @@
                             "REMOTEHOST",
                             "c2",
                             "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-02T08:13:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T08:13:40Z",
+                    "last_observed": "2026-10-02T08:13:40Z",
+                    "data": {
+                        "urlhaus_reference": "https://urlhaus.abuse.ch/host/103.83.86.147/",
+                        "first_seen": "2025-04-27T23:59:02Z",
+                        "url_count": 2,
+                        "blacklists": {
+                            "spamhaus_dbl": "not listed",
+                            "surbl": "not listed"
+                        },
+                        "urls": [
+                            {
+                                "id": "3528152",
+                                "url": "http://103.83.86.147/882/cko/verygreatpeoplesaroundtheworldwithgreatnewgivenby_______verygreatpeoplesaroundtheworldwithgreatnewgivenby_______verygreatpeoplesaroundtheworldwithgreatnewgivenby.doc",
+                                "status": "offline",
+                                "date_added": "2025-04-27T23:59:05Z",
+                                "threat": "malware_download",
+                                "tags": []
+                            },
+                            {
+                                "id": "3529974",
+                                "url": "http://103.83.86.147/xampp/co/new_image.jpg",
+                                "status": "offline",
+                                "date_added": "2025-04-29T12:00:15Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "jpg-base64-loader"
+                                ]
+                            }
                         ]
                     }
                 }

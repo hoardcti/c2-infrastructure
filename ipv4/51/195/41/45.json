@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "51.195.41.45",
     "first_seen": "2026-09-14T11:57:26.200098Z",
-    "last_seen": "2026-10-02T01:26:28Z",
+    "last_seen": "2026-10-02T08:11:22Z",
     "flags": [
         "sliver"
     ],
@@ -53,12 +53,66 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T08:21:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T08:21:33Z",
+                    "last_observed": "2026-10-02T08:21:33Z",
+                    "data": {
+                        "org": "OVH GmbH",
+                        "isp": "OVH SAS",
+                        "asn": "AS16276",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "vps-18ff038b.vps.ovh.net"
+                        ],
+                        "domains": [
+                            "ovh.net"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8444,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "711621315aeec21118ab023d0604234ee40caa46b52792b3dcdabbfb83291cf1",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T01:26:28Z",
+            "last_checked": "2026-10-02T08:11:22Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200098Z",
@@ -79,7 +133,7 @@
                 {
                     "key": "1917528",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T01:26:28Z",
+                    "last_observed": "2026-10-02T08:11:22Z",
                     "flags": [
                         "sliver"
                     ],

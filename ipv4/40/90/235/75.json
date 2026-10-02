@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "40.90.235.75",
     "first_seen": "2026-09-14T11:57:26.200343Z",
-    "last_seen": "2026-10-02T01:26:28Z",
+    "last_seen": "2026-10-02T08:11:22Z",
     "flags": [
         "sliver"
     ],
@@ -71,12 +71,115 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T08:20:29Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T08:20:29Z",
+                    "last_observed": "2026-10-02T08:20:29Z",
+                    "data": {
+                        "org": "Microsoft Corporation",
+                        "isp": "Microsoft Corporation",
+                        "asn": "AS8075",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "denov-priv8.ddns.com.br",
+                            "www.denov-priv8.ddns.com.br"
+                        ],
+                        "domains": [
+                            "ddns.com.br"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [
+                            "CVE-2007-4723",
+                            "CVE-2009-0796",
+                            "CVE-2009-2299",
+                            "CVE-2011-1176",
+                            "CVE-2011-2688",
+                            "CVE-2012-3526",
+                            "CVE-2012-4001",
+                            "CVE-2012-4360",
+                            "CVE-2013-0941",
+                            "CVE-2013-0942",
+                            "CVE-2013-2765",
+                            "CVE-2013-4365"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.3p1 Debian 4",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "version": "2.4.68",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "version": "2.4.68",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "07d19d1ad21d21d00042d43d000000740eb6ef556e38cc76ed51661e12574d",
+                                "certificate_sha256": "d1d83497b12bd211c9b505dbef9a2938019c9825fa947c4fe039c81d7df139bc",
+                                "certificate_subject": "denov-priv8.ddns.com.br",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 8888,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Webswing"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "fccdbd5251090212fa31a40f6ad27ab1eed63a21ce87f758a6f649a5a673709e",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T01:26:28Z",
+            "last_checked": "2026-10-02T08:11:22Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200343Z",
@@ -97,7 +200,7 @@
                 {
                     "key": "1917496",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T01:26:28Z",
+                    "last_observed": "2026-10-02T08:11:22Z",
                     "flags": [
                         "sliver"
                     ],

@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "172.86.86.84",
     "first_seen": "2026-09-23T16:40:16.251028Z",
-    "last_seen": "2026-10-02T01:26:28Z",
+    "last_seen": "2026-10-02T08:11:22Z",
     "flags": [
         "unknown malware"
     ],
@@ -54,6 +54,79 @@
                 }
             ]
         },
+        "otx": {
+            "last_checked": "2026-10-02T08:17:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T08:17:22Z",
+                    "last_observed": "2026-10-02T08:17:22Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS46261 quickpacket  llc",
+                        "country_code": "CA",
+                        "pulse_count": 7,
+                        "pulses": [
+                            {
+                                "id": "6675c61d2a8e4554b9985027",
+                                "name": "BLOCK_2024",
+                                "created": "2024-06-21T18:27:41.885Z",
+                                "tlp": "white",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6758ebc2472100ac75acad69",
+                                "name": "2024-DIC-10-Clon",
+                                "created": "2024-12-11T01:32:50.26Z",
+                                "tlp": "white",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6765eebf9ec06704f3a6ea68",
+                                "name": "CLON IPIF",
+                                "created": "2024-12-20T22:25:03.407Z",
+                                "tlp": "white",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "679c246c8bf7850b5096828e",
+                                "name": "2024-blocking-soc-ene25",
+                                "created": "2025-01-31T01:16:28.004Z",
+                                "tlp": "white",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "679c246da161670e959a9eec",
+                                "name": "2024-blocking-soc-ene25",
+                                "created": "2025-01-31T01:16:29.608Z",
+                                "tlp": "white",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "69404b09d8296388596ecfa9",
+                                "name": "BLOCK_2025_DIC",
+                                "created": "2025-12-15T17:53:13.004Z",
+                                "tlp": "white",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a8e98c62f698ac63c3464b1",
+                                "name": "Compromised integrity",
+                                "created": "2026-08-26T07:41:58.157Z",
+                                "tlp": "white",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "shodan": {
             "last_error": {
                 "occurred_at": "2026-10-01T13:52:26Z",
@@ -66,7 +139,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T01:26:28Z",
+            "last_checked": "2026-10-02T08:11:22Z",
             "observations": [
                 {
                     "first_observed": "2026-09-23T16:40:16.251028Z",
@@ -87,7 +160,7 @@
                 {
                     "key": "1926639",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T01:26:28Z",
+                    "last_observed": "2026-10-02T08:11:22Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -110,7 +183,7 @@
                 {
                     "key": "1926638",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T01:26:28Z",
+                    "last_observed": "2026-10-02T08:11:22Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -133,7 +206,7 @@
                 {
                     "key": "1926640",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T01:26:28Z",
+                    "last_observed": "2026-10-02T08:11:22Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -158,6 +231,65 @@
         "urlhaus": {
             "last_checked": "2026-10-01T21:45:55Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-02T08:22:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T08:22:35Z",
+                    "last_observed": "2026-10-02T08:22:35Z",
+                    "data": {
+                        "as_owner": "RouterHosting LLC",
+                        "asn": 14956,
+                        "network": "172.86.80.0/21",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 0,
+                            "undetected": 32,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Criminal IP",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malware"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "2ad2ad16d2ad2ad22c2ad2ad2ad2adc7639a2c8ee8049d85e08031e30b69d9",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

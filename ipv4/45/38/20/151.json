@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "45.38.20.151",
     "first_seen": "2026-09-14T11:57:26.200205Z",
-    "last_seen": "2026-10-02T01:26:28Z",
+    "last_seen": "2026-10-02T08:11:22Z",
     "flags": [
         "sliver"
     ],
@@ -98,12 +98,172 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T08:21:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T08:21:05Z",
+                    "last_observed": "2026-10-02T08:21:05Z",
+                    "data": {
+                        "org": "Internet Utilities NA LLC",
+                        "isp": "Aokigahara SRL",
+                        "asn": "AS215659",
+                        "os": null,
+                        "country_code": "RO",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "open-dir",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2007-4559",
+                            "CVE-2009-2940",
+                            "CVE-2009-3720",
+                            "CVE-2020-29396",
+                            "CVE-2021-32052",
+                            "CVE-2023-24329",
+                            "CVE-2023-27043",
+                            "CVE-2023-36632",
+                            "CVE-2023-40217",
+                            "CVE-2023-41105",
+                            "CVE-2024-6232",
+                            "CVE-2024-7592",
+                            "CVE-2024-9287",
+                            "CVE-2025-12084",
+                            "CVE-2025-12781",
+                            "CVE-2025-13462",
+                            "CVE-2025-13836",
+                            "CVE-2025-13837",
+                            "CVE-2025-6075",
+                            "CVE-2026-0864",
+                            "CVE-2026-15308",
+                            "CVE-2026-3087",
+                            "CVE-2026-3644",
+                            "CVE-2026-4224",
+                            "CVE-2026-4519",
+                            "CVE-2026-6019",
+                            "CVE-2026-7210"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.0p2 Debian 7+deb13u4"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "526b48c2b361c58344a10100eea2f63ea049fcaf5686694642c270011adc4539",
+                                "certificate_subject": "danbo-3de3e0",
+                                "certificate_issuer": "danbo-3de3e0"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "SimpleHTTPServer",
+                                "version": "0.6",
+                                "tags": [
+                                    "open-dir"
+                                ],
+                                "http_title": "Directory listing for /"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "SimpleHTTPServer",
+                                "version": "0.6",
+                                "tags": [
+                                    "open-dir"
+                                ],
+                                "http_title": "Directory listing for /"
+                            },
+                            {
+                                "port": 8060,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.31.4",
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 8089,
+                                "transport": "tcp",
+                                "tags": [
+                                    "open-dir"
+                                ],
+                                "http_title": "Directory listing for /"
+                            },
+                            {
+                                "port": 8090,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8091,
+                                "transport": "tcp",
+                                "http_title": "Error response"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "TRENDnet TV-IP110W webcam display httpd",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad0002ad2ad00042d42d000000ad9bf51cc3f5a1e29eecb81d0c7b06eb",
+                                "certificate_sha256": "448811c05a7b971770757ab3f87efe9a50ffec72e4c7bb7e1401f0b939ea1d12",
+                                "certificate_subject": "cdn.microsoftupdate.com",
+                                "certificate_issuer": "cdn.microsoftupdate.com"
+                            },
+                            {
+                                "port": 8445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8880,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8888,
+                                "transport": "tcp",
+                                "product": "BaseHTTPServer",
+                                "version": "0.6"
+                            },
+                            {
+                                "port": 9100,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "de360b3e9f065ecfb0a814154d0a5df764ae11da43f55956875a63d78378bb60",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T01:26:28Z",
+            "last_checked": "2026-10-02T08:11:22Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200205Z",
@@ -124,7 +284,7 @@
                 {
                     "key": "1917514",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T01:26:28Z",
+                    "last_observed": "2026-10-02T08:11:22Z",
                     "flags": [
                         "sliver"
                     ],

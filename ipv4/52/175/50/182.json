@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "52.175.50.182",
     "first_seen": "2026-09-14T11:57:26.200136Z",
-    "last_seen": "2026-10-02T01:26:28Z",
+    "last_seen": "2026-10-02T08:11:22Z",
     "flags": [
         "sliver"
     ],
@@ -77,12 +77,100 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T08:21:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T08:21:23Z",
+                    "last_observed": "2026-10-02T08:21:23Z",
+                    "data": {
+                        "org": "Microsoft Corporation",
+                        "isp": "Microsoft Corporation",
+                        "asn": "AS8075",
+                        "os": null,
+                        "country_code": "HK",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [
+                            "CVE-2007-4559",
+                            "CVE-2009-2940",
+                            "CVE-2009-3720",
+                            "CVE-2020-29396",
+                            "CVE-2021-32052",
+                            "CVE-2023-24329",
+                            "CVE-2023-27043",
+                            "CVE-2023-36632",
+                            "CVE-2023-40217",
+                            "CVE-2023-41105",
+                            "CVE-2024-6232",
+                            "CVE-2024-7592",
+                            "CVE-2024-9287",
+                            "CVE-2025-12084",
+                            "CVE-2025-12781",
+                            "CVE-2025-13462",
+                            "CVE-2025-13836",
+                            "CVE-2025-13837",
+                            "CVE-2026-0864",
+                            "CVE-2026-15308",
+                            "CVE-2026-3087",
+                            "CVE-2026-3644",
+                            "CVE-2026-4519",
+                            "CVE-2026-6019",
+                            "CVE-2026-7210"
+                        ],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "11a0d5fcfaedbdf4cd03b6227566e4c958ce54041f0491e7be4a91699a936df3",
+                                "certificate_subject": "0.0.0.0"
+                            },
+                            {
+                                "port": 9001,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "f9e68795f3190606058dda701a8ca12a3ecc5963d5f0b5ccbd7fd362dbc3bb2c",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T01:26:28Z",
+            "last_checked": "2026-10-02T08:11:22Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200136Z",
@@ -103,7 +191,7 @@
                 {
                     "key": "1917523",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T01:26:28Z",
+                    "last_observed": "2026-10-02T08:11:22Z",
                     "flags": [
                         "sliver"
                     ],

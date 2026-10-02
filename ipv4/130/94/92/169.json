@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "130.94.92.169",
     "first_seen": "2026-09-14T11:57:26.200358Z",
-    "last_seen": "2026-10-02T01:26:28Z",
+    "last_seen": "2026-10-02T08:11:22Z",
     "flags": [
         "sliver"
     ],
@@ -52,12 +52,67 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T08:20:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T08:20:25Z",
+                    "last_observed": "2026-10-02T08:20:25Z",
+                    "data": {
+                        "org": "NTT DATA",
+                        "isp": "NTT America, Inc.",
+                        "asn": "AS2914",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.12"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8099,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "2f0ae0c48fd2fe50a237c5c09cb18b85cbc5e7f29b05a8230218da64fbe87432",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T01:26:28Z",
+            "last_checked": "2026-10-02T08:11:22Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200358Z",
@@ -78,7 +133,7 @@
                 {
                     "key": "1917494",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T01:26:28Z",
+                    "last_observed": "2026-10-02T08:11:22Z",
                     "flags": [
                         "sliver"
                     ],

@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "129.226.150.240",
     "first_seen": "2026-09-14T11:57:26.200229Z",
-    "last_seen": "2026-10-02T01:26:28Z",
+    "last_seen": "2026-10-02T08:11:22Z",
     "flags": [
         "sliver"
     ],
@@ -97,12 +97,127 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T08:20:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T08:20:59Z",
+                    "last_observed": "2026-10-02T08:20:59Z",
+                    "data": {
+                        "org": "Tencent Building, Kejizhongyi Avenue",
+                        "isp": "Tencent Building, Kejizhongyi Avenue",
+                        "asn": "AS132203",
+                        "os": null,
+                        "country_code": "SG",
+                        "hostnames": [
+                            "mailsg11.tencentdms.com"
+                        ],
+                        "domains": [
+                            "tencentdms.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "open-dir"
+                        ],
+                        "vulns": [
+                            "CVE-2007-2768",
+                            "CVE-2008-3844",
+                            "CVE-2009-2940",
+                            "CVE-2009-3720",
+                            "CVE-2020-29396",
+                            "CVE-2021-32052",
+                            "CVE-2023-27043",
+                            "CVE-2023-51767",
+                            "CVE-2024-6232",
+                            "CVE-2024-7592",
+                            "CVE-2024-9287",
+                            "CVE-2025-12084",
+                            "CVE-2025-12781",
+                            "CVE-2025-13462",
+                            "CVE-2025-13836",
+                            "CVE-2025-13837",
+                            "CVE-2026-0864",
+                            "CVE-2026-15308",
+                            "CVE-2026-3087",
+                            "CVE-2026-3644",
+                            "CVE-2026-4519",
+                            "CVE-2026-59995",
+                            "CVE-2026-59996",
+                            "CVE-2026-59997",
+                            "CVE-2026-59998",
+                            "CVE-2026-59999",
+                            "CVE-2026-60000",
+                            "CVE-2026-60001",
+                            "CVE-2026-60002",
+                            "CVE-2026-6019",
+                            "CVE-2026-7210",
+                            "CVE-2026-73281",
+                            "CVE-2026-73282",
+                            "CVE-2026-73283"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.16"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy"
+                            },
+                            {
+                                "port": 2222,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.3"
+                            },
+                            {
+                                "port": 5555,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 5556,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "SimpleHTTPServer",
+                                "version": "0.6",
+                                "tags": [
+                                    "open-dir"
+                                ],
+                                "http_title": "Directory listing for /"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "e1076df45f07c971a53dc0df31c5bfc31597eacc9b0ffeb2f5afecd301055a6d",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T01:26:28Z",
+            "last_checked": "2026-10-02T08:11:22Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200229Z",
@@ -123,7 +238,7 @@
                 {
                     "key": "1917511",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T01:26:28Z",
+                    "last_observed": "2026-10-02T08:11:22Z",
                     "flags": [
                         "sliver"
                     ],

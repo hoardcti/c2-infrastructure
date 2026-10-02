@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "174.129.92.184",
     "first_seen": "2026-09-23T16:40:16.251013Z",
-    "last_seen": "2026-10-02T01:26:28Z",
+    "last_seen": "2026-10-02T08:11:22Z",
     "flags": [
         "grandoreiro"
     ],
@@ -54,6 +54,22 @@
                 }
             ]
         },
+        "otx": {
+            "last_checked": "2026-10-02T08:17:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T08:17:28Z",
+                    "last_observed": "2026-10-02T08:17:28Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS14618 amazon.com  inc.",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
         "shodan": {
             "last_error": {
                 "occurred_at": "2026-10-01T13:52:34Z",
@@ -66,7 +82,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T01:26:28Z",
+            "last_checked": "2026-10-02T08:11:22Z",
             "observations": [
                 {
                     "first_observed": "2026-09-23T16:40:16.251013Z",
@@ -87,7 +103,7 @@
                 {
                     "key": "1927256",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T01:26:28Z",
+                    "last_observed": "2026-10-02T08:11:22Z",
                     "flags": [
                         "grandoreiro"
                     ],
@@ -111,6 +127,69 @@
         "urlhaus": {
             "last_checked": "2026-10-02T01:29:30Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-02T08:23:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T08:23:35Z",
+                    "last_observed": "2026-10-02T08:23:35Z",
+                    "data": {
+                        "as_owner": "Amazon.com, Inc.",
+                        "asn": 14618,
+                        "network": "174.129.0.0/16",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 3,
+                            "undetected": 34,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

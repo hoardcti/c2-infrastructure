@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "47.84.125.171",
     "first_seen": "2026-09-14T11:57:26.200267Z",
-    "last_seen": "2026-10-02T01:26:28Z",
+    "last_seen": "2026-10-02T08:11:22Z",
     "flags": [
         "sliver"
     ],
@@ -50,12 +50,59 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T08:20:49Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T08:20:49Z",
+                    "last_observed": "2026-10-02T08:20:49Z",
+                    "data": {
+                        "org": "Alibaba Cloud LLC",
+                        "isp": "Alibaba (US) Technology Co., Ltd.",
+                        "asn": "AS45102",
+                        "os": "Linux",
+                        "country_code": "SG",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "0746f5948d21c602c1eec2494e5604c1542c2499d5b29cc5697993b3065adcce",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T01:26:28Z",
+            "last_checked": "2026-10-02T08:11:22Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200267Z",
@@ -76,7 +123,7 @@
                 {
                     "key": "1917506",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T01:26:28Z",
+                    "last_observed": "2026-10-02T08:11:22Z",
                     "flags": [
                         "sliver"
                     ],

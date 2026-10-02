@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "132.243.175.245",
     "first_seen": "2026-09-23T16:40:16.250997Z",
-    "last_seen": "2026-10-02T01:26:28Z",
+    "last_seen": "2026-10-02T08:11:22Z",
     "flags": [
         "remcos"
     ],
@@ -96,6 +96,22 @@
                 }
             ]
         },
+        "otx": {
+            "last_checked": "2026-10-02T08:17:42Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T08:17:42Z",
+                    "last_observed": "2026-10-02T08:17:42Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS14962 ncr corporation",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
         "shodan": {
             "last_error": {
                 "occurred_at": "2026-10-01T13:52:48Z",
@@ -108,7 +124,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T01:26:28Z",
+            "last_checked": "2026-10-02T08:11:22Z",
             "observations": [
                 {
                     "first_observed": "2026-09-23T16:40:16.250997Z",
@@ -129,7 +145,7 @@
                 {
                     "key": "1927482",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T01:26:28Z",
+                    "last_observed": "2026-10-02T08:11:22Z",
                     "flags": [
                         "remcos"
                     ],
@@ -154,6 +170,65 @@
         "urlhaus": {
             "last_checked": "2026-10-02T01:29:44Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-02T08:25:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T08:25:20Z",
+                    "last_observed": "2026-10-02T08:25:20Z",
+                    "data": {
+                        "as_owner": "Alexhost Srl",
+                        "asn": 200019,
+                        "network": "132.243.174.0/23",
+                        "country": "CH",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 1,
+                            "undetected": 35,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "2ad2ad16d2ad2ad22c42d42d00042de4f6cde49b80ad1e14c340f9e47ccd3a",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }
