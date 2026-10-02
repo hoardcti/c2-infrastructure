@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "43.155.214.112",
     "first_seen": "2026-09-23T16:40:16.251091Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "aisuru"
     ],
@@ -78,7 +78,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-23T16:40:16.251091Z",
@@ -99,7 +99,7 @@
                 {
                     "key": "1924693",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "aisuru"
                     ],
@@ -123,6 +123,62 @@
         "urlhaus": {
             "last_checked": "2026-10-01T21:45:15Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-02T01:37:50Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:37:50Z",
+                    "last_observed": "2026-10-02T01:37:50Z",
+                    "data": {
+                        "as_owner": "Tencent Building, Kejizhongyi Avenue",
+                        "asn": 132203,
+                        "network": "43.155.192.0/18",
+                        "country": "KR",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 0,
+                            "undetected": 36,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "3fd3fd00000000000043d43d00043dc3b2afa8a5ec09b510a8559aff7899fb",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

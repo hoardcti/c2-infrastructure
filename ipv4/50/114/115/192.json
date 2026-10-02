@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "50.114.115.192",
     "first_seen": "2026-09-14T11:57:26.200821Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "unknown malware"
     ],
@@ -72,12 +72,141 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T01:36:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:36:24Z",
+                    "last_observed": "2026-10-02T01:36:24Z",
+                    "data": {
+                        "org": "Ace Data Centers, Inc.",
+                        "isp": "Sculk Ltd.",
+                        "asn": "AS213529",
+                        "os": "Linux",
+                        "country_code": "US",
+                        "hostnames": [
+                            "125957.koara.live",
+                            "98497.koara.live",
+                            "admin-evotor.ru",
+                            "mail.vostok-eletra.ru",
+                            "vostok-eletra.ru",
+                            "www.admin-evotor.ru",
+                            "www.vostok-eletra.ru"
+                        ],
+                        "domains": [
+                            "admin-evotor.ru",
+                            "koara.live",
+                            "vostok-eletra.ru"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "372a7f0647f96f3486c5abdd0d307481c47459385539ced71adf5a6c90310970",
+                                "certificate_subject": "98497.koara.live",
+                                "certificate_issuer": "98497.koara.live"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 143,
+                                "transport": "tcp",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "1cdbe986f96b0425cd994e3f66b8ef6cc8fbb38a73e69bebb428b4cc82fd6ffb",
+                                "certificate_subject": "vostok-eletra.ru",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "830a6d9c9670f96a65cdbe8e5ac5d33e62166b75964eb730c6be4ed09ece0d19",
+                                "certificate_subject": "admin-evotor.ru",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 587,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "372a7f0647f96f3486c5abdd0d307481c47459385539ced71adf5a6c90310970",
+                                "certificate_subject": "98497.koara.live",
+                                "certificate_issuer": "98497.koara.live"
+                            },
+                            {
+                                "port": 993,
+                                "transport": "tcp",
+                                "jarm": "1dd40d40d00040d00042d43d00000051af7d8070a18e002eaaedf620fa118c",
+                                "certificate_sha256": "1cdbe986f96b0425cd994e3f66b8ef6cc8fbb38a73e69bebb428b4cc82fd6ffb",
+                                "certificate_subject": "vostok-eletra.ru",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "47e3f67fb53daf261970cab5993c27a742c3638e955d6c69719d13177d8b8a8b",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 4369,
+                                "transport": "tcp",
+                                "product": "Erlang Port Mapper Daemon"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200821Z",
@@ -98,7 +227,7 @@
                 {
                     "key": "1917436",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "unknown malware"
                     ],

@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "52.252.74.100",
     "first_seen": "2026-09-14T11:57:26.200908Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "unknown malware"
     ],
@@ -48,12 +48,58 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T01:36:02Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:36:02Z",
+                    "last_observed": "2026-10-02T01:36:02Z",
+                    "data": {
+                        "org": "Microsoft Corporation",
+                        "isp": "Microsoft Corporation",
+                        "asn": "AS8075",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.31.1",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "6bd47d323f8ff933475e1c31a31bafbb9cce96025dc86470feb3d495c6bf518d",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200908Z",
@@ -74,7 +120,7 @@
                 {
                     "key": "1917424",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "unknown malware"
                     ],

@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "102.220.163.40",
     "first_seen": "2026-09-23T16:40:16.251063Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "remcos"
     ],
@@ -75,7 +75,7 @@
             ]
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-23T16:40:16.251063Z",
@@ -96,7 +96,7 @@
                 {
                     "key": "1926291",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "remcos"
                     ],
@@ -121,6 +121,74 @@
         "urlhaus": {
             "last_checked": "2026-10-01T21:45:25Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-02T01:39:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:39:05Z",
+                    "last_observed": "2026-10-02T01:39:05Z",
+                    "data": {
+                        "as_owner": "VPS Dedicated LLC",
+                        "asn": 197769,
+                        "network": "102.220.160.0/22",
+                        "country": "SI",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 6,
+                            "suspicious": 1,
+                            "undetected": 33,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

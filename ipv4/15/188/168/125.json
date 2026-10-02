@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "15.188.168.125",
     "first_seen": "2026-09-14T11:57:26.20066Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "unknown malware"
     ],
@@ -51,12 +51,57 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T01:37:06Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:37:06Z",
+                    "last_observed": "2026-10-02T01:37:06Z",
+                    "data": {
+                        "org": "Amazon Data Services France",
+                        "isp": "Amazon.com, Inc.",
+                        "asn": "AS16509",
+                        "os": null,
+                        "country_code": "FR",
+                        "hostnames": [
+                            "ec2-15-188-168-125.eu-west-3.compute.amazonaws.com",
+                            "yetic.io"
+                        ],
+                        "domains": [
+                            "amazonaws.com",
+                            "yetic.io"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00042d42d0000002059a3b916699461c5923779b77cf06b",
+                                "certificate_sha256": "466af261edbcf42ae45a440f9285520458dd98ec19835b164d797cfdda018435",
+                                "certificate_subject": "CloudFlare Origin Certificate",
+                                "certificate_organisation": "CloudFlare, Inc."
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.20066Z",
@@ -77,7 +122,7 @@
                 {
                     "key": "1917457",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "unknown malware"
                     ],

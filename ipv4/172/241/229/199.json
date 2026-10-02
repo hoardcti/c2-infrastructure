@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "172.241.229.199",
     "first_seen": "2026-09-14T11:57:26.200846Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "unknown malware"
     ],
@@ -47,12 +47,58 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T01:36:18Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:36:18Z",
+                    "last_observed": "2026-10-02T01:36:18Z",
+                    "data": {
+                        "org": "Leaseweb USA, Inc.",
+                        "isp": "Leaseweb USA, Inc.",
+                        "asn": "AS394380",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "2z7k83c9.championfor.com",
+                            "tiraza.com"
+                        ],
+                        "domains": [
+                            "championfor.com",
+                            "tiraza.com"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "055768722878d26bbb18ec1999ef91d824d454227637ac8515a8a9b875649ebb",
+                                "certificate_subject": "*.tiraza.com",
+                                "certificate_issuer": "GlobalSign GCC R6 AlphaSSL CA 2025"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "055768722878d26bbb18ec1999ef91d824d454227637ac8515a8a9b875649ebb",
+                                "certificate_subject": "*.tiraza.com",
+                                "certificate_issuer": "GlobalSign GCC R6 AlphaSSL CA 2025"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200846Z",
@@ -73,7 +119,7 @@
                 {
                     "key": "1917432",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "unknown malware"
                     ],

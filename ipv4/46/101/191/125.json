@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "46.101.191.125",
     "first_seen": "2026-09-14T11:57:26.200564Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "unknown malware"
     ],
@@ -63,12 +63,109 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T01:37:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:37:28Z",
+                    "last_observed": "2026-10-02T01:37:28Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": "Ubuntu",
+                        "country_code": "DE",
+                        "hostnames": [
+                            "portal.bildirimadresi.com"
+                        ],
+                        "domains": [
+                            "bildirimadresi.com"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "eol-product",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "cloud",
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "f351ac6e7853c435039cdfbcd969f0588515a4f4a92261a0bca2adb6953bb2bc",
+                                "certificate_subject": "ubuntu-s-1vcpu-1gb-amd-fra1-01",
+                                "certificate_issuer": "ubuntu-s-1vcpu-1gb-amd-fra1-01"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "jarm": "28d28d28d00028d00042d42d000000831b6af40378e2dd35eeac4e9311926e",
+                                "certificate_sha256": "5411f43ff21b65df5592d21e78d86b5620cdb6ca00dbd45bd5f4a5b13e29c597",
+                                "certificate_subject": "portal.bildirimadresi.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud",
+                                    "self-signed"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "a7318571373a994191e91d3a46fa88f35ce7debece1fc444e5a74731e4ee8e24",
+                                "certificate_subject": "46.101.191.125",
+                                "certificate_organisation": "bildirimadresi",
+                                "certificate_issuer": "46.101.191.125"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200564Z",
@@ -89,7 +186,7 @@
                 {
                     "key": "1917468",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "unknown malware"
                     ],

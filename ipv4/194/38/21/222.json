@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "194.38.21.222",
     "first_seen": "2026-09-14T11:57:26.200541Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "unknown malware"
     ],
@@ -64,6 +64,83 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T01:37:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:37:34Z",
+                    "last_observed": "2026-10-02T01:37:34Z",
+                    "data": {
+                        "org": "Rices Privately owned enterprise",
+                        "isp": "Rices Privately owned enterprise",
+                        "asn": "AS48693",
+                        "os": "Linux",
+                        "country_code": "UA",
+                        "hostnames": [
+                            "ns2.sitehost.tld"
+                        ],
+                        "domains": [
+                            "tld."
+                        ],
+                        "tags": [],
+                        "vulns": [
+                            "CVE-2026-44848",
+                            "CVE-2026-44849",
+                            "CVE-2026-44850",
+                            "CVE-2026-44881",
+                            "CVE-2026-44882",
+                            "CVE-2026-44883",
+                            "CVE-2026-44884",
+                            "CVE-2026-44885"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 631,
+                                "transport": "tcp",
+                                "product": "CUPS (IPP)",
+                                "version": "2.4.19",
+                                "http_title": "Forbidden - CUPS v2.4.19"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "1aa7515ee7266011b9591be15843faf431111663d6b40fb246a5567de341ad06",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 8000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 9009,
+                                "transport": "tcp",
+                                "product": "Portainer",
+                                "version": "2.33.6",
+                                "http_title": "Portainer"
+                            },
+                            {
+                                "port": 9443,
+                                "transport": "tcp",
+                                "product": "Portainer",
+                                "version": "2.33.6",
+                                "http_title": "Portainer",
+                                "jarm": "40d40d40d00000000043d40d40d43d9d4f83ac87494648a3bed4ab670795cd",
+                                "certificate_sha256": "05573c94e2f873e2294e7079c61e14b019b050568b0de0428cfa44a6c1ea3475"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": [
@@ -90,7 +167,7 @@
             ]
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200541Z",
@@ -111,7 +188,7 @@
                 {
                     "key": "1917471",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "unknown malware"
                     ],

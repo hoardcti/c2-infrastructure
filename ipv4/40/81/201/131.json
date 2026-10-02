@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "40.81.201.131",
     "first_seen": "2026-09-14T11:57:26.200916Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "unknown malware"
     ],
@@ -46,12 +46,60 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T01:36:00Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:36:00Z",
+                    "last_observed": "2026-10-02T01:36:00Z",
+                    "data": {
+                        "org": "Microsoft Corporation",
+                        "isp": "Microsoft Corporation",
+                        "asn": "AS8075",
+                        "os": null,
+                        "country_code": "JP",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "15cc7edc29e8549c622cea75925b4b47e2e191dda1e2253e2e8d31810a843364",
+                                "certificate_subject": "*.skai.co.jp",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "15cc7edc29e8549c622cea75925b4b47e2e191dda1e2253e2e8d31810a843364",
+                                "certificate_subject": "*.skai.co.jp",
+                                "certificate_issuer": "YR2"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200916Z",
@@ -72,7 +120,7 @@
                 {
                     "key": "1917423",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "unknown malware"
                     ],

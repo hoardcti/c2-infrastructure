@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "169.58.128.13",
     "first_seen": "2026-09-14T11:57:26.20101Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "unknown malware"
     ],
@@ -53,12 +53,68 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T01:35:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:35:40Z",
+                    "last_observed": "2026-10-02T01:35:40Z",
+                    "data": {
+                        "org": "Contabo GmbH",
+                        "isp": "Contabo GmbH",
+                        "asn": "AS51167",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "vmi3487487.contaboserver.net",
+                            "www.cgrgocr.site"
+                        ],
+                        "domains": [
+                            "cgrgocr.site",
+                            "contaboserver.net"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "a263e18011a1ed1333c1ee75664015f71e753d9bbde026c8f5ebc5a9099f30a3",
+                                "certificate_subject": "www.cgrgocr.site",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 4444,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "1450cb12a3159c81622c1f171bd0c88c322ec79f198ddadfa0ec26f346644110",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.20101Z",
@@ -79,7 +135,7 @@
                 {
                     "key": "1917412",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "unknown malware"
                     ],

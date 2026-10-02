@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "103.39.79.216",
     "first_seen": "2026-09-14T11:57:26.200705Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "unknown malware"
     ],
@@ -59,12 +59,83 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T01:36:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:36:54Z",
+                    "last_observed": "2026-10-02T01:36:54Z",
+                    "data": {
+                        "org": "HONG KONG ALPHA INTL LTD",
+                        "isp": "XNNET LLC",
+                        "asn": "AS932",
+                        "os": "Ubuntu",
+                        "country_code": "HK",
+                        "hostnames": [
+                            "genlusafc.com",
+                            "www.genlusafc.com"
+                        ],
+                        "domains": [
+                            "genlusafc.com"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "节日礼遇登记",
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "8022b6b4aea1f8da7c6ab8285e2b8970b220f0f4f17ef9e152cdca7338e6b21d",
+                                "certificate_subject": "genlusafc.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "2ec44188295ec88a25e3c588743768c5d1c15d01f8e5d8bce19b680291609d91",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200705Z",
@@ -85,7 +156,7 @@
                 {
                     "key": "1917451",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "unknown malware"
                     ],

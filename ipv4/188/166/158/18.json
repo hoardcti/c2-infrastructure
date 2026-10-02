@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "188.166.158.18",
     "first_seen": "2026-09-23T16:40:16.251047Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "aisuru"
     ],
@@ -64,7 +64,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-23T16:40:16.251047Z",
@@ -85,7 +85,7 @@
                 {
                     "key": "1926401",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "aisuru"
                     ],
@@ -107,7 +107,7 @@
                 {
                     "key": "1924514",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "aisuru"
                     ],
@@ -131,6 +131,70 @@
         "urlhaus": {
             "last_checked": "2026-10-01T21:45:43Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-02T01:41:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:41:20Z",
+                    "last_observed": "2026-10-02T01:41:20Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "188.166.0.0/16",
+                        "country": "GB",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 1,
+                            "undetected": 33,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Criminal IP",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "3fd3fd0003fd3fd00042d42d0000000a5f02847ec7d262f8dcbfaa6508ecf9",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

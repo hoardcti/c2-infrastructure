@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "159.195.194.98",
     "first_seen": "2026-09-14T11:57:26.200589Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "unknown malware"
     ],
@@ -62,12 +62,138 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T01:37:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:37:24Z",
+                    "last_observed": "2026-10-02T01:37:24Z",
+                    "data": {
+                        "org": "netcup GmbH",
+                        "isp": "netcup GmbH",
+                        "asn": "AS197540",
+                        "os": null,
+                        "country_code": "DK",
+                        "hostnames": [
+                            "kigaeno.com"
+                        ],
+                        "domains": [
+                            "kigaeno.com"
+                        ],
+                        "tags": [
+                            "starttls"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.0p2 Debian 7+deb13u4"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "d6e2c226a0fc0ff5d2627d5dd8461372fb697fcd23d1def3aeca7086e38a84d9",
+                                "certificate_subject": "kigaeno.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 110,
+                                "transport": "tcp",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "d6e2c226a0fc0ff5d2627d5dd8461372fb697fcd23d1def3aeca7086e38a84d9",
+                                "certificate_subject": "kigaeno.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 143,
+                                "transport": "tcp",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "d6e2c226a0fc0ff5d2627d5dd8461372fb697fcd23d1def3aeca7086e38a84d9",
+                                "certificate_subject": "kigaeno.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "d6e2c226a0fc0ff5d2627d5dd8461372fb697fcd23d1def3aeca7086e38a84d9",
+                                "certificate_subject": "kigaeno.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 465,
+                                "transport": "tcp",
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "d6e2c226a0fc0ff5d2627d5dd8461372fb697fcd23d1def3aeca7086e38a84d9",
+                                "certificate_subject": "kigaeno.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 587,
+                                "transport": "tcp",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "d6e2c226a0fc0ff5d2627d5dd8461372fb697fcd23d1def3aeca7086e38a84d9",
+                                "certificate_subject": "kigaeno.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 993,
+                                "transport": "tcp",
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "d6e2c226a0fc0ff5d2627d5dd8461372fb697fcd23d1def3aeca7086e38a84d9",
+                                "certificate_subject": "kigaeno.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 995,
+                                "transport": "tcp",
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "d6e2c226a0fc0ff5d2627d5dd8461372fb697fcd23d1def3aeca7086e38a84d9",
+                                "certificate_subject": "kigaeno.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "d6e2c226a0fc0ff5d2627d5dd8461372fb697fcd23d1def3aeca7086e38a84d9",
+                                "certificate_subject": "kigaeno.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "301 Moved Permanently"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200589Z",
@@ -88,7 +214,7 @@
                 {
                     "key": "1917466",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "unknown malware"
                     ],

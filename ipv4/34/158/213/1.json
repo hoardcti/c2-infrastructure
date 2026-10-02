@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "34.158.213.1",
     "first_seen": "2026-09-14T11:57:26.200557Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "unknown malware"
     ],
@@ -57,12 +57,94 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T01:37:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:37:30Z",
+                    "last_observed": "2026-10-02T01:37:30Z",
+                    "data": {
+                        "org": "Google LLC",
+                        "isp": "Google LLC",
+                        "asn": "AS15169",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "1.213.158.34.bc.googleusercontent.com",
+                            "skotics.com",
+                            "www.skotics.com"
+                        ],
+                        "domains": [
+                            "googleusercontent.com",
+                            "skotics.com"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Apache2 Ubuntu Default Page: It works"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "f87ddd54f2494e296ebbaf87c89079adc7def75aee2cabba100bbe47b2c69637",
+                                "certificate_subject": "skotics.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 4433,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "f87ddd54f2494e296ebbaf87c89079adc7def75aee2cabba100bbe47b2c69637",
+                                "certificate_subject": "skotics.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Apache2 Ubuntu Default Page: It works"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200557Z",
@@ -83,7 +165,7 @@
                 {
                     "key": "1917469",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "unknown malware"
                     ],

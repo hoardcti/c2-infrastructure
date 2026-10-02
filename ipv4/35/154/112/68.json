@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "35.154.112.68",
     "first_seen": "2026-09-14T11:57:26.200831Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "unknown malware"
     ],
@@ -55,12 +55,70 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T01:36:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:36:22Z",
+                    "last_observed": "2026-10-02T01:36:22Z",
+                    "data": {
+                        "org": "Amazon Data Services India",
+                        "isp": "Amazon.com, Inc.",
+                        "asn": "AS16509",
+                        "os": "Ubuntu",
+                        "country_code": "IN",
+                        "hostnames": [
+                            "crocs.sliceit.com",
+                            "ec2-35-154-112-68.ap-south-1.compute.amazonaws.com"
+                        ],
+                        "domains": [
+                            "amazonaws.com",
+                            "sliceit.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.28.3",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "c2",
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "5a4127922fbea004895491eb15b9def4970eb2668eb9b614c648587938d88fca",
+                                "certificate_subject": "crocs.sliceit.com",
+                                "certificate_issuer": "YE1"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200831Z",
@@ -81,7 +139,7 @@
                 {
                     "key": "1917434",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "unknown malware"
                     ],

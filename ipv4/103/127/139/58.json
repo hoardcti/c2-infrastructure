@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "103.127.139.58",
     "first_seen": "2026-09-14T11:57:26.200622Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "unknown malware"
     ],
@@ -70,12 +70,130 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T01:37:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:37:16Z",
+                    "last_observed": "2026-10-02T01:37:16Z",
+                    "data": {
+                        "org": "PT Biznet Gio Nusantara",
+                        "isp": "PT Biznet Gio Nusantara",
+                        "asn": "AS133800",
+                        "os": null,
+                        "country_code": "ID",
+                        "hostnames": [
+                            "dashboard.ayana-hospitality.com",
+                            "ip-58-139-127-103.wjv-1.biznetg.io",
+                            "mail.ayana-hospitality.com"
+                        ],
+                        "domains": [
+                            "ayana-hospitality.com",
+                            "biznetg.io"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "open-dir",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "a011f918441ff2508ad12b7b9117f169421197c97e171e41e225a7136a06fd0e",
+                                "certificate_subject": "mail.ayana-hospitality.com",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 465,
+                                "transport": "tcp",
+                                "jarm": "29d29d15d29d29d00042d42d0000000b7957bea5dccaf2976e02aac6e2963a",
+                                "certificate_sha256": "a011f918441ff2508ad12b7b9117f169421197c97e171e41e225a7136a06fd0e",
+                                "certificate_subject": "mail.ayana-hospitality.com",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 587,
+                                "transport": "tcp",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "a011f918441ff2508ad12b7b9117f169421197c97e171e41e225a7136a06fd0e",
+                                "certificate_subject": "mail.ayana-hospitality.com",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 3100,
+                                "transport": "tcp",
+                                "http_title": "GoPhish Analyzer — Campaign Dashboard"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "52729a178433444ca3fcb133a119d7556d5b367f602759689d2661ce745fc5a3",
+                                "certificate_subject": "mail.ayana-hospitality.com",
+                                "certificate_issuer": "R12"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Vulnerability Report Generator"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.29.5",
+                                "tags": [
+                                    "eol-product",
+                                    "open-dir"
+                                ],
+                                "http_title": "Index of /",
+                                "jarm": "21d19d00021d21d00042d43d0000005ad20eceaf7f71ae0887d2ff117bf97f",
+                                "certificate_sha256": "52729a178433444ca3fcb133a119d7556d5b367f602759689d2661ce745fc5a3",
+                                "certificate_subject": "mail.ayana-hospitality.com",
+                                "certificate_issuer": "R12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200622Z",
@@ -96,7 +214,7 @@
                 {
                     "key": "1917462",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "unknown malware"
                     ],

@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "41.231.54.240",
     "first_seen": "2026-09-14T11:57:26.200795Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "unknown malware"
     ],
@@ -58,12 +58,71 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T01:36:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:36:30Z",
+                    "last_observed": "2026-10-02T01:36:30Z",
+                    "data": {
+                        "org": "ATI - Agence Tunisienne Internet",
+                        "isp": "STE SAFOZI - STE SAFOZI",
+                        "asn": "AS329268",
+                        "os": null,
+                        "country_code": "TN",
+                        "hostnames": [
+                            "attjaribank.com.tn"
+                        ],
+                        "domains": [
+                            "attjaribank.com.tn"
+                        ],
+                        "tags": [
+                            "c2",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u10"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.22.1",
+                                "tags": [
+                                    "eol-product"
+                                ]
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00043d28d28d43dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "657dfd6eb8e1e666ca1af9a5216751db2ffbea857014ded9b8d370c6f1e3f07a",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200795Z",
@@ -84,7 +143,7 @@
                 {
                     "key": "1917439",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "unknown malware"
                     ],

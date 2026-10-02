@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "65.21.185.111",
     "first_seen": "2026-09-14T11:57:26.200853Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "unknown malware"
     ],
@@ -66,12 +66,113 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T01:36:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:36:16Z",
+                    "last_observed": "2026-10-02T01:36:16Z",
+                    "data": {
+                        "org": "Hetzner Online GmbH",
+                        "isp": "Hetzner Online GmbH",
+                        "asn": "AS24940",
+                        "os": "Ubuntu",
+                        "country_code": "FI",
+                        "hostnames": [
+                            "api.lbcbolivia.com",
+                            "static.111.185.21.65.clients.your-server.de"
+                        ],
+                        "domains": [
+                            "lbcbolivia.com",
+                            "your-server.de"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 81,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Laravel",
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "4f68c277ab5e1ae4108ccdf641472f51202c15bbee4b93ff269280ec087de5da",
+                                "certificate_subject": "api.lbcbolivia.com",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 3000,
+                                "transport": "tcp",
+                                "http_title": "Repuestos Car Circuit"
+                            },
+                            {
+                                "port": 3001,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                                "certificate_sha256": "caf8590d37579e76a904b6aa0ac46fffbc9a0f4e3791fce3af62922c1a7bbea7",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 5201,
+                                "transport": "tcp",
+                                "product": "JD-GUI Java decompiler",
+                                "version": "0.3.3"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "phpMyAdmin"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200853Z",
@@ -92,7 +193,7 @@
                 {
                     "key": "1917431",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "unknown malware"
                     ],

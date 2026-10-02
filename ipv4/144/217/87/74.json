@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "144.217.87.74",
     "first_seen": "2026-09-14T11:57:26.200629Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "unknown malware"
     ],
@@ -56,12 +56,76 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T01:37:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:37:14Z",
+                    "last_observed": "2026-10-02T01:37:14Z",
+                    "data": {
+                        "org": "OVH Hosting, Inc.",
+                        "isp": "OVH SAS",
+                        "asn": "AS16276",
+                        "os": null,
+                        "country_code": "CA",
+                        "hostnames": [
+                            "pyrsgob.com",
+                            "vps-467a57eb.vps.ovh.ca"
+                        ],
+                        "domains": [
+                            "ovh.ca",
+                            "pyrsgob.com"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.2p1 Ubuntu 2ubuntu3.6"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.28.3",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "854a8cc78d51452b0658f14ed581f2f8d92bc525d27b5c7020729c4dac1ae3d0",
+                                "certificate_subject": "pyrsgob.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "854a8cc78d51452b0658f14ed581f2f8d92bc525d27b5c7020729c4dac1ae3d0",
+                                "certificate_subject": "pyrsgob.com",
+                                "certificate_issuer": "YE2"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200629Z",
@@ -82,7 +146,7 @@
                 {
                     "key": "1917461",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "unknown malware"
                     ],

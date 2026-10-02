@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "137.184.94.30",
     "first_seen": "2026-09-14T11:57:26.200868Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "unknown malware"
     ],
@@ -119,12 +119,142 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T01:36:12Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:36:12Z",
+                    "last_observed": "2026-10-02T01:36:12Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "itw-buk.com"
+                        ],
+                        "domains": [
+                            "itw-buk.com"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [
+                            "CVE-2006-20001",
+                            "CVE-2007-4723",
+                            "CVE-2009-0796",
+                            "CVE-2009-2299",
+                            "CVE-2011-1176",
+                            "CVE-2011-2688",
+                            "CVE-2012-3526",
+                            "CVE-2012-4001",
+                            "CVE-2012-4360",
+                            "CVE-2013-0941",
+                            "CVE-2013-0942",
+                            "CVE-2013-2765",
+                            "CVE-2013-4365",
+                            "CVE-2022-36760",
+                            "CVE-2022-37436",
+                            "CVE-2023-25690",
+                            "CVE-2023-27522",
+                            "CVE-2023-31122",
+                            "CVE-2023-38709",
+                            "CVE-2023-45802",
+                            "CVE-2024-24795",
+                            "CVE-2024-27316",
+                            "CVE-2024-38472",
+                            "CVE-2024-38473",
+                            "CVE-2024-38474",
+                            "CVE-2024-38475",
+                            "CVE-2024-38476",
+                            "CVE-2024-38477",
+                            "CVE-2024-39573",
+                            "CVE-2024-40898",
+                            "CVE-2024-42516",
+                            "CVE-2024-43204",
+                            "CVE-2024-43394",
+                            "CVE-2024-47252",
+                            "CVE-2025-23048",
+                            "CVE-2025-49630",
+                            "CVE-2025-49812",
+                            "CVE-2025-53020",
+                            "CVE-2025-55753",
+                            "CVE-2025-58098",
+                            "CVE-2025-59775",
+                            "CVE-2025-65082",
+                            "CVE-2025-66200",
+                            "CVE-2026-24072",
+                            "CVE-2026-28780",
+                            "CVE-2026-29167",
+                            "CVE-2026-29168",
+                            "CVE-2026-29169",
+                            "CVE-2026-29170",
+                            "CVE-2026-33006",
+                            "CVE-2026-33007",
+                            "CVE-2026-33523",
+                            "CVE-2026-33857",
+                            "CVE-2026-34032",
+                            "CVE-2026-34059",
+                            "CVE-2026-34355",
+                            "CVE-2026-34356",
+                            "CVE-2026-42535",
+                            "CVE-2026-42536",
+                            "CVE-2026-43951",
+                            "CVE-2026-44119",
+                            "CVE-2026-44185",
+                            "CVE-2026-44186",
+                            "CVE-2026-44631",
+                            "CVE-2026-49975"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "version": "2.4.54",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "404 Not Found",
+                                "jarm": "40d40d40d00000000043d43d00043d6aff5ab0f4fc31897186312c9e639319",
+                                "certificate_sha256": "61f30493ebbdeaa83454cf812c2d86729fdfbbe7b8ac9777c714e0ce985dd67d",
+                                "certificate_subject": "itw-buk.com",
+                                "certificate_issuer": "E7"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "40d40d40d00000000043d43d00043d6aff5ab0f4fc31897186312c9e639319",
+                                "certificate_sha256": "61f30493ebbdeaa83454cf812c2d86729fdfbbe7b8ac9777c714e0ce985dd67d",
+                                "certificate_subject": "itw-buk.com",
+                                "certificate_issuer": "E7"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200868Z",
@@ -145,7 +275,7 @@
                 {
                     "key": "1917429",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "unknown malware"
                     ],

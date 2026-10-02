@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "178.162.245.155",
     "first_seen": "2026-09-14T11:57:26.200743Z",
-    "last_seen": "2026-10-01T21:41:09Z",
+    "last_seen": "2026-10-02T01:26:28Z",
     "flags": [
         "unknown malware"
     ],
@@ -50,12 +50,55 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T01:36:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T01:36:44Z",
+                    "last_observed": "2026-10-02T01:36:44Z",
+                    "data": {
+                        "org": "Leaseweb Deutschland GmbH",
+                        "isp": "Leaseweb Deutschland GmbH",
+                        "asn": "AS28753",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.13"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "Gophish - Login"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-01T12:19:58Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-01T21:41:09Z",
+            "last_checked": "2026-10-02T01:26:28Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200743Z",
@@ -76,7 +119,7 @@
                 {
                     "key": "1917446",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-01T21:41:09Z",
+                    "last_observed": "2026-10-02T01:26:28Z",
                     "flags": [
                         "unknown malware"
                     ],
