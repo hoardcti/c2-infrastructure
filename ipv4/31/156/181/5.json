@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "31.156.181.5",
     "first_seen": "2026-09-14T11:57:26.199519Z",
-    "last_seen": "2026-10-02T15:34:42Z",
+    "last_seen": "2026-10-02T20:31:11Z",
     "flags": [
         "brute ratel c4"
     ],
@@ -53,12 +53,63 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T20:39:06Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T20:39:06Z",
+                    "last_observed": "2026-10-02T20:39:06Z",
+                    "data": {
+                        "org": "Vodafone Italia S.p.A.",
+                        "isp": "Vodafone Italia S.p.A.",
+                        "asn": "AS30722",
+                        "os": null,
+                        "country_code": "IT",
+                        "hostnames": [
+                            "francodp.dyndns.tv",
+                            "net-31-156-181-5.cust.vodafonedsl.it"
+                        ],
+                        "domains": [
+                            "dyndns.tv",
+                            "vodafonedsl.it"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "http_title": "Homepage"
+                            },
+                            {
+                                "port": 3478,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 9002,
+                                "transport": "tcp",
+                                "product": "Brute Ratel C4",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "29d29d00029d29d00042d42d000000591965a32830c32b3ad57d4bfd247359",
+                                "certificate_sha256": "1ce0f49a47e4c2dc405b0b9f41896e7f0a0625d4048925a69adf1a776d9d35b5",
+                                "certificate_subject": "francodp.dyndns.tv",
+                                "certificate_issuer": "R12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-02T15:34:49Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T15:34:42Z",
+            "last_checked": "2026-10-02T20:31:11Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.199519Z",
@@ -79,7 +130,7 @@
                 {
                     "key": "1917599",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T15:34:42Z",
+                    "last_observed": "2026-10-02T20:31:11Z",
                     "flags": [
                         "brute ratel c4"
                     ],

@@ -7,6 +7,43 @@
         "unknown malware"
     ],
     "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-02T20:33:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T20:33:15Z",
+                    "last_observed": "2026-10-02T20:33:15Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            443,
+                            8443
+                        ],
+                        "hostnames": [
+                            "aolmailers.com",
+                            "static.179.165.99.88.clients.your-server.de",
+                            "www.aolmailers.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.24.0",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "c2",
+                            "eol-product",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
         "ipinfo": {
             "last_checked": "2026-10-01T13:10:10Z",
             "observations": [

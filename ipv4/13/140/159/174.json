@@ -7,6 +7,52 @@
         "unknown malware"
     ],
     "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-02T20:31:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T20:31:23Z",
+                    "last_observed": "2026-10-02T20:31:23Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            25,
+                            80,
+                            110,
+                            143,
+                            443,
+                            465,
+                            587,
+                            993,
+                            995,
+                            8080,
+                            8443,
+                            9443
+                        ],
+                        "hostnames": [
+                            "go.zinidrosi.lv",
+                            "mail.zinidrosi.lv"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx",
+                            "cpe:/a:f5:nginx:1.24.0",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "c2",
+                            "eol-product",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
         "ipinfo": {
             "last_checked": "2026-10-01T13:09:48Z",
             "observations": [

@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "128.90.122.253",
     "first_seen": "2026-09-15T16:23:27.093527Z",
-    "last_seen": "2026-10-02T15:34:42Z",
+    "last_seen": "2026-10-02T20:31:11Z",
     "flags": [
         "remcos"
     ],
@@ -116,7 +116,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T15:34:42Z",
+            "last_checked": "2026-10-02T20:31:11Z",
             "observations": [
                 {
                     "first_observed": "2026-09-15T16:23:27.093527Z",
@@ -137,7 +137,7 @@
                 {
                     "key": "1920408",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T15:34:42Z",
+                    "last_observed": "2026-10-02T20:31:11Z",
                     "flags": [
                         "remcos"
                     ],
@@ -162,6 +162,69 @@
         "urlhaus": {
             "last_checked": "2026-10-02T08:14:08Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-02T20:43:52Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T20:43:52Z",
+                    "last_observed": "2026-10-02T20:43:52Z",
+                    "data": {
+                        "as_owner": "Paradise Networks LLC",
+                        "asn": 40861,
+                        "network": "128.90.122.0/23",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 2,
+                            "undetected": 33,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

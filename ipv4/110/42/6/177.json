@@ -7,6 +7,57 @@
         "unknown malware"
     ],
     "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-02T20:33:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T20:33:05Z",
+                    "last_observed": "2026-10-02T20:33:05Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            25,
+                            110,
+                            143,
+                            443,
+                            465,
+                            587,
+                            993,
+                            995,
+                            3333,
+                            8080,
+                            8083,
+                            8085,
+                            8086,
+                            8443
+                        ],
+                        "hostnames": [
+                            "mail.towngas.net.cn",
+                            "towngas.net.cn"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.18.0",
+                            "cpe:/a:f5:nginx:1.24.0",
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "c2",
+                            "eol-product",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
         "ipinfo": {
             "last_checked": "2026-10-01T13:10:08Z",
             "observations": [

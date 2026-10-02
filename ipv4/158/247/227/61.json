@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "158.247.227.61",
     "first_seen": "2026-09-15T16:23:27.093727Z",
-    "last_seen": "2026-10-02T15:34:42Z",
+    "last_seen": "2026-10-02T20:31:11Z",
     "flags": [
         "aisuru"
     ],
@@ -102,7 +102,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T15:34:42Z",
+            "last_checked": "2026-10-02T20:31:11Z",
             "observations": [
                 {
                     "first_observed": "2026-09-15T16:23:27.093727Z",
@@ -123,7 +123,7 @@
                 {
                     "key": "1920341",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T15:34:42Z",
+                    "last_observed": "2026-10-02T20:31:11Z",
                     "flags": [
                         "aisuru"
                     ],
@@ -147,6 +147,70 @@
         "urlhaus": {
             "last_checked": "2026-10-02T08:13:52Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-02T20:41:52Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T20:41:52Z",
+                    "last_observed": "2026-10-02T20:41:52Z",
+                    "data": {
+                        "as_owner": "The Constant Company, LLC",
+                        "asn": 20473,
+                        "network": "158.247.192.0/18",
+                        "country": "KR",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 1,
+                            "undetected": 33,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "2ad2ad16d2ad2ad00042d42d000000df133019600a83abfb096ff3e86cd79d",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

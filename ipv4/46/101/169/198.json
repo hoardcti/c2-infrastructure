@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "46.101.169.198",
     "first_seen": "2026-09-15T11:12:50.50518Z",
-    "last_seen": "2026-10-02T15:34:42Z",
+    "last_seen": "2026-10-02T20:31:11Z",
     "flags": [
         "aisuru"
     ],
@@ -80,7 +80,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T15:34:42Z",
+            "last_checked": "2026-10-02T20:31:11Z",
             "observations": [
                 {
                     "first_observed": "2026-09-15T11:12:50.50518Z",
@@ -101,7 +101,7 @@
                 {
                     "key": "1920461",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T15:34:42Z",
+                    "last_observed": "2026-10-02T20:31:11Z",
                     "flags": [
                         "aisuru"
                     ],
@@ -123,7 +123,7 @@
                 {
                     "key": "1918293",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T15:34:42Z",
+                    "last_observed": "2026-10-02T20:31:11Z",
                     "flags": [
                         "aisuru"
                     ],
@@ -147,6 +147,74 @@
         "urlhaus": {
             "last_checked": "2026-10-02T15:36:55Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-02T20:45:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T20:45:22Z",
+                    "last_observed": "2026-10-02T20:45:22Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "46.101.0.0/16",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 6,
+                            "suspicious": 1,
+                            "undetected": 34,
+                            "harmless": 50,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

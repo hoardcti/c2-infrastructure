@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "69.40.43.85",
     "first_seen": "2026-09-14T11:57:26.199494Z",
-    "last_seen": "2026-10-02T15:34:42Z",
+    "last_seen": "2026-10-02T20:31:11Z",
     "flags": [
         "darkcomet"
     ],
@@ -51,12 +51,61 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T20:39:12Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T20:39:12Z",
+                    "last_observed": "2026-10-02T20:39:12Z",
+                    "data": {
+                        "org": "Windstream Communications LLC",
+                        "isp": "Windstream Communications LLC",
+                        "asn": "AS7029",
+                        "os": "Windows (build 10.0.19041)",
+                        "country_code": "US",
+                        "hostnames": [
+                            "h85.43.40.69.dynamic.ip.windstream.net"
+                        ],
+                        "domains": [
+                            "windstream.net"
+                        ],
+                        "tags": [
+                            "malware",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 1604,
+                                "transport": "tcp",
+                                "product": "DarkComet trojan",
+                                "tags": [
+                                    "malware"
+                                ]
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "046cfd0e04e5ff8208f7f7d386236904528bbf334d11e06969977145e11659f3",
+                                "certificate_subject": "DESKTOP-K804RRE",
+                                "certificate_issuer": "DESKTOP-K804RRE"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-02T15:34:49Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T15:34:42Z",
+            "last_checked": "2026-10-02T20:31:11Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.199494Z",
@@ -77,7 +126,7 @@
                 {
                     "key": "1917602",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T15:34:42Z",
+                    "last_observed": "2026-10-02T20:31:11Z",
                     "flags": [
                         "darkcomet"
                     ],

@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "141.164.55.101",
     "first_seen": "2026-09-15T16:23:27.093715Z",
-    "last_seen": "2026-10-02T15:34:42Z",
+    "last_seen": "2026-10-02T20:31:11Z",
     "flags": [
         "aisuru"
     ],
@@ -110,7 +110,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T15:34:42Z",
+            "last_checked": "2026-10-02T20:31:11Z",
             "observations": [
                 {
                     "first_observed": "2026-09-15T16:23:27.093715Z",
@@ -131,7 +131,7 @@
                 {
                     "key": "1920425",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T15:34:42Z",
+                    "last_observed": "2026-10-02T20:31:11Z",
                     "flags": [
                         "aisuru"
                     ],
@@ -153,7 +153,7 @@
                 {
                     "key": "1920342",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T15:34:42Z",
+                    "last_observed": "2026-10-02T20:31:11Z",
                     "flags": [
                         "aisuru"
                     ],
@@ -177,6 +177,75 @@
         "urlhaus": {
             "last_checked": "2026-10-02T08:13:54Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-02T20:42:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T20:42:07Z",
+                    "last_observed": "2026-10-02T20:42:07Z",
+                    "data": {
+                        "as_owner": "The Constant Company, LLC",
+                        "asn": 20473,
+                        "network": "141.164.32.0/19",
+                        "country": "KR",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 2,
+                            "undetected": 33,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "2ad2ad16d2ad2ad00042d42d000000df133019600a83abfb096ff3e86cd79d",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

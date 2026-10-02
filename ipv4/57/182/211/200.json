@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "57.182.211.200",
     "first_seen": "2026-09-14T11:57:26.199527Z",
-    "last_seen": "2026-10-02T15:34:42Z",
+    "last_seen": "2026-10-02T20:31:11Z",
     "flags": [
         "brute ratel c4"
     ],
@@ -52,12 +52,65 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T20:39:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T20:39:04Z",
+                    "last_observed": "2026-10-02T20:39:04Z",
+                    "data": {
+                        "org": "Amazon Data Services Japan",
+                        "isp": "Amazon.com, Inc.",
+                        "asn": "AS16509",
+                        "os": null,
+                        "country_code": "JP",
+                        "hostnames": [
+                            "ec2-57-182-211-200.ap-northeast-1.compute.amazonaws.com",
+                            "ts.majorflow.jp"
+                        ],
+                        "domains": [
+                            "amazonaws.com",
+                            "majorflow.jp"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Brute Ratel C4",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "AWS ELB",
+                                "version": "2.0",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "29d29d00029d29d00029d29d29d29da8f16e8f0a21d89b06fef5080cbd1b2a",
+                                "certificate_sha256": "a3f5ed9b037cb917537d1dbae4768980c9e37eaef6c5ea79eb7ca5da412ef202",
+                                "certificate_subject": "ts.majorflow.jp",
+                                "certificate_issuer": "Amazon RSA 2048 M04"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-02T15:34:49Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T15:34:42Z",
+            "last_checked": "2026-10-02T20:31:11Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.199527Z",
@@ -78,7 +131,7 @@
                 {
                     "key": "1917598",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T15:34:42Z",
+                    "last_observed": "2026-10-02T20:31:11Z",
                     "flags": [
                         "brute ratel c4"
                     ],
