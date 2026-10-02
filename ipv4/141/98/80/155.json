@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "141.98.80.155",
     "first_seen": "2026-09-14T11:57:26.199665Z",
-    "last_seen": "2026-10-02T08:11:22Z",
+    "last_seen": "2026-10-02T15:34:42Z",
     "flags": [
         "sectoprat"
     ],
@@ -52,12 +52,73 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-02T15:44:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T15:44:07Z",
+                    "last_observed": "2026-10-02T15:44:07Z",
+                    "data": {
+                        "org": "NForce Entertainment B.V.",
+                        "isp": "NForce Entertainment B.V.",
+                        "asn": "AS43350",
+                        "os": null,
+                        "country_code": "NL",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "de4e077fb1a8b57cab042bb42140fcc90802f2766168cd332b357c42e15fd8fe",
+                                "certificate_subject": "WIN-VJ7OIOP3FBP",
+                                "certificate_issuer": "WIN-VJ7OIOP3FBP"
+                            },
+                            {
+                                "port": 5000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            },
+                            {
+                                "port": 9000,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
-            "last_checked": "2026-10-01T12:19:58Z",
+            "last_checked": "2026-10-02T15:34:49Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T08:11:22Z",
+            "last_checked": "2026-10-02T15:34:42Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.199665Z",
@@ -78,7 +139,7 @@
                 {
                     "key": "1917584",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T08:11:22Z",
+                    "last_observed": "2026-10-02T15:34:42Z",
                     "flags": [
                         "sectoprat"
                     ],

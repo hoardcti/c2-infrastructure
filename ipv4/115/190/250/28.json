@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "115.190.250.28",
     "first_seen": "2026-09-14T11:57:26.201673Z",
-    "last_seen": "2026-10-02T08:11:22Z",
+    "last_seen": "2026-10-02T15:34:42Z",
     "flags": [
         "cobalt strike"
     ],
@@ -100,6 +100,89 @@
                 }
             ]
         },
+        "otx": {
+            "last_checked": "2026-10-02T15:40:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T15:40:07Z",
+                    "last_observed": "2026-10-02T15:40:07Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "CN",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "69a111fc5914b71e2d8666e0",
+                                "name": "URLHaus data - 26-02-2026 (Part 1)",
+                                "created": "2026-02-27T03:39:40.483Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "32-bit",
+                                    "AsyncRAT",
+                                    "ClearFake",
+                                    "ClickFix",
+                                    "CobaltStrike",
+                                    "DattoRMM",
+                                    "Encoded",
+                                    "GoToResolve",
+                                    "GootLoader",
+                                    "MassLogger",
+                                    "Mozi",
+                                    "NanoCore",
+                                    "Password: lunex",
+                                    "PureCrypter",
+                                    "QuasarRAT",
+                                    "RemcosRAT",
+                                    "SmartLoader",
+                                    "SnakeKeylogger",
+                                    "TrustConnect",
+                                    "USA",
+                                    "VIPKeylogger",
+                                    "Vidar",
+                                    "archive",
+                                    "arm",
+                                    "ascii",
+                                    "backdoor",
+                                    "bat",
+                                    "botnetdomain",
+                                    "c2-monitor-auto",
+                                    "censys",
+                                    "compressed",
+                                    "connectwise",
+                                    "dropped-by-amadey",
+                                    "elf",
+                                    "exe",
+                                    "fbf543",
+                                    "gafgyt",
+                                    "geofenced",
+                                    "hajime",
+                                    "hta",
+                                    "jpg-base64-loader",
+                                    "js",
+                                    "miner",
+                                    "mips",
+                                    "mirai",
+                                    "msi",
+                                    "opendir",
+                                    "powershell",
+                                    "ps1",
+                                    "pw-lunex",
+                                    "rat",
+                                    "remcos",
+                                    "sh",
+                                    "sshdkit",
+                                    "ua-wget",
+                                    "xworm",
+                                    "zip"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "shodan": {
             "last_checked": "2026-10-01T16:22:49Z",
             "observations": [
@@ -174,11 +257,11 @@
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-01T12:19:58Z",
+            "last_checked": "2026-10-02T15:34:49Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T08:11:22Z",
+            "last_checked": "2026-10-02T15:34:42Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.201673Z",
@@ -199,7 +282,7 @@
                 {
                     "key": "1917334",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T08:11:22Z",
+                    "last_observed": "2026-10-02T15:34:42Z",
                     "flags": [
                         "cobalt strike"
                     ],
@@ -216,6 +299,37 @@
                             "CobaltStrike",
                             "c2",
                             "shodan"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-02T15:37:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-02T15:37:35Z",
+                    "last_observed": "2026-10-02T15:37:35Z",
+                    "data": {
+                        "urlhaus_reference": "https://urlhaus.abuse.ch/host/115.190.250.28/",
+                        "first_seen": "2026-02-26T17:17:04Z",
+                        "url_count": 1,
+                        "blacklists": {
+                            "spamhaus_dbl": "not listed",
+                            "surbl": "not listed"
+                        },
+                        "urls": [
+                            {
+                                "id": "3786364",
+                                "url": "http://115.190.250.28:5521/02.08.2022.exe",
+                                "status": "online",
+                                "date_added": "2026-02-26T17:17:16Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "CobaltStrike",
+                                    "censys"
+                                ]
+                            }
                         ]
                     }
                 }
