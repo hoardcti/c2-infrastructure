@@ -98,6 +98,93 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-03T23:45:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T23:45:37Z",
+                    "last_observed": "2026-10-03T23:45:37Z",
+                    "data": {
+                        "org": "Oracle Corporation",
+                        "isp": "Oracle Corporation",
+                        "asn": "AS31898",
+                        "os": null,
+                        "country_code": "BR",
+                        "hostnames": [
+                            "asterix.flsec.com.br"
+                        ],
+                        "domains": [
+                            "flsec.com.br"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!",
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "931181058d1f408ce74e97a9465d7e87bdf3c9fe69ea1b1cf814befabba343a0",
+                                "certificate_subject": "asterix.flsec.com.br",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                                "certificate_sha256": "931181058d1f408ce74e97a9465d7e87bdf3c9fe69ea1b1cf814befabba343a0",
+                                "certificate_subject": "asterix.flsec.com.br",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-03T17:07:15Z",
             "observations": []

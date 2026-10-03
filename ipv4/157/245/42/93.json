@@ -77,6 +77,187 @@
                 }
             ]
         },
+        "otx": {
+            "last_checked": "2026-10-03T23:41:58Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T23:41:58Z",
+                    "last_observed": "2026-10-03T23:41:58Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS14061 digitalocean  llc",
+                        "country_code": "GB",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "6a9867db16876a182420bd3b",
+                                "name": "Unknownmalware - IOCs Sep 2026",
+                                "created": "2026-09-02T18:15:55.432Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "IOC",
+                                    "RENIC",
+                                    "malware",
+                                    "unknownmalware"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-03T23:46:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T23:46:45Z",
+                    "last_observed": "2026-10-03T23:46:45Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": null,
+                        "country_code": "GB",
+                        "hostnames": [
+                            "api-nakiseorg.prunedge.net"
+                        ],
+                        "domains": [
+                            "prunedge.net"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "compromised",
+                            "database",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "jarm": "2ad2ad0002ad2ad00042d42d0000005d86ccb1a0567e012264097a0315d7a7",
+                                "certificate_sha256": "8d8631d96496e00137170c87cf0c814a695379fa9525f7f1c4d7e47368735dca",
+                                "certificate_subject": "api-nakiseorg.prunedge.net",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 3001,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 3002,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Prunedge Command Center"
+                            },
+                            {
+                                "port": 5000,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 5432,
+                                "transport": "tcp",
+                                "product": "PostgreSQL",
+                                "version": "9.6.0 or later",
+                                "tags": [
+                                    "cloud",
+                                    "database"
+                                ]
+                            },
+                            {
+                                "port": 6379,
+                                "transport": "tcp",
+                                "product": "Redis key-value store",
+                                "version": "7.4.8",
+                                "tags": [
+                                    "cloud",
+                                    "compromised"
+                                ]
+                            },
+                            {
+                                "port": 8000,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 8085,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "cAdvisor - /"
+                            },
+                            {
+                                "port": 8089,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Locust"
+                            },
+                            {
+                                "port": 9100,
+                                "transport": "tcp",
+                                "product": "Prometheus Node Exporter",
+                                "version": "1.10.2",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-03T17:07:15Z",
             "observations": []

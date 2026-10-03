@@ -105,6 +105,194 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-03T23:45:57Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T23:45:57Z",
+                    "last_observed": "2026-10-03T23:45:57Z",
+                    "data": {
+                        "org": "Contabo GmbH",
+                        "isp": "Contabo GmbH",
+                        "asn": "AS51167",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "employeeportal.cloud",
+                            "helpdeskportal.cloud",
+                            "mail.helpdeskportal.cloud",
+                            "tkiil.com",
+                            "vmi3089992.contaboserver.net"
+                        ],
+                        "domains": [
+                            "contaboserver.net",
+                            "employeeportal.cloud",
+                            "helpdeskportal.cloud",
+                            "tkiil.com"
+                        ],
+                        "tags": [
+                            "database",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 21,
+                                "transport": "tcp",
+                                "product": "Pure-FTPd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "30703df18180acaa6caf19aabc011eb9882c46449c25eff147a0a7565e112e83",
+                                "certificate_subject": "2a02:c207:2308:9992::1",
+                                "certificate_organisation": "BT-PANEL",
+                                "certificate_issuer": "2a02:c207:2308:9992::1"
+                            },
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "054d85d700a61ba92e4bd816dbacb065c86172e3dce44efdae83fc24fc00b45b",
+                                "certificate_subject": "vmi3089992.contaboserver.net",
+                                "certificate_issuer": "vmi3089992.contaboserver.net"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "Sorry, the website has been stopped"
+                            },
+                            {
+                                "port": 110,
+                                "transport": "tcp",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "bd450ce488ed724eff0a88ee7a5551d6a08548f760a815f3f5b299396c368455",
+                                "certificate_subject": "tkiil.com",
+                                "certificate_issuer": "R12"
+                            },
+                            {
+                                "port": 143,
+                                "transport": "tcp",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "bd450ce488ed724eff0a88ee7a5551d6a08548f760a815f3f5b299396c368455",
+                                "certificate_subject": "tkiil.com",
+                                "certificate_issuer": "R12"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "jarm": "2ad2ad0002ad2ad00042d42d00000000f78d2dc0ce6e5bbc5b8149a4872356",
+                                "certificate_sha256": "a5066089db0ae930b92a02c53bc2efa03789a21a114b84f3d730fce58fe0a41f",
+                                "certificate_subject": "employeeportal.cloud",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 465,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "07d19d1ad21d21d07c42d43d000000f50d155305214cf247147c43c0f1a823",
+                                "certificate_sha256": "054d85d700a61ba92e4bd816dbacb065c86172e3dce44efdae83fc24fc00b45b",
+                                "certificate_subject": "vmi3089992.contaboserver.net",
+                                "certificate_issuer": "vmi3089992.contaboserver.net"
+                            },
+                            {
+                                "port": 587,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "054d85d700a61ba92e4bd816dbacb065c86172e3dce44efdae83fc24fc00b45b",
+                                "certificate_subject": "vmi3089992.contaboserver.net",
+                                "certificate_issuer": "vmi3089992.contaboserver.net"
+                            },
+                            {
+                                "port": 887,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "302 Found"
+                            },
+                            {
+                                "port": 993,
+                                "transport": "tcp",
+                                "jarm": "07d3fd1ad21d21d00042d43d0000005aa9877b7a5d6a671d1e56af48dc9ce6",
+                                "certificate_sha256": "bd450ce488ed724eff0a88ee7a5551d6a08548f760a815f3f5b299396c368455",
+                                "certificate_subject": "tkiil.com",
+                                "certificate_issuer": "R12"
+                            },
+                            {
+                                "port": 995,
+                                "transport": "tcp",
+                                "jarm": "07d3fd1ad21d21d00042d43d0000005aa9877b7a5d6a671d1e56af48dc9ce6",
+                                "certificate_sha256": "bd450ce488ed724eff0a88ee7a5551d6a08548f760a815f3f5b299396c368455",
+                                "certificate_subject": "tkiil.com",
+                                "certificate_issuer": "R12"
+                            },
+                            {
+                                "port": 3306,
+                                "transport": "tcp",
+                                "product": "MariaDB",
+                                "tags": [
+                                    "database"
+                                ]
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "04596ee7098ff9df2f6a121d6c64277e8fd2c4f35546a4943e8b0cec3fe1758d",
+                                "certificate_subject": "helpdeskportal.cloud",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "04596ee7098ff9df2f6a121d6c64277e8fd2c4f35546a4943e8b0cec3fe1758d",
+                                "certificate_subject": "helpdeskportal.cloud",
+                                "certificate_issuer": "YR2"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-03T17:07:15Z",
             "observations": []

@@ -84,6 +84,71 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-03T23:45:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T23:45:21Z",
+                    "last_observed": "2026-10-03T23:45:21Z",
+                    "data": {
+                        "org": "Alibaba Cloud LLC",
+                        "isp": "Alibaba (US) Technology Co., Ltd.",
+                        "asn": "AS45102",
+                        "os": "Linux",
+                        "country_code": "US",
+                        "hostnames": [
+                            "savuyascas.sbs"
+                        ],
+                        "domains": [
+                            "savuyascas.sbs"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "28d28d28d00028d00042d42d00042d02cacad88cde684d16d82eeb4da1108c",
+                                "certificate_sha256": "7b614fc57f497c77ec423b886c7181af754953d535cdec43458b994f2ec4bdd3",
+                                "certificate_subject": "savuyascas.sbs",
+                                "certificate_issuer": "E6"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042de5fb3038104f457d92ba02e9311512c2",
+                                "certificate_sha256": "33dc87a7a114888d9e15fb4f664560efb15e51b86bb784d0a664a240c6a85e7c",
+                                "certificate_subject": "*.microsoft.com",
+                                "certificate_organisation": "Microsoft Corporation",
+                                "certificate_issuer": "*.microsoft.com"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-03T17:07:15Z",
             "observations": []

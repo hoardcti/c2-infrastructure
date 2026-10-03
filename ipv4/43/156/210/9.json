@@ -94,6 +94,77 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-03T23:45:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T23:45:53Z",
+                    "last_observed": "2026-10-03T23:45:53Z",
+                    "data": {
+                        "org": "Tencent Building, Kejizhongyi Avenue",
+                        "isp": "Tencent Building, Kejizhongyi Avenue",
+                        "asn": "AS132203",
+                        "os": null,
+                        "country_code": "SG",
+                        "hostnames": [
+                            "www.servyov.com"
+                        ],
+                        "domains": [
+                            "servyov.com"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.2p1 Ubuntu 2ubuntu3.2"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "93176196670df12f81ef119c9acb94b4f2f4a6dec570c28895d4284ec15bb647",
+                                "certificate_subject": "www.servyov.com",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 3000,
+                                "transport": "tcp",
+                                "http_title": "New API"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "93176196670df12f81ef119c9acb94b4f2f4a6dec570c28895d4284ec15bb647",
+                                "certificate_subject": "www.servyov.com",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 8089,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.28.3",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "钓鱼邮件攻击防范指南",
+                                "jarm": "1dd40d40d00040d00042d43d000000831b6af40378e2dd35eeac4e9311926e",
+                                "certificate_sha256": "93176196670df12f81ef119c9acb94b4f2f4a6dec570c28895d4284ec15bb647",
+                                "certificate_subject": "www.servyov.com",
+                                "certificate_issuer": "YE1"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-03T17:07:15Z",
             "observations": []

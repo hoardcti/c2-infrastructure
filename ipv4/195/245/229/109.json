@@ -91,6 +91,70 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-03T23:45:55Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T23:45:55Z",
+                    "last_observed": "2026-10-03T23:45:55Z",
+                    "data": {
+                        "org": "xTom GmbH",
+                        "isp": "xTom",
+                        "asn": "AS4785",
+                        "os": null,
+                        "country_code": "JP",
+                        "hostnames": [
+                            "java8.kdns.fr",
+                            "jp-one.wluozy.com"
+                        ],
+                        "domains": [
+                            "kdns.fr",
+                            "wluozy.com"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "3fd3fd00000000021c43d43d00043d628f8c030518e78719e927452ff2dae7",
+                                "certificate_sha256": "acfd12c89302190b43dcb4c5c63f504901ad0ef990727b277ca2e025275d387b",
+                                "certificate_subject": "CloudFlare Origin Certificate",
+                                "certificate_organisation": "CloudFlare, Inc."
+                            },
+                            {
+                                "port": 2083,
+                                "transport": "tcp",
+                                "jarm": "40d40d40d00040d00043d43d00043d3bef2bf79cd6719851e8198c1e8f9a14",
+                                "certificate_sha256": "d8845418e8c58191de1544e7317e66cc262431ae2a7dafa5ad1aa8628830ea47",
+                                "certificate_subject": "jp-one.wluozy.com",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 3000,
+                                "transport": "tcp",
+                                "http_title": "New API"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "6d47a7d175dff6987d2a7d456b291f03b9e96f1bf1afb94bc9b5af4d8ff84e09",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-03T17:07:15Z",
             "observations": []
