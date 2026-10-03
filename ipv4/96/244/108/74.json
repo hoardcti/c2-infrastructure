@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "96.244.108.74",
     "first_seen": "2026-09-14T11:57:26.201571Z",
-    "last_seen": "2026-10-03T00:17:15Z",
+    "last_seen": "2026-10-03T06:13:37Z",
     "flags": [
         "cobalt strike"
     ],
@@ -1936,7 +1936,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-03T00:17:15Z",
+            "last_checked": "2026-10-03T06:13:37Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.201571Z",
@@ -1957,7 +1957,7 @@
                 {
                     "key": "1917345",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-03T00:17:15Z",
+                    "last_observed": "2026-10-03T06:13:37Z",
                     "flags": [
                         "cobalt strike"
                     ],
@@ -1982,6 +1982,67 @@
         "urlhaus": {
             "last_checked": "2026-10-02T20:33:33Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-03T06:26:18Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T06:26:18Z",
+                    "last_observed": "2026-10-03T06:26:18Z",
+                    "data": {
+                        "as_owner": "Verizon Business",
+                        "asn": 701,
+                        "network": "96.244.96.0/19",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 1,
+                            "undetected": 35,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "29d29d00029d29d00029d29d29d29d1d1e5be8bec26b38ab0c0a1d49545aad",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

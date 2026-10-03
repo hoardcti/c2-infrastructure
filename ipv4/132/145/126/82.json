@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "132.145.126.82",
     "first_seen": "2026-09-14T11:57:26.201516Z",
-    "last_seen": "2026-10-03T00:17:15Z",
+    "last_seen": "2026-10-03T06:13:37Z",
     "flags": [
         "cobalt strike"
     ],
@@ -108,7 +108,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-03T00:17:15Z",
+            "last_checked": "2026-10-03T06:13:37Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.201516Z",
@@ -129,7 +129,7 @@
                 {
                     "key": "1917352",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-03T00:17:15Z",
+                    "last_observed": "2026-10-03T06:13:37Z",
                     "flags": [
                         "cobalt strike"
                     ],
@@ -154,6 +154,78 @@
         "urlhaus": {
             "last_checked": "2026-10-02T20:33:45Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-03T06:27:48Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T06:27:48Z",
+                    "last_observed": "2026-10-03T06:27:48Z",
+                    "data": {
+                        "as_owner": "Oracle Corporation",
+                        "asn": 31898,
+                        "network": "132.145.0.0/16",
+                        "country": "JP",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 1,
+                            "undetected": 34,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "3fd3fd00000000000043d43d00043dc3b2afa8a5ec09b510a8559aff7899fb",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 }
