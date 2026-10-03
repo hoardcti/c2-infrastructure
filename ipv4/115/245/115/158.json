@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "115.245.115.158",
     "first_seen": "2026-09-09T08:41:32.906138Z",
-    "last_seen": "2026-10-02T20:31:11Z",
+    "last_seen": "2026-10-03T00:17:15Z",
     "flags": [
         "quasar rat"
     ],
@@ -52,12 +52,79 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-03T00:25:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T00:25:07Z",
+                    "last_observed": "2026-10-03T00:25:07Z",
+                    "data": {
+                        "org": "Reliance Jio Infocomm Limited",
+                        "isp": "Reliance Jio Infocomm Limited",
+                        "asn": "AS55836",
+                        "os": null,
+                        "country_code": "IN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "self-signed",
+                            "vpn"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "vpn"
+                                ],
+                                "http_title": "Cyberoam",
+                                "jarm": "2ad2ad0002ad2ad0002ad2ad2ad2adce49238b62fc566f8bdb579566d23d07",
+                                "certificate_sha256": "245f123a4a98b2dbdf95e2c91cce86750210466a1348626ab08a05a31f78b451",
+                                "certificate_subject": "CyberoamApplianceCertificate_C02619125757",
+                                "certificate_organisation": "Cyberoam",
+                                "certificate_issuer": "Cyberoam Appliance CA_C02619125757"
+                            },
+                            {
+                                "port": 500,
+                                "transport": "udp",
+                                "tags": [
+                                    "vpn"
+                                ]
+                            },
+                            {
+                                "port": 1723,
+                                "transport": "tcp",
+                                "product": "PPTP",
+                                "tags": [
+                                    "vpn"
+                                ]
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "Quasar RAT",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad0002ad2ad2ad2add3b67dd3674d9af9dd91c1955a35d0e9",
+                                "certificate_sha256": "cbc9b7fc6fc3f9e51e1cf66f31194628ac20ba381138cf2f9dc4f0701240aa17",
+                                "certificate_subject": "Quasar Server CA",
+                                "certificate_issuer": "Quasar Server CA"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-02T15:34:49Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T20:31:11Z",
+            "last_checked": "2026-10-03T00:17:15Z",
             "observations": [
                 {
                     "first_observed": "2026-09-09T08:41:32.906138Z",
@@ -78,7 +145,7 @@
                 {
                     "key": "1905713",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T20:31:11Z",
+                    "last_observed": "2026-10-03T00:17:15Z",
                     "flags": [
                         "quasar rat"
                     ],

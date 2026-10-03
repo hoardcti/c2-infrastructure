@@ -1,0 +1,155 @@
+{
+    "schema_version": 2,
+    "ip": "128.90.113.45",
+    "first_seen": "2026-10-03T00:17:15Z",
+    "last_seen": "2026-10-03T00:17:15Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-03T00:20:09Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T00:20:09Z",
+                    "last_observed": "2026-10-03T00:20:09Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Commercial",
+                        "isp": "Unus, Inc.",
+                        "domain": "unusid.com",
+                        "country_code": "US",
+                        "hostnames": [
+                            "undefined.hostname.localhost"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-03T00:17:22Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-03T00:17:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T00:17:22Z",
+                    "last_observed": "2026-10-03T00:17:22Z",
+                    "data": {
+                        "asn": "AS40861",
+                        "as_name": "Paradise Networks LLC",
+                        "as_domain": "paradisenetworks.net",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-03T00:21:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T00:21:27Z",
+                    "last_observed": "2026-10-03T00:21:27Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS22363 powerhouse management  inc.",
+                        "country_code": "AR",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-03T00:24:46Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-03T00:17:22Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-03T00:17:15Z",
+            "observations": [
+                {
+                    "key": "1945620",
+                    "first_observed": "2026-10-03T00:17:15Z",
+                    "last_observed": "2026-10-03T00:17:15Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "128.90.113.45:3000",
+                        "port": 3000,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-02T20:44:37Z",
+                        "reference": null,
+                        "tags": [
+                            "Star-Baby-27",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-03T00:19:22Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-03T00:26:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T00:26:44Z",
+                    "last_observed": "2026-10-03T00:26:44Z",
+                    "data": {
+                        "as_owner": "Paradise Networks LLC",
+                        "asn": 40861,
+                        "network": "128.90.112.0/22",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 90,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

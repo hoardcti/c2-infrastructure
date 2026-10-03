@@ -2,11 +2,36 @@
     "schema_version": 2,
     "ip": "165.227.32.223",
     "first_seen": "2026-09-14T11:57:26.200221Z",
-    "last_seen": "2026-10-02T20:31:11Z",
+    "last_seen": "2026-10-03T00:17:15Z",
     "flags": [
         "sliver"
     ],
     "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-03T00:20:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T00:20:19Z",
+                    "last_observed": "2026-10-03T00:20:19Z",
+                    "data": {
+                        "abuse_confidence_score": 32,
+                        "total_reports": 12,
+                        "distinct_reporters": 12,
+                        "last_reported_at": "2026-09-09T13:47:02Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "DigitalOcean, LLC",
+                        "domain": "digitalocean.com",
+                        "country_code": "CA",
+                        "hostnames": [
+                            "scale-test-1778112027292-9c50e734.mongo.ondigitalocean.com"
+                        ]
+                    }
+                }
+            ]
+        },
         "internetdb": {
             "last_checked": "2026-10-01T13:44:58Z",
             "observations": [
@@ -60,6 +85,22 @@
                 }
             ]
         },
+        "otx": {
+            "last_checked": "2026-10-03T00:21:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T00:21:31Z",
+                    "last_observed": "2026-10-03T00:21:31Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS14061 digitalocean  llc",
+                        "country_code": "CA",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
         "shodan": {
             "last_error": {
                 "occurred_at": "2026-10-02T08:21:01Z",
@@ -72,7 +113,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T20:31:11Z",
+            "last_checked": "2026-10-03T00:17:15Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200221Z",
@@ -93,7 +134,7 @@
                 {
                     "key": "1917512",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T20:31:11Z",
+                    "last_observed": "2026-10-03T00:17:15Z",
                     "flags": [
                         "sliver"
                     ],

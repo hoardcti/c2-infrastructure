@@ -59,6 +59,86 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-03T00:25:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T00:25:25Z",
+                    "last_observed": "2026-10-03T00:25:25Z",
+                    "data": {
+                        "org": "TECHOFF SRV LIMITED",
+                        "isp": "DMZHOST TECHOFF SRV LIMITED",
+                        "asn": "AS48090",
+                        "os": null,
+                        "country_code": "NL",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 137,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 139,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "1a28800641960c4e1d98b6035b7844cf88fc5230a9e67e0bd3b28a252811e423",
+                                "certificate_subject": "E02S05",
+                                "certificate_issuer": "E02S05"
+                            },
+                            {
+                                "port": 3790,
+                                "transport": "tcp",
+                                "product": "Metasploit",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "Metasploit",
+                                "jarm": "29d29d00029d29d00042d42d00000000f78d2dc0ce6e5bbc5b8149a4872356",
+                                "certificate_sha256": "e76d448a641b906ccb5a97d61432a1d98dc380ad30da3d63f2222d3dfd4704a9",
+                                "certificate_subject": "93.123.109.79",
+                                "certificate_organisation": "Rapid7",
+                                "certificate_issuer": "MetasploitSelfSignedCA"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            },
+                            {
+                                "port": 8000,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-02T15:34:49Z",
             "observations": [

@@ -2,11 +2,34 @@
     "schema_version": 2,
     "ip": "109.236.50.145",
     "first_seen": "2026-09-14T11:57:26.200105Z",
-    "last_seen": "2026-10-02T20:31:11Z",
+    "last_seen": "2026-10-03T00:17:15Z",
     "flags": [
         "sliver"
     ],
     "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-03T00:20:49Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T00:20:49Z",
+                    "last_observed": "2026-10-03T00:20:49Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-09-03T03:56:45Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "HOSTING DUNYAM BILISIM TEKNOLOJILERI TICARET LIMITED SIRKETI",
+                        "domain": "hostingdunyam.com.tr",
+                        "country_code": "NL",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
         "internetdb": {
             "last_checked": "2026-10-01T16:13:09Z",
             "observations": [
@@ -55,6 +78,44 @@
                 }
             ]
         },
+        "otx": {
+            "last_checked": "2026-10-03T00:22:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T00:22:01Z",
+                    "last_observed": "2026-10-03T00:22:01Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS211237 fortr telekomunikasyon san. ve tic. ltd. sti.",
+                        "country_code": "TR",
+                        "pulse_count": 2,
+                        "pulses": [
+                            {
+                                "id": "6a985d39fcec8298d8c1de0f",
+                                "name": "BEACON - IOCs Sep 2026",
+                                "created": "2026-09-02T17:30:33.108Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "IOC",
+                                    "RENIC",
+                                    "beacon",
+                                    "malware"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a9b91392fcfe43cec091305",
+                                "name": "Malware Filter - Botnet List - 04-09-2026 (Part 2)",
+                                "created": "2026-09-05T03:49:13.139Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "shodan": {
             "last_error": {
                 "occurred_at": "2026-10-02T08:21:31Z",
@@ -67,7 +128,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-02T20:31:11Z",
+            "last_checked": "2026-10-03T00:17:15Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200105Z",
@@ -88,7 +149,7 @@
                 {
                     "key": "1917527",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-02T20:31:11Z",
+                    "last_observed": "2026-10-03T00:17:15Z",
                     "flags": [
                         "sliver"
                     ],
