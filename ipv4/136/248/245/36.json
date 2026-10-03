@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "136.248.245.36",
     "first_seen": "2026-09-14T11:57:26.201136Z",
-    "last_seen": "2026-10-03T12:21:06Z",
+    "last_seen": "2026-10-03T17:07:09Z",
     "flags": [
         "unknown malware"
     ],
@@ -175,11 +175,11 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-10-02T15:34:49Z",
+            "last_checked": "2026-10-03T17:07:15Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-03T12:21:06Z",
+            "last_checked": "2026-10-03T17:07:09Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.201136Z",
@@ -200,7 +200,7 @@
                 {
                     "key": "1917396",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-03T12:21:06Z",
+                    "last_observed": "2026-10-03T17:07:09Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -226,6 +226,69 @@
         "urlhaus": {
             "last_checked": "2026-10-03T06:15:53Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-03T17:19:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T17:19:54Z",
+                    "last_observed": "2026-10-03T17:19:54Z",
+                    "data": {
+                        "as_owner": "Oracle Corporation",
+                        "asn": 31898,
+                        "network": "136.248.240.0/21",
+                        "country": "CL",
+                        "continent": "SA",
+                        "regional_internet_registry": "LACNIC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 2,
+                            "undetected": 35,
+                            "harmless": 50,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

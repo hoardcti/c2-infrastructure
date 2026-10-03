@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "18.188.15.218",
     "first_seen": "2026-09-14T11:57:26.201199Z",
-    "last_seen": "2026-10-03T12:21:06Z",
+    "last_seen": "2026-10-03T17:07:09Z",
     "flags": [
         "unknown malware"
     ],
@@ -104,11 +104,11 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-10-02T15:34:49Z",
+            "last_checked": "2026-10-03T17:07:15Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-03T12:21:06Z",
+            "last_checked": "2026-10-03T17:07:09Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.201199Z",
@@ -129,7 +129,7 @@
                 {
                     "key": "1917388",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-03T12:21:06Z",
+                    "last_observed": "2026-10-03T17:07:09Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -155,6 +155,70 @@
         "urlhaus": {
             "last_checked": "2026-10-03T00:20:01Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-03T17:18:09Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T17:18:09Z",
+                    "last_observed": "2026-10-03T17:18:09Z",
+                    "data": {
+                        "as_owner": "Amazon.com, Inc.",
+                        "asn": 16509,
+                        "network": "18.176.0.0/12",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 1,
+                            "undetected": 35,
+                            "harmless": 50,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "phishing"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "jarm": "1dd40d40d00040d00042d43d000000831b6af40378e2dd35eeac4e9311926e",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

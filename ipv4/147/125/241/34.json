@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "147.125.241.34",
     "first_seen": "2026-09-14T11:57:26.201216Z",
-    "last_seen": "2026-10-03T12:21:06Z",
+    "last_seen": "2026-10-03T17:07:09Z",
     "flags": [
         "unknown malware"
     ],
@@ -107,11 +107,11 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-10-02T15:34:49Z",
+            "last_checked": "2026-10-03T17:07:15Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-03T12:21:06Z",
+            "last_checked": "2026-10-03T17:07:09Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.201216Z",
@@ -132,7 +132,7 @@
                 {
                     "key": "1917386",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-03T12:21:06Z",
+                    "last_observed": "2026-10-03T17:07:09Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -158,6 +158,65 @@
         "urlhaus": {
             "last_checked": "2026-10-03T00:19:57Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-03T17:17:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T17:17:39Z",
+                    "last_observed": "2026-10-03T17:17:39Z",
+                    "data": {
+                        "as_owner": "Interserver, Inc",
+                        "asn": 26666,
+                        "network": "147.125.241.0/24",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 1,
+                            "undetected": 34,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "phishing"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "jarm": "1dd40d40d00040d00042d43d000000e1ea2a807a629b496b664cf07ad7c08d",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

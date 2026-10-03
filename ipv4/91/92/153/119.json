@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "91.92.153.119",
     "first_seen": "2026-09-14T11:57:26.201159Z",
-    "last_seen": "2026-10-03T12:21:06Z",
+    "last_seen": "2026-10-03T17:07:09Z",
     "flags": [
         "unknown malware"
     ],
@@ -143,11 +143,11 @@
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-02T15:34:49Z",
+            "last_checked": "2026-10-03T17:07:15Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-03T12:21:06Z",
+            "last_checked": "2026-10-03T17:07:09Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.201159Z",
@@ -168,7 +168,7 @@
                 {
                     "key": "1917393",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-03T12:21:06Z",
+                    "last_observed": "2026-10-03T17:07:09Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -194,6 +194,70 @@
         "urlhaus": {
             "last_checked": "2026-10-03T06:15:49Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-03T17:19:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T17:19:24Z",
+                    "last_observed": "2026-10-03T17:19:24Z",
+                    "data": {
+                        "as_owner": "Akenes SA",
+                        "asn": 61098,
+                        "network": "91.92.152.0/22",
+                        "country": "CH",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 2,
+                            "undetected": 34,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }
