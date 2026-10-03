@@ -59,6 +59,109 @@
                 }
             ]
         },
+        "otx": {
+            "last_checked": "2026-10-03T20:53:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T20:53:14Z",
+                    "last_observed": "2026-10-03T20:53:14Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS39600 lixium sarl",
+                        "country_code": "FR",
+                        "pulse_count": 2,
+                        "pulses": [
+                            {
+                                "id": "6a9867db16876a182420bd3b",
+                                "name": "Unknownmalware - IOCs Sep 2026",
+                                "created": "2026-09-02T18:15:55.432Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "IOC",
+                                    "RENIC",
+                                    "malware",
+                                    "unknownmalware"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a9a3ef4ea9dda15d85d5de6",
+                                "name": "Malware Filter - Botnet List - 03-09-2026 (Part 7)",
+                                "created": "2026-09-04T03:45:56.176Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-03T20:56:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T20:56:40Z",
+                    "last_observed": "2026-10-03T20:56:40Z",
+                    "data": {
+                        "org": "1984 ehf",
+                        "isp": "1984 ehf",
+                        "asn": "AS44925",
+                        "os": null,
+                        "country_code": "IS",
+                        "hostnames": [
+                            "vps-195-246-231-131.1984.is"
+                        ],
+                        "domains": [
+                            "1984.is"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "308 Permanent Redirect"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "403 Forbidden",
+                                "jarm": "28d28d28d00028d00042d42d000000831b6af40378e2dd35eeac4e9311926e",
+                                "certificate_sha256": "41469c3f058397056363a60c5c6ac876c9b4ab2ed17f6eb27b28ed2e5ba23ca5",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                                "certificate_sha256": "52f45f9aa1c639621775f3f4fcda3c04715fd48911db57d9efbdee1ae0a4309d",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-03T17:07:15Z",
             "observations": []

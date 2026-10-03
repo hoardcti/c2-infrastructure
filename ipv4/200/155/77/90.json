@@ -61,6 +61,113 @@
                 }
             ]
         },
+        "otx": {
+            "last_checked": "2026-10-03T20:53:10Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T20:53:10Z",
+                    "last_observed": "2026-10-03T20:53:10Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS16397 equinix brasil",
+                        "country_code": "BR",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "6a9867db16876a182420bd3b",
+                                "name": "Unknownmalware - IOCs Sep 2026",
+                                "created": "2026-09-02T18:15:55.432Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "IOC",
+                                    "RENIC",
+                                    "malware",
+                                    "unknownmalware"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-03T20:56:36Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-03T20:56:36Z",
+                    "last_observed": "2026-10-03T20:56:36Z",
+                    "data": {
+                        "org": "EQUINIX BRASIL",
+                        "isp": "Equinix (EMEA) Acquisition Enterprises B.V.",
+                        "asn": "AS15830",
+                        "os": "Ubuntu",
+                        "country_code": "BR",
+                        "hostnames": [
+                            "spsgroup.ddns.net",
+                            "webhost.spstech.com.br"
+                        ],
+                        "domains": [
+                            "ddns.net",
+                            "spstech.com.br"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "jarm": "2ad2ad0002ad2ad00042d42d000000301510f56407964db9434a9bb0d4ee4a",
+                                "certificate_sha256": "083a6a7aced0e30084fc44f7d9e0a4664c235689dbbbc87b302f4f3ca4e3e818",
+                                "certificate_subject": "spsgroup.ddns.net",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "b7851bf5250d4951f6491099d7470c231c8ad14c1b83390e4e185f2386a5ef31",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-03T17:07:15Z",
             "observations": []
