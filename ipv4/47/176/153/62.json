@@ -63,6 +63,54 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-04T21:13:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-04T21:13:25Z",
+                    "last_observed": "2026-10-04T21:13:25Z",
+                    "data": {
+                        "org": "Verizon Business",
+                        "isp": "Frontier Communications of America, Inc.",
+                        "asn": "AS5650",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "static-47-176-153-62.lsan.ca.frontiernet.net"
+                        ],
+                        "domains": [
+                            "frontiernet.net"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042dd7def146d747cd609a08ddeef453adae",
+                                "certificate_sha256": "270ac0813daee92d3d25cfc7acf13e8021c4530639fffc1f0247e828b73c5f37",
+                                "certificate_subject": "47.176.153.62",
+                                "certificate_organisation": "My Company",
+                                "certificate_issuer": "Company CA"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd060cefe378a6bd1495c5a78eaded98b",
+                                "certificate_sha256": "b806a438d78f8bdcb66dda92200daf69b72891f46cbd3170500f497dcf2b6e95",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

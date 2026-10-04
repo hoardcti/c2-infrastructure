@@ -79,6 +79,94 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-04T21:11:55Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-04T21:11:55Z",
+                    "last_observed": "2026-10-04T21:11:55Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": "Windows",
+                        "country_code": "US",
+                        "hostnames": [
+                            "beneficios-clinicaisamedica.cl"
+                        ],
+                        "domains": [
+                            "beneficios-clinicaisamedica.cl"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Not Found",
+                                "jarm": "28d28d28d00028d00042d42d000000831b6af40378e2dd35eeac4e9311926e",
+                                "certificate_sha256": "9ee0e1d99e0cf5caa57b1241ff20e22d10528dd00ee4445c55c32f283b5a3dcb",
+                                "certificate_subject": "beneficios-clinicaisamedica.cl",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "Microsoft IIS httpd",
+                                "version": "10.0",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

@@ -69,6 +69,67 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-04T21:13:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-04T21:13:19Z",
+                    "last_observed": "2026-10-04T21:13:19Z",
+                    "data": {
+                        "org": "Vultr Holdings LLC Frankfurt",
+                        "isp": "The Constant Company, LLC",
+                        "asn": "AS20473",
+                        "os": "Linux",
+                        "country_code": "DE",
+                        "hostnames": [
+                            "phish.medex-ik.com",
+                            "yemek.medex-ik.com"
+                        ],
+                        "domains": [
+                            "medex-ik.com"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "598eb46ffe4c36ec8cd94dc75ad4e3f61e72d86f891162312334be0f8efe1b24",
+                                "certificate_subject": "yemek.medex-ik.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "97d86b72b468ee04c9e41b09b5c0301592a802f2e870270313477a32d9b90d9a",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

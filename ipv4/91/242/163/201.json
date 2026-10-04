@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "91.242.163.201",
     "first_seen": "2026-09-14T11:57:26.200167Z",
-    "last_seen": "2026-10-04T17:21:46Z",
+    "last_seen": "2026-10-04T21:04:22Z",
     "flags": [
         "sliver"
     ],
@@ -100,7 +100,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-04T17:21:46Z",
+            "last_checked": "2026-10-04T21:04:22Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200167Z",
@@ -121,7 +121,7 @@
                 {
                     "key": "1917519",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-04T17:21:46Z",
+                    "last_observed": "2026-10-04T21:04:22Z",
                     "flags": [
                         "sliver"
                     ],
@@ -146,6 +146,70 @@
         "urlhaus": {
             "last_checked": "2026-10-03T23:40:24Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-04T21:17:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-04T21:17:51Z",
+                    "last_observed": "2026-10-04T21:17:51Z",
+                    "data": {
+                        "as_owner": "PE Denis Podolskii",
+                        "asn": 61335,
+                        "network": "91.242.163.0/24",
+                        "country": "SK",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 1,
+                            "undetected": 32,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "jarm": "2ad2ad0002ad2ad00042d42d00000023f2ae7180b8a0816654f2296c007d93",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

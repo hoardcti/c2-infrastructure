@@ -75,6 +75,89 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-04T21:12:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-04T21:12:41Z",
+                    "last_observed": "2026-10-04T21:12:41Z",
+                    "data": {
+                        "org": "Contabo GmbH",
+                        "isp": "Contabo GmbH",
+                        "asn": "AS51167",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "naticahub.com",
+                            "vmi2754650.contaboserver.net"
+                        ],
+                        "domains": [
+                            "contaboserver.net",
+                            "naticahub.com"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "3fd3fd00000000000043d3fd3fd43d79451d8c63b099acafdbabb24551d0e6",
+                                "certificate_sha256": "4830d871fdf3eeccd6c9e4af179b08e45d1404afb3f7221e56d896f8c2e91936",
+                                "certificate_subject": "TRAEFIK DEFAULT CERT",
+                                "certificate_issuer": "TRAEFIK DEFAULT CERT"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                                "certificate_sha256": "db1f27ea8909b3c5e1f22eae26192e0020af16057dd0627555c67e002f3725d5",
+                                "certificate_subject": "naticahub.com",
+                                "certificate_issuer": "E8"
+                            },
+                            {
+                                "port": 4443,
+                                "transport": "tcp",
+                                "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                                "certificate_sha256": "db1f27ea8909b3c5e1f22eae26192e0020af16057dd0627555c67e002f3725d5",
+                                "certificate_subject": "naticahub.com",
+                                "certificate_issuer": "E8"
+                            },
+                            {
+                                "port": 6001,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 6002,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8000,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "[Coolify] Coolify"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

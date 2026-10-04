@@ -69,6 +69,80 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-04T21:13:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-04T21:13:27Z",
+                    "last_observed": "2026-10-04T21:13:27Z",
+                    "data": {
+                        "org": "Korea Telecom",
+                        "isp": "YABESK",
+                        "asn": "AS46009",
+                        "os": null,
+                        "country_code": "KR",
+                        "hostnames": [
+                            "kesi.co.kr",
+                            "www.kesi.co.kr"
+                        ],
+                        "domains": [
+                            "kesi.co.kr"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 53,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "http_title": "한국승강기안전진흥원 | 승강기검사 전문기관"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "http_title": "한국승강기안전진흥원 | 승강기검사 전문기관",
+                                "jarm": "07d19d1ad21d21d00042d43d00000076e5b3c488a88e5790970b78ffb8afc2",
+                                "certificate_sha256": "25ee549e268b19ceee3baf39de1b5c6a4efef9580fdc34544fff773d1603c513",
+                                "certificate_subject": "kesi.co.kr",
+                                "certificate_issuer": "Sectigo Public Server Authentication CA DV R36"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "25ee549e268b19ceee3baf39de1b5c6a4efef9580fdc34544fff773d1603c513",
+                                "certificate_subject": "kesi.co.kr",
+                                "certificate_issuer": "Sectigo Public Server Authentication CA DV R36"
+                            },
+                            {
+                                "port": 7005,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "25ee549e268b19ceee3baf39de1b5c6a4efef9580fdc34544fff773d1603c513",
+                                "certificate_subject": "kesi.co.kr",
+                                "certificate_issuer": "Sectigo Public Server Authentication CA DV R36"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

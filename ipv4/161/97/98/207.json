@@ -72,6 +72,75 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-04T21:12:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-04T21:12:37Z",
+                    "last_observed": "2026-10-04T21:12:37Z",
+                    "data": {
+                        "org": "Contabo GmbH",
+                        "isp": "Contabo GmbH",
+                        "asn": "AS51167",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "mail.trysecur0.com"
+                        ],
+                        "domains": [
+                            "trysecur0.com"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "starttls"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "9de1e56810290bffaff3ef28f317083bd6ff5f6773267c4df7adee7b4ea8e98e",
+                                "certificate_subject": "mail.trysecur0.com",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "8cc3aafc871c56fad48cbc4941c3f65981d37c51c26b926896a91d0a7304a4dd",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8082,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.29.8",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Tangled"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

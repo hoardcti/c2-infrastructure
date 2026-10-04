@@ -68,6 +68,66 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-04T21:13:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-04T21:13:31Z",
+                    "last_observed": "2026-10-04T21:13:31Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "microsoft.access-terms.com"
+                        ],
+                        "domains": [
+                            "access-terms.com"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "0562b39abf96264f2c7ce00f5276a802a1b23d708aab8645fae5ee63118d2815",
+                                "certificate_subject": "microsoft.access-terms.com",
+                                "certificate_issuer": "E7"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "892b85d01b0e96f0e3c5823509b96552e31ff86462d2475e1643c37a78cb09c0",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

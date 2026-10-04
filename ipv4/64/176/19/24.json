@@ -69,6 +69,68 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-04T21:12:49Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-04T21:12:49Z",
+                    "last_observed": "2026-10-04T21:12:49Z",
+                    "data": {
+                        "org": "The Constant Company, LLC",
+                        "isp": "The Constant Company, LLC",
+                        "asn": "AS20473",
+                        "os": "Linux",
+                        "country_code": "CL",
+                        "hostnames": [
+                            "64.176.19.24.vultrusercontent.com",
+                            "avisos-corporativos.cl"
+                        ],
+                        "domains": [
+                            "avisos-corporativos.cl",
+                            "vultrusercontent.com"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.2p1 Ubuntu 2ubuntu3.6",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "aaacfbaf4558b882f54b20207947a5a02656b375d7dd94f781fcafeacaf686c2",
+                                "certificate_subject": "avisos-corporativos.cl",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "4da354100b4341f9405fcaa8ad167c77df3392c10425367edbb8ebae8cc5ec99",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

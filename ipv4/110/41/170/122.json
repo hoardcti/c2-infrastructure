@@ -7,6 +7,47 @@
         "unknown malware"
     ],
     "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-04T21:05:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-04T21:05:45Z",
+                    "last_observed": "2026-10-04T21:05:45Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            3306,
+                            3333,
+                            4369,
+                            5672
+                        ],
+                        "hostnames": [
+                            "ecs-110-41-170-122.compute.hwclouds-dns.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:apache:http_server",
+                            "cpe:/a:openbsd:openssh:8.2p1",
+                            "cpe:/a:oracle:mysql:5.7.40-log",
+                            "cpe:/a:vmware:rabbitmq:3.8.3",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "c2",
+                            "database",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-22116",
+                            "CVE-2021-32718",
+                            "CVE-2021-32719",
+                            "CVE-2022-31008",
+                            "CVE-2023-46118"
+                        ]
+                    }
+                }
+            ]
+        },
         "ipinfo": {
             "last_checked": "2026-10-01T16:12:20Z",
             "observations": [

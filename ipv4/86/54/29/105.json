@@ -67,6 +67,57 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-04T21:11:57Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-04T21:11:57Z",
+                    "last_observed": "2026-10-04T21:11:57Z",
+                    "data": {
+                        "org": "Black HOST Ltd.",
+                        "isp": "BlackHOST Black HOST Ltd",
+                        "asn": "AS12989",
+                        "os": "Linux",
+                        "country_code": "NL",
+                        "hostnames": [
+                            "black.host-105.29.54.86.in-addr.arpa",
+                            "webafrica-mweb.com"
+                        ],
+                        "domains": [
+                            "86.in-addr.arpa",
+                            "webafrica-mweb.com"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "28d28d28d00028d00043d28d28d43dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "b702f1ea44813872dd1c7559726a35f1254f0003d3a6644ad96a92dc3e95a588",
+                                "certificate_subject": "webafrica-mweb.com",
+                                "certificate_issuer": "E8"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00043d28d28d43dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "717552132109d2fc196e2e241581a42e4f2b54dae40a125b85624c8a7d76d607",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

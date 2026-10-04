@@ -70,6 +70,72 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-04T21:13:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-04T21:13:23Z",
+                    "last_observed": "2026-10-04T21:13:23Z",
+                    "data": {
+                        "org": "firstcolo GmbH",
+                        "isp": "Ultahost, Inc.",
+                        "asn": "AS214036",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "host.ultaserver.net"
+                        ],
+                        "domains": [
+                            "ultaserver.net"
+                        ],
+                        "tags": [
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "53a6b28910b8c79871bd9e75af48e774872bca9609d5c1cd82e7d3b039325897",
+                                "certificate_subject": "host.ultaserver.net",
+                                "certificate_issuer": "host.ultaserver.net"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "be7e5fd66066138bde0efcf0d8475ce0459ce6eab1c924c1b614b452a6203c3b",
+                                "certificate_subject": "*.atualizacao-senha.online",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                                "certificate_sha256": "07f9fa66ab413bac6a249f6ee8a08140726d74c9bc67350ffbe27d1398ab00c5",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []
