@@ -222,6 +222,154 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-04T05:14:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-04T05:14:28Z",
+                    "last_observed": "2026-10-04T05:14:28Z",
+                    "data": {
+                        "org": "GoDaddy.com, LLC",
+                        "isp": "GoDaddy.com, LLC",
+                        "asn": "AS398101",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "54.176.169.192.host.secureserver.net"
+                        ],
+                        "domains": [
+                            "secureserver.net"
+                        ],
+                        "tags": [
+                            "ai",
+                            "c2",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Havoc C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 444,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 449,
+                                "transport": "tcp",
+                                "product": "Havoc C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 4321,
+                                "transport": "tcp",
+                                "product": "Adaptix",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "404 - Page Not Found",
+                                "jarm": "29d29d00000000000043d43d00043dc3b2afa8a5ec09b510a8559aff7899fb",
+                                "certificate_sha256": "ff453ebab63262a5cce46ea65e9b250220bc9fa74888be8e3ada3b7822ba55e9",
+                                "certificate_organisation": "demo"
+                            },
+                            {
+                                "port": 4444,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 5353,
+                                "transport": "udp",
+                                "product": "mDNS"
+                            },
+                            {
+                                "port": 7443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.25.5",
+                                "tags": [
+                                    "eol-product"
+                                ]
+                            },
+                            {
+                                "port": 8000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8001,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8081,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8083,
+                                "transport": "tcp",
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "237562bf79675bf4e3f6c21cba1d0ed82167177fbbb5f70c2f0ac2618243798a",
+                                "certificate_subject": "0.0.0.0"
+                            },
+                            {
+                                "port": 9000,
+                                "transport": "tcp",
+                                "http_title": "Login Form"
+                            },
+                            {
+                                "port": 9119,
+                                "transport": "tcp",
+                                "product": "Hermes Agent",
+                                "version": "0.19.0",
+                                "tags": [
+                                    "ai"
+                                ],
+                                "http_title": "Sign in — Hermes Agent"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "6bae42203af045c18922b118c3edb5b1094a5bd391c0c8dda6fa199279b1b1fd",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-03T17:07:15Z",
             "observations": []

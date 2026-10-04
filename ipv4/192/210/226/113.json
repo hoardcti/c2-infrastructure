@@ -87,6 +87,91 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-04T05:16:10Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-04T05:16:10Z",
+                    "last_observed": "2026-10-04T05:16:10Z",
+                    "data": {
+                        "org": "RackNerd LLC",
+                        "isp": "HostPapa",
+                        "asn": "AS36352",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "192-210-226-113-host.colocrossing.com"
+                        ],
+                        "domains": [
+                            "colocrossing.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "07d14d16d21d21d07c42d41d00041d24a458a375eef0c576d23a7bab9a9fb1",
+                                "certificate_sha256": "0ed4744f42fcc75eafd12ae4f13a09a369283fda0fce6a78037c64ae50bd0c34",
+                                "certificate_subject": "Microsoft Corporation",
+                                "certificate_organisation": "Microsoft Corporation",
+                                "certificate_issuer": "Microsoft Corporation"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8083,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "07d14d16d21d21d07c42d41d00041d24a458a375eef0c576d23a7bab9a9fb1",
+                                "certificate_sha256": "0ed4744f42fcc75eafd12ae4f13a09a369283fda0fce6a78037c64ae50bd0c34",
+                                "certificate_subject": "Microsoft Corporation",
+                                "certificate_organisation": "Microsoft Corporation",
+                                "certificate_issuer": "Microsoft Corporation"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "jarm": "07d14d16d21d21d07c42d41d00041d24a458a375eef0c576d23a7bab9a9fb1",
+                                "certificate_sha256": "0ed4744f42fcc75eafd12ae4f13a09a369283fda0fce6a78037c64ae50bd0c34",
+                                "certificate_subject": "Microsoft Corporation",
+                                "certificate_organisation": "Microsoft Corporation",
+                                "certificate_issuer": "Microsoft Corporation"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-03T17:07:15Z",
             "observations": []

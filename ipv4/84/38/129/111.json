@@ -106,6 +106,77 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-04T05:15:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-04T05:15:14Z",
+                    "last_observed": "2026-10-04T05:15:14Z",
+                    "data": {
+                        "org": "SIA RixHost",
+                        "isp": "SIA RixHost",
+                        "asn": "AS203557",
+                        "os": "Windows Server 2022 (build 10.0.20348)",
+                        "country_code": "NL",
+                        "hostnames": [
+                            "ip-129-111.dataclub.info"
+                        ],
+                        "domains": [
+                            "dataclub.info"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Microsoft IIS httpd",
+                                "version": "10.0",
+                                "http_title": "IIS Windows Server"
+                            },
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "397b73f381a00a012e89882e16d8ea2b1efd313c52030a8aa5a3132898077edf",
+                                "certificate_subject": "IP-129-111.dataclub.eu",
+                                "certificate_issuer": "IP-129-111.dataclub.eu"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            },
+                            {
+                                "port": 7443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "40d40d40d00000000043d43d00043dabadbb43f9614a00c843a4ecd074ab81",
+                                "certificate_sha256": "45b8d53cc40b19b2b2a0952c427254202f450866b3c1e29f0ffc86ea34042621",
+                                "certificate_subject": "Hype",
+                                "certificate_organisation": "Hype",
+                                "certificate_issuer": "Hype"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-03T17:07:15Z",
             "observations": []

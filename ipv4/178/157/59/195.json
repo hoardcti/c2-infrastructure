@@ -85,6 +85,60 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-04T05:15:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-04T05:15:54Z",
+                    "last_observed": "2026-10-04T05:15:54Z",
+                    "data": {
+                        "org": "IT7 Networks Inc",
+                        "isp": "IT7 Networks Inc",
+                        "asn": "AS25820",
+                        "os": null,
+                        "country_code": "JP",
+                        "hostnames": [
+                            "178.157.59.195.16clouds.com"
+                        ],
+                        "domains": [
+                            "16clouds.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Apache httpd"
+                            },
+                            {
+                                "port": 9922,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u5"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "8619c38485b42e06e6b16257fe1e1bb4ac7ee799eddebff460016864c03df6be",
+                                "certificate_subject": "Major Cobalt Strike",
+                                "certificate_organisation": "cobaltstrike",
+                                "certificate_issuer": "Major Cobalt Strike"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-03T17:07:15Z",
             "observations": []

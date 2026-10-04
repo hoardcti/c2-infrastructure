@@ -670,6 +670,75 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-04T05:16:12Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-04T05:16:12Z",
+                    "last_observed": "2026-10-04T05:16:12Z",
+                    "data": {
+                        "org": "Tencent cloud computing (Beijing) Co., Ltd.",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.2p1 Ubuntu 4ubuntu0.13"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon"
+                            },
+                            {
+                                "port": 111,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8888,
+                                "transport": "tcp",
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 8889,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "87f2085c32b6a2cc709b365f55873e207a9caa10bffecf2fd16d3cf9d94d390c"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "de92cc976b7815a39df9039b130a51a7472df49ff0111c9d4c0c62209664e573",
+                                "certificate_subject": "Major Cobalt Strike",
+                                "certificate_organisation": "cobaltstrike",
+                                "certificate_issuer": "Major Cobalt Strike"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-03T17:07:15Z",
             "observations": []

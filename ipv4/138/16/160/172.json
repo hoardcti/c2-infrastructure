@@ -98,6 +98,81 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-04T05:14:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-04T05:14:22Z",
+                    "last_observed": "2026-10-04T05:14:22Z",
+                    "data": {
+                        "org": "Hosting technology LTD",
+                        "isp": "Hosting technology LTD",
+                        "asn": "AS48282",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "v3126285.hosted-by-vdsina.ru"
+                        ],
+                        "domains": [
+                            "hosted-by-vdsina.ru"
+                        ],
+                        "tags": [
+                            "c2",
+                            "open-dir"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.2p1 Ubuntu 2ubuntu3"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy"
+                            },
+                            {
+                                "port": 3000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 4000,
+                                "transport": "tcp",
+                                "http_title": "789 WebTTY"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.31.5",
+                                "tags": [
+                                    "open-dir"
+                                ],
+                                "http_title": "Index of /"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "98c25b4cc8cc799488f734b2001bca3ff6a654e0ee08afe362b1694ddca16c0a",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-03T17:07:15Z",
             "observations": []

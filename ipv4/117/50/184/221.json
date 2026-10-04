@@ -90,6 +90,56 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-04T05:16:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-04T05:16:14Z",
+                    "last_observed": "2026-10-04T05:16:14Z",
+                    "data": {
+                        "org": "Shanghai UCloud Information Technology Company Limited",
+                        "isp": "IDC, China Telecommunications Corporation",
+                        "asn": "AS23724",
+                        "os": "Linux",
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.12"
+                            },
+                            {
+                                "port": 10080,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "56befb4150df0acb258b54bdf34115995e0dc11a6b0b0fcff5e4974acd2adc21",
+                                "certificate_subject": "Pwn3rs Striked",
+                                "certificate_organisation": "Pwn3rs",
+                                "certificate_issuer": "Pwn3rs Striked"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-03T17:07:15Z",
             "observations": []
