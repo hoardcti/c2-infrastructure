@@ -846,12 +846,12 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-10-04T17:21:57Z",
+            "last_checked": "2026-10-05T22:24:10Z",
             "observations": [
                 {
                     "key": "141.98.10.0/24",
                     "first_observed": "2026-10-01T12:19:58Z",
-                    "last_observed": "2026-10-04T17:21:57Z",
+                    "last_observed": "2026-10-05T22:24:10Z",
                     "data": {
                         "cidr": "141.98.10.0/24",
                         "sblid": "SBL694569",
@@ -877,6 +877,67 @@
                         "id": "1902183",
                         "ioc": "141.98.10.154:2404",
                         "threat_type": "botnet_cc"
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-05T22:26:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T22:26:25Z",
+                    "last_observed": "2026-10-05T22:26:25Z",
+                    "data": {
+                        "urlhaus_reference": "https://urlhaus.abuse.ch/host/141.98.10.154/",
+                        "first_seen": "2025-03-06T17:15:03Z",
+                        "url_count": 4,
+                        "blacklists": {
+                            "spamhaus_dbl": "not listed",
+                            "surbl": "not listed"
+                        },
+                        "urls": [
+                            {
+                                "id": "3469649",
+                                "url": "http://141.98.10.154/xampp/suma/wecreatedbestthingswithbestwomenforgive.hta",
+                                "status": "offline",
+                                "date_added": "2025-03-06T17:15:06Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "Formbook",
+                                    "hta"
+                                ]
+                            },
+                            {
+                                "id": "3470697",
+                                "url": "http://141.98.10.154/35/hkcmd.exe",
+                                "status": "offline",
+                                "date_added": "2025-03-07T19:34:33Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "Formbook",
+                                    "exe"
+                                ]
+                            },
+                            {
+                                "id": "3470706",
+                                "url": "http://141.98.10.154/xampp/kk/ll.hta",
+                                "status": "offline",
+                                "date_added": "2025-03-07T19:46:31Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "RemcosRAT",
+                                    "hta"
+                                ]
+                            },
+                            {
+                                "id": "3481023",
+                                "url": "http://141.98.10.154/xampp/kk/kko.gIF",
+                                "status": "offline",
+                                "date_added": "2025-03-18T06:53:04Z",
+                                "threat": "malware_download",
+                                "tags": []
+                            }
+                        ]
                     }
                 }
             ]

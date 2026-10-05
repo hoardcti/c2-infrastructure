@@ -110,8 +110,97 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T22:32:29Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T22:32:29Z",
+                    "last_observed": "2026-10-05T22:32:29Z",
+                    "data": {
+                        "org": "Moritz Moeller Workstations",
+                        "isp": "LWLcom GmbH",
+                        "asn": "AS47277",
+                        "os": "Ubuntu",
+                        "country_code": "DE",
+                        "hostnames": [
+                            "89-106-78-234.sslip.io"
+                        ],
+                        "domains": [
+                            "sslip.io"
+                        ],
+                        "tags": [
+                            "c2",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Home Care Toolbox | AI and automation for home care agencies",
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "f221b07004a5cebb2f653bdfafabb9d007f21c358e16bf171af878b4c1e2c338",
+                                "certificate_subject": "89-106-78-234.sslip.io",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Home Care Toolbox — AI-Powered Home Care Operations | Imperial Technology Partners"
+                            },
+                            {
+                                "port": 8099,
+                                "transport": "tcp",
+                                "http_title": "HomeCare ToolBox — The Operating System for Modern Home Care | by Imperial Technology Partners"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "665f6839dfb435f06250f8543221a6b599fab8dfb52ec7edb2abf68eaf3d8439",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
-            "last_checked": "2026-10-04T17:21:57Z",
+            "last_checked": "2026-10-05T22:24:10Z",
             "observations": []
         },
         "threatfox": {

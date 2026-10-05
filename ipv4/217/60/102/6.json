@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "217.60.102.6",
     "first_seen": "2026-09-14T11:57:26.199542Z",
-    "last_seen": "2026-10-05T15:42:44Z",
+    "last_seen": "2026-10-05T22:24:03Z",
     "flags": [
         "adaptixc2"
     ],
@@ -97,12 +97,12 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-10-04T17:21:57Z",
+            "last_checked": "2026-10-05T22:24:10Z",
             "observations": [
                 {
                     "key": "217.60.102.0/24",
                     "first_observed": "2026-10-01T12:19:58Z",
-                    "last_observed": "2026-10-04T17:21:57Z",
+                    "last_observed": "2026-10-05T22:24:10Z",
                     "data": {
                         "cidr": "217.60.102.0/24",
                         "sblid": "SBL699566",
@@ -112,7 +112,7 @@
             ]
         },
         "threatfox": {
-            "last_checked": "2026-10-05T15:42:44Z",
+            "last_checked": "2026-10-05T22:24:03Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.199542Z",
@@ -133,7 +133,7 @@
                 {
                     "key": "1917596",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-05T15:42:44Z",
+                    "last_observed": "2026-10-05T22:24:03Z",
                     "flags": [
                         "adaptixc2"
                     ],
@@ -158,6 +158,74 @@
         "urlhaus": {
             "last_checked": "2026-10-04T17:24:43Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-05T22:38:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T22:38:24Z",
+                    "last_observed": "2026-10-05T22:38:24Z",
+                    "data": {
+                        "as_owner": "Swissnet LLC",
+                        "asn": 209373,
+                        "network": "217.60.102.0/23",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 2,
+                            "undetected": 33,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

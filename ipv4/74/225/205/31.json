@@ -95,8 +95,99 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T22:33:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T22:33:41Z",
+                    "last_observed": "2026-10-05T22:33:41Z",
+                    "data": {
+                        "org": "Microsoft Corporation",
+                        "isp": "Microsoft Corporation",
+                        "asn": "AS8075",
+                        "os": null,
+                        "country_code": "IN",
+                        "hostnames": [
+                            "vm-2.3lcdo2adny3u3bwbpy5hyd3kxb.rx.internal.cloudapp.net"
+                        ],
+                        "domains": [
+                            "cloudapp.net"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "database",
+                            "eol-product",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Panda C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Home - Odisha Tourism"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Panda C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Home - Odisha Tourism"
+                            },
+                            {
+                                "port": 5432,
+                                "transport": "tcp",
+                                "product": "PostgreSQL",
+                                "version": "9.6.0 or later",
+                                "tags": [
+                                    "cloud",
+                                    "database",
+                                    "self-signed"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "1755a1d533cb9d693c4ee4be067949b3c793461f3193effa80338dd4ed50c353",
+                                "certificate_subject": "vm-2.3lcdo2adny3u3bwbpy5hyd3kxb.rx.internal.cloudapp.net",
+                                "certificate_issuer": "vm-2.3lcdo2adny3u3bwbpy5hyd3kxb.rx.internal.cloudapp.net"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "Panda C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "http_title": "Home - Odisha Tourism"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
-            "last_checked": "2026-10-04T17:21:57Z",
+            "last_checked": "2026-10-05T22:24:10Z",
             "observations": []
         },
         "threatfox": {

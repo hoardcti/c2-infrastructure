@@ -97,8 +97,90 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T22:33:43Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T22:33:43Z",
+                    "last_observed": "2026-10-05T22:33:43Z",
+                    "data": {
+                        "org": "Alibaba Cloud LLC",
+                        "isp": "Alibaba (US) Technology Co., Ltd.",
+                        "asn": "AS45102",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "gogpu.net"
+                        ],
+                        "domains": [
+                            "gogpu.net"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "database",
+                            "eol-product"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Panda C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "http_title": "捷智算-AI算力云|专业GPU服务器租赁|英伟达显卡出租平台"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Panda C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "http_title": "捷智算-AI算力云|专业GPU服务器租赁|英伟达显卡出租平台",
+                                "jarm": "3fd3fd0003fd3fd21c42d42d000000bdfc58c9a46434368cf60aa440385763",
+                                "certificate_sha256": "bf928049d9d88b268208fe1d4ebecc873e8bb181a648a3d4217312c0523bf1b4",
+                                "certificate_subject": "*.gogpu.net",
+                                "certificate_issuer": "GoGetSSL RSA DV CA"
+                            },
+                            {
+                                "port": 7000,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 8036,
+                                "transport": "tcp",
+                                "product": "MySQL",
+                                "version": "8.0.45",
+                                "tags": [
+                                    "cloud",
+                                    "database",
+                                    "eol-product"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
-            "last_checked": "2026-10-04T17:21:57Z",
+            "last_checked": "2026-10-05T22:24:10Z",
             "observations": []
         },
         "threatfox": {
