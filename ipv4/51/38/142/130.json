@@ -236,6 +236,178 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T06:49:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T06:49:25Z",
+                    "last_observed": "2026-10-05T06:49:25Z",
+                    "data": {
+                        "org": "OVH SAS",
+                        "isp": "OVH SAS",
+                        "asn": "AS16276",
+                        "os": null,
+                        "country_code": "PL",
+                        "hostnames": [
+                            "ip130.ip-51-38-142.eu",
+                            "vps-0d5173f0.vps.ovh.net"
+                        ],
+                        "domains": [
+                            "ip-51-38-142.eu",
+                            "ovh.net"
+                        ],
+                        "tags": [
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 21,
+                                "transport": "tcp",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "cccb434ceb460bca930333df24bbb5f2dd05d0f66e6ca6870bd1d21a6abf1b9b",
+                                "certificate_subject": "vps-0d5173f0.vps.ovh.net",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u10"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "a77fc6c37bb4d35c564c3e55fabecd693657c03233684667dafcc80f09ed6b67",
+                                "certificate_subject": "Plesk",
+                                "certificate_organisation": "Plesk",
+                                "certificate_issuer": "Plesk"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "http_title": "Web Server's Default Page"
+                            },
+                            {
+                                "port": 110,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "a77fc6c37bb4d35c564c3e55fabecd693657c03233684667dafcc80f09ed6b67",
+                                "certificate_subject": "Plesk",
+                                "certificate_organisation": "Plesk",
+                                "certificate_issuer": "Plesk"
+                            },
+                            {
+                                "port": 143,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "a77fc6c37bb4d35c564c3e55fabecd693657c03233684667dafcc80f09ed6b67",
+                                "certificate_subject": "Plesk",
+                                "certificate_organisation": "Plesk",
+                                "certificate_issuer": "Plesk"
+                            },
+                            {
+                                "port": 465,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "29d29d00029d29d00042d42d000000ad9bf51cc3f5a1e29eecb81d0c7b06eb",
+                                "certificate_sha256": "a77fc6c37bb4d35c564c3e55fabecd693657c03233684667dafcc80f09ed6b67",
+                                "certificate_subject": "Plesk",
+                                "certificate_organisation": "Plesk",
+                                "certificate_issuer": "Plesk"
+                            },
+                            {
+                                "port": 993,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "a77fc6c37bb4d35c564c3e55fabecd693657c03233684667dafcc80f09ed6b67",
+                                "certificate_subject": "Plesk",
+                                "certificate_organisation": "Plesk",
+                                "certificate_issuer": "Plesk"
+                            },
+                            {
+                                "port": 995,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "a77fc6c37bb4d35c564c3e55fabecd693657c03233684667dafcc80f09ed6b67",
+                                "certificate_subject": "Plesk",
+                                "certificate_organisation": "Plesk",
+                                "certificate_issuer": "Plesk"
+                            },
+                            {
+                                "port": 3000,
+                                "transport": "tcp",
+                                "http_title": "CyberGuard Academy - Szkolenie z Cyberbezpieczenstwa"
+                            },
+                            {
+                                "port": 7777,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "40d40d40d00000000043d40d40d43da936ab0256fab25eca082941d14e3ece",
+                                "certificate_sha256": "5050d747abbd3533713ca313944dfcf59edf12fb332cc82b3bde3114ba22c5c3",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 8081,
+                                "transport": "tcp",
+                                "http_title": "Not Found"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "http_title": "Plesk Obsidian 18.0.77",
+                                "jarm": "29d29d00029d29d00042d42d0000002059a3b916699461c5923779b77cf06b",
+                                "certificate_sha256": "cccb434ceb460bca930333df24bbb5f2dd05d0f66e6ca6870bd1d21a6abf1b9b",
+                                "certificate_subject": "vps-0d5173f0.vps.ovh.net",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 8880,
+                                "transport": "tcp",
+                                "http_title": "Plesk Obsidian 18.0.77"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

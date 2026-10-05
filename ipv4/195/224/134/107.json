@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "195.224.134.107",
     "first_seen": "2026-09-14T11:57:26.199918Z",
-    "last_seen": "2026-10-05T00:34:55Z",
+    "last_seen": "2026-10-05T06:40:49Z",
     "flags": [
         "unknown malware"
     ],
@@ -99,7 +99,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-05T00:34:55Z",
+            "last_checked": "2026-10-05T06:40:49Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.199918Z",
@@ -120,7 +120,7 @@
                 {
                     "key": "1917551",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-05T00:34:55Z",
+                    "last_observed": "2026-10-05T06:40:49Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -145,6 +145,59 @@
         "urlhaus": {
             "last_checked": "2026-10-04T12:04:25Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-05T06:52:49Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T06:52:49Z",
+                    "last_observed": "2026-10-05T06:52:49Z",
+                    "data": {
+                        "as_owner": "Wavenet Limited",
+                        "asn": 5413,
+                        "network": "195.224.0.0/16",
+                        "country": "GB",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 1,
+                            "undetected": 35,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

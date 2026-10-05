@@ -94,6 +94,76 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T06:48:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T06:48:37Z",
+                    "last_observed": "2026-10-05T06:48:37Z",
+                    "data": {
+                        "org": "Oracle Corporation",
+                        "isp": "Oracle Corporation",
+                        "asn": "AS31898",
+                        "os": null,
+                        "country_code": "KR",
+                        "hostnames": [
+                            "timeline.www.cloudflare.com",
+                            "www.cloudflare.com"
+                        ],
+                        "domains": [
+                            "cloudflare.com"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.0p2 Debian 7+deb13u4",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "CloudFlare",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "403 Forbidden",
+                                "jarm": "27d40d40d00040d00042d43d00041df04c41293ba84f6efe3a613b22f983e6",
+                                "certificate_sha256": "802c43b9f4a84d4107a1f06ddd3bd73c69897f675ca261490926f1ef643ee450",
+                                "certificate_subject": "www.cloudflare.com",
+                                "certificate_issuer": "WE1"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "900c97f5b58ab494298ce4c4ef4895ca6fd6fe7e454e4bbfd1c86c0486db4c98",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

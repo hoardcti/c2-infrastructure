@@ -92,6 +92,65 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T06:49:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T06:49:07Z",
+                    "last_observed": "2026-10-05T06:49:07Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": "Linux",
+                        "country_code": "US",
+                        "hostnames": [
+                            "edu-gov-qa.com"
+                        ],
+                        "domains": [
+                            "edu-gov-qa.com"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "f175dfb2e4d529f0e8b3eec0a3f5fd032a838c6fe4350857cc6e018d9cf5b7cc",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "Microsoft IIS httpd",
+                                "version": "10.0",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

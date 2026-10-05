@@ -136,6 +136,168 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T06:49:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T06:49:05Z",
+                    "last_observed": "2026-10-05T06:49:05Z",
+                    "data": {
+                        "org": "Devoli LTD",
+                        "isp": "Devoli",
+                        "asn": "AS45177",
+                        "os": null,
+                        "country_code": "NZ",
+                        "hostnames": [
+                            "smtp.safermail.co.nz",
+                            "updates.computerforce.co.nz"
+                        ],
+                        "domains": [
+                            "computerforce.co.nz",
+                            "safermail.co.nz"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2007-2768",
+                            "CVE-2008-3844",
+                            "CVE-2016-20012",
+                            "CVE-2020-12062",
+                            "CVE-2020-14145",
+                            "CVE-2020-15778",
+                            "CVE-2021-28041",
+                            "CVE-2021-3618",
+                            "CVE-2021-36368",
+                            "CVE-2021-41617",
+                            "CVE-2023-38408",
+                            "CVE-2023-44487",
+                            "CVE-2023-48795",
+                            "CVE-2023-51385",
+                            "CVE-2023-51767",
+                            "CVE-2025-23419",
+                            "CVE-2025-26465",
+                            "CVE-2025-32728",
+                            "CVE-2026-35385",
+                            "CVE-2026-35387",
+                            "CVE-2026-35388",
+                            "CVE-2026-35414",
+                            "CVE-2026-59995",
+                            "CVE-2026-59996",
+                            "CVE-2026-59997",
+                            "CVE-2026-59998",
+                            "CVE-2026-59999",
+                            "CVE-2026-60000",
+                            "CVE-2026-60001",
+                            "CVE-2026-60002",
+                            "CVE-2026-73281",
+                            "CVE-2026-73282",
+                            "CVE-2026-73283"
+                        ],
+                        "services": [
+                            {
+                                "port": 21,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.2"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "5304524bf052c6bfc034609811cd2732ccffb7322a34f96c93aea8994a058bef",
+                                "certificate_subject": "smtp.safermail.co.nz",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.20.1",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Test Page for the HTTP Server on AlmaLinux"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.20.1",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "jarm": "1dd40d40d00040d00042d43d000000d6376f1d8fe64877806a85a008c1c790",
+                                "certificate_sha256": "2444e503c4b7309ddde77ca549a587c2555ac2b5eab90ee756633bb986b87d29",
+                                "certificate_subject": "updates.computerforce.co.nz",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 465,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "jarm": "1dd40d40d00040d00042d43d000000ad9bf51cc3f5a1e29eecb81d0c7b06eb",
+                                "certificate_sha256": "5304524bf052c6bfc034609811cd2732ccffb7322a34f96c93aea8994a058bef",
+                                "certificate_subject": "smtp.safermail.co.nz",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 587,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "5304524bf052c6bfc034609811cd2732ccffb7322a34f96c93aea8994a058bef",
+                                "certificate_subject": "smtp.safermail.co.nz",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00043d28d28d43dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "f6224748fd783bf95dcad532e71571b1f84e235da65e305e9f2f0b19ee7765f7",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 3478,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 5060,
+                                "transport": "udp",
+                                "product": "FPBX-17.0.30(22.1.0)"
+                            },
+                            {
+                                "port": 10000,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "Login to Webmin",
+                                "jarm": "08d08d00008d08d00042d42d000000652321e8f0f0922e10a197c7214f851b",
+                                "certificate_sha256": "8792ddf4f89a6a121d6fec4225482e22ce7e00ef5295091321398adbdd872ef6",
+                                "certificate_subject": "smtp.safermail.co.nz",
+                                "certificate_issuer": "smtp.safermail.co.nz"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

@@ -93,6 +93,81 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T06:49:03Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T06:49:03Z",
+                    "last_observed": "2026-10-05T06:49:03Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": "Linux",
+                        "country_code": "US",
+                        "hostnames": [
+                            "lumossec.com"
+                        ],
+                        "domains": [
+                            "lumossec.com"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.29.4",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.29.4",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "jarm": "1dd40d40d00040d00042d43d000000e1ea2a807a629b496b664cf07ad7c08d",
+                                "certificate_sha256": "58d42cb165ad55883d05c6b70323d8268bbb2e7f84e103c3e57ab70be6cc2650",
+                                "certificate_subject": "lumossec.com",
+                                "certificate_issuer": "E7"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "3d1012d32f183be3c6ce18be67ddc5c3e4b015e1a2eb4325576fd92aaf4467bc",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

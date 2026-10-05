@@ -91,6 +91,59 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T06:50:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T06:50:05Z",
+                    "last_observed": "2026-10-05T06:50:05Z",
+                    "data": {
+                        "org": "IONOS SE",
+                        "isp": "IONOS SE",
+                        "asn": "AS8560",
+                        "os": null,
+                        "country_code": "GB",
+                        "hostnames": [
+                            "ip31-70-83-235.pbiaas.com",
+                            "razem-dla-lasow.pl",
+                            "www.razem-dla-lasow.pl"
+                        ],
+                        "domains": [
+                            "pbiaas.com",
+                            "razem-dla-lasow.pl"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.0p2 Debian 7+deb13u4"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "f491efad2c35e3a79c67d6f234ea8210379681e5c39ece521ab68563bdbf3f72",
+                                "certificate_subject": "razem-dla-lasow.pl",
+                                "certificate_issuer": "home pl DV TLS G2 R35 CA"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "f491efad2c35e3a79c67d6f234ea8210379681e5c39ece521ab68563bdbf3f72",
+                                "certificate_subject": "razem-dla-lasow.pl",
+                                "certificate_issuer": "home pl DV TLS G2 R35 CA"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

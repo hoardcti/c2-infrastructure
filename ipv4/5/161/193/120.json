@@ -81,6 +81,57 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T06:48:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T06:48:59Z",
+                    "last_observed": "2026-10-05T06:48:59Z",
+                    "data": {
+                        "org": "Hetzner Online GmbH",
+                        "isp": "Hetzner Online GmbH",
+                        "asn": "AS213230",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "olympia.servicedesk365.info",
+                            "pedrobank.ferngully.online"
+                        ],
+                        "domains": [
+                            "ferngully.online",
+                            "servicedesk365.info"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                                "certificate_sha256": "657efc819190d3679133598e9a77f2aa6491a2da150fd40dc2d4e9f193445970",
+                                "certificate_subject": "olympia.servicedesk365.info",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                                "certificate_sha256": "30b47704ea8e99a3fa80776fa16d27b307e9772b0e6e97586c28af3f11a8d1e0",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

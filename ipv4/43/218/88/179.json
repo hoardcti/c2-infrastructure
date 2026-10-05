@@ -84,6 +84,64 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T06:49:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T06:49:17Z",
+                    "last_observed": "2026-10-05T06:49:17Z",
+                    "data": {
+                        "org": "Amazon.com, Inc.",
+                        "isp": "Amazon.com, Inc.",
+                        "asn": "AS16509",
+                        "os": null,
+                        "country_code": "ID",
+                        "hostnames": [
+                            "admin.perdania.co",
+                            "autodiscover.perdania.co",
+                            "ec2-43-218-88-179.ap-southeast-3.compute.amazonaws.com"
+                        ],
+                        "domains": [
+                            "amazonaws.com",
+                            "perdania.co"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.28.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "c2",
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "8edfbecc61961e10791a98a3e9f7b33ac2d2bca439f1f22a0f9981324c97b58b",
+                                "certificate_subject": "admin.perdania.co",
+                                "certificate_issuer": "YE1"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

@@ -61,6 +61,91 @@
             },
             "observations": []
         },
+        "shodan": {
+            "last_checked": "2026-10-05T06:49:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T06:49:59Z",
+                    "last_observed": "2026-10-05T06:49:59Z",
+                    "data": {
+                        "org": "XNNET LIMITED",
+                        "isp": "LUCIDACLOUD LIMITED",
+                        "asn": "AS139659",
+                        "os": null,
+                        "country_code": "HK",
+                        "hostnames": [
+                            "chinaa-grore.online",
+                            "mail.chinaa-grore.online"
+                        ],
+                        "domains": [
+                            "chinaa-grore.online"
+                        ],
+                        "tags": [
+                            "starttls"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 143,
+                                "transport": "tcp",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "bdf0cce63224013eb97a3efbdaa6a457e5b0a5feb8617e71a14f33429ece77e1",
+                                "certificate_subject": "mail.chinaa-grore.online",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 465,
+                                "transport": "tcp",
+                                "jarm": "07d19d1ad21d21d00042d43d000000aa99ce74e2c6d013c745aa52b5cc042d",
+                                "certificate_sha256": "bdf0cce63224013eb97a3efbdaa6a457e5b0a5feb8617e71a14f33429ece77e1",
+                                "certificate_subject": "mail.chinaa-grore.online",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 587,
+                                "transport": "tcp",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "bdf0cce63224013eb97a3efbdaa6a457e5b0a5feb8617e71a14f33429ece77e1",
+                                "certificate_subject": "mail.chinaa-grore.online",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 993,
+                                "transport": "tcp",
+                                "jarm": "2ad2ad0002ad2ad00042d42d00000051af7d8070a18e002eaaedf620fa118c",
+                                "certificate_sha256": "bdf0cce63224013eb97a3efbdaa6a457e5b0a5feb8617e71a14f33429ece77e1",
+                                "certificate_subject": "mail.chinaa-grore.online",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 1080,
+                                "transport": "tcp",
+                                "product": "SOCKS5 Proxy"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "40d40d40d00000000043d40d40d43da936ab0256fab25eca082941d14e3ece",
+                                "certificate_sha256": "872b08582fb33a45ad5870a823e2ce58dad6729eac9b09ae300bd85d39478cda",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

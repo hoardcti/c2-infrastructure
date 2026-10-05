@@ -142,6 +142,245 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T06:48:47Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T06:48:47Z",
+                    "last_observed": "2026-10-05T06:48:47Z",
+                    "data": {
+                        "org": "MeiPing HuLian",
+                        "isp": "Cloudie Limited",
+                        "asn": "AS55933",
+                        "os": null,
+                        "country_code": "HK",
+                        "hostnames": [
+                            "cib-fund.cloud",
+                            "spk.laws.ms",
+                            "www.cib-fund.cloud"
+                        ],
+                        "domains": [
+                            "cib-fund.cloud",
+                            "laws.ms"
+                        ],
+                        "tags": [
+                            "database",
+                            "eol-product",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2007-2768",
+                            "CVE-2008-3844",
+                            "CVE-2016-20012",
+                            "CVE-2017-15906",
+                            "CVE-2018-15473",
+                            "CVE-2018-15919",
+                            "CVE-2018-20685",
+                            "CVE-2019-6109",
+                            "CVE-2019-6110",
+                            "CVE-2019-6111",
+                            "CVE-2020-14145",
+                            "CVE-2020-15778",
+                            "CVE-2021-3618",
+                            "CVE-2021-36368",
+                            "CVE-2021-41617",
+                            "CVE-2023-38408",
+                            "CVE-2023-44487",
+                            "CVE-2023-48795",
+                            "CVE-2023-51385",
+                            "CVE-2023-51767",
+                            "CVE-2025-23419",
+                            "CVE-2025-26465",
+                            "CVE-2025-32728",
+                            "CVE-2026-35385",
+                            "CVE-2026-35387",
+                            "CVE-2026-35388",
+                            "CVE-2026-35414",
+                            "CVE-2026-59995",
+                            "CVE-2026-59996",
+                            "CVE-2026-59997",
+                            "CVE-2026-59998",
+                            "CVE-2026-59999",
+                            "CVE-2026-60000",
+                            "CVE-2026-60001",
+                            "CVE-2026-60002",
+                            "CVE-2026-73281",
+                            "CVE-2026-73282",
+                            "CVE-2026-73283"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "7.4"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "b531598ca8675d13817f27a4b2daaa083e6e4714b9e70bd1a8ff77cba25f8221",
+                                "certificate_subject": "*.cib-fund.cloud",
+                                "certificate_issuer": "*.cib-fund.cloud"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.20.1",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 110,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "b531598ca8675d13817f27a4b2daaa083e6e4714b9e70bd1a8ff77cba25f8221",
+                                "certificate_subject": "*.cib-fund.cloud",
+                                "certificate_issuer": "*.cib-fund.cloud"
+                            },
+                            {
+                                "port": 143,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "b531598ca8675d13817f27a4b2daaa083e6e4714b9e70bd1a8ff77cba25f8221",
+                                "certificate_subject": "*.cib-fund.cloud",
+                                "certificate_issuer": "*.cib-fund.cloud"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.20.1",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "jarm": "21d19d00021d21d00042d43d0000007ee659769b367ed43174f0486d0ab737",
+                                "certificate_sha256": "18246e42afe2f6a2301e9bc7dddcb22b95eb7d477c47cae25c11692887539a84",
+                                "certificate_subject": "cib-fund.cloud",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 465,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "07d29d15d21d21d07c07d29d07d21def69dabf1e0945f1582f67294f1f713f",
+                                "certificate_sha256": "b531598ca8675d13817f27a4b2daaa083e6e4714b9e70bd1a8ff77cba25f8221",
+                                "certificate_subject": "*.cib-fund.cloud",
+                                "certificate_issuer": "*.cib-fund.cloud"
+                            },
+                            {
+                                "port": 587,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "b531598ca8675d13817f27a4b2daaa083e6e4714b9e70bd1a8ff77cba25f8221",
+                                "certificate_subject": "*.cib-fund.cloud",
+                                "certificate_issuer": "*.cib-fund.cloud"
+                            },
+                            {
+                                "port": 993,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad0002ad2ad2ad2adea0f89a2e5fb09e4d8e099befed92cfa",
+                                "certificate_sha256": "b531598ca8675d13817f27a4b2daaa083e6e4714b9e70bd1a8ff77cba25f8221",
+                                "certificate_subject": "*.cib-fund.cloud",
+                                "certificate_issuer": "*.cib-fund.cloud"
+                            },
+                            {
+                                "port": 995,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad0002ad2ad2ad2adea0f89a2e5fb09e4d8e099befed92cfa",
+                                "certificate_sha256": "b531598ca8675d13817f27a4b2daaa083e6e4714b9e70bd1a8ff77cba25f8221",
+                                "certificate_subject": "*.cib-fund.cloud",
+                                "certificate_issuer": "*.cib-fund.cloud"
+                            },
+                            {
+                                "port": 3306,
+                                "transport": "tcp",
+                                "product": "MySQL",
+                                "tags": [
+                                    "database"
+                                ]
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "b5d95da75933b96346c535d42b491a1c4ef121f033a9188eee35cd47b360ee44",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 4190,
+                                "transport": "tcp",
+                                "product": "Dovecot Pigeonhole sieve",
+                                "version": "1.0"
+                            },
+                            {
+                                "port": 7000,
+                                "transport": "tcp",
+                                "product": "nginx"
+                            },
+                            {
+                                "port": 8000,
+                                "transport": "tcp",
+                                "http_title": "您的浏览器过时了"
+                            },
+                            {
+                                "port": 8010,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "ewomail.com-邮箱管理后台"
+                            },
+                            {
+                                "port": 8018,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "1fca659a97ea9f9f3e752c10c63426e8bc42c9c0658a6f4bc0ca17b83aad457c",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 8020,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "302 Found"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

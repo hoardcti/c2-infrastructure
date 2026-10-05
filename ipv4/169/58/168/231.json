@@ -94,6 +94,75 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T06:49:11Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T06:49:11Z",
+                    "last_observed": "2026-10-05T06:49:11Z",
+                    "data": {
+                        "org": "Contabo GmbH",
+                        "isp": "Contabo GmbH",
+                        "asn": "AS51167",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "360defense.io",
+                            "vmi3504785.contaboserver.net"
+                        ],
+                        "domains": [
+                            "360defense.io",
+                            "contaboserver.net"
+                        ],
+                        "tags": [
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "516318faec3b63539e63eb82d3244688d6d3196be99038c1093e3fe568419d5c",
+                                "certificate_subject": "vmi3504785.contaboserver.net",
+                                "certificate_issuer": "vmi3504785.contaboserver.net"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "34c1e87f8b667739b06a9586f91a30bc4f35bd32ebe5d1fd7b995baa4c237b8f",
+                                "certificate_subject": "*.360defense.io",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 4430,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "34c1e87f8b667739b06a9586f91a30bc4f35bd32ebe5d1fd7b995baa4c237b8f",
+                                "certificate_subject": "*.360defense.io",
+                                "certificate_issuer": "YR1"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

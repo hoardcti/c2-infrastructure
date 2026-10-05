@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "35.238.237.8",
     "first_seen": "2026-09-14T11:57:26.199858Z",
-    "last_seen": "2026-10-05T00:34:55Z",
+    "last_seen": "2026-10-05T06:40:49Z",
     "flags": [
         "unknown malware"
     ],
@@ -100,7 +100,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-05T00:34:55Z",
+            "last_checked": "2026-10-05T06:40:49Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.199858Z",
@@ -121,7 +121,7 @@
                 {
                     "key": "1917559",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-05T00:34:55Z",
+                    "last_observed": "2026-10-05T06:40:49Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -146,6 +146,64 @@
         "urlhaus": {
             "last_checked": "2026-10-04T12:04:41Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-05T06:54:49Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T06:54:49Z",
+                    "last_observed": "2026-10-05T06:54:49Z",
+                    "data": {
+                        "as_owner": "Google LLC",
+                        "asn": 396982,
+                        "network": "35.224.0.0/12",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 1,
+                            "undetected": 36,
+                            "harmless": 50,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

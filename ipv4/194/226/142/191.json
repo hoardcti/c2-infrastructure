@@ -85,6 +85,63 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T06:50:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T06:50:19Z",
+                    "last_observed": "2026-10-05T06:50:19Z",
+                    "data": {
+                        "org": "\"Domain names registrar REG.RU\", Ltd",
+                        "isp": "\"Domain names registrar REG.RU\", Ltd",
+                        "asn": "AS197695",
+                        "os": "Linux",
+                        "country_code": "GB",
+                        "hostnames": [
+                            "194-226-142-191.cloudvps.regruhosting.ru"
+                        ],
+                        "domains": [
+                            "regruhosting.ru"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.2p1 Ubuntu 2ubuntu3.5"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.28.3",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "979c62c7a2c2b661a9349626db99523ad79a9614304fd5a98d6f74d0bd4f4bdf",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []
