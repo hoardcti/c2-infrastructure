@@ -68,6 +68,57 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T00:43:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:43:05Z",
+                    "last_observed": "2026-10-05T00:43:05Z",
+                    "data": {
+                        "org": "Hetzner Online GmbH",
+                        "isp": "Hetzner Online GmbH",
+                        "asn": "AS24940",
+                        "os": "Linux",
+                        "country_code": "DE",
+                        "hostnames": [
+                            "static.210.213.99.91.clients.your-server.de"
+                        ],
+                        "domains": [
+                            "your-server.de"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "3fd3fd00000000000043d3fd3fd43d79451d8c63b099acafdbabb24551d0e6",
+                                "certificate_sha256": "dde69b87e8cff5e09392e3a92b77c04e30b08ff3955e37fa5171ac187f1867e1",
+                                "certificate_subject": "91.99.213.210",
+                                "certificate_issuer": "91.99.213.210"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

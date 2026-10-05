@@ -577,6 +577,73 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T00:42:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:42:53Z",
+                    "last_observed": "2026-10-05T00:42:53Z",
+                    "data": {
+                        "org": "Oracle Public Cloud",
+                        "isp": "Oracle Corporation",
+                        "asn": "AS31898",
+                        "os": "Linux",
+                        "country_code": "US",
+                        "hostnames": [
+                            "wbeducao.sytes.net"
+                        ],
+                        "domains": [
+                            "sytes.net"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "3fd3fd00000000021c43d43d00043dabadbb43f9614a00c843a4ecd074ab81",
+                                "certificate_sha256": "d34d45be274b9e23d11cf10a18c0dd1414efe7e5a45c852e6cbdbe9636fd7487",
+                                "certificate_subject": "wbeducao.sytes.net",
+                                "certificate_organisation": "Baboon"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                                "certificate_sha256": "00ab94e9dfe52b29321b0c62e5e394fa19ed9cf114f83fd766815332beb71865",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

@@ -73,6 +73,68 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T00:42:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:42:45Z",
+                    "last_observed": "2026-10-05T00:42:45Z",
+                    "data": {
+                        "org": "IONOS Inc.",
+                        "isp": "IONOS SE",
+                        "asn": "AS8560",
+                        "os": "Linux",
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [
+                            "CVE-2026-55761"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 81,
+                                "transport": "tcp",
+                                "product": "OpenResty",
+                                "http_title": "Nginx Proxy Manager"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "16d3768ea7e6049f48d4365da990361ce071417a1d5196bc8ec0c862377e7371",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 9443,
+                                "transport": "tcp",
+                                "product": "Portainer",
+                                "version": "2.39.3",
+                                "http_title": "Portainer",
+                                "jarm": "40d40d40d00000000043d43d00043dabadbb43f9614a00c843a4ecd074ab81",
+                                "certificate_sha256": "728b42b34c1eed8e999a3936c8928840de2d8e4be11201e0259700c4ded2d3dd"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

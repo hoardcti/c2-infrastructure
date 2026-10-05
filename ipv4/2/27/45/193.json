@@ -100,6 +100,93 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T00:43:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:43:53Z",
+                    "last_observed": "2026-10-05T00:43:53Z",
+                    "data": {
+                        "org": "u1host ltd",
+                        "isp": "U1 DIGITAL SERVICES LTD",
+                        "asn": "AS213877",
+                        "os": null,
+                        "country_code": "GB",
+                        "hostnames": [
+                            "rosvesx.ru",
+                            "www.rosvesx.ru"
+                        ],
+                        "domains": [
+                            "rosvesx.ru"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "6a0f4b068be4bf99c763ef569d42152906a28737a8b817ad85afc0c30ff854bb",
+                                "certificate_subject": "rosvesx.ru",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "АкустоВес РП-1 | ООО «РосВес» — весы нового поколения",
+                                "jarm": "28d28d28d00028d00042d42d000000e1ea2a807a629b496b664cf07ad7c08d",
+                                "certificate_sha256": "040b278d8a684b95e98ad9d62bda1982abc44e2feac76965ce77ad1f0d39e644",
+                                "certificate_subject": "rosvesx.ru",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "e1486d5389f17ed6580af861020fc996c3e4e89daeeba24853917511fb2552b2",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

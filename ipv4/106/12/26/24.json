@@ -65,6 +65,57 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T00:42:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:42:25Z",
+                    "last_observed": "2026-10-05T00:42:25Z",
+                    "data": {
+                        "org": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+                        "isp": "Baidu - Beijing Baidu Netcom Science and Technology Co., Ltd.",
+                        "asn": "AS38365",
+                        "os": "Windows Server 2022 (build 10.0.20348)",
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "for_Windows_8.0"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "c69ff04e92ed9c35571dd163fd8401b1d5c1844b6139c3698792c815e258765b",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "f223145f514266d9d748cfeae8306eb2e6763cac6d267db351670ffcbab3d523",
+                                "certificate_subject": "instance-nqeygre3",
+                                "certificate_issuer": "instance-nqeygre3"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

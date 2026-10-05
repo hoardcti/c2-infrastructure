@@ -65,6 +65,60 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T00:43:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:43:13Z",
+                    "last_observed": "2026-10-05T00:43:13Z",
+                    "data": {
+                        "org": "Amazon Data Services Northern Virginia",
+                        "isp": "Amazon.com, Inc.",
+                        "asn": "AS14618",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "cloudbeesinc.com",
+                            "ec2-23-20-128-134.compute-1.amazonaws.com"
+                        ],
+                        "domains": [
+                            "amazonaws.com",
+                            "cloudbeesinc.com"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "f231b5827cb4042b24d05b2fbf04b8061c2710dfab6170bdf9641b2965e08ee6",
+                                "certificate_subject": "cloudbeesinc.com",
+                                "certificate_issuer": "GandiCert"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "f231b5827cb4042b24d05b2fbf04b8061c2710dfab6170bdf9641b2965e08ee6",
+                                "certificate_subject": "cloudbeesinc.com",
+                                "certificate_issuer": "GandiCert"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

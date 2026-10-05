@@ -7,6 +7,40 @@
         "unknown malware"
     ],
     "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-05T00:35:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:35:30Z",
+                    "last_observed": "2026-10-05T00:35:30Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443
+                        ],
+                        "hostnames": [
+                            "ec2-107-21-81-130.compute-1.amazonaws.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.18.0",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
         "ipinfo": {
             "last_checked": "2026-10-01T16:12:36Z",
             "observations": [

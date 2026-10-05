@@ -73,6 +73,66 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T00:43:03Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:43:03Z",
+                    "last_observed": "2026-10-05T00:43:03Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": "Linux",
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [
+                            "CVE-2026-44848",
+                            "CVE-2026-44881",
+                            "CVE-2026-44883",
+                            "CVE-2026-55761"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "9718c50c2bd4f6e056c0bd49454fb59eaec4e847fb14fdbdc71b798fd162dc39",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 9000,
+                                "transport": "tcp",
+                                "product": "Portainer",
+                                "version": "2.39.1",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Portainer"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

@@ -114,6 +114,210 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T00:43:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:43:51Z",
+                    "last_observed": "2026-10-05T00:43:51Z",
+                    "data": {
+                        "org": "SC \"Lithuanian Radio and TV Center\"",
+                        "isp": "Contabo GmbH",
+                        "asn": "AS51167",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "quicklink.cz",
+                            "vmi1587544.contaboserver.net"
+                        ],
+                        "domains": [
+                            "contaboserver.net",
+                            "quicklink.cz"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2024-29296",
+                            "CVE-2024-33661",
+                            "CVE-2024-33662",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 21,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.4p1 Debian 5+deb11u3"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "2e2987dd5caeb2c07fa145d8a1c175741adcffa3aa361352ab08cf9f07cf761b",
+                                "certificate_subject": "mail.teamdragoni.eu",
+                                "certificate_organisation": "mailcow",
+                                "certificate_issuer": "mail.teamdragoni.eu"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 110,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "2e2987dd5caeb2c07fa145d8a1c175741adcffa3aa361352ab08cf9f07cf761b",
+                                "certificate_subject": "mail.teamdragoni.eu",
+                                "certificate_organisation": "mailcow",
+                                "certificate_issuer": "mail.teamdragoni.eu"
+                            },
+                            {
+                                "port": 143,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "2e2987dd5caeb2c07fa145d8a1c175741adcffa3aa361352ab08cf9f07cf761b",
+                                "certificate_subject": "mail.teamdragoni.eu",
+                                "certificate_organisation": "mailcow",
+                                "certificate_issuer": "mail.teamdragoni.eu"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "401 Authorization Required",
+                                "jarm": "2ad2ad0002ad2ad22c42d42d000000307ee0eb468e9fdb5cfcd698a80a67ef",
+                                "certificate_sha256": "23d1f19d22d9d82fb4008f1ca1881ebc026357172c163c2ecf2bc66dd6d81537",
+                                "certificate_subject": "CloudFlare Origin Certificate",
+                                "certificate_organisation": "CloudFlare, Inc."
+                            },
+                            {
+                                "port": 465,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d0000000b7957bea5dccaf2976e02aac6e2963a",
+                                "certificate_sha256": "2e2987dd5caeb2c07fa145d8a1c175741adcffa3aa361352ab08cf9f07cf761b",
+                                "certificate_subject": "mail.teamdragoni.eu",
+                                "certificate_organisation": "mailcow",
+                                "certificate_issuer": "mail.teamdragoni.eu"
+                            },
+                            {
+                                "port": 587,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 993,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d0000004b86cf883937e6feb1dd39cad97eaf62",
+                                "certificate_sha256": "2e2987dd5caeb2c07fa145d8a1c175741adcffa3aa361352ab08cf9f07cf761b",
+                                "certificate_subject": "mail.teamdragoni.eu",
+                                "certificate_organisation": "mailcow",
+                                "certificate_issuer": "mail.teamdragoni.eu"
+                            },
+                            {
+                                "port": 995,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d0000004b86cf883937e6feb1dd39cad97eaf62",
+                                "certificate_sha256": "2e2987dd5caeb2c07fa145d8a1c175741adcffa3aa361352ab08cf9f07cf761b",
+                                "certificate_subject": "mail.teamdragoni.eu",
+                                "certificate_organisation": "mailcow",
+                                "certificate_issuer": "mail.teamdragoni.eu"
+                            },
+                            {
+                                "port": 3001,
+                                "transport": "tcp",
+                                "http_title": "Uptime Kuma"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "b204caef33b40a11b8db6b9b6cfbda8a3d0b51e074c804249392e8e37de65c68",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 8000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "mailcow UI"
+                            },
+                            {
+                                "port": 8081,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "mailcow UI",
+                                "jarm": "2ad2ad0002ad2ad00042d42d00000023f2ae7180b8a0816654f2296c007d93",
+                                "certificate_sha256": "2e2987dd5caeb2c07fa145d8a1c175741adcffa3aa361352ab08cf9f07cf761b",
+                                "certificate_subject": "mail.teamdragoni.eu",
+                                "certificate_organisation": "mailcow",
+                                "certificate_issuer": "mail.teamdragoni.eu"
+                            },
+                            {
+                                "port": 9443,
+                                "transport": "tcp",
+                                "product": "Portainer",
+                                "version": "2.19.4",
+                                "http_title": "Portainer",
+                                "jarm": "40d40d40d00000000043d40d40d43d3795b2a696610c3ae44909dcdcb797f2",
+                                "certificate_sha256": "ed84ee5f54d54d51b0dcf2a843cc50c1959de2fc02a6a3721ef7fa7aaf4c1836"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

@@ -83,6 +83,69 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T00:42:47Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:42:47Z",
+                    "last_observed": "2026-10-05T00:42:47Z",
+                    "data": {
+                        "org": "Hivelocity LLC",
+                        "isp": "HIVELOCITY, Inc.",
+                        "asn": "AS29802",
+                        "os": null,
+                        "country_code": "ID",
+                        "hostnames": [
+                            "94-100-26-221.static.hvvc.us"
+                        ],
+                        "domains": [
+                            "hvvc.us"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.2p1 Ubuntu 4ubuntu0.13"
+                            },
+                            {
+                                "port": 3000,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.27.2",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Spectra"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "80219b480debd0b4a0ee342e4fb652a6812eea17946bf023589cb4d20345348f",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 3478,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 9000,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

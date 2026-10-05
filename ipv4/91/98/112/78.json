@@ -105,6 +105,145 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T00:44:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:44:05Z",
+                    "last_observed": "2026-10-05T00:44:05Z",
+                    "data": {
+                        "org": "Hetzner Online GmbH",
+                        "isp": "Hetzner Online GmbH",
+                        "asn": "AS24940",
+                        "os": null,
+                        "country_code": "AE",
+                        "hostnames": [
+                            "edu-labs.co",
+                            "static.78.112.98.91.clients.your-server.de",
+                            "support.edu-labs.co"
+                        ],
+                        "domains": [
+                            "edu-labs.co",
+                            "your-server.de"
+                        ],
+                        "tags": [
+                            "database",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 21,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "83a275d04dc4bdcc8e165d1ea5eaf111da2b80485758594bf45f8ce09977dabd",
+                                "certificate_subject": "support.edu-labs.co",
+                                "certificate_organisation": "Self-signed for support.edu-labs.co",
+                                "certificate_issuer": "support.edu-labs.co"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "31e257c2bdbe132fc08c1a456589636a7e93db4f7d3fe41d100815536517acc5",
+                                "certificate_subject": "support.edu-labs.co",
+                                "certificate_issuer": "support.edu-labs.co"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "http_title": "Redireccionar"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "http_title": "Página Principal | Pruebas Edu Labs",
+                                "jarm": "15d3fd16d29d29d00042d43d000000f969de8346060623ff1a681e56326e65",
+                                "certificate_sha256": "db7f4da6409b5a5a23603629763e3938160f424cac2d107e13bd757119a7ef3b",
+                                "certificate_subject": "*.edu-labs.co",
+                                "certificate_issuer": "SSL.com TLS Issuing RSA CA R1"
+                            },
+                            {
+                                "port": 465,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "07d19d1ad21d21d07c42d43d000000f50d155305214cf247147c43c0f1a823",
+                                "certificate_sha256": "31e257c2bdbe132fc08c1a456589636a7e93db4f7d3fe41d100815536517acc5",
+                                "certificate_subject": "support.edu-labs.co",
+                                "certificate_issuer": "support.edu-labs.co"
+                            },
+                            {
+                                "port": 587,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "31e257c2bdbe132fc08c1a456589636a7e93db4f7d3fe41d100815536517acc5",
+                                "certificate_subject": "support.edu-labs.co",
+                                "certificate_issuer": "support.edu-labs.co"
+                            },
+                            {
+                                "port": 2222,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3306,
+                                "transport": "tcp",
+                                "product": "MySQL",
+                                "tags": [
+                                    "database"
+                                ]
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "603ece6a8f423f427fa2fc3eb40035dd5cc069b6deea46f5a1eca4a62cb718e6",
+                                "certificate_subject": "*.edu-labs.co",
+                                "certificate_issuer": "Sectigo Public Server Authentication CA DV R36"
+                            },
+                            {
+                                "port": 20000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 33060,
+                                "transport": "tcp",
+                                "product": "MySQL X Protocol"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

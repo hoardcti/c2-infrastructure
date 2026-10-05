@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "45.154.98.226",
     "first_seen": "2026-09-14T11:57:26.200083Z",
-    "last_seen": "2026-10-04T21:04:22Z",
+    "last_seen": "2026-10-05T00:34:55Z",
     "flags": [
         "sliver"
     ],
@@ -134,7 +134,7 @@
             ]
         },
         "threatfox": {
-            "last_checked": "2026-10-04T21:04:22Z",
+            "last_checked": "2026-10-05T00:34:55Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200083Z",
@@ -155,7 +155,7 @@
                 {
                     "key": "1917530",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-04T21:04:22Z",
+                    "last_observed": "2026-10-05T00:34:55Z",
                     "flags": [
                         "sliver"
                     ],
@@ -180,6 +180,115 @@
         "urlhaus": {
             "last_checked": "2026-10-04T05:09:10Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-05T00:46:03Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:46:03Z",
+                    "last_observed": "2026-10-05T00:46:03Z",
+                    "data": {
+                        "as_owner": "1337 Services GmbH",
+                        "asn": 210558,
+                        "network": "45.154.98.0/24",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 13,
+                            "suspicious": 2,
+                            "undetected": 28,
+                            "harmless": 48,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Chong Lua Dao",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "ESET",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Forcepoint ThreatSeeker",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "GreyNoise",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "SafeToOpen",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Sophos",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "VIPRE",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Webroot",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "phishing"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "jarm": "3fd3fd00000000021c43d43d00043dabadbb43f9614a00c843a4ecd074ab81",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

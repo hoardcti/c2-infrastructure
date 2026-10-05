@@ -685,6 +685,79 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T00:42:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:42:33Z",
+                    "last_observed": "2026-10-05T00:42:33Z",
+                    "data": {
+                        "org": "TechTies Inc.",
+                        "isp": "TechTies Inc.",
+                        "asn": "AS197170",
+                        "os": "Ubuntu",
+                        "country_code": "SE",
+                        "hostnames": [
+                            "request.axistrade.ai"
+                        ],
+                        "domains": [
+                            "axistrade.ai"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "59bb84e3c4b135ceab8487bdf5837685e0c2bfe4120d0c6bead33c5dab0c2f0d",
+                                "certificate_subject": "request.axistrade.ai",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "6ff90c91782539006b6488865d426f2d7e676d8ed11c3458630374dce04f3b00",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": [

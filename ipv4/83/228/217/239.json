@@ -75,6 +75,72 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T00:42:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:42:59Z",
+                    "last_observed": "2026-10-05T00:42:59Z",
+                    "data": {
+                        "org": "Infomaniak Network SA",
+                        "isp": "Infomaniak Network SA",
+                        "asn": "AS29222",
+                        "os": "Linux",
+                        "country_code": "CH",
+                        "hostnames": [
+                            "ov-92d1ac.infomaniak.ch",
+                            "techcomelectro.ch"
+                        ],
+                        "domains": [
+                            "infomaniak.ch",
+                            "techcomelectro.ch"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.18"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "d2b595945f171652890097ed7e4bcbf20a723f5a7e2ccdc3710835b6f2507374",
+                                "certificate_subject": "techcomelectro.ch",
+                                "certificate_issuer": "E7"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "005cf046cdb02bc5cdc89749d3e3546395ffc9c9762623cbf4f8b6464a3006cd",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

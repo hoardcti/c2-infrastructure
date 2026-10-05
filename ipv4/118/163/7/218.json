@@ -89,6 +89,61 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T00:43:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:43:35Z",
+                    "last_observed": "2026-10-05T00:43:35Z",
+                    "data": {
+                        "org": "Chunghwa Telecom Data Communication Business Group",
+                        "isp": "Data Communication Business Group",
+                        "asn": "AS3462",
+                        "os": "Windows",
+                        "country_code": "TW",
+                        "hostnames": [
+                            "118-163-7-218.hinet-ip.hinet.net",
+                            "etms.fis.idv.tw"
+                        ],
+                        "domains": [
+                            "fis.idv.tw",
+                            "hinet.net"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Microsoft IIS httpd",
+                                "version": "10.0",
+                                "http_title": "ETMS"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Microsoft HTTPAPI httpd",
+                                "version": "2.0",
+                                "http_title": "Not Found",
+                                "jarm": "2ad2ad16d00000022c42d42d00042d5fd8b0687cb3bcb66df9ce47626f7204",
+                                "certificate_sha256": "9e88cf69377546b96368ea60e2083d7673990ace69bb9df39e72a9f715427e38",
+                                "certificate_subject": "etms.fis.idv.tw",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "a24609e382ba966253c10846361e95609f3b279a1e4065763bf325b094491442",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

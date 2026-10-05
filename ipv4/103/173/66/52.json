@@ -95,6 +95,83 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T00:42:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:42:39Z",
+                    "last_observed": "2026-10-05T00:42:39Z",
+                    "data": {
+                        "org": "3S DIGITAL TECHNOLOGY COMPANY LIMITED",
+                        "isp": "EZTECH-VN - EZ TECHNOLOGY COMPANY LIMITED",
+                        "asn": "AS150895",
+                        "os": null,
+                        "country_code": "VN",
+                        "hostnames": [
+                            "bravoman.bravovn.com"
+                        ],
+                        "domains": [
+                            "bravovn.com"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.22.1",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.22.1",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "d6a3895577d0a1c479a62f1d26fd93b5761e5c40f96abcd18ac927db6e16695c",
+                                "certificate_subject": "bravoman.bravovn.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00043d28d28d43dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "1a6962f223df62d97da9854fdda621fb80f9e47e8e348ede8be1a3790d408d6f",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8686,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u10"
+                            },
+                            {
+                                "port": 12470,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

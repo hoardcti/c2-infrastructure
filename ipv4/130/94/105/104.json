@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "130.94.105.104",
     "first_seen": "2026-09-14T11:57:26.20012Z",
-    "last_seen": "2026-10-04T21:04:22Z",
+    "last_seen": "2026-10-05T00:34:55Z",
     "flags": [
         "sliver"
     ],
@@ -94,7 +94,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-04T21:04:22Z",
+            "last_checked": "2026-10-05T00:34:55Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.20012Z",
@@ -115,7 +115,7 @@
                 {
                     "key": "1917525",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-04T21:04:22Z",
+                    "last_observed": "2026-10-05T00:34:55Z",
                     "flags": [
                         "sliver"
                     ],
@@ -140,6 +140,69 @@
         "urlhaus": {
             "last_checked": "2026-10-04T05:09:00Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-05T00:44:48Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:44:48Z",
+                    "last_observed": "2026-10-05T00:44:48Z",
+                    "data": {
+                        "as_owner": "LIGHT NODE LIMITED",
+                        "asn": 154177,
+                        "network": "130.94.96.0/20",
+                        "country": "CO",
+                        "continent": "SA",
+                        "regional_internet_registry": "LACNIC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 1,
+                            "undetected": 34,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

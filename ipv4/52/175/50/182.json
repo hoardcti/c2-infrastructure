@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "52.175.50.182",
     "first_seen": "2026-09-14T11:57:26.200136Z",
-    "last_seen": "2026-10-04T21:04:22Z",
+    "last_seen": "2026-10-05T00:34:55Z",
     "flags": [
         "sliver"
     ],
@@ -209,7 +209,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-04T21:04:22Z",
+            "last_checked": "2026-10-05T00:34:55Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200136Z",
@@ -230,7 +230,7 @@
                 {
                     "key": "1917523",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-04T21:04:22Z",
+                    "last_observed": "2026-10-05T00:34:55Z",
                     "flags": [
                         "sliver"
                     ],
@@ -255,6 +255,86 @@
         "urlhaus": {
             "last_checked": "2026-10-04T05:08:56Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-05T00:44:18Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:44:18Z",
+                    "last_observed": "2026-10-05T00:44:18Z",
+                    "data": {
+                        "as_owner": "Microsoft Corporation",
+                        "asn": 8075,
+                        "network": "52.160.0.0/11",
+                        "country": "HK",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -1,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 3,
+                            "undetected": 32,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "URLQuery",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 }

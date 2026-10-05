@@ -109,6 +109,135 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T00:42:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:42:23Z",
+                    "last_observed": "2026-10-05T00:42:23Z",
+                    "data": {
+                        "org": "Contabo GmbH",
+                        "isp": "Contabo GmbH",
+                        "asn": "AS51167",
+                        "os": "Linux",
+                        "country_code": "DE",
+                        "hostnames": [
+                            "arnada.azconfsec.xyz",
+                            "vmi3002101.contaboserver.net"
+                        ],
+                        "domains": [
+                            "azconfsec.xyz",
+                            "contaboserver.net"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2007-3205",
+                            "CVE-2013-2220",
+                            "CVE-2015-9251",
+                            "CVE-2016-10735",
+                            "CVE-2018-14040",
+                            "CVE-2018-14042",
+                            "CVE-2018-20676",
+                            "CVE-2018-20677",
+                            "CVE-2019-11358",
+                            "CVE-2019-8331",
+                            "CVE-2020-11022",
+                            "CVE-2020-11023",
+                            "CVE-2023-44487",
+                            "CVE-2024-21490",
+                            "CVE-2025-23419",
+                            "CVE-2026-14355",
+                            "CVE-2026-17543",
+                            "CVE-2026-17544",
+                            "CVE-2026-7260"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "920cee73e5d8c0920166d64efc8b13fa169697e1da19df13dee6b3eef4e7dca6",
+                                "certificate_subject": "vmi3002101.contaboserver.net",
+                                "certificate_issuer": "vmi3002101.contaboserver.net"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Microsoft IIS httpd",
+                                "version": "10.0",
+                                "jarm": "28d28d28d00028d00042d42d000000831b6af40378e2dd35eeac4e9311926e",
+                                "certificate_sha256": "cd9ab10973fe06e10e22d72732c1c9d1505e9ee522d0677f5abe1c52e52f1b3d",
+                                "certificate_subject": "arnada.azconfsec.xyz",
+                                "certificate_issuer": "E7"
+                            },
+                            {
+                                "port": 1027,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "cd9ab10973fe06e10e22d72732c1c9d1505e9ee522d0677f5abe1c52e52f1b3d",
+                                "certificate_subject": "arnada.azconfsec.xyz",
+                                "certificate_issuer": "E7"
+                            },
+                            {
+                                "port": 8001,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.29.8",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Təmiz idman. Sağlam gələcək. — AMADA - Azərbaycan Milli Antidopinq Agentliyi"
+                            },
+                            {
+                                "port": 8002,
+                                "transport": "tcp",
+                                "http_title": "Təmiz idman. Sağlam gələcək. — AMADA - Azərbaycan Milli Antidopinq Agentliyi"
+                            },
+                            {
+                                "port": 8027,
+                                "transport": "tcp",
+                                "http_title": "MailHog"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

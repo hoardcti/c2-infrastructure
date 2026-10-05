@@ -101,6 +101,102 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T00:43:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:43:33Z",
+                    "last_observed": "2026-10-05T00:43:33Z",
+                    "data": {
+                        "org": "Oracle Svenska AB",
+                        "isp": "Oracle Corporation",
+                        "asn": "AS31898",
+                        "os": null,
+                        "country_code": "NL",
+                        "hostnames": [
+                            "dc.stevenvandenwijngaert.be"
+                        ],
+                        "domains": [
+                            "stevenvandenwijngaert.be"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Inloggen · APA-Price-app",
+                                "jarm": "15d3fd16d29d29d00042d43d000000fe02290512647416dcf0a400ccbc0b6b",
+                                "certificate_sha256": "b8c56c8f9cf27b7f93db38637693f0c48b52f2dec72ad92b0fb62ce9095290e9",
+                                "certificate_subject": "dc.stevenvandenwijngaert.be",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "40d40d40d00000000043d43d00043d6aff5ab0f4fc31897186312c9e639319",
+                                "certificate_sha256": "52dac61247418539eb1347414d1ca6549ada8b7590048d8ee88c53ffd59d7e76",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 9090,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Moved"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

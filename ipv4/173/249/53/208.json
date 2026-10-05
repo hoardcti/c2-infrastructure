@@ -68,6 +68,58 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T00:42:43Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T00:42:43Z",
+                    "last_observed": "2026-10-05T00:42:43Z",
+                    "data": {
+                        "org": "Contabo GmbH",
+                        "isp": "Contabo GmbH",
+                        "asn": "AS51167",
+                        "os": "Linux",
+                        "country_code": "DE",
+                        "hostnames": [
+                            "vmi3280108.contaboserver.net"
+                        ],
+                        "domains": [
+                            "contaboserver.net"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "a48a033ef8b2884a50ade52c53d7f4dc07de61a2c88635d232c6c8454e36f611",
+                                "certificate_subject": "GoPhishTesting",
+                                "certificate_organisation": "GoPhishTesting",
+                                "certificate_issuer": "GoPhishTesting"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []
