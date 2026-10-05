@@ -94,6 +94,100 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T15:51:55Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T15:51:55Z",
+                    "last_observed": "2026-10-05T15:51:55Z",
+                    "data": {
+                        "org": "Google LLC",
+                        "isp": "Google LLC",
+                        "asn": "AS396982",
+                        "os": null,
+                        "country_code": "ES",
+                        "hostnames": [
+                            "87.95.175.34.bc.googleusercontent.com"
+                        ],
+                        "domains": [
+                            "googleusercontent.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u10",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.22.1",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Stratum"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 8081,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 20201,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 20202,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "d27e8956cbf257a7e52316e455d60d53609742404d5f98b0c0d1c1d74b09d836",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

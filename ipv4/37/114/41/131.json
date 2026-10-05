@@ -109,6 +109,124 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T15:51:11Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T15:51:11Z",
+                    "last_observed": "2026-10-05T15:51:11Z",
+                    "data": {
+                        "org": "intercolo GmbH",
+                        "isp": "SMARTNET Germany GmbH",
+                        "asn": "AS203446",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "131.41.114.37.in-addr.arpa",
+                            "gooogle.ltd"
+                        ],
+                        "domains": [
+                            "37.in-addr.arpa",
+                            "gooogle.ltd"
+                        ],
+                        "tags": [
+                            "c2",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "28d28d28d00028d00042d42d000000831b6af40378e2dd35eeac4e9311926e",
+                                "certificate_sha256": "402d48053291d7d46a054ab6b8f00e6cee2035bb1a8732765b6af73998eab4fa",
+                                "certificate_subject": "*.gooogle.ltd",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 3478,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 4433,
+                                "transport": "tcp",
+                                "jarm": "2ad2ad0002ad2ad22c42d42d000000faabb8fd156aa8b4d8a37853e1063261",
+                                "certificate_sha256": "e29a643d123fbb7242ae7bd12aa0c88a9c9fb0d018a30baeffac911df0692807",
+                                "certificate_subject": "mcent.loopercreations.org",
+                                "certificate_issuer": "MeshCentralRoot-53188d"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "http_title": "GHOST C2"
+                            },
+                            {
+                                "port": 8081,
+                                "transport": "tcp",
+                                "http_title": "Error"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "http_title": "loop vec - Login",
+                                "jarm": "2ad2ad00000000000042d42d000000dd5c266caaa8baaf93008418f7774284",
+                                "certificate_sha256": "6ffea02fcb7564ac2c36214a8b44f29e9f6b702b5934ddad6dd57b924ab65c81",
+                                "certificate_subject": "mcent.loopercreations.org",
+                                "certificate_issuer": "MeshCentralRoot-53188d"
+                            },
+                            {
+                                "port": 8888,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 21116,
+                                "transport": "tcp",
+                                "product": "RustDesk"
+                            },
+                            {
+                                "port": 21116,
+                                "transport": "udp",
+                                "product": "RustDesk"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "220a4d73cbef1e8abba8eeb43dfa11d4b1fc1f46062eecd163ffc33715e3eaca",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

@@ -84,6 +84,68 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T15:52:03Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T15:52:03Z",
+                    "last_observed": "2026-10-05T15:52:03Z",
+                    "data": {
+                        "org": "Google LLC",
+                        "isp": "Google LLC",
+                        "asn": "AS396982",
+                        "os": null,
+                        "country_code": "SG",
+                        "hostnames": [
+                            "188.178.240.35.bc.googleusercontent.com"
+                        ],
+                        "domains": [
+                            "googleusercontent.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u10",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "3fd3fd20d00000021c43d43d00043d204204071741c36579e355f830d285a5",
+                                "certificate_sha256": "9604c6724d1f0ba1c38ba48d2bf48167339a1bc7ffde6177a41d494fc90fb391",
+                                "certificate_subject": "localhost",
+                                "certificate_organisation": "Bugle"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "6a8f31031eb8e91f03536f8fd8e3004236a735a718526fae8e1fee7cda8bd709",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

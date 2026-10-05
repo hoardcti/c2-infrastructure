@@ -92,6 +92,75 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T15:51:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T15:51:07Z",
+                    "last_observed": "2026-10-05T15:51:07Z",
+                    "data": {
+                        "org": "Decision Focus Incorporated",
+                        "isp": "Turing Group Limited",
+                        "asn": "AS140869",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "database"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 111,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 111,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 3306,
+                                "transport": "tcp",
+                                "product": "MySQL",
+                                "tags": [
+                                    "database"
+                                ]
+                            },
+                            {
+                                "port": 21116,
+                                "transport": "tcp",
+                                "product": "RustDesk"
+                            },
+                            {
+                                "port": 21116,
+                                "transport": "udp",
+                                "product": "RustDesk"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "9958f8992a757cd5e7cdc369e5232841d847bd2d4985afb344386a3a50fc9c4e",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

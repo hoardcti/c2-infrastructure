@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "188.245.188.180",
     "first_seen": "2026-09-14T11:57:26.199729Z",
-    "last_seen": "2026-10-05T06:40:49Z",
+    "last_seen": "2026-10-05T15:42:44Z",
     "flags": [
         "unknown malware"
     ],
@@ -109,7 +109,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-05T06:40:49Z",
+            "last_checked": "2026-10-05T15:42:44Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.199729Z",
@@ -130,7 +130,7 @@
                 {
                     "key": "1917576",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-05T06:40:49Z",
+                    "last_observed": "2026-10-05T15:42:44Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -155,6 +155,64 @@
         "urlhaus": {
             "last_checked": "2026-10-04T17:24:13Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-05T15:57:12Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T15:57:12Z",
+                    "last_observed": "2026-10-05T15:57:12Z",
+                    "data": {
+                        "as_owner": "Hetzner Online GmbH",
+                        "asn": 24940,
+                        "network": "188.245.0.0/16",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 1,
+                            "undetected": 35,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

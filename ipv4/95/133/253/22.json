@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "95.133.253.22",
     "first_seen": "2026-09-14T11:57:26.199843Z",
-    "last_seen": "2026-10-05T06:40:49Z",
+    "last_seen": "2026-10-05T15:42:44Z",
     "flags": [
         "unknown malware"
     ],
@@ -102,7 +102,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-05T06:40:49Z",
+            "last_checked": "2026-10-05T15:42:44Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.199843Z",
@@ -123,7 +123,7 @@
                 {
                     "key": "1917561",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-05T06:40:49Z",
+                    "last_observed": "2026-10-05T15:42:44Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -148,6 +148,59 @@
         "urlhaus": {
             "last_checked": "2026-10-04T12:04:45Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-05T15:53:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T15:53:27Z",
+                    "last_observed": "2026-10-05T15:53:27Z",
+                    "data": {
+                        "as_owner": "Verda Cloud Oy",
+                        "asn": 198020,
+                        "network": "95.133.252.0/22",
+                        "country": "FI",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 1,
+                            "undetected": 36,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

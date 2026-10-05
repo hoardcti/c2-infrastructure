@@ -84,6 +84,67 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T15:50:55Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T15:50:55Z",
+                    "last_observed": "2026-10-05T15:50:55Z",
+                    "data": {
+                        "org": "Internet Security - AU",
+                        "isp": "SULAVIL SULAVI LTD",
+                        "asn": "AS219326",
+                        "os": null,
+                        "country_code": "AU",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "eol-product"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u5"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.27.5",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "403 Forbidden"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "3fd3fd20d00000021c43d43d00043d204204071741c36579e355f830d285a5",
+                                "certificate_sha256": "4d2ecd380840c1938a0ece01514b3ef0e9fa37ec33fe10a5afce27385a3b26a9",
+                                "certificate_subject": "localhost",
+                                "certificate_organisation": "Primitive Mail"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "0ad9a81f7f300769e307588613a55a8563197229e170ce7e42ea1138d5cb583c",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

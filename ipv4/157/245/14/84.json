@@ -78,6 +78,62 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T15:50:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T15:50:51Z",
+                    "last_observed": "2026-10-05T15:50:51Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "29d29d20d00000021c43d43d00043d204204071741c36579e355f830d285a5",
+                                "certificate_sha256": "dd75e5acd8fff52d99dbf0f6dc00c1b8b13e115d74b9f992d29f2957690ecff5",
+                                "certificate_subject": "localhost",
+                                "certificate_organisation": "harsh design"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "b149e5caeff1f2bad26b8d2d0d4731960257012baf3cf5729789a9839873f82b",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

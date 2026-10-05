@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "172.232.196.108",
     "first_seen": "2026-09-14T11:57:26.199805Z",
-    "last_seen": "2026-10-05T06:40:49Z",
+    "last_seen": "2026-10-05T15:42:44Z",
     "flags": [
         "unknown malware"
     ],
@@ -105,7 +105,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-05T06:40:49Z",
+            "last_checked": "2026-10-05T15:42:44Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.199805Z",
@@ -126,7 +126,7 @@
                 {
                     "key": "1917566",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-05T06:40:49Z",
+                    "last_observed": "2026-10-05T15:42:44Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -151,6 +151,64 @@
         "urlhaus": {
             "last_checked": "2026-10-04T12:04:55Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-05T15:54:42Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T15:54:42Z",
+                    "last_observed": "2026-10-05T15:54:42Z",
+                    "data": {
+                        "as_owner": "Akamai Connected Cloud",
+                        "asn": 63949,
+                        "network": "172.232.128.0/17",
+                        "country": "IT",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 1,
+                            "undetected": 35,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

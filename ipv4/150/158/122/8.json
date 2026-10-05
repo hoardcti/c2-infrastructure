@@ -107,6 +107,88 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T15:51:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T15:51:13Z",
+                    "last_observed": "2026-10-05T15:51:13Z",
+                    "data": {
+                        "org": "Tencent Cloud Computing (Beijing) Co., Ltd",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [
+                            "CVE-2007-2768",
+                            "CVE-2008-3844",
+                            "CVE-2023-38408",
+                            "CVE-2023-48795",
+                            "CVE-2023-51384",
+                            "CVE-2023-51385",
+                            "CVE-2023-51767",
+                            "CVE-2024-6387",
+                            "CVE-2025-26465",
+                            "CVE-2025-32728",
+                            "CVE-2026-35385",
+                            "CVE-2026-35387",
+                            "CVE-2026-35388",
+                            "CVE-2026-35414",
+                            "CVE-2026-59995",
+                            "CVE-2026-59996",
+                            "CVE-2026-59997",
+                            "CVE-2026-59998",
+                            "CVE-2026-59999",
+                            "CVE-2026-60000",
+                            "CVE-2026-60001",
+                            "CVE-2026-60002",
+                            "CVE-2026-73281",
+                            "CVE-2026-73282",
+                            "CVE-2026-73283"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.3",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 8888,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "7d46f1eddf42dd1d50746f8bfce23096a606e91f6c5511d93a7f078450fb4804",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []

@@ -90,6 +90,69 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-05T15:52:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-05T15:52:15Z",
+                    "last_observed": "2026-10-05T15:52:15Z",
+                    "data": {
+                        "org": "Cogent Communications, LLC",
+                        "isp": "XNNET LLC",
+                        "asn": "AS6134",
+                        "os": null,
+                        "country_code": "HK",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17"
+                            },
+                            {
+                                "port": 3001,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8000,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "b885de9b72aeb0d29cbb877340e53f1dc96dc0307e82fba4919cfa5789847192",
+                                "certificate_subject": "VelociraptorServer",
+                                "certificate_organisation": "Velociraptor"
+                            },
+                            {
+                                "port": 8889,
+                                "transport": "tcp",
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "b885de9b72aeb0d29cbb877340e53f1dc96dc0307e82fba4919cfa5789847192",
+                                "certificate_subject": "VelociraptorServer",
+                                "certificate_organisation": "Velociraptor"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "30161e690dc095979bdcf3f60c88b3dd04b01b089c66764b66493a5657e6154d",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-04T17:21:57Z",
             "observations": []
