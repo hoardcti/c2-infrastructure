@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "89.23.110.250",
     "first_seen": "2026-08-18T12:44:02.839771Z",
-    "last_seen": "2026-10-05T22:24:03Z",
+    "last_seen": "2026-10-06T02:47:06Z",
     "flags": [
         "adaptixc2"
     ],
@@ -123,12 +123,77 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-06T02:55:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T02:55:46Z",
+                    "last_observed": "2026-10-06T02:55:46Z",
+                    "data": {
+                        "org": "LIVI HOSTING LTD",
+                        "isp": "LIVI HOSTING LTD",
+                        "asn": "AS212706",
+                        "os": "Linux",
+                        "country_code": "NL",
+                        "hostnames": [
+                            "agroaspekt.x5.ru",
+                            "benefits.sfera.x5.ru",
+                            "cts-rooms.x5.ru",
+                            "dialog.x5.ru",
+                            "feedback.sfera.x5.ru",
+                            "franch.x5.ru",
+                            "lk.rabota.x5.ru",
+                            "orbita.x5.ru",
+                            "partner.orbita.x5.ru",
+                            "x5.ru"
+                        ],
+                        "domains": [
+                            "x5.ru"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.0p2 Debian 7+deb13u4"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "403 Forbidden",
+                                "jarm": "2ad2ad16d2ad2ad00042d42d000000df133019600a83abfb096ff3e86cd79d",
+                                "certificate_sha256": "d853aa616b7642019def1d037ba26f00b15485650853ceef6f36ae6a1c1567de",
+                                "certificate_subject": "*.x5.ru",
+                                "certificate_issuer": "HARICA DV TLS RSA"
+                            },
+                            {
+                                "port": 9443,
+                                "transport": "tcp",
+                                "product": "Adaptix",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "404 - Page Not Found",
+                                "jarm": "29d29d00000000000043d43d00043dc3b2afa8a5ec09b510a8559aff7899fb",
+                                "certificate_sha256": "1d17ccdb4d2f96ba294f6fc262146ad1f5e490a6b3b4d6e76b62211389f45584",
+                                "certificate_organisation": "OOO \"GUR\""
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-05T22:24:11Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-05T22:24:03Z",
+            "last_checked": "2026-10-06T02:47:06Z",
             "observations": [
                 {
                     "first_observed": "2026-08-18T12:44:02.839771Z",
@@ -149,7 +214,7 @@
                 {
                     "key": "1917595",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-05T22:24:03Z",
+                    "last_observed": "2026-10-06T02:47:06Z",
                     "flags": [
                         "adaptixc2"
                     ],

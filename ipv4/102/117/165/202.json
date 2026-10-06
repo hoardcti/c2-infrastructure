@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "102.117.165.202",
     "first_seen": "2026-09-14T11:57:26.199462Z",
-    "last_seen": "2026-10-05T22:24:03Z",
+    "last_seen": "2026-10-06T02:47:06Z",
     "flags": [
         "unknown malware"
     ],
@@ -101,7 +101,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-05T22:24:03Z",
+            "last_checked": "2026-10-06T02:47:06Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.199462Z",
@@ -122,7 +122,7 @@
                 {
                     "key": "1917603",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-05T22:24:03Z",
+                    "last_observed": "2026-10-06T02:47:06Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -147,6 +147,74 @@
         "urlhaus": {
             "last_checked": "2026-10-04T21:06:39Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-06T02:58:09Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T02:58:09Z",
+                    "last_observed": "2026-10-06T02:58:09Z",
+                    "data": {
+                        "as_owner": "Mauritius Telecom Ltd",
+                        "asn": 23889,
+                        "network": "102.112.0.0/13",
+                        "country": "MU",
+                        "continent": "AF",
+                        "regional_internet_registry": "AFRINIC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 2,
+                            "undetected": 33,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

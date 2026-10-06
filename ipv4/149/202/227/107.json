@@ -144,6 +144,163 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-06T02:55:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T02:55:28Z",
+                    "last_observed": "2026-10-06T02:55:28Z",
+                    "data": {
+                        "org": "OVH SAS",
+                        "isp": "OVH SAS",
+                        "asn": "AS16276",
+                        "os": null,
+                        "country_code": "FR",
+                        "hostnames": [
+                            "amyicotech.com",
+                            "vps-cf02ab4c.vps.ovh.net",
+                            "www.amyicotech.com"
+                        ],
+                        "domains": [
+                            "amyicotech.com",
+                            "ovh.net"
+                        ],
+                        "tags": [
+                            "c2",
+                            "eol-product",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2007-4723",
+                            "CVE-2009-0796",
+                            "CVE-2009-2299",
+                            "CVE-2011-1176",
+                            "CVE-2011-2688",
+                            "CVE-2012-3526",
+                            "CVE-2012-4001",
+                            "CVE-2012-4360",
+                            "CVE-2013-0941",
+                            "CVE-2013-0942",
+                            "CVE-2013-2765",
+                            "CVE-2013-4365",
+                            "CVE-2025-23419",
+                            "CVE-2026-23918",
+                            "CVE-2026-24072",
+                            "CVE-2026-28780",
+                            "CVE-2026-29167",
+                            "CVE-2026-29168",
+                            "CVE-2026-29169",
+                            "CVE-2026-29170",
+                            "CVE-2026-33006",
+                            "CVE-2026-33007",
+                            "CVE-2026-33523",
+                            "CVE-2026-33857",
+                            "CVE-2026-34032",
+                            "CVE-2026-34059",
+                            "CVE-2026-34355",
+                            "CVE-2026-34356",
+                            "CVE-2026-42356",
+                            "CVE-2026-42528",
+                            "CVE-2026-42535",
+                            "CVE-2026-42536",
+                            "CVE-2026-43951",
+                            "CVE-2026-44119",
+                            "CVE-2026-44185",
+                            "CVE-2026-44186",
+                            "CVE-2026-44631",
+                            "CVE-2026-46729",
+                            "CVE-2026-47360",
+                            "CVE-2026-48005",
+                            "CVE-2026-48913",
+                            "CVE-2026-49975",
+                            "CVE-2026-56153"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.2p1 Ubuntu 2ubuntu3.6"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "version": "2.4.66",
+                                "http_title": "Amyicotech"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "version": "2.4.66",
+                                "http_title": "Amyicotech",
+                                "jarm": "27d40d40d00040d00042d43d000000b5ce48eb9aaa95d750e8df42b900e12b",
+                                "certificate_sha256": "35fe5c8af96327358026f8f82dc3330fd14b1c56f17466a572ef6517f39ccd2b",
+                                "certificate_subject": "amyicotech.com",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 4321,
+                                "transport": "tcp",
+                                "product": "Adaptix",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "http_title": "404 - Page Not Found",
+                                "jarm": "29d29d00000000000043d43d00043dc3b2afa8a5ec09b510a8559aff7899fb",
+                                "certificate_sha256": "4df1befb045ec1aeda258abb8e10c3509a74c6eec0005eddb7d5f9d2e4bfb05b",
+                                "certificate_subject": "initrode.lab.local",
+                                "certificate_organisation": "Initrode",
+                                "certificate_issuer": "initrode.lab.local"
+                            },
+                            {
+                                "port": 4430,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 4433,
+                                "transport": "tcp",
+                                "jarm": "2ad2ad0002ad2ad22c42d42d000000faabb8fd156aa8b4d8a37853e1063261",
+                                "certificate_sha256": "d8e0e4c113baea52b89a930ccb2ff8129aa3b7436efee14472e0e2a2da6e72e2",
+                                "certificate_subject": "149.202.227.107",
+                                "certificate_issuer": "MeshCentralRoot-ca949f"
+                            },
+                            {
+                                "port": 6443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.25.5",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "400 The plain HTTP request was sent to HTTPS port",
+                                "jarm": "1dd40d40d00040d00042d43d000000b5ce48eb9aaa95d750e8df42b900e12b",
+                                "certificate_sha256": "35fe5c8af96327358026f8f82dc3330fd14b1c56f17466a572ef6517f39ccd2b",
+                                "certificate_subject": "amyicotech.com",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 7443,
+                                "transport": "tcp",
+                                "jarm": "40d40d40d00000000043d43d00043d6aff5ab0f4fc31897186312c9e639319",
+                                "certificate_sha256": "73d88e0799f340b60aa8325fbf2f3989c24826b0ade3f9272fd646665f5da1e4",
+                                "certificate_subject": "amyicotech.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "http_title": "ERROR 404 - Nothing Found",
+                                "jarm": "29d29d00000000021c43d43d00043d6aff5ab0f4fc31897186312c9e639319",
+                                "certificate_sha256": "ce8454cebc9dc243ab31676e608f9fb420fb9a4c13172dd7b7e68c4205ef62fe"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-05T22:24:11Z",
             "observations": []

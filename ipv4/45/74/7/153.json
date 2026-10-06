@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "45.74.7.153",
     "first_seen": "2026-09-13T17:55:38.166281Z",
-    "last_seen": "2026-10-05T22:24:03Z",
+    "last_seen": "2026-10-06T02:47:06Z",
     "flags": [
         "remcos"
     ],
@@ -108,7 +108,7 @@
             ]
         },
         "threatfox": {
-            "last_checked": "2026-10-05T22:24:03Z",
+            "last_checked": "2026-10-06T02:47:06Z",
             "observations": [
                 {
                     "first_observed": "2026-09-13T17:55:38.166281Z",
@@ -129,7 +129,7 @@
                 {
                     "key": "1916657",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-05T22:24:03Z",
+                    "last_observed": "2026-10-06T02:47:06Z",
                     "flags": [
                         "remcos"
                     ],
@@ -154,6 +154,59 @@
         "urlhaus": {
             "last_checked": "2026-10-04T21:07:03Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-06T03:01:09Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T03:01:09Z",
+                    "last_observed": "2026-10-06T03:01:09Z",
+                    "data": {
+                        "as_owner": "Omegatech LTD",
+                        "asn": 202412,
+                        "network": "45.74.7.0/24",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 2,
+                            "undetected": 36,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }
