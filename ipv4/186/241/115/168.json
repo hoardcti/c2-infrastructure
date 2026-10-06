@@ -1,0 +1,195 @@
+{
+    "schema_version": 2,
+    "ip": "186.241.115.168",
+    "first_seen": "2026-10-06T09:55:13Z",
+    "last_seen": "2026-10-06T09:55:13Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-06T09:58:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T09:58:37Z",
+                    "last_observed": "2026-10-06T09:58:37Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Uscloud Inc",
+                        "domain": "us-cloud.top",
+                        "country_code": "US",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-06T09:55:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T09:55:37Z",
+                    "last_observed": "2026-10-06T09:55:37Z",
+                    "data": {
+                        "ports": [
+                            12443
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:helpsystems:cobalt_strike"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-06T09:55:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T09:55:23Z",
+                    "last_observed": "2026-10-06T09:55:23Z",
+                    "data": {
+                        "asn": "AS402169",
+                        "as_name": "Uscloud Inc",
+                        "as_domain": "us-cloud.top",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-06T09:59:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T09:59:59Z",
+                    "last_observed": "2026-10-06T09:59:59Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS7738 telemar norte leste s.a.",
+                        "country_code": "BR",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-06T10:03:18Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T10:03:18Z",
+                    "last_observed": "2026-10-06T10:03:18Z",
+                    "data": {
+                        "org": "Uscloud Inc",
+                        "isp": "INC - Uscloud Inc",
+                        "asn": "AS402169",
+                        "os": null,
+                        "country_code": "BR",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 12443,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-06T09:55:21Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-06T09:55:13Z",
+            "observations": [
+                {
+                    "key": "1953911",
+                    "first_observed": "2026-10-06T09:55:13Z",
+                    "last_observed": "2026-10-06T09:55:13Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "186.241.115.168:12443",
+                        "port": 12443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-10-06T05:27:28Z",
+                        "reference": null,
+                        "tags": [
+                            "402169",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-06T09:57:49Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-06T10:08:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T10:08:05Z",
+                    "last_observed": "2026-10-06T10:08:05Z",
+                    "data": {
+                        "as_owner": "USCLOUD INC - Uscloud Inc",
+                        "asn": 402169,
+                        "network": "186.241.112.0/22",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 90,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

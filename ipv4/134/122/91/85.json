@@ -1,0 +1,163 @@
+{
+    "schema_version": 2,
+    "ip": "134.122.91.85",
+    "first_seen": "2026-10-06T09:55:13Z",
+    "last_seen": "2026-10-06T09:55:13Z",
+    "flags": [
+        "aisuru"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-06T09:58:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T09:58:21Z",
+                    "last_observed": "2026-10-06T09:58:21Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2024-12-22T22:04:06Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "DigitalOcean, LLC",
+                        "domain": "digitalocean.com",
+                        "country_code": "DE",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-06T09:55:29Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-06T09:55:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T09:55:22Z",
+                    "last_observed": "2026-10-06T09:55:22Z",
+                    "data": {
+                        "asn": "AS14061",
+                        "as_name": "DigitalOcean, LLC",
+                        "as_domain": "digitalocean.com",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-06T09:59:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T09:59:41Z",
+                    "last_observed": "2026-10-06T09:59:41Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS14061 digitalocean  llc",
+                        "country_code": "DE",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-06T10:03:02Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-06T09:55:21Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-06T09:55:13Z",
+            "observations": [
+                {
+                    "key": "1953913",
+                    "first_observed": "2026-10-06T09:55:13Z",
+                    "last_observed": "2026-10-06T09:55:13Z",
+                    "flags": [
+                        "aisuru"
+                    ],
+                    "data": {
+                        "ioc": "134.122.91.85:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Aisuru",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-06T05:27:27Z",
+                        "reference": null,
+                        "tags": [
+                            "AISURU",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-06T09:57:33Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-06T10:06:06Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T10:06:06Z",
+                    "last_observed": "2026-10-06T10:06:06Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "134.122.0.0/17",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 2,
+                            "undetected": 89,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "16d16d16d2ad16d00016d16d16d16dcbfa3dc4cbab0b48c0129972c7b68de4",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

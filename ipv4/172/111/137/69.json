@@ -1,0 +1,166 @@
+{
+    "schema_version": 2,
+    "ip": "172.111.137.69",
+    "first_seen": "2026-10-06T09:55:13Z",
+    "last_seen": "2026-10-06T09:55:13Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-06T09:58:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T09:58:33Z",
+                    "last_observed": "2026-10-06T09:58:33Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2023-10-26T15:25:02Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Internet Security - IT",
+                        "domain": "pointtoserver.com",
+                        "country_code": "IT",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-06T09:55:35Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-06T09:55:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T09:55:23Z",
+                    "last_observed": "2026-10-06T09:55:23Z",
+                    "data": {
+                        "asn": "AS9009",
+                        "as_name": "M247 Europe SRL",
+                        "as_domain": "m247global.com",
+                        "country_code": "IT",
+                        "country": "Italy",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-06T09:59:55Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T09:59:55Z",
+                    "last_observed": "2026-10-06T09:59:55Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS9009 m247 ltd",
+                        "country_code": "IT",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-06T10:03:14Z",
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-06T09:55:21Z",
+            "observations": [
+                {
+                    "key": "172.111.128.0/17",
+                    "first_observed": "2026-10-06T09:55:21Z",
+                    "last_observed": "2026-10-06T09:55:21Z",
+                    "data": {
+                        "cidr": "172.111.128.0/17",
+                        "sblid": "SBL688605",
+                        "rir": "arin"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-06T09:55:13Z",
+            "observations": [
+                {
+                    "key": "1954494",
+                    "first_observed": "2026-10-06T09:55:13Z",
+                    "last_observed": "2026-10-06T09:55:13Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "172.111.137.69:65070",
+                        "port": 65070,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-06T08:41:21Z",
+                        "reference": null,
+                        "tags": [
+                            "Oct-1-2026",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-06T09:57:45Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-06T10:07:36Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T10:07:36Z",
+                    "last_observed": "2026-10-06T10:07:36Z",
+                    "data": {
+                        "as_owner": "M247 Europe SRL",
+                        "asn": 9009,
+                        "network": "172.111.137.0/24",
+                        "country": "IT",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 0,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

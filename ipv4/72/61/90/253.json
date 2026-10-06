@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "72.61.90.253",
     "first_seen": "2026-09-12T18:08:26.299481Z",
-    "last_seen": "2026-10-06T02:47:06Z",
+    "last_seen": "2026-10-06T09:55:13Z",
     "flags": [
         "remus"
     ],
@@ -82,7 +82,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-06T02:47:06Z",
+            "last_checked": "2026-10-06T09:55:13Z",
             "observations": [
                 {
                     "first_observed": "2026-09-12T18:08:26.299481Z",
@@ -103,7 +103,7 @@
                 {
                     "key": "1915900",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-06T02:47:06Z",
+                    "last_observed": "2026-10-06T09:55:13Z",
                     "flags": [
                         "remus"
                     ],
@@ -128,6 +128,69 @@
         "urlhaus": {
             "last_checked": "2026-10-04T21:07:11Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-06T10:08:36Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T10:08:36Z",
+                    "last_observed": "2026-10-06T10:08:36Z",
+                    "data": {
+                        "as_owner": "Hostinger International Limited",
+                        "asn": 47583,
+                        "network": "72.60.0.0/15",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 1,
+                            "undetected": 35,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

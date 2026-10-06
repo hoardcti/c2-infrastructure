@@ -1,0 +1,251 @@
+{
+    "schema_version": 2,
+    "ip": "186.194.50.58",
+    "first_seen": "2026-10-06T09:55:13Z",
+    "last_seen": "2026-10-06T09:55:13Z",
+    "flags": [
+        "remus"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-06T09:58:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T09:58:35Z",
+                    "last_observed": "2026-10-06T09:58:35Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "EVEO S.A.",
+                        "domain": "eveo.com.br",
+                        "country_code": "BR",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-06T09:55:36Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T09:55:36Z",
+                    "last_observed": "2026-10-06T09:55:36Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            111,
+                            3128,
+                            9100
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:9.2p1",
+                            "cpe:/o:debian:debian_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-os"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-06T09:55:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T09:55:23Z",
+                    "last_observed": "2026-10-06T09:55:23Z",
+                    "data": {
+                        "asn": "AS53107",
+                        "as_name": "EVEO S.A.",
+                        "as_domain": "eveo.com.br",
+                        "country_code": "BR",
+                        "country": "Brazil",
+                        "continent_code": "SA",
+                        "continent": "South America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-06T09:59:57Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T09:59:57Z",
+                    "last_observed": "2026-10-06T09:59:57Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS28233 i-conecta redes de telecomunicacao eireli epp",
+                        "country_code": "BR",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "69a388a0684b0ef823ae2c31",
+                                "name": "Honeypot Data – T-Pot - Sydney, Australia - March 2026",
+                                "created": "2026-03-01T00:30:24.496Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "cowrie",
+                                    "dionaea",
+                                    "fatt",
+                                    "honeypot",
+                                    "honeytrap",
+                                    "mailoney",
+                                    "p0f",
+                                    "sensor-tagged",
+                                    "sentrypeer",
+                                    "suricata",
+                                    "tanner",
+                                    "tpot"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-06T10:03:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T10:03:16Z",
+                    "last_observed": "2026-10-06T10:03:16Z",
+                    "data": {
+                        "org": "EVEO S.A.",
+                        "isp": "EVEO S.A.",
+                        "asn": "AS53107",
+                        "os": "Debian GNU/Linux 12 (bookworm) (Linux 6.8.12-29-pve)",
+                        "country_code": "BR",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "eol-os"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u10"
+                            },
+                            {
+                                "port": 111,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 111,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 3128,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8006,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 9100,
+                                "transport": "tcp",
+                                "product": "Prometheus Node Exporter",
+                                "version": "1.12.1",
+                                "tags": [
+                                    "eol-os"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-06T09:55:21Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-06T09:55:13Z",
+            "observations": [
+                {
+                    "key": "1954248",
+                    "first_observed": "2026-10-06T09:55:13Z",
+                    "last_observed": "2026-10-06T09:55:13Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "ioc": "186.194.50.58:5930",
+                        "port": 5930,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remus",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-06T05:27:15Z",
+                        "reference": null,
+                        "tags": [
+                            "5a4378fb90db39f09c7b18d1f314e645",
+                            "Remus",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-06T09:57:47Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-06T10:07:50Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T10:07:50Z",
+                    "last_observed": "2026-10-06T10:07:50Z",
+                    "data": {
+                        "as_owner": "EVEO S.A.",
+                        "asn": 53107,
+                        "network": "186.194.48.0/21",
+                        "country": "BR",
+                        "continent": "SA",
+                        "regional_internet_registry": "LACNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 0,
+                            "undetected": 40,
+                            "harmless": 50,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malware"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

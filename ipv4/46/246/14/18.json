@@ -1,0 +1,239 @@
+{
+    "schema_version": 2,
+    "ip": "46.246.14.18",
+    "first_seen": "2026-10-06T09:55:13Z",
+    "last_seen": "2026-10-06T09:55:13Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-06T09:58:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T09:58:13Z",
+                    "last_observed": "2026-10-06T09:58:13Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Sanco Group LTD",
+                        "domain": "frootvpn.com",
+                        "country_code": "SE",
+                        "hostnames": [
+                            "c-46-246-14-18.ip4.frootvpn.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-06T09:55:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T09:55:25Z",
+                    "last_observed": "2026-10-06T09:55:25Z",
+                    "data": {
+                        "ports": [
+                            3389,
+                            5000
+                        ],
+                        "hostnames": [
+                            "c-46-246-14-18.ip4.frootvpn.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-06T09:55:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T09:55:21Z",
+                    "last_observed": "2026-10-06T09:55:21Z",
+                    "data": {
+                        "asn": "AS42708",
+                        "as_name": "Glesys AB",
+                        "as_domain": "glesys.com",
+                        "country_code": "SE",
+                        "country": "Sweden",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-06T09:59:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T09:59:34Z",
+                    "last_observed": "2026-10-06T09:59:34Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS42708 glesys ab",
+                        "country_code": "SE",
+                        "pulse_count": 2,
+                        "pulses": [
+                            {
+                                "id": "65e8b0e94a4a0fa9e88efc87",
+                                "name": "ACTIVIDAD MALICIOSA | Relacionada con AsyncRAT 06-03-2024",
+                                "created": "2024-03-06T18:07:37.704Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "brute force",
+                                    "password store",
+                                    "t1055",
+                                    "t1059",
+                                    "t1082",
+                                    "t1110",
+                                    "t1219",
+                                    "t1547",
+                                    "t1552",
+                                    "t1555"
+                                ],
+                                "malware_families": [
+                                    "AsyncRAT"
+                                ]
+                            },
+                            {
+                                "id": "68aa3a53d440a94377569eb9",
+                                "name": "Remcos",
+                                "created": "2025-08-23T22:01:55.319Z",
+                                "tlp": "white",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-06T10:02:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T10:02:54Z",
+                    "last_observed": "2026-10-06T10:02:54Z",
+                    "data": {
+                        "org": "Frootynet Sweden",
+                        "isp": "GleSYS AB",
+                        "asn": "AS42708",
+                        "os": null,
+                        "country_code": "SE",
+                        "hostnames": [
+                            "c-46-246-14-18.ip4.frootvpn.com"
+                        ],
+                        "domains": [
+                            "frootvpn.com"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol"
+                            },
+                            {
+                                "port": 5000,
+                                "transport": "tcp",
+                                "product": "nginx"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-06T09:55:21Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-06T09:55:13Z",
+            "observations": [
+                {
+                    "key": "1954417",
+                    "first_observed": "2026-10-06T09:55:13Z",
+                    "last_observed": "2026-10-06T09:55:13Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "46.246.14.18:5987",
+                        "port": 5987,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-06T07:29:53Z",
+                        "reference": null,
+                        "tags": [
+                            "NMUOnAPUAPU",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-06T09:57:25Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-06T10:05:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T10:05:05Z",
+                    "last_observed": "2026-10-06T10:05:05Z",
+                    "data": {
+                        "as_owner": "Glesys AB",
+                        "asn": 42708,
+                        "network": "46.246.8.0/21",
+                        "country": "SE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -12,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 2,
+                            "undetected": 36,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 2
+                        },
+                        "tags": [],
+                        "jarm": "27d27d27d29d27d1dc42d42d0000005a876dbce704c812b1a4298e7a39d8a1",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
