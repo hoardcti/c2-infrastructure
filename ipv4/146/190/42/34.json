@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "146.190.42.34",
     "first_seen": "2026-09-12T11:29:28.854562Z",
-    "last_seen": "2026-10-06T09:55:13Z",
+    "last_seen": "2026-10-06T16:35:54Z",
     "flags": [
         "remus"
     ],
@@ -188,7 +188,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-06T09:55:13Z",
+            "last_checked": "2026-10-06T16:35:54Z",
             "observations": [
                 {
                     "first_observed": "2026-09-12T11:29:28.854562Z",
@@ -209,7 +209,7 @@
                 {
                     "key": "1912755",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-06T09:55:13Z",
+                    "last_observed": "2026-10-06T16:35:54Z",
                     "flags": [
                         "remus"
                     ],
@@ -234,6 +234,55 @@
         "urlhaus": {
             "last_checked": "2026-10-05T00:37:01Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-06T16:48:12Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T16:48:12Z",
+                    "last_observed": "2026-10-06T16:48:12Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "146.190.0.0/17",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "15d3fd16d29d29d00042d43d000000ed1cf37c9a169b41886e27ba8fad60b0",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

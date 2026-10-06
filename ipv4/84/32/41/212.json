@@ -1,0 +1,190 @@
+{
+    "schema_version": 2,
+    "ip": "84.32.41.212",
+    "first_seen": "2026-10-06T16:35:54Z",
+    "last_seen": "2026-10-06T16:35:54Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-06T16:38:55Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T16:38:55Z",
+                    "last_observed": "2026-10-06T16:38:55Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "HOSTGNOME LTD",
+                        "domain": "hostgnome.com",
+                        "country_code": "GB",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-06T16:36:06Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-06T16:36:03Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T16:36:03Z",
+                    "last_observed": "2026-10-06T16:36:03Z",
+                    "data": {
+                        "asn": "AS201579",
+                        "as_name": "HOSTGNOME LTD",
+                        "as_domain": "hostgnome.com",
+                        "country_code": "GB",
+                        "country": "United Kingdom",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-06T16:40:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T16:40:14Z",
+                    "last_observed": "2026-10-06T16:40:14Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "LT",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-06T16:43:32Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T16:43:32Z",
+                    "last_observed": "2026-10-06T16:43:32Z",
+                    "data": {
+                        "org": "HOSTGNOME LTD",
+                        "isp": "HOSTGNOME LTD",
+                        "asn": "AS201579",
+                        "os": "Windows (build 10.0.17763)",
+                        "country_code": "GB",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad22c2ad2ad2ad2adfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "994bf4bfddeebbb1567449b52fd1949952f7abc9de14475f28f144fa871863cb",
+                                "certificate_subject": "WIN-ESUQ15FA9FR",
+                                "certificate_issuer": "WIN-ESUQ15FA9FR"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-06T16:36:02Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-06T16:35:54Z",
+            "observations": [
+                {
+                    "key": "1954701",
+                    "first_observed": "2026-10-06T16:35:54Z",
+                    "last_observed": "2026-10-06T16:35:54Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "84.32.41.212:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-06T13:23:37Z",
+                        "reference": null,
+                        "tags": [
+                            "REMOTEHOST",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-06T16:38:07Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-06T16:45:57Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T16:45:57Z",
+                    "last_observed": "2026-10-06T16:45:57Z",
+                    "data": {
+                        "as_owner": "Hostgnome Ltd",
+                        "asn": 201579,
+                        "network": "84.32.41.0/24",
+                        "country": "GB",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 0,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "phishing"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "00000000000000000041d41d0000001798d6156df422564fb9b667b7418e4c",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

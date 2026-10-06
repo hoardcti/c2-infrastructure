@@ -1,0 +1,193 @@
+{
+    "schema_version": 2,
+    "ip": "185.214.10.188",
+    "first_seen": "2026-10-06T16:35:54Z",
+    "last_seen": "2026-10-06T16:35:54Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-06T16:39:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T16:39:05Z",
+                    "last_observed": "2026-10-06T16:39:05Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "365 Group LLC",
+                        "domain": "365groupinc.com",
+                        "country_code": "NL",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-06T16:36:11Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T16:36:11Z",
+                    "last_observed": "2026-10-06T16:36:11Z",
+                    "data": {
+                        "ports": [
+                            135
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-06T16:36:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T16:36:04Z",
+                    "last_observed": "2026-10-06T16:36:04Z",
+                    "data": {
+                        "asn": "AS202602",
+                        "as_name": "Greencloud LLC",
+                        "as_domain": "green.cloud",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-06T16:40:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T16:40:24Z",
+                    "last_observed": "2026-10-06T16:40:24Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS58073 yisp b.v.",
+                        "country_code": "NL",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-06T16:43:42Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T16:43:42Z",
+                    "last_observed": "2026-10-06T16:43:42Z",
+                    "data": {
+                        "org": "365 Group LLC",
+                        "isp": "Greencloud LLC",
+                        "asn": "AS202602",
+                        "os": "Windows Server 2022 (build 10.0.20348)",
+                        "country_code": "NL",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-06T16:36:02Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-06T16:35:54Z",
+            "observations": [
+                {
+                    "key": "1954642",
+                    "first_observed": "2026-10-06T16:35:54Z",
+                    "last_observed": "2026-10-06T16:35:54Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "185.214.10.188:2404",
+                        "port": 2404,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-06T12:29:45Z",
+                        "reference": null,
+                        "tags": [
+                            "REMOTEHOST",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-06T16:38:17Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-06T16:47:12Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T16:47:12Z",
+                    "last_observed": "2026-10-06T16:47:12Z",
+                    "data": {
+                        "as_owner": "Greencloud LLC",
+                        "asn": 202602,
+                        "network": "185.214.10.0/24",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 39,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

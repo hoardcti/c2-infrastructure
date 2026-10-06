@@ -1,0 +1,234 @@
+{
+    "schema_version": 2,
+    "ip": "155.103.71.210",
+    "first_seen": "2026-10-06T16:35:54Z",
+    "last_seen": "2026-10-06T16:35:54Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-06T16:39:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T16:39:01Z",
+                    "last_observed": "2026-10-06T16:39:01Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "White Label Services, LLC",
+                        "domain": "whitelabelservices.us",
+                        "country_code": "TR",
+                        "hostnames": [
+                            "33657-27665.dchost.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-06T16:36:09Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T16:36:09Z",
+                    "last_observed": "2026-10-06T16:36:09Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443
+                        ],
+                        "hostnames": [
+                            "baggage",
+                            "mahzen.insomnia.ip-ddns.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-06T16:36:03Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T16:36:03Z",
+                    "last_observed": "2026-10-06T16:36:03Z",
+                    "data": {
+                        "asn": "AS44382",
+                        "as_name": "Fiba Cloud Operation Company, LLC",
+                        "as_domain": "fibacloud.com",
+                        "country_code": "TR",
+                        "country": "Turkey",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-06T16:40:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T16:40:20Z",
+                    "last_observed": "2026-10-06T16:40:20Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-06T16:43:38Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T16:43:38Z",
+                    "last_observed": "2026-10-06T16:43:38Z",
+                    "data": {
+                        "org": "",
+                        "isp": "",
+                        "asn": "",
+                        "os": null,
+                        "country_code": "",
+                        "hostnames": [
+                            "baggage",
+                            "mahzen.insomnia.ip-ddns.com"
+                        ],
+                        "domains": [
+                            "baggage.",
+                            "ip-ddns.com"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "Welcome to FileShare",
+                                "jarm": "28d28d28d00028d00042d42d0000007d20e9b9a3e87aa1ec17cb4d646ce9a5",
+                                "certificate_sha256": "1472f1f6e2251efcb0ff7b4900d9bf951fd26b0447a30f243df4527025ffb2a0",
+                                "certificate_subject": "mahzen.insomnia.ip-ddns.com",
+                                "certificate_issuer": "YE1"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-06T16:36:02Z",
+            "observations": [
+                {
+                    "key": "155.103.68.0/22",
+                    "first_observed": "2026-10-06T16:36:02Z",
+                    "last_observed": "2026-10-06T16:36:02Z",
+                    "data": {
+                        "cidr": "155.103.68.0/22",
+                        "sblid": "SBL698394",
+                        "rir": "arin"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-06T16:35:54Z",
+            "observations": [
+                {
+                    "key": "1954592",
+                    "first_observed": "2026-10-06T16:35:54Z",
+                    "last_observed": "2026-10-06T16:35:54Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "155.103.71.210:55280",
+                        "port": 55280,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-06T10:38:03Z",
+                        "reference": null,
+                        "tags": [
+                            "Oct-06-2026 Exploit",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-06T16:38:13Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-06T16:46:42Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-06T16:46:42Z",
+                    "last_observed": "2026-10-06T16:46:42Z",
+                    "data": {
+                        "as_owner": "Fiba Cloud Operation Company, LLC",
+                        "asn": 44382,
+                        "network": "155.103.68.0/22",
+                        "country": "TR",
+                        "continent": "AS",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 3,
+                            "undetected": 36,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "jarm": "28d28d28d00028d00042d42d0000007d20e9b9a3e87aa1ec17cb4d646ce9a5",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
