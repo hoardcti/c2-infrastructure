@@ -11,6 +11,7 @@ import (
 	"net/url"
 	"strconv"
 	"strings"
+	"syscall"
 	"time"
 
 	"golang.org/x/time/rate"
@@ -199,10 +200,10 @@ type Request struct {
 // wrapping ErrUnavailable. Fetch is only for read-only requests, which are safe to repeat:
 // GETs, and POSTs that upstreams document as queries.
 //
-// 429, 502, 503 and 504 responses are retried up to DEFAULT_MAX_RETRIES times, waiting for
-// the upstream's Retry-After or for an exponential backoff with jitter. A Retry-After longer
-// than MAX_RETRY_AFTER isn't waited for. Network errors aren't retried, because the request
-// may already have reached the upstream. Cancelling ctx stops any wait.
+// 429, 502, 503 and 504 responses, and connections dropped mid-request (EOF, reset), are
+// retried up to DEFAULT_MAX_RETRIES times, waiting for the upstream's Retry-After or for an
+// exponential backoff with jitter. A Retry-After longer than MAX_RETRY_AFTER isn't waited for.
+// Other network errors, such as timeouts, aren't retried. Cancelling ctx stops any wait.
 func (upstream *Upstream) Fetch(ctx context.Context, request Request, maxBodyBytes int64) ([]byte, error) {
 	backoff := upstream.initialBackoff
 
@@ -212,15 +213,20 @@ func (upstream *Upstream) Fetch(ctx context.Context, request Request, maxBodyByt
 		body, err := upstream.send(ctx, request, maxBodyBytes)
 
 		statusError, isStatusError := errors.AsType[*StatusError](err)
-		isRetryable := isStatusError && isRetryableStatus(statusError.StatusCode)
+		isRetryable := isStatusError && isRetryableStatus(statusError.StatusCode) || isDroppedConnection(err)
 
-		if !isRetryable || upstream.maxRetries == attempt || statusError.RetryAfter > MAX_RETRY_AFTER {
+		var retryAfter time.Duration
+		if isStatusError {
+			retryAfter = statusError.RetryAfter
+		}
+
+		if !isRetryable || upstream.maxRetries == attempt || retryAfter > MAX_RETRY_AFTER {
 			return body, err
 		}
 
 		// Wait for the upstream's requested delay, or the backoff plus up to as much again of
 		// random jitter, so sources that fail together don't retry in lockstep.
-		wait := statusError.RetryAfter
+		wait := retryAfter
 		if 0 == wait {
 			wait = backoff + rand.N(backoff) //nolint:gosec // G404: jitter needs no cryptographic randomness.
 		}
@@ -244,6 +250,14 @@ func (upstream *Upstream) Fetch(ctx context.Context, request Request, maxBodyByt
 // response.
 func (upstream *Upstream) send(ctx context.Context, request Request, maxBodyBytes int64) ([]byte, error) {
 	if err := upstream.limiter.Wait(ctx); nil != err {
+		// Wait refuses at once when the next slot falls after ctx's deadline, before the deadline
+		// has passed. Callers tell a used-up time budget from a failed request by ctx.Err(), so
+		// wait out the few seconds left and report the deadline, not an error about the address.
+		if nil == ctx.Err() {
+			<-ctx.Done()
+			err = ctx.Err()
+		}
+
 		return nil, fmt.Errorf("waiting for rate limiter: %w", err)
 	}
 
@@ -339,6 +353,15 @@ func parseRetryAfter(value string) time.Duration {
 	}
 
 	return 0
+}
+
+// isDroppedConnection reports whether err means the connection broke before a complete response
+// arrived, such as an EOF from a server that closed an idle keep-alive connection. Fetch is only
+// for read-only requests, so repeating one that may have reached the upstream is safe. Timeouts
+// aren't included: a server that hangs would stall the run for every retry.
+func isDroppedConnection(err error) bool {
+	return errors.Is(err, ErrUnavailable) &&
+		(errors.Is(err, io.EOF) || errors.Is(err, io.ErrUnexpectedEOF) || errors.Is(err, syscall.ECONNRESET))
 }
 
 // isRetryableStatus reports whether an HTTP status is worth retrying: rate limiting or a

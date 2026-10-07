@@ -380,6 +380,74 @@ func TestUpstreamFetchRateLimit(test *testing.T) {
 	})
 }
 
+// TestUpstreamFetchRateLimitPastDeadline checks that a request whose limiter slot falls after
+// the context's deadline fails once the deadline has passed, so callers see the context as done
+// instead of a failure that belongs to the request.
+func TestUpstreamFetchRateLimitPastDeadline(test *testing.T) {
+	test.Parallel()
+
+	synctest.Test(test, func(test *testing.T) {
+		transport := &fakeTransport{statuses: []int{http.StatusOK}}
+		upstream := newTestUpstream(test, transport, 1)
+		request := Request{Method: http.MethodGet, URL: "https://example.com/"}
+
+		if _, err := upstream.Fetch(test.Context(), request, 1024); nil != err {
+			test.Fatalf("Fetch() error = %v, want nil", err)
+		}
+
+		// At 1 a minute the next slot is a minute away, well after this deadline.
+		ctx, cancel := context.WithTimeout(test.Context(), 5*time.Second)
+		defer cancel()
+
+		_, err := upstream.Fetch(ctx, request, 1024)
+		if !errors.Is(err, context.DeadlineExceeded) || nil == ctx.Err() {
+			test.Errorf("Fetch() error = %v, ctx.Err() = %v, want the deadline reported once it has passed", err, ctx.Err())
+		}
+	})
+}
+
+// droppingTransport fails its first drops requests with err, then answers 200 OK.
+type droppingTransport struct {
+	drops    int
+	err      error
+	requests int
+}
+
+// RoundTrip drops or answers request.
+func (transport *droppingTransport) RoundTrip(request *http.Request) (*http.Response, error) {
+	transport.requests++
+	if transport.requests <= transport.drops {
+		return nil, transport.err
+	}
+
+	return &http.Response{StatusCode: http.StatusOK, Body: io.NopCloser(strings.NewReader("ok")), Request: request}, nil
+}
+
+// TestUpstreamFetchRetriesDroppedConnection checks that an EOF, such as from a closed idle
+// connection, is retried, while a failure that persists is reported once retries run out.
+func TestUpstreamFetchRetriesDroppedConnection(test *testing.T) {
+	test.Parallel()
+
+	synctest.Test(test, func(test *testing.T) {
+		request := Request{Method: http.MethodGet, URL: "https://example.com/"}
+
+		transport := &droppingTransport{drops: 1, err: io.EOF}
+		upstream := newTestUpstream(test, transport, TEST_REQUESTS_PER_MINUTE)
+
+		body, err := upstream.Fetch(test.Context(), request, 1024)
+		if nil != err || "ok" != string(body) || 2 != transport.requests {
+			test.Errorf("Fetch() = %q, %v after %d requests, want ok after 2", body, err, transport.requests)
+		}
+
+		transport = &droppingTransport{drops: 100, err: io.EOF}
+		upstream = newTestUpstream(test, transport, TEST_REQUESTS_PER_MINUTE)
+
+		if _, err := upstream.Fetch(test.Context(), request, 1024); !errors.Is(err, ErrUnavailable) || DEFAULT_MAX_RETRIES+1 != transport.requests {
+			test.Errorf("Fetch() error = %v after %d requests, want ErrUnavailable after %d", err, transport.requests, DEFAULT_MAX_RETRIES+1)
+		}
+	})
+}
+
 // TestUpstreamFetchRetryAfterDate checks that a Retry-After given as an HTTP date is honoured.
 func TestUpstreamFetchRetryAfterDate(test *testing.T) {
 	test.Parallel()
