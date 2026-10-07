@@ -1,0 +1,296 @@
+{
+    "schema_version": 2,
+    "ip": "45.55.202.73",
+    "first_seen": "2026-10-07T08:21:09Z",
+    "last_seen": "2026-10-07T08:21:09Z",
+    "flags": [
+        "remus"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-07T08:23:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T08:23:24Z",
+                    "last_observed": "2026-10-07T08:23:24Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "DigitalOcean, LLC",
+                        "domain": "digitalocean.com",
+                        "country_code": "US",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-07T08:21:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T08:21:17Z",
+                    "last_observed": "2026-10-07T08:21:17Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            3000,
+                            3004,
+                            3306,
+                            33060
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:expressjs:express",
+                            "cpe:/a:f5:nginx:1.24.0",
+                            "cpe:/a:getbootstrap:bootstrap",
+                            "cpe:/a:jquery:jquery:1.12.4",
+                            "cpe:/a:nodejs:node.js",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/a:oracle:mysql:8.0.46-0ubuntu0.24.04.4",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "database",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2015-9251",
+                            "CVE-2019-11358",
+                            "CVE-2020-11022",
+                            "CVE-2020-11023",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-07T08:21:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T08:21:16Z",
+                    "last_observed": "2026-10-07T08:21:16Z",
+                    "data": {
+                        "asn": "AS14061",
+                        "as_name": "DigitalOcean, LLC",
+                        "as_domain": "digitalocean.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-07T08:24:42Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T08:24:42Z",
+                    "last_observed": "2026-10-07T08:24:42Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS14061 digitalocean  llc",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-07T08:28:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T08:28:41Z",
+                    "last_observed": "2026-10-07T08:28:41Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": "Ubuntu",
+                        "country_code": "US",
+                        "hostnames": [
+                            "admin.myezefind.com",
+                            "myezefind.com"
+                        ],
+                        "domains": [
+                            "myezefind.com"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "database",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2015-9251",
+                            "CVE-2019-11358",
+                            "CVE-2020-11022",
+                            "CVE-2020-11023",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "EZE-FIND - Dashboard",
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "30d037693c4fa01e82e858d0b1c805e5926021bacaf160ee2d63a7bbf6b61c80",
+                                "certificate_subject": "myezefind.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 3000,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "MY EZEFIND | Index"
+                            },
+                            {
+                                "port": 3004,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Error"
+                            },
+                            {
+                                "port": 3306,
+                                "transport": "tcp",
+                                "product": "MySQL",
+                                "version": "8.0.46-0ubuntu0.24.04.4",
+                                "tags": [
+                                    "cloud",
+                                    "database",
+                                    "eol-product"
+                                ]
+                            },
+                            {
+                                "port": 33060,
+                                "transport": "tcp",
+                                "product": "MySQL X Protocol",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-07T08:21:15Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-07T08:21:09Z",
+            "observations": [
+                {
+                    "key": "1955703",
+                    "first_observed": "2026-10-07T08:21:09Z",
+                    "last_observed": "2026-10-07T08:21:09Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "ioc": "45.55.202.73:9932",
+                        "port": 9932,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remus",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-07T04:37:50Z",
+                        "reference": null,
+                        "tags": [
+                            "5a4378fb90db39f09c7b18d1f314e645",
+                            "Remus",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "virustotal": {
+            "last_checked": "2026-10-07T08:30:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T08:30:46Z",
+                    "last_observed": "2026-10-07T08:30:46Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "45.55.0.0/16",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 39,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

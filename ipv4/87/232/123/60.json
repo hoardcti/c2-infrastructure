@@ -1,0 +1,241 @@
+{
+    "schema_version": 2,
+    "ip": "87.232.123.60",
+    "first_seen": "2026-10-07T08:21:09Z",
+    "last_seen": "2026-10-07T08:21:09Z",
+    "flags": [
+        "remus"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-07T08:23:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T08:23:28Z",
+                    "last_observed": "2026-10-07T08:23:28Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Datagio Systems Ltd.",
+                        "domain": "datagio.net",
+                        "country_code": "FI",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-07T08:21:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T08:21:19Z",
+                    "last_observed": "2026-10-07T08:21:19Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            443
+                        ],
+                        "hostnames": [
+                            "app.plgrind.homes"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.18.0",
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-07T08:21:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T08:21:16Z",
+                    "last_observed": "2026-10-07T08:21:16Z",
+                    "data": {
+                        "asn": "AS198550",
+                        "as_name": "NODE HOST LIMITED",
+                        "as_domain": "nodehost.ru",
+                        "country_code": "FI",
+                        "country": "Finland",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-07T08:24:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T08:24:46Z",
+                    "last_observed": "2026-10-07T08:24:46Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS34245 magnet networks limited",
+                        "country_code": "IE",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-07T08:28:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T08:28:45Z",
+                    "last_observed": "2026-10-07T08:28:45Z",
+                    "data": {
+                        "org": "Datagio Systems Ltd.",
+                        "isp": "nodehost-as NODE HOST LIMITED",
+                        "asn": "AS198550",
+                        "os": "Linux",
+                        "country_code": "IE",
+                        "hostnames": [
+                            "app.plgrind.homes"
+                        ],
+                        "domains": [
+                            "plgrind.homes"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "404 Not Found",
+                                "jarm": "2ad2ad0002ad2ad00042d42d000000301510f56407964db9434a9bb0d4ee4a",
+                                "certificate_sha256": "513660773cc5ff4a5dd19fcad61bf2371fad8d59ff850c45da8af9f901b8d711",
+                                "certificate_subject": "CloudFlare Origin Certificate",
+                                "certificate_organisation": "CloudFlare, Inc."
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-07T08:21:15Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-07T08:21:09Z",
+            "observations": [
+                {
+                    "key": "1956018",
+                    "first_observed": "2026-10-07T08:21:09Z",
+                    "last_observed": "2026-10-07T08:21:09Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "ioc": "87.232.123.60:4326",
+                        "port": 4326,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remus",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-07T04:37:46Z",
+                        "reference": null,
+                        "tags": [
+                            "639d58bc468d7960cf903761cf7acf92",
+                            "Remus",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "virustotal": {
+            "last_checked": "2026-10-07T08:31:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T08:31:16Z",
+                    "last_observed": "2026-10-07T08:31:16Z",
+                    "data": {
+                        "as_owner": "Node Host Limited",
+                        "asn": 198550,
+                        "network": "87.232.123.0/24",
+                        "country": "FI",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 90,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "jarm": "2ad2ad0002ad2ad00042d42d000000301510f56407964db9434a9bb0d4ee4a",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

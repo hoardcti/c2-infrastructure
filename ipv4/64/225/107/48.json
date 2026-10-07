@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "64.225.107.48",
     "first_seen": "2026-09-07T08:58:29.095581Z",
-    "last_seen": "2026-10-07T01:17:29Z",
+    "last_seen": "2026-10-07T08:21:09Z",
     "flags": [
         "aisuru"
     ],
@@ -99,7 +99,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-07T01:17:29Z",
+            "last_checked": "2026-10-07T08:21:09Z",
             "observations": [
                 {
                     "first_observed": "2026-09-07T08:58:29.095581Z",
@@ -120,7 +120,7 @@
                 {
                     "key": "1916019",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-07T01:17:29Z",
+                    "last_observed": "2026-10-07T08:21:09Z",
                     "flags": [
                         "aisuru"
                     ],
@@ -210,6 +210,75 @@
         "urlhaus": {
             "last_checked": "2026-10-05T15:45:29Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-07T08:35:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T08:35:31Z",
+                    "last_observed": "2026-10-07T08:35:31Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "64.225.0.0/17",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 2,
+                            "undetected": 34,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "21d19d00021d21d00042d43d00000056e413178d5f184cc6adfb749623f434",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }
