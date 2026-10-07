@@ -76,12 +76,12 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-10-05T22:24:10Z",
+            "last_checked": "2026-10-07T01:17:36Z",
             "observations": [
                 {
                     "key": "185.19.40.0/24",
                     "first_observed": "2026-10-01T12:19:58Z",
-                    "last_observed": "2026-10-05T22:24:10Z",
+                    "last_observed": "2026-10-07T01:17:36Z",
                     "data": {
                         "cidr": "185.19.40.0/24",
                         "sblid": "SBL694572",
@@ -137,6 +137,59 @@
         "urlhaus": {
             "last_checked": "2026-10-05T06:43:26Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-07T01:28:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T01:28:20Z",
+                    "last_observed": "2026-10-07T01:28:20Z",
+                    "data": {
+                        "as_owner": "1337 Services GmbH",
+                        "asn": 210558,
+                        "network": "185.19.40.0/24",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 1,
+                            "undetected": 36,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

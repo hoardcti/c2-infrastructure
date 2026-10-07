@@ -655,12 +655,12 @@
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-05T22:24:10Z",
+            "last_checked": "2026-10-07T01:17:36Z",
             "observations": [
                 {
                     "key": "93.123.109.0/24",
                     "first_observed": "2026-10-01T12:19:58Z",
-                    "last_observed": "2026-10-05T22:24:10Z",
+                    "last_observed": "2026-10-07T01:17:36Z",
                     "data": {
                         "cidr": "93.123.109.0/24",
                         "sblid": "SBL677469",
@@ -717,6 +717,105 @@
         "urlhaus": {
             "last_checked": "2026-10-05T15:45:01Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-07T01:31:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T01:31:05Z",
+                    "last_observed": "2026-10-07T01:31:05Z",
+                    "data": {
+                        "as_owner": "Techoff Srv Limited",
+                        "asn": 48090,
+                        "network": "93.123.109.0/24",
+                        "country": "BG",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -1,
+                        "analysis_stats": {
+                            "malicious": 12,
+                            "suspicious": 1,
+                            "undetected": 31,
+                            "harmless": 48,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Chong Lua Dao",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "CyRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Forcepoint ThreatSeeker",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Kaspersky",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Sophos",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "27d40d40d00040d00042d43d000000b5ce48eb9aaa95d750e8df42b900e12b",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }
