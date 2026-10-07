@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "204.44.93.119",
     "first_seen": "2026-10-07T08:21:09Z",
-    "last_seen": "2026-10-07T08:21:09Z",
+    "last_seen": "2026-10-07T12:19:33Z",
     "flags": [
         "remcos"
     ],
@@ -593,12 +593,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-07T08:21:09Z",
+            "last_checked": "2026-10-07T12:19:33Z",
             "observations": [
                 {
                     "key": "1955733",
                     "first_observed": "2026-10-07T08:21:09Z",
-                    "last_observed": "2026-10-07T08:21:09Z",
+                    "last_observed": "2026-10-07T12:19:33Z",
                     "flags": [
                         "remcos"
                     ],
@@ -615,6 +615,88 @@
                             "REMOTEHOST",
                             "c2",
                             "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-07T12:20:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T12:20:07Z",
+                    "last_observed": "2026-10-07T12:20:07Z",
+                    "data": {
+                        "urlhaus_reference": "https://urlhaus.abuse.ch/host/204.44.93.119/",
+                        "first_seen": "2026-09-22T11:48:11Z",
+                        "url_count": 5,
+                        "blacklists": {
+                            "spamhaus_dbl": "not listed",
+                            "surbl": "not listed"
+                        },
+                        "urls": [
+                            {
+                                "id": "3920903",
+                                "url": "http://204.44.93.119/96/weneedbestthigns.hta",
+                                "status": "offline",
+                                "date_added": "2026-09-22T11:48:14Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "RemcosRAT",
+                                    "hta",
+                                    "rat"
+                                ]
+                            },
+                            {
+                                "id": "3920904",
+                                "url": "http://204.44.93.119/7EZKsPsM",
+                                "status": "offline",
+                                "date_added": "2026-09-22T11:48:14Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "RemcosRAT",
+                                    "ascii",
+                                    "powershell",
+                                    "ps1",
+                                    "rat"
+                                ]
+                            },
+                            {
+                                "id": "3920905",
+                                "url": "http://204.44.93.119/96/img_034852.png",
+                                "status": "offline",
+                                "date_added": "2026-09-22T11:48:16Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "RemcosRAT",
+                                    "rat",
+                                    "stego"
+                                ]
+                            },
+                            {
+                                "id": "3921664",
+                                "url": "http://204.44.93.119/98/wegoodthingscomebro.hta",
+                                "status": "offline",
+                                "date_added": "2026-09-23T15:38:13Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "RemcosRAT",
+                                    "hta",
+                                    "rat"
+                                ]
+                            },
+                            {
+                                "id": "3921665",
+                                "url": "http://204.44.93.119/98/img_060108.png",
+                                "status": "offline",
+                                "date_added": "2026-09-23T15:38:16Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "RemcosRAT",
+                                    "rat",
+                                    "stego"
+                                ]
+                            }
                         ]
                     }
                 }

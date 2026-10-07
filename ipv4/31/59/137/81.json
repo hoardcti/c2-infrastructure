@@ -1,0 +1,229 @@
+{
+    "schema_version": 2,
+    "ip": "31.59.137.81",
+    "first_seen": "2026-10-07T12:19:33Z",
+    "last_seen": "2026-10-07T12:19:33Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-07T12:20:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T12:20:35Z",
+                    "last_observed": "2026-10-07T12:20:35Z",
+                    "data": {
+                        "abuse_confidence_score": 19,
+                        "total_reports": 35,
+                        "distinct_reporters": 14,
+                        "last_reported_at": "2026-08-14T22:31:47Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "PT Goer Network Indonesia",
+                        "domain": "atharva.co.id",
+                        "country_code": "PL",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-07T12:19:42Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T12:19:42Z",
+                    "last_observed": "2026-10-07T12:19:42Z",
+                    "data": {
+                        "ports": [
+                            135,
+                            139,
+                            445,
+                            3389
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-07T12:19:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T12:19:41Z",
+                    "last_observed": "2026-10-07T12:19:41Z",
+                    "data": {
+                        "asn": "AS215286",
+                        "as_name": "IXROOT LTD",
+                        "as_domain": "ixroot.io",
+                        "country_code": "PL",
+                        "country": "Poland",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-07T12:21:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T12:21:53Z",
+                    "last_observed": "2026-10-07T12:21:53Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS58224 iran telecommunication company pjs",
+                        "country_code": "IR",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-07T12:25:12Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T12:25:12Z",
+                    "last_observed": "2026-10-07T12:25:12Z",
+                    "data": {
+                        "org": "PT Atharva Telematika Persada",
+                        "isp": "IXROOT LTD",
+                        "asn": "AS215286",
+                        "os": null,
+                        "country_code": "PL",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 139,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "79070b3c1ac2a752add86a042ec243d64805942b9f1a1c84ebc2bc6cbc8acef3",
+                                "certificate_subject": "WIN-F6NF7R6I6PJ",
+                                "certificate_issuer": "WIN-F6NF7R6I6PJ"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-07T12:19:41Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-07T12:19:33Z",
+            "observations": [
+                {
+                    "key": "1956243",
+                    "first_observed": "2026-10-07T12:19:33Z",
+                    "last_observed": "2026-10-07T12:19:33Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "31.59.137.81:4565",
+                        "port": 4565,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-07T10:38:20Z",
+                        "reference": null,
+                        "tags": [
+                            "REMOTEHOST",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-07T12:19:47Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-07T12:27:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T12:27:24Z",
+                    "last_observed": "2026-10-07T12:27:24Z",
+                    "data": {
+                        "as_owner": "IXROOT LTD",
+                        "asn": 215286,
+                        "network": "31.59.137.0/24",
+                        "country": "PL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

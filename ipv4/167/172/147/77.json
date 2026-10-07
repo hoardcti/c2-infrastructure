@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "167.172.147.77",
     "first_seen": "2026-09-07T08:58:29.095513Z",
-    "last_seen": "2026-10-07T08:21:09Z",
+    "last_seen": "2026-10-07T12:19:33Z",
     "flags": [
         "aisuru"
     ],
@@ -302,7 +302,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-07T08:21:09Z",
+            "last_checked": "2026-10-07T12:19:33Z",
             "observations": [
                 {
                     "first_observed": "2026-09-07T08:58:29.095513Z",
@@ -323,7 +323,7 @@
                 {
                     "key": "1916995",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-07T08:21:09Z",
+                    "last_observed": "2026-10-07T12:19:33Z",
                     "flags": [
                         "aisuru"
                     ],
@@ -345,7 +345,7 @@
                 {
                     "key": "1916702",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-07T08:21:09Z",
+                    "last_observed": "2026-10-07T12:19:33Z",
                     "flags": [
                         "aisuru"
                     ],
@@ -391,6 +391,70 @@
         "urlhaus": {
             "last_checked": "2026-10-05T15:45:35Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-07T12:28:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-07T12:28:39Z",
+                    "last_observed": "2026-10-07T12:28:39Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "167.172.0.0/16",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -12,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 2,
+                            "undetected": 36,
+                            "harmless": 50,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Chong Lua Dao",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 2
+                        },
+                        "tags": [],
+                        "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }
