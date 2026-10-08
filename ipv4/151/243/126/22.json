@@ -2,8 +2,9 @@
     "schema_version": 2,
     "ip": "151.243.126.22",
     "first_seen": "2026-09-14T11:57:26.200028Z",
-    "last_seen": "2026-10-08T01:38:31Z",
+    "last_seen": "2026-10-08T08:37:09Z",
     "flags": [
+        "craxsrat",
         "sliver"
     ],
     "sources": {
@@ -546,7 +547,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-08T01:38:31Z",
+            "last_checked": "2026-10-08T08:37:09Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200028Z",
@@ -567,7 +568,7 @@
                 {
                     "key": "1917537",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-08T01:38:31Z",
+                    "last_observed": "2026-10-08T08:37:09Z",
                     "flags": [
                         "sliver"
                     ],
@@ -584,6 +585,52 @@
                             "c2",
                             "shodan",
                             "sliver"
+                        ]
+                    }
+                },
+                {
+                    "key": "1956999",
+                    "first_observed": "2026-10-08T08:37:09Z",
+                    "last_observed": "2026-10-08T08:37:09Z",
+                    "flags": [
+                        "craxsrat"
+                    ],
+                    "data": {
+                        "ioc": "151.243.126.22:9443",
+                        "port": 9443,
+                        "threat_type": "botnet_cc",
+                        "malware": "CraxsRAT",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/apk.craxs_rat",
+                        "confidence_level": 75,
+                        "first_seen": "2026-10-08T06:26:07Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "craxsrat",
+                            "shodan"
+                        ]
+                    }
+                },
+                {
+                    "key": "1956998",
+                    "first_observed": "2026-10-08T08:37:09Z",
+                    "last_observed": "2026-10-08T08:37:09Z",
+                    "flags": [
+                        "craxsrat"
+                    ],
+                    "data": {
+                        "ioc": "151.243.126.22:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "CraxsRAT",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/apk.craxs_rat",
+                        "confidence_level": 75,
+                        "first_seen": "2026-10-08T06:26:06Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "craxsrat",
+                            "shodan"
                         ]
                     }
                 }

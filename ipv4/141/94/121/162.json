@@ -156,6 +156,67 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-08T08:43:47Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-08T08:43:47Z",
+                    "last_observed": "2026-10-08T08:43:47Z",
+                    "data": {
+                        "org": "OVH SAS",
+                        "isp": "OVH SAS",
+                        "asn": "AS16276",
+                        "os": null,
+                        "country_code": "FR",
+                        "hostnames": [
+                            "vps-9d6d184f.vps.ovh.net"
+                        ],
+                        "domains": [
+                            "ovh.net"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "8f8d792cf7b3bc595042d39cd85a85a1db66713b32c7634b9aeea81b5965f6d8",
+                                "certificate_subject": "WIN-QG3BOSS97PK",
+                                "certificate_issuer": "WIN-QG3BOSS97PK"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            },
+                            {
+                                "port": 9000,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-08T01:38:38Z",
             "observations": []

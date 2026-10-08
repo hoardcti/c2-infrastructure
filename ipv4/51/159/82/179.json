@@ -70,6 +70,56 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-08T08:45:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-08T08:45:21Z",
+                    "last_observed": "2026-10-08T08:45:21Z",
+                    "data": {
+                        "org": "Scaleway",
+                        "isp": "Scaleway SAS",
+                        "asn": "AS12876",
+                        "os": null,
+                        "country_code": "FR",
+                        "hostnames": [
+                            "179-82-159-51.instances.scw.cloud"
+                        ],
+                        "domains": [
+                            "scw.cloud"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u10"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "40d40d40d00000000043d40d40d43da936ab0256fab25eca082941d14e3ece",
+                                "certificate_sha256": "69110a866c948a9dc5ee7629edc2a705fb7c973a43a6aaa95c03c2224bfe343d",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "http_title": "Error"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-08T01:38:38Z",
             "observations": []

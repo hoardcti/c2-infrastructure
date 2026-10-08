@@ -82,6 +82,123 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-08T08:45:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-08T08:45:15Z",
+                    "last_observed": "2026-10-08T08:45:15Z",
+                    "data": {
+                        "org": "Contabo GmbH",
+                        "isp": "Contabo GmbH",
+                        "asn": "AS51167",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "certbot.com.br",
+                            "smtp-campanha.next4sec.com"
+                        ],
+                        "domains": [
+                            "certbot.com.br",
+                            "next4sec.com"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 110,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "03e6963cbe2ca63672a241d4c0718fe049e093ee3f5d2183a876e18d588dd2e1",
+                                "certificate_subject": "n4secsecmailphs",
+                                "certificate_issuer": "n4secsecmailphs"
+                            },
+                            {
+                                "port": 143,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "03e6963cbe2ca63672a241d4c0718fe049e093ee3f5d2183a876e18d588dd2e1",
+                                "certificate_subject": "n4secsecmailphs",
+                                "certificate_issuer": "n4secsecmailphs"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "9aca94fd58487d3ea1561ddb33cddd9079056367b71f4216ab4a0d6ecf77d28e",
+                                "certificate_subject": "certbot.com.br",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 993,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "07d3fd1ad21d21d00042d43d0000005aa9877b7a5d6a671d1e56af48dc9ce6",
+                                "certificate_sha256": "03e6963cbe2ca63672a241d4c0718fe049e093ee3f5d2183a876e18d588dd2e1",
+                                "certificate_subject": "n4secsecmailphs",
+                                "certificate_issuer": "n4secsecmailphs"
+                            },
+                            {
+                                "port": 995,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "1d2e80c55766df8f4a78fd6ad51fe7535b949ba4a650e050ea1a5b8a41970263",
+                                "certificate_organisation": "Internet Widgits Pty Ltd"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-08T01:38:38Z",
             "observations": []
