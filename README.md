@@ -21,20 +21,20 @@ It is intended for:
 
 There are two kinds of source. **Feeds** list C2 servers and add IPs to the dataset. **Enrichers** look up IPs already in the dataset and describe them; they never add IPs.
 
-| Source | Kind | Status | Data | Key |
-|---|---|---|---|---|
-| [ThreatFox (abuse.ch)](https://threatfox.abuse.ch/) | Feed | Active | `ip:port` IOCs tagged `c2`: malware family, port, threat type, confidence, first seen, Malpedia link, reference, tags | `ABUSECH_API_KEY` |
-| [Feodo Tracker (abuse.ch)](https://feodotracker.abuse.ch/) | Feed | Disabled | Botnet C2 blocklist: malware family, port, status, AS, country, hostname, first seen, last online | None |
-| [ViriBack C2 Tracker](https://tracker.viriback.com/) | Feed | Disabled | C2 panels from the last 30 days: family, panel URL, first seen | None |
-| [Criminal IP C2 Daily Feed](https://github.com/criminalip/C2-Daily-Feed) | Feed | Disabled | Daily C2 list: family, port, score, country, scan time | None |
-| [Spamhaus DROP](https://www.spamhaus.org/blocklists/do-not-route-or-peer/) | Enricher | Active | Whether the IP lies in a hijacked or criminal netblock, with its SBL record | None |
-| [IPinfo Lite](https://ipinfo.io/lite) | Enricher | Active | ASN, AS name and domain, country, continent | `IPINFO_TOKEN` |
-| [Shodan InternetDB](https://internetdb.shodan.io/) | Enricher | Active | Open ports, hostnames, CPEs, Shodan tags, CVEs | None |
-| [URLhaus (abuse.ch)](https://urlhaus.abuse.ch/) | Enricher | Active | Malware download URLs hosted on the IP | `ABUSECH_API_KEY` |
-| [AbuseIPDB](https://www.abuseipdb.com/) | Enricher | Active | Abuse confidence score, report counts, usage type, ISP | `ABUSEIPDB_API_KEY` |
-| [AlienVault OTX](https://otx.alienvault.com/) | Enricher | Active | Pulses mentioning the IP, with malware families, tags and TLP | `OTX_API_KEY` |
-| [Shodan](https://www.shodan.io/) | Enricher | Active | Services with product, version, HTTP title, TLS certificate and JARM | `SHODAN_API_KEY` |
-| [VirusTotal](https://www.virustotal.com/) | Enricher | Active | Vendor verdicts, reputation, network, JARM, partner notes | `VIRUSTOTAL_API_KEY` |
+| Source | Kind | Status | Data |
+|---|---|---|---|
+| [ThreatFox (abuse.ch)](https://threatfox.abuse.ch/) | Feed | Active | `ip:port` IOCs tagged `c2`: malware family, port, threat type, confidence, first seen, Malpedia link, reference, tags |
+| [Feodo Tracker (abuse.ch)](https://feodotracker.abuse.ch/) | Feed | Disabled | Botnet C2 blocklist: malware family, port, status, AS, country, hostname, first seen, last online |
+| [ViriBack C2 Tracker](https://tracker.viriback.com/) | Feed | Disabled | C2 panels from the last 30 days: family, panel URL, first seen |
+| [Criminal IP C2 Daily Feed](https://github.com/criminalip/C2-Daily-Feed) | Feed | Disabled | Daily C2 list: family, port, score, country, scan time |
+| [Spamhaus DROP](https://www.spamhaus.org/blocklists/do-not-route-or-peer/) | Enricher | Active | Whether the IP lies in a hijacked or criminal netblock, with its SBL record |
+| [IPinfo Lite](https://ipinfo.io/lite) | Enricher | Active | ASN, AS name and domain, country, continent |
+| [Shodan InternetDB](https://internetdb.shodan.io/) | Enricher | Active | Open ports, hostnames, CPEs, Shodan tags, CVEs |
+| [URLhaus (abuse.ch)](https://urlhaus.abuse.ch/) | Enricher | Active | Malware download URLs hosted on the IP |
+| [AbuseIPDB](https://www.abuseipdb.com/) | Enricher | Active | Abuse confidence score, report counts, usage type, ISP |
+| [AlienVault OTX](https://otx.alienvault.com/) | Enricher | Active | Pulses mentioning the IP, with malware families, tags and TLP |
+| [Shodan](https://www.shodan.io/) | Enricher | Active | Services with product, version, HTTP title, TLS certificate and JARM |
+| [VirusTotal](https://www.virustotal.com/) | Enricher | Active | Vendor verdicts, reputation, network, JARM, partner notes |
 
 Every source is listed in [`sources.json`](sources.json) with an explicit `enabled` flag; disabled sources are implemented and tested but switched off. Why these sources were chosen, and why others weren't, is in [`research.md`](research.md). How to get each key, and each service's limits and pricing, is in [`KEY.md`](KEY.md).
 
@@ -118,32 +118,6 @@ Every run, each source's reports are merged into the IP's file without overwriti
 ### Migration from version 1
 
 Files written before this format (`{ip, flags, results}`) are read and converted on the first run: every old result becomes an observation with its original metadata kept exactly as it was, and no `key`. Nothing is lost. The next report from the same source starts a new, keyed observation beside it, because version 1 didn't record what each result was about.
-
-## Installation
-
-This module is designed to run on GitHub Actions workers, so there is nothing to install to consume its data. The workflow in [`.github/workflows/`](.github/workflows/) builds and runs it every hour, commits the records to the `data` branch and updates [`stats.json`](stats.json) on `main`.
-
-To run it on a fork, add these repository secrets. [`KEY.md`](KEY.md) explains how to get each one:
-
-| Secret | Purpose |
-|---|---|
-| `ABUSECH_API_KEY` | abuse.ch Auth-Key, for ThreatFox and URLhaus |
-| `IPINFO_TOKEN` | IPinfo token, for IPinfo Lite |
-| `VIRUSTOTAL_API_KEY` | VirusTotal key |
-| `ABUSEIPDB_API_KEY` | AbuseIPDB key |
-| `OTX_API_KEY` | AlienVault OTX key |
-| `SHODAN_API_KEY` | Shodan key |
-| `BOT_PAT` | Token with write access, used to push to the `data` and `main` branches |
-
-A source whose key is missing stops the run with a configuration error, so either add its secret or disable it in `sources.json`.
-
-For local development, build from source. `go.mod` pins Go 1.27.1; with an older Go installed, leave `GOTOOLCHAIN` at its default (`auto`) and the `go` command downloads the pinned version:
-
-```bash
-git clone https://github.com/hoardcti/c2-infrastructure.git
-cd c2-infrastructure
-make build
-```
 
 ## Usage
 
