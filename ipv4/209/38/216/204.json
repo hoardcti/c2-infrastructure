@@ -1,0 +1,225 @@
+{
+    "schema_version": 2,
+    "ip": "209.38.216.204",
+    "first_seen": "2026-10-08T16:13:45Z",
+    "last_seen": "2026-10-08T16:13:45Z",
+    "flags": [
+        "aisuru"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-08T16:16:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-08T16:16:46Z",
+                    "last_observed": "2026-10-08T16:16:46Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2026-05-17T13:06:02Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "DigitalOcean, LLC",
+                        "domain": "digitalocean.com",
+                        "country_code": "DE",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-08T16:13:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-08T16:13:56Z",
+                    "last_observed": "2026-10-08T16:13:56Z",
+                    "data": {
+                        "ports": [
+                            22
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-08T16:13:52Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-08T16:13:52Z",
+                    "last_observed": "2026-10-08T16:13:52Z",
+                    "data": {
+                        "asn": "AS14061",
+                        "as_name": "DigitalOcean, LLC",
+                        "as_domain": "digitalocean.com",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-08T16:18:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-08T16:18:04Z",
+                    "last_observed": "2026-10-08T16:18:04Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "US",
+                        "pulse_count": 2,
+                        "pulses": [
+                            {
+                                "id": "699e8445c163fa8ad75c39b6",
+                                "name": "Malware Filter - Botnet List - 24-02-2026 (Part 3)",
+                                "created": "2026-02-25T05:10:29.81Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a0d6f11ffec64434f5f63c6",
+                                "name": "Vultr Melbourne (Australia) Port Scanning Hosts for 2026-05-19",
+                                "created": "2026-05-20T08:21:37.934Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners",
+                                    "vultr"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-08T16:22:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-08T16:22:04Z",
+                    "last_observed": "2026-10-08T16:22:04Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": "Linux",
+                        "country_code": "DE",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-08T16:13:52Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-08T16:13:45Z",
+            "observations": [
+                {
+                    "key": "1957109",
+                    "first_observed": "2026-10-08T16:13:45Z",
+                    "last_observed": "2026-10-08T16:13:45Z",
+                    "flags": [
+                        "aisuru"
+                    ],
+                    "data": {
+                        "ioc": "209.38.216.204:8001",
+                        "port": 8001,
+                        "threat_type": "botnet_cc",
+                        "malware": "Aisuru",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-08T14:06:19Z",
+                        "reference": null,
+                        "tags": [
+                            "AISURU",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-08T16:15:58Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-08T16:24:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-08T16:24:41Z",
+                    "last_observed": "2026-10-08T16:24:41Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "209.38.0.0/16",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 2,
+                            "undetected": 36,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "40d40d40d00040d00040d40d40d40d19c87d867c7769d680e54b71c8f5e7c4",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
