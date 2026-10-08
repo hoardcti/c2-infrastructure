@@ -122,7 +122,7 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-10-07T01:17:36Z",
+            "last_checked": "2026-10-08T01:38:38Z",
             "observations": []
         },
         "threatfox": {
@@ -152,6 +152,75 @@
                 "message": "querying URLhaus: sending request to \"https://urlhaus-api.abuse.ch/v1/host/\": the upstream is unavailable: EOF"
             },
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-08T01:48:12Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-08T01:48:12Z",
+                    "last_observed": "2026-10-08T01:48:12Z",
+                    "data": {
+                        "as_owner": "Kamatera, Inc.",
+                        "asn": 36007,
+                        "network": "103.6.168.0/22",
+                        "country": "SG",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 2,
+                            "undetected": 34,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "jarm": "21d14d00021d21d00042d43d00000091f9827a8676a9d9f27d421962a09b5d",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

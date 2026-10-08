@@ -215,12 +215,12 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-10-07T01:17:36Z",
+            "last_checked": "2026-10-08T01:38:38Z",
             "observations": [
                 {
                     "key": "64.89.160.0/23",
                     "first_observed": "2026-10-01T12:19:58Z",
-                    "last_observed": "2026-10-07T01:17:36Z",
+                    "last_observed": "2026-10-08T01:38:38Z",
                     "data": {
                         "cidr": "64.89.160.0/23",
                         "sblid": "SBL692141",
@@ -230,7 +230,7 @@
                 {
                     "key": "64.89.160.0/22",
                     "first_observed": "2026-10-01T12:19:58Z",
-                    "last_observed": "2026-10-07T01:17:36Z",
+                    "last_observed": "2026-10-08T01:38:38Z",
                     "data": {
                         "cidr": "64.89.160.0/22",
                         "sblid": "SBL692143",
@@ -263,6 +263,135 @@
         "urlhaus": {
             "last_checked": "2026-10-06T09:58:03Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-08T01:47:42Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-08T01:47:42Z",
+                    "last_observed": "2026-10-08T01:47:42Z",
+                    "data": {
+                        "as_owner": "Blatant",
+                        "asn": 403005,
+                        "network": "64.89.160.0/23",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -108,
+                        "analysis_stats": {
+                            "malicious": 16,
+                            "suspicious": 1,
+                            "undetected": 31,
+                            "harmless": 44,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Bkav",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Chong Lua Dao",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "CyRadar",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Dr.Web",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "ESET",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Forcepoint ThreatSeeker",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Kaspersky",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Sophos",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "VIPRE",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 3
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Cluster25",
+                                "title": "Activity related to ASYNCRAT",
+                                "severity": "high"
+                            },
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 }

@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "155.103.70.232",
     "first_seen": "2026-09-01T13:09:00.527171Z",
-    "last_seen": "2026-10-07T21:49:42Z",
+    "last_seen": "2026-10-08T01:38:31Z",
     "flags": [
         "remcos"
     ],
@@ -144,12 +144,12 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-10-07T01:17:36Z",
+            "last_checked": "2026-10-08T01:38:38Z",
             "observations": [
                 {
                     "key": "155.103.68.0/22",
                     "first_observed": "2026-10-01T12:19:58Z",
-                    "last_observed": "2026-10-07T01:17:36Z",
+                    "last_observed": "2026-10-08T01:38:38Z",
                     "data": {
                         "cidr": "155.103.68.0/22",
                         "sblid": "SBL698394",
@@ -159,7 +159,7 @@
             ]
         },
         "threatfox": {
-            "last_checked": "2026-10-07T21:49:42Z",
+            "last_checked": "2026-10-08T01:38:31Z",
             "observations": [
                 {
                     "first_observed": "2026-09-01T13:09:00.527171Z",
@@ -180,7 +180,7 @@
                 {
                     "key": "1942761",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-07T21:49:42Z",
+                    "last_observed": "2026-10-08T01:38:31Z",
                     "flags": [
                         "remcos"
                     ],
@@ -205,6 +205,75 @@
         "urlhaus": {
             "last_checked": "2026-10-06T09:58:01Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-08T01:47:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-08T01:47:28Z",
+                    "last_observed": "2026-10-08T01:47:28Z",
+                    "data": {
+                        "as_owner": "Fiba Cloud Operation Company, LLC",
+                        "asn": 44382,
+                        "network": "155.103.68.0/22",
+                        "country": "TR",
+                        "continent": "AS",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 6,
+                            "suspicious": 1,
+                            "undetected": 34,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "1dd40d40d00040d00042d43d0000007d9a2df75fc17326c15d1e44e597e360",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

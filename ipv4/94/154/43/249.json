@@ -916,12 +916,12 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-10-07T01:17:36Z",
+            "last_checked": "2026-10-08T01:38:38Z",
             "observations": [
                 {
                     "key": "94.154.43.0/24",
                     "first_observed": "2026-10-01T12:19:58Z",
-                    "last_observed": "2026-10-07T01:17:36Z",
+                    "last_observed": "2026-10-08T01:38:38Z",
                     "data": {
                         "cidr": "94.154.43.0/24",
                         "sblid": "SBL699296",
@@ -963,6 +963,121 @@
                         "id": "1888320",
                         "ioc": "94.154.43.249:8001",
                         "threat_type": "botnet_cc"
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-08T01:38:57Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-08T01:38:57Z",
+                    "last_observed": "2026-10-08T01:38:57Z",
+                    "data": {
+                        "urlhaus_reference": "https://urlhaus.abuse.ch/host/94.154.43.249/",
+                        "first_seen": "2026-08-01T17:10:07Z",
+                        "url_count": 7,
+                        "blacklists": {
+                            "spamhaus_dbl": "not listed",
+                            "surbl": "not listed"
+                        },
+                        "urls": [
+                            {
+                                "id": "3895199",
+                                "url": "http://94.154.43.249:8080/xmr_miner_x64",
+                                "status": "offline",
+                                "date_added": "2026-08-01T17:10:11Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "elf",
+                                    "mirai",
+                                    "opendir",
+                                    "ua-wget",
+                                    "x86"
+                                ]
+                            },
+                            {
+                                "id": "3895200",
+                                "url": "http://94.154.43.249:8080/xmr_miner_arm64",
+                                "status": "offline",
+                                "date_added": "2026-08-01T17:10:11Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "elf",
+                                    "mirai",
+                                    "opendir",
+                                    "ua-wget",
+                                    "x86"
+                                ]
+                            },
+                            {
+                                "id": "3895201",
+                                "url": "http://94.154.43.249:8080/xmrig_x64",
+                                "status": "offline",
+                                "date_added": "2026-08-01T17:10:12Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "elf",
+                                    "mirai",
+                                    "opendir",
+                                    "ua-wget",
+                                    "x86"
+                                ]
+                            },
+                            {
+                                "id": "3897180",
+                                "url": "http://94.154.43.249/gg11",
+                                "status": "offline",
+                                "date_added": "2026-08-05T06:40:27Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "elf",
+                                    "iot",
+                                    "ua-wget"
+                                ]
+                            },
+                            {
+                                "id": "3898216",
+                                "url": "http://94.154.43.249/gg10",
+                                "status": "offline",
+                                "date_added": "2026-08-06T19:57:20Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "94-154-43-249",
+                                    "DDoSAgent",
+                                    "DEU",
+                                    "elf",
+                                    "geofenced"
+                                ]
+                            },
+                            {
+                                "id": "3898217",
+                                "url": "http://94.154.43.249/gg2",
+                                "status": "offline",
+                                "date_added": "2026-08-06T19:57:20Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "94-154-43-249",
+                                    "DDoSAgent",
+                                    "DEU",
+                                    "elf",
+                                    "geofenced"
+                                ]
+                            },
+                            {
+                                "id": "3907370",
+                                "url": "http://94.154.43.249:98/bot",
+                                "status": "offline",
+                                "date_added": "2026-08-24T03:21:19Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "aisuru",
+                                    "elf",
+                                    "opendir",
+                                    "ua-wget"
+                                ]
+                            }
+                        ]
                     }
                 }
             ]
