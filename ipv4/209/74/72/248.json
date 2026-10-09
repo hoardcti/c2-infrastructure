@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "209.74.72.248",
     "first_seen": "2026-09-14T11:57:26.20002Z",
-    "last_seen": "2026-10-09T01:51:49Z",
+    "last_seen": "2026-10-09T08:42:38Z",
     "flags": [
         "sliver"
     ],
@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-01T16:13:20Z",
+            "last_checked": "2026-10-09T08:43:27Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T16:13:20Z",
@@ -44,6 +44,37 @@
                             55555
                         ],
                         "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.18.0",
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "c2",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-09T08:43:27Z",
+                    "last_observed": "2026-10-09T08:43:27Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443,
+                            31337,
+                            55555
+                        ],
+                        "hostnames": [
+                            "englewoodindependent.com"
+                        ],
                         "cpes": [
                             "cpe:/a:f5:nginx:1.18.0",
                             "cpe:/a:openbsd:openssh:8.9p1",
@@ -110,7 +141,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-09T01:51:49Z",
+            "last_checked": "2026-10-09T08:42:38Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.20002Z",
@@ -131,7 +162,7 @@
                 {
                     "key": "1917538",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-09T01:51:49Z",
+                    "last_observed": "2026-10-09T08:42:38Z",
                     "flags": [
                         "sliver"
                     ],

@@ -1,0 +1,191 @@
+{
+    "schema_version": 2,
+    "ip": "172.111.139.12",
+    "first_seen": "2026-10-09T08:42:38Z",
+    "last_seen": "2026-10-09T08:42:38Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-09T08:45:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-09T08:45:41Z",
+                    "last_observed": "2026-10-09T08:45:41Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2024-10-22T12:54:28Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Internet Security - US NY",
+                        "domain": "pointtoserver.com",
+                        "country_code": "US",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-09T08:42:50Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-09T08:42:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-09T08:42:46Z",
+                    "last_observed": "2026-10-09T08:42:46Z",
+                    "data": {
+                        "asn": "AS212238",
+                        "as_name": "Datacamp Limited",
+                        "as_domain": "datacamp.co.uk",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-09T08:46:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-09T08:46:59Z",
+                    "last_observed": "2026-10-09T08:46:59Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS9009 m247 ltd",
+                        "country_code": "US",
+                        "pulse_count": 2,
+                        "pulses": [
+                            {
+                                "id": "672f6ed2b564f00b7c5cb13f",
+                                "name": "Threatfox Recent Additions",
+                                "created": "2024-11-09T14:16:50.032Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a5e28c60876ef7822a6dce3",
+                                "name": "Nov9,,2024-May14,2025 credit ameermane title Threatfox Recent Additions",
+                                "created": "2026-07-20T13:55:18.967Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-09T08:50:59Z",
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-09T08:42:45Z",
+            "observations": [
+                {
+                    "key": "172.111.128.0/17",
+                    "first_observed": "2026-10-09T08:42:45Z",
+                    "last_observed": "2026-10-09T08:42:45Z",
+                    "data": {
+                        "cidr": "172.111.128.0/17",
+                        "sblid": "SBL688605",
+                        "rir": "arin"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-09T08:42:38Z",
+            "observations": [
+                {
+                    "key": "1958156",
+                    "first_observed": "2026-10-09T08:42:38Z",
+                    "last_observed": "2026-10-09T08:42:38Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "172.111.139.12:2301",
+                        "port": 2301,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-09T06:04:45Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "nuevos 07",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-09T08:44:53Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-09T08:53:50Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-09T08:53:50Z",
+                    "last_observed": "2026-10-09T08:53:50Z",
+                    "data": {
+                        "as_owner": "Datacamp Limited",
+                        "asn": 212238,
+                        "network": "172.111.139.0/24",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 2,
+                            "undetected": 36,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "2ad2ad0002ad2ad0002ad2ad2ad2ad755a2cec4b52fb1bce1ac7f1e48c8a7d",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

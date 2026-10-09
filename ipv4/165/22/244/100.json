@@ -1,0 +1,229 @@
+{
+    "schema_version": 2,
+    "ip": "165.22.244.100",
+    "first_seen": "2026-10-09T08:42:38Z",
+    "last_seen": "2026-10-09T08:42:38Z",
+    "flags": [
+        "aisuru"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-09T08:45:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-09T08:45:39Z",
+                    "last_observed": "2026-10-09T08:45:39Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2022-08-14T06:34:32Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "DigitalOcean, LLC",
+                        "domain": "digitalocean.com",
+                        "country_code": "SG",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-09T08:42:49Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-09T08:42:49Z",
+                    "last_observed": "2026-10-09T08:42:49Z",
+                    "data": {
+                        "ports": [
+                            22
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:10.0p2",
+                            "cpe:/o:debian:debian_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-09T08:42:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-09T08:42:46Z",
+                    "last_observed": "2026-10-09T08:42:46Z",
+                    "data": {
+                        "asn": "AS14061",
+                        "as_name": "DigitalOcean, LLC",
+                        "as_domain": "digitalocean.com",
+                        "country_code": "SG",
+                        "country": "Singapore",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-09T08:46:57Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-09T08:46:57Z",
+                    "last_observed": "2026-10-09T08:46:57Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS14061 digitalocean  llc",
+                        "country_code": "SG",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-09T08:50:57Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-09T08:50:57Z",
+                    "last_observed": "2026-10-09T08:50:57Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": "Linux",
+                        "country_code": "SG",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.0p2 Debian 7+deb13u4",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-09T08:42:45Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-09T08:42:38Z",
+            "observations": [
+                {
+                    "key": "1957898",
+                    "first_observed": "2026-10-09T08:42:38Z",
+                    "last_observed": "2026-10-09T08:42:38Z",
+                    "flags": [
+                        "aisuru"
+                    ],
+                    "data": {
+                        "ioc": "165.22.244.100:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Aisuru",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-09T06:04:55Z",
+                        "reference": null,
+                        "tags": [
+                            "AISURU",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-09T08:44:51Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-09T08:53:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-09T08:53:35Z",
+                    "last_observed": "2026-10-09T08:53:35Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "165.22.0.0/16",
+                        "country": "SG",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 2,
+                            "undetected": 34,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "21d14d00021d21d00021d14d21d21de904d55e8ce780f79e868c0a413f1c7f",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -99,6 +99,82 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-09T08:51:57Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-09T08:51:57Z",
+                    "last_observed": "2026-10-09T08:51:57Z",
+                    "data": {
+                        "org": "VHOST CO., LTD",
+                        "isp": "Viet Solutions Services Trading Company Limited",
+                        "asn": "AS56150",
+                        "os": "Linux",
+                        "country_code": "VN",
+                        "hostnames": [
+                            "box.nhbox.vn",
+                            "chat.zube.vn",
+                            "java.nhbox.vn",
+                            "market.nhbox.vn",
+                            "newbox.nhbox.vn",
+                            "ninhhiep.vn",
+                            "vps.vietduc"
+                        ],
+                        "domains": [
+                            "nhbox.vn",
+                            "ninhhiep.vn",
+                            "vietduc.",
+                            "zube.vn"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2019-20372",
+                            "CVE-2019-9511",
+                            "CVE-2019-9513",
+                            "CVE-2019-9516",
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.15.12",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.15.12",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "NHBox",
+                                "jarm": "27d40d40d00040d00042d43d0000005a3e96c1dfa4bdb24b8b3c04cae18cc3",
+                                "certificate_sha256": "dabcf19b7694226b77f2ddc9826ea251a64620d26fb61660c5cd69a135085ff7",
+                                "certificate_subject": "box.nhbox.vn",
+                                "certificate_issuer": "YE2"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-09T01:51:57Z",
             "observations": []

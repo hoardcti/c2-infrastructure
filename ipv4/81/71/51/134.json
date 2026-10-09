@@ -84,6 +84,133 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-09T08:52:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-09T08:52:33Z",
+                    "last_observed": "2026-10-09T08:52:33Z",
+                    "data": {
+                        "org": "Tencent Cloud Computing (Beijing) Co., Ltd",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [
+                            "devc.woa.com.wowfantanstic.baby"
+                        ],
+                        "domains": [
+                            "wowfantanstic.baby"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.2p1 Ubuntu 4ubuntu0.13",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Redirecting..."
+                            },
+                            {
+                                "port": 111,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 111,
+                                "transport": "udp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 123,
+                                "transport": "udp",
+                                "product": "ntpd",
+                                "version": "3",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Redirecting...",
+                                "jarm": "15d3fd16d21d21d00042d43d000000fe02290512647416dcf0a400ccbc0b6b",
+                                "certificate_sha256": "bb93c8105707186ef835379eec023ff53a40b36aea16f0e76d23b28c422a323b",
+                                "certificate_subject": "devc.woa.com.wowfantanstic.baby",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 8888,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 9988,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 9999,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "270f2bb98c1505557c4a2993f8be06a6543ec90ad07d7172acbdb8055aec9e41",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-09T01:51:57Z",
             "observations": []

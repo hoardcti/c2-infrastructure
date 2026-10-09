@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "165.227.32.223",
     "first_seen": "2026-09-14T11:57:26.200221Z",
-    "last_seen": "2026-10-09T01:51:49Z",
+    "last_seen": "2026-10-09T08:42:38Z",
     "flags": [
         "sliver"
     ],
@@ -33,7 +33,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-01T13:44:58Z",
+            "last_checked": "2026-10-09T08:43:01Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T13:44:58Z",
@@ -41,6 +41,37 @@
                     "data": {
                         "ports": [
                             22,
+                            443,
+                            31337
+                        ],
+                        "hostnames": [
+                            "scale-test-1778112027292-9c50e734.mongo.ondigitalocean.com",
+                            "suite.humberstaffing.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.24.0",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-09T08:43:01Z",
+                    "last_observed": "2026-10-09T08:43:01Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
                             443,
                             31337
                         ],
@@ -113,7 +144,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-09T01:51:49Z",
+            "last_checked": "2026-10-09T08:42:38Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200221Z",
@@ -134,7 +165,7 @@
                 {
                     "key": "1917512",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-09T01:51:49Z",
+                    "last_observed": "2026-10-09T08:42:38Z",
                     "flags": [
                         "sliver"
                     ],
