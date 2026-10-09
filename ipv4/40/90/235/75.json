@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "40.90.235.75",
     "first_seen": "2026-09-14T11:57:26.200343Z",
-    "last_seen": "2026-10-08T21:53:09Z",
+    "last_seen": "2026-10-09T01:51:49Z",
     "flags": [
         "sliver"
     ],
@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-01T13:44:42Z",
+            "last_checked": "2026-10-09T01:53:49Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T13:44:42Z",
@@ -42,6 +42,48 @@
                             80,
                             443,
                             3389,
+                            31337
+                        ],
+                        "hostnames": [
+                            "denov-priv8.ddns.com.br",
+                            "www.denov-priv8.ddns.com.br"
+                        ],
+                        "cpes": [
+                            "cpe:/a:apache:http_server:2.4.68",
+                            "cpe:/a:openbsd:openssh:10.3p1",
+                            "cpe:/o:debian:debian_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [
+                            "CVE-2007-4723",
+                            "CVE-2009-0796",
+                            "CVE-2009-2299",
+                            "CVE-2011-1176",
+                            "CVE-2011-2688",
+                            "CVE-2012-3526",
+                            "CVE-2012-4001",
+                            "CVE-2012-4360",
+                            "CVE-2013-0941",
+                            "CVE-2013-0942",
+                            "CVE-2013-2765",
+                            "CVE-2013-4365"
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-09T01:53:49Z",
+                    "last_observed": "2026-10-09T01:53:49Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            443,
+                            3389,
+                            8888,
                             31337
                         ],
                         "hostnames": [
@@ -214,11 +256,11 @@
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-08T01:38:38Z",
+            "last_checked": "2026-10-09T01:51:56Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-08T21:53:09Z",
+            "last_checked": "2026-10-09T01:51:49Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.200343Z",
@@ -239,7 +281,7 @@
                 {
                     "key": "1917496",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-08T21:53:09Z",
+                    "last_observed": "2026-10-09T01:51:49Z",
                     "flags": [
                         "sliver"
                     ],

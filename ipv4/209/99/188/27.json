@@ -193,12 +193,12 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-10-08T01:38:38Z",
+            "last_checked": "2026-10-09T01:51:57Z",
             "observations": [
                 {
                     "key": "209.99.184.0/21",
                     "first_observed": "2026-10-01T12:19:58Z",
-                    "last_observed": "2026-10-08T01:38:38Z",
+                    "last_observed": "2026-10-09T01:51:57Z",
                     "data": {
                         "cidr": "209.99.184.0/21",
                         "sblid": "SBL697040",
@@ -231,6 +231,94 @@
         "urlhaus": {
             "last_checked": "2026-10-07T01:19:56Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-09T02:03:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-09T02:03:31Z",
+                    "last_observed": "2026-10-09T02:03:31Z",
+                    "data": {
+                        "as_owner": "SKN Subnet & Telecom Ltd",
+                        "asn": 402253,
+                        "network": "209.99.184.0/21",
+                        "country": "CH",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 9,
+                            "suspicious": 2,
+                            "undetected": 32,
+                            "harmless": 49,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CyRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Dr.Web",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Forcepoint ThreatSeeker",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Sophos",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "VIPRE",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

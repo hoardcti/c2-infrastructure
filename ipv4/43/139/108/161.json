@@ -101,8 +101,85 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-09T02:01:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-09T02:01:31Z",
+                    "last_observed": "2026-10-09T02:01:31Z",
+                    "data": {
+                        "org": "Tencent Cloud Computing (Beijing) Co., Ltd",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "proxy",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 21,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.15",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 7000,
+                                "transport": "tcp",
+                                "product": "Fast Reverse Proxy",
+                                "version": "0.69.0",
+                                "tags": [
+                                    "cloud",
+                                    "proxy"
+                                ],
+                                "jarm": "3fd3fd0003fd3fd00043d43d00043d3bef2bf79cd6719851e8198c1e8f9a14",
+                                "certificate_sha256": "9ab89641b8ff521dd9300fcd613e833c8984a985096c725165a507929ecde08c"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "7d9cadb480b05c944c3a4ba94a8a746d0ecba67c4b5697fcea15a52f3275445a",
+                                "certificate_subject": "Major Cobalt Strike",
+                                "certificate_organisation": "cobaltstrike",
+                                "certificate_issuer": "Major Cobalt Strike"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
-            "last_checked": "2026-10-08T01:38:38Z",
+            "last_checked": "2026-10-09T01:51:57Z",
             "observations": []
         },
         "threatfox": {

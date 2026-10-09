@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "5.175.189.139",
     "first_seen": "2026-09-14T11:57:26.201002Z",
-    "last_seen": "2026-10-08T21:53:09Z",
+    "last_seen": "2026-10-09T01:51:49Z",
     "flags": [
         "unknown malware"
     ],
@@ -33,7 +33,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-01T13:43:22Z",
+            "last_checked": "2026-10-09T01:52:28Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T13:43:22Z",
@@ -41,6 +41,30 @@
                     "data": {
                         "ports": [
                             22,
+                            3333,
+                            6081,
+                            8443,
+                            31337
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:9.2p1",
+                            "cpe:/o:debian:debian_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-09T01:52:28Z",
+                    "last_observed": "2026-10-09T01:52:28Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            2222,
                             3333,
                             6081,
                             8443,
@@ -177,12 +201,12 @@
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-08T01:38:38Z",
+            "last_checked": "2026-10-09T01:51:56Z",
             "observations": [
                 {
                     "key": "5.175.189.0/24",
                     "first_observed": "2026-10-01T12:19:58Z",
-                    "last_observed": "2026-10-08T01:38:38Z",
+                    "last_observed": "2026-10-09T01:51:56Z",
                     "data": {
                         "cidr": "5.175.189.0/24",
                         "sblid": "SBL699033",
@@ -192,7 +216,7 @@
             ]
         },
         "threatfox": {
-            "last_checked": "2026-10-08T21:53:09Z",
+            "last_checked": "2026-10-09T01:51:49Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.201002Z",
@@ -213,7 +237,7 @@
                 {
                     "key": "1917413",
                     "first_observed": "2026-10-01T12:19:51Z",
-                    "last_observed": "2026-10-08T21:53:09Z",
+                    "last_observed": "2026-10-09T01:51:49Z",
                     "flags": [
                         "unknown malware"
                     ],
