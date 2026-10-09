@@ -96,6 +96,176 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-09T20:55:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-09T20:55:21Z",
+                    "last_observed": "2026-10-09T20:55:21Z",
+                    "data": {
+                        "org": "Peramix Inc",
+                        "isp": "Psychz Networks",
+                        "asn": "AS40676",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "eltilichero.online"
+                        ],
+                        "domains": [
+                            "eltilichero.online"
+                        ],
+                        "tags": [
+                            "ai",
+                            "c2",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2025-15514",
+                            "CVE-2026-42248",
+                            "CVE-2026-42249",
+                            "CVE-2026-5757",
+                            "CVE-2026-7482"
+                        ],
+                        "services": [
+                            {
+                                "port": 21,
+                                "transport": "tcp",
+                                "product": "Pure-FTPd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "f88564d3475a2f2fbdd29c56abd20e2ca0098d706080a1f82af39be884d50b17",
+                                "certificate_subject": "2602:fb0f::1c9",
+                                "certificate_organisation": "BT-PANEL",
+                                "certificate_issuer": "2602:fb0f::1c9"
+                            },
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "Sorry, the website has been stopped"
+                            },
+                            {
+                                "port": 110,
+                                "transport": "tcp",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "bd439252adfb534d95892e5466c93fa32368c0e5a5c90efba39bd31006172c1a",
+                                "certificate_subject": "eltilichero.online",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 143,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "Sorry, the website has been stopped",
+                                "jarm": "21d14d00021d21d00042d43d00000091f9827a8676a9d9f27d421962a09b5d",
+                                "certificate_sha256": "cd44f6bdd8e7270702b3c0b016bb7b318013b74b59843b997c269dcf97858f27"
+                            },
+                            {
+                                "port": 465,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "07d19d1ad21d21d07c42d43d000000f50d155305214cf247147c43c0f1a823",
+                                "certificate_sha256": "09875426edae4a6071c7afc99437873ec19dce9d0a70bfb013141f5a1a28690f",
+                                "certificate_subject": "vmid3116",
+                                "certificate_issuer": "vmid3116"
+                            },
+                            {
+                                "port": 587,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "09875426edae4a6071c7afc99437873ec19dce9d0a70bfb013141f5a1a28690f",
+                                "certificate_subject": "vmid3116",
+                                "certificate_issuer": "vmid3116"
+                            },
+                            {
+                                "port": 887,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "302 Found"
+                            },
+                            {
+                                "port": 993,
+                                "transport": "tcp",
+                                "jarm": "07d3fd1ad21d21d00042d43d0000005aa9877b7a5d6a671d1e56af48dc9ce6",
+                                "certificate_sha256": "bd439252adfb534d95892e5466c93fa32368c0e5a5c90efba39bd31006172c1a",
+                                "certificate_subject": "eltilichero.online",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 995,
+                                "transport": "tcp",
+                                "jarm": "07d3fd1ad21d21d00042d43d0000005aa9877b7a5d6a671d1e56af48dc9ce6",
+                                "certificate_sha256": "bd439252adfb534d95892e5466c93fa32368c0e5a5c90efba39bd31006172c1a",
+                                "certificate_subject": "eltilichero.online",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "Gophish - Login"
+                            },
+                            {
+                                "port": 5000,
+                                "transport": "tcp",
+                                "http_title": "Error"
+                            },
+                            {
+                                "port": 11434,
+                                "transport": "tcp",
+                                "product": "Ollama",
+                                "version": "0.13.5",
+                                "tags": [
+                                    "ai"
+                                ]
+                            },
+                            {
+                                "port": 13297,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "302 Found"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-09T01:51:57Z",
             "observations": []

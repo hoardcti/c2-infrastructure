@@ -74,6 +74,64 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-09T20:55:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-09T20:55:39Z",
+                    "last_observed": "2026-10-09T20:55:39Z",
+                    "data": {
+                        "org": "Hetzner Online GmbH",
+                        "isp": "Hetzner Online GmbH",
+                        "asn": "AS24940",
+                        "os": "Ubuntu",
+                        "country_code": "DE",
+                        "hostnames": [
+                            "pain.plesnik.de",
+                            "phish.plesnik.de",
+                            "training.plesnik.de"
+                        ],
+                        "domains": [
+                            "plesnik.de"
+                        ],
+                        "tags": [
+                            "c2",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "c2",
+                                    "eol-product"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "3e943c00636de65b00576641649003976c1f5fd85eed86def60bba81ed01cca9",
+                                "certificate_subject": "phish.plesnik.de",
+                                "certificate_issuer": "YE1"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-09T01:51:57Z",
             "observations": []

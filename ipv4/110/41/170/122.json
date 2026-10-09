@@ -82,6 +82,87 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-09T20:54:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-09T20:54:35Z",
+                    "last_observed": "2026-10-09T20:54:35Z",
+                    "data": {
+                        "org": "Huawei Public Cloud Service (Huawei Software Technologies Ltd.Co)",
+                        "isp": "Huawei Cloud Service data center",
+                        "asn": "AS55990",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [
+                            "ecs-110-41-170-122.compute.hwclouds-dns.com"
+                        ],
+                        "domains": [
+                            "hwclouds-dns.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "database",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-22116",
+                            "CVE-2021-32718",
+                            "CVE-2021-32719",
+                            "CVE-2022-31008",
+                            "CVE-2023-46118"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.2p1 Ubuntu 4ubuntu0.11"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 3306,
+                                "transport": "tcp",
+                                "product": "MySQL",
+                                "version": "5.7.40-log",
+                                "tags": [
+                                    "database",
+                                    "eol-product"
+                                ]
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "Gophish - Login"
+                            },
+                            {
+                                "port": 4369,
+                                "transport": "tcp",
+                                "product": "Erlang Port Mapper Daemon"
+                            },
+                            {
+                                "port": 5672,
+                                "transport": "tcp",
+                                "product": "RabbitMQ",
+                                "version": "3.8.3",
+                                "tags": [
+                                    "eol-product"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-09T01:51:57Z",
             "observations": []

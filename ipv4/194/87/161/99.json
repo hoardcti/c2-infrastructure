@@ -80,6 +80,87 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-09T20:55:43Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-09T20:55:43Z",
+                    "last_observed": "2026-10-09T20:55:43Z",
+                    "data": {
+                        "org": "JSC \"TIMEWEB\"",
+                        "isp": "JSC \"TIMEWEB\"",
+                        "asn": "AS9123",
+                        "os": null,
+                        "country_code": "RU",
+                        "hostnames": [
+                            "web-contents.ru"
+                        ],
+                        "domains": [
+                            "web-contents.ru"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.15"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "40255c9a95dce85f6ce8bbd4de4a92794b15814f255bde63c7d3d2285de4ffc5",
+                                "certificate_subject": "4200301-of30903",
+                                "certificate_issuer": "4200301-of30903"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "e8a2035b07e2134273ca1b21c9310398e7ba18d5299dff98ef71b4754a24f887",
+                                "certificate_subject": "web-contents.ru",
+                                "certificate_issuer": "R13"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "bf90c976f3c325e220deba7cd264d72dc676b6375eb47044000e04931e8a2e07",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-09T01:51:57Z",
             "observations": []
