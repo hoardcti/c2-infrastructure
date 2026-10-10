@@ -69,6 +69,61 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-10T00:45:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-10T00:45:54Z",
+                    "last_observed": "2026-10-10T00:45:54Z",
+                    "data": {
+                        "org": "Vultr Holdings, LLC",
+                        "isp": "The Constant Company, LLC",
+                        "asn": "AS20473",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "216.128.143.167.vultrusercontent.com",
+                            "buyifanghome.com",
+                            "www.buyifanghome.com"
+                        ],
+                        "domains": [
+                            "buyifanghome.com",
+                            "vultrusercontent.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "403 Forbidden"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Panda C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "http_title": " ",
+                                "jarm": "2ad2ad0002ad2ad00042d42d0000002059a3b916699461c5923779b77cf06b",
+                                "certificate_sha256": "4819f9784b6911f92fba3395c654c70a12903f7c065182c0c004d7fd857f358a",
+                                "certificate_subject": "www.buyifanghome.com",
+                                "certificate_issuer": "ZeroSSL RSA DV SSL CA 2"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-09T01:51:57Z",
             "observations": []

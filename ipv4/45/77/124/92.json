@@ -68,6 +68,61 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-10T00:45:38Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-10T00:45:38Z",
+                    "last_observed": "2026-10-10T00:45:38Z",
+                    "data": {
+                        "org": "Vultr Holdings, LLC",
+                        "isp": "The Constant Company, LLC",
+                        "asn": "AS20473",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "45.77.124.92.vultrusercontent.com",
+                            "adobefurn.com",
+                            "www.adobefurn.com"
+                        ],
+                        "domains": [
+                            "adobefurn.com",
+                            "vultrusercontent.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "403 Forbidden"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Panda C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "http_title": " ",
+                                "jarm": "2ad2ad0002ad2ad00042d42d0000002059a3b916699461c5923779b77cf06b",
+                                "certificate_sha256": "fb5c6e8c5a189347db9bec8a353c940b2ffdc793affd3e8c99404550e19bd11b",
+                                "certificate_subject": "www.adobefurn.com",
+                                "certificate_issuer": "ZeroSSL RSA DV SSL CA 2"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-09T01:51:57Z",
             "observations": []

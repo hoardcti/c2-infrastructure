@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-02T08:11:35Z",
+            "last_checked": "2026-10-10T00:37:25Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T08:11:35Z",
@@ -43,6 +43,22 @@
                         "hostnames": [],
                         "cpes": [],
                         "tags": [],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-10T00:37:25Z",
+                    "last_observed": "2026-10-10T00:37:25Z",
+                    "data": {
+                        "ports": [
+                            3389,
+                            8443
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
                         "vulns": []
                     }
                 }
@@ -117,6 +133,69 @@
         "urlhaus": {
             "last_checked": "2026-10-08T01:38:51Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-10T00:49:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-10T00:49:41Z",
+                    "last_observed": "2026-10-10T00:49:41Z",
+                    "data": {
+                        "as_owner": "Play2go International Limited",
+                        "asn": 215439,
+                        "network": "87.120.186.0/23",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 1,
+                            "undetected": 35,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Kaspersky",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lumu",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

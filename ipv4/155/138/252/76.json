@@ -69,6 +69,61 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-10T00:45:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-10T00:45:40Z",
+                    "last_observed": "2026-10-10T00:45:40Z",
+                    "data": {
+                        "org": "The Constant Company, LLC",
+                        "isp": "The Constant Company, LLC",
+                        "asn": "AS20473",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "155.138.252.76.vultrusercontent.com",
+                            "www.ynorganizer.com",
+                            "ynorganizer.com"
+                        ],
+                        "domains": [
+                            "vultrusercontent.com",
+                            "ynorganizer.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "403 Forbidden"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Panda C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "http_title": " ",
+                                "jarm": "2ad2ad0002ad2ad00042d42d0000002059a3b916699461c5923779b77cf06b",
+                                "certificate_sha256": "547c11ac2382ec606d56a2c8dfffbde20b8dbdb9c03a2518b5defebce4c4d2bc",
+                                "certificate_subject": "www.ynorganizer.com",
+                                "certificate_issuer": "ZeroSSL RSA DV SSL CA 2"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-09T01:51:57Z",
             "observations": []

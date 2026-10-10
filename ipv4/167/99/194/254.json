@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-02T08:11:36Z",
+            "last_checked": "2026-10-10T00:37:26Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T08:11:36Z",
@@ -43,6 +43,28 @@
                         ],
                         "hostnames": [],
                         "cpes": [
+                            "cpe:/a:openbsd:openssh:10.2p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-10T00:37:26Z",
+                    "last_observed": "2026-10-10T00:37:26Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            443
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:caddyserver:caddy",
+                            "cpe:/a:golang:go",
                             "cpe:/a:openbsd:openssh:10.2p1",
                             "cpe:/o:canonical:ubuntu_linux"
                         ],
@@ -137,6 +159,85 @@
         "urlhaus": {
             "last_checked": "2026-10-08T01:38:53Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-10T00:49:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-10T00:49:56Z",
+                    "last_observed": "2026-10-10T00:49:56Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "167.99.0.0/16",
+                        "country": "GB",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 6,
+                            "suspicious": 3,
+                            "undetected": 32,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Criminal IP",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "GreyNoise",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "VIPRE",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "40d40d40d00040d00042d42d0000007d20e9b9a3e87aa1ec17cb4d646ce9a5",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

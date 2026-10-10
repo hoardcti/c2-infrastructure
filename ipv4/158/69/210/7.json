@@ -33,7 +33,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-02T01:29:23Z",
+            "last_checked": "2026-10-10T00:37:14Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T01:29:23Z",
@@ -53,6 +53,31 @@
                         "cpes": [
                             "cpe:/a:expressjs:express",
                             "cpe:/a:nodejs:node.js",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-10T00:37:14Z",
+                    "last_observed": "2026-10-10T00:37:14Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            443,
+                            3000,
+                            6002,
+                            9000
+                        ],
+                        "hostnames": [
+                            "vps-efc3e411.vps.ovh.ca"
+                        ],
+                        "cpes": [
                             "cpe:/a:openbsd:openssh:9.6p1",
                             "cpe:/o:canonical:ubuntu_linux"
                         ],
@@ -164,6 +189,67 @@
         "urlhaus": {
             "last_checked": "2026-10-07T21:50:30Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-10T00:46:57Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-10T00:46:57Z",
+                    "last_observed": "2026-10-10T00:46:57Z",
+                    "data": {
+                        "as_owner": "OVH SAS",
+                        "asn": 16276,
+                        "network": "158.69.0.0/16",
+                        "country": "CA",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 1,
+                            "undetected": 35,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "GreyNoise",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malware"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "3fd3fd00000000000043d43d00043dc3b2afa8a5ec09b510a8559aff7899fb",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

@@ -75,6 +75,63 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-10T00:46:02Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-10T00:46:02Z",
+                    "last_observed": "2026-10-10T00:46:02Z",
+                    "data": {
+                        "org": "Amazon.com, Inc.",
+                        "isp": "Amazon.com, Inc.",
+                        "asn": "AS14618",
+                        "os": "Ubuntu",
+                        "country_code": "US",
+                        "hostnames": [
+                            "ec2-107-21-81-130.compute-1.amazonaws.com"
+                        ],
+                        "domains": [
+                            "amazonaws.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "PowerSploit",
+                                "tags": [
+                                    "c2",
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "MalCommands"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "PowerSploit",
+                                "tags": [
+                                    "c2",
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "MalCommands"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-09T01:51:57Z",
             "observations": []

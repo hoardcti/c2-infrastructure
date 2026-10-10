@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-02T08:11:33Z",
+            "last_checked": "2026-10-10T00:37:23Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T08:11:33Z",
@@ -46,6 +46,20 @@
                         "tags": [
                             "self-signed"
                         ],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-10T00:37:23Z",
+                    "last_observed": "2026-10-10T00:37:23Z",
+                    "data": {
+                        "ports": [
+                            3389,
+                            5985
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
                         "vulns": []
                     }
                 }
@@ -142,6 +156,98 @@
         "urlhaus": {
             "last_checked": "2026-10-08T01:38:47Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-10T00:49:11Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-10T00:49:11Z",
+                    "last_observed": "2026-10-10T00:49:11Z",
+                    "data": {
+                        "as_owner": "Mondoze Data Centre",
+                        "asn": 152742,
+                        "network": "160.25.140.0/24",
+                        "country": "MY",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -1,
+                        "analysis_stats": {
+                            "malicious": 8,
+                            "suspicious": 2,
+                            "undetected": 33,
+                            "harmless": 49,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "CyRadar",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "2ad2ad16d2ad2ad0002ad2ad2ad2add3b67dd3674d9af9dd91c1955a35d0e9",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 }

@@ -69,6 +69,61 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-10T00:45:36Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-10T00:45:36Z",
+                    "last_observed": "2026-10-10T00:45:36Z",
+                    "data": {
+                        "org": "Vultr Holdings, LLC",
+                        "isp": "The Constant Company, LLC",
+                        "asn": "AS20473",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "207.246.119.41.vultrusercontent.com",
+                            "aodemohome.com",
+                            "www.aodemohome.com"
+                        ],
+                        "domains": [
+                            "aodemohome.com",
+                            "vultrusercontent.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "403 Forbidden"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Panda C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "http_title": " ",
+                                "jarm": "2ad2ad0002ad2ad00042d42d0000002059a3b916699461c5923779b77cf06b",
+                                "certificate_sha256": "0cc42254f5b840b0480b8ada2e1636d9e8e9b5fe745bbc2e1534f53facf817fc",
+                                "certificate_subject": "www.aodemohome.com",
+                                "certificate_issuer": "ZeroSSL RSA DV SSL CA 2"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-09T01:51:57Z",
             "observations": []
