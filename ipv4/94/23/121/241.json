@@ -33,11 +33,11 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-02T15:36:48Z",
+            "last_checked": "2026-10-10T13:26:34Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T15:36:48Z",
-                    "last_observed": "2026-10-02T15:36:48Z",
+                    "last_observed": "2026-10-10T13:26:34Z",
                     "data": {
                         "ports": [
                             80,
@@ -201,6 +201,38 @@
                         "id": "1880368",
                         "ioc": "94.23.121.241:7433",
                         "threat_type": "botnet_cc"
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-10T13:28:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-10T13:28:44Z",
+                    "last_observed": "2026-10-10T13:28:44Z",
+                    "data": {
+                        "urlhaus_reference": "https://urlhaus.abuse.ch/host/94.23.121.241/",
+                        "first_seen": "2024-08-06T19:26:15Z",
+                        "url_count": 1,
+                        "blacklists": {
+                            "spamhaus_dbl": "not listed",
+                            "surbl": "not listed"
+                        },
+                        "urls": [
+                            {
+                                "id": "3092988",
+                                "url": "http://94.23.121.241/02.08.2022.exe",
+                                "status": "offline",
+                                "date_added": "2024-08-06T19:26:21Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "CobaltStrike",
+                                    "This_exe_triggers_specifically_to_cobaltstrike_c2",
+                                    "exe"
+                                ]
+                            }
+                        ]
                     }
                 }
             ]
