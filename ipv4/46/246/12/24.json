@@ -1,0 +1,191 @@
+{
+    "schema_version": 2,
+    "ip": "46.246.12.24",
+    "first_seen": "2026-10-10T06:49:57Z",
+    "last_seen": "2026-10-10T06:49:57Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-10T06:52:52Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-10T06:52:52Z",
+                    "last_observed": "2026-10-10T06:52:52Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2022-07-20T01:12:55Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Sanco Group LTD",
+                        "domain": "frootvpn.com",
+                        "country_code": "SE",
+                        "hostnames": [
+                            "c-46-246-12-24.ip4.frootvpn.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-10T06:50:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-10T06:50:05Z",
+                    "last_observed": "2026-10-10T06:50:05Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            9091
+                        ],
+                        "hostnames": [
+                            "c-46-246-12-24.ip4.frootvpn.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:transmissionbt:transmission",
+                            "cpe:/o:microsoft:windows"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-10T06:50:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-10T06:50:04Z",
+                    "last_observed": "2026-10-10T06:50:04Z",
+                    "data": {
+                        "asn": "AS42708",
+                        "as_name": "Glesys AB",
+                        "as_domain": "glesys.com",
+                        "country_code": "SE",
+                        "country": "Sweden",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-10T06:54:10Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-10T06:54:10Z",
+                    "last_observed": "2026-10-10T06:54:10Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS42708 glesys ab",
+                        "country_code": "SE",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "68aa3a53d440a94377569eb9",
+                                "name": "Remcos",
+                                "created": "2025-08-23T22:01:55.319Z",
+                                "tlp": "white",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-10T06:57:28Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-10T06:50:03Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-10T06:49:57Z",
+            "observations": [
+                {
+                    "key": "1959146",
+                    "first_observed": "2026-10-10T06:49:57Z",
+                    "last_observed": "2026-10-10T06:49:57Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "46.246.12.24:5987",
+                        "port": 5987,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-10T06:02:12Z",
+                        "reference": null,
+                        "tags": [
+                            "NMUOnAPUAPU",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-10T06:52:04Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-10T06:59:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-10T06:59:26Z",
+                    "last_observed": "2026-10-10T06:59:26Z",
+                    "data": {
+                        "as_owner": "Glesys AB",
+                        "asn": 42708,
+                        "network": "46.246.8.0/21",
+                        "country": "SE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 0,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Webroot",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [
+                            "vpn"
+                        ],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
