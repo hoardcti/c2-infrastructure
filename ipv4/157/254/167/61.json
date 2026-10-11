@@ -1,0 +1,254 @@
+{
+    "schema_version": 2,
+    "ip": "157.254.167.61",
+    "first_seen": "2026-10-11T08:31:27Z",
+    "last_seen": "2026-10-11T08:31:27Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-11T08:34:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-11T08:34:27Z",
+                    "last_observed": "2026-10-11T08:34:27Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "TierPoint, LLC",
+                        "domain": "tierpoint.com",
+                        "country_code": "US",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-11T08:31:38Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-11T08:31:38Z",
+                    "last_observed": "2026-10-11T08:31:38Z",
+                    "data": {
+                        "ports": [
+                            9443
+                        ],
+                        "hostnames": [
+                            "lawsrouter.com",
+                            "profile.lawsrouter.com",
+                            "sso.lawsrouter.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-11T08:31:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-11T08:31:35Z",
+                    "last_observed": "2026-10-11T08:31:35Z",
+                    "data": {
+                        "asn": "AS17378",
+                        "as_name": "TierPoint, LLC",
+                        "as_domain": "tierpoint.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-11T08:35:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-11T08:35:46Z",
+                    "last_observed": "2026-10-11T08:35:46Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS1239 sprint",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-11T08:39:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-11T08:39:07Z",
+                    "last_observed": "2026-10-11T08:39:07Z",
+                    "data": {
+                        "org": "Internet Utilities NA LLC",
+                        "isp": "TierPoint, LLC",
+                        "asn": "AS17378",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "lawsrouter.com",
+                            "profile.lawsrouter.com",
+                            "sso.lawsrouter.com"
+                        ],
+                        "domains": [
+                            "lawsrouter.com"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.8"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "c5f1e6bf94b9fa91dfd9bd8ccd2ae2d0f8bbde73a15d432907d1a8f23a16a5d6",
+                                "certificate_subject": "jquery.com",
+                                "certificate_organisation": "jquery",
+                                "certificate_issuer": "jquery.com"
+                            },
+                            {
+                                "port": 8083,
+                                "transport": "tcp",
+                                "product": "Apache httpd"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "500: Internal Server Error",
+                                "jarm": "28d28d28d00028d00042d42d000000ad9bf51cc3f5a1e29eecb81d0c7b06eb",
+                                "certificate_sha256": "0c46aa1fc162f880ad2d5b9c493e625b0422b070bdf3c39fb0417e551af25cc7",
+                                "certificate_subject": "lawsrouter.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 9443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "500: Internal Server Error",
+                                "jarm": "28d28d28d00028d00042d42d000000ad9bf51cc3f5a1e29eecb81d0c7b06eb",
+                                "certificate_sha256": "0c46aa1fc162f880ad2d5b9c493e625b0422b070bdf3c39fb0417e551af25cc7",
+                                "certificate_subject": "lawsrouter.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 16098,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-11T08:31:34Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-11T08:31:27Z",
+            "observations": [
+                {
+                    "key": "1960391",
+                    "first_observed": "2026-10-11T08:31:27Z",
+                    "last_observed": "2026-10-11T08:31:27Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "157.254.167.61:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-10-11T07:02:47Z",
+                        "reference": null,
+                        "tags": [
+                            "17378",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-11T08:33:39Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-11T08:41:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-11T08:41:31Z",
+                    "last_observed": "2026-10-11T08:41:31Z",
+                    "data": {
+                        "as_owner": "TierPoint, LLC",
+                        "asn": 17378,
+                        "network": "157.254.167.0/24",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 38,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

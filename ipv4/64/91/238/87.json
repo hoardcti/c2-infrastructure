@@ -1,0 +1,283 @@
+{
+    "schema_version": 2,
+    "ip": "64.91.238.87",
+    "first_seen": "2026-10-11T08:31:27Z",
+    "last_seen": "2026-10-11T08:31:27Z",
+    "flags": [
+        "remus"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-11T08:34:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-11T08:34:25Z",
+                    "last_observed": "2026-10-11T08:34:25Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Liquid Web, L.L.C",
+                        "domain": "liquidweb.com",
+                        "country_code": "US",
+                        "hostnames": [
+                            "musicrise.io"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-11T08:31:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-11T08:31:37Z",
+                    "last_observed": "2026-10-11T08:31:37Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            25,
+                            80,
+                            110,
+                            143,
+                            587,
+                            4190
+                        ],
+                        "hostnames": [
+                            "mail.musicrisepr.co",
+                            "musicrise.io"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.18.0",
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-11T08:31:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-11T08:31:35Z",
+                    "last_observed": "2026-10-11T08:31:35Z",
+                    "data": {
+                        "asn": "AS32244",
+                        "as_name": "Liquid Web, L.L.C",
+                        "as_domain": "liquidweb.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-11T08:35:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-11T08:35:44Z",
+                    "last_observed": "2026-10-11T08:35:44Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS32244 liquid web  l.l.c",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-11T08:39:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-11T08:39:05Z",
+                    "last_observed": "2026-10-11T08:39:05Z",
+                    "data": {
+                        "org": "Liquid Web, L.L.C",
+                        "isp": "Liquid Web, L.L.C",
+                        "asn": "AS32244",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "mail.musicrisepr.co",
+                            "musicrise.io"
+                        ],
+                        "domains": [
+                            "musicrise.io",
+                            "musicrisepr.co"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "8461f6d7d73d8ed4fbd8a60c27f6b12cdeee14acf549faf65619463b7a5e40c9",
+                                "certificate_subject": "mail.musicrisepr.co",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ]
+                            },
+                            {
+                                "port": 143,
+                                "transport": "tcp",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "c484a3b5bfcb6b2fd36772d2c64adf786b19bc6d5056b4c04fa0667edb606e75",
+                                "certificate_subject": "mail.musicrisepr.co",
+                                "certificate_issuer": "R12"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad0002ad2ad0002ad2ad2ad2ad83c2e51da709c877942c98b10a5e814a",
+                                "certificate_sha256": "35debb1fd056180dca51882d11fe333b9ba14643c21a69fef9a38bbf0f8dd7d1",
+                                "certificate_subject": "flash-point.com.ar",
+                                "certificate_issuer": "flash-point.com.ar"
+                            },
+                            {
+                                "port": 993,
+                                "transport": "tcp",
+                                "jarm": "2ad2ad16d2ad2ad00042d42d000000a5308aa908d3edc2392a602b7adac57a",
+                                "certificate_sha256": "c484a3b5bfcb6b2fd36772d2c64adf786b19bc6d5056b4c04fa0667edb606e75",
+                                "certificate_subject": "mail.musicrisepr.co",
+                                "certificate_issuer": "R12"
+                            },
+                            {
+                                "port": 995,
+                                "transport": "tcp",
+                                "jarm": "2ad2ad16d2ad2ad00042d42d000000a5308aa908d3edc2392a602b7adac57a",
+                                "certificate_sha256": "c484a3b5bfcb6b2fd36772d2c64adf786b19bc6d5056b4c04fa0667edb606e75",
+                                "certificate_subject": "mail.musicrisepr.co",
+                                "certificate_issuer": "R12"
+                            },
+                            {
+                                "port": 4190,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-11T08:31:34Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-11T08:31:27Z",
+            "observations": [
+                {
+                    "key": "1960318",
+                    "first_observed": "2026-10-11T08:31:27Z",
+                    "last_observed": "2026-10-11T08:31:27Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "ioc": "64.91.238.87:2905",
+                        "port": 2905,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remus",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-11T07:02:53Z",
+                        "reference": null,
+                        "tags": [
+                            "Remus",
+                            "c2",
+                            "d898365426cdb60a141cbfaa1e6b7e6f"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-11T08:33:37Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-11T08:41:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-11T08:41:16Z",
+                    "last_observed": "2026-10-11T08:41:16Z",
+                    "data": {
+                        "as_owner": "Liquid Web, L.L.C",
+                        "asn": 32244,
+                        "network": "64.91.224.0/19",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 0,
+                            "undetected": 92,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "2ad2ad0002ad2ad0002ad2ad2ad2ad83c2e51da709c877942c98b10a5e814a",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,167 @@
+{
+    "schema_version": 2,
+    "ip": "23.100.98.39",
+    "first_seen": "2026-10-11T08:31:27Z",
+    "last_seen": "2026-10-11T08:31:27Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-11T08:34:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-11T08:34:23Z",
+                    "last_observed": "2026-10-11T08:34:23Z",
+                    "data": {
+                        "abuse_confidence_score": 2,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-10-03T19:43:33Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Microsoft Corporation",
+                        "domain": "microsoft.com",
+                        "country_code": "JP",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-11T08:31:36Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-11T08:31:36Z",
+                    "last_observed": "2026-10-11T08:31:36Z",
+                    "data": {
+                        "ports": [
+                            22
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-11T08:31:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-11T08:31:35Z",
+                    "last_observed": "2026-10-11T08:31:35Z",
+                    "data": {
+                        "asn": "AS8075",
+                        "as_name": "Microsoft Corporation",
+                        "as_domain": "microsoft.com",
+                        "country_code": "JP",
+                        "country": "Japan",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-11T08:35:42Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-11T08:35:42Z",
+                    "last_observed": "2026-10-11T08:35:42Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS8075 microsoft corporation",
+                        "country_code": "JP",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-11T08:39:03Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-11T08:31:34Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-11T08:31:27Z",
+            "observations": [
+                {
+                    "key": "1960392",
+                    "first_observed": "2026-10-11T08:31:27Z",
+                    "last_observed": "2026-10-11T08:31:27Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "23.100.98.39:10443",
+                        "port": 10443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-10-11T07:02:48Z",
+                        "reference": null,
+                        "tags": [
+                            "8075",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-11T08:33:36Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-11T08:41:02Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-11T08:41:02Z",
+                    "last_observed": "2026-10-11T08:41:02Z",
+                    "data": {
+                        "as_owner": "Microsoft Corporation",
+                        "asn": 8075,
+                        "network": "23.100.0.0/15",
+                        "country": "JP",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 0,
+                            "undetected": 92,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
