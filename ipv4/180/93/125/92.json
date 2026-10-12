@@ -1,0 +1,208 @@
+{
+    "schema_version": 2,
+    "ip": "180.93.125.92",
+    "first_seen": "2026-10-12T17:35:19Z",
+    "last_seen": "2026-10-12T17:35:19Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-12T17:38:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T17:38:31Z",
+                    "last_observed": "2026-10-12T17:38:31Z",
+                    "data": {
+                        "abuse_confidence_score": 3,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-10-02T10:24:56Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Fixed Line ISP",
+                        "isp": "Saigon Postel Corporation",
+                        "domain": "spt.vn",
+                        "country_code": "VN",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-12T17:35:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T17:35:37Z",
+                    "last_observed": "2026-10-12T17:35:37Z",
+                    "data": {
+                        "ports": [
+                            135
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-12T17:35:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T17:35:28Z",
+                    "last_observed": "2026-10-12T17:35:28Z",
+                    "data": {
+                        "asn": "AS7602",
+                        "as_name": "Sai gon Postel Corporation",
+                        "as_domain": "spt.vn",
+                        "country_code": "VN",
+                        "country": "Vietnam",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-12T17:39:49Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T17:39:49Z",
+                    "last_observed": "2026-10-12T17:39:49Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS7602 saigon postel corporation",
+                        "country_code": "VN",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-12T17:43:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T17:43:21Z",
+                    "last_observed": "2026-10-12T17:43:21Z",
+                    "data": {
+                        "org": "Saigon Postel Corporation",
+                        "isp": "Sai gon Postel Corporation",
+                        "asn": "AS7602",
+                        "os": null,
+                        "country_code": "VN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-12T17:35:26Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-12T17:35:19Z",
+            "observations": [
+                {
+                    "key": "1961444",
+                    "first_observed": "2026-10-12T17:35:19Z",
+                    "last_observed": "2026-10-12T17:35:19Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "180.93.125.92:2245",
+                        "port": 2245,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-12T09:12:02Z",
+                        "reference": null,
+                        "tags": [
+                            "Lexus",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-12T17:37:42Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-12T17:46:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T17:46:37Z",
+                    "last_observed": "2026-10-12T17:46:37Z",
+                    "data": {
+                        "as_owner": "Sai gon Postel Corporation",
+                        "asn": 7602,
+                        "network": "180.93.64.0/18",
+                        "country": "VN",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 1,
+                            "undetected": 36,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

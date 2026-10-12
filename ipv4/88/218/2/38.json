@@ -1,0 +1,189 @@
+{
+    "schema_version": 2,
+    "ip": "88.218.2.38",
+    "first_seen": "2026-10-12T17:35:19Z",
+    "last_seen": "2026-10-12T17:35:19Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-12T17:38:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T17:38:25Z",
+                    "last_observed": "2026-10-12T17:38:25Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "M247 LTD Warsaw Infrastructure",
+                        "domain": "m247.com",
+                        "country_code": "PL",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-12T17:35:32Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T17:35:32Z",
+                    "last_observed": "2026-10-12T17:35:32Z",
+                    "data": {
+                        "ports": [
+                            135,
+                            9090,
+                            9100
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-12T17:35:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T17:35:28Z",
+                    "last_observed": "2026-10-12T17:35:28Z",
+                    "data": {
+                        "asn": "AS9009",
+                        "as_name": "M247 Europe SRL",
+                        "as_domain": "m247global.com",
+                        "country_code": "PL",
+                        "country": "Poland",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-12T17:39:43Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T17:39:43Z",
+                    "last_observed": "2026-10-12T17:39:43Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS35505 pronet solutii it srl",
+                        "country_code": "RO",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-12T17:43:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T17:43:15Z",
+                    "last_observed": "2026-10-12T17:43:15Z",
+                    "data": {
+                        "org": "M247 Ltd Warsaw",
+                        "isp": "M247 Europe SRL",
+                        "asn": "AS9009",
+                        "os": null,
+                        "country_code": "RO",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-12T17:35:26Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-12T17:35:19Z",
+            "observations": [
+                {
+                    "key": "1961692",
+                    "first_observed": "2026-10-12T17:35:19Z",
+                    "last_observed": "2026-10-12T17:35:19Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "88.218.2.38:2404",
+                        "port": 2404,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-12T13:10:49Z",
+                        "reference": null,
+                        "tags": [
+                            "REMOTEHOST",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-12T17:37:36Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-12T17:45:52Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T17:45:52Z",
+                    "last_observed": "2026-10-12T17:45:52Z",
+                    "data": {
+                        "as_owner": "M247 Europe SRL",
+                        "asn": 9009,
+                        "network": "88.218.0.0/22",
+                        "country": "PL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 37,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
