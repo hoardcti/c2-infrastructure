@@ -1,0 +1,197 @@
+{
+    "schema_version": 2,
+    "ip": "100.57.32.60",
+    "first_seen": "2026-10-12T07:06:46Z",
+    "last_seen": "2026-10-12T07:06:46Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-12T07:09:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T07:09:45Z",
+                    "last_observed": "2026-10-12T07:09:45Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Amazon Data Services Northern Virginia",
+                        "domain": "amazon.com",
+                        "country_code": "US",
+                        "hostnames": [
+                            "national-people.org"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-12T07:06:55Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-12T07:06:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T07:06:53Z",
+                    "last_observed": "2026-10-12T07:06:53Z",
+                    "data": {
+                        "asn": "AS14618",
+                        "as_name": "Amazon.com, Inc.",
+                        "as_domain": "amazon.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-12T07:11:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T07:11:04Z",
+                    "last_observed": "2026-10-12T07:11:04Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-12T07:14:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T07:14:22Z",
+                    "last_observed": "2026-10-12T07:14:22Z",
+                    "data": {
+                        "org": "Amazon Data Services Northern Virginia",
+                        "isp": "Amazon.com, Inc.",
+                        "asn": "AS14618",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "national-people.org"
+                        ],
+                        "domains": [
+                            "national-people.org"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "403 Forbidden",
+                                "jarm": "21d19d00021d21d00042d43d0000005ad20eceaf7f71ae0887d2ff117bf97f",
+                                "certificate_sha256": "f29af41cb4e95df6b875d9e30a45da92b2aed87c8b9f7ab28cb9900ec6a8e177",
+                                "certificate_subject": "national-people.org",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "f29af41cb4e95df6b875d9e30a45da92b2aed87c8b9f7ab28cb9900ec6a8e177",
+                                "certificate_subject": "national-people.org",
+                                "certificate_issuer": "YR2"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-12T07:06:52Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-12T07:06:46Z",
+            "observations": [
+                {
+                    "key": "1961196",
+                    "first_observed": "2026-10-12T07:06:46Z",
+                    "last_observed": "2026-10-12T07:06:46Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "100.57.32.60:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-10-12T06:11:22Z",
+                        "reference": null,
+                        "tags": [
+                            "14618",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-12T07:08:57Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-12T07:16:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T07:16:46Z",
+                    "last_observed": "2026-10-12T07:16:46Z",
+                    "data": {
+                        "as_owner": "Amazon.com, Inc.",
+                        "asn": 14618,
+                        "network": "100.48.0.0/12",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 0,
+                            "undetected": 92,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "jarm": "29d29d00029d29d00041d41d00041dcb3f8752a2d70d1dbf446fc46ab5df96",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

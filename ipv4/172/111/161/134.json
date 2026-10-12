@@ -1,0 +1,164 @@
+{
+    "schema_version": 2,
+    "ip": "172.111.161.134",
+    "first_seen": "2026-10-12T07:06:46Z",
+    "last_seen": "2026-10-12T07:06:46Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-12T07:09:47Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T07:09:47Z",
+                    "last_observed": "2026-10-12T07:09:47Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Internet Security - AU",
+                        "domain": "btcloud.ro",
+                        "country_code": "AU",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-12T07:06:56Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-12T07:06:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T07:06:53Z",
+                    "last_observed": "2026-10-12T07:06:53Z",
+                    "data": {
+                        "asn": "AS137409",
+                        "as_name": "GSL Networks Pty LTD",
+                        "as_domain": "globalsecurelayer.com",
+                        "country_code": "AU",
+                        "country": "Australia",
+                        "continent_code": "OC",
+                        "continent": "Oceania"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-12T07:11:06Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T07:11:06Z",
+                    "last_observed": "2026-10-12T07:11:06Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS36351 softlayer technologies inc.",
+                        "country_code": "AU",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-12T07:14:24Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-12T07:06:52Z",
+            "observations": [
+                {
+                    "key": "172.111.128.0/17",
+                    "first_observed": "2026-10-12T07:06:52Z",
+                    "last_observed": "2026-10-12T07:06:52Z",
+                    "data": {
+                        "cidr": "172.111.128.0/17",
+                        "sblid": "SBL688605",
+                        "rir": "arin"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-12T07:06:46Z",
+            "observations": [
+                {
+                    "key": "1961299",
+                    "first_observed": "2026-10-12T07:06:46Z",
+                    "last_observed": "2026-10-12T07:06:46Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "172.111.161.134:4489",
+                        "port": 4489,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-12T04:59:25Z",
+                        "reference": null,
+                        "tags": [
+                            "ONETOUCH",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-12T07:08:59Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-12T07:17:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-12T07:17:01Z",
+                    "last_observed": "2026-10-12T07:17:01Z",
+                    "data": {
+                        "as_owner": "GSL Networks Pty LTD",
+                        "asn": 137409,
+                        "network": "172.111.161.0/24",
+                        "country": "AU",
+                        "continent": "OC",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 91,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
