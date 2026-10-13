@@ -246,8 +246,77 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-13T21:13:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-13T21:13:15Z",
+                    "last_observed": "2026-10-13T21:13:15Z",
+                    "data": {
+                        "org": "Hetzner Online GmbH",
+                        "isp": "Hetzner Online GmbH",
+                        "asn": "AS24940",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "static.30.213.99.88.clients.your-server.de"
+                        ],
+                        "domains": [
+                            "your-server.de"
+                        ],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "VM Security Console :: Login",
+                                "jarm": "29d29d00029d29d00029d29d29d29d0484e75f7b8e3eda6091f67739202891",
+                                "certificate_sha256": "81c2494af466f1925f3b1dd960eff21fe45e96e5fa6b40e61b5e5fe1ca765105",
+                                "certificate_subject": "Rapid7 Security Console",
+                                "certificate_organisation": "Rapid7",
+                                "certificate_issuer": "Rapid7 Security Console"
+                            },
+                            {
+                                "port": 3780,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "InsightVM Security Console :: Login",
+                                "jarm": "29d29d00029d29d00042d42d00042de0d120da90d5910c5de2af43b74a6bd8",
+                                "certificate_sha256": "afce86adac6c545df924cc8780640f8b3130da789a6dec9e5c4f76c12aacd302",
+                                "certificate_subject": "Rapid7 Security Console",
+                                "certificate_organisation": "Rapid7",
+                                "certificate_issuer": "Rapid7 Security Console"
+                            },
+                            {
+                                "port": 3790,
+                                "transport": "tcp",
+                                "product": "Metasploit",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "Metasploit",
+                                "jarm": "29d29d00029d29d00042d42d00000000f78d2dc0ce6e5bbc5b8149a4872356",
+                                "certificate_sha256": "a6c3f10ab39550dd59b470208bb5ef5616e3a11a66da123d4412f746e57111bb",
+                                "certificate_subject": "localhost",
+                                "certificate_organisation": "Rapid7",
+                                "certificate_issuer": "MetasploitSelfSignedCA"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
-            "last_checked": "2026-10-12T17:35:27Z",
+            "last_checked": "2026-10-13T21:05:07Z",
             "observations": []
         }
     }

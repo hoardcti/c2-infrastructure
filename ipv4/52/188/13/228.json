@@ -292,8 +292,92 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-13T21:13:43Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-13T21:13:43Z",
+                    "last_observed": "2026-10-13T21:13:43Z",
+                    "data": {
+                        "org": "Microsoft Corporation",
+                        "isp": "Microsoft Corporation",
+                        "asn": "AS8075",
+                        "os": "Ubuntu",
+                        "country_code": "US",
+                        "hostnames": [
+                            "ca.opinionblockchain.com",
+                            "sa.opinionblockchain.com"
+                        ],
+                        "domains": [
+                            "opinionblockchain.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2017-20005",
+                            "CVE-2017-7529",
+                            "CVE-2018-16843",
+                            "CVE-2018-16844",
+                            "CVE-2018-16845",
+                            "CVE-2019-20372",
+                            "CVE-2019-9511",
+                            "CVE-2019-9513",
+                            "CVE-2019-9516",
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487"
+                        ],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.10.3",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.10.3",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "401 Authorization Required",
+                                "jarm": "29d29d15d29d29d21c29d29d29d29d47321614530b94a96fa03d06e666d6d6",
+                                "certificate_sha256": "f8e4ec8b24fd5b49f5e9490be0fcc5e57939316e2e2f2c8fe2110ef5f91b1ad7",
+                                "certificate_subject": "ca.opinionblockchain.com",
+                                "certificate_issuer": "Let's Encrypt Authority X3"
+                            },
+                            {
+                                "port": 3790,
+                                "transport": "tcp",
+                                "product": "Metasploit",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad0002ad2ad2ad2adfd6c874ae8ae944544f67f59a2c0898c",
+                                "certificate_sha256": "968c59c5387775ff0cec261dc8957cb90179c33154b51140a4fbc9a24e410554",
+                                "certificate_subject": "localhost",
+                                "certificate_organisation": "Rapid7",
+                                "certificate_issuer": "MetasploitSelfSignedCA"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
-            "last_checked": "2026-10-12T17:35:27Z",
+            "last_checked": "2026-10-13T21:05:07Z",
             "observations": []
         }
     }

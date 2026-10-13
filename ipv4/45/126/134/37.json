@@ -121,8 +121,99 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-13T21:14:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-13T21:14:37Z",
+                    "last_observed": "2026-10-13T21:14:37Z",
+                    "data": {
+                        "org": "PT. Cyberindo Mega Persada",
+                        "isp": "PT. Cyberindo Mega Persada",
+                        "asn": "AS132644",
+                        "os": null,
+                        "country_code": "ID",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "database",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 3001,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3780,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "Nexpose Security Console :: Login",
+                                "jarm": "29d29d00029d29d00029d29d29d29d0484e75f7b8e3eda6091f67739202891",
+                                "certificate_sha256": "267f0573f10e4c4ba6a73f90bcbbcf2eeebcc9b4cb7e621f19a6972d1248cada",
+                                "certificate_subject": "Rapid7 Security Console",
+                                "certificate_organisation": "Umbrella Corp",
+                                "certificate_issuer": "Rapid7 Security Console"
+                            },
+                            {
+                                "port": 3790,
+                                "transport": "tcp",
+                                "product": "Metasploit",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "Metasploit",
+                                "jarm": "29d29d00029d29d00042d42d00000000f78d2dc0ce6e5bbc5b8149a4872356",
+                                "certificate_sha256": "8bf0d342b363a01e99c8b02c145730143d32ac88f2765406c8ad91d5636b7cf5",
+                                "certificate_subject": "localhost",
+                                "certificate_organisation": "Rapid7",
+                                "certificate_issuer": "MetasploitSelfSignedCA"
+                            },
+                            {
+                                "port": 6432,
+                                "transport": "tcp",
+                                "product": "PgBouncer",
+                                "tags": [
+                                    "database"
+                                ]
+                            },
+                            {
+                                "port": 8000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8089,
+                                "transport": "tcp",
+                                "http_title": "splunkd",
+                                "jarm": "25d14d00025d25d00042d43d000000ee523fe586628a8d526db2ce24e29fb4",
+                                "certificate_sha256": "28b368cc19d3064a97a6713a630cbce7b8b395a91c5abac5efed77ffe9567f55",
+                                "certificate_subject": "SplunkServerDefaultCert",
+                                "certificate_organisation": "SplunkUser",
+                                "certificate_issuer": "SplunkCommonCA"
+                            },
+                            {
+                                "port": 8191,
+                                "transport": "tcp",
+                                "product": "MongoDB",
+                                "tags": [
+                                    "database"
+                                ]
+                            },
+                            {
+                                "port": 9090,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
-            "last_checked": "2026-10-12T17:35:27Z",
+            "last_checked": "2026-10-13T21:05:07Z",
             "observations": []
         }
     }
