@@ -1060,6 +1060,58 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-13T15:53:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-13T15:53:20Z",
+                    "last_observed": "2026-10-13T15:53:20Z",
+                    "data": {
+                        "org": "OVH US LLC",
+                        "isp": "OVH SAS",
+                        "asn": "AS16276",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "ip143.ip-15-204-14.us"
+                        ],
+                        "domains": [
+                            "ip-15-204-14.us"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Havoc C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Havoc C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "404 Not Found"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-12T17:35:27Z",
             "observations": []
