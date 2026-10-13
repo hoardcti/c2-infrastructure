@@ -1,0 +1,225 @@
+{
+    "schema_version": 2,
+    "ip": "82.165.128.60",
+    "first_seen": "2026-10-13T07:31:08Z",
+    "last_seen": "2026-10-13T07:31:08Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-13T07:34:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-13T07:34:05Z",
+                    "last_observed": "2026-10-13T07:34:05Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "IONOS SE",
+                        "domain": "ionos.com",
+                        "country_code": "DE",
+                        "hostnames": [
+                            "ip82-165-128-60.pbiaas.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-13T07:31:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-13T07:31:17Z",
+                    "last_observed": "2026-10-13T07:31:17Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            3389,
+                            8001
+                        ],
+                        "hostnames": [
+                            "ip82-165-128-60.pbiaas.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:apache:http_server",
+                            "cpe:/a:apache:http_server:2.4.68",
+                            "cpe:/a:openbsd:openssh:10.0p2",
+                            "cpe:/o:debian:debian_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [],
+                        "vulns": [
+                            "CVE-2007-4723",
+                            "CVE-2009-0796",
+                            "CVE-2009-2299",
+                            "CVE-2011-1176",
+                            "CVE-2011-2688",
+                            "CVE-2012-3526",
+                            "CVE-2012-4001",
+                            "CVE-2012-4360",
+                            "CVE-2013-0941",
+                            "CVE-2013-0942",
+                            "CVE-2013-2765",
+                            "CVE-2013-4365",
+                            "CVE-2026-42356",
+                            "CVE-2026-42528",
+                            "CVE-2026-46729",
+                            "CVE-2026-47360",
+                            "CVE-2026-48005",
+                            "CVE-2026-56153",
+                            "CVE-2026-56154",
+                            "CVE-2026-56449",
+                            "CVE-2026-57941",
+                            "CVE-2026-58415",
+                            "CVE-2026-59685",
+                            "CVE-2026-59797",
+                            "CVE-2026-63045",
+                            "CVE-2026-63292",
+                            "CVE-2026-63686",
+                            "CVE-2026-63718",
+                            "CVE-2026-73636",
+                            "CVE-2026-73637",
+                            "CVE-2026-79768",
+                            "CVE-2026-93546"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-13T07:31:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-13T07:31:15Z",
+                    "last_observed": "2026-10-13T07:31:15Z",
+                    "data": {
+                        "asn": "AS8560",
+                        "as_name": "IONOS SE",
+                        "as_domain": "ionos.com",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-13T07:35:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-13T07:35:24Z",
+                    "last_observed": "2026-10-13T07:35:24Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS8560 1&1 ionos se",
+                        "country_code": "DE",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-13T07:39:24Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-13T07:31:15Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-13T07:31:08Z",
+            "observations": [
+                {
+                    "key": "1962514",
+                    "first_observed": "2026-10-13T07:31:08Z",
+                    "last_observed": "2026-10-13T07:31:08Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "82.165.128.60:7474",
+                        "port": 7474,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-10-13T05:21:21Z",
+                        "reference": null,
+                        "tags": [
+                            "8560",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-13T07:33:17Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-13T07:41:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-13T07:41:35Z",
+                    "last_observed": "2026-10-13T07:41:35Z",
+                    "data": {
+                        "as_owner": "IONOS SE",
+                        "asn": 8560,
+                        "network": "82.165.0.0/16",
+                        "country": "FR",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 0,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

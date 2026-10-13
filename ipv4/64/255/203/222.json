@@ -275,6 +275,86 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-13T07:41:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-13T07:41:14Z",
+                    "last_observed": "2026-10-13T07:41:14Z",
+                    "data": {
+                        "org": "Centersquare",
+                        "isp": "Centersquare",
+                        "asn": "AS32298",
+                        "os": "Windows Server (R) 2008 Enterprise 6003 Service Pack 2",
+                        "country_code": "US",
+                        "hostnames": [
+                            "64-255-203-222.csquare.com"
+                        ],
+                        "domains": [
+                            "csquare.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "eol-os",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 53,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 139,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp",
+                                "tags": [
+                                    "eol-os"
+                                ]
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "06d06d00006d06d06c06d06d06d06dd3b67dd3674d9af9dd91c1955a35d0e9",
+                                "certificate_sha256": "86aba82ba23b1d67f91edff2d44f441a72b28e00bcef00c0d969cba36dbe847c",
+                                "certificate_subject": "DNS1",
+                                "certificate_issuer": "DNS1"
+                            },
+                            {
+                                "port": 3790,
+                                "transport": "tcp",
+                                "product": "Metasploit",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "Metasploit",
+                                "jarm": "29d29d20d29d29d21c29d29d29d29d15a110e3e079cba2b9e84d88fe6e1939",
+                                "certificate_sha256": "237e6d94a76e47787e2b244b0bc18ff58cd729d96369538991b3dcdc5ad1bafe",
+                                "certificate_subject": "localhost",
+                                "certificate_organisation": "Rapid7",
+                                "certificate_issuer": "MetasploitSelfSignedCA"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-12T17:35:27Z",
             "observations": []

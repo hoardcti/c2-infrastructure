@@ -112,6 +112,71 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-13T07:40:18Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-13T07:40:18Z",
+                    "last_observed": "2026-10-13T07:40:18Z",
+                    "data": {
+                        "org": "HONGKONG CLOUD NETWORK TECHNOLOGY CO., LIMITED",
+                        "isp": "cognetcloud INC",
+                        "asn": "AS401696",
+                        "os": null,
+                        "country_code": "HK",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 1234,
+                                "transport": "tcp",
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 8001,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8888,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "502 Bad Gateway"
+                            },
+                            {
+                                "port": 10100,
+                                "transport": "tcp",
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "b8ffb7755b5beda526f8578762ebaac6b1e9eed46e72bed298aff878500da6a8",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "admins"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-12T17:35:27Z",
             "observations": []

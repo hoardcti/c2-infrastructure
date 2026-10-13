@@ -70,6 +70,72 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-13T07:39:42Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-13T07:39:42Z",
+                    "last_observed": "2026-10-13T07:39:42Z",
+                    "data": {
+                        "org": "Aliyun Computing Co.LTD",
+                        "isp": "Hangzhou Alibaba Advertising Co.,Ltd.",
+                        "asn": "AS37963",
+                        "os": "Linux",
+                        "country_code": "SG",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.2p1 Ubuntu 4ubuntu0.13",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "4d79c7171e66dbb68859a76c8e6f7fd8c41cd886247e7bb95671892b03cde5a1",
+                                "certificate_subject": "Major Cobalt Strike",
+                                "certificate_organisation": "cobaltstrike",
+                                "certificate_issuer": "Major Cobalt Strike"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-12T17:35:27Z",
             "observations": []

@@ -1,0 +1,378 @@
+{
+    "schema_version": 2,
+    "ip": "196.251.107.144",
+    "first_seen": "2026-10-13T07:31:08Z",
+    "last_seen": "2026-10-13T07:31:08Z",
+    "flags": [
+        "unknown stealer"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-13T07:34:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-13T07:34:13Z",
+                    "last_observed": "2026-10-13T07:34:13Z",
+                    "data": {
+                        "abuse_confidence_score": 4,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-10-13T05:21:01Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "internet-security",
+                        "domain": "rentdedic.com",
+                        "country_code": "DE",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-13T07:31:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-13T07:31:21Z",
+                    "last_observed": "2026-10-13T07:31:21Z",
+                    "data": {
+                        "ports": [
+                            21,
+                            25,
+                            53,
+                            80,
+                            110,
+                            143,
+                            443,
+                            465,
+                            587,
+                            993,
+                            995,
+                            2222,
+                            10000,
+                            20000
+                        ],
+                        "hostnames": [
+                            "accounts-protection.top",
+                            "vm3676.defhost.co"
+                        ],
+                        "cpes": [
+                            "cpe:/a:apache:http_server",
+                            "cpe:/a:postfix:postfix"
+                        ],
+                        "tags": [
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-13T07:31:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-13T07:31:16Z",
+                    "last_observed": "2026-10-13T07:31:16Z",
+                    "data": {
+                        "asn": "AS214351",
+                        "as_name": "FEMO IT SOLUTIONS LIMITED",
+                        "as_domain": "as214351.com",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-13T07:35:32Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-13T07:35:32Z",
+                    "last_observed": "2026-10-13T07:35:32Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS37684 african network information center",
+                        "country_code": "KE",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-13T07:39:32Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-13T07:39:32Z",
+                    "last_observed": "2026-10-13T07:39:32Z",
+                    "data": {
+                        "org": "FEMOIT FEMO IT SOLUTIONS LIMITED",
+                        "isp": "FEMOIT FEMO IT SOLUTIONS LIMITED",
+                        "asn": "AS214351",
+                        "os": null,
+                        "country_code": "SC",
+                        "hostnames": [
+                            "accounts-protection.top",
+                            "vm3676.defhost.co"
+                        ],
+                        "domains": [
+                            "accounts-protection.top",
+                            "defhost.co"
+                        ],
+                        "tags": [
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 21,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "7d2086a901050e5aa1ce8b955299f110f02b34daa58d95b197a1e32dda6ebbf7",
+                                "certificate_subject": "vm3676.defhost.co",
+                                "certificate_organisation": "Self-signed for vm3676.defhost.co",
+                                "certificate_issuer": "vm3676.defhost.co"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "de8d1f61aabd78a546a026ae896b7acb53fe7ee9571fc513644a6e98bfe4a1d8",
+                                "certificate_subject": "vm3676.defhost.co",
+                                "certificate_issuer": "vm3676.defhost.co"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "http_title": "STOK — панель продажи скинов"
+                            },
+                            {
+                                "port": 110,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "de8d1f61aabd78a546a026ae896b7acb53fe7ee9571fc513644a6e98bfe4a1d8",
+                                "certificate_subject": "vm3676.defhost.co",
+                                "certificate_issuer": "vm3676.defhost.co"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "http_title": "STOK — панель продажи скинов",
+                                "jarm": "27d40d40d00040d00042d43d0000002eaee36112ff2cbee89c0d0dac62faf6",
+                                "certificate_sha256": "20307c5084f0a7bc8e41e79036d0b3ff124905f034b0b388e3e315a0dd5a51dd",
+                                "certificate_subject": "accounts-protection.top",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 465,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "07d19d1ad21d21d07c42d43d000000f50d155305214cf247147c43c0f1a823",
+                                "certificate_sha256": "de8d1f61aabd78a546a026ae896b7acb53fe7ee9571fc513644a6e98bfe4a1d8",
+                                "certificate_subject": "vm3676.defhost.co",
+                                "certificate_issuer": "vm3676.defhost.co"
+                            },
+                            {
+                                "port": 587,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "de8d1f61aabd78a546a026ae896b7acb53fe7ee9571fc513644a6e98bfe4a1d8",
+                                "certificate_subject": "vm3676.defhost.co",
+                                "certificate_issuer": "vm3676.defhost.co"
+                            },
+                            {
+                                "port": 993,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "07d3fd1ad21d21d00042d43d0000005aa9877b7a5d6a671d1e56af48dc9ce6",
+                                "certificate_sha256": "de8d1f61aabd78a546a026ae896b7acb53fe7ee9571fc513644a6e98bfe4a1d8",
+                                "certificate_subject": "vm3676.defhost.co",
+                                "certificate_issuer": "vm3676.defhost.co"
+                            },
+                            {
+                                "port": 995,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "07d3fd1ad21d21d00042d43d0000005aa9877b7a5d6a671d1e56af48dc9ce6",
+                                "certificate_sha256": "de8d1f61aabd78a546a026ae896b7acb53fe7ee9571fc513644a6e98bfe4a1d8",
+                                "certificate_subject": "vm3676.defhost.co",
+                                "certificate_issuer": "vm3676.defhost.co"
+                            },
+                            {
+                                "port": 2222,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 10000,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "Login to Webmin",
+                                "jarm": "08d08d00008d08d00042d42d000000652321e8f0f0922e10a197c7214f851b",
+                                "certificate_sha256": "717e1976fb3072cd2f1b9f1afcc586976794d1f4b226874289df275f2489153b",
+                                "certificate_subject": "vm3676.defhost.co",
+                                "certificate_issuer": "vm3676.defhost.co"
+                            },
+                            {
+                                "port": 20000,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-13T07:31:15Z",
+            "observations": [
+                {
+                    "key": "196.251.107.0/24",
+                    "first_observed": "2026-10-13T07:31:15Z",
+                    "last_observed": "2026-10-13T07:31:15Z",
+                    "data": {
+                        "cidr": "196.251.107.0/24",
+                        "sblid": "SBL689238",
+                        "rir": "afrinic"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-13T07:31:08Z",
+            "observations": [
+                {
+                    "key": "1962721",
+                    "first_observed": "2026-10-13T07:31:08Z",
+                    "last_observed": "2026-10-13T07:31:08Z",
+                    "flags": [
+                        "unknown stealer"
+                    ],
+                    "data": {
+                        "ioc": "196.251.107.144:8082",
+                        "port": 8082,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown Stealer",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown_stealer",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-13T05:24:00Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "stealer"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-13T07:33:25Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-13T07:42:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-13T07:42:35Z",
+                    "last_observed": "2026-10-13T07:42:35Z",
+                    "data": {
+                        "as_owner": "Femo It Solutions Limited",
+                        "asn": 214351,
+                        "network": "196.251.107.0/24",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -12,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 3,
+                            "undetected": 36,
+                            "harmless": 50,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "ESET",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "spam"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 2
+                        },
+                        "tags": [],
+                        "jarm": "27d40d40d00040d00042d43d0000002eaee36112ff2cbee89c0d0dac62faf6",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
