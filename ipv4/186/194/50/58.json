@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "186.194.50.58",
     "first_seen": "2026-10-06T09:55:13Z",
-    "last_seen": "2026-10-13T15:44:26Z",
+    "last_seen": "2026-10-14T12:44:52Z",
     "flags": [
         "remus"
     ],
@@ -115,6 +115,10 @@
         },
         "shodan": {
             "last_checked": "2026-10-06T10:03:16Z",
+            "last_error": {
+                "occurred_at": "2026-10-14T12:54:04Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-10-06T10:03:16Z",
@@ -173,7 +177,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-13T15:44:26Z",
+            "last_checked": "2026-10-14T12:44:52Z",
             "observations": [
                 {
                     "key": "1954248",
@@ -193,6 +197,29 @@
                         "reference": null,
                         "tags": [
                             "5a4378fb90db39f09c7b18d1f314e645",
+                            "Remus",
+                            "c2"
+                        ]
+                    }
+                },
+                {
+                    "key": "1965373",
+                    "first_observed": "2026-10-14T12:44:52Z",
+                    "last_observed": "2026-10-14T12:44:52Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "ioc": "186.194.50.58:5890",
+                        "port": 5890,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remus",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-14T11:54:05Z",
+                        "reference": null,
+                        "tags": [
+                            "0f81469cc7638ba7c82eaddbd6b3c20a",
                             "Remus",
                             "c2"
                         ]

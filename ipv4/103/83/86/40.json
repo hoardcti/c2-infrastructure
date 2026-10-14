@@ -33,8 +33,24 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-07T12:19:45Z",
-            "observations": []
+            "last_checked": "2026-10-14T12:45:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T12:45:13Z",
+                    "last_observed": "2026-10-14T12:45:13Z",
+                    "data": {
+                        "ports": [
+                            5357
+                        ],
+                        "hostnames": [
+                            "33796-27867.dchost.com"
+                        ],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
         },
         "ipinfo": {
             "last_checked": "2026-10-07T12:19:41Z",
@@ -55,11 +71,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-07T12:21:57Z",
+            "last_checked": "2026-10-14T12:49:40Z",
             "observations": [
                 {
                     "first_observed": "2026-10-07T12:21:57Z",
-                    "last_observed": "2026-10-07T12:21:57Z",
+                    "last_observed": "2026-10-14T12:49:40Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS135824 gelexiy cab net",
@@ -71,7 +87,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-07T12:25:16Z",
+            "last_checked": "2026-10-14T12:53:04Z",
             "observations": [
                 {
                     "first_observed": "2026-10-07T12:25:16Z",
@@ -102,6 +118,48 @@
                                 "certificate_sha256": "27fcb1854b4ca36a48acb6f99e60696d086e93dc7c2a99c5acdfe3c6029ffd8e",
                                 "certificate_subject": "WIN-AOFTLSH6985",
                                 "certificate_issuer": "WIN-AOFTLSH6985"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-14T12:53:04Z",
+                    "last_observed": "2026-10-14T12:53:04Z",
+                    "data": {
+                        "org": "White Label Services, LLC",
+                        "isp": "WhiteLabel Fiba Cloud Operation Company, LLC",
+                        "asn": "AS44382",
+                        "os": null,
+                        "country_code": "TR",
+                        "hostnames": [
+                            "33796-27867.dchost.com"
+                        ],
+                        "domains": [
+                            "dchost.com"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2019-0708"
+                        ],
+                        "services": [
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad22c2ad2ad2ad2adfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "27fcb1854b4ca36a48acb6f99e60696d086e93dc7c2a99c5acdfe3c6029ffd8e",
+                                "certificate_subject": "WIN-AOFTLSH6985",
+                                "certificate_issuer": "WIN-AOFTLSH6985"
+                            },
+                            {
+                                "port": 5357,
+                                "transport": "tcp",
+                                "http_title": "Service Unavailable"
                             }
                         ]
                     }

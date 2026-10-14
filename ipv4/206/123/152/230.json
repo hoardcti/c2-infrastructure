@@ -1,0 +1,153 @@
+{
+    "schema_version": 2,
+    "ip": "206.123.152.230",
+    "first_seen": "2026-10-14T12:44:52Z",
+    "last_seen": "2026-10-14T12:44:52Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-14T12:48:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T12:48:05Z",
+                    "last_observed": "2026-10-14T12:48:05Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2026-04-28T22:00:26Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Internet Security - DE",
+                        "domain": "pointtoserver.com",
+                        "country_code": "DE",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-14T12:45:09Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-14T12:45:00Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T12:45:00Z",
+                    "last_observed": "2026-10-14T12:45:00Z",
+                    "data": {
+                        "asn": "AS9009",
+                        "as_name": "M247 Europe SRL",
+                        "as_domain": "m247global.com",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-14T12:49:32Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T12:49:32Z",
+                    "last_observed": "2026-10-14T12:49:32Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "TM",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-14T12:52:50Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-14T12:44:58Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-14T12:44:52Z",
+            "observations": [
+                {
+                    "key": "1965392",
+                    "first_observed": "2026-10-14T12:44:52Z",
+                    "last_observed": "2026-10-14T12:44:52Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "206.123.152.230:4489",
+                        "port": 4489,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-14T12:11:35Z",
+                        "reference": null,
+                        "tags": [
+                            "ONETOUCH",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-14T12:47:17Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-14T12:56:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T12:56:45Z",
+                    "last_observed": "2026-10-14T12:56:45Z",
+                    "data": {
+                        "as_owner": "M247 Europe SRL",
+                        "asn": 9009,
+                        "network": "206.123.152.0/23",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 37,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
