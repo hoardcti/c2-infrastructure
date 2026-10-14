@@ -1,0 +1,187 @@
+{
+    "schema_version": 2,
+    "ip": "165.232.121.229",
+    "first_seen": "2026-10-14T17:52:20Z",
+    "last_seen": "2026-10-14T17:52:20Z",
+    "flags": [
+        "aisuru"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-14T17:55:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T17:55:37Z",
+                    "last_observed": "2026-10-14T17:55:37Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "DigitalOcean, LLC",
+                        "domain": "digitalocean.com",
+                        "country_code": "DE",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-14T17:52:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T17:52:39Z",
+                    "last_observed": "2026-10-14T17:52:39Z",
+                    "data": {
+                        "ports": [
+                            22
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-14T17:52:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T17:52:28Z",
+                    "last_observed": "2026-10-14T17:52:28Z",
+                    "data": {
+                        "asn": "AS14061",
+                        "as_name": "DigitalOcean, LLC",
+                        "as_domain": "digitalocean.com",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-14T17:57:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T17:57:20Z",
+                    "last_observed": "2026-10-14T17:57:20Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS14061 digitalocean  llc",
+                        "country_code": "DE",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-14T18:00:38Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-14T17:52:26Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-14T17:52:20Z",
+            "observations": [
+                {
+                    "key": "1965539",
+                    "first_observed": "2026-10-14T17:52:20Z",
+                    "last_observed": "2026-10-14T17:52:20Z",
+                    "flags": [
+                        "aisuru"
+                    ],
+                    "data": {
+                        "ioc": "165.232.121.229:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Aisuru",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-14T14:24:44Z",
+                        "reference": null,
+                        "tags": [
+                            "AISURU",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-14T17:54:48Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-14T18:04:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T18:04:46Z",
+                    "last_observed": "2026-10-14T18:04:46Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "165.232.64.0/18",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 2,
+                            "undetected": 36,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "27d27d27d00027d00042d43d00041de2e563ee0d1902aeebdf8197560d8f75",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
