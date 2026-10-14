@@ -85,6 +85,58 @@
                 }
             ]
         },
+        "shodan": {
+            "last_checked": "2026-10-14T01:08:43Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T01:08:43Z",
+                    "last_observed": "2026-10-14T01:08:43Z",
+                    "data": {
+                        "org": "Amazon Data Services UK",
+                        "isp": "Amazon.com, Inc.",
+                        "asn": "AS16509",
+                        "os": null,
+                        "country_code": "GB",
+                        "hostnames": [
+                            "ec2-35-179-229-71.eu-west-2.compute.amazonaws.com"
+                        ],
+                        "domains": [
+                            "amazonaws.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Havoc C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 8834,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Nessus",
+                                "jarm": "2ad2ad0002ad2ad00042d42d000000020120996177a65431cde640fa58d2e8",
+                                "certificate_sha256": "21df93c231b65ba63d8325fbcbfe9618ec7870c8269b3b8c24d6811dfbc4411c",
+                                "certificate_subject": "localhost",
+                                "certificate_organisation": "Nessus Users United",
+                                "certificate_issuer": "Nessus Certification Authority (c09e274f)"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "spamhaus": {
             "last_checked": "2026-10-13T21:05:07Z",
             "observations": []
