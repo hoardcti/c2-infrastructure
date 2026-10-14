@@ -1,0 +1,241 @@
+{
+    "schema_version": 2,
+    "ip": "45.13.239.102",
+    "first_seen": "2026-10-14T21:26:01Z",
+    "last_seen": "2026-10-14T21:26:01Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-14T21:28:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T21:28:56Z",
+                    "last_observed": "2026-10-14T21:28:56Z",
+                    "data": {
+                        "abuse_confidence_score": 2,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-09-26T02:03:29Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Datalix",
+                        "domain": "datalix.de",
+                        "country_code": "DE",
+                        "hostnames": [
+                            "102.239.13.45.in-addr.arpa"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-14T21:26:09Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T21:26:09Z",
+                    "last_observed": "2026-10-14T21:26:09Z",
+                    "data": {
+                        "ports": [
+                            135,
+                            5357,
+                            5985
+                        ],
+                        "hostnames": [
+                            "102.239.13.45.in-addr.arpa"
+                        ],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-14T21:26:09Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T21:26:09Z",
+                    "last_observed": "2026-10-14T21:26:09Z",
+                    "data": {
+                        "asn": "AS58087",
+                        "as_name": "Florian Kolb",
+                        "as_domain": "datalix.de",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-14T21:30:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T21:30:15Z",
+                    "last_observed": "2026-10-14T21:30:15Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS34549 meerfarbig gmbh & co. kg",
+                        "country_code": "DE",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "63ee043064a6c108b8363f71",
+                                "name": "SQL Injection attack (S3)",
+                                "created": "2023-02-16T10:23:44.832Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "Malicious IP",
+                                    "blacklist",
+                                    "honeypot",
+                                    "http",
+                                    "mysql",
+                                    "php",
+                                    "sql",
+                                    "tcp"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-14T21:33:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T21:33:41Z",
+                    "last_observed": "2026-10-14T21:33:41Z",
+                    "data": {
+                        "org": "Datalix",
+                        "isp": "FlorianKolb Florian Kolb",
+                        "asn": "AS58087",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "102.239.13.45.in-addr.arpa"
+                        ],
+                        "domains": [
+                            "45.in-addr.arpa"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 5357,
+                                "transport": "tcp",
+                                "http_title": "Service Unavailable"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-14T21:26:07Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-14T21:26:01Z",
+            "observations": [
+                {
+                    "key": "1965802",
+                    "first_observed": "2026-10-14T21:26:01Z",
+                    "last_observed": "2026-10-14T21:26:01Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "45.13.239.102:2404",
+                        "port": 2404,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-14T18:10:34Z",
+                        "reference": null,
+                        "tags": [
+                            "REMOTEHOST",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-14T21:28:09Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-14T21:35:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T21:35:39Z",
+                    "last_observed": "2026-10-14T21:35:39Z",
+                    "data": {
+                        "as_owner": "Florian Kolb",
+                        "asn": 58087,
+                        "network": "45.13.236.0/22",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 0,
+                            "undetected": 37,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Kaspersky",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "phishing"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

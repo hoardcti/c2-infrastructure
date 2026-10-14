@@ -1,0 +1,220 @@
+{
+    "schema_version": 2,
+    "ip": "213.152.162.19",
+    "first_seen": "2026-10-14T21:26:01Z",
+    "last_seen": "2026-10-14T21:26:01Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-14T21:29:00Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T21:29:00Z",
+                    "last_observed": "2026-10-14T21:29:00Z",
+                    "data": {
+                        "abuse_confidence_score": 28,
+                        "total_reports": 44,
+                        "distinct_reporters": 26,
+                        "last_reported_at": "2026-10-01T19:46:54Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Global Layer B.V.",
+                        "domain": "global-layer.com",
+                        "country_code": "NL",
+                        "hostnames": [
+                            "connected-by.global-layer.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-14T21:26:11Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T21:26:11Z",
+                    "last_observed": "2026-10-14T21:26:11Z",
+                    "data": {
+                        "ports": [
+                            88,
+                            89,
+                            18027
+                        ],
+                        "hostnames": [
+                            "connected-by.global-layer.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-14T21:26:09Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T21:26:09Z",
+                    "last_observed": "2026-10-14T21:26:09Z",
+                    "data": {
+                        "asn": "AS49453",
+                        "as_name": "Global Layer B.V.",
+                        "as_domain": "global-layer.com",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-14T21:30:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T21:30:19Z",
+                    "last_observed": "2026-10-14T21:30:19Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS49453 global layer",
+                        "country_code": "NL",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-14T21:33:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T21:33:45Z",
+                    "last_observed": "2026-10-14T21:33:45Z",
+                    "data": {
+                        "org": "Global Layer B.V.",
+                        "isp": "Global Layer B.V.",
+                        "asn": "AS49453",
+                        "os": null,
+                        "country_code": "NL",
+                        "hostnames": [
+                            "connected-by.global-layer.com"
+                        ],
+                        "domains": [
+                            "global-layer.com"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 88,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "Nothing here"
+                            },
+                            {
+                                "port": 89,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "302 Found"
+                            },
+                            {
+                                "port": 18027,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-14T21:26:07Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-14T21:26:01Z",
+            "observations": [
+                {
+                    "key": "1966010",
+                    "first_observed": "2026-10-14T21:26:01Z",
+                    "last_observed": "2026-10-14T21:26:01Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "213.152.162.19:25674",
+                        "port": 25674,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-14T21:10:20Z",
+                        "reference": null,
+                        "tags": [
+                            "REMOTEHOST",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-14T21:28:12Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-14T21:36:09Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T21:36:09Z",
+                    "last_observed": "2026-10-14T21:36:09Z",
+                    "data": {
+                        "as_owner": "Global Layer B.V.",
+                        "asn": 49453,
+                        "network": "213.152.160.0/21",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 1,
+                            "undetected": 35,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Kaspersky",
+                                "category": "malicious",
+                                "result": "malware"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

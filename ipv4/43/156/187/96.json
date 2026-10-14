@@ -89,7 +89,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-01T13:20:24Z",
+            "last_checked": "2026-10-14T21:35:05Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T13:20:24Z",
@@ -140,11 +140,66 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-10-14T21:35:05Z",
+                    "last_observed": "2026-10-14T21:35:05Z",
+                    "data": {
+                        "org": "Tencent Building, Kejizhongyi Avenue",
+                        "isp": "Tencent Building, Kejizhongyi Avenue",
+                        "asn": "AS132203",
+                        "os": "Windows Server 2022 (build 10.0.20348)",
+                        "country_code": "SG",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 2404,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "69c90b98a633dfd2f450eb5e2a9fb14a68dda5d6b3ad857b30f4f55f88496a2a"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            },
+                            {
+                                "port": 47001,
+                                "transport": "tcp",
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-13T21:05:06Z",
+            "last_checked": "2026-10-14T21:26:07Z",
             "observations": []
         },
         "threatfox": {

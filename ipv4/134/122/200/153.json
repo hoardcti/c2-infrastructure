@@ -196,19 +196,53 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-01T13:51:16Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-14T21:35:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T21:35:31Z",
+                    "last_observed": "2026-10-14T21:35:31Z",
+                    "data": {
+                        "org": "CTG Server Ltd.",
+                        "isp": "CTG Server Limited",
+                        "asn": "AS152194",
+                        "os": null,
+                        "country_code": "HK",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 8151,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "jarm": "2ad2ad0002ad2ad0002ad2ad2ad2ada5fc7ec76b7ed0b839211317d3844486",
+                                "certificate_sha256": "54aaf864c77dc0d380c2a5d2969e9466920c7da90fe898216197534a5ab3e6cb",
+                                "certificate_subject": "ManageEngine",
+                                "certificate_organisation": "Zoho Corporation",
+                                "certificate_issuer": "ManageEngineCA"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "jarm": "21d14d00021d21d00021d14d21d21de3c2cfe2a2540825b7b6488da7e43aca",
+                                "certificate_sha256": "54aaf864c77dc0d380c2a5d2969e9466920c7da90fe898216197534a5ab3e6cb",
+                                "certificate_subject": "ManageEngine",
+                                "certificate_organisation": "Zoho Corporation",
+                                "certificate_issuer": "ManageEngineCA"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-13T21:05:06Z",
+            "last_checked": "2026-10-14T21:26:07Z",
             "observations": [
                 {
                     "key": "134.122.128.0/17",
                     "first_observed": "2026-10-01T12:19:58Z",
-                    "last_observed": "2026-10-13T21:05:06Z",
+                    "last_observed": "2026-10-14T21:26:07Z",
                     "data": {
                         "cidr": "134.122.128.0/17",
                         "sblid": "SBL657510",
