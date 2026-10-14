@@ -1,0 +1,154 @@
+{
+    "schema_version": 2,
+    "ip": "144.31.108.193",
+    "first_seen": "2026-10-14T06:03:06Z",
+    "last_seen": "2026-10-14T06:03:06Z",
+    "flags": [
+        "xworm"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-14T06:06:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T06:06:05Z",
+                    "last_observed": "2026-10-14T06:06:05Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "SERV.HOST GROUP LTD",
+                        "domain": "serv.host",
+                        "country_code": "DE",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-14T06:03:16Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-14T06:03:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T06:03:13Z",
+                    "last_observed": "2026-10-14T06:03:13Z",
+                    "data": {
+                        "asn": "AS207957",
+                        "as_name": "SERV.HOST GROUP LTD",
+                        "as_domain": "serv.host",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-14T06:07:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T06:07:23Z",
+                    "last_observed": "2026-10-14T06:07:23Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-14T06:11:23Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-14T06:03:12Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-14T06:03:06Z",
+            "observations": [
+                {
+                    "key": "1964963",
+                    "first_observed": "2026-10-14T06:03:06Z",
+                    "last_observed": "2026-10-14T06:03:06Z",
+                    "flags": [
+                        "xworm"
+                    ],
+                    "data": {
+                        "ioc": "144.31.108.193:80",
+                        "port": 80,
+                        "threat_type": "botnet_cc",
+                        "malware": "XWorm",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.xworm",
+                        "confidence_level": 85,
+                        "first_seen": "2026-10-14T05:40:17Z",
+                        "reference": "https://polygonscan.com/address/0x1823A9a0Ec8e0C25dD957d0841e3D41a4474bAdc",
+                        "tags": [
+                            "botnet_cc",
+                            "c2",
+                            "config-server"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-14T06:05:17Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-14T06:13:47Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T06:13:47Z",
+                    "last_observed": "2026-10-14T06:13:47Z",
+                    "data": {
+                        "as_owner": "Serv.host Group Ltd",
+                        "asn": 207957,
+                        "network": "144.31.108.0/23",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 91,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "28d28d28d00028d00042d42d000000e1ea2a807a629b496b664cf07ad7c08d",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

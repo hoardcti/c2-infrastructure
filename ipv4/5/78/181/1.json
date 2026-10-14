@@ -1,0 +1,194 @@
+{
+    "schema_version": 2,
+    "ip": "5.78.181.1",
+    "first_seen": "2026-10-14T06:03:06Z",
+    "last_seen": "2026-10-14T06:03:06Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-14T06:06:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T06:06:01Z",
+                    "last_observed": "2026-10-14T06:06:01Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Hetzner Online GmbH",
+                        "domain": "hetzner.com",
+                        "country_code": "US",
+                        "hostnames": [
+                            "static.1.181.78.5.clients.your-server.de"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-14T06:03:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T06:03:14Z",
+                    "last_observed": "2026-10-14T06:03:14Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            443,
+                            50050
+                        ],
+                        "hostnames": [
+                            "static.1.181.78.5.clients.your-server.de"
+                        ],
+                        "cpes": [
+                            "cpe:/a:caddyserver:caddy",
+                            "cpe:/a:golang:go",
+                            "cpe:/a:openbsd:openssh:10.2p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-14T06:03:12Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T06:03:12Z",
+                    "last_observed": "2026-10-14T06:03:12Z",
+                    "data": {
+                        "asn": "AS212317",
+                        "as_name": "Hetzner Online GmbH",
+                        "as_domain": "hetzner.de",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-14T06:07:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T06:07:19Z",
+                    "last_observed": "2026-10-14T06:07:19Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "IR",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-14T06:11:19Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-14T06:03:12Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-14T06:03:06Z",
+            "observations": [
+                {
+                    "key": "1964753",
+                    "first_observed": "2026-10-14T06:03:06Z",
+                    "last_observed": "2026-10-14T06:03:06Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "5.78.181.1:80",
+                        "port": 80,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-10-14T05:40:41Z",
+                        "reference": null,
+                        "tags": [
+                            "212317",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-14T06:05:13Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-14T06:13:18Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-14T06:13:18Z",
+                    "last_observed": "2026-10-14T06:13:18Z",
+                    "data": {
+                        "as_owner": "Hetzner Online GmbH",
+                        "asn": 212317,
+                        "network": "5.78.0.0/16",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 0,
+                            "undetected": 90,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
