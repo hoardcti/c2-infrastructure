@@ -223,11 +223,164 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-01T16:22:43Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-15T05:51:47Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T05:51:47Z",
+                    "last_observed": "2026-10-15T05:51:47Z",
+                    "data": {
+                        "org": "Tencent cloud computing (Beijing) Co., Ltd.",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "database",
+                            "eol-product",
+                            "open-dir",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2007-2768",
+                            "CVE-2008-3844",
+                            "CVE-2009-2940",
+                            "CVE-2009-3720",
+                            "CVE-2020-29396",
+                            "CVE-2021-32052",
+                            "CVE-2023-27043",
+                            "CVE-2023-51767",
+                            "CVE-2024-6232",
+                            "CVE-2024-7592",
+                            "CVE-2024-9287",
+                            "CVE-2025-12084",
+                            "CVE-2025-12781",
+                            "CVE-2025-13462",
+                            "CVE-2025-13836",
+                            "CVE-2025-13837",
+                            "CVE-2026-0864",
+                            "CVE-2026-106587",
+                            "CVE-2026-15308",
+                            "CVE-2026-3087",
+                            "CVE-2026-35385",
+                            "CVE-2026-35386",
+                            "CVE-2026-35387",
+                            "CVE-2026-35388",
+                            "CVE-2026-35414",
+                            "CVE-2026-3644",
+                            "CVE-2026-4519",
+                            "CVE-2026-59995",
+                            "CVE-2026-59996",
+                            "CVE-2026-59997",
+                            "CVE-2026-59998",
+                            "CVE-2026-59999",
+                            "CVE-2026-60000",
+                            "CVE-2026-60001",
+                            "CVE-2026-60002",
+                            "CVE-2026-6019",
+                            "CVE-2026-7210",
+                            "CVE-2026-73281",
+                            "CVE-2026-73282",
+                            "CVE-2026-73283"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.14"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "http_title": "微信认证中心"
+                            },
+                            {
+                                "port": 631,
+                                "transport": "tcp",
+                                "product": "CUPS (IPP)",
+                                "version": "2.4.19",
+                                "http_title": "Forbidden - CUPS v2.4.19"
+                            },
+                            {
+                                "port": 2222,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.0"
+                            },
+                            {
+                                "port": 3000,
+                                "transport": "tcp",
+                                "http_title": "iaei"
+                            },
+                            {
+                                "port": 3306,
+                                "transport": "tcp",
+                                "product": "MySQL",
+                                "version": "8.0.43-0ubuntu0.24.04.2",
+                                "tags": [
+                                    "database",
+                                    "eol-product"
+                                ]
+                            },
+                            {
+                                "port": 5432,
+                                "transport": "tcp",
+                                "product": "PostgreSQL",
+                                "version": "9.6.0 or later",
+                                "tags": [
+                                    "database",
+                                    "self-signed"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "68fbe4ea7a461642cf3a2539aaec33a16fc9392adcdbd3cb92a2205caafe388e",
+                                "certificate_subject": "localhost.localdomain",
+                                "certificate_issuer": "localhost.localdomain"
+                            },
+                            {
+                                "port": 8000,
+                                "transport": "tcp",
+                                "product": "SimpleHTTPServer",
+                                "version": "0.6",
+                                "tags": [
+                                    "open-dir"
+                                ],
+                                "http_title": "Directory listing for /"
+                            },
+                            {
+                                "port": 8011,
+                                "transport": "tcp",
+                                "http_title": "Java Chains"
+                            },
+                            {
+                                "port": 8686,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "emessage · 私人消息中心",
+                                "jarm": "40d40d40d00000000043d43d00043d6aff5ab0f4fc31897186312c9e639319",
+                                "certificate_sha256": "bcac96eba6c85ef8a2de3930d48fc682f0ae27514e0bec7681493f46fd5c4b9f",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "3bb792cfe4157602990f6c7005005eb2dd36985887a48d926e723a4c00ec40d6",
+                                "certificate_subject": "Pwn3rs Striked",
+                                "certificate_organisation": "Pwn3rs",
+                                "certificate_issuer": "Pwn3rs Striked"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-14T21:26:07Z",

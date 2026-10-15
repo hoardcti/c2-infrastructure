@@ -95,11 +95,50 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-01T16:22:03Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-15T05:51:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T05:51:07Z",
+                    "last_observed": "2026-10-15T05:51:07Z",
+                    "data": {
+                        "org": "Huawei Public Cloud Service (Huawei Software Technologies Ltd.Co)",
+                        "isp": "Huawei Cloud Service data center",
+                        "asn": "AS55990",
+                        "os": "Linux",
+                        "country_code": "CN",
+                        "hostnames": [
+                            "ecs-123-60-142-164.compute.hwclouds-dns.com"
+                        ],
+                        "domains": [
+                            "hwclouds-dns.com"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 8081,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "689321f1b2d8766bd8938b9a888a2e85fdb2138eac20cedaf00a74b9fc1efd17",
+                                "certificate_subject": "051",
+                                "certificate_organisation": "Chrome",
+                                "certificate_issuer": "051"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-14T21:26:07Z",

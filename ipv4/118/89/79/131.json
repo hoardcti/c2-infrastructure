@@ -120,7 +120,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-01T16:22:53Z",
+            "last_checked": "2026-10-15T05:51:57Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T16:22:53Z",
@@ -130,6 +130,51 @@
                         "isp": "Shenzhen Tencent Computer Systems Company Limited",
                         "asn": "AS45090",
                         "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.14",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "5222d6b53b3d9e67aa5acd3ce944951ef75c02cafafa212462e27b04dd8fec31",
+                                "certificate_subject": "Major Cobalt Strike",
+                                "certificate_organisation": "cobaltstrike",
+                                "certificate_issuer": "Major Cobalt Strike"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-15T05:51:57Z",
+                    "last_observed": "2026-10-15T05:51:57Z",
+                    "data": {
+                        "org": "Tencent cloud computing (Beijing) Co., Ltd.",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": "Linux",
                         "country_code": "CN",
                         "hostnames": [],
                         "domains": [],

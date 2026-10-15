@@ -85,11 +85,63 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-01T16:22:21Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-15T05:51:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T05:51:25Z",
+                    "last_observed": "2026-10-15T05:51:25Z",
+                    "data": {
+                        "org": "Majestic Hosting Solutions, LLC",
+                        "isp": "Majestic Hosting Solutions, LLC",
+                        "asn": "AS396073",
+                        "os": "Windows Server 2016 (version 1607) (build 10.0.14393)",
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "eol-os",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 139,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp",
+                                "tags": [
+                                    "eol-os"
+                                ]
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad22c2ad2ad2ad2adfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "6ccebf5f5bb930b535d1274b1e1be9a32d41354938ce2c29f7b035319f1f21c8",
+                                "certificate_subject": "WIN-D2B8VC1E9I0",
+                                "certificate_issuer": "WIN-D2B8VC1E9I0"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-14T21:26:07Z",

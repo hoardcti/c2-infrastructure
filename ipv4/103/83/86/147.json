@@ -165,11 +165,59 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-01T16:21:29Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-15T05:50:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T05:50:33Z",
+                    "last_observed": "2026-10-15T05:50:33Z",
+                    "data": {
+                        "org": "White Label Services, LLC",
+                        "isp": "WhiteLabel Fiba Cloud Operation Company, LLC",
+                        "asn": "AS44382",
+                        "os": null,
+                        "country_code": "TR",
+                        "hostnames": [
+                            "33195-22286.dchost.com"
+                        ],
+                        "domains": [
+                            "dchost.com"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 2404,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "062b91fcfde51fcf09f836af9b415cf5b9550a7f0f22fd5149976b0823ce3fe8",
+                                "certificate_subject": "33195-22286",
+                                "certificate_issuer": "33195-22286"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-14T21:26:07Z",

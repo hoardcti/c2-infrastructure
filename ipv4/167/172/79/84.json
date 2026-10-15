@@ -1,0 +1,198 @@
+{
+    "schema_version": 2,
+    "ip": "167.172.79.84",
+    "first_seen": "2026-10-15T05:42:08Z",
+    "last_seen": "2026-10-15T05:42:08Z",
+    "flags": [
+        "aisuru"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-15T05:44:55Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T05:44:55Z",
+                    "last_observed": "2026-10-15T05:44:55Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "DigitalOcean, LLC",
+                        "domain": "digitalocean.com",
+                        "country_code": "SG",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-15T05:42:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T05:42:15Z",
+                    "last_observed": "2026-10-15T05:42:15Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            9100
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:f5:nginx"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-15T05:42:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T05:42:15Z",
+                    "last_observed": "2026-10-15T05:42:15Z",
+                    "data": {
+                        "asn": "AS14061",
+                        "as_name": "DigitalOcean, LLC",
+                        "as_domain": "digitalocean.com",
+                        "country_code": "SG",
+                        "country": "Singapore",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-15T05:46:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T05:46:20Z",
+                    "last_observed": "2026-10-15T05:46:20Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS14061 digitalocean  llc",
+                        "country_code": "SG",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-15T05:50:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T05:50:13Z",
+                    "last_observed": "2026-10-15T05:50:13Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": null,
+                        "country_code": "SG",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-15T05:42:15Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-15T05:42:08Z",
+            "observations": [
+                {
+                    "key": "1966372",
+                    "first_observed": "2026-10-15T05:42:08Z",
+                    "last_observed": "2026-10-15T05:42:08Z",
+                    "flags": [
+                        "aisuru"
+                    ],
+                    "data": {
+                        "ioc": "167.172.79.84:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Aisuru",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-15T00:40:43Z",
+                        "reference": null,
+                        "tags": [
+                            "AISURU",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-15T05:44:07Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-15T05:52:11Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T05:52:11Z",
+                    "last_observed": "2026-10-15T05:52:11Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "167.172.0.0/16",
+                        "country": "SG",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 1,
+                            "undetected": 38,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "29d3fd00029d29d00042d43d0000002059a3b916699461c5923779b77cf06b",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -176,7 +176,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-01T16:21:25Z",
+            "last_checked": "2026-10-15T05:50:29Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T16:21:25Z",
@@ -238,6 +238,60 @@
                                 "certificate_sha256": "0c2317493fb6c9d40512a62703bac0fdc205a202dba897d6c48ebcf12e34a78e",
                                 "certificate_subject": "adminx.shipxpost.com",
                                 "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 5003,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-15T05:50:29Z",
+                    "last_observed": "2026-10-15T05:50:29Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": "Linux",
+                        "country_code": "IN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
                             },
                             {
                                 "port": 5003,

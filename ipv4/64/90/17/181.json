@@ -104,11 +104,83 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-01T16:22:42Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-15T05:51:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T05:51:45Z",
+                    "last_observed": "2026-10-15T05:51:45Z",
+                    "data": {
+                        "org": "NetLab Global - AP",
+                        "isp": "NetLab Global",
+                        "asn": "AS979",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "BaseHTTPServer",
+                                "version": "0.6",
+                                "http_title": "文库深链验证 · 自动唤起"
+                            },
+                            {
+                                "port": 8099,
+                                "transport": "tcp",
+                                "product": "nginx"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "CyberStrikeAI",
+                                "jarm": "40d40d40d00000000043d43d00043d6aff5ab0f4fc31897186312c9e639319",
+                                "certificate_sha256": "4bd618fe85bb718c613b571dc46d55da1853b4a745aebd41c2043e751c769aa6",
+                                "certificate_subject": "CyberStrikeAI",
+                                "certificate_issuer": "CyberStrikeAI"
+                            },
+                            {
+                                "port": 8900,
+                                "transport": "tcp",
+                                "http_title": "百度学术 外带结果（BDUSS）"
+                            },
+                            {
+                                "port": 18084,
+                                "transport": "tcp",
+                                "http_title": "PoC 落地页 - com.baidu.input"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "697e863c5081202cdd69b7ad065532c102e811b2009e9a52778c635137550d4c",
+                                "certificate_subject": "US",
+                                "certificate_organisation": "Software",
+                                "certificate_issuer": "US"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-14T21:26:07Z",
