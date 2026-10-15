@@ -1,0 +1,158 @@
+{
+    "schema_version": 2,
+    "ip": "120.48.34.130",
+    "first_seen": "2026-10-15T11:06:52Z",
+    "last_seen": "2026-10-15T11:06:52Z",
+    "flags": [
+        "vshell"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-15T11:09:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:09:54Z",
+                    "last_observed": "2026-10-15T11:09:54Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+                        "domain": "baidu.com",
+                        "country_code": "CN",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-15T11:07:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:39Z",
+                    "last_observed": "2026-10-15T11:07:39Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            8838,
+                            9999
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:8.0"
+                        ],
+                        "tags": [],
+                        "vulns": [
+                            "CVE-2007-2768",
+                            "CVE-2008-3844",
+                            "CVE-2016-20012",
+                            "CVE-2019-16905",
+                            "CVE-2020-14145",
+                            "CVE-2020-15778",
+                            "CVE-2021-36368",
+                            "CVE-2021-41617",
+                            "CVE-2023-38408",
+                            "CVE-2023-48795",
+                            "CVE-2023-51385",
+                            "CVE-2023-51767",
+                            "CVE-2025-26465",
+                            "CVE-2025-32728",
+                            "CVE-2026-35385",
+                            "CVE-2026-35387",
+                            "CVE-2026-35388",
+                            "CVE-2026-35414",
+                            "CVE-2026-59995",
+                            "CVE-2026-59996",
+                            "CVE-2026-59997",
+                            "CVE-2026-59998",
+                            "CVE-2026-59999",
+                            "CVE-2026-60000",
+                            "CVE-2026-60001",
+                            "CVE-2026-60002",
+                            "CVE-2026-73281",
+                            "CVE-2026-73282",
+                            "CVE-2026-73283"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-15T11:07:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:05Z",
+                    "last_observed": "2026-10-15T11:07:05Z",
+                    "data": {
+                        "asn": "AS38365",
+                        "as_name": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+                        "as_domain": "baidu.com",
+                        "country_code": "CN",
+                        "country": "China",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-15T11:11:12Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:11:12Z",
+                    "last_observed": "2026-10-15T11:11:12Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS38365 beijing baidu netcom science and technology co.  ltd.",
+                        "country_code": "CN",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-15T11:15:12Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-15T11:06:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-15T11:06:52Z",
+            "observations": [
+                {
+                    "key": "1967422",
+                    "first_observed": "2026-10-15T11:06:52Z",
+                    "last_observed": "2026-10-15T11:06:52Z",
+                    "flags": [
+                        "vshell"
+                    ],
+                    "data": {
+                        "ioc": "120.48.34.130:8838",
+                        "port": 8838,
+                        "threat_type": "botnet_cc",
+                        "malware": "VShell",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.vshell",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-15T10:55:14Z",
+                        "reference": "",
+                        "tags": [
+                            "Vshell",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,103 @@
+{
+    "schema_version": 2,
+    "ip": "170.62.130.154",
+    "first_seen": "2026-10-15T11:06:52Z",
+    "last_seen": "2026-10-15T11:06:52Z",
+    "flags": [
+        "vshell"
+    ],
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-15T11:07:48Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:48Z",
+                    "last_observed": "2026-10-15T11:07:48Z",
+                    "data": {
+                        "ports": [
+                            80
+                        ],
+                        "hostnames": [
+                            "170-62-130-154.aceips.com"
+                        ],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-15T11:07:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:07Z",
+                    "last_observed": "2026-10-15T11:07:07Z",
+                    "data": {
+                        "asn": "AS140869",
+                        "as_name": "Turing Group Limited",
+                        "as_domain": "turingidc.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-15T11:11:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:11:30Z",
+                    "last_observed": "2026-10-15T11:11:30Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-15T11:15:30Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-15T11:06:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-15T11:06:52Z",
+            "observations": [
+                {
+                    "key": "1967407",
+                    "first_observed": "2026-10-15T11:06:52Z",
+                    "last_observed": "2026-10-15T11:06:52Z",
+                    "flags": [
+                        "vshell"
+                    ],
+                    "data": {
+                        "ioc": "170.62.130.154:80",
+                        "port": 80,
+                        "threat_type": "botnet_cc",
+                        "malware": "VShell",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.vshell",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-15T10:55:13Z",
+                        "reference": "",
+                        "tags": [
+                            "Vshell",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

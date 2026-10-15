@@ -1,0 +1,87 @@
+{
+    "schema_version": 2,
+    "ip": "198.44.32.14",
+    "first_seen": "2026-10-15T11:06:52Z",
+    "last_seen": "2026-10-15T11:06:52Z",
+    "flags": [
+        "vshell"
+    ],
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-15T11:07:54Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-15T11:07:08Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:08Z",
+                    "last_observed": "2026-10-15T11:07:08Z",
+                    "data": {
+                        "asn": "AS36352",
+                        "as_name": "HostPapa",
+                        "as_domain": "colocrossing.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-15T11:11:42Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:11:42Z",
+                    "last_observed": "2026-10-15T11:11:42Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS54290 hostwinds llc.",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-15T11:15:42Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-15T11:06:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-15T11:06:52Z",
+            "observations": [
+                {
+                    "key": "1967435",
+                    "first_observed": "2026-10-15T11:06:52Z",
+                    "last_observed": "2026-10-15T11:06:52Z",
+                    "flags": [
+                        "vshell"
+                    ],
+                    "data": {
+                        "ioc": "198.44.32.14:60010",
+                        "port": 60010,
+                        "threat_type": "botnet_cc",
+                        "malware": "VShell",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.vshell",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-15T10:55:14Z",
+                        "reference": "",
+                        "tags": [
+                            "Vshell",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

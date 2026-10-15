@@ -1,0 +1,177 @@
+{
+    "schema_version": 2,
+    "ip": "157.230.108.74",
+    "first_seen": "2026-10-15T11:06:52Z",
+    "last_seen": "2026-10-15T11:06:52Z",
+    "flags": [
+        "aisuru"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-15T11:10:10Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:10:10Z",
+                    "last_observed": "2026-10-15T11:10:10Z",
+                    "data": {
+                        "abuse_confidence_score": 56,
+                        "total_reports": 8,
+                        "distinct_reporters": 8,
+                        "last_reported_at": "2026-10-14T23:00:19Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "DigitalOcean, LLC",
+                        "domain": "digitalocean.com",
+                        "country_code": "DE",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-15T11:07:47Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:47Z",
+                    "last_observed": "2026-10-15T11:07:47Z",
+                    "data": {
+                        "ports": [
+                            22
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-15T11:07:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:07Z",
+                    "last_observed": "2026-10-15T11:07:07Z",
+                    "data": {
+                        "asn": "AS14061",
+                        "as_name": "DigitalOcean, LLC",
+                        "as_domain": "digitalocean.com",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-15T11:11:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:11:28Z",
+                    "last_observed": "2026-10-15T11:11:28Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS14061 digitalocean  llc",
+                        "country_code": "DE",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-15T11:15:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:15:28Z",
+                    "last_observed": "2026-10-15T11:15:28Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": "Linux",
+                        "country_code": "DE",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-15T11:06:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-15T11:06:52Z",
+            "observations": [
+                {
+                    "key": "1967075",
+                    "first_observed": "2026-10-15T11:06:52Z",
+                    "last_observed": "2026-10-15T11:06:52Z",
+                    "flags": [
+                        "aisuru"
+                    ],
+                    "data": {
+                        "ioc": "157.230.108.74:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Aisuru",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-15T09:36:26Z",
+                        "reference": null,
+                        "tags": [
+                            "AISURU",
+                            "c2"
+                        ]
+                    }
+                },
+                {
+                    "key": "1966870",
+                    "first_observed": "2026-10-15T11:06:52Z",
+                    "last_observed": "2026-10-15T11:06:52Z",
+                    "flags": [
+                        "aisuru"
+                    ],
+                    "data": {
+                        "ioc": "157.230.108.74:9034",
+                        "port": 9034,
+                        "threat_type": "botnet_cc",
+                        "malware": "Aisuru",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-15T06:11:42Z",
+                        "reference": null,
+                        "tags": [
+                            "AISURU",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

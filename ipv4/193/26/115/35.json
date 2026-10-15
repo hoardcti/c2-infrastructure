@@ -1,0 +1,221 @@
+{
+    "schema_version": 2,
+    "ip": "193.26.115.35",
+    "first_seen": "2026-10-15T11:06:52Z",
+    "last_seen": "2026-10-15T11:06:52Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-15T11:07:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:51Z",
+                    "last_observed": "2026-10-15T11:07:51Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            50050
+                        ],
+                        "hostnames": [
+                            "193.26.115.35.powered.by.rdp.sh"
+                        ],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-15T11:07:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:07Z",
+                    "last_observed": "2026-10-15T11:07:07Z",
+                    "data": {
+                        "asn": "AS210558",
+                        "as_name": "1337 Services GmbH",
+                        "as_domain": "rdp.sh",
+                        "country_code": "RO",
+                        "country": "Romania",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-15T11:11:36Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:11:36Z",
+                    "last_observed": "2026-10-15T11:11:36Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS23470 reliablesite.net llc",
+                        "country_code": "DE",
+                        "pulse_count": 2,
+                        "pulses": [
+                            {
+                                "id": "65232a0583336856b095107c",
+                                "name": "IOCs - 20231081428 - ANIA Threat Feeds - IP Segment 5",
+                                "created": "2023-10-08T22:15:33.372Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "699bd87960687d954404cbda",
+                                "name": "URLHaus data - 22-02-2026 (Part 3)",
+                                "created": "2026-02-23T04:32:57.169Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "32-bit",
+                                    "AsyncRAT",
+                                    "ClearFake",
+                                    "CobaltStrike",
+                                    "CoinMiner",
+                                    "Kaiji",
+                                    "Mozi",
+                                    "PythonStealer",
+                                    "SalatStealer",
+                                    "SantaStealer",
+                                    "SimpleHelp",
+                                    "arm",
+                                    "backdoor",
+                                    "botnetdomain",
+                                    "c2-monitor-auto",
+                                    "censys",
+                                    "connectwise",
+                                    "dropped-by-amadey",
+                                    "elf",
+                                    "exe",
+                                    "fbf543",
+                                    "gafgyt",
+                                    "hajime",
+                                    "mips",
+                                    "mirai",
+                                    "msi",
+                                    "opendir",
+                                    "screenconnect",
+                                    "script",
+                                    "sh",
+                                    "sshdkit",
+                                    "ua-wget",
+                                    "x86-32"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-15T11:15:36Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:15:36Z",
+                    "last_observed": "2026-10-15T11:15:36Z",
+                    "data": {
+                        "org": "1337 Services GmbH",
+                        "isp": "services-1337-gmbh 1337 Services GmbH",
+                        "asn": "AS210558",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "193.26.115.35.powered.by.rdp.sh"
+                        ],
+                        "domains": [
+                            "rdp.sh"
+                        ],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "62abf9a87d4432dc211be249239d747d43c3d39749b2bef6480f7433a4332ec4",
+                                "certificate_subject": "Major Cobalt Strike",
+                                "certificate_organisation": "cobaltstrike",
+                                "certificate_issuer": "Major Cobalt Strike"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-15T11:06:59Z",
+            "observations": [
+                {
+                    "key": "193.26.115.0/24",
+                    "first_observed": "2026-10-15T11:06:59Z",
+                    "last_observed": "2026-10-15T11:06:59Z",
+                    "data": {
+                        "cidr": "193.26.115.0/24",
+                        "sblid": "SBL687501",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-15T11:06:52Z",
+            "observations": [
+                {
+                    "key": "1966416",
+                    "first_observed": "2026-10-15T11:06:52Z",
+                    "last_observed": "2026-10-15T11:06:52Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "193.26.115.35:80",
+                        "port": 80,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-10-15T07:09:24Z",
+                        "reference": null,
+                        "tags": [
+                            "210558",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

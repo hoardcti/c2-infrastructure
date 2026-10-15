@@ -1,0 +1,170 @@
+{
+    "schema_version": 2,
+    "ip": "63.141.229.228",
+    "first_seen": "2026-10-15T11:06:52Z",
+    "last_seen": "2026-10-15T11:06:52Z",
+    "flags": [
+        "vshell"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-15T11:09:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:09:26Z",
+                    "last_observed": "2026-10-15T11:09:26Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Nocix, LLC",
+                        "domain": "nocix.net",
+                        "country_code": "US",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-15T11:07:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:25Z",
+                    "last_observed": "2026-10-15T11:07:25Z",
+                    "data": {
+                        "ports": [
+                            443,
+                            8000,
+                            8084,
+                            8086,
+                            8090,
+                            8099,
+                            8443,
+                            9443
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-15T11:07:02Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:02Z",
+                    "last_observed": "2026-10-15T11:07:02Z",
+                    "data": {
+                        "asn": "AS33387",
+                        "as_name": "Nocix, LLC",
+                        "as_domain": "nocix.net",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-15T11:10:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:10:44Z",
+                    "last_observed": "2026-10-15T11:10:44Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS33387 nocix  llc",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-15T11:14:44Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-15T11:06:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-15T11:06:52Z",
+            "observations": [
+                {
+                    "key": "1967433",
+                    "first_observed": "2026-10-15T11:06:52Z",
+                    "last_observed": "2026-10-15T11:06:52Z",
+                    "flags": [
+                        "vshell"
+                    ],
+                    "data": {
+                        "ioc": "63.141.229.228:8086",
+                        "port": 8086,
+                        "threat_type": "botnet_cc",
+                        "malware": "VShell",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.vshell",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-15T10:55:14Z",
+                        "reference": "",
+                        "tags": [
+                            "Vshell",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-15T11:08:38Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-15T11:20:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:20:23Z",
+                    "last_observed": "2026-10-15T11:20:23Z",
+                    "data": {
+                        "as_owner": "Nocix, LLC",
+                        "asn": 33387,
+                        "network": "63.141.224.0/19",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 0,
+                            "undetected": 39,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "27d27d27d00027d1dc42d42d000000f7be33a964d0daa97a97a8068db17dd3",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

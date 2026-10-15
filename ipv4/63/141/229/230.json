@@ -1,0 +1,235 @@
+{
+    "schema_version": 2,
+    "ip": "63.141.229.230",
+    "first_seen": "2026-10-15T11:06:52Z",
+    "last_seen": "2026-10-15T11:06:52Z",
+    "flags": [
+        "vshell"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-15T11:09:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:09:30Z",
+                    "last_observed": "2026-10-15T11:09:30Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Nocix, LLC",
+                        "domain": "nocix.net",
+                        "country_code": "US",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-15T11:07:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:27Z",
+                    "last_observed": "2026-10-15T11:07:27Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            3306,
+                            8000,
+                            8080,
+                            8086
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:oracle:mysql:5.7.44-rogue"
+                        ],
+                        "tags": [
+                            "database",
+                            "eol-product"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-15T11:07:03Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:03Z",
+                    "last_observed": "2026-10-15T11:07:03Z",
+                    "data": {
+                        "asn": "AS33387",
+                        "as_name": "Nocix, LLC",
+                        "as_domain": "nocix.net",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-15T11:10:48Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:10:48Z",
+                    "last_observed": "2026-10-15T11:10:48Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS33387 nocix  llc",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-15T11:14:48Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:14:48Z",
+                    "last_observed": "2026-10-15T11:14:48Z",
+                    "data": {
+                        "org": "Nocix, LLC",
+                        "isp": "Nocix, LLC",
+                        "asn": "AS33387",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "database",
+                            "eol-product"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3306,
+                                "transport": "tcp",
+                                "product": "MySQL",
+                                "version": "5.7.44-rogue",
+                                "tags": [
+                                    "database",
+                                    "eol-product"
+                                ]
+                            },
+                            {
+                                "port": 8000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8081,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8084,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8086,
+                                "transport": "tcp",
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 8090,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 9443,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 10001,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-15T11:06:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-15T11:06:52Z",
+            "observations": [
+                {
+                    "key": "1967413",
+                    "first_observed": "2026-10-15T11:06:52Z",
+                    "last_observed": "2026-10-15T11:06:52Z",
+                    "flags": [
+                        "vshell"
+                    ],
+                    "data": {
+                        "ioc": "63.141.229.230:8086",
+                        "port": 8086,
+                        "threat_type": "botnet_cc",
+                        "malware": "VShell",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.vshell",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-15T10:55:13Z",
+                        "reference": "",
+                        "tags": [
+                            "Vshell",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-15T11:08:42Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-15T11:20:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:20:53Z",
+                    "last_observed": "2026-10-15T11:20:53Z",
+                    "data": {
+                        "as_owner": "Nocix, LLC",
+                        "asn": 33387,
+                        "network": "63.141.224.0/19",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 0,
+                            "undetected": 38,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "27d27d27d00027d1dc42d42d000000f7be33a964d0daa97a97a8068db17dd3",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

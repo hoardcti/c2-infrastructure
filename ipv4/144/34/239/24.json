@@ -1,0 +1,163 @@
+{
+    "schema_version": 2,
+    "ip": "144.34.239.24",
+    "first_seen": "2026-10-15T11:06:52Z",
+    "last_seen": "2026-10-15T11:06:52Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-15T11:10:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:10:04Z",
+                    "last_observed": "2026-10-15T11:10:04Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Cluster Logic Inc",
+                        "domain": "it7.net",
+                        "country_code": "US",
+                        "hostnames": [
+                            "144.34.239.24.16clouds.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-15T11:07:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:44Z",
+                    "last_observed": "2026-10-15T11:07:44Z",
+                    "data": {
+                        "ports": [
+                            22
+                        ],
+                        "hostnames": [
+                            "144.34.239.24.16clouds.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-15T11:07:06Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:06Z",
+                    "last_observed": "2026-10-15T11:07:06Z",
+                    "data": {
+                        "asn": "AS25820",
+                        "as_name": "IT7 Networks Inc",
+                        "as_domain": "it7.net",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-15T11:11:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:11:22Z",
+                    "last_observed": "2026-10-15T11:11:22Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS25820 it7 networks inc",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-15T11:15:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:15:22Z",
+                    "last_observed": "2026-10-15T11:15:22Z",
+                    "data": {
+                        "org": "Cluster Logic Inc",
+                        "isp": "IT7 Networks Inc",
+                        "asn": "AS25820",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "144.34.239.24.16clouds.com"
+                        ],
+                        "domains": [
+                            "16clouds.com"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.15"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-15T11:06:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-15T11:06:52Z",
+            "observations": [
+                {
+                    "key": "1966414",
+                    "first_observed": "2026-10-15T11:06:52Z",
+                    "last_observed": "2026-10-15T11:06:52Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "144.34.239.24:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-10-15T07:09:25Z",
+                        "reference": null,
+                        "tags": [
+                            "25820",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

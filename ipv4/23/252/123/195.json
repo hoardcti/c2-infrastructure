@@ -1,0 +1,171 @@
+{
+    "schema_version": 2,
+    "ip": "23.252.123.195",
+    "first_seen": "2026-10-15T11:06:52Z",
+    "last_seen": "2026-10-15T11:06:52Z",
+    "flags": [
+        "vshell"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-15T11:08:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:08:54Z",
+                    "last_observed": "2026-10-15T11:08:54Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "WebNX, Inc.",
+                        "domain": "webnx.com",
+                        "country_code": "US",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-15T11:07:09Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:09Z",
+                    "last_observed": "2026-10-15T11:07:09Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            443,
+                            8080
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:10.2p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-15T11:06:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:06:59Z",
+                    "last_observed": "2026-10-15T11:06:59Z",
+                    "data": {
+                        "asn": "AS18450",
+                        "as_name": "WebNX, Inc.",
+                        "as_domain": "webnx.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-15T11:10:12Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:10:12Z",
+                    "last_observed": "2026-10-15T11:10:12Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS18450 webnx  inc.",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-15T11:14:12Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-15T11:06:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-15T11:06:52Z",
+            "observations": [
+                {
+                    "key": "1967411",
+                    "first_observed": "2026-10-15T11:06:52Z",
+                    "last_observed": "2026-10-15T11:06:52Z",
+                    "flags": [
+                        "vshell"
+                    ],
+                    "data": {
+                        "ioc": "23.252.123.195:80",
+                        "port": 80,
+                        "threat_type": "botnet_cc",
+                        "malware": "VShell",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.vshell",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-15T10:55:13Z",
+                        "reference": "",
+                        "tags": [
+                            "Vshell",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-15T11:08:06Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-15T11:16:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:16:23Z",
+                    "last_observed": "2026-10-15T11:16:23Z",
+                    "data": {
+                        "as_owner": "WebNX, Inc.",
+                        "asn": 18450,
+                        "network": "23.252.112.0/20",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 0,
+                            "undetected": 37,
+                            "harmless": 55,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "40d40d40d00000000043d43d00043d6aff5ab0f4fc31897186312c9e639319",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

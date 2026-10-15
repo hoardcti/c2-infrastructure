@@ -2,9 +2,10 @@
     "schema_version": 2,
     "ip": "149.30.232.29",
     "first_seen": "2026-09-14T11:57:26.201795Z",
-    "last_seen": "2026-10-09T08:42:38Z",
+    "last_seen": "2026-10-15T11:06:52Z",
     "flags": [
-        "cobalt strike"
+        "cobalt strike",
+        "vshell"
     ],
     "sources": {
         "abuseipdb": {
@@ -230,7 +231,7 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-09T08:42:38Z",
+            "last_checked": "2026-10-15T11:06:52Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.201795Z",
@@ -269,6 +270,28 @@
                             "Cobalt Strike",
                             "c2",
                             "censys"
+                        ]
+                    }
+                },
+                {
+                    "key": "1967402",
+                    "first_observed": "2026-10-15T11:06:52Z",
+                    "last_observed": "2026-10-15T11:06:52Z",
+                    "flags": [
+                        "vshell"
+                    ],
+                    "data": {
+                        "ioc": "149.30.232.29:8021",
+                        "port": 8021,
+                        "threat_type": "botnet_cc",
+                        "malware": "VShell",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.vshell",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-15T10:55:13Z",
+                        "reference": "",
+                        "tags": [
+                            "Vshell",
+                            "c2"
                         ]
                     }
                 }

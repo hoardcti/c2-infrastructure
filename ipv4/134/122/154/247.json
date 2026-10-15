@@ -1,0 +1,170 @@
+{
+    "schema_version": 2,
+    "ip": "134.122.154.247",
+    "first_seen": "2026-10-15T11:06:52Z",
+    "last_seen": "2026-10-15T11:06:52Z",
+    "flags": [
+        "vshell"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-15T11:09:58Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:09:58Z",
+                    "last_observed": "2026-10-15T11:09:58Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "CTG Server Ltd.",
+                        "domain": "ctgserver.com",
+                        "country_code": "SG",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-15T11:07:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:41Z",
+                    "last_observed": "2026-10-15T11:07:41Z",
+                    "data": {
+                        "ports": [
+                            18089
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.27.5"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-15T11:07:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:05Z",
+                    "last_observed": "2026-10-15T11:07:05Z",
+                    "data": {
+                        "asn": "AS152194",
+                        "as_name": "CTG Server Limited",
+                        "as_domain": "ctgserver.net",
+                        "country_code": "SG",
+                        "country": "Singapore",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-15T11:11:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:11:16Z",
+                    "last_observed": "2026-10-15T11:11:16Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS64050 bgpnet global asn",
+                        "country_code": "SG",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-15T11:15:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:15:16Z",
+                    "last_observed": "2026-10-15T11:15:16Z",
+                    "data": {
+                        "org": "CTG Server Ltd.",
+                        "isp": "CTG Server Limited",
+                        "asn": "AS152194",
+                        "os": null,
+                        "country_code": "JP",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 8080,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 18089,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.27.5",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "一手号商"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-15T11:06:59Z",
+            "observations": [
+                {
+                    "key": "134.122.128.0/17",
+                    "first_observed": "2026-10-15T11:06:59Z",
+                    "last_observed": "2026-10-15T11:06:59Z",
+                    "data": {
+                        "cidr": "134.122.128.0/17",
+                        "sblid": "SBL657510",
+                        "rir": "apnic"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-15T11:06:52Z",
+            "observations": [
+                {
+                    "key": "1967439",
+                    "first_observed": "2026-10-15T11:06:52Z",
+                    "last_observed": "2026-10-15T11:06:52Z",
+                    "flags": [
+                        "vshell"
+                    ],
+                    "data": {
+                        "ioc": "134.122.154.247:58084",
+                        "port": 58084,
+                        "threat_type": "botnet_cc",
+                        "malware": "VShell",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.vshell",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-15T10:55:14Z",
+                        "reference": "",
+                        "tags": [
+                            "Vshell",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

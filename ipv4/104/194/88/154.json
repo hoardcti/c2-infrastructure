@@ -1,0 +1,150 @@
+{
+    "schema_version": 2,
+    "ip": "104.194.88.154",
+    "first_seen": "2026-10-15T11:06:52Z",
+    "last_seen": "2026-10-15T11:06:52Z",
+    "flags": [
+        "vshell"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-15T11:09:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:09:40Z",
+                    "last_observed": "2026-10-15T11:09:40Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "IT7 Networks Inc",
+                        "domain": "it7.net",
+                        "country_code": "US",
+                        "hostnames": [
+                            "104.194.88.154.16clouds.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-15T11:07:32Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:32Z",
+                    "last_observed": "2026-10-15T11:07:32Z",
+                    "data": {
+                        "ports": [
+                            21,
+                            22,
+                            80,
+                            443,
+                            887,
+                            888,
+                            3001,
+                            3306
+                        ],
+                        "hostnames": [
+                            "104.194.88.154.16clouds.com",
+                            "admin.beaconcapital.cc"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx",
+                            "cpe:/a:mariadb:mariadb:10.11.10-MariaDB-log",
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/a:pureftpd:pure-ftpd",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "database",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-15T11:07:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:04Z",
+                    "last_observed": "2026-10-15T11:07:04Z",
+                    "data": {
+                        "asn": "AS25820",
+                        "as_name": "IT7 Networks Inc",
+                        "as_domain": "it7.net",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-15T11:10:58Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:10:58Z",
+                    "last_observed": "2026-10-15T11:10:58Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS25820 it7 networks inc",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-15T11:14:58Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-15T11:06:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-15T11:06:52Z",
+            "observations": [
+                {
+                    "key": "1967434",
+                    "first_observed": "2026-10-15T11:06:52Z",
+                    "last_observed": "2026-10-15T11:06:52Z",
+                    "flags": [
+                        "vshell"
+                    ],
+                    "data": {
+                        "ioc": "104.194.88.154:39001",
+                        "port": 39001,
+                        "threat_type": "botnet_cc",
+                        "malware": "VShell",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.vshell",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-15T10:55:14Z",
+                        "reference": "",
+                        "tags": [
+                            "Vshell",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-15T11:08:52Z",
+            "observations": []
+        }
+    }
+}

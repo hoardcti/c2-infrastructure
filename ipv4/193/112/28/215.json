@@ -1,0 +1,182 @@
+{
+    "schema_version": 2,
+    "ip": "193.112.28.215",
+    "first_seen": "2026-10-15T11:06:52Z",
+    "last_seen": "2026-10-15T11:06:52Z",
+    "flags": [
+        "vshell"
+    ],
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-15T11:07:52Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:52Z",
+                    "last_observed": "2026-10-15T11:07:52Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443,
+                            554,
+                            1234,
+                            15443,
+                            18090
+                        ],
+                        "hostnames": [
+                            "api.azure.com",
+                            "cloud.google.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:python:python:3.12.3"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2009-2940",
+                            "CVE-2009-3720",
+                            "CVE-2020-29396",
+                            "CVE-2021-32052",
+                            "CVE-2023-27043",
+                            "CVE-2024-6232",
+                            "CVE-2024-7592",
+                            "CVE-2024-9287",
+                            "CVE-2025-12084",
+                            "CVE-2025-12781",
+                            "CVE-2025-13462",
+                            "CVE-2025-13836",
+                            "CVE-2025-13837",
+                            "CVE-2026-0864",
+                            "CVE-2026-15308",
+                            "CVE-2026-3087",
+                            "CVE-2026-3644",
+                            "CVE-2026-4519",
+                            "CVE-2026-6019",
+                            "CVE-2026-7210"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-15T11:07:08Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:08Z",
+                    "last_observed": "2026-10-15T11:07:08Z",
+                    "data": {
+                        "asn": "AS45090",
+                        "as_name": "Shenzhen Tencent Computer Systems Company Limited",
+                        "as_domain": "tencent.com",
+                        "country_code": "CN",
+                        "country": "China",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-15T11:11:38Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:11:38Z",
+                    "last_observed": "2026-10-15T11:11:38Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS45090 shenzhen tencent computer systems company limited",
+                        "country_code": "CN",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "6a986362df1726c4afcf88c1",
+                                "name": "VShell - IOCs Sep 2026",
+                                "created": "2026-09-02T17:56:50.292Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "IOC",
+                                    "RENIC",
+                                    "malware",
+                                    "vshell"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-15T11:15:38Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:15:38Z",
+                    "last_observed": "2026-10-15T11:15:38Z",
+                    "data": {
+                        "org": "Tencent Cloud Computing (Beijing) Co., Ltd",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 15443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 18090,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-15T11:06:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-15T11:06:52Z",
+            "observations": [
+                {
+                    "key": "1967403",
+                    "first_observed": "2026-10-15T11:06:52Z",
+                    "last_observed": "2026-10-15T11:06:52Z",
+                    "flags": [
+                        "vshell"
+                    ],
+                    "data": {
+                        "ioc": "193.112.28.215:18090",
+                        "port": 18090,
+                        "threat_type": "botnet_cc",
+                        "malware": "VShell",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.vshell",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-15T10:55:13Z",
+                        "reference": "",
+                        "tags": [
+                            "Vshell",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

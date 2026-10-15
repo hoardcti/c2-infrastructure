@@ -1,0 +1,131 @@
+{
+    "schema_version": 2,
+    "ip": "193.149.190.254",
+    "first_seen": "2026-10-15T11:06:52Z",
+    "last_seen": "2026-10-15T11:06:52Z",
+    "flags": [
+        "vshell"
+    ],
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-10-15T11:07:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:53Z",
+                    "last_observed": "2026-10-15T11:07:53Z",
+                    "data": {
+                        "ports": [
+                            80
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-15T11:07:08Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:07:08Z",
+                    "last_observed": "2026-10-15T11:07:08Z",
+                    "data": {
+                        "asn": "AS399629",
+                        "as_name": "BL Networks",
+                        "as_domain": "blnwx.com",
+                        "country_code": "GB",
+                        "country": "United Kingdom",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-15T11:11:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:11:40Z",
+                    "last_observed": "2026-10-15T11:11:40Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "DK",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-15T11:15:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T11:15:40Z",
+                    "last_observed": "2026-10-15T11:15:40Z",
+                    "data": {
+                        "org": "BL Networks",
+                        "isp": "BL Networks",
+                        "asn": "AS399629",
+                        "os": null,
+                        "country_code": "GB",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.2p1 Ubuntu 2ubuntu3.2"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-15T11:06:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-15T11:06:52Z",
+            "observations": [
+                {
+                    "key": "1967408",
+                    "first_observed": "2026-10-15T11:06:52Z",
+                    "last_observed": "2026-10-15T11:06:52Z",
+                    "flags": [
+                        "vshell"
+                    ],
+                    "data": {
+                        "ioc": "193.149.190.254:80",
+                        "port": 80,
+                        "threat_type": "botnet_cc",
+                        "malware": "VShell",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.vshell",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-15T10:55:13Z",
+                        "reference": "",
+                        "tags": [
+                            "Vshell",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
