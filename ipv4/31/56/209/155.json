@@ -85,7 +85,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-01T13:52:54Z",
+            "last_checked": "2026-10-15T00:31:29Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T13:52:54Z",
@@ -103,6 +103,38 @@
                             "CVE-2020-0796"
                         ],
                         "services": [
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-15T00:31:29Z",
+                    "last_observed": "2026-10-15T00:31:29Z",
+                    "data": {
+                        "org": "SWISSNET LLC",
+                        "isp": "SWISSNET LLC",
+                        "asn": "AS209373",
+                        "os": "Windows XP",
+                        "country_code": "GB",
+                        "hostnames": [
+                            "kmwrp7a8z0pd.server.swissnetwork.io"
+                        ],
+                        "domains": [
+                            "swissnetwork.io"
+                        ],
+                        "tags": [],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
                             {
                                 "port": 445,
                                 "transport": "tcp"

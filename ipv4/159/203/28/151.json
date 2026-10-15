@@ -1,0 +1,193 @@
+{
+    "schema_version": 2,
+    "ip": "159.203.28.151",
+    "first_seen": "2026-10-15T00:21:36Z",
+    "last_seen": "2026-10-15T00:21:36Z",
+    "flags": [
+        "aisuru"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-15T00:24:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T00:24:33Z",
+                    "last_observed": "2026-10-15T00:24:33Z",
+                    "data": {
+                        "abuse_confidence_score": 91,
+                        "total_reports": 36,
+                        "distinct_reporters": 31,
+                        "last_reported_at": "2026-09-25T10:11:19Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "DigitalOcean, LLC",
+                        "domain": "digitalocean.com",
+                        "country_code": "CA",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-15T00:21:45Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-15T00:21:43Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T00:21:43Z",
+                    "last_observed": "2026-10-15T00:21:43Z",
+                    "data": {
+                        "asn": "AS14061",
+                        "as_name": "DigitalOcean, LLC",
+                        "as_domain": "digitalocean.com",
+                        "country_code": "CA",
+                        "country": "Canada",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-15T00:25:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T00:25:51Z",
+                    "last_observed": "2026-10-15T00:25:51Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS14061 digitalocean  llc",
+                        "country_code": "CA",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "69b429ead977202bdcca23ba",
+                                "name": "LCIA HoneyNet Data - March 2026 - Honeytrap",
+                                "created": "2026-03-13T15:14:50.806Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "LAMP",
+                                    "cowrie",
+                                    "honeytrap",
+                                    "malicious",
+                                    "sftp",
+                                    "ssh"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-15T00:29:51Z",
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-15T00:21:43Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-15T00:21:36Z",
+            "observations": [
+                {
+                    "key": "1966073",
+                    "first_observed": "2026-10-15T00:21:36Z",
+                    "last_observed": "2026-10-15T00:21:36Z",
+                    "flags": [
+                        "aisuru"
+                    ],
+                    "data": {
+                        "ioc": "159.203.28.151:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Aisuru",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-14T22:28:18Z",
+                        "reference": null,
+                        "tags": [
+                            "AISURU",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-15T00:23:45Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-15T00:32:02Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T00:32:02Z",
+                    "last_observed": "2026-10-15T00:32:02Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "159.203.0.0/16",
+                        "country": "CA",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 4,
+                            "undetected": 32,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "GCP Abuse Intelligence",
+                                "category": "suspicious",
+                                "result": "miner"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [
+                            "vpn"
+                        ],
+                        "jarm": "15d3fd16d29d29d00042d43d0000009e5d3a316e7cccd6bbfaf756c222effa",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

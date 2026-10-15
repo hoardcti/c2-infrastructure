@@ -88,7 +88,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-01T13:52:52Z",
+            "last_checked": "2026-10-15T00:31:27Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T13:52:52Z",
@@ -97,6 +97,52 @@
                         "org": "RACK SPHERE HOSTING S.A.",
                         "isp": "",
                         "asn": "",
+                        "os": null,
+                        "country_code": "PA",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad22c2ad2ad2ad2adfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "d57a56f2715d1d3c43245fbead663e56f48ed464b29fbb1fa087f3f3b70f17dc",
+                                "certificate_subject": "WIN-TVJFV24LUKT",
+                                "certificate_issuer": "WIN-TVJFV24LUKT"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-15T00:31:27Z",
+                    "last_observed": "2026-10-15T00:31:27Z",
+                    "data": {
+                        "org": "RACK SPHERE HOSTING S.A.",
+                        "isp": "RACK SPHERE HOSTING S.A.",
+                        "asn": "AS64107",
                         "os": null,
                         "country_code": "PA",
                         "hostnames": [],

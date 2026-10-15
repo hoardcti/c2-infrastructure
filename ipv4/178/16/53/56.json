@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-07T21:49:49Z",
+            "last_checked": "2026-10-15T00:21:49Z",
             "observations": [
                 {
                     "first_observed": "2026-10-07T21:49:49Z",
@@ -44,6 +44,25 @@
                         ],
                         "hostnames": [],
                         "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-15T00:21:49Z",
+                    "last_observed": "2026-10-15T00:21:49Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            445,
+                            3389,
+                            5985
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
                         "tags": [],
                         "vulns": []
                     }
@@ -69,11 +88,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-07T21:51:56Z",
+            "last_checked": "2026-10-15T00:25:59Z",
             "observations": [
                 {
                     "first_observed": "2026-10-07T21:51:56Z",
-                    "last_observed": "2026-10-07T21:51:56Z",
+                    "last_observed": "2026-10-15T00:25:59Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS40999 dus.net gmbh",
@@ -159,7 +178,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-07T21:55:50Z",
+            "last_checked": "2026-10-15T00:29:59Z",
             "observations": [
                 {
                     "first_observed": "2026-10-07T21:55:50Z",
@@ -201,6 +220,58 @@
                             {
                                 "port": 3389,
                                 "transport": "udp"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-15T00:29:59Z",
+                    "last_observed": "2026-10-15T00:29:59Z",
+                    "data": {
+                        "org": "Omegatech LTD",
+                        "isp": "Omegatech LTD",
+                        "asn": "AS202412",
+                        "os": "Linux",
+                        "country_code": "DE",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad22c2ad2ad2ad2adfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "63cd404e422b49190c8aa920f32ba7310a5961799f98e7c44a41d5567289811e",
+                                "certificate_subject": "WIN-8H6JMQBVGP2",
+                                "certificate_issuer": "WIN-8H6JMQBVGP2"
                             },
                             {
                                 "port": 5985,
