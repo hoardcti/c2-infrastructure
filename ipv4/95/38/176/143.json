@@ -106,14 +106,56 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-02T08:20:37Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-15T23:45:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T23:45:44Z",
+                    "last_observed": "2026-10-15T23:45:44Z",
+                    "data": {
+                        "org": "Noyan Abr Arvan Co. ( Private Joint Stock)",
+                        "isp": "Noyan Abr Arvan Co. ( Private Joint Stock)",
+                        "asn": "AS202468",
+                        "os": null,
+                        "country_code": "IR",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.2p1 Ubuntu 2ubuntu3.7"
+                            },
+                            {
+                                "port": 631,
+                                "transport": "tcp",
+                                "product": "CUPS (IPP)",
+                                "version": "2.4.19",
+                                "http_title": "Forbidden - CUPS v2.4.19"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "2e415e825fd13fb521061490d58fff0e478b43f41f807755cd4cec247587cb0f",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-14T21:26:07Z",
+            "last_checked": "2026-10-15T23:36:06Z",
             "observations": []
         },
         "threatfox": {

@@ -94,14 +94,62 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-02T08:20:07Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-15T23:45:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T23:45:14Z",
+                    "last_observed": "2026-10-15T23:45:14Z",
+                    "data": {
+                        "org": "Tencent cloud computing (Beijing) Co., Ltd.",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [
+                            "jhzxct.com",
+                            "www.jhzxct.com"
+                        ],
+                        "domains": [
+                            "jhzxct.com"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Panda C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "智能户外方舱厂家_户外机柜_首页-金华中兴通信技术有限公司"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Panda C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "智能户外方舱厂家_户外机柜_首页-金华中兴通信技术有限公司",
+                                "jarm": "3fd3fd0003fd3fd00042d42d0000002059a3b916699461c5923779b77cf06b",
+                                "certificate_sha256": "ccf5d8c01a9e429423eb8c60a18256c238df7b3086863e127a87c4bc97ce23c5",
+                                "certificate_subject": "jhzxct.com",
+                                "certificate_issuer": "Encryption Everywhere DV TLS CA - G2"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-14T21:26:07Z",
+            "last_checked": "2026-10-15T23:36:06Z",
             "observations": []
         },
         "threatfox": {

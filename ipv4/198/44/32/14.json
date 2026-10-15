@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "198.44.32.14",
     "first_seen": "2026-10-15T11:06:52Z",
-    "last_seen": "2026-10-15T20:13:20Z",
+    "last_seen": "2026-10-15T23:36:00Z",
     "flags": [
         "vshell"
     ],
@@ -80,12 +80,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-15T20:13:20Z",
+            "last_checked": "2026-10-15T23:36:00Z",
             "observations": [
                 {
                     "key": "1967435",
                     "first_observed": "2026-10-15T11:06:52Z",
-                    "last_observed": "2026-10-15T20:13:20Z",
+                    "last_observed": "2026-10-15T23:36:00Z",
                     "flags": [
                         "vshell"
                     ],
@@ -109,6 +109,44 @@
         "urlhaus": {
             "last_checked": "2026-10-15T16:41:05Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-15T23:46:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T23:46:44Z",
+                    "last_observed": "2026-10-15T23:46:44Z",
+                    "data": {
+                        "as_owner": "HostPapa",
+                        "asn": 36352,
+                        "network": "198.44.32.0/23",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 1,
+                            "undetected": 38,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

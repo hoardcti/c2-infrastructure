@@ -1,0 +1,183 @@
+{
+    "schema_version": 2,
+    "ip": "128.90.113.198",
+    "first_seen": "2026-10-15T23:36:00Z",
+    "last_seen": "2026-10-15T23:36:00Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-15T23:38:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T23:38:56Z",
+                    "last_observed": "2026-10-15T23:38:56Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2022-11-16T12:32:25Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Fixed Line ISP",
+                        "isp": "Unus, Inc.",
+                        "domain": "unusid.com",
+                        "country_code": "US",
+                        "hostnames": [
+                            "undefined.hostname.localhost"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-15T23:36:10Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-15T23:36:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T23:36:07Z",
+                    "last_observed": "2026-10-15T23:36:07Z",
+                    "data": {
+                        "asn": "AS40861",
+                        "as_name": "Paradise Networks LLC",
+                        "as_domain": "paradisenetworks.net",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-15T23:40:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T23:40:14Z",
+                    "last_observed": "2026-10-15T23:40:14Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS22363 powerhouse management  inc.",
+                        "country_code": "AR",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "654aaec3cab8394f4ad1108c",
+                                "name": "IOCs - 2023117225 - ANIA Threat Feeds - IP Segment 6",
+                                "created": "2023-11-07T21:40:19.233Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-15T23:44:18Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T23:44:18Z",
+                    "last_observed": "2026-10-15T23:44:18Z",
+                    "data": {
+                        "org": "Unus, Inc.",
+                        "isp": "Paradise Networks LLC",
+                        "asn": "AS40861",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "undefined.hostname.localhost"
+                        ],
+                        "domains": [
+                            "localhost."
+                        ],
+                        "tags": [],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-15T23:36:06Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-15T23:36:00Z",
+            "observations": [
+                {
+                    "key": "1968502",
+                    "first_observed": "2026-10-15T23:36:00Z",
+                    "last_observed": "2026-10-15T23:36:00Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "128.90.113.198:3000",
+                        "port": 3000,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-15T22:10:22Z",
+                        "reference": null,
+                        "tags": [
+                            "Star-Baby-27",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-15T23:38:08Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-15T23:46:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T23:46:15Z",
+                    "last_observed": "2026-10-15T23:46:15Z",
+                    "data": {
+                        "as_owner": "Paradise Networks LLC",
+                        "asn": 40861,
+                        "network": "128.90.112.0/22",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 0,
+                            "undetected": 37,
+                            "harmless": 55,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

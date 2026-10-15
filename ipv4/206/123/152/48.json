@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "206.123.152.48",
     "first_seen": "2026-10-15T11:06:52Z",
-    "last_seen": "2026-10-15T20:13:20Z",
+    "last_seen": "2026-10-15T23:36:00Z",
     "flags": [
         "remcos"
     ],
@@ -112,12 +112,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-15T20:13:20Z",
+            "last_checked": "2026-10-15T23:36:00Z",
             "observations": [
                 {
                     "key": "1966887",
                     "first_observed": "2026-10-15T11:06:52Z",
-                    "last_observed": "2026-10-15T20:13:20Z",
+                    "last_observed": "2026-10-15T23:36:00Z",
                     "flags": [
                         "remcos"
                     ],
@@ -142,6 +142,75 @@
         "urlhaus": {
             "last_checked": "2026-10-15T16:41:09Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-15T23:47:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T23:47:14Z",
+                    "last_observed": "2026-10-15T23:47:14Z",
+                    "data": {
+                        "as_owner": "M247 Europe SRL",
+                        "asn": 9009,
+                        "network": "206.123.152.0/23",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 2,
+                            "undetected": 34,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Sophos",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "07d19d1ad21d21d07c42d43d0000009424803a662b126a748cf4f90707a33c",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

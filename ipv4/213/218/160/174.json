@@ -189,7 +189,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-02T08:20:31Z",
+            "last_checked": "2026-10-15T23:45:38Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T08:20:31Z",
@@ -305,11 +305,162 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-10-15T23:45:38Z",
+                    "last_observed": "2026-10-15T23:45:38Z",
+                    "data": {
+                        "org": "FlokiNET ehf",
+                        "isp": "FlokiNET ehf",
+                        "asn": "AS200651",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "cdn.cloudflare.net",
+                            "heritagenb.net",
+                            "www.heritagenb.net"
+                        ],
+                        "domains": [
+                            "cloudflare.net",
+                            "heritagenb.net"
+                        ],
+                        "tags": [
+                            "c2",
+                            "eol-product",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2007-4559",
+                            "CVE-2009-2940",
+                            "CVE-2009-3720",
+                            "CVE-2020-29396",
+                            "CVE-2021-32052",
+                            "CVE-2023-24329",
+                            "CVE-2023-27043",
+                            "CVE-2023-36632",
+                            "CVE-2023-40217",
+                            "CVE-2023-41105",
+                            "CVE-2023-44487",
+                            "CVE-2024-6232",
+                            "CVE-2024-7592",
+                            "CVE-2024-9287",
+                            "CVE-2025-12084",
+                            "CVE-2025-12781",
+                            "CVE-2025-13462",
+                            "CVE-2025-13836",
+                            "CVE-2025-13837",
+                            "CVE-2025-23419",
+                            "CVE-2026-0864",
+                            "CVE-2026-15308",
+                            "CVE-2026-3087",
+                            "CVE-2026-3644",
+                            "CVE-2026-4519",
+                            "CVE-2026-6019",
+                            "CVE-2026-7210"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u10"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.22.1",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.22.1",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "7b9d9722ae1183f6ac8f720e09d7d2f253dbffaab22461d7edc8fc4b29662e24",
+                                "certificate_subject": "heritagenb.net",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 1337,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 4444,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "C2 :: Login",
+                                "jarm": "2ad2ad0002ad2ad00042d42d000000ad9bf51cc3f5a1e29eecb81d0c7b06eb",
+                                "certificate_sha256": "3fca52b8dd78be84959bf997fb47a20e74e1a5367cb478a8b9dd2d01313d1658",
+                                "certificate_subject": "otsuk.eu",
+                                "certificate_issuer": "otsuk.eu"
+                            },
+                            {
+                                "port": 7443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad0002ad2ad00042d42d000000ad9bf51cc3f5a1e29eecb81d0c7b06eb",
+                                "certificate_sha256": "0cb1a2c1457b31f50f8ad034e9a07d84ab0c858f1ebd38aa61ed1c5e400ed080",
+                                "certificate_subject": "cdn.cloudflare.net",
+                                "certificate_organisation": "Cloudflare",
+                                "certificate_issuer": "cdn.cloudflare.net"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product",
+                                    "self-signed"
+                                ],
+                                "http_title": "404 Not Found",
+                                "jarm": "2ad2ad0002ad2ad00042d42d000000ad9bf51cc3f5a1e29eecb81d0c7b06eb",
+                                "certificate_sha256": "3fca52b8dd78be84959bf997fb47a20e74e1a5367cb478a8b9dd2d01313d1658",
+                                "certificate_subject": "otsuk.eu",
+                                "certificate_issuer": "otsuk.eu"
+                            },
+                            {
+                                "port": 9443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad0002ad2ad00042d42d000000ad9bf51cc3f5a1e29eecb81d0c7b06eb",
+                                "certificate_sha256": "3fca52b8dd78be84959bf997fb47a20e74e1a5367cb478a8b9dd2d01313d1658",
+                                "certificate_subject": "otsuk.eu",
+                                "certificate_issuer": "otsuk.eu"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "30c576c2c0b4c5f9ea88af96274f91781d8c122bcf91c829f7a1fe99406117c5",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-14T21:26:07Z",
+            "last_checked": "2026-10-15T23:36:06Z",
             "observations": []
         },
         "threatfox": {

@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "193.149.190.254",
     "first_seen": "2026-10-15T11:06:52Z",
-    "last_seen": "2026-10-15T20:13:20Z",
+    "last_seen": "2026-10-15T23:36:00Z",
     "flags": [
         "vshell"
     ],
@@ -124,12 +124,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-15T20:13:20Z",
+            "last_checked": "2026-10-15T23:36:00Z",
             "observations": [
                 {
                     "key": "1967408",
                     "first_observed": "2026-10-15T11:06:52Z",
-                    "last_observed": "2026-10-15T20:13:20Z",
+                    "last_observed": "2026-10-15T23:36:00Z",
                     "flags": [
                         "vshell"
                     ],
@@ -153,6 +153,44 @@
         "urlhaus": {
             "last_checked": "2026-10-15T16:41:03Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-15T23:46:29Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T23:46:29Z",
+                    "last_observed": "2026-10-15T23:46:29Z",
+                    "data": {
+                        "as_owner": "BL Networks",
+                        "asn": 399629,
+                        "network": "193.149.190.0/24",
+                        "country": "GB",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 91,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

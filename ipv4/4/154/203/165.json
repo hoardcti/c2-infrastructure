@@ -87,14 +87,56 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-02T08:20:45Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-15T23:45:52Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T23:45:52Z",
+                    "last_observed": "2026-10-15T23:45:52Z",
+                    "data": {
+                        "org": "Microsoft Corporation",
+                        "isp": "Microsoft Corporation",
+                        "asn": "AS8075",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "3fd3fd00000000021c43d43d00043dabadbb43f9614a00c843a4ecd074ab81",
+                                "certificate_sha256": "384a4946d0d8918d9308f057d70bab5a12e79e766c06b1fecb485cc0494bb336",
+                                "certificate_subject": "localhost",
+                                "certificate_organisation": "bright legging, trading"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "614240bb1a61dc1dcf4d902132e5055019b95a94803c774f6bce39c5a446e8be",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-14T21:26:07Z",
+            "last_checked": "2026-10-15T23:36:06Z",
             "observations": []
         },
         "threatfox": {

@@ -94,7 +94,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-02T08:21:07Z",
+            "last_checked": "2026-10-15T23:46:14Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T08:21:07Z",
@@ -140,11 +140,56 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-10-15T23:46:14Z",
+                    "last_observed": "2026-10-15T23:46:14Z",
+                    "data": {
+                        "org": "OVH US LLC",
+                        "isp": "OVH SAS",
+                        "asn": "AS16276",
+                        "os": "Linux",
+                        "country_code": "US",
+                        "hostnames": [
+                            "vps-bc5956d1.vps.ovh.us"
+                        ],
+                        "domains": [
+                            "ovh.us"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "d0578ddc0dcfae2ed5471918784563f8e88ff811de72cce9ff082a299a1cbed0",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-14T21:26:07Z",
+            "last_checked": "2026-10-15T23:36:06Z",
             "observations": []
         },
         "threatfox": {

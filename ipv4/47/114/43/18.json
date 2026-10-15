@@ -121,14 +121,80 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-02T08:19:53Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-15T23:44:58Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T23:44:58Z",
+                    "last_observed": "2026-10-15T23:44:58Z",
+                    "data": {
+                        "org": "Aliyun Computing Co., LTD",
+                        "isp": "Hangzhou Alibaba Advertising Co.,Ltd.",
+                        "asn": "AS37963",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "eol-product",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "e0f69d89017be48dbc3266ef6453598364788eeb18ebaa41705a98e5a3f11cd5",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d00014d14d08c000000000000217f0fec773ec97f0b3fdd2de2993c31",
+                                "certificate_sha256": "d08ad04e317ff60c98437519e39e429b29c0c441af9616891c2ec5e187c8d7dc",
+                                "certificate_subject": "iZuojk7huo02drZ",
+                                "certificate_issuer": "iZuojk7huo02drZ"
+                            },
+                            {
+                                "port": 7788,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "http_title": "Oktos · Adaptive Offensive Intelligence."
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-14T21:26:07Z",
+            "last_checked": "2026-10-15T23:36:06Z",
             "observations": []
         },
         "threatfox": {

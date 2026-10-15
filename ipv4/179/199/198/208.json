@@ -90,14 +90,99 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-02T08:21:03Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-15T23:46:10Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T23:46:10Z",
+                    "last_observed": "2026-10-15T23:46:10Z",
+                    "data": {
+                        "org": "Uscloud Inc",
+                        "isp": "AROSSCLOUD INC.",
+                        "asn": "AS400619",
+                        "os": "Linux",
+                        "country_code": "BR",
+                        "hostnames": [
+                            "panel9.kanacloud.net"
+                        ],
+                        "domains": [
+                            "kanacloud.net"
+                        ],
+                        "tags": [
+                            "c2",
+                            "proxy"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "OpenResty"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "OpenResty",
+                                "http_title": "请求拦截",
+                                "jarm": "27d40d40d00040d00042d43d000000e1ea2a807a629b496b664cf07ad7c08d",
+                                "certificate_sha256": "0ccd3d43a37345a16ee1db9c10563f9e5e852963939521d6199ed9d4310d8272",
+                                "certificate_subject": "panel9.kanacloud.net",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 873,
+                                "transport": "tcp",
+                                "product": "rsyncd",
+                                "version": "32.0 sha512 sha256 sha1 md5 md4"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "7c96df2916e098e5a8a5a3d62259d97c8c8fc0dffdd07add884e11d623312854",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 7000,
+                                "transport": "tcp",
+                                "product": "Fast Reverse Proxy",
+                                "version": "0.61.1",
+                                "tags": [
+                                    "proxy"
+                                ],
+                                "jarm": "3fd3fd20d3fd3fd00043d3fd3fd43d539b9d77deca9292bdcadbfed36e46f1",
+                                "certificate_sha256": "ab7e46ce76beb7c179b509d65cd21809f9debdcafe2d38cae2ac35fc8eb84e9f"
+                            },
+                            {
+                                "port": 8081,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 17771,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u10"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "683975f5cdf26c2484a4dfd3024b6aec0e0aee7408d7b2900fe407f04faecf82",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-14T21:26:07Z",
+            "last_checked": "2026-10-15T23:36:06Z",
             "observations": []
         },
         "threatfox": {

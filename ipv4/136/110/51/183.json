@@ -98,7 +98,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-02T08:20:27Z",
+            "last_checked": "2026-10-15T23:45:34Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T08:20:27Z",
@@ -158,11 +158,70 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-10-15T23:45:34Z",
+                    "last_observed": "2026-10-15T23:45:34Z",
+                    "data": {
+                        "org": "Google LLC",
+                        "isp": "Google LLC",
+                        "asn": "AS396982",
+                        "os": "Linux",
+                        "country_code": "US",
+                        "hostnames": [
+                            "183.51.110.136.bc.googleusercontent.com",
+                            "notifyme.calif-int.org"
+                        ],
+                        "domains": [
+                            "calif-int.org",
+                            "googleusercontent.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u10",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 9443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "28d28d28d00028d00042d42d000000ad9bf51cc3f5a1e29eecb81d0c7b06eb",
+                                "certificate_sha256": "c40dacb1d72ed468dab0f5e30a95860fdf2fc1ab3baf4aa53967d98f4bf2d195",
+                                "certificate_subject": "notifyme.calif-int.org",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "83566176e4fd65f15421e7a19b8b291fa8becc139462b9a256b2ff9bcfebaeb3",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-14T21:26:07Z",
+            "last_checked": "2026-10-15T23:36:06Z",
             "observations": []
         },
         "threatfox": {

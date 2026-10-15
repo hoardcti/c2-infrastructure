@@ -115,14 +115,58 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-02T08:20:05Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-15T23:45:12Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T23:45:12Z",
+                    "last_observed": "2026-10-15T23:45:12Z",
+                    "data": {
+                        "org": "OVH SAS",
+                        "isp": "OVH SAS",
+                        "asn": "AS16276",
+                        "os": null,
+                        "country_code": "FR",
+                        "hostnames": [
+                            "mail.ckzmail.com"
+                        ],
+                        "domains": [
+                            "ckzmail.com"
+                        ],
+                        "tags": [
+                            "malware"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "malware"
+                                ],
+                                "http_title": "Gophish - Login"
+                            },
+                            {
+                                "port": 5060,
+                                "transport": "udp",
+                                "product": "Asterisk PBX 22.10.1"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-14T21:26:07Z",
+            "last_checked": "2026-10-15T23:36:06Z",
             "observations": []
         },
         "threatfox": {

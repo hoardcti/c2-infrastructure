@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "155.103.71.231",
     "first_seen": "2026-10-12T17:35:19Z",
-    "last_seen": "2026-10-15T05:42:08Z",
+    "last_seen": "2026-10-15T23:36:00Z",
     "flags": [
         "remcos"
     ],
@@ -137,12 +137,12 @@
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-14T21:26:07Z",
+            "last_checked": "2026-10-15T23:36:06Z",
             "observations": [
                 {
                     "key": "155.103.68.0/22",
                     "first_observed": "2026-10-12T17:35:26Z",
-                    "last_observed": "2026-10-14T21:26:07Z",
+                    "last_observed": "2026-10-15T23:36:06Z",
                     "data": {
                         "cidr": "155.103.68.0/22",
                         "sblid": "SBL698394",
@@ -152,7 +152,7 @@
             ]
         },
         "threatfox": {
-            "last_checked": "2026-10-15T05:42:08Z",
+            "last_checked": "2026-10-15T23:36:00Z",
             "observations": [
                 {
                     "key": "1961693",
@@ -218,6 +218,29 @@
                         "reference": null,
                         "tags": [
                             "4040",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                },
+                {
+                    "key": "1968551",
+                    "first_observed": "2026-10-15T23:36:00Z",
+                    "last_observed": "2026-10-15T23:36:00Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "155.103.71.231:4041",
+                        "port": 4041,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-15T23:14:56Z",
+                        "reference": null,
+                        "tags": [
+                            "REMOTEHOST",
                             "c2",
                             "remcos"
                         ]
