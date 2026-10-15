@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "104.194.88.154",
     "first_seen": "2026-10-15T11:06:52Z",
-    "last_seen": "2026-10-15T11:06:52Z",
+    "last_seen": "2026-10-15T16:38:15Z",
     "flags": [
         "vshell"
     ],
@@ -116,12 +116,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-15T11:06:52Z",
+            "last_checked": "2026-10-15T16:38:15Z",
             "observations": [
                 {
                     "key": "1967434",
                     "first_observed": "2026-10-15T11:06:52Z",
-                    "last_observed": "2026-10-15T11:06:52Z",
+                    "last_observed": "2026-10-15T16:38:15Z",
                     "flags": [
                         "vshell"
                     ],
@@ -145,6 +145,45 @@
         "urlhaus": {
             "last_checked": "2026-10-15T11:08:52Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-15T16:49:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T16:49:41Z",
+                    "last_observed": "2026-10-15T16:49:41Z",
+                    "data": {
+                        "as_owner": "IT7 Networks Inc",
+                        "asn": 25820,
+                        "network": "104.194.80.0/20",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 91,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "3fd3fd0003fd3fd21c42d42d000000bdfc58c9a46434368cf60aa440385763",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

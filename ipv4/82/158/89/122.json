@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "82.158.89.122",
     "first_seen": "2026-10-15T11:06:52Z",
-    "last_seen": "2026-10-15T11:06:52Z",
+    "last_seen": "2026-10-15T16:38:15Z",
     "flags": [
         "vshell"
     ],
@@ -99,12 +99,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-15T11:06:52Z",
+            "last_checked": "2026-10-15T16:38:15Z",
             "observations": [
                 {
                     "key": "1967405",
                     "first_observed": "2026-10-15T11:06:52Z",
-                    "last_observed": "2026-10-15T11:06:52Z",
+                    "last_observed": "2026-10-15T16:38:15Z",
                     "flags": [
                         "vshell"
                     ],
@@ -128,6 +128,44 @@
         "urlhaus": {
             "last_checked": "2026-10-15T11:08:50Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-15T16:49:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T16:49:26Z",
+                    "last_observed": "2026-10-15T16:49:26Z",
+                    "data": {
+                        "as_owner": "Zenixcloud",
+                        "asn": 402506,
+                        "network": "82.158.88.0/22",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 91,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "154.36.183.100",
     "first_seen": "2026-10-15T11:06:52Z",
-    "last_seen": "2026-10-15T11:06:52Z",
+    "last_seen": "2026-10-15T16:38:15Z",
     "flags": [
         "vshell"
     ],
@@ -99,12 +99,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-15T11:06:52Z",
+            "last_checked": "2026-10-15T16:38:15Z",
             "observations": [
                 {
                     "key": "1967440",
                     "first_observed": "2026-10-15T11:06:52Z",
-                    "last_observed": "2026-10-15T11:06:52Z",
+                    "last_observed": "2026-10-15T16:38:15Z",
                     "flags": [
                         "vshell"
                     ],
@@ -121,6 +121,49 @@
                             "Vshell",
                             "c2"
                         ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-15T16:40:49Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-15T16:53:11Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T16:53:11Z",
+                    "last_observed": "2026-10-15T16:53:11Z",
+                    "data": {
+                        "as_owner": "NetLab Global",
+                        "asn": 979,
+                        "network": "154.36.160.0/19",
+                        "country": "JP",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 39,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "phishing"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "3fd3fd0003fd3fd21c42d42d000000307ee0eb468e9fdb5cfcd698a80a67ef",
+                        "crowdsourced_context": []
                     }
                 }
             ]

@@ -2,11 +2,36 @@
     "schema_version": 2,
     "ip": "193.26.115.35",
     "first_seen": "2026-10-15T11:06:52Z",
-    "last_seen": "2026-10-15T11:06:52Z",
+    "last_seen": "2026-10-15T16:38:15Z",
     "flags": [
         "cobalt strike"
     ],
     "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-15T16:41:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T16:41:17Z",
+                    "last_observed": "2026-10-15T16:41:17Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2024-08-09T01:35:07Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "1337 Services GmbH",
+                        "domain": "as210558.net",
+                        "country_code": "RO",
+                        "hostnames": [
+                            "193.26.115.35.powered.by.rdp.sh"
+                        ]
+                    }
+                }
+            ]
+        },
         "internetdb": {
             "last_checked": "2026-10-15T11:07:51Z",
             "observations": [
@@ -189,12 +214,12 @@
             ]
         },
         "threatfox": {
-            "last_checked": "2026-10-15T11:06:52Z",
+            "last_checked": "2026-10-15T16:38:15Z",
             "observations": [
                 {
                     "key": "1966416",
                     "first_observed": "2026-10-15T11:06:52Z",
-                    "last_observed": "2026-10-15T11:06:52Z",
+                    "last_observed": "2026-10-15T16:38:15Z",
                     "flags": [
                         "cobalt strike"
                     ],
@@ -212,6 +237,37 @@
                             "Cobalt Strike",
                             "c2",
                             "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-15T16:40:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T16:40:59Z",
+                    "last_observed": "2026-10-15T16:40:59Z",
+                    "data": {
+                        "urlhaus_reference": "https://urlhaus.abuse.ch/host/193.26.115.35/",
+                        "first_seen": "2026-02-22T13:02:15Z",
+                        "url_count": 1,
+                        "blacklists": {
+                            "spamhaus_dbl": "not listed",
+                            "surbl": "not listed"
+                        },
+                        "urls": [
+                            {
+                                "id": "3783126",
+                                "url": "https://193.26.115.35/Bin/ScreenConnect.ClientSetup.msi?e=Access&y=Guest",
+                                "status": "offline",
+                                "date_added": "2026-02-22T13:03:55Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "connectwise",
+                                    "msi"
+                                ]
+                            }
                         ]
                     }
                 }
