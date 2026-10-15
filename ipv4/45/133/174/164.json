@@ -1,0 +1,235 @@
+{
+    "schema_version": 2,
+    "ip": "45.133.174.164",
+    "first_seen": "2026-10-15T20:13:20Z",
+    "last_seen": "2026-10-15T20:13:20Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-15T20:14:36Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T20:14:36Z",
+                    "last_observed": "2026-10-15T20:14:36Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2025-12-11T20:12:47Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Dedispot Web Solution pvt ltd",
+                        "domain": "dedispot.com",
+                        "country_code": "NL",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-15T20:13:32Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T20:13:32Z",
+                    "last_observed": "2026-10-15T20:13:32Z",
+                    "data": {
+                        "ports": [
+                            139,
+                            445,
+                            3389,
+                            5985,
+                            47001
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-15T20:13:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T20:13:28Z",
+                    "last_observed": "2026-10-15T20:13:28Z",
+                    "data": {
+                        "asn": "AS210846",
+                        "as_name": "Dedispot Web Solution pvt ltd",
+                        "as_domain": "dedispot.com",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-15T20:15:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T20:15:54Z",
+                    "last_observed": "2026-10-15T20:15:54Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS210846 dedispot web solution pvt ltd",
+                        "country_code": "ID",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "693a294dc7c928c04ec75576",
+                                "name": "Malware Filter - Botnet List - 10-12-2025 (Part 8)",
+                                "created": "2025-12-11T02:15:41.055Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-15T20:19:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T20:19:54Z",
+                    "last_observed": "2026-10-15T20:19:54Z",
+                    "data": {
+                        "org": "Dedispot Web Solution pvt ltd",
+                        "isp": "Dedispot Web Solution pvt ltd",
+                        "asn": "AS210846",
+                        "os": "Windows (build 10.0.14393)",
+                        "country_code": "NL",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 139,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad22c2ad2ad2ad2adfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "1a1143610a3b197b3c0fdb4ea87edd0a26e0b53ad492e8e2f1dadb918f169274",
+                                "certificate_subject": "WIN-TQBV2PA6TQK",
+                                "certificate_issuer": "WIN-TQBV2PA6TQK"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            },
+                            {
+                                "port": 47001,
+                                "transport": "tcp",
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-15T20:13:27Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-15T20:13:20Z",
+            "observations": [
+                {
+                    "key": "1968291",
+                    "first_observed": "2026-10-15T20:13:20Z",
+                    "last_observed": "2026-10-15T20:13:20Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "45.133.174.164:36284",
+                        "port": 36284,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-15T19:10:12Z",
+                        "reference": null,
+                        "tags": [
+                            "DIVINE",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-15T20:13:48Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-15T20:22:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T20:22:19Z",
+                    "last_observed": "2026-10-15T20:22:19Z",
+                    "data": {
+                        "as_owner": "Dedispot Web Solution pvt ltd",
+                        "asn": 210846,
+                        "network": "45.133.174.0/24",
+                        "country": "AE",
+                        "continent": "AS",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

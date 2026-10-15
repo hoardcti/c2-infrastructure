@@ -131,11 +131,130 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-02T01:36:52Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-15T20:21:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T20:21:30Z",
+                    "last_observed": "2026-10-15T20:21:30Z",
+                    "data": {
+                        "org": "Hetzner Online GmbH",
+                        "isp": "Hetzner Online GmbH",
+                        "asn": "AS24940",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "static.178.51.13.49.clients.your-server.de",
+                            "yarisma.ilimdenirfana.com"
+                        ],
+                        "domains": [
+                            "ilimdenirfana.com",
+                            "your-server.de"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "malware"
+                        ],
+                        "vulns": [
+                            "CVE-2009-2940",
+                            "CVE-2009-3720",
+                            "CVE-2020-29396",
+                            "CVE-2023-36632",
+                            "CVE-2024-9287",
+                            "CVE-2025-12084",
+                            "CVE-2025-12781",
+                            "CVE-2025-13462",
+                            "CVE-2025-13836",
+                            "CVE-2025-13837",
+                            "CVE-2025-23419",
+                            "CVE-2025-6075",
+                            "CVE-2026-0864",
+                            "CVE-2026-15308",
+                            "CVE-2026-3087",
+                            "CVE-2026-3644",
+                            "CVE-2026-4224",
+                            "CVE-2026-4519",
+                            "CVE-2026-6019",
+                            "CVE-2026-7210"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 82,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.26.1",
+                                "tags": [
+                                    "eol-product"
+                                ]
+                            },
+                            {
+                                "port": 83,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 86,
+                                "transport": "tcp",
+                                "http_title": "Error"
+                            },
+                            {
+                                "port": 88,
+                                "transport": "tcp",
+                                "http_title": "Error"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "1dd40d40d00040d00042d43d000000831b6af40378e2dd35eeac4e9311926e",
+                                "certificate_sha256": "15d6ead0341f5f3a12dfc8717819d746e217c85b43f4ab714a688787d088e67c",
+                                "certificate_subject": "yarisma.ilimdenirfana.com",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "malware"
+                                ],
+                                "http_title": "Gophish - Login"
+                            },
+                            {
+                                "port": 8880,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 9091,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 9095,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.26.3",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Halı Saha FK — Resmi Site"
+                            },
+                            {
+                                "port": 9096,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.26.3",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Halı Saha FK — Canlı Skor"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-14T21:26:07Z",

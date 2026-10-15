@@ -1,0 +1,216 @@
+{
+    "schema_version": 2,
+    "ip": "64.7.199.7",
+    "first_seen": "2026-10-15T20:13:20Z",
+    "last_seen": "2026-10-15T20:13:20Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-15T20:14:38Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T20:14:38Z",
+                    "last_observed": "2026-10-15T20:14:38Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "BL Networks",
+                        "domain": "blnwx.com",
+                        "country_code": "RO",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-15T20:13:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T20:13:33Z",
+                    "last_observed": "2026-10-15T20:13:33Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            5001
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.24.0",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-15T20:13:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T20:13:28Z",
+                    "last_observed": "2026-10-15T20:13:28Z",
+                    "data": {
+                        "asn": "AS399629",
+                        "as_name": "BL Networks",
+                        "as_domain": "blnwx.com",
+                        "country_code": "RO",
+                        "country": "Romania",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-15T20:15:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T20:15:56Z",
+                    "last_observed": "2026-10-15T20:15:56Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-15T20:19:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T20:19:56Z",
+                    "last_observed": "2026-10-15T20:19:56Z",
+                    "data": {
+                        "org": "BL Networks",
+                        "isp": "BL Networks",
+                        "asn": "AS399629",
+                        "os": null,
+                        "country_code": "RO",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 5001,
+                                "transport": "tcp",
+                                "http_title": "404 Not Found"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-15T20:13:27Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-15T20:13:20Z",
+            "observations": [
+                {
+                    "key": "1967849",
+                    "first_observed": "2026-10-15T20:13:20Z",
+                    "last_observed": "2026-10-15T20:13:20Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "64.7.199.7:22",
+                        "port": 22,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 75,
+                        "first_seen": "2026-10-15T18:37:35Z",
+                        "reference": "https://any.run/report/9b43bb4e22b438ef28ea41f29c755d71a825950c70a11fa9c569dd02bca91129/2af2b954-72a8-475d-b94c-a726d8ded008",
+                        "tags": [
+                            "BL-Networks",
+                            "RAT",
+                            "c2",
+                            "operator-server",
+                            "pycached"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-15T20:13:50Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-15T20:22:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-15T20:22:34Z",
+                    "last_observed": "2026-10-15T20:22:34Z",
+                    "data": {
+                        "as_owner": "BL Networks",
+                        "asn": 399629,
+                        "network": "64.7.198.0/23",
+                        "country": "RO",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 0,
+                            "undetected": 92,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
