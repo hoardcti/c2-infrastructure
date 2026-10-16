@@ -118,11 +118,70 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-02T08:21:29Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-16T04:01:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T04:01:15Z",
+                    "last_observed": "2026-10-16T04:01:15Z",
+                    "data": {
+                        "org": "Tencent Building, Kejizhongyi Avenue",
+                        "isp": "Tencent Building, Kejizhongyi Avenue",
+                        "asn": "AS132203",
+                        "os": "Linux",
+                        "country_code": "ID",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 2222,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.16"
+                            },
+                            {
+                                "port": 8001,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8002,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8888,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8900,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "48c700cb03fc4616c6e5d7632993939b63a5f79be5d5a2405af23fee41f07e6d",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-15T23:36:06Z",

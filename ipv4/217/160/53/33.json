@@ -1,0 +1,226 @@
+{
+    "schema_version": 2,
+    "ip": "217.160.53.33",
+    "first_seen": "2026-10-16T03:53:20Z",
+    "last_seen": "2026-10-16T03:53:20Z",
+    "flags": [
+        "remus"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-16T03:56:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T03:56:14Z",
+                    "last_observed": "2026-10-16T03:56:14Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "IONOS SE",
+                        "domain": "ionos.com",
+                        "country_code": "DE",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-16T03:53:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T03:53:27Z",
+                    "last_observed": "2026-10-16T03:53:27Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            8080
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.22.1",
+                            "cpe:/a:openbsd:openssh:9.2p1",
+                            "cpe:/o:debian:debian_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-16T03:53:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T03:53:27Z",
+                    "last_observed": "2026-10-16T03:53:27Z",
+                    "data": {
+                        "asn": "AS8560",
+                        "as_name": "IONOS SE",
+                        "as_domain": "ionos.com",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-16T03:57:32Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T03:57:32Z",
+                    "last_observed": "2026-10-16T03:57:32Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS8560 1&1 ionos se",
+                        "country_code": "DE",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-16T04:00:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T04:00:53Z",
+                    "last_observed": "2026-10-16T04:00:53Z",
+                    "data": {
+                        "org": "IONOS SE",
+                        "isp": "IONOS SE",
+                        "asn": "AS8560",
+                        "os": "Linux",
+                        "country_code": "DE",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u10"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.22.1",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Apache2 Debian Default Page: It works"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.22.1",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "phpMyAdmin"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-16T03:53:27Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-16T03:53:20Z",
+            "observations": [
+                {
+                    "key": "1968602",
+                    "first_observed": "2026-10-16T03:53:20Z",
+                    "last_observed": "2026-10-16T03:53:20Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "ioc": "217.160.53.33:6738",
+                        "port": 6738,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remus",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-16T00:16:08Z",
+                        "reference": null,
+                        "tags": [
+                            "625f32b674143ce7827477f4a5675dfe",
+                            "Remus",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-16T03:55:27Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-16T04:02:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T04:02:51Z",
+                    "last_observed": "2026-10-16T04:02:51Z",
+                    "data": {
+                        "as_owner": "IONOS SE",
+                        "asn": 8560,
+                        "network": "217.160.0.0/16",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 53,
+                            "harmless": 38,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "29d29d00029d29d22c29d29d29d29dce7a321e4956e8298ba917e9f2c22849",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -96,11 +96,62 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-02T15:42:21Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-16T04:01:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T04:01:25Z",
+                    "last_observed": "2026-10-16T04:01:25Z",
+                    "data": {
+                        "org": "Linode",
+                        "isp": "Akamai Connected Cloud",
+                        "asn": "AS63949",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "192-155-92-211.ip.linodeusercontent.com"
+                        ],
+                        "domains": [
+                            "linodeusercontent.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "ad783a4be2aeff11eee8e8ec00fdc5cc8bd183cde940e9b039e006783ac6ef6a",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-15T23:36:06Z",
