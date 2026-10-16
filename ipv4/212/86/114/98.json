@@ -33,7 +33,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-09T08:44:08Z",
+            "last_checked": "2026-10-16T08:55:00Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T16:14:03Z",
@@ -62,7 +62,7 @@
                 },
                 {
                     "first_observed": "2026-10-09T08:44:08Z",
-                    "last_observed": "2026-10-09T08:44:08Z",
+                    "last_observed": "2026-10-16T08:55:00Z",
                     "data": {
                         "ports": [
                             22,
@@ -125,11 +125,59 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-02T15:43:57Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-16T09:02:02Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T09:02:02Z",
+                    "last_observed": "2026-10-16T09:02:02Z",
+                    "data": {
+                        "org": "Podaon SIA",
+                        "isp": "Podaon SIA",
+                        "asn": "AS211381",
+                        "os": "Ubuntu",
+                        "country_code": "NL",
+                        "hostnames": [
+                            "212-86-114-98.netherlands-3.vps.ac"
+                        ],
+                        "domains": [
+                            "vps.ac"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 9000,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-15T23:36:06Z",

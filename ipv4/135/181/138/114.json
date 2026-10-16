@@ -33,7 +33,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-09T08:44:09Z",
+            "last_checked": "2026-10-16T08:55:01Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T16:14:04Z",
@@ -42,6 +42,26 @@
                         "ports": [
                             3389,
                             5000,
+                            9000
+                        ],
+                        "hostnames": [
+                            "ss.tm.tp"
+                        ],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-16T08:55:01Z",
+                    "last_observed": "2026-10-16T08:55:01Z",
+                    "data": {
+                        "ports": [
+                            3389,
+                            5000,
+                            5985,
                             9000
                         ],
                         "hostnames": [
@@ -91,11 +111,46 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-02T15:43:59Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-16T09:02:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T09:02:04Z",
+                    "last_observed": "2026-10-16T09:02:04Z",
+                    "data": {
+                        "org": "Hetzner Online GmbH",
+                        "isp": "Hetzner Online GmbH",
+                        "asn": "AS24940",
+                        "os": "Windows XP",
+                        "country_code": "FI",
+                        "hostnames": [
+                            "ss.tm.tp"
+                        ],
+                        "domains": [
+                            "tp."
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 5000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            },
+                            {
+                                "port": 9000,
+                                "transport": "tcp",
+                                "product": "Microsoft HTTPAPI httpd",
+                                "version": "2.0"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-15T23:36:06Z",

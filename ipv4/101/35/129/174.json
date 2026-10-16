@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-09T08:44:15Z",
+            "last_checked": "2026-10-16T08:55:07Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T16:14:10Z",
@@ -119,6 +119,54 @@
                             "CVE-2025-23419"
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-10-16T08:55:07Z",
+                    "last_observed": "2026-10-16T08:55:07Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            123,
+                            443,
+                            1337,
+                            3000,
+                            3001,
+                            3306,
+                            3478,
+                            6379,
+                            8000,
+                            8080,
+                            8081,
+                            9000,
+                            9090
+                        ],
+                        "hostnames": [
+                            "default.zlmediakit.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:encode:uvicorn",
+                            "cpe:/a:f5:nginx:1.18.0",
+                            "cpe:/a:ntp:ntp:3",
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/a:oracle:mysql",
+                            "cpe:/a:python:python",
+                            "cpe:/a:redislabs:redis",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "database",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
                 }
             ]
         },
@@ -181,7 +229,7 @@
         },
         "shodan": {
             "last_error": {
-                "occurred_at": "2026-10-02T15:44:11Z",
+                "occurred_at": "2026-10-16T09:02:16Z",
                 "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
             },
             "observations": []

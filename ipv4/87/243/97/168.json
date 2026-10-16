@@ -33,11 +33,11 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-09T08:44:24Z",
+            "last_checked": "2026-10-16T08:55:16Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T16:14:19Z",
-                    "last_observed": "2026-10-09T08:44:24Z",
+                    "last_observed": "2026-10-16T08:55:16Z",
                     "data": {
                         "ports": [
                             100,
@@ -103,11 +103,61 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-02T20:39:08Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-16T09:02:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T09:02:34Z",
+                    "last_observed": "2026-10-16T09:02:34Z",
+                    "data": {
+                        "org": "Vivacom Bulgaria EAD",
+                        "isp": "Vivacom Bulgaria EAD",
+                        "asn": "AS8866",
+                        "os": "Windows 11 (build 10.0.26100)",
+                        "country_code": "BG",
+                        "hostnames": [
+                            "87-243-97-168.ip.btc-net.bg"
+                        ],
+                        "domains": [
+                            "btc-net.bg"
+                        ],
+                        "tags": [
+                            "malware",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 100,
+                                "transport": "tcp",
+                                "product": "DarkComet trojan",
+                                "tags": [
+                                    "malware"
+                                ]
+                            },
+                            {
+                                "port": 1604,
+                                "transport": "tcp",
+                                "product": "DarkComet trojan",
+                                "tags": [
+                                    "malware"
+                                ]
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "9ea5104b5cb31f0843faa5cea0271e80dffd062ffc988c3799d1a0ced025ff92",
+                                "certificate_subject": "DESKTOP-VUPOED2",
+                                "certificate_issuer": "DESKTOP-VUPOED2"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-15T23:36:06Z",

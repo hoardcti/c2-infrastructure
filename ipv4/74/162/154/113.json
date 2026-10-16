@@ -31,11 +31,11 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-09T08:44:25Z",
+            "last_checked": "2026-10-16T08:55:17Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T16:14:20Z",
-                    "last_observed": "2026-10-09T08:44:25Z",
+                    "last_observed": "2026-10-16T08:55:17Z",
                     "data": {
                         "ports": [
                             1604,
@@ -90,7 +90,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-02T20:39:10Z",
+            "last_checked": "2026-10-16T09:02:36Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T20:39:10Z",
@@ -100,6 +100,49 @@
                         "isp": "Microsoft Corporation",
                         "asn": "AS8075",
                         "os": "Windows 11 (build 10.0.26100)",
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud",
+                            "malware",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 1604,
+                                "transport": "tcp",
+                                "product": "DarkComet trojan",
+                                "tags": [
+                                    "cloud",
+                                    "malware"
+                                ]
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "cloud",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad0002ad2ad00042d42d00042d1b4f6bb85ca6a51f6beb2bee4227be99",
+                                "certificate_sha256": "7422b0ec2bb4daba462cf4b5987fbb8e4375d4cad83a710e5221d977f5bc2306",
+                                "certificate_subject": "sesibala",
+                                "certificate_issuer": "sesibala"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-16T09:02:36Z",
+                    "last_observed": "2026-10-16T09:02:36Z",
+                    "data": {
+                        "org": "Microsoft Corporation",
+                        "isp": "Microsoft Corporation",
+                        "asn": "AS8075",
+                        "os": "Windows",
                         "country_code": "US",
                         "hostnames": [],
                         "domains": [],

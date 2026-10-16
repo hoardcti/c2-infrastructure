@@ -1,0 +1,234 @@
+{
+    "schema_version": 2,
+    "ip": "155.103.71.194",
+    "first_seen": "2026-10-16T08:53:26Z",
+    "last_seen": "2026-10-16T08:53:26Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-16T08:56:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T08:56:22Z",
+                    "last_observed": "2026-10-16T08:56:22Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "White Label Services, LLC",
+                        "domain": "whitelabelservices.us",
+                        "country_code": "TR",
+                        "hostnames": [
+                            "33975-27867.dchost.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-16T08:53:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T08:53:34Z",
+                    "last_observed": "2026-10-16T08:53:34Z",
+                    "data": {
+                        "ports": [
+                            22
+                        ],
+                        "hostnames": [
+                            "chat.sramota.company"
+                        ],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-16T08:53:32Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T08:53:32Z",
+                    "last_observed": "2026-10-16T08:53:32Z",
+                    "data": {
+                        "asn": "AS44382",
+                        "as_name": "Fiba Cloud Operation Company, LLC",
+                        "as_domain": "fibacloud.com",
+                        "country_code": "TR",
+                        "country": "Turkey",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-16T08:57:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T08:57:40Z",
+                    "last_observed": "2026-10-16T08:57:40Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-16T09:01:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T09:01:40Z",
+                    "last_observed": "2026-10-16T09:01:40Z",
+                    "data": {
+                        "org": "FibaCloud",
+                        "isp": "WhiteLabel Fiba Cloud Operation Company, LLC",
+                        "asn": "AS44382",
+                        "os": "Windows Server 2022 (build 10.0.20348)",
+                        "country_code": "",
+                        "hostnames": [
+                            "33975-27867.dchost.com",
+                            "chat.sramota.company"
+                        ],
+                        "domains": [
+                            "dchost.com",
+                            "sramota.company"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.2p1 Ubuntu 2ubuntu3.6"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "58d6527c0a2eb4c2d19fa392f1b72bc3a97d154fd280d68977e9f365a6939d7d",
+                                "certificate_subject": "WIN-42KAMA4R76Q",
+                                "certificate_issuer": "WIN-42KAMA4R76Q"
+                            },
+                            {
+                                "port": 5357,
+                                "transport": "tcp",
+                                "http_title": "Service Unavailable"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-16T08:53:32Z",
+            "observations": [
+                {
+                    "key": "155.103.68.0/22",
+                    "first_observed": "2026-10-16T08:53:32Z",
+                    "last_observed": "2026-10-16T08:53:32Z",
+                    "data": {
+                        "cidr": "155.103.68.0/22",
+                        "sblid": "SBL698394",
+                        "rir": "arin"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-16T08:53:26Z",
+            "observations": [
+                {
+                    "key": "1969150",
+                    "first_observed": "2026-10-16T08:53:26Z",
+                    "last_observed": "2026-10-16T08:53:26Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "155.103.71.194:14640",
+                        "port": 14640,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-16T07:10:45Z",
+                        "reference": null,
+                        "tags": [
+                            "REMOTEHOST",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-16T08:55:34Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-16T09:03:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T09:03:51Z",
+                    "last_observed": "2026-10-16T09:03:51Z",
+                    "data": {
+                        "as_owner": "Fiba Cloud Operation Company, LLC",
+                        "asn": 44382,
+                        "network": "155.103.68.0/22",
+                        "country": "TR",
+                        "continent": "AS",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 90,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "3fd3fd00000000000043d3fd3fd43d79451d8c63b099acafdbabb24551d0e6",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

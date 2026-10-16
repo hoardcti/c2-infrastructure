@@ -33,11 +33,11 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-09T08:44:26Z",
+            "last_checked": "2026-10-16T08:55:18Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T16:14:21Z",
-                    "last_observed": "2026-10-09T08:44:26Z",
+                    "last_observed": "2026-10-16T08:55:18Z",
                     "data": {
                         "ports": [
                             1604,
@@ -102,7 +102,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-02T20:39:12Z",
+            "last_checked": "2026-10-16T09:02:38Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T20:39:12Z",
@@ -112,6 +112,50 @@
                         "isp": "Windstream Communications LLC",
                         "asn": "AS7029",
                         "os": "Windows (build 10.0.19041)",
+                        "country_code": "US",
+                        "hostnames": [
+                            "h85.43.40.69.dynamic.ip.windstream.net"
+                        ],
+                        "domains": [
+                            "windstream.net"
+                        ],
+                        "tags": [
+                            "malware",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 1604,
+                                "transport": "tcp",
+                                "product": "DarkComet trojan",
+                                "tags": [
+                                    "malware"
+                                ]
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "046cfd0e04e5ff8208f7f7d386236904528bbf334d11e06969977145e11659f3",
+                                "certificate_subject": "DESKTOP-K804RRE",
+                                "certificate_issuer": "DESKTOP-K804RRE"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-16T09:02:38Z",
+                    "last_observed": "2026-10-16T09:02:38Z",
+                    "data": {
+                        "org": "Windstream Communications LLC",
+                        "isp": "Windstream Communications LLC",
+                        "asn": "AS7029",
+                        "os": "Windows",
                         "country_code": "US",
                         "hostnames": [
                             "h85.43.40.69.dynamic.ip.windstream.net"
