@@ -111,11 +111,44 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-03T06:23:33Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-16T20:50:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T20:50:27Z",
+                    "last_observed": "2026-10-16T20:50:27Z",
+                    "data": {
+                        "org": "Interserver, Inc",
+                        "isp": "Interserver, Inc",
+                        "asn": "AS26666",
+                        "os": "Windows 11 (build 10.0.26100)",
+                        "country_code": "US",
+                        "hostnames": [
+                            "vps3638176.trouble-free.net"
+                        ],
+                        "domains": [
+                            "trouble-free.net"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d00014d14d08c000000000000217f0fec773ec97f0b3fdd2de2993c31",
+                                "certificate_sha256": "b0d7cb4540c0fe433aef788f80628d043b3f15b3a5379ce8c4c925281ab2006b",
+                                "certificate_subject": "WIN-VI96OVQI4I6",
+                                "certificate_issuer": "WIN-VI96OVQI4I6"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-15T23:36:07Z",
