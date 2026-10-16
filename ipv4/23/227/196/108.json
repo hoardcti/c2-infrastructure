@@ -144,11 +144,192 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-02T20:40:20Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-16T13:56:52Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T13:56:52Z",
+                    "last_observed": "2026-10-16T13:56:52Z",
+                    "data": {
+                        "org": "HIVELOCITY, Inc.",
+                        "isp": "HIVELOCITY, Inc.",
+                        "asn": "AS29802",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "23-227-196-108.static.hvvc.us",
+                            "437601.MONOVM.COM"
+                        ],
+                        "domains": [
+                            "MONOVM.COM",
+                            "hvvc.us"
+                        ],
+                        "tags": [
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2022-3559",
+                            "CVE-2022-3620",
+                            "CVE-2022-37451",
+                            "CVE-2023-42114",
+                            "CVE-2023-42115",
+                            "CVE-2023-42116",
+                            "CVE-2023-42117",
+                            "CVE-2023-42119",
+                            "CVE-2023-51766",
+                            "CVE-2024-39929",
+                            "CVE-2025-67896",
+                            "CVE-2026-40684",
+                            "CVE-2026-40685",
+                            "CVE-2026-40686",
+                            "CVE-2026-40687",
+                            "CVE-2026-48840",
+                            "CVE-2026-66140",
+                            "CVE-2026-66141",
+                            "CVE-2026-94054",
+                            "CVE-2026-94055",
+                            "CVE-2026-94056",
+                            "CVE-2026-94057"
+                        ],
+                        "services": [
+                            {
+                                "port": 21,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Exim smtpd",
+                                "version": "4.95",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "4b81dea8d31d03a3acabeaadbf86f96b29870d9cb51ac23823ad73475d8b7e13",
+                                "certificate_subject": "etc",
+                                "certificate_organisation": "CompanyName",
+                                "certificate_issuer": "etc"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.30.5",
+                                "http_title": "FASTPANEL"
+                            },
+                            {
+                                "port": 110,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "8862405e0048c0506698e14fec2f4a78014870e8e32a62b2de1957da7c1d287d",
+                                "certificate_subject": "437601.MONOVM.COM",
+                                "certificate_issuer": "437601.MONOVM.COM"
+                            },
+                            {
+                                "port": 143,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "8862405e0048c0506698e14fec2f4a78014870e8e32a62b2de1957da7c1d287d",
+                                "certificate_subject": "437601.MONOVM.COM",
+                                "certificate_issuer": "437601.MONOVM.COM"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.30.5",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "FASTPANEL",
+                                "jarm": "2ad2ad0002ad2ad00042d42d00000000f78d2dc0ce6e5bbc5b8149a4872356",
+                                "certificate_sha256": "a48806042d3546081d96aa86004227bd0482adc5f2a25b9259b90cfc565697c3",
+                                "certificate_subject": "parking",
+                                "certificate_organisation": "FASTPANEL",
+                                "certificate_issuer": "parking"
+                            },
+                            {
+                                "port": 465,
+                                "transport": "tcp",
+                                "product": "Exim smtpd",
+                                "version": "4.95",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "4b81dea8d31d03a3acabeaadbf86f96b29870d9cb51ac23823ad73475d8b7e13",
+                                "certificate_subject": "etc",
+                                "certificate_organisation": "CompanyName",
+                                "certificate_issuer": "etc"
+                            },
+                            {
+                                "port": 587,
+                                "transport": "tcp",
+                                "product": "Exim smtpd",
+                                "version": "4.95",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "4b81dea8d31d03a3acabeaadbf86f96b29870d9cb51ac23823ad73475d8b7e13",
+                                "certificate_subject": "etc",
+                                "certificate_organisation": "CompanyName",
+                                "certificate_issuer": "etc"
+                            },
+                            {
+                                "port": 993,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "0003fd00021d21d00042d43d000000e1eb348128a1eb0eda1c719dd71f6145",
+                                "certificate_sha256": "8862405e0048c0506698e14fec2f4a78014870e8e32a62b2de1957da7c1d287d",
+                                "certificate_subject": "437601.MONOVM.COM",
+                                "certificate_issuer": "437601.MONOVM.COM"
+                            },
+                            {
+                                "port": 995,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "0003fd00021d21d00042d43d000000e1eb348128a1eb0eda1c719dd71f6145",
+                                "certificate_sha256": "8862405e0048c0506698e14fec2f4a78014870e8e32a62b2de1957da7c1d287d",
+                                "certificate_subject": "437601.MONOVM.COM",
+                                "certificate_issuer": "437601.MONOVM.COM"
+                            },
+                            {
+                                "port": 7777,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "FASTPANEL"
+                            },
+                            {
+                                "port": 8888,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "302 Found"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-15T23:36:06Z",

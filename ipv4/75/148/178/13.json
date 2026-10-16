@@ -114,11 +114,184 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-02T20:40:26Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-16T13:56:58Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T13:56:58Z",
+                    "last_observed": "2026-10-16T13:56:58Z",
+                    "data": {
+                        "org": "Comcast Cable Communications, LLC",
+                        "isp": "Comcast Cable Communications, LLC",
+                        "asn": "AS7922",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "75-148-178-13-Houston.hfc.comcastbusiness.net",
+                            "desss-portfolio.com",
+                            "www.desss-portfolio.com"
+                        ],
+                        "domains": [
+                            "comcastbusiness.net",
+                            "desss-portfolio.com"
+                        ],
+                        "tags": [
+                            "database",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 21,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "34cd18ab1ef41b58032ff62f6b989a24f07f8874b515999326d2c073056e567d",
+                                "certificate_subject": "Plesk",
+                                "certificate_organisation": "Plesk",
+                                "certificate_issuer": "Plesk"
+                            },
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "34cd18ab1ef41b58032ff62f6b989a24f07f8874b515999326d2c073056e567d",
+                                "certificate_subject": "Plesk",
+                                "certificate_organisation": "Plesk",
+                                "certificate_issuer": "Plesk"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 106,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 110,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "34cd18ab1ef41b58032ff62f6b989a24f07f8874b515999326d2c073056e567d",
+                                "certificate_subject": "Plesk",
+                                "certificate_organisation": "Plesk",
+                                "certificate_issuer": "Plesk"
+                            },
+                            {
+                                "port": 143,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "34cd18ab1ef41b58032ff62f6b989a24f07f8874b515999326d2c073056e567d",
+                                "certificate_subject": "Plesk",
+                                "certificate_organisation": "Plesk",
+                                "certificate_issuer": "Plesk"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "403 Forbidden",
+                                "jarm": "29d29d15d29d29d00042d42d000000df133019600a83abfb096ff3e86cd79d",
+                                "certificate_sha256": "5f4181733d4e92aa41a5118678ba2484d83ad7b20d17a356c55467ac2fb620fa",
+                                "certificate_subject": "desss-portfolio.com",
+                                "certificate_issuer": "R12"
+                            },
+                            {
+                                "port": 465,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "29d29d15d29d29d00042d42d0000000b7957bea5dccaf2976e02aac6e2963a",
+                                "certificate_sha256": "34cd18ab1ef41b58032ff62f6b989a24f07f8874b515999326d2c073056e567d",
+                                "certificate_subject": "Plesk",
+                                "certificate_organisation": "Plesk",
+                                "certificate_issuer": "Plesk"
+                            },
+                            {
+                                "port": 993,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "34cd18ab1ef41b58032ff62f6b989a24f07f8874b515999326d2c073056e567d",
+                                "certificate_subject": "Plesk",
+                                "certificate_organisation": "Plesk",
+                                "certificate_issuer": "Plesk"
+                            },
+                            {
+                                "port": 995,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3306,
+                                "transport": "tcp",
+                                "product": "MariaDB",
+                                "version": "10.6.23-MariaDB-0ubuntu0.22.04.1",
+                                "tags": [
+                                    "database"
+                                ]
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "34cd18ab1ef41b58032ff62f6b989a24f07f8874b515999326d2c073056e567d",
+                                "certificate_subject": "Plesk",
+                                "certificate_organisation": "Plesk",
+                                "certificate_issuer": "Plesk"
+                            },
+                            {
+                                "port": 8880,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 9210,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "Welcome to nginx!"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-15T23:36:06Z",

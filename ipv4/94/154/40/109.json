@@ -1,0 +1,175 @@
+{
+    "schema_version": 2,
+    "ip": "94.154.40.109",
+    "first_seen": "2026-10-16T13:50:55Z",
+    "last_seen": "2026-10-16T13:50:55Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-16T13:52:00Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T13:52:00Z",
+                    "last_observed": "2026-10-16T13:52:00Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Omegatech LTD",
+                        "domain": "omegatech.sc",
+                        "country_code": "NL",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-16T13:51:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T13:51:04Z",
+                    "last_observed": "2026-10-16T13:51:04Z",
+                    "data": {
+                        "ports": [
+                            22
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-16T13:51:02Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T13:51:02Z",
+                    "last_observed": "2026-10-16T13:51:02Z",
+                    "data": {
+                        "asn": "AS202412",
+                        "as_name": "Omegatech LTD",
+                        "as_domain": "omegatech.sc",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-16T13:53:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T13:53:21Z",
+                    "last_observed": "2026-10-16T13:53:21Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS7029 windstream communications llc",
+                        "country_code": "TR",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-16T13:56:39Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-16T13:51:02Z",
+            "observations": [
+                {
+                    "key": "94.154.40.0/24",
+                    "first_observed": "2026-10-16T13:51:02Z",
+                    "last_observed": "2026-10-16T13:51:02Z",
+                    "data": {
+                        "cidr": "94.154.40.0/24",
+                        "sblid": "SBL700376",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-16T13:50:55Z",
+            "observations": [
+                {
+                    "key": "1969486",
+                    "first_observed": "2026-10-16T13:50:55Z",
+                    "last_observed": "2026-10-16T13:50:55Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "94.154.40.109:1309",
+                        "port": 1309,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-16T11:12:40Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "remcos",
+                            "tor30fly"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-16T13:51:12Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-16T13:58:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T13:58:51Z",
+                    "last_observed": "2026-10-16T13:58:51Z",
+                    "data": {
+                        "as_owner": "Omegatech LTD",
+                        "asn": 202412,
+                        "network": "94.154.40.0/24",
+                        "country": "UA",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 0,
+                            "undetected": 92,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,274 @@
+{
+    "schema_version": 2,
+    "ip": "45.92.16.135",
+    "first_seen": "2026-10-16T13:50:55Z",
+    "last_seen": "2026-10-16T13:50:55Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-16T13:51:58Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T13:51:58Z",
+                    "last_observed": "2026-10-16T13:51:58Z",
+                    "data": {
+                        "abuse_confidence_score": 13,
+                        "total_reports": 10,
+                        "distinct_reporters": 5,
+                        "last_reported_at": "2026-09-23T01:56:55Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Netrouting, Inc.",
+                        "domain": "netr.cloud",
+                        "country_code": "US",
+                        "hostnames": [
+                            "bm-404.netr.cloud"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-16T13:51:03Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T13:51:03Z",
+                    "last_observed": "2026-10-16T13:51:03Z",
+                    "data": {
+                        "ports": [
+                            88,
+                            89,
+                            6001
+                        ],
+                        "hostnames": [
+                            "bm-404.netr.cloud"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-16T13:51:02Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T13:51:02Z",
+                    "last_observed": "2026-10-16T13:51:02Z",
+                    "data": {
+                        "asn": "AS6206",
+                        "as_name": "Netrouting B.V.",
+                        "as_domain": "netrouting.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-16T13:53:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T13:53:19Z",
+                    "last_observed": "2026-10-16T13:53:19Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS1239 sprint",
+                        "country_code": "US",
+                        "pulse_count": 3,
+                        "pulses": [
+                            {
+                                "id": "6a88005d764e0d972021269b",
+                                "name": "ThreatFix",
+                                "created": "2026-08-21T07:38:05.175Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "a1fee8esys",
+                                    "charrederror",
+                                    "mainunaware"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a9867db16876a182420bd3b",
+                                "name": "Unknownmalware - IOCs Sep 2026",
+                                "created": "2026-09-02T18:15:55.432Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "IOC",
+                                    "RENIC",
+                                    "malware",
+                                    "unknownmalware"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a9a3ef624227ea7f01062c8",
+                                "name": "Malware Filter - Botnet List - 03-09-2026 (Part 9)",
+                                "created": "2026-09-04T03:45:58.17Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-16T13:56:38Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T13:56:38Z",
+                    "last_observed": "2026-10-16T13:56:38Z",
+                    "data": {
+                        "org": "Netrouting, Inc.",
+                        "isp": "Netrouting B.V.",
+                        "asn": "AS6206",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "bm-404.netr.cloud"
+                        ],
+                        "domains": [
+                            "netr.cloud"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 88,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "Nothing here"
+                            },
+                            {
+                                "port": 89,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "302 Found"
+                            },
+                            {
+                                "port": 6001,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-16T13:51:02Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-16T13:50:55Z",
+            "observations": [
+                {
+                    "key": "1969876",
+                    "first_observed": "2026-10-16T13:50:55Z",
+                    "last_observed": "2026-10-16T13:50:55Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "45.92.16.135:25674",
+                        "port": 25674,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-16T13:21:32Z",
+                        "reference": null,
+                        "tags": [
+                            "REMOTEHOST",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-16T13:51:10Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-16T13:58:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-16T13:58:37Z",
+                    "last_observed": "2026-10-16T13:58:37Z",
+                    "data": {
+                        "as_owner": "Netrouting B.V.",
+                        "asn": 6206,
+                        "network": "45.92.16.0/22",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 2,
+                            "undetected": 34,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Chong Lua Dao",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
