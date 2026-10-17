@@ -33,11 +33,11 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-10T00:37:39Z",
+            "last_checked": "2026-10-17T03:44:14Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T08:11:49Z",
-                    "last_observed": "2026-10-10T00:37:39Z",
+                    "last_observed": "2026-10-17T03:44:14Z",
                     "data": {
                         "ports": [
                             135,
@@ -116,14 +116,64 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-03T20:56:12Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-17T03:52:48Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-17T03:52:48Z",
+                    "last_observed": "2026-10-17T03:52:48Z",
+                    "data": {
+                        "org": "IONOS SE",
+                        "isp": "IONOS SE",
+                        "asn": "AS8560",
+                        "os": null,
+                        "country_code": "GB",
+                        "hostnames": [
+                            "ip31-70-81-171.pbiaas.com"
+                        ],
+                        "domains": [
+                            "pbiaas.com"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d00014d14d08c000000000000217f0fec773ec97f0b3fdd2de2993c31",
+                                "certificate_sha256": "03cdd1f69567f196b733e64d4e850e372bd4257176205d596885819bd57643c2",
+                                "certificate_subject": "WIN-A02BTUPU08V",
+                                "certificate_issuer": "WIN-A02BTUPU08V"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-15T23:36:07Z",
+            "last_checked": "2026-10-17T03:43:25Z",
             "observations": []
         },
         "threatfox": {

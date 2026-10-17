@@ -33,7 +33,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-10T00:37:49Z",
+            "last_checked": "2026-10-17T03:44:24Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T08:11:59Z",
@@ -66,7 +66,7 @@
                 },
                 {
                     "first_observed": "2026-10-10T00:37:49Z",
-                    "last_observed": "2026-10-10T00:37:49Z",
+                    "last_observed": "2026-10-17T03:44:24Z",
                     "data": {
                         "ports": [
                             22,
@@ -146,14 +146,100 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-03T20:56:32Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-17T03:53:08Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-17T03:53:08Z",
+                    "last_observed": "2026-10-17T03:53:08Z",
+                    "data": {
+                        "org": "Google LLC",
+                        "isp": "Google LLC",
+                        "asn": "AS396982",
+                        "os": "Ubuntu",
+                        "country_code": "TW",
+                        "hostnames": [
+                            "123.132.199.104.bc.googleusercontent.com",
+                            "devcore.pt"
+                        ],
+                        "domains": [
+                            "devcore.pt",
+                            "googleusercontent.com"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "eol-product",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!",
+                                "jarm": "28d28d28d00028d00042d42d000000831b6af40378e2dd35eeac4e9311926e",
+                                "certificate_sha256": "ea0ee6451f2eef9e8887d86d603a0acf76862387ae6cafc602b78a0701efaf22",
+                                "certificate_subject": "devcore.pt",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 554,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ]
+                            },
+                            {
+                                "port": 10443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "6b3e8c662ba3038ee64c16f2b26a9fea15f96afcc7915517994312181365c243",
+                                "certificate_subject": "*.azurefd.net",
+                                "certificate_organisation": "Microsoft Corporation",
+                                "certificate_issuer": "*.azurefd.net"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-15T23:36:07Z",
+            "last_checked": "2026-10-17T03:43:25Z",
             "observations": []
         },
         "threatfox": {

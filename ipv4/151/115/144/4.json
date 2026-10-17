@@ -33,11 +33,11 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-10T00:37:56Z",
+            "last_checked": "2026-10-17T03:44:31Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T08:12:06Z",
-                    "last_observed": "2026-10-10T00:37:56Z",
+                    "last_observed": "2026-10-17T03:44:31Z",
                     "data": {
                         "ports": [
                             22,
@@ -120,14 +120,73 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-03T20:56:46Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-17T03:53:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-17T03:53:22Z",
+                    "last_observed": "2026-10-17T03:53:22Z",
+                    "data": {
+                        "org": "Scaleway",
+                        "isp": "Scaleway SAS",
+                        "asn": "AS12876",
+                        "os": "Linux",
+                        "country_code": "FR",
+                        "hostnames": [
+                            "4-144-115-151.rev.scw.cloud",
+                            "sara-ai.groupegenious.cloud"
+                        ],
+                        "domains": [
+                            "groupegenious.cloud",
+                            "scw.cloud"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "Open WebUI",
+                                "jarm": "15d3fd16d29d29d00042d43d000000fe02290512647416dcf0a400ccbc0b6b",
+                                "certificate_sha256": "5a48632b525e903c8feb8667bd2a3357bc4e1d76a682a1235c77472965a5ade7",
+                                "certificate_subject": "sara-ai.groupegenious.cloud",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 3000,
+                                "transport": "tcp",
+                                "http_title": "Dashboard - Semaphore UI"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "Gophish - Login"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-15T23:36:07Z",
+            "last_checked": "2026-10-17T03:43:25Z",
             "observations": []
         },
         "threatfox": {

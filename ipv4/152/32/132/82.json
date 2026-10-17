@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-10T00:37:50Z",
+            "last_checked": "2026-10-17T03:44:25Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T08:12:00Z",
@@ -42,6 +42,25 @@
                             5357,
                             5985,
                             5986
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-17T03:44:25Z",
+                    "last_observed": "2026-10-17T03:44:25Z",
+                    "data": {
+                        "ports": [
+                            443,
+                            5357,
+                            5985,
+                            5986,
+                            12452
                         ],
                         "hostnames": [],
                         "cpes": [],
@@ -110,14 +129,76 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-03T20:56:34Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-17T03:53:10Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-17T03:53:10Z",
+                    "last_observed": "2026-10-17T03:53:10Z",
+                    "data": {
+                        "org": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+                        "isp": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+                        "asn": "AS135377",
+                        "os": "Windows Server 2022 (build 10.0.20348)",
+                        "country_code": "HK",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "07d14d16d21d21d07c42d41d00041d24a458a375eef0c576d23a7bab9a9fb1",
+                                "certificate_sha256": "87f2085c32b6a2cc709b365f55873e207a9caa10bffecf2fd16d3cf9d94d390c"
+                            },
+                            {
+                                "port": 5357,
+                                "transport": "tcp",
+                                "http_title": "Service Unavailable"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            },
+                            {
+                                "port": 5986,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "Not Found",
+                                "jarm": "2ad2ad16d00000022c00000000042de165b5cbbfb8c1f0c4e1552cac4aa4a9",
+                                "certificate_sha256": "1fb1d3418ee0b8db5ffa62da604eb83af21d241a549bf29680b8a2ea1d639316",
+                                "certificate_subject": "Cloudbase-Init WinRM",
+                                "certificate_issuer": "Cloudbase-Init WinRM"
+                            },
+                            {
+                                "port": 12452,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "07d14d16d21d21d07c42d41d00041d24a458a375eef0c576d23a7bab9a9fb1",
+                                "certificate_sha256": "49c3b95b7805328a992510821e510192893a02cc62b8bf9b68b073d5728558ff",
+                                "certificate_subject": "*.microsoft.com",
+                                "certificate_organisation": "Microsoft Corporation",
+                                "certificate_issuer": "*.microsoft.com"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-15T23:36:07Z",
+            "last_checked": "2026-10-17T03:43:25Z",
             "observations": []
         },
         "threatfox": {
