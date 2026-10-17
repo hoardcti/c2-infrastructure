@@ -611,11 +611,106 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-04T17:31:30Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-17T22:10:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-17T22:10:05Z",
+                    "last_observed": "2026-10-17T22:10:05Z",
+                    "data": {
+                        "org": "OVH Hosting, Inc.",
+                        "isp": "OVH SAS",
+                        "asn": "AS16276",
+                        "os": "Linux",
+                        "country_code": "CA",
+                        "hostnames": [
+                            "riofuturoprocesos.com",
+                            "vps-8b7abffe.vps.ovh.ca"
+                        ],
+                        "domains": [
+                            "ovh.ca",
+                            "riofuturoprocesos.com"
+                        ],
+                        "tags": [
+                            "videogame"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.0p2 Debian 7+deb13u4"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "21d19d00021d21d00042d43d0000005ad20eceaf7f71ae0887d2ff117bf97f",
+                                "certificate_sha256": "2c35a7adaeccaeb4473b8398996ffb8d874aef7f10184716bb51297b5b7c1554",
+                                "certificate_subject": "CloudFlare Origin Certificate",
+                                "certificate_organisation": "CloudFlare, Inc."
+                            },
+                            {
+                                "port": 2222,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.0p2 Debian 7+deb13u4"
+                            },
+                            {
+                                "port": 3001,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.31.5"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "2a9aeaaaeb55a384c55f7b83dfd782dcb5218e67549c264aa55e019d683464a2",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8100,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8101,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "400 No required SSL certificate was sent",
+                                "jarm": "21d19d00021d21d00042d43d00000091f9827a8676a9d9f27d421962a09b5d",
+                                "certificate_sha256": "2c35a7adaeccaeb4473b8398996ffb8d874aef7f10184716bb51297b5b7c1554",
+                                "certificate_subject": "CloudFlare Origin Certificate",
+                                "certificate_organisation": "CloudFlare, Inc."
+                            },
+                            {
+                                "port": 25565,
+                                "transport": "tcp",
+                                "product": "Minecraft",
+                                "version": "Paper 26.1.2",
+                                "tags": [
+                                    "videogame"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-17T03:43:26Z",

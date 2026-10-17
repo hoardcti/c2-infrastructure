@@ -88,11 +88,43 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-04T17:31:48Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-17T22:10:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-17T22:10:23Z",
+                    "last_observed": "2026-10-17T22:10:23Z",
+                    "data": {
+                        "org": "Broadband Network Services",
+                        "isp": "Telemach Slovenija d.o.o.",
+                        "asn": "AS3212",
+                        "os": null,
+                        "country_code": "SI",
+                        "hostnames": [
+                            "77-38-125-37.dynamic.telemach.net"
+                        ],
+                        "domains": [
+                            "telemach.net"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "e9257ae2e7e3878f6b6c51f698b4ae4c32d90cfd4707f6cdb10a0fcaa416a31e",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-17T03:43:26Z",
