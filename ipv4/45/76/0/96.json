@@ -107,11 +107,51 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-04T05:14:30Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-17T12:56:03Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-17T12:56:03Z",
+                    "last_observed": "2026-10-17T12:56:03Z",
+                    "data": {
+                        "org": "Vultr Holdings, LLC",
+                        "isp": "The Constant Company, LLC",
+                        "asn": "AS20473",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "45.76.0.96.vultrusercontent.com"
+                        ],
+                        "domains": [
+                            "vultrusercontent.com"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "ERROR 404 - Nothing Found",
+                                "jarm": "29d29d00000000021c43d43d00043d6aff5ab0f4fc31897186312c9e639319",
+                                "certificate_sha256": "dfe48b97c288fb9f1423200db207a4d13c97c118fb1db22ae7c8e3287582e281"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-17T03:43:25Z",
