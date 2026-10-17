@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "172.94.58.29",
     "first_seen": "2026-10-08T21:53:09Z",
-    "last_seen": "2026-10-13T21:05:00Z",
+    "last_seen": "2026-10-17T19:06:57Z",
     "flags": [
         "remcos"
     ],
@@ -91,11 +91,11 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-10-16T17:53:24Z",
+            "last_checked": "2026-10-17T19:07:04Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-13T21:05:00Z",
+            "last_checked": "2026-10-17T19:06:57Z",
             "observations": [
                 {
                     "key": "1957835",
@@ -115,6 +115,29 @@
                         "reference": null,
                         "tags": [
                             "WinProtection2",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                },
+                {
+                    "key": "1971742",
+                    "first_observed": "2026-10-17T19:06:57Z",
+                    "last_observed": "2026-10-17T19:06:57Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "172.94.58.29:4646",
+                        "port": 4646,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-17T17:11:16Z",
+                        "reference": null,
+                        "tags": [
+                            "WinWordl",
                             "c2",
                             "remcos"
                         ]
