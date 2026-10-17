@@ -175,11 +175,124 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-04T12:09:59Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-17T16:23:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-17T16:23:07Z",
+                    "last_observed": "2026-10-17T16:23:07Z",
+                    "data": {
+                        "org": "Tencent cloud computing (Beijing) Co., Ltd.",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "ai",
+                            "c2",
+                            "eol-product",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.16"
+                            },
+                            {
+                                "port": 3000,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "500 Internal Server Error"
+                            },
+                            {
+                                "port": 4321,
+                                "transport": "tcp",
+                                "product": "Adaptix",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "404 - Page Not Found",
+                                "jarm": "29d29d00000000000043d43d00043dc3b2afa8a5ec09b510a8559aff7899fb",
+                                "certificate_sha256": "89e4016a53d764dbbad8d240c8508f3c5d57a74f862856d7a4ce3df56852f700",
+                                "certificate_organisation": "Internet Widgits Pty Ltd"
+                            },
+                            {
+                                "port": 5005,
+                                "transport": "tcp",
+                                "http_title": "登录"
+                            },
+                            {
+                                "port": 8000,
+                                "transport": "tcp",
+                                "http_title": "Fleet Control"
+                            },
+                            {
+                                "port": 8005,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "成都市青羊区人民政府"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "http_title": "PentAGI",
+                                "jarm": "3fd3fd00000000000043d3fd3fd43d79451d8c63b099acafdbabb24551d0e6",
+                                "certificate_sha256": "a534e2e429778c997bd9a6a84204b642982681c6c5f604bb24527072e566a08e",
+                                "certificate_subject": "localhost",
+                                "certificate_organisation": "PentAGI",
+                                "certificate_issuer": "PentAGI CA"
+                            },
+                            {
+                                "port": 8501,
+                                "transport": "tcp",
+                                "product": "Streamlit",
+                                "tags": [
+                                    "ai"
+                                ],
+                                "http_title": "Streamlit"
+                            },
+                            {
+                                "port": 8787,
+                                "transport": "tcp",
+                                "http_title": "ARTEX — 自主渗透测试控制台"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "ef533656d343ef391fa3175e3d17a32a81afd387371d81bf74c9dc5277c1961d",
+                                "certificate_subject": "Pwn3rs Striked",
+                                "certificate_organisation": "Pwn3rs",
+                                "certificate_issuer": "Pwn3rs Striked"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-17T03:43:26Z",
