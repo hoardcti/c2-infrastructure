@@ -155,11 +155,94 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-03T20:57:40Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-17T08:32:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-17T08:32:17Z",
+                    "last_observed": "2026-10-17T08:32:17Z",
+                    "data": {
+                        "org": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+                        "isp": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+                        "asn": "AS135377",
+                        "os": "Windows 7 or 8",
+                        "country_code": "HK",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad22c2ad2ad2ad2adfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "2dba184b3c924ec90558375e8e259a57136372a906a48ac763170ddec0a91525",
+                                "certificate_subject": "10-7-179-74",
+                                "certificate_issuer": "10-7-179-74"
+                            },
+                            {
+                                "port": 4444,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 5555,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            },
+                            {
+                                "port": 5986,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "Not Found",
+                                "jarm": "2ad2ad16d00000022c2ad2ad2ad2adbc07bc352a188303b518c8a273c71220",
+                                "certificate_sha256": "06e190783a57f83f78f020e97ade3b381ec92e2319b73bab464805f7fe2e018c",
+                                "certificate_subject": "Cloudbase-Init WinRM",
+                                "certificate_issuer": "Cloudbase-Init WinRM"
+                            },
+                            {
+                                "port": 6666,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 7000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 7500,
+                                "transport": "tcp",
+                                "http_title": "frp server"
+                            },
+                            {
+                                "port": 47001,
+                                "transport": "tcp",
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-17T03:43:25Z",

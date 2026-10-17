@@ -111,11 +111,66 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-03T23:45:17Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-17T08:32:55Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-17T08:32:55Z",
+                    "last_observed": "2026-10-17T08:32:55Z",
+                    "data": {
+                        "org": "Institutul National de Cercetare-Dezvoltare in informatica - ICI Bucuresti",
+                        "isp": "AVAHOHST AVA HOST SRL",
+                        "asn": "AS48753",
+                        "os": "Linux",
+                        "country_code": "RO",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
+                            },
+                            {
+                                "port": 139,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            },
+                            {
+                                "port": 5986,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "Not Found",
+                                "jarm": "2ad2ad16d00000022c2ad2ad2ad2adbc07bc352a188303b518c8a273c71220",
+                                "certificate_sha256": "761f673644801ba0227fbbf0c23faa13e6eaa2f1bc0171ea11603930f23ac411",
+                                "certificate_subject": "Cloudbase-Init WinRM",
+                                "certificate_issuer": "Cloudbase-Init WinRM"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-17T03:43:25Z",
