@@ -107,11 +107,194 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-04T21:12:47Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-18T00:52:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T00:52:27Z",
+                    "last_observed": "2026-10-18T00:52:27Z",
+                    "data": {
+                        "org": "Hetzner Online GmbH",
+                        "isp": "Hetzner Online GmbH",
+                        "asn": "AS24940",
+                        "os": null,
+                        "country_code": "AE",
+                        "hostnames": [
+                            "gophish.iaiapro.com",
+                            "mail.claara.tech"
+                        ],
+                        "domains": [
+                            "claara.tech",
+                            "iaiapro.com"
+                        ],
+                        "tags": [
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 21,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "2dad7b5e42d4f79b783011da748f4c054fe4bdc868a3fe91b7b53c3b22761080",
+                                "certificate_subject": "server.example.com",
+                                "certificate_organisation": "Hestia Control Panel",
+                                "certificate_issuer": "server.example.com"
+                            },
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "2dad7b5e42d4f79b783011da748f4c054fe4bdc868a3fe91b7b53c3b22761080",
+                                "certificate_subject": "server.example.com",
+                                "certificate_organisation": "Hestia Control Panel",
+                                "certificate_issuer": "server.example.com"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "Access Denied"
+                            },
+                            {
+                                "port": 110,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "2dad7b5e42d4f79b783011da748f4c054fe4bdc868a3fe91b7b53c3b22761080",
+                                "certificate_subject": "server.example.com",
+                                "certificate_organisation": "Hestia Control Panel",
+                                "certificate_issuer": "server.example.com"
+                            },
+                            {
+                                "port": 143,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "2dad7b5e42d4f79b783011da748f4c054fe4bdc868a3fe91b7b53c3b22761080",
+                                "certificate_subject": "server.example.com",
+                                "certificate_organisation": "Hestia Control Panel",
+                                "certificate_issuer": "server.example.com"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "301 Moved Permanently",
+                                "jarm": "29d29d15d29d29d00041d41d000000df133019600a83abfb096ff3e86cd79d",
+                                "certificate_sha256": "2dad7b5e42d4f79b783011da748f4c054fe4bdc868a3fe91b7b53c3b22761080",
+                                "certificate_subject": "server.example.com",
+                                "certificate_organisation": "Hestia Control Panel",
+                                "certificate_issuer": "server.example.com"
+                            },
+                            {
+                                "port": 465,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "2dad7b5e42d4f79b783011da748f4c054fe4bdc868a3fe91b7b53c3b22761080",
+                                "certificate_subject": "server.example.com",
+                                "certificate_organisation": "Hestia Control Panel",
+                                "certificate_issuer": "server.example.com"
+                            },
+                            {
+                                "port": 587,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "2dad7b5e42d4f79b783011da748f4c054fe4bdc868a3fe91b7b53c3b22761080",
+                                "certificate_subject": "server.example.com",
+                                "certificate_organisation": "Hestia Control Panel",
+                                "certificate_issuer": "server.example.com"
+                            },
+                            {
+                                "port": 993,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "29d29d15d29d29d00041d41d000000a5308aa908d3edc2392a602b7adac57a",
+                                "certificate_sha256": "2dad7b5e42d4f79b783011da748f4c054fe4bdc868a3fe91b7b53c3b22761080",
+                                "certificate_subject": "server.example.com",
+                                "certificate_organisation": "Hestia Control Panel",
+                                "certificate_issuer": "server.example.com"
+                            },
+                            {
+                                "port": 995,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "29d29d15d29d29d00041d41d000000a5308aa908d3edc2392a602b7adac57a",
+                                "certificate_sha256": "2dad7b5e42d4f79b783011da748f4c054fe4bdc868a3fe91b7b53c3b22761080",
+                                "certificate_subject": "server.example.com",
+                                "certificate_organisation": "Hestia Control Panel",
+                                "certificate_issuer": "server.example.com"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "71492a6c9f9e06192a3af20b6b7fcf6ceb20d910929178397d1f16f918cdd92a",
+                                "certificate_subject": "gophish.iaiapro.com",
+                                "certificate_issuer": "R13"
+                            },
+                            {
+                                "port": 8083,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "LOGIN - mail.claara.tech - Hestia Control Panel",
+                                "jarm": "29d29d15d29d29d00041d41d000000df133019600a83abfb096ff3e86cd79d",
+                                "certificate_sha256": "2dad7b5e42d4f79b783011da748f4c054fe4bdc868a3fe91b7b53c3b22761080",
+                                "certificate_subject": "server.example.com",
+                                "certificate_organisation": "Hestia Control Panel",
+                                "certificate_issuer": "server.example.com"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-17T03:43:26Z",

@@ -90,11 +90,62 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-04T21:13:03Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-18T00:52:43Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T00:52:43Z",
+                    "last_observed": "2026-10-18T00:52:43Z",
+                    "data": {
+                        "org": "ACEVILLE PTE.LTD.",
+                        "isp": "Tencent Building, Kejizhongyi Avenue",
+                        "asn": "AS132203",
+                        "os": null,
+                        "country_code": "SG",
+                        "hostnames": [
+                            "chidori.online"
+                        ],
+                        "domains": [
+                            "chidori.online"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.15"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "69d7648e76f38ade9eab223fba6d1e411ddae7d41bc04fd1181e803f7aa392ec",
+                                "certificate_subject": "chidori.online",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "e787d6966d4d3f3f9a1cfe2981e0e99b8fa166495f1177ac1c9c2d674e0f7d36",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 4430,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 5001,
+                                "transport": "tcp",
+                                "http_title": "Masuk — IT Control"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-17T03:43:26Z",

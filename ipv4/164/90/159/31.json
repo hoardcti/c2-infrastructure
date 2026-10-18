@@ -102,11 +102,86 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-04T21:13:39Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-18T00:53:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T00:53:19Z",
+                    "last_observed": "2026-10-18T00:53:19Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "cesplus.net",
+                            "www.cesplus.net"
+                        ],
+                        "domains": [
+                            "cesplus.net"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.18",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "jarm": "2ad2ad0002ad2ad00042d42d000000301510f56407964db9434a9bb0d4ee4a",
+                                "certificate_sha256": "ffe0e108d31b2eb068d23215aa3927ba92f37f279b2c153efe40c7b3902f7435",
+                                "certificate_subject": "cesplus.net",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "ffe0e108d31b2eb068d23215aa3927ba92f37f279b2c153efe40c7b3902f7435",
+                                "certificate_subject": "cesplus.net",
+                                "certificate_issuer": "YR2"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-17T03:43:26Z",

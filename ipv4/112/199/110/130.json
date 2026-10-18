@@ -114,11 +114,75 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-04T21:12:53Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-18T00:52:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T00:52:33Z",
+                    "last_observed": "2026-10-18T00:52:33Z",
+                    "data": {
+                        "org": "Eastern Telecommunications Philippines, Inc.",
+                        "isp": "Eastern Telecoms Phils., Inc.",
+                        "asn": "AS9658",
+                        "os": null,
+                        "country_code": "PH",
+                        "hostnames": [
+                            "130.110.199.112.clbrz.inet.static.eastern-tele.com",
+                            "outsourced.co"
+                        ],
+                        "domains": [
+                            "eastern-tele.com",
+                            "outsourced.co"
+                        ],
+                        "tags": [
+                            "vpn"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 161,
+                                "transport": "udp",
+                                "product": "MikroTik"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "da684099760f2262fc0dca68f56f98677813d264a895c04a5fd553c6beecb7b0",
+                                "certificate_subject": "*.outsourced.co",
+                                "certificate_issuer": "GoDaddy TLS Intermediate CA DV - R1v1"
+                            },
+                            {
+                                "port": 500,
+                                "transport": "udp",
+                                "tags": [
+                                    "vpn"
+                                ]
+                            },
+                            {
+                                "port": 1701,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "da684099760f2262fc0dca68f56f98677813d264a895c04a5fd553c6beecb7b0",
+                                "certificate_subject": "*.outsourced.co",
+                                "certificate_issuer": "GoDaddy TLS Intermediate CA DV - R1v1"
+                            },
+                            {
+                                "port": 4500,
+                                "transport": "udp",
+                                "tags": [
+                                    "vpn"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-17T03:43:26Z",
