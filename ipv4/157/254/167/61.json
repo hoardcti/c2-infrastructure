@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-11T08:31:38Z",
+            "last_checked": "2026-10-18T10:40:37Z",
             "observations": [
                 {
                     "first_observed": "2026-10-11T08:31:38Z",
@@ -49,6 +49,39 @@
                             "cpe:/a:f5:nginx"
                         ],
                         "tags": [],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-18T10:40:37Z",
+                    "last_observed": "2026-10-18T10:40:37Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            6443,
+                            7443,
+                            8081,
+                            8083,
+                            8085,
+                            9443,
+                            15443,
+                            16098
+                        ],
+                        "hostnames": [
+                            "lawsrouter.com",
+                            "profile.lawsrouter.com",
+                            "sso.lawsrouter.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:apache:http_server",
+                            "cpe:/a:f5:nginx",
+                            "cpe:/a:openbsd:openssh:9.2p1",
+                            "cpe:/o:debian:debian_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
                         "vulns": []
                     }
                 }
@@ -73,7 +106,7 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-11T08:35:46Z",
+            "last_checked": "2026-10-18T10:44:45Z",
             "observations": [
                 {
                     "first_observed": "2026-10-11T08:35:46Z",
@@ -85,11 +118,48 @@
                         "pulse_count": 0,
                         "pulses": []
                     }
+                },
+                {
+                    "first_observed": "2026-10-18T10:44:45Z",
+                    "last_observed": "2026-10-18T10:44:45Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS1239 sprint",
+                        "country_code": "US",
+                        "pulse_count": 2,
+                        "pulses": [
+                            {
+                                "id": "6ad1a671d5e0fa95ff1dc2b0",
+                                "name": "Malware Filter - Botnet List - 15-10-2026 (Part 2)",
+                                "created": "2026-10-16T04:22:09.245Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6ad29f00b73412a12859480b",
+                                "name": "BEACON - IOCs paquetes.xlsx 2026",
+                                "created": "2026-10-16T22:02:40.335Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "IOC",
+                                    "RENIC",
+                                    "beacon",
+                                    "malware"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "shodan": {
             "last_checked": "2026-10-11T08:39:07Z",
+            "last_error": {
+                "occurred_at": "2026-10-18T10:48:04Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-10-11T08:39:07Z",

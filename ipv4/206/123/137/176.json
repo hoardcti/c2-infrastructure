@@ -1,0 +1,185 @@
+{
+    "schema_version": 2,
+    "ip": "206.123.137.176",
+    "first_seen": "2026-10-18T10:40:27Z",
+    "last_seen": "2026-10-18T10:40:27Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-18T10:43:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T10:43:21Z",
+                    "last_observed": "2026-10-18T10:43:21Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2025-07-22T20:09:06Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Secure Internet LLC ME",
+                        "domain": "pointtoserver.com",
+                        "country_code": "SE",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-18T10:40:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T10:40:34Z",
+                    "last_observed": "2026-10-18T10:40:34Z",
+                    "data": {
+                        "ports": [
+                            32400
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:plex:media_server:1.43.4.10903"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-18T10:40:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T10:40:34Z",
+                    "last_observed": "2026-10-18T10:40:34Z",
+                    "data": {
+                        "asn": "AS9009",
+                        "as_name": "M247 Europe SRL",
+                        "as_domain": "m247global.com",
+                        "country_code": "SE",
+                        "country": "Sweden",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-18T10:44:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T10:44:40Z",
+                    "last_observed": "2026-10-18T10:44:40Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS9009 m247 ltd",
+                        "country_code": "SE",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-18T10:47:58Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T10:47:58Z",
+                    "last_observed": "2026-10-18T10:47:58Z",
+                    "data": {
+                        "org": "Secure Internet LLC",
+                        "isp": "M247 Europe SRL",
+                        "asn": "AS9009",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 32400,
+                                "transport": "tcp",
+                                "product": "Plex Media Server",
+                                "version": "1.43.4.10903-e5521bd8c",
+                                "http_title": "Unauthorized"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-18T10:40:34Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-18T10:40:27Z",
+            "observations": [
+                {
+                    "key": "1972595",
+                    "first_observed": "2026-10-18T10:40:27Z",
+                    "last_observed": "2026-10-18T10:40:27Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "206.123.137.176:56090",
+                        "port": 56090,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-18T10:18:35Z",
+                        "reference": null,
+                        "tags": [
+                            "Huatai007",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-18T10:42:34Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-18T10:49:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T10:49:56Z",
+                    "last_observed": "2026-10-18T10:49:56Z",
+                    "data": {
+                        "as_owner": "M247 Europe SRL",
+                        "asn": 9009,
+                        "network": "206.123.136.0/23",
+                        "country": "SE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 0,
+                            "undetected": 92,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
