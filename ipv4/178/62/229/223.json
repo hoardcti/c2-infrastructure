@@ -143,7 +143,7 @@
         },
         "shodan": {
             "last_error": {
-                "occurred_at": "2026-10-06T16:44:15Z",
+                "occurred_at": "2026-10-18T23:01:00Z",
                 "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
             },
             "observations": []
@@ -176,6 +176,65 @@
         "urlhaus": {
             "last_checked": "2026-10-16T08:56:08Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-18T23:03:10Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T23:03:10Z",
+                    "last_observed": "2026-10-18T23:03:10Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "178.62.0.0/16",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -12,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 2,
+                            "undetected": 33,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lumu",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 2
+                        },
+                        "tags": [],
+                        "jarm": "2ad2ad16d2ad2ad00042d42d0000005fd00fabd213a5ac89229012f70afd5c",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

@@ -1623,6 +1623,10 @@
         },
         "shodan": {
             "last_checked": "2026-10-06T16:44:20Z",
+            "last_error": {
+                "occurred_at": "2026-10-18T23:01:06Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-10-06T16:44:20Z",
@@ -1712,6 +1716,127 @@
         "urlhaus": {
             "last_checked": "2026-10-16T08:56:14Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-18T23:03:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T23:03:56Z",
+                    "last_observed": "2026-10-18T23:03:56Z",
+                    "data": {
+                        "as_owner": "Omegatech LTD",
+                        "asn": 202412,
+                        "network": "130.12.180.0/24",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -18,
+                        "analysis_stats": {
+                            "malicious": 16,
+                            "suspicious": 1,
+                            "undetected": 29,
+                            "harmless": 46,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "ADMINUSLabs",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Certego",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Criminal IP",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "CyRadar",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Forcepoint ThreatSeeker",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "GreyNoise",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Guardpot",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Sophos",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "VIPRE",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 8
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "2ad2ad0002ad2ad00042d42d000000301510f56407964db9434a9bb0d4ee4a",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

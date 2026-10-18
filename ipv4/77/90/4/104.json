@@ -1,0 +1,269 @@
+{
+    "schema_version": 2,
+    "ip": "77.90.4.104",
+    "first_seen": "2026-10-18T22:54:04Z",
+    "last_seen": "2026-10-18T22:54:04Z",
+    "flags": [
+        "remus"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-18T22:55:02Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T22:55:02Z",
+                    "last_observed": "2026-10-18T22:55:02Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "GHOSTnet GmbH",
+                        "domain": "ghostnet.de",
+                        "country_code": "DE",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-18T22:54:11Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T22:54:11Z",
+                    "last_observed": "2026-10-18T22:54:11Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            443,
+                            3306,
+                            8080,
+                            10008
+                        ],
+                        "hostnames": [
+                            "mtahosting",
+                            "node.free-vps.xyz",
+                            "panel.free-vps.xyz"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.24.0",
+                            "cpe:/a:mariadb:mariadb:10.11.14-MariaDB-0ubuntu0.24.04.1",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "database",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-18T22:54:11Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T22:54:11Z",
+                    "last_observed": "2026-10-18T22:54:11Z",
+                    "data": {
+                        "asn": "AS214243",
+                        "as_name": "Marc Fischer",
+                        "as_domain": "packets-decreaser.net",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-18T22:56:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T22:56:21Z",
+                    "last_observed": "2026-10-18T22:56:21Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS12586 ghostnet gmbh",
+                        "country_code": "DE",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-18T22:59:42Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T22:59:42Z",
+                    "last_observed": "2026-10-18T22:59:42Z",
+                    "data": {
+                        "org": "GHOSTnet GmbH",
+                        "isp": "PacketsDecreaserNET Marc Fischer",
+                        "asn": "AS214243",
+                        "os": "Linux",
+                        "country_code": "DE",
+                        "hostnames": [
+                            "mtahosting",
+                            "node.free-vps.xyz",
+                            "panel.free-vps.xyz"
+                        ],
+                        "domains": [
+                            "free-vps.xyz",
+                            "mtahosting."
+                        ],
+                        "tags": [
+                            "database",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "free-vps.xyz",
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "5b58a4c77341830cbef4470eb13cf5d85643e8327be1eb63568c27de711ead75",
+                                "certificate_subject": "panel.free-vps.xyz",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 3306,
+                                "transport": "tcp",
+                                "product": "MariaDB",
+                                "version": "10.11.14-MariaDB-0ubuntu0.24.04.1",
+                                "tags": [
+                                    "database"
+                                ]
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                                "certificate_sha256": "f92a6cb36c7c432c31bbe638c29d9712c13929e9211c1606389cf07919fe608a",
+                                "certificate_subject": "node.free-vps.xyz",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 10008,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-18T22:54:10Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-18T22:54:04Z",
+            "observations": [
+                {
+                    "key": "1973657",
+                    "first_observed": "2026-10-18T22:54:04Z",
+                    "last_observed": "2026-10-18T22:54:04Z",
+                    "flags": [
+                        "remus"
+                    ],
+                    "data": {
+                        "ioc": "77.90.4.104:9692",
+                        "port": 9692,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remus",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-18T21:10:08Z",
+                        "reference": null,
+                        "tags": [
+                            "5a4378fb90db39f09c7b18d1f314e645",
+                            "Remus",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-18T22:54:14Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-18T23:01:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T23:01:40Z",
+                    "last_observed": "2026-10-18T23:01:40Z",
+                    "data": {
+                        "as_owner": "Marc Fischer",
+                        "asn": 214243,
+                        "network": "77.90.4.0/24",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 91,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
