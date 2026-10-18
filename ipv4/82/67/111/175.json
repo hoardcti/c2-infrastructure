@@ -94,7 +94,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-05T00:43:17Z",
+            "last_checked": "2026-10-18T05:43:00Z",
             "observations": [
                 {
                     "first_observed": "2026-10-05T00:43:17Z",
@@ -149,11 +149,62 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-10-18T05:43:00Z",
+                    "last_observed": "2026-10-18T05:43:00Z",
+                    "data": {
+                        "org": "Free SAS",
+                        "isp": "Free SAS",
+                        "asn": "AS12322",
+                        "os": null,
+                        "country_code": "FR",
+                        "hostnames": [
+                            "82-67-111-175.subs.proxad.net",
+                            "microsfot-login.com"
+                        ],
+                        "domains": [
+                            "microsfot-login.com",
+                            "proxad.net"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 21,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "Hello! Welcome to Synology Web Station!"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "cf781254c3922e25585c9d0e3a761ecdbc01a3effee298be71b49a02a6e4cdfc",
+                                "certificate_subject": "microsfot-login.com",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login"
+                            },
+                            {
+                                "port": 4443,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-17T03:43:26Z",
+            "last_checked": "2026-10-18T05:34:38Z",
             "observations": []
         },
         "threatfox": {

@@ -110,14 +110,67 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-05T06:48:49Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-18T05:44:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T05:44:26Z",
+                    "last_observed": "2026-10-18T05:44:26Z",
+                    "data": {
+                        "org": "Akamai Technologies, Inc.",
+                        "isp": "Akamai Connected Cloud",
+                        "asn": "AS63949",
+                        "os": "Linux",
+                        "country_code": "US",
+                        "hostnames": [
+                            "phish.redialbpo.co"
+                        ],
+                        "domains": [
+                            "redialbpo.co"
+                        ],
+                        "tags": [
+                            "cdn",
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.3p1 Debian 5",
+                                "tags": [
+                                    "cdn",
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cdn",
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cdn",
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "40d40d40d00000000043d43d00043d6aff5ab0f4fc31897186312c9e639319",
+                                "certificate_sha256": "1b335b457f794445183ea49bcdc211dda1f8079ecca49f13b5ce227ac85f0ec4",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-17T03:43:26Z",
+            "last_checked": "2026-10-18T05:34:38Z",
             "observations": []
         },
         "threatfox": {

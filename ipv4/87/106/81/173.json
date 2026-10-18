@@ -151,14 +151,120 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-05T06:48:53Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-18T05:44:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T05:44:30Z",
+                    "last_observed": "2026-10-18T05:44:30Z",
+                    "data": {
+                        "org": "IONOS SE",
+                        "isp": "IONOS SE",
+                        "asn": "AS8560",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "ip87-106-81-173.pbiaas.com"
+                        ],
+                        "domains": [
+                            "pbiaas.com"
+                        ],
+                        "tags": [
+                            "database",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2007-4723",
+                            "CVE-2009-0796",
+                            "CVE-2009-2299",
+                            "CVE-2011-1176",
+                            "CVE-2011-2688",
+                            "CVE-2012-3526",
+                            "CVE-2012-4001",
+                            "CVE-2012-4360",
+                            "CVE-2013-0941",
+                            "CVE-2013-0942",
+                            "CVE-2013-2765",
+                            "CVE-2013-4365",
+                            "CVE-2026-42356",
+                            "CVE-2026-42528",
+                            "CVE-2026-46729",
+                            "CVE-2026-47360",
+                            "CVE-2026-48005",
+                            "CVE-2026-56153",
+                            "CVE-2026-56154",
+                            "CVE-2026-56449",
+                            "CVE-2026-57941",
+                            "CVE-2026-58415",
+                            "CVE-2026-59685",
+                            "CVE-2026-59797",
+                            "CVE-2026-63045",
+                            "CVE-2026-63292",
+                            "CVE-2026-63686",
+                            "CVE-2026-63718",
+                            "CVE-2026-73636",
+                            "CVE-2026-73637",
+                            "CVE-2026-79768",
+                            "CVE-2026-93546"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.18"
+                            },
+                            {
+                                "port": 3000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3001,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.30.3"
+                            },
+                            {
+                                "port": 3306,
+                                "transport": "tcp",
+                                "product": "MySQL",
+                                "version": "8.4.11",
+                                "tags": [
+                                    "database"
+                                ]
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "82cc70895486c47be65e9eb606bad2a961f4f5b04c9d9101a7f56ddbaf190381",
+                                "certificate_organisation": "Internet Widgits Pty Ltd"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.28.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "ChartDB - Create & Visualize Database Schema Diagrams"
+                            },
+                            {
+                                "port": 8081,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "version": "2.4.68",
+                                "http_title": "phpMyAdmin"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-17T03:43:26Z",
+            "last_checked": "2026-10-18T05:34:38Z",
             "observations": []
         },
         "threatfox": {

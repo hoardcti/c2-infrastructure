@@ -113,14 +113,69 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-05T00:44:11Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-18T05:43:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T05:43:54Z",
+                    "last_observed": "2026-10-18T05:43:54Z",
+                    "data": {
+                        "org": "1blu GmbH",
+                        "isp": "EVANZO e-commerce GmbH",
+                        "asn": "AS42730",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "immich.maxiriesch.de",
+                            "ip-195-90-216-5.manitu-vserver.net"
+                        ],
+                        "domains": [
+                            "manitu-vserver.net",
+                            "maxiriesch.de"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.0p2 Debian 7+deb13u4"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 88,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "jarm": "2ad2ad16d2ad2ad00042d42d0000008fe5654c9239cdb4052d3ab65a579afa",
+                                "certificate_sha256": "329004f9650e37c01c5bf0f60a9c2dd8b2799cbb72b2c663ba18b32b1d8d7c42",
+                                "certificate_subject": "immich.maxiriesch.de",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "1be675606cbecaeee61987f7719d439b70cb52ed67e4a229bb1a9567b2c0724b",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-17T03:43:26Z",
+            "last_checked": "2026-10-18T05:34:38Z",
             "observations": []
         },
         "threatfox": {

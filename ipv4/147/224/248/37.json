@@ -117,14 +117,82 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-05T06:48:41Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-18T05:44:18Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T05:44:18Z",
+                    "last_observed": "2026-10-18T05:44:18Z",
+                    "data": {
+                        "org": "Oracle Corporation",
+                        "isp": "Oracle Corporation",
+                        "asn": "AS31898",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "gruporeditos.co"
+                        ],
+                        "domains": [
+                            "gruporeditos.co"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "starttls"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.18",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "cloud",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "9445d6e1a904f5fb3bc1e3849c10140aa820f92f17a2844e3f0e74e87dbec04d",
+                                "certificate_subject": "gruporeditos.co",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "ee4225ba9705b142d0858e5f833e3b1870ae90d2cd35890d0556da24353f93a8",
+                                "certificate_subject": "gruporeditos.co",
+                                "certificate_issuer": "R12"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "ee4225ba9705b142d0858e5f833e3b1870ae90d2cd35890d0556da24353f93a8",
+                                "certificate_subject": "gruporeditos.co",
+                                "certificate_issuer": "R12"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-17T03:43:26Z",
+            "last_checked": "2026-10-18T05:34:38Z",
             "observations": []
         },
         "threatfox": {

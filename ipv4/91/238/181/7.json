@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-11T01:43:22Z",
+            "last_checked": "2026-10-18T05:35:42Z",
             "observations": [
                 {
                     "first_observed": "2026-10-03T12:21:49Z",
@@ -44,6 +44,23 @@
                         "hostnames": [],
                         "cpes": [],
                         "tags": [],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-18T05:35:42Z",
+                    "last_observed": "2026-10-18T05:35:42Z",
+                    "data": {
+                        "ports": [
+                            3389,
+                            5000,
+                            9000
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
                         "vulns": []
                     }
                 }
@@ -128,7 +145,7 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-10-17T03:43:26Z",
+            "last_checked": "2026-10-18T05:34:38Z",
             "observations": []
         },
         "threatfox": {
@@ -155,6 +172,85 @@
         "urlhaus": {
             "last_checked": "2026-10-15T05:44:22Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-18T05:47:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T05:47:16Z",
+                    "last_observed": "2026-10-18T05:47:16Z",
+                    "data": {
+                        "as_owner": "Fbw Networks SAS",
+                        "asn": 49434,
+                        "network": "91.238.181.0/24",
+                        "country": "FR",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 7,
+                            "suspicious": 1,
+                            "undetected": 32,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "CyRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Forcepoint ThreatSeeker",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "CrowdSec",
+                                "title": "Find more information on CrowdSec CTI",
+                                "severity": "info"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 }

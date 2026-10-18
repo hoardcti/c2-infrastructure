@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-11T01:43:13Z",
+            "last_checked": "2026-10-18T05:35:33Z",
             "observations": [
                 {
                     "first_observed": "2026-10-03T12:21:40Z",
@@ -47,6 +47,24 @@
                         "cpes": [],
                         "tags": [
                             "c2"
+                        ],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-18T05:35:33Z",
+                    "last_observed": "2026-10-18T05:35:33Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443,
+                            1234,
+                            12340
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [
+                            "malware"
                         ],
                         "vulns": []
                     }
@@ -155,7 +173,7 @@
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-17T03:43:26Z",
+            "last_checked": "2026-10-18T05:34:38Z",
             "observations": []
         },
         "threatfox": {
@@ -182,6 +200,74 @@
         "urlhaus": {
             "last_checked": "2026-10-15T00:24:27Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-18T05:45:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T05:45:01Z",
+                    "last_observed": "2026-10-18T05:45:01Z",
+                    "data": {
+                        "as_owner": "CHINA UNICOM China169 Backbone",
+                        "asn": 4837,
+                        "network": "122.114.0.0/16",
+                        "country": "CN",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 2,
+                            "undetected": 34,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

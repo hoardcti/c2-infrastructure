@@ -112,14 +112,60 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-05T00:44:01Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-18T05:43:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T05:43:44Z",
+                    "last_observed": "2026-10-18T05:43:44Z",
+                    "data": {
+                        "org": "Zayo Bandwidth",
+                        "isp": "Crown Castle Fiber LLC",
+                        "asn": "AS46887",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "createmusicgroup.co",
+                            "host-209-160-251-122.customer.veroxity.net"
+                        ],
+                        "domains": [
+                            "createmusicgroup.co",
+                            "veroxity.net"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 53,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "bc15d8529801d4ae3d6c336cb696d8a711cc6c9490718ff280630be1edf57dba",
+                                "certificate_subject": "createmusicgroup.co",
+                                "certificate_issuer": "E7"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "93f3aa0e5a651050a72efb19df359c4f6ae89992d38d0e6f2b6d7178351b3177",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-17T03:43:26Z",
+            "last_checked": "2026-10-18T05:34:38Z",
             "observations": []
         },
         "threatfox": {

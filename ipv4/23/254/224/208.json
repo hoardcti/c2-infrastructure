@@ -107,14 +107,98 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-05T00:43:15Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-18T05:42:58Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T05:42:58Z",
+                    "last_observed": "2026-10-18T05:42:58Z",
+                    "data": {
+                        "org": "HostPapa",
+                        "isp": "Hostwinds LLC.",
+                        "asn": "AS54290",
+                        "os": null,
+                        "country_code": "NL",
+                        "hostnames": [
+                            "hwsrv-1325620.hostwindsdns.com"
+                        ],
+                        "domains": [
+                            "hostwindsdns.com"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.4p1 Debian 5+deb11u3"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "EUROCRIME // United European Underground"
+                            },
+                            {
+                                "port": 3000,
+                                "transport": "tcp",
+                                "product": "Node.js",
+                                "http_title": "Mailer Panel – Login"
+                            },
+                            {
+                                "port": 3001,
+                                "transport": "tcp",
+                                "http_title": "Mailer Panel – Login"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                                "certificate_sha256": "152cb4a3b751cfc1b9d445576239917b84b300878865d197dfe86c9419ce565f",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 5000,
+                                "transport": "tcp",
+                                "http_title": "CF DNS Manager"
+                            },
+                            {
+                                "port": 7071,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "http_title": "Attack Surface Mapper"
+                            },
+                            {
+                                "port": 8081,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8404,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-17T03:43:26Z",
+            "last_checked": "2026-10-18T05:34:38Z",
             "observations": []
         },
         "threatfox": {
