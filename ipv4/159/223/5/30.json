@@ -184,6 +184,63 @@
                     }
                 }
             ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-18T17:57:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T17:57:39Z",
+                    "last_observed": "2026-10-18T17:57:39Z",
+                    "data": {
+                        "urlhaus_reference": "https://urlhaus.abuse.ch/host/159.223.5.30/",
+                        "first_seen": "2021-12-16T10:06:02Z",
+                        "url_count": 3,
+                        "blacklists": {
+                            "spamhaus_dbl": "not listed",
+                            "surbl": "not listed"
+                        },
+                        "urls": [
+                            {
+                                "id": "1890172",
+                                "url": "http://159.223.5.30/server.py",
+                                "status": "offline",
+                                "date_added": "2021-12-16T10:06:03Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "CVE-2021-44228",
+                                    "log4j"
+                                ]
+                            },
+                            {
+                                "id": "1890180",
+                                "url": "http://159.223.5.30/target/log4shell-1.0-SNAPSHOT.war",
+                                "status": "offline",
+                                "date_added": "2021-12-16T10:07:03Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "CVE-2021-44228",
+                                    "jar",
+                                    "log4j",
+                                    "opendir"
+                                ]
+                            },
+                            {
+                                "id": "1890181",
+                                "url": "http://159.223.5.30/target/marshalsec-0.0.3-SNAPSHOT-all.jar",
+                                "status": "offline",
+                                "date_added": "2021-12-16T10:07:03Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "CVE-2021-44228",
+                                    "jar",
+                                    "log4j",
+                                    "opendir"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 }
