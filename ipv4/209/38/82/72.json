@@ -187,11 +187,53 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-06T02:57:02Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-18T20:30:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T20:30:01Z",
+                    "last_observed": "2026-10-18T20:30:01Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": "Linux",
+                        "country_code": "AU",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.18",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-18T05:34:38Z",
