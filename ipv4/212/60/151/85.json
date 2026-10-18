@@ -122,11 +122,69 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-05T15:52:13Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-18T14:29:38Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T14:29:38Z",
+                    "last_observed": "2026-10-18T14:29:38Z",
+                    "data": {
+                        "org": "tal.de GmbH",
+                        "isp": "BITSFLOWCLOUD LTD",
+                        "asn": "AS203090",
+                        "os": "Ubuntu",
+                        "country_code": "DE",
+                        "hostnames": [
+                            "fastly.taobo.lol"
+                        ],
+                        "domains": [
+                            "taobo.lol"
+                        ],
+                        "tags": [
+                            "c2",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.18"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "jarm": "28d28d28d00028d00042d42d0000005a3e96c1dfa4bdb24b8b3c04cae18cc3",
+                                "certificate_sha256": "a6308746ff65b9f4232cdecb0dcae1208278ec89a5a23baf02d8cc86ea7f3276",
+                                "certificate_subject": "fastly.taobo.lol",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "e9ccd040f09dea9e7ce69d3cf5bb1adf63e2fffeed22c7caaaf02bafccc0069f",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-18T05:34:38Z",

@@ -251,11 +251,74 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-05T15:51:45Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-18T14:29:11Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T14:29:11Z",
+                    "last_observed": "2026-10-18T14:29:11Z",
+                    "data": {
+                        "org": "Contabo GmbH",
+                        "isp": "Contabo GmbH",
+                        "asn": "AS51167",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "vmi2986851.contaboserver.net"
+                        ],
+                        "domains": [
+                            "contaboserver.net"
+                        ],
+                        "tags": [
+                            "proxy"
+                        ],
+                        "vulns": [
+                            "CVE-2025-59362",
+                            "CVE-2025-62168",
+                            "CVE-2026-32748",
+                            "CVE-2026-33515",
+                            "CVE-2026-33526",
+                            "CVE-2026-47729",
+                            "CVE-2026-50012"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.31.3",
+                                "http_title": "CyberCompétence"
+                            },
+                            {
+                                "port": 1337,
+                                "transport": "tcp",
+                                "http_title": "ERROR: The requested URL could not be retrieved"
+                            },
+                            {
+                                "port": 3128,
+                                "transport": "tcp",
+                                "product": "Squid http proxy",
+                                "version": "6.14",
+                                "tags": [
+                                    "proxy"
+                                ],
+                                "http_title": "ERROR: The requested URL could not be retrieved"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "Nova - Connexion"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-18T05:34:38Z",

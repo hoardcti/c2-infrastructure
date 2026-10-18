@@ -223,11 +223,68 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-05T15:51:19Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-18T14:28:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T14:28:44Z",
+                    "last_observed": "2026-10-18T14:28:44Z",
+                    "data": {
+                        "org": "Netsec",
+                        "isp": "Netsec Limited",
+                        "asn": "AS45753",
+                        "os": null,
+                        "country_code": "TW",
+                        "hostnames": [
+                            "admin.houtai-us.cc"
+                        ],
+                        "domains": [
+                            "houtai-us.cc"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "风云ws · 运营管理后台",
+                                "jarm": "3fd3fd0003fd3fd00042d42d0000002059a3b916699461c5923779b77cf06b",
+                                "certificate_sha256": "b9b3dd236f9871732edf621ff4362b49e3ebf5d7d6efceda283a485dd633ac99",
+                                "certificate_subject": "admin.houtai-us.cc",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 1701,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 8888,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "34737b09206387ac5e0688619dc24f3aa3f1fcb214a2dbab83be1e3e5d358d70",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-18T05:34:38Z",

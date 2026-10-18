@@ -110,11 +110,66 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-05T15:52:21Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-18T14:29:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T14:29:46Z",
+                    "last_observed": "2026-10-18T14:29:46Z",
+                    "data": {
+                        "org": "HostBrr Network",
+                        "isp": "Philip Fjaera trading as PFWeb Solutions",
+                        "asn": "AS214902",
+                        "os": "Linux",
+                        "country_code": "DE",
+                        "hostnames": [
+                            "202.19.90.77.hostbrr.com",
+                            "meta-security-check.ryzedns.org"
+                        ],
+                        "domains": [
+                            "hostbrr.com",
+                            "ryzedns.org"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "http_title": "Skout - Photo Access"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "http_title": "Skout - Photo Access",
+                                "jarm": "3fd3fd20d00000006c43d43d00043d204204071741c36579e355f830d285a5",
+                                "certificate_sha256": "c1b34e49f03c4cd08966a20404ca79088c118546c74a3a1cd51ee23cb8f6ebd2",
+                                "certificate_subject": "meta-security-check.ryzedns.org",
+                                "certificate_organisation": "sheep-schnitzel"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "daf145c41eacc427322d1814bec817b55285fd43b5055974ac7ed1f0ba6923d9",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-18T05:34:38Z",

@@ -118,7 +118,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-05T15:52:11Z",
+            "last_checked": "2026-10-18T14:29:36Z",
             "observations": [
                 {
                     "first_observed": "2026-10-05T15:52:11Z",
@@ -167,6 +167,78 @@
                             {
                                 "port": 8888,
                                 "transport": "tcp"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "164902129fafd0fafc03a2a8a19d01c592a5651c06bde7e9e3295f22d065f2b2",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            },
+                            {
+                                "port": 60001,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-18T14:29:36Z",
+                    "last_observed": "2026-10-18T14:29:36Z",
+                    "data": {
+                        "org": "ACEVILLE PTE.LTD.",
+                        "isp": "Tencent Building, Kejizhongyi Avenue",
+                        "asn": "AS132203",
+                        "os": null,
+                        "country_code": "SG",
+                        "hostnames": [
+                            "train.cauc-csa.org.cn"
+                        ],
+                        "domains": [
+                            "cauc-csa.org.cn"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.14"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.30.4",
+                                "http_title": "中国民航大学 网络空间安全协会"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.30.4",
+                                "http_title": "中国民航大学 网络空间安全协会",
+                                "jarm": "27d40d40d00040d00042d43d0000003d25bc6207ca8acd9652e99aa3724a08",
+                                "certificate_sha256": "94869dc35a8c6ebb1efb5488c7bba744fdc6936867e5185f1b66ab9e768f7998",
+                                "certificate_subject": "train.cauc-csa.org.cn",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 8888,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 18080,
+                                "transport": "tcp",
+                                "http_title": "快手游戏运营平台"
                             },
                             {
                                 "port": 31337,

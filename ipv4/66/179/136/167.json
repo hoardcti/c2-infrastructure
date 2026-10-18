@@ -112,11 +112,48 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-05T15:52:09Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-18T14:29:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-18T14:29:34Z",
+                    "last_observed": "2026-10-18T14:29:34Z",
+                    "data": {
+                        "org": "IONOS Inc.",
+                        "isp": "IONOS SE",
+                        "asn": "AS8560",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "ip66-179-136-167.pbiaas.com"
+                        ],
+                        "domains": [
+                            "pbiaas.com"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 53,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "3aa0be522f57fc3e50b1ce221bd9f6f2c96b4dc3ae07337476c3ebf404fade2f",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-18T05:34:38Z",
