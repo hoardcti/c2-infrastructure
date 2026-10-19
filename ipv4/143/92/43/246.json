@@ -255,12 +255,12 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-10-18T05:34:39Z",
+            "last_checked": "2026-10-19T05:59:57Z",
             "observations": [
                 {
                     "key": "143.92.32.0/20",
                     "first_observed": "2026-10-01T12:19:59Z",
-                    "last_observed": "2026-10-18T05:34:39Z",
+                    "last_observed": "2026-10-19T05:59:57Z",
                     "data": {
                         "cidr": "143.92.32.0/20",
                         "sblid": "SBL654967",
@@ -270,7 +270,7 @@
                 {
                     "key": "143.92.43.0/24",
                     "first_observed": "2026-10-01T12:19:59Z",
-                    "last_observed": "2026-10-18T05:34:39Z",
+                    "last_observed": "2026-10-19T05:59:57Z",
                     "data": {
                         "cidr": "143.92.43.0/24",
                         "sblid": "SBL612606",
@@ -296,6 +296,37 @@
                         "id": "1832038",
                         "ioc": "143.92.43.246:443",
                         "threat_type": "botnet_cc"
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-19T06:00:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-19T06:00:34Z",
+                    "last_observed": "2026-10-19T06:00:34Z",
+                    "data": {
+                        "urlhaus_reference": "https://urlhaus.abuse.ch/host/143.92.43.246/",
+                        "first_seen": "2025-10-18T15:51:05Z",
+                        "url_count": 1,
+                        "blacklists": {
+                            "spamhaus_dbl": "not listed",
+                            "surbl": "not listed"
+                        },
+                        "urls": [
+                            {
+                                "id": "3681048",
+                                "url": "http://143.92.43.246:8011/02.08.2022.exe",
+                                "status": "offline",
+                                "date_added": "2025-10-18T15:51:10Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "CobaltStrike",
+                                    "censys"
+                                ]
+                            }
+                        ]
                     }
                 }
             ]

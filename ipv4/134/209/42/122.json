@@ -103,14 +103,57 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-06T21:38:55Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-19T06:06:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-19T06:06:17Z",
+                    "last_observed": "2026-10-19T06:06:17Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "dataevidencias.datasistemasweb2.com"
+                        ],
+                        "domains": [
+                            "datasistemasweb2.com"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "dataEvidencias - Login"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "dataEvidencias - Login",
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "a627c45b51931290690c80729e96cf129e4127303ce49147c5e77d2dd03bba36",
+                                "certificate_subject": "dataevidencias.datasistemasweb2.com",
+                                "certificate_issuer": "YR2"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-18T05:34:38Z",
+            "last_checked": "2026-10-19T05:59:57Z",
             "observations": []
         },
         "threatfox": {
