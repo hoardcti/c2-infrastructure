@@ -197,7 +197,7 @@
         },
         "shodan": {
             "last_error": {
-                "occurred_at": "2026-10-06T16:45:10Z",
+                "occurred_at": "2026-10-19T01:05:27Z",
                 "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
             },
             "observations": []
@@ -230,6 +230,70 @@
         "urlhaus": {
             "last_checked": "2026-10-16T13:51:58Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-19T01:10:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-19T01:10:41Z",
+                    "last_observed": "2026-10-19T01:10:41Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "64.227.0.0/17",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 2,
+                            "undetected": 34,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "GreyNoise",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "15d3fd16d29d29d00042d43d000000ed1cf37c9a169b41886e27ba8fad60b0",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

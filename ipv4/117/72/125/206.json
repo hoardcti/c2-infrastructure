@@ -145,11 +145,52 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-06T21:37:49Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-19T01:06:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-19T01:06:13Z",
+                    "last_observed": "2026-10-19T01:06:13Z",
+                    "data": {
+                        "org": "Beijing Jingdong 360 Degree E-commerce Co., Ltd.",
+                        "isp": "China Telecom Beijing Tianjin Hebei Big Data Industry Park Branch",
+                        "asn": "AS141679",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 2323,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.5"
+                            },
+                            {
+                                "port": 8888,
+                                "transport": "tcp",
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 11111,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-18T05:34:38Z",

@@ -121,6 +121,10 @@
         },
         "shodan": {
             "last_checked": "2026-10-06T16:45:06Z",
+            "last_error": {
+                "occurred_at": "2026-10-19T01:05:23Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": []
         },
         "spamhaus": {
@@ -151,6 +155,104 @@
         "urlhaus": {
             "last_checked": "2026-10-16T13:51:54Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-19T01:10:11Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-19T01:10:11Z",
+                    "last_observed": "2026-10-19T01:10:11Z",
+                    "data": {
+                        "as_owner": "BH Telecom d.d. Sarajevo",
+                        "asn": 9146,
+                        "network": "195.222.32.0/19",
+                        "country": "BA",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 12,
+                            "suspicious": 1,
+                            "undetected": 33,
+                            "harmless": 46,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "ADMINUSLabs",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Chong Lua Dao",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Lumu",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Sophos",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "VIPRE",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

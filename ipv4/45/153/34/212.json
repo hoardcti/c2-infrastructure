@@ -31,11 +31,11 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-12T00:22:16Z",
+            "last_checked": "2026-10-19T00:59:43Z",
             "observations": [
                 {
                     "first_observed": "2026-10-04T05:08:10Z",
-                    "last_observed": "2026-10-12T00:22:16Z",
+                    "last_observed": "2026-10-19T00:59:43Z",
                     "data": {
                         "ports": [
                             22,
@@ -289,6 +289,59 @@
                         "id": "1834524",
                         "ioc": "45.153.34.212:8181",
                         "threat_type": "botnet_cc"
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-19T01:00:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-19T01:00:13Z",
+                    "last_observed": "2026-10-19T01:00:13Z",
+                    "data": {
+                        "urlhaus_reference": "https://urlhaus.abuse.ch/host/45.153.34.212/",
+                        "first_seen": "2026-10-04T06:58:07Z",
+                        "url_count": 3,
+                        "blacklists": {
+                            "spamhaus_dbl": "not listed",
+                            "surbl": "not listed"
+                        },
+                        "urls": [
+                            {
+                                "id": "3928261",
+                                "url": "http://45.153.34.212/fakepika",
+                                "status": "offline",
+                                "date_added": "2026-10-04T06:58:10Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "honeypot",
+                                    "ssh"
+                                ]
+                            },
+                            {
+                                "id": "3928263",
+                                "url": "http://45.153.34.212:8181/.bia",
+                                "status": "offline",
+                                "date_added": "2026-10-04T06:58:13Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "honeypot",
+                                    "ssh"
+                                ]
+                            },
+                            {
+                                "id": "3928344",
+                                "url": "http://45.153.34.212:8181/.dcplm",
+                                "status": "offline",
+                                "date_added": "2026-10-04T06:59:34Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "honeypot",
+                                    "ssh"
+                                ]
+                            }
+                        ]
                     }
                 }
             ]

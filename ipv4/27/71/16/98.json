@@ -93,11 +93,51 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-06T21:38:27Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-19T01:06:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-19T01:06:51Z",
+                    "last_observed": "2026-10-19T01:06:51Z",
+                    "data": {
+                        "org": "Viettel Group",
+                        "isp": "Vietel - CHT Compamy Ltd",
+                        "asn": "AS38731",
+                        "os": null,
+                        "country_code": "VN",
+                        "hostnames": [
+                            "localhost",
+                            "mfmni.shop"
+                        ],
+                        "domains": [
+                            "localhost.",
+                            "mfmni.shop"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u7"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "jarm": "1dd28d28d00028d00042d41d00041df1e57cd0b3bf64d18696fb4fce056610",
+                                "certificate_sha256": "ad5378b9a3ff9ef355db3d0b4b42dbbbe441fe2d7c8ae58a0b03cc0db872774b",
+                                "certificate_subject": "CloudFlare Origin Certificate",
+                                "certificate_organisation": "CloudFlare, Inc."
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-18T05:34:38Z",

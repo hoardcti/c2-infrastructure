@@ -107,11 +107,73 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-06T21:37:29Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-19T01:05:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-19T01:05:53Z",
+                    "last_observed": "2026-10-19T01:05:53Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 7771,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "e10fb7c4f468cdcb4de1e00e4ff150f151c3a7bfea6c62109dd2c84816f990b2",
+                                "certificate_subject": "Major Cobalt Strike",
+                                "certificate_organisation": "cobaltstrike",
+                                "certificate_issuer": "Major Cobalt Strike"
+                            },
+                            {
+                                "port": 7777,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "CS Manager â€” Login"
+                            },
+                            {
+                                "port": 9900,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "tags": [
+                                    "cloud",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "ea78db19c584fef1610bd5da7007da6487118d4e196d5eef62673c42b13a2f9e",
+                                "certificate_subject": "france.net",
+                                "certificate_organisation": "v2.52",
+                                "certificate_issuer": "france.net"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-18T05:34:38Z",

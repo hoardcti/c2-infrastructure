@@ -581,7 +581,7 @@
         },
         "shodan": {
             "last_error": {
-                "occurred_at": "2026-10-06T16:45:04Z",
+                "occurred_at": "2026-10-19T01:05:21Z",
                 "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
             },
             "observations": []
@@ -614,6 +614,67 @@
         "urlhaus": {
             "last_checked": "2026-10-16T13:51:52Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-19T01:09:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-19T01:09:56Z",
+                    "last_observed": "2026-10-19T01:09:56Z",
+                    "data": {
+                        "as_owner": "Hetzner Online GmbH",
+                        "asn": 24940,
+                        "network": "142.132.128.0/17",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 0,
+                            "undetected": 36,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "21d19d00021d21d21c21d19d21d21d3b0d229d76f2fd7cb8e23bb87da38a20",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }
