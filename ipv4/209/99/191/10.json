@@ -1,0 +1,185 @@
+{
+    "schema_version": 2,
+    "ip": "209.99.191.10",
+    "first_seen": "2026-10-19T19:13:59Z",
+    "last_seen": "2026-10-19T19:13:59Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-19T19:17:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-19T19:17:34Z",
+                    "last_observed": "2026-10-19T19:17:34Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Fixed Line ISP",
+                        "isp": "SKN Subnet & Telecom Ltd",
+                        "domain": "skntelecom.com",
+                        "country_code": "CH",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-19T19:14:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-19T19:14:20Z",
+                    "last_observed": "2026-10-19T19:14:20Z",
+                    "data": {
+                        "ports": [
+                            443
+                        ],
+                        "hostnames": [
+                            "blind-bishop-foxtail-92741.core-sys.lol"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.18.0",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-19T19:14:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-19T19:14:07Z",
+                    "last_observed": "2026-10-19T19:14:07Z",
+                    "data": {
+                        "asn": "AS402253",
+                        "as_name": "SKN Subnet & Telecom Ltd",
+                        "as_domain": "skntelecom.com",
+                        "country_code": "CH",
+                        "country": "Switzerland",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-19T19:18:52Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-19T19:18:52Z",
+                    "last_observed": "2026-10-19T19:18:52Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS204472 amol kotkar trading as a k digital media",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-19T19:22:21Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-19T19:14:05Z",
+            "observations": [
+                {
+                    "key": "209.99.184.0/21",
+                    "first_observed": "2026-10-19T19:14:05Z",
+                    "last_observed": "2026-10-19T19:14:05Z",
+                    "data": {
+                        "cidr": "209.99.184.0/21",
+                        "sblid": "SBL697040",
+                        "rir": "arin"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-19T19:13:59Z",
+            "observations": [
+                {
+                    "key": "1974539",
+                    "first_observed": "2026-10-19T19:13:59Z",
+                    "last_observed": "2026-10-19T19:13:59Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "209.99.191.10:8887",
+                        "port": 8887,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-19T18:43:19Z",
+                        "reference": null,
+                        "tags": [
+                            "JUNIO777",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-19T19:16:46Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-19T19:26:55Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-19T19:26:55Z",
+                    "last_observed": "2026-10-19T19:26:55Z",
+                    "data": {
+                        "as_owner": "SKN Subnet & Telecom Ltd",
+                        "asn": 402253,
+                        "network": "209.99.184.0/21",
+                        "country": "CH",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 0,
+                            "undetected": 92,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

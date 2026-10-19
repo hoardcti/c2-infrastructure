@@ -8,7 +8,7 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-12T17:38:31Z",
+            "last_checked": "2026-10-19T19:17:54Z",
             "observations": [
                 {
                     "first_observed": "2026-10-12T17:38:31Z",
@@ -27,15 +27,33 @@
                         "country_code": "VN",
                         "hostnames": []
                     }
+                },
+                {
+                    "first_observed": "2026-10-19T19:17:54Z",
+                    "last_observed": "2026-10-19T19:17:54Z",
+                    "data": {
+                        "abuse_confidence_score": 2,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-10-02T10:24:56Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Fixed Line ISP",
+                        "isp": "Saigon Postel Corporation",
+                        "domain": "spt.vn",
+                        "country_code": "VN",
+                        "hostnames": []
+                    }
                 }
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-12T17:35:37Z",
+            "last_checked": "2026-10-19T19:14:27Z",
             "observations": [
                 {
                     "first_observed": "2026-10-12T17:35:37Z",
-                    "last_observed": "2026-10-12T17:35:37Z",
+                    "last_observed": "2026-10-19T19:14:27Z",
                     "data": {
                         "ports": [
                             135
@@ -67,7 +85,7 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-12T17:39:49Z",
+            "last_checked": "2026-10-19T19:19:06Z",
             "observations": [
                 {
                     "first_observed": "2026-10-12T17:39:49Z",
@@ -79,11 +97,48 @@
                         "pulse_count": 0,
                         "pulses": []
                     }
+                },
+                {
+                    "first_observed": "2026-10-19T19:19:06Z",
+                    "last_observed": "2026-10-19T19:19:06Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS7602 saigon postel corporation",
+                        "country_code": "VN",
+                        "pulse_count": 2,
+                        "pulses": [
+                            {
+                                "id": "6ad2a28a898bb78d2fc40224",
+                                "name": "Remvio - IOCs paquetes.xlsx 2026",
+                                "created": "2026-10-16T22:17:46.736Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "IOC",
+                                    "RENIC",
+                                    "malware",
+                                    "remvio"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6ad593e903730a50ae4a9d1e",
+                                "name": "Malware Filter - Botnet List - 18-10-2026 (Part 4)",
+                                "created": "2026-10-19T03:52:09.736Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "shodan": {
             "last_checked": "2026-10-12T17:43:21Z",
+            "last_error": {
+                "occurred_at": "2026-10-19T19:22:35Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-10-12T17:43:21Z",

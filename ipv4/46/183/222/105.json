@@ -8,7 +8,7 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-12T17:38:23Z",
+            "last_checked": "2026-10-19T19:17:46Z",
             "observations": [
                 {
                     "first_observed": "2026-10-12T17:38:23Z",
@@ -27,12 +27,50 @@
                         "country_code": "LV",
                         "hostnames": []
                     }
+                },
+                {
+                    "first_observed": "2026-10-19T19:17:46Z",
+                    "last_observed": "2026-10-19T19:17:46Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2024-02-02T09:45:49Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "SIA RixHost",
+                        "domain": "rixhost.lv",
+                        "country_code": "LV",
+                        "hostnames": [
+                            "ip-222-105.dataclub.info"
+                        ]
+                    }
                 }
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-12T17:35:31Z",
-            "observations": []
+            "last_checked": "2026-10-19T19:14:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-19T19:14:23Z",
+                    "last_observed": "2026-10-19T19:14:23Z",
+                    "data": {
+                        "ports": [
+                            3389
+                        ],
+                        "hostnames": [
+                            "ip-222-105.dataclub.info"
+                        ],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
         },
         "ipinfo": {
             "last_checked": "2026-10-12T17:35:28Z",
@@ -53,7 +91,7 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-12T17:39:41Z",
+            "last_checked": "2026-10-19T19:18:58Z",
             "observations": [
                 {
                     "first_observed": "2026-10-12T17:39:41Z",
@@ -65,11 +103,40 @@
                         "pulse_count": 0,
                         "pulses": []
                     }
+                },
+                {
+                    "first_observed": "2026-10-19T19:18:58Z",
+                    "last_observed": "2026-10-19T19:18:58Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS52048 dataclub s.a.",
+                        "country_code": "RU",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "6ad2a28a898bb78d2fc40224",
+                                "name": "Remvio - IOCs paquetes.xlsx 2026",
+                                "created": "2026-10-16T22:17:46.736Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "IOC",
+                                    "RENIC",
+                                    "malware",
+                                    "remvio"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "shodan": {
             "last_checked": "2026-10-12T17:43:13Z",
+            "last_error": {
+                "occurred_at": "2026-10-19T19:22:27Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": []
         },
         "spamhaus": {
