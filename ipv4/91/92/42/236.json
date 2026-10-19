@@ -454,11 +454,78 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-07T08:30:37Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-19T23:35:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-19T23:35:26Z",
+                    "last_observed": "2026-10-19T23:35:26Z",
+                    "data": {
+                        "org": "TechTies Inc.",
+                        "isp": "TechTies Inc.",
+                        "asn": "AS197170",
+                        "os": "Ubuntu",
+                        "country_code": "SE",
+                        "hostnames": [
+                            "sixtvente.fr",
+                            "www.sixtvente.fr"
+                        ],
+                        "domains": [
+                            "sixtvente.fr"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently",
+                                "jarm": "27d40d40d00040d00042d43d0000004ac24e77d76646867f0f6a0c6d9b9bb0",
+                                "certificate_sha256": "419341f42b1d6e84dac9e8da312c71a3b70ab7a713aa53448278db1a76932bfd",
+                                "certificate_subject": "sixtvente.fr",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Sixt — vente de véhicules de flotte aux professionnels"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-19T05:59:57Z",
