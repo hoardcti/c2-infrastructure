@@ -1,0 +1,295 @@
+{
+    "schema_version": 2,
+    "ip": "139.180.198.145",
+    "first_seen": "2026-10-20T19:04:11Z",
+    "last_seen": "2026-10-20T19:04:11Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-20T19:07:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-20T19:07:17Z",
+                    "last_observed": "2026-10-20T19:07:17Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "The Constant Company, LLC",
+                        "domain": "constant.com",
+                        "country_code": "JP",
+                        "hostnames": [
+                            "139.180.198.145.vultrusercontent.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-20T19:04:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-20T19:04:25Z",
+                    "last_observed": "2026-10-20T19:04:25Z",
+                    "data": {
+                        "ports": [
+                            22
+                        ],
+                        "hostnames": [
+                            "139.180.198.145.vultrusercontent.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:10.5p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-20T19:04:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-20T19:04:19Z",
+                    "last_observed": "2026-10-20T19:04:19Z",
+                    "data": {
+                        "asn": "AS20473",
+                        "as_name": "The Constant Company, LLC",
+                        "as_domain": "vultr.com",
+                        "country_code": "JP",
+                        "country": "Japan",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-20T19:08:42Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-20T19:08:42Z",
+                    "last_observed": "2026-10-20T19:08:42Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS20473 the constant company  llc",
+                        "country_code": "JP",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-20T19:12:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-20T19:12:05Z",
+                    "last_observed": "2026-10-20T19:12:05Z",
+                    "data": {
+                        "org": "TYO_VULTR_CUST",
+                        "isp": "The Constant Company, LLC",
+                        "asn": "AS20473",
+                        "os": null,
+                        "country_code": "JP",
+                        "hostnames": [
+                            "139.180.198.145.vultrusercontent.com"
+                        ],
+                        "domains": [
+                            "vultrusercontent.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "open-dir"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.5p1 Ubuntu 1ubuntu2",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 8888,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 8889,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud",
+                                    "open-dir"
+                                ],
+                                "http_title": "Directory listing for /"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "7719a62359f0b4b422adf1a93042a12be13a25ad7cfc750c9fcb987ebc3bb8bb",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-20T19:04:18Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-20T19:04:11Z",
+            "observations": [
+                {
+                    "key": "1976002",
+                    "first_observed": "2026-10-20T19:04:11Z",
+                    "last_observed": "2026-10-20T19:04:11Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "139.180.198.145:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 80,
+                        "first_seen": "2026-10-20T15:53:16Z",
+                        "reference": "https://www.shodan.io/host/139.180.198.145",
+                        "tags": [
+                            "c2",
+                            "implant-staging",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-20T19:06:29Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-20T19:06:29Z",
+                    "last_observed": "2026-10-20T19:06:29Z",
+                    "data": {
+                        "urlhaus_reference": "https://urlhaus.abuse.ch/host/139.180.198.145/",
+                        "first_seen": "2026-10-20T15:56:06Z",
+                        "url_count": 3,
+                        "blacklists": {
+                            "spamhaus_dbl": "not listed",
+                            "surbl": "not listed"
+                        },
+                        "urls": [
+                            {
+                                "id": "3953019",
+                                "url": "http://139.180.198.145:8889/fe09f6fe-d9e9-4cb7-b183-9d5e303e1895",
+                                "status": "online",
+                                "date_added": "2026-10-20T15:56:20Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "Sliver",
+                                    "implant",
+                                    "pe"
+                                ]
+                            },
+                            {
+                                "id": "3953021",
+                                "url": "http://139.180.198.145:8889/6db068b2-23ca-447c-839d-4401d4e535e9",
+                                "status": "online",
+                                "date_added": "2026-10-20T15:56:32Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "Sliver",
+                                    "elf",
+                                    "implant"
+                                ]
+                            },
+                            {
+                                "id": "3953022",
+                                "url": "http://139.180.198.145:8889/f03bbeca-99c3-47a9-b3ca-370a3928a0be",
+                                "status": "online",
+                                "date_added": "2026-10-20T15:56:39Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "Sliver",
+                                    "elf",
+                                    "implant"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "virustotal": {
+            "last_checked": "2026-10-20T19:15:09Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-20T19:15:09Z",
+                    "last_observed": "2026-10-20T19:15:09Z",
+                    "data": {
+                        "as_owner": "The Constant Company, LLC",
+                        "asn": 20473,
+                        "network": "139.180.192.0/19",
+                        "country": "JP",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 90,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "jarm": "29d29d00029d29d00042d43d00041dd469afa8cfbe5e42c631eb3fc55d6787",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

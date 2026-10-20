@@ -8,11 +8,11 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-13T15:47:27Z",
+            "last_checked": "2026-10-20T19:07:29Z",
             "observations": [
                 {
                     "first_observed": "2026-10-13T15:47:27Z",
-                    "last_observed": "2026-10-13T15:47:27Z",
+                    "last_observed": "2026-10-20T19:07:29Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -31,8 +31,22 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-13T15:44:37Z",
-            "observations": []
+            "last_checked": "2026-10-20T19:04:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-20T19:04:31Z",
+                    "last_observed": "2026-10-20T19:04:31Z",
+                    "data": {
+                        "ports": [
+                            135
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
         },
         "ipinfo": {
             "last_checked": "2026-10-13T15:44:33Z",
@@ -53,7 +67,7 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-13T15:48:46Z",
+            "last_checked": "2026-10-20T19:08:54Z",
             "observations": [
                 {
                     "first_observed": "2026-10-13T15:48:46Z",
@@ -65,12 +79,68 @@
                         "pulse_count": 0,
                         "pulses": []
                     }
+                },
+                {
+                    "first_observed": "2026-10-20T19:08:54Z",
+                    "last_observed": "2026-10-20T19:08:54Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS14962 ncr corporation",
+                        "country_code": "US",
+                        "pulse_count": 2,
+                        "pulses": [
+                            {
+                                "id": "6ad2a28a898bb78d2fc40224",
+                                "name": "Remvio - IOCs paquetes.xlsx 2026",
+                                "created": "2026-10-16T22:17:46.736Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "IOC",
+                                    "RENIC",
+                                    "malware",
+                                    "remvio"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6ad593e74572e708da27bc47",
+                                "name": "Malware Filter - Botnet List - 18-10-2026 (Part 2)",
+                                "created": "2026-10-19T03:52:07.583Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-13T15:52:04Z",
-            "observations": []
+            "last_checked": "2026-10-20T19:12:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-20T19:12:17Z",
+                    "last_observed": "2026-10-20T19:12:17Z",
+                    "data": {
+                        "org": "Hyonix",
+                        "isp": "Hyonix",
+                        "asn": "AS931",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-19T23:28:53Z",

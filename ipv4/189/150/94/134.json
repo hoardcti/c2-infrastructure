@@ -1,0 +1,221 @@
+{
+    "schema_version": 2,
+    "ip": "189.150.94.134",
+    "first_seen": "2026-10-20T19:04:11Z",
+    "last_seen": "2026-10-20T19:04:11Z",
+    "flags": [
+        "darkcomet"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-20T19:07:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-20T19:07:21Z",
+                    "last_observed": "2026-10-20T19:07:21Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Fixed Line ISP",
+                        "isp": "Gestión de direccionamiento UniNet",
+                        "domain": "uninet.net.mx",
+                        "country_code": "MX",
+                        "hostnames": [
+                            "dsl-134-94-150-189-dynamic.prod-infinitum.com.mx"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-20T19:04:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-20T19:04:27Z",
+                    "last_observed": "2026-10-20T19:04:27Z",
+                    "data": {
+                        "ports": [
+                            6001
+                        ],
+                        "hostnames": [
+                            "dsl-134-94-150-189-dynamic.prod-infinitum.com.mx"
+                        ],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-20T19:04:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-20T19:04:20Z",
+                    "last_observed": "2026-10-20T19:04:20Z",
+                    "data": {
+                        "asn": "AS8151",
+                        "as_name": "Uninet S.A. de C.V.",
+                        "as_domain": "telmex.com",
+                        "country_code": "MX",
+                        "country": "Mexico",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-20T19:08:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-20T19:08:46Z",
+                    "last_observed": "2026-10-20T19:08:46Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS8151 uninet s.a. de c.v.",
+                        "country_code": "MX",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-20T19:12:09Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-20T19:12:09Z",
+                    "last_observed": "2026-10-20T19:12:09Z",
+                    "data": {
+                        "org": "Gestión de direccionamiento UniNet",
+                        "isp": "UNINET",
+                        "asn": "AS8151",
+                        "os": "Synology DiskStation Manager (DSM) 7.4.1-90080",
+                        "country_code": "MX",
+                        "hostnames": [
+                            "dsl-134-94-150-189-dynamic.prod-infinitum.com.mx",
+                            "mundi.synology.me"
+                        ],
+                        "domains": [
+                            "prod-infinitum.com.mx",
+                            "synology.me"
+                        ],
+                        "tags": [
+                            "malware"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 1604,
+                                "transport": "tcp",
+                                "product": "DarkComet trojan",
+                                "tags": [
+                                    "malware"
+                                ]
+                            },
+                            {
+                                "port": 5001,
+                                "transport": "tcp",
+                                "http_title": "Mundi&nbsp;-&nbsp;Synology&nbsp;NAS",
+                                "jarm": "27d27d27d29d27d00042d42d00000026a95928fa9b620834c2feff40bccb8f",
+                                "certificate_sha256": "9c8d1a85675c9094997027c0d2ea695f4fd121501ffbb42a426e1b12da05c0a6",
+                                "certificate_subject": "mundi.synology.me",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 6001,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-20T19:04:18Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-20T19:04:11Z",
+            "observations": [
+                {
+                    "key": "1976000",
+                    "first_observed": "2026-10-20T19:04:11Z",
+                    "last_observed": "2026-10-20T19:04:11Z",
+                    "flags": [
+                        "darkcomet"
+                    ],
+                    "data": {
+                        "ioc": "189.150.94.134:1604",
+                        "port": 1604,
+                        "threat_type": "botnet_cc",
+                        "malware": "DarkComet",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.darkcomet",
+                        "confidence_level": 80,
+                        "first_seen": "2026-10-20T15:53:18Z",
+                        "reference": "https://www.shodan.io/host/189.150.94.134",
+                        "tags": [
+                            "RAT",
+                            "c2",
+                            "darkcomet"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-20T19:06:33Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-20T19:15:38Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-20T19:15:38Z",
+                    "last_observed": "2026-10-20T19:15:38Z",
+                    "data": {
+                        "as_owner": "UNINET",
+                        "asn": 8151,
+                        "network": "189.150.0.0/15",
+                        "country": "MX",
+                        "continent": "NA",
+                        "regional_internet_registry": "LACNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 38,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "27d27d27d29d27d00042d42d00000026a95928fa9b620834c2feff40bccb8f",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

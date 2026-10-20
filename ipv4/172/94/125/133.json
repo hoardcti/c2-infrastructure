@@ -8,7 +8,7 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-13T15:47:35Z",
+            "last_checked": "2026-10-20T19:07:37Z",
             "observations": [
                 {
                     "first_observed": "2026-10-13T15:47:35Z",
@@ -27,11 +27,29 @@
                         "country_code": "DE",
                         "hostnames": []
                     }
+                },
+                {
+                    "first_observed": "2026-10-20T19:07:37Z",
+                    "last_observed": "2026-10-20T19:07:37Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-09-23T07:01:14Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Internet Security - DE",
+                        "domain": "pointtoserver.com",
+                        "country_code": "DE",
+                        "hostnames": []
+                    }
                 }
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-13T15:44:41Z",
+            "last_checked": "2026-10-20T19:04:35Z",
             "observations": []
         },
         "ipinfo": {
@@ -53,7 +71,7 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-13T15:48:54Z",
+            "last_checked": "2026-10-20T19:09:02Z",
             "observations": [
                 {
                     "first_observed": "2026-10-13T15:48:54Z",
@@ -65,11 +83,40 @@
                         "pulse_count": 0,
                         "pulses": []
                     }
+                },
+                {
+                    "first_observed": "2026-10-20T19:09:02Z",
+                    "last_observed": "2026-10-20T19:09:02Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS9009 m247 ltd",
+                        "country_code": "DE",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "6ad2a28a898bb78d2fc40224",
+                                "name": "Remvio - IOCs paquetes.xlsx 2026",
+                                "created": "2026-10-16T22:17:46.736Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "IOC",
+                                    "RENIC",
+                                    "malware",
+                                    "remvio"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "shodan": {
             "last_checked": "2026-10-13T15:52:12Z",
+            "last_error": {
+                "occurred_at": "2026-10-20T19:12:25Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": []
         },
         "spamhaus": {

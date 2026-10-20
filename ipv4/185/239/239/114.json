@@ -8,7 +8,7 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-13T15:47:37Z",
+            "last_checked": "2026-10-20T19:07:39Z",
             "observations": [
                 {
                     "first_observed": "2026-10-13T15:47:37Z",
@@ -29,15 +29,35 @@
                             "black-turtle-23926.zap.cloud"
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-10-20T19:07:39Z",
+                    "last_observed": "2026-10-20T19:07:39Z",
+                    "data": {
+                        "abuse_confidence_score": 4,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-10-20T01:03:47Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "ZAP-Hosting GmbH",
+                        "domain": "zap-hosting.com",
+                        "country_code": "DE",
+                        "hostnames": [
+                            "black-turtle-23926.zap.cloud"
+                        ]
+                    }
                 }
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-13T15:44:42Z",
+            "last_checked": "2026-10-20T19:04:36Z",
             "observations": [
                 {
                     "first_observed": "2026-10-13T15:44:42Z",
-                    "last_observed": "2026-10-13T15:44:42Z",
+                    "last_observed": "2026-10-20T19:04:36Z",
                     "data": {
                         "ports": [
                             135,
@@ -80,7 +100,7 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-13T15:48:55Z",
+            "last_checked": "2026-10-20T19:09:04Z",
             "observations": [
                 {
                     "first_observed": "2026-10-13T15:48:55Z",
@@ -92,11 +112,44 @@
                         "pulse_count": 0,
                         "pulses": []
                     }
+                },
+                {
+                    "first_observed": "2026-10-20T19:09:04Z",
+                    "last_observed": "2026-10-20T19:09:04Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS30823 combahton gmbh",
+                        "country_code": "DE",
+                        "pulse_count": 2,
+                        "pulses": [
+                            {
+                                "id": "6ad2a28a898bb78d2fc40224",
+                                "name": "Remvio - IOCs paquetes.xlsx 2026",
+                                "created": "2026-10-16T22:17:46.736Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "IOC",
+                                    "RENIC",
+                                    "malware",
+                                    "remvio"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6ad593e903730a50ae4a9d1e",
+                                "name": "Malware Filter - Botnet List - 18-10-2026 (Part 4)",
+                                "created": "2026-10-19T03:52:09.736Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-13T15:52:14Z",
+            "last_checked": "2026-10-20T19:12:27Z",
             "observations": [
                 {
                     "first_observed": "2026-10-13T15:52:14Z",
@@ -141,6 +194,49 @@
                             {
                                 "port": 8060,
                                 "transport": "tcp"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-20T19:12:27Z",
+                    "last_observed": "2026-10-20T19:12:27Z",
+                    "data": {
+                        "org": "ZAP-Hosting GmbH",
+                        "isp": "ZAP-Hosting GmbH",
+                        "asn": "AS206996",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "black-turtle-23926.zap.cloud"
+                        ],
+                        "domains": [
+                            "zap.cloud"
+                        ],
+                        "tags": [],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 5357,
+                                "transport": "tcp",
+                                "http_title": "Service Unavailable"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
                             }
                         ]
                     }
