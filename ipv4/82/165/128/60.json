@@ -8,11 +8,11 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-13T07:34:05Z",
+            "last_checked": "2026-10-20T09:56:26Z",
             "observations": [
                 {
                     "first_observed": "2026-10-13T07:34:05Z",
-                    "last_observed": "2026-10-13T07:34:05Z",
+                    "last_observed": "2026-10-20T09:56:26Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -33,7 +33,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-13T07:31:17Z",
+            "last_checked": "2026-10-20T09:53:31Z",
             "observations": [
                 {
                     "first_observed": "2026-10-13T07:31:17Z",
@@ -91,6 +91,70 @@
                             "CVE-2026-93546"
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-10-20T09:53:31Z",
+                    "last_observed": "2026-10-20T09:53:31Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            1337,
+                            3389,
+                            7474,
+                            8001,
+                            50050
+                        ],
+                        "hostnames": [
+                            "ip82-165-128-60.pbiaas.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:apache:http_server",
+                            "cpe:/a:apache:http_server:2.4.68",
+                            "cpe:/a:helpsystems:cobalt_strike",
+                            "cpe:/a:openbsd:openssh:10.0p2",
+                            "cpe:/o:debian:debian_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2007-4723",
+                            "CVE-2009-0796",
+                            "CVE-2009-2299",
+                            "CVE-2011-1176",
+                            "CVE-2011-2688",
+                            "CVE-2012-3526",
+                            "CVE-2012-4001",
+                            "CVE-2012-4360",
+                            "CVE-2013-0941",
+                            "CVE-2013-0942",
+                            "CVE-2013-2765",
+                            "CVE-2013-4365",
+                            "CVE-2026-42356",
+                            "CVE-2026-42528",
+                            "CVE-2026-46729",
+                            "CVE-2026-47360",
+                            "CVE-2026-48005",
+                            "CVE-2026-56153",
+                            "CVE-2026-56154",
+                            "CVE-2026-56449",
+                            "CVE-2026-57941",
+                            "CVE-2026-58415",
+                            "CVE-2026-59685",
+                            "CVE-2026-59797",
+                            "CVE-2026-63045",
+                            "CVE-2026-63292",
+                            "CVE-2026-63686",
+                            "CVE-2026-63718",
+                            "CVE-2026-73636",
+                            "CVE-2026-73637",
+                            "CVE-2026-79768",
+                            "CVE-2026-93546"
+                        ]
+                    }
                 }
             ]
         },
@@ -113,7 +177,7 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-13T07:35:24Z",
+            "last_checked": "2026-10-20T09:58:05Z",
             "observations": [
                 {
                     "first_observed": "2026-10-13T07:35:24Z",
@@ -125,12 +189,37 @@
                         "pulse_count": 0,
                         "pulses": []
                     }
+                },
+                {
+                    "first_observed": "2026-10-20T09:58:05Z",
+                    "last_observed": "2026-10-20T09:58:05Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS8560 1&1 ionos se",
+                        "country_code": "DE",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "6ad29f00b73412a12859480b",
+                                "name": "BEACON - IOCs paquetes.xlsx 2026",
+                                "created": "2026-10-16T22:02:40.335Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "IOC",
+                                    "RENIC",
+                                    "beacon",
+                                    "malware"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "shodan": {
             "last_error": {
-                "occurred_at": "2026-10-13T07:39:24Z",
+                "occurred_at": "2026-10-20T10:01:44Z",
                 "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
             },
             "observations": []
