@@ -8,7 +8,7 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-13T00:25:28Z",
+            "last_checked": "2026-10-20T04:14:40Z",
             "observations": [
                 {
                     "first_observed": "2026-10-13T00:25:28Z",
@@ -29,15 +29,35 @@
                             "vm109539.it-garage.network"
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-10-20T04:14:40Z",
+                    "last_observed": "2026-10-20T04:14:40Z",
+                    "data": {
+                        "abuse_confidence_score": 4,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-10-20T01:31:11Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "IT-Garage",
+                        "domain": "it-garage.pro",
+                        "country_code": "DE",
+                        "hostnames": [
+                            "vm109539.it-garage.network"
+                        ]
+                    }
                 }
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-13T00:22:41Z",
+            "last_checked": "2026-10-20T04:11:51Z",
             "observations": [
                 {
                     "first_observed": "2026-10-13T00:22:41Z",
-                    "last_observed": "2026-10-13T00:22:41Z",
+                    "last_observed": "2026-10-20T04:11:51Z",
                     "data": {
                         "ports": [
                             22
@@ -74,7 +94,7 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-13T00:26:47Z",
+            "last_checked": "2026-10-20T04:15:58Z",
             "observations": [
                 {
                     "first_observed": "2026-10-13T00:26:47Z",
@@ -86,11 +106,48 @@
                         "pulse_count": 0,
                         "pulses": []
                     }
+                },
+                {
+                    "first_observed": "2026-10-20T04:15:58Z",
+                    "last_observed": "2026-10-20T04:15:58Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS12576 ee limited",
+                        "country_code": "GB",
+                        "pulse_count": 2,
+                        "pulses": [
+                            {
+                                "id": "6ad2a28745c722a831c51842",
+                                "name": "Remus - IOCs paquetes.xlsx 2026",
+                                "created": "2026-10-16T22:17:43.943Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "IOC",
+                                    "RENIC",
+                                    "malware",
+                                    "remus"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6ad593eaa9e57bce5fd7fe39",
+                                "name": "Malware Filter - Botnet List - 18-10-2026 (Part 5)",
+                                "created": "2026-10-19T03:52:10.447Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "shodan": {
             "last_checked": "2026-10-13T00:30:30Z",
+            "last_error": {
+                "occurred_at": "2026-10-20T04:19:58Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-10-13T00:30:30Z",
