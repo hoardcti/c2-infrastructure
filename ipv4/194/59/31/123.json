@@ -141,11 +141,84 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-07T21:57:39Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-20T14:57:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-20T14:57:25Z",
+                    "last_observed": "2026-10-20T14:57:25Z",
+                    "data": {
+                        "org": "Virtuo Networks France",
+                        "isp": "VIRTUO - 12651980 CANADA INC.",
+                        "asn": "AS399486",
+                        "os": null,
+                        "country_code": "FR",
+                        "hostnames": [
+                            "api.purecoder.io",
+                            "api1.purecoder.io",
+                            "api2.purecoder.io"
+                        ],
+                        "domains": [
+                            "purecoder.io"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad15d2ad2ad0002ad2ad2ad2add3b67dd3674d9af9dd91c1955a35d0e9",
+                                "certificate_sha256": "41be216e71471f27d0621ab1ae2cdb9359134bd2c065443a986831030584ee62",
+                                "certificate_subject": "api.purecoder.io",
+                                "certificate_organisation": "PureCrack",
+                                "certificate_issuer": "api.purecoder.io"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d15d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "16b4f4f613e6bfe028a12f018b2943a265328a69d550c41412f2b38152b8b779",
+                                "certificate_subject": "WIN-5FUQ2MKQJSF",
+                                "certificate_issuer": "WIN-5FUQ2MKQJSF"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            },
+                            {
+                                "port": 8040,
+                                "transport": "tcp",
+                                "http_title": "\r\n\tScreenConnect Remote Support Software\r\n"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-20T09:53:21Z",

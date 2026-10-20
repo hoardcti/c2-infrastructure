@@ -396,11 +396,132 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-08T01:45:46Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-20T14:58:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-20T14:58:41Z",
+                    "last_observed": "2026-10-20T14:58:41Z",
+                    "data": {
+                        "org": "Enreach Netherlands B.V.",
+                        "isp": "Enreach Netherlands B.V.",
+                        "asn": "AS39647",
+                        "os": null,
+                        "country_code": "NL",
+                        "hostnames": [
+                            "certitudo.com",
+                            "ipcontrol.nl",
+                            "www.draytek.com"
+                        ],
+                        "domains": [
+                            "certitudo.com",
+                            "draytek.com",
+                            "ipcontrol.nl"
+                        ],
+                        "tags": [
+                            "self-signed",
+                            "vpn"
+                        ],
+                        "vulns": [
+                            "CVE-2022-32548"
+                        ],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Microsoft IIS httpd",
+                                "version": "10.0",
+                                "http_title": "\r\n\tP a r k Base Winkelcentrum Havenhof, Volendam\r\n",
+                                "jarm": "2ad2ad00000000022c2ad2ad2ad2ad1f4989c319e75da83988253a39553038",
+                                "certificate_sha256": "2336703faa63117b32cbc5804e2c18ed58cf5128b37b17495b9ddad906d0ed43",
+                                "certificate_subject": "*.ipcontrol.nl",
+                                "certificate_issuer": "Sectigo Public Server Authentication CA DV R36"
+                            },
+                            {
+                                "port": 444,
+                                "transport": "tcp",
+                                "product": "DrayTek Vigor Router",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "400 - Bad Request",
+                                "jarm": "29d29d00029d29d22c42d43d000000c51248dd3cdade16a5a82dd38a0262be",
+                                "certificate_sha256": "d6a37989b7014d0866627ad1be410b2ed721b2cfa1b46a0e6e68c0f4c8f02b33",
+                                "certificate_subject": "Vigor Router",
+                                "certificate_organisation": "DrayTek Corp.",
+                                "certificate_issuer": "Vigor Router"
+                            },
+                            {
+                                "port": 500,
+                                "transport": "udp",
+                                "tags": [
+                                    "vpn"
+                                ]
+                            },
+                            {
+                                "port": 554,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 1194,
+                                "transport": "udp",
+                                "tags": [
+                                    "vpn"
+                                ]
+                            },
+                            {
+                                "port": 1723,
+                                "transport": "tcp",
+                                "product": "PPTP",
+                                "tags": [
+                                    "vpn"
+                                ]
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad0002ad2ad22c2ad2ad2ad2add3b67dd3674d9af9dd91c1955a35d0e9",
+                                "certificate_sha256": "993d57d738b822d16e7f02220934ebb4cfb7e8765e0d18e2051a5bba45555ba2",
+                                "certificate_subject": "IPPARKING351",
+                                "certificate_issuer": "IPPARKING351"
+                            },
+                            {
+                                "port": 4443,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 4500,
+                                "transport": "udp",
+                                "tags": [
+                                    "vpn"
+                                ]
+                            },
+                            {
+                                "port": 7090,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 7443,
+                                "transport": "tcp",
+                                "product": "DrayTek Vigor2865 Series",
+                                "version": "4.3.1.1_MDM2",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "Vigor Login Page",
+                                "jarm": "29d29d00029d29d22c42d43d000000c51248dd3cdade16a5a82dd38a0262be",
+                                "certificate_sha256": "d6a37989b7014d0866627ad1be410b2ed721b2cfa1b46a0e6e68c0f4c8f02b33",
+                                "certificate_subject": "Vigor Router",
+                                "certificate_organisation": "DrayTek Corp.",
+                                "certificate_issuer": "Vigor Router"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-20T09:53:21Z",
