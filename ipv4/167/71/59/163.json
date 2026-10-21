@@ -8,11 +8,11 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-14T17:55:39Z",
+            "last_checked": "2026-10-21T19:17:11Z",
             "observations": [
                 {
                     "first_observed": "2026-10-14T17:55:39Z",
-                    "last_observed": "2026-10-14T17:55:39Z",
+                    "last_observed": "2026-10-21T19:17:11Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-14T17:52:40Z",
+            "last_checked": "2026-10-21T19:14:09Z",
             "observations": [
                 {
                     "first_observed": "2026-10-14T17:52:40Z",
@@ -48,6 +48,25 @@
                             "cpe:/a:openbsd:openssh:9.2p1",
                             "cpe:/o:debian:debian_linux",
                             "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-21T19:14:09Z",
+                    "last_observed": "2026-10-21T19:14:09Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
                         ],
                         "tags": [
                             "cloud"
@@ -76,11 +95,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-14T17:57:22Z",
+            "last_checked": "2026-10-21T19:18:33Z",
             "observations": [
                 {
                     "first_observed": "2026-10-14T17:57:22Z",
-                    "last_observed": "2026-10-14T17:57:22Z",
+                    "last_observed": "2026-10-21T19:18:33Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS14061 digitalocean  llc",
@@ -93,6 +112,10 @@
         },
         "shodan": {
             "last_checked": "2026-10-14T18:00:40Z",
+            "last_error": {
+                "occurred_at": "2026-10-21T19:21:51Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-10-14T18:00:40Z",

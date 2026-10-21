@@ -8,7 +8,7 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-14T17:55:17Z",
+            "last_checked": "2026-10-21T19:16:49Z",
             "observations": [
                 {
                     "first_observed": "2026-10-14T17:55:17Z",
@@ -29,17 +29,53 @@
                             "zykhylqn863s.server.swissnetwork.io"
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-10-21T19:16:49Z",
+                    "last_observed": "2026-10-21T19:16:49Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2026-03-18T14:05:09Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "SWISSNET LLC",
+                        "domain": "swissnetwork.co",
+                        "country_code": "NL",
+                        "hostnames": []
+                    }
                 }
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-14T17:52:29Z",
+            "last_checked": "2026-10-21T19:13:58Z",
             "observations": [
                 {
                     "first_observed": "2026-10-14T17:52:29Z",
                     "last_observed": "2026-10-14T17:52:29Z",
                     "data": {
                         "ports": [
+                            3389,
+                            5985,
+                            5986
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-21T19:13:58Z",
+                    "last_observed": "2026-10-21T19:13:58Z",
+                    "data": {
+                        "ports": [
+                            135,
                             3389,
                             5985,
                             5986
@@ -73,11 +109,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-14T17:56:35Z",
+            "last_checked": "2026-10-21T19:18:11Z",
             "observations": [
                 {
                     "first_observed": "2026-10-14T17:56:35Z",
-                    "last_observed": "2026-10-14T17:56:35Z",
+                    "last_observed": "2026-10-21T19:18:11Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS31549 aria shatel company ltd",
@@ -90,6 +126,10 @@
         },
         "shodan": {
             "last_checked": "2026-10-14T18:00:18Z",
+            "last_error": {
+                "occurred_at": "2026-10-21T19:21:29Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-10-14T18:00:18Z",
