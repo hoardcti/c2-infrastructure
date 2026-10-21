@@ -183,11 +183,105 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-08T08:45:28Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-21T04:08:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T04:08:56Z",
+                    "last_observed": "2026-10-21T04:08:56Z",
+                    "data": {
+                        "org": "Secretaría de Relaciones Exteriores",
+                        "isp": "Secretaria de Relaciones Exteriores",
+                        "asn": "AS272336",
+                        "os": null,
+                        "country_code": "MX",
+                        "hostnames": [
+                            "cancilleriasre.mx",
+                            "cubatel.sre.gob.mx"
+                        ],
+                        "domains": [
+                            "cancilleriasre.mx",
+                            "sre.gob.mx"
+                        ],
+                        "tags": [],
+                        "vulns": [
+                            "CVE-2007-2768",
+                            "CVE-2008-3844",
+                            "CVE-2016-20012",
+                            "CVE-2021-36368",
+                            "CVE-2021-41617",
+                            "CVE-2023-38408",
+                            "CVE-2023-48795",
+                            "CVE-2023-51385",
+                            "CVE-2023-51767",
+                            "CVE-2024-6387",
+                            "CVE-2025-26465",
+                            "CVE-2025-32728",
+                            "CVE-2026-106552",
+                            "CVE-2026-106553",
+                            "CVE-2026-106555",
+                            "CVE-2026-106582",
+                            "CVE-2026-106583",
+                            "CVE-2026-106584",
+                            "CVE-2026-106585",
+                            "CVE-2026-106586",
+                            "CVE-2026-106587",
+                            "CVE-2026-35385",
+                            "CVE-2026-35387",
+                            "CVE-2026-35388",
+                            "CVE-2026-35414",
+                            "CVE-2026-59995",
+                            "CVE-2026-59996",
+                            "CVE-2026-59997",
+                            "CVE-2026-59998",
+                            "CVE-2026-59999",
+                            "CVE-2026-60000",
+                            "CVE-2026-60001",
+                            "CVE-2026-60002",
+                            "CVE-2026-73281",
+                            "CVE-2026-73282",
+                            "CVE-2026-73283"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.7"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "3fd3fd00000000000043d3fd3fd43d79451d8c63b099acafdbabb24551d0e6",
+                                "certificate_sha256": "4c42834c66bc99f1fd54ce6913fc0f5586725a9944e2b1b980cabe42f570321f",
+                                "certificate_subject": "*.cancilleriasre.mx",
+                                "certificate_issuer": "Sectigo Public Server Authentication CA DV R36"
+                            },
+                            {
+                                "port": 2000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 2222,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                                "certificate_sha256": "9ef8d2b4c5a27726cc75ac67e9377259265d8ca5a8def7ba181b01dfb081cdb2",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-20T09:53:21Z",

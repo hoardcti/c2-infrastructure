@@ -116,11 +116,68 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-08T16:22:06Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-21T04:08:58Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T04:08:58Z",
+                    "last_observed": "2026-10-21T04:08:58Z",
+                    "data": {
+                        "org": "Microsoft Corporation",
+                        "isp": "Microsoft Corporation",
+                        "asn": "AS8075",
+                        "os": null,
+                        "country_code": "IN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud",
+                            "malware",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud",
+                                    "self-signed"
+                                ],
+                                "jarm": "3fd3fd00000000000043d43d00043dc3b2afa8a5ec09b510a8559aff7899fb",
+                                "certificate_sha256": "3ef59cd569caa0abe424b0451dedd72a04fbffbacb07e7f4cf99653f85ae2b03",
+                                "certificate_subject": "TRAEFIK DEFAULT CERT",
+                                "certificate_issuer": "TRAEFIK DEFAULT CERT"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "cloud",
+                                    "malware"
+                                ],
+                                "http_title": "Gophish - Login"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-20T09:53:21Z",

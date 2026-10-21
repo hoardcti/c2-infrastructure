@@ -8,11 +8,11 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-13T21:07:58Z",
+            "last_checked": "2026-10-21T04:03:01Z",
             "observations": [
                 {
                     "first_observed": "2026-10-13T21:07:58Z",
-                    "last_observed": "2026-10-13T21:07:58Z",
+                    "last_observed": "2026-10-21T04:03:01Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -31,8 +31,24 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-13T21:05:09Z",
-            "observations": []
+            "last_checked": "2026-10-21T04:00:03Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T04:00:03Z",
+                    "last_observed": "2026-10-21T04:00:03Z",
+                    "data": {
+                        "ports": [
+                            445
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ]
+                    }
+                }
+            ]
         },
         "ipinfo": {
             "last_checked": "2026-10-13T21:05:08Z",
@@ -53,7 +69,7 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-13T21:09:16Z",
+            "last_checked": "2026-10-21T04:04:21Z",
             "observations": [
                 {
                     "first_observed": "2026-10-13T21:09:16Z",
@@ -65,12 +81,75 @@
                         "pulse_count": 0,
                         "pulses": []
                     }
+                },
+                {
+                    "first_observed": "2026-10-21T04:04:21Z",
+                    "last_observed": "2026-10-21T04:04:21Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "BS",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "6ad29f784c95fec55e495ad2",
+                                "name": "DCRat - IOCs paquetes.xlsx 2026",
+                                "created": "2026-10-16T22:04:40.498Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "IOC",
+                                    "RENIC",
+                                    "dcrat",
+                                    "malware"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-13T21:13:01Z",
-            "observations": []
+            "last_checked": "2026-10-21T04:07:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T04:07:40Z",
+                    "last_observed": "2026-10-21T04:07:40Z",
+                    "data": {
+                        "org": "MICFO-US",
+                        "isp": "Datacamp Limited",
+                        "asn": "AS212238",
+                        "os": "Windows (build 10.0.19041)",
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "5063676fbf86ea2be4d2f0f6f906a02283c4391c547e7a820862ffdfbfa046b9",
+                                "certificate_subject": "DESKTOP-1JS75NJ",
+                                "certificate_issuer": "DESKTOP-1JS75NJ"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-20T09:53:20Z",

@@ -1,0 +1,186 @@
+{
+    "schema_version": 2,
+    "ip": "172.94.111.51",
+    "first_seen": "2026-10-21T03:59:44Z",
+    "last_seen": "2026-10-21T03:59:44Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-21T04:02:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T04:02:45Z",
+                    "last_observed": "2026-10-21T04:02:45Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2026-06-28T19:06:20Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Internet Security - DE",
+                        "domain": "pointtoserver.com",
+                        "country_code": "DE",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-21T03:59:55Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T03:59:55Z",
+                    "last_observed": "2026-10-21T03:59:55Z",
+                    "data": {
+                        "ports": [
+                            135,
+                            137,
+                            445
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-21T03:59:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T03:59:51Z",
+                    "last_observed": "2026-10-21T03:59:51Z",
+                    "data": {
+                        "asn": "AS9009",
+                        "as_name": "M247 Europe SRL",
+                        "as_domain": "m247global.com",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-21T04:04:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T04:04:07Z",
+                    "last_observed": "2026-10-21T04:04:07Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS3223 voxility llp",
+                        "country_code": "DE",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-21T04:07:24Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-21T03:59:51Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-21T03:59:44Z",
+            "observations": [
+                {
+                    "key": "1976754",
+                    "first_observed": "2026-10-21T03:59:44Z",
+                    "last_observed": "2026-10-21T03:59:44Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "172.94.111.51:2404",
+                        "port": 2404,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-21T00:43:07Z",
+                        "reference": null,
+                        "tags": [
+                            "REMOTEHOST",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-21T04:01:57Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-21T04:10:02Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T04:10:02Z",
+                    "last_observed": "2026-10-21T04:10:02Z",
+                    "data": {
+                        "as_owner": "M247 Europe SRL",
+                        "asn": 9009,
+                        "network": "172.94.110.0/23",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 2,
+                            "undetected": 37,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "GreyNoise",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
