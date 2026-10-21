@@ -1,0 +1,158 @@
+{
+    "schema_version": 2,
+    "ip": "147.124.221.97",
+    "first_seen": "2026-10-21T09:18:16Z",
+    "last_seen": "2026-10-21T09:18:16Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-21T09:21:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T09:21:17Z",
+                    "last_observed": "2026-10-21T09:21:17Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2026-04-08T20:13:55Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Majestic Hosting Solutions, LLC",
+                        "domain": "spinservers.com",
+                        "country_code": "US",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-21T09:18:27Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-21T09:18:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T09:18:23Z",
+                    "last_observed": "2026-10-21T09:18:23Z",
+                    "data": {
+                        "asn": "AS396073",
+                        "as_name": "Majestic Hosting Solutions, LLC",
+                        "as_domain": "spinservers.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-21T09:22:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T09:22:35Z",
+                    "last_observed": "2026-10-21T09:22:35Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS396073 majestic hosting solutions  llc",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-21T09:25:55Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-21T09:18:23Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-21T09:18:16Z",
+            "observations": [
+                {
+                    "key": "1977836",
+                    "first_observed": "2026-10-21T09:18:16Z",
+                    "last_observed": "2026-10-21T09:18:16Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "147.124.221.97:2404",
+                        "port": 2404,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-21T07:22:27Z",
+                        "reference": null,
+                        "tags": [
+                            "REMOTEHOST",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-21T09:20:29Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-21T09:28:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T09:28:33Z",
+                    "last_observed": "2026-10-21T09:28:33Z",
+                    "data": {
+                        "as_owner": "Majestic Hosting Solutions, LLC",
+                        "asn": 396073,
+                        "network": "147.124.208.0/20",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 2,
+                            "undetected": 35,
+                            "harmless": 55,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

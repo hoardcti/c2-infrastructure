@@ -8,11 +8,11 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-14T06:06:07Z",
+            "last_checked": "2026-10-21T09:21:29Z",
             "observations": [
                 {
                     "first_observed": "2026-10-14T06:06:07Z",
-                    "last_observed": "2026-10-14T06:06:07Z",
+                    "last_observed": "2026-10-21T09:21:29Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -31,11 +31,11 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-14T06:03:17Z",
+            "last_checked": "2026-10-21T09:18:33Z",
             "observations": [
                 {
                     "first_observed": "2026-10-14T06:03:17Z",
-                    "last_observed": "2026-10-14T06:03:17Z",
+                    "last_observed": "2026-10-21T09:18:33Z",
                     "data": {
                         "ports": [
                             3389,
@@ -70,11 +70,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-14T06:07:25Z",
+            "last_checked": "2026-10-21T09:22:47Z",
             "observations": [
                 {
                     "first_observed": "2026-10-14T06:07:25Z",
-                    "last_observed": "2026-10-14T06:07:25Z",
+                    "last_observed": "2026-10-21T09:22:47Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS55933 cloudie limited",
@@ -86,7 +86,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-14T06:11:25Z",
+            "last_checked": "2026-10-21T09:26:07Z",
             "observations": [
                 {
                     "first_observed": "2026-10-14T06:11:25Z",
@@ -102,6 +102,43 @@
                         "tags": [],
                         "vulns": [],
                         "services": [
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-21T09:26:07Z",
+                    "last_observed": "2026-10-21T09:26:07Z",
+                    "data": {
+                        "org": "Zillion Network Inc.",
+                        "isp": "Zillion Network Inc.",
+                        "asn": "AS54801",
+                        "os": "Windows (build 10.0.19041)",
+                        "country_code": "JP",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "473ab5be5aedb547571b7da0840f2cf7c43059a4189297ea52931f5c040267ad",
+                                "certificate_subject": "VM-V63ZeV5b",
+                                "certificate_issuer": "VM-V63ZeV5b"
+                            },
                             {
                                 "port": 5985,
                                 "transport": "tcp",

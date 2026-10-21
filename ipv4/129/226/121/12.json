@@ -102,11 +102,94 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-08T16:23:14Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-21T09:27:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T09:27:05Z",
+                    "last_observed": "2026-10-21T09:27:05Z",
+                    "data": {
+                        "org": "Tencent Building, Kejizhongyi Avenue",
+                        "isp": "Tencent Building, Kejizhongyi Avenue",
+                        "asn": "AS132203",
+                        "os": "Linux",
+                        "country_code": "HK",
+                        "hostnames": [
+                            "viajes.com.cn",
+                            "www.viajes.com.cn"
+                        ],
+                        "domains": [
+                            "viajes.com.cn"
+                        ],
+                        "tags": [
+                            "c2",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 21,
+                                "transport": "tcp",
+                                "product": "Pure-FTPd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "29e0cd358d473dec9201340867a0cc2a36c09a21c3bca4037bced0920259daf4",
+                                "certificate_subject": "129.226.121.12",
+                                "certificate_organisation": "BT-PANEL",
+                                "certificate_issuer": "129.226.121.12"
+                            },
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.14"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 81,
+                                "transport": "tcp",
+                                "product": "Panda C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "Asia Odyssey Travel | Viajes a medida y Tours por Asia y China"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Panda C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "Asia Odyssey Travel | Viajes a medida y Tours por Asia y China",
+                                "jarm": "3fd3fd0003fd3fd21c42d42d000000bdfc58c9a46434368cf60aa440385763",
+                                "certificate_sha256": "7f48a400785a95958c6b341b419c84f8baf62d32ff4fcd6c85be23fdc8324baf",
+                                "certificate_subject": "viajes.com.cn",
+                                "certificate_issuer": "LiteSSL RSA CA 2025"
+                            },
+                            {
+                                "port": 2222,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.14"
+                            },
+                            {
+                                "port": 6379,
+                                "transport": "tcp",
+                                "product": "Redis key-value store"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-20T09:53:21Z",

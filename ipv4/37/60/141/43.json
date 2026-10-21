@@ -1,0 +1,271 @@
+{
+    "schema_version": 2,
+    "ip": "37.60.141.43",
+    "first_seen": "2026-10-21T09:18:16Z",
+    "last_seen": "2026-10-21T09:18:16Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-21T09:21:11Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T09:21:11Z",
+                    "last_observed": "2026-10-21T09:21:11Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 8,
+                        "distinct_reporters": 5,
+                        "last_reported_at": "2026-08-15T18:30:20Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "ColocaTel Datacenter",
+                        "domain": "colocatel.com",
+                        "country_code": "NL",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-21T09:18:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T09:18:24Z",
+                    "last_observed": "2026-10-21T09:18:24Z",
+                    "data": {
+                        "ports": [
+                            135,
+                            137,
+                            3389,
+                            5985,
+                            8000
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [
+                            "eol-os",
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-21T09:18:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T09:18:23Z",
+                    "last_observed": "2026-10-21T09:18:23Z",
+                    "data": {
+                        "asn": "AS213438",
+                        "as_name": "ColocaTel Inc.",
+                        "as_domain": "colocatel.com",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-21T09:22:29Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T09:22:29Z",
+                    "last_observed": "2026-10-21T09:22:29Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS34577 skat tv ltd.",
+                        "country_code": "BG",
+                        "pulse_count": 3,
+                        "pulses": [
+                            {
+                                "id": "69f296e6f8d22e6594cd87c2",
+                                "name": "dfhbdfhbfth",
+                                "created": "2026-04-29T23:40:22.053Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "eio4"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "69f29701e8ef05a0558464d1",
+                                "name": "dfhbdfhbfth",
+                                "created": "2026-04-29T23:40:49.785Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "eio4"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a534e67af59fc56282fc0b5",
+                                "name": "DigitalOcean Toronto (CA) Port Scanning Hosts for 2026-07-11",
+                                "created": "2026-07-12T08:20:55.504Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "digital ocean",
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-21T09:25:49Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T09:25:49Z",
+                    "last_observed": "2026-10-21T09:25:49Z",
+                    "data": {
+                        "org": "ColocaTel Inc.",
+                        "isp": "colocatel-inc ColocaTel Inc.",
+                        "asn": "AS213438",
+                        "os": "Windows",
+                        "country_code": "NL",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17"
+                            },
+                            {
+                                "port": 137,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 8000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "8db288efbc7664328cbe7cf02b7d5341fcd8f4292ef799d86ccbae4c237086d5",
+                                "certificate_subject": "*.delivery.mp.microsoft.com",
+                                "certificate_organisation": "Microsoft Corporation",
+                                "certificate_issuer": "*.delivery.mp.microsoft.com"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-21T09:18:23Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-21T09:18:16Z",
+            "observations": [
+                {
+                    "key": "1976777",
+                    "first_observed": "2026-10-21T09:18:16Z",
+                    "last_observed": "2026-10-21T09:18:16Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "37.60.141.43:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-10-21T05:31:36Z",
+                        "reference": null,
+                        "tags": [
+                            "213438",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-21T09:20:23Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-21T09:27:47Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T09:27:47Z",
+                    "last_observed": "2026-10-21T09:27:47Z",
+                    "data": {
+                        "as_owner": "ColocaTel Inc.",
+                        "asn": 213438,
+                        "network": "37.60.141.0/24",
+                        "country": "BG",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 2,
+                            "undetected": 35,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

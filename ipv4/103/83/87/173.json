@@ -1,0 +1,236 @@
+{
+    "schema_version": 2,
+    "ip": "103.83.87.173",
+    "first_seen": "2026-10-21T09:18:16Z",
+    "last_seen": "2026-10-21T09:18:16Z",
+    "flags": [
+        "remcos"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-21T09:21:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T09:21:15Z",
+                    "last_observed": "2026-10-21T09:21:15Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2025-12-19T12:44:50Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "IPv4Center.com Partition - Order #4",
+                        "domain": "ipv4center.com",
+                        "country_code": "TR",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-21T09:18:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T09:18:26Z",
+                    "last_observed": "2026-10-21T09:18:26Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            445
+                        ],
+                        "hostnames": [
+                            "34083-28096.dchost.com",
+                            "turkey-vpn.vps.tc"
+                        ],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-21T09:18:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T09:18:23Z",
+                    "last_observed": "2026-10-21T09:18:23Z",
+                    "data": {
+                        "asn": "AS44382",
+                        "as_name": "Fiba Cloud Operation Company, LLC",
+                        "as_domain": "fibacloud.com",
+                        "country_code": "TR",
+                        "country": "Turkey",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-21T09:22:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T09:22:33Z",
+                    "last_observed": "2026-10-21T09:22:33Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS135824 gelexiy cab net",
+                        "country_code": "IN",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-21T09:25:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T09:25:53Z",
+                    "last_observed": "2026-10-21T09:25:53Z",
+                    "data": {
+                        "org": "White Label Services, LLC",
+                        "isp": "WhiteLabel Fiba Cloud Operation Company, LLC",
+                        "asn": "AS44382",
+                        "os": "Windows Server 2019 (version 1809) (build 10.0.17763)",
+                        "country_code": "TR",
+                        "hostnames": [
+                            "34083-28096.dchost.com",
+                            "turkey-vpn.vps.tc"
+                        ],
+                        "domains": [
+                            "dchost.com",
+                            "vps.tc"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 5986,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "Not Found",
+                                "jarm": "2ad2ad16d00000022c2ad2ad2ad2ad46ff59a659b30fd8aeaa6755c67691b4",
+                                "certificate_sha256": "c6d9861a099fb32c300a13082b51d0242821934df2463d38f28659f531969942",
+                                "certificate_subject": "SERVER-SERVER",
+                                "certificate_issuer": "SERVER-SERVER"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-21T09:18:23Z",
+            "observations": [
+                {
+                    "key": "103.83.86.0/23",
+                    "first_observed": "2026-10-21T09:18:23Z",
+                    "last_observed": "2026-10-21T09:18:23Z",
+                    "data": {
+                        "cidr": "103.83.86.0/23",
+                        "sblid": "SBL676886",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-10-21T09:18:16Z",
+            "observations": [
+                {
+                    "key": "1977839",
+                    "first_observed": "2026-10-21T09:18:16Z",
+                    "last_observed": "2026-10-21T09:18:16Z",
+                    "flags": [
+                        "remcos"
+                    ],
+                    "data": {
+                        "ioc": "103.83.87.173:14753",
+                        "port": 14753,
+                        "threat_type": "botnet_cc",
+                        "malware": "Remcos",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-21T07:23:54Z",
+                        "reference": null,
+                        "tags": [
+                            "AlphaRCV",
+                            "c2",
+                            "remcos"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-21T09:20:27Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-21T09:28:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T09:28:17Z",
+                    "last_observed": "2026-10-21T09:28:17Z",
+                    "data": {
+                        "as_owner": "Fiba Cloud Operation Company, LLC",
+                        "asn": 44382,
+                        "network": "103.83.86.0/23",
+                        "country": "TR",
+                        "continent": "AS",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 36,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
