@@ -8,7 +8,7 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-14T12:47:49Z",
+            "last_checked": "2026-10-21T15:01:19Z",
             "observations": [
                 {
                     "first_observed": "2026-10-14T12:47:49Z",
@@ -27,11 +27,29 @@
                         "country_code": "US",
                         "hostnames": []
                     }
+                },
+                {
+                    "first_observed": "2026-10-21T15:01:19Z",
+                    "last_observed": "2026-10-21T15:01:19Z",
+                    "data": {
+                        "abuse_confidence_score": 42,
+                        "total_reports": 6,
+                        "distinct_reporters": 6,
+                        "last_reported_at": "2026-10-21T07:11:06Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Internap Holding LLC",
+                        "domain": "horizoniq.com",
+                        "country_code": "US",
+                        "hostnames": []
+                    }
                 }
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-14T12:45:01Z",
+            "last_checked": "2026-10-21T14:58:26Z",
             "observations": [
                 {
                     "first_observed": "2026-10-14T12:45:01Z",
@@ -39,6 +57,22 @@
                     "data": {
                         "ports": [
                             135,
+                            427,
+                            5985
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-21T14:58:26Z",
+                    "last_observed": "2026-10-21T14:58:26Z",
+                    "data": {
+                        "ports": [
+                            135,
+                            139,
                             427,
                             5985
                         ],
@@ -69,11 +103,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-14T12:49:08Z",
+            "last_checked": "2026-10-21T15:03:10Z",
             "observations": [
                 {
                     "first_observed": "2026-10-14T12:49:08Z",
-                    "last_observed": "2026-10-14T12:49:08Z",
+                    "last_observed": "2026-10-21T15:03:10Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS29791 internap holding llc",
@@ -86,6 +120,10 @@
         },
         "shodan": {
             "last_checked": "2026-10-14T12:52:34Z",
+            "last_error": {
+                "occurred_at": "2026-10-21T15:06:37Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-10-14T12:52:34Z",

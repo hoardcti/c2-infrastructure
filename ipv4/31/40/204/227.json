@@ -8,11 +8,11 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-14T12:47:47Z",
+            "last_checked": "2026-10-21T15:01:17Z",
             "observations": [
                 {
                     "first_observed": "2026-10-14T12:47:47Z",
-                    "last_observed": "2026-10-14T12:47:47Z",
+                    "last_observed": "2026-10-21T15:01:17Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -33,7 +33,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-14T12:45:00Z",
+            "last_checked": "2026-10-21T14:58:25Z",
             "observations": [
                 {
                     "first_observed": "2026-10-14T12:45:00Z",
@@ -50,6 +50,28 @@
                             "cpe:/o:canonical:ubuntu_linux"
                         ],
                         "tags": [],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-21T14:58:25Z",
+                    "last_observed": "2026-10-21T14:58:25Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            3389
+                        ],
+                        "hostnames": [
+                            "33746-16297.dchost.com",
+                            "entegratr"
+                        ],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
                         "vulns": []
                     }
                 }
@@ -74,11 +96,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-14T12:49:06Z",
+            "last_checked": "2026-10-21T15:03:08Z",
             "observations": [
                 {
                     "first_observed": "2026-10-14T12:49:06Z",
-                    "last_observed": "2026-10-14T12:49:06Z",
+                    "last_observed": "2026-10-21T15:03:08Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS7018 att services inc",
@@ -91,6 +113,10 @@
         },
         "shodan": {
             "last_checked": "2026-10-14T12:52:32Z",
+            "last_error": {
+                "occurred_at": "2026-10-21T15:06:35Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": []
         },
         "spamhaus": {

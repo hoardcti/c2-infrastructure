@@ -31,8 +31,27 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-14T12:45:12Z",
-            "observations": []
+            "last_checked": "2026-10-21T14:58:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T14:58:37Z",
+                    "last_observed": "2026-10-21T14:58:37Z",
+                    "data": {
+                        "ports": [
+                            22
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
         },
         "ipinfo": {
             "last_checked": "2026-10-07T12:19:41Z",
@@ -53,7 +72,7 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-14T12:49:38Z",
+            "last_checked": "2026-10-21T15:03:41Z",
             "observations": [
                 {
                     "first_observed": "2026-10-07T12:21:55Z",
@@ -65,13 +84,38 @@
                         "pulse_count": 0,
                         "pulses": []
                     }
+                },
+                {
+                    "first_observed": "2026-10-21T15:03:41Z",
+                    "last_observed": "2026-10-21T15:03:41Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS14061 digitalocean  llc",
+                        "country_code": "DE",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "6ad29ebb513502d5242e7b5b",
+                                "name": "Aisuru - IOCs paquetes.xlsx 2026",
+                                "created": "2026-10-16T22:01:31.611Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "IOC",
+                                    "RENIC",
+                                    "aisuru",
+                                    "malware"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "shodan": {
             "last_checked": "2026-10-07T12:25:14Z",
             "last_error": {
-                "occurred_at": "2026-10-14T12:53:02Z",
+                "occurred_at": "2026-10-21T15:06:59Z",
                 "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
             },
             "observations": []

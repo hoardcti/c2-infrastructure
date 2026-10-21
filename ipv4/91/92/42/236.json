@@ -528,12 +528,12 @@
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-20T09:53:21Z",
+            "last_checked": "2026-10-21T14:58:20Z",
             "observations": [
                 {
                     "key": "91.92.42.0/24",
                     "first_observed": "2026-10-01T12:19:59Z",
-                    "last_observed": "2026-10-20T09:53:21Z",
+                    "last_observed": "2026-10-21T14:58:20Z",
                     "data": {
                         "cidr": "91.92.42.0/24",
                         "sblid": "SBL699857",
@@ -566,6 +566,85 @@
         "urlhaus": {
             "last_checked": "2026-10-17T19:09:13Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-21T15:12:55Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T15:12:55Z",
+                    "last_observed": "2026-10-21T15:12:55Z",
+                    "data": {
+                        "as_owner": "TechTies Inc.",
+                        "asn": 197170,
+                        "network": "91.92.42.0/24",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 6,
+                            "suspicious": 3,
+                            "undetected": 32,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "GreyNoise",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lumu",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "27d40d40d00040d00042d43d0000004ac24e77d76646867f0f6a0c6d9b9bb0",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

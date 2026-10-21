@@ -94,12 +94,12 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-10-20T09:53:21Z",
+            "last_checked": "2026-10-21T14:58:20Z",
             "observations": [
                 {
                     "key": "93.152.221.0/24",
                     "first_observed": "2026-10-01T12:19:59Z",
-                    "last_observed": "2026-10-20T09:53:21Z",
+                    "last_observed": "2026-10-21T14:58:20Z",
                     "data": {
                         "cidr": "93.152.221.0/24",
                         "sblid": "SBL699858",
@@ -132,6 +132,74 @@
         "urlhaus": {
             "last_checked": "2026-10-17T19:09:11Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-21T15:12:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-21T15:12:40Z",
+                    "last_observed": "2026-10-21T15:12:40Z",
+                    "data": {
+                        "as_owner": "TechTies Inc.",
+                        "asn": 197170,
+                        "network": "93.152.221.0/24",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 3,
+                            "undetected": 35,
+                            "harmless": 50,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lumu",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }
