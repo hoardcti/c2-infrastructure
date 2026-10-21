@@ -130,11 +130,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-01T13:19:33Z",
-            "last_error": {
-                "occurred_at": "2026-10-14T21:34:15Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-21T23:15:00Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T13:19:33Z",
@@ -165,6 +161,35 @@
                                 "transport": "tcp",
                                 "product": "WinRM",
                                 "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-21T23:15:00Z",
+                    "last_observed": "2026-10-21T23:15:00Z",
+                    "data": {
+                        "org": "1337 Services GmbH",
+                        "isp": "services-1337-gmbh 1337 Services GmbH",
+                        "asn": "AS210558",
+                        "os": "Linux",
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.0p2 Debian 7+deb13u4"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
                             }
                         ]
                     }
