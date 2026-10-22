@@ -1,0 +1,232 @@
+{
+    "schema_version": 2,
+    "ip": "176.65.144.99",
+    "first_seen": "2026-10-22T19:09:15Z",
+    "last_seen": "2026-10-22T19:09:15Z",
+    "flags": [
+        "unknown stealer"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-22T19:12:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-22T19:12:19Z",
+                    "last_observed": "2026-10-22T19:12:19Z",
+                    "data": {
+                        "abuse_confidence_score": 4,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-10-22T15:18:55Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "DEDIK SERVICES LIMITED",
+                        "domain": "dedik.io",
+                        "country_code": "CH",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-22T19:09:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-22T19:09:26Z",
+                    "last_observed": "2026-10-22T19:09:26Z",
+                    "data": {
+                        "ports": [
+                            443
+                        ],
+                        "hostnames": [
+                            "bugerror.info"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.24.0",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-22T19:09:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-22T19:09:24Z",
+                    "last_observed": "2026-10-22T19:09:24Z",
+                    "data": {
+                        "asn": "AS209413",
+                        "as_name": "DEDIK SERVICES LIMITED",
+                        "as_domain": "dedik.io",
+                        "country_code": "CH",
+                        "country": "Switzerland",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-22T19:13:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-22T19:13:37Z",
+                    "last_observed": "2026-10-22T19:13:37Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "DE",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-22T19:16:55Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-22T19:16:55Z",
+                    "last_observed": "2026-10-22T19:16:55Z",
+                    "data": {
+                        "org": "DEDIK SERVICES LIMITED",
+                        "isp": "DEDIK-CH DEDIK SERVICES LIMITED",
+                        "asn": "AS209413",
+                        "os": "Ubuntu",
+                        "country_code": "GB",
+                        "hostnames": [
+                            "bugerror.info"
+                        ],
+                        "domains": [
+                            "bugerror.info"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!",
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "fec917e29acee57a38f0ac6a3513495ee0b73843fe1614efd4acff7ea2f83c97",
+                                "certificate_subject": "bugerror.info",
+                                "certificate_issuer": "YE2"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-22T19:09:22Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-22T19:09:15Z",
+            "observations": [
+                {
+                    "key": "1980281",
+                    "first_observed": "2026-10-22T19:09:15Z",
+                    "last_observed": "2026-10-22T19:09:15Z",
+                    "flags": [
+                        "unknown stealer"
+                    ],
+                    "data": {
+                        "ioc": "176.65.144.99:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown Stealer",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown_stealer",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-22T15:43:13Z",
+                        "reference": "https://app.any.run/tasks/9991ae9f-3152-4649-9614-0114c100fd00/",
+                        "tags": [
+                            "c2",
+                            "go-based",
+                            "stealer"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-22T19:11:27Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-22T19:19:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-22T19:19:20Z",
+                    "last_observed": "2026-10-22T19:19:20Z",
+                    "data": {
+                        "as_owner": "Dedik Services Limited",
+                        "asn": 209413,
+                        "network": "176.65.144.0/24",
+                        "country": "CH",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 0,
+                            "undetected": 37,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "ESET",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "phishing"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
