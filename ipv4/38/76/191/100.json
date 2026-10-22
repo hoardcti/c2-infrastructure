@@ -8,11 +8,11 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-15T11:09:00Z",
+            "last_checked": "2026-10-22T15:01:11Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T11:09:00Z",
-                    "last_observed": "2026-10-15T11:09:00Z",
+                    "last_observed": "2026-10-22T15:01:11Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-15T11:07:12Z",
+            "last_checked": "2026-10-22T14:58:17Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T11:07:12Z",
@@ -48,6 +48,34 @@
                         "cpes": [
                             "cpe:/a:f5:nginx:1.22.1",
                             "cpe:/a:postgresql:postgresql"
+                        ],
+                        "tags": [
+                            "database",
+                            "eol-product",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-22T14:58:17Z",
+                    "last_observed": "2026-10-22T14:58:17Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443,
+                            5432,
+                            6379,
+                            8084,
+                            19000
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.22.1",
+                            "cpe:/a:redislabs:redis"
                         ],
                         "tags": [
                             "database",
@@ -81,11 +109,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-15T11:10:18Z",
+            "last_checked": "2026-10-22T15:02:29Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T11:10:18Z",
-                    "last_observed": "2026-10-15T11:10:18Z",
+                    "last_observed": "2026-10-22T15:02:29Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS174 cogent communications",
@@ -98,7 +126,7 @@
         },
         "shodan": {
             "last_error": {
-                "occurred_at": "2026-10-15T11:14:18Z",
+                "occurred_at": "2026-10-22T15:06:06Z",
                 "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
             },
             "observations": []

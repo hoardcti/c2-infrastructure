@@ -8,11 +8,11 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-15T11:09:30Z",
+            "last_checked": "2026-10-22T15:01:41Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T11:09:30Z",
-                    "last_observed": "2026-10-15T11:09:30Z",
+                    "last_observed": "2026-10-22T15:01:41Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-15T11:07:27Z",
+            "last_checked": "2026-10-22T14:58:32Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T11:07:27Z",
@@ -51,6 +51,32 @@
                         "tags": [
                             "database",
                             "eol-product"
+                        ],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-22T14:58:32Z",
+                    "last_observed": "2026-10-22T14:58:32Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443,
+                            3306,
+                            8000,
+                            8080,
+                            8081,
+                            8086,
+                            8090
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:oracle:mysql:5.7.44-rogue"
+                        ],
+                        "tags": [
+                            "database",
+                            "eol-product",
+                            "self-signed"
                         ],
                         "vulns": []
                     }
@@ -76,11 +102,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-15T11:10:48Z",
+            "last_checked": "2026-10-22T15:02:59Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T11:10:48Z",
-                    "last_observed": "2026-10-15T11:10:48Z",
+                    "last_observed": "2026-10-22T15:02:59Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS33387 nocix  llc",
@@ -93,6 +119,10 @@
         },
         "shodan": {
             "last_checked": "2026-10-15T11:14:48Z",
+            "last_error": {
+                "occurred_at": "2026-10-22T15:06:36Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-10-15T11:14:48Z",
