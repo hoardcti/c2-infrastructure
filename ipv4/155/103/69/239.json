@@ -574,7 +574,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-15T00:31:45Z",
+            "last_checked": "2026-10-22T09:29:55Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T00:31:45Z",
@@ -639,6 +639,56 @@
                             {
                                 "port": 445,
                                 "transport": "tcp"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-22T09:29:55Z",
+                    "last_observed": "2026-10-22T09:29:55Z",
+                    "data": {
+                        "org": "FibaCloud",
+                        "isp": "WhiteLabel Fiba Cloud Operation Company, LLC",
+                        "asn": "AS44382",
+                        "os": "Windows 7 or 8",
+                        "country_code": "",
+                        "hostnames": [
+                            "33307-28818.dchost.com"
+                        ],
+                        "domains": [
+                            "dchost.com"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 139,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "a0fd637d0fc7e76e43908678467858c047ca736e7363b542f421aa48e5322895",
+                                "certificate_subject": "33307-28818",
+                                "certificate_issuer": "33307-28818"
                             }
                         ]
                     }

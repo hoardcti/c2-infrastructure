@@ -184,7 +184,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-15T05:50:23Z",
+            "last_checked": "2026-10-22T09:30:05Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T05:50:23Z",
@@ -237,6 +237,65 @@
                                 "port": 5985,
                                 "transport": "tcp",
                                 "product": "WinRM",
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-22T09:30:05Z",
+                    "last_observed": "2026-10-22T09:30:05Z",
+                    "data": {
+                        "org": "Thoi MMO Company Limited",
+                        "isp": "EZTECH-VN - EZ TECHNOLOGY COMPANY LIMITED",
+                        "asn": "AS150895",
+                        "os": "Windows 7 or 8",
+                        "country_code": "VN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "eol-os",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 137,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 139,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 2404,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "eol-os",
+                                    "self-signed"
+                                ],
+                                "jarm": "26d26d16d26d26d22c26d26d26d26dd7fc4c7c6ef19b77a4ca0787979cdc13",
+                                "certificate_sha256": "61ef5db7b95272d736d0298e9c95a2e44356667d16790bc44633d89dd3a790af",
+                                "certificate_subject": "WIN-BPN93HA3NON",
+                                "certificate_issuer": "WIN-BPN93HA3NON"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "tags": [
+                                    "eol-os"
+                                ],
                                 "http_title": "Not Found"
                             }
                         ]

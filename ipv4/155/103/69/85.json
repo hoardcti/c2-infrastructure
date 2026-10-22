@@ -156,11 +156,60 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-15T05:51:41Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-22T09:31:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-22T09:31:23Z",
+                    "last_observed": "2026-10-22T09:31:23Z",
+                    "data": {
+                        "org": "FibaCloud",
+                        "isp": "WhiteLabel Fiba Cloud Operation Company, LLC",
+                        "asn": "AS44382",
+                        "os": "Ubuntu",
+                        "country_code": "",
+                        "hostnames": [
+                            "32973-27867.dchost.com",
+                            "static-155-103-69-85.whitelabelservices.us"
+                        ],
+                        "domains": [
+                            "dchost.com",
+                            "whitelabelservices.us"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 139,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 5357,
+                                "transport": "tcp",
+                                "http_title": "Service Unavailable"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-21T14:58:19Z",
