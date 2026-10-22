@@ -140,11 +140,66 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-15T16:48:09Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-22T23:13:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-22T23:13:46Z",
+                    "last_observed": "2026-10-22T23:13:46Z",
+                    "data": {
+                        "org": "Google LLC",
+                        "isp": "Google LLC",
+                        "asn": "AS396982",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "186.250.41.34.bc.googleusercontent.com",
+                            "account.pahilabs.com"
+                        ],
+                        "domains": [
+                            "googleusercontent.com",
+                            "pahilabs.com"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "3b473691aa6bc254533b204de5e76414aea483610dc3eb24d87e1ca152212710",
+                                "certificate_subject": "account.pahilabs.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "41167ef3572ef3bcdd048f7702de32fa6a72d73c3a962242f47d18e996d1a08e",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-22T19:09:22Z",

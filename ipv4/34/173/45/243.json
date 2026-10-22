@@ -205,11 +205,82 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-15T16:47:57Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-22T23:13:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-22T23:13:34Z",
+                    "last_observed": "2026-10-22T23:13:34Z",
+                    "data": {
+                        "org": "Google LLC",
+                        "isp": "Google LLC",
+                        "asn": "AS396982",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "243.45.173.34.bc.googleusercontent.com",
+                            "lmi3d.com"
+                        ],
+                        "domains": [
+                            "googleusercontent.com",
+                            "lmi3d.com"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "devops"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "797468a8f65c99054a0e43b6c3eea266d4ee072d76f6275b20f7cbe1ded4f293",
+                                "certificate_subject": "lmi3d.com",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "797468a8f65c99054a0e43b6c3eea266d4ee072d76f6275b20f7cbe1ded4f293",
+                                "certificate_subject": "lmi3d.com",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 10250,
+                                "transport": "tcp",
+                                "product": "Kubernetes",
+                                "tags": [
+                                    "cloud",
+                                    "devops"
+                                ],
+                                "jarm": "40d40d40d00000000043d43d00043d6aff5ab0f4fc31897186312c9e639319",
+                                "certificate_sha256": "b118ee6994d9b7e06055386e2607f728fbfaf700acb6cbf76a9a31b6c5650dd2",
+                                "certificate_subject": "system:node:gke-wmseasytrade-default-pool-349eb8c6-k3sg",
+                                "certificate_organisation": "system:nodes",
+                                "certificate_issuer": "4e38e916-4eb0-4710-bac9-5d4f53d70b7f"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-22T19:09:22Z",

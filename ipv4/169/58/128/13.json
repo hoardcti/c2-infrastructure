@@ -140,11 +140,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-02T01:35:40Z",
-            "last_error": {
-                "occurred_at": "2026-10-15T20:20:19Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-22T23:14:04Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T01:35:40Z",
@@ -193,6 +189,71 @@
                                 "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
                                 "certificate_sha256": "1450cb12a3159c81622c1f171bd0c88c322ec79f198ddadfa0ec26f346644110",
                                 "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-22T23:14:04Z",
+                    "last_observed": "2026-10-22T23:14:04Z",
+                    "data": {
+                        "org": "Contabo GmbH",
+                        "isp": "Contabo GmbH",
+                        "asn": "AS51167",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "vmi3487487.contaboserver.net",
+                            "vmi3678301.contaboserver.net"
+                        ],
+                        "domains": [
+                            "contaboserver.net"
+                        ],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy"
+                            },
+                            {
+                                "port": 4444,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "1450cb12a3159c81622c1f171bd0c88c322ec79f198ddadfa0ec26f346644110",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 5986,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "Not Found",
+                                "jarm": "2ad2ad00000000022c00000000042d7c3e531499b157ee3e0de55ef02160c6",
+                                "certificate_sha256": "9655557c9e4e05637ae49cf13c62447798f1ff42d91d8f61ee1f5b53ce1b5f5c",
+                                "certificate_subject": "Cloudbase-Init WinRM",
+                                "certificate_issuer": "Cloudbase-Init WinRM"
                             }
                         ]
                     }

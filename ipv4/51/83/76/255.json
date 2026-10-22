@@ -155,11 +155,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-02T01:36:28Z",
-            "last_error": {
-                "occurred_at": "2026-10-15T20:21:06Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-22T23:14:52Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T01:36:28Z",
@@ -205,6 +201,60 @@
                                 "tags": [
                                     "c2",
                                     "eol-product"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "0b0e5729def4c885881cda2f45dd9c6083602815cfb1e5cbfe95a25f3b7e7a93",
+                                "certificate_subject": "vps-f5dd31a1.vps.ovh.net",
+                                "certificate_issuer": "YE2"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-22T23:14:52Z",
+                    "last_observed": "2026-10-22T23:14:52Z",
+                    "data": {
+                        "org": "OVH SAS",
+                        "isp": "OVH SAS",
+                        "asn": "AS16276",
+                        "os": "Linux",
+                        "country_code": "FR",
+                        "hostnames": [
+                            "vps-f5dd31a1.vps.ovh.net"
+                        ],
+                        "domains": [
+                            "ovh.net"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "malware"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.2p1 Ubuntu 2ubuntu3.8"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.28.3",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "eol-product",
+                                    "malware"
                                 ],
                                 "http_title": "Gophish - Login",
                                 "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
