@@ -130,11 +130,44 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-15T00:30:47Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-22T04:09:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-22T04:09:46Z",
+                    "last_observed": "2026-10-22T04:09:46Z",
+                    "data": {
+                        "org": "VPSLab Networks",
+                        "isp": "VPSLab-Networks RIZKI ABDUL AZIS",
+                        "asn": "AS200051",
+                        "os": null,
+                        "country_code": "IQ",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "35314584defa9f13be88a81a18a401193957253ea5dddf085f4b056a8f7c8c49",
+                                "certificate_subject": "WIN-1701",
+                                "certificate_issuer": "WIN-1701"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-21T14:58:19Z",

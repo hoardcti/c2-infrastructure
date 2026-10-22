@@ -192,7 +192,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-15T00:30:23Z",
+            "last_checked": "2026-10-22T04:09:22Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T13:51:48Z",
@@ -224,6 +224,54 @@
                         "isp": "EZTECH-VN - EZ TECHNOLOGY COMPANY LIMITED",
                         "asn": "AS150895",
                         "os": "Windows Server 2012 R2 (build 6.3.9600)",
+                        "country_code": "VN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "eol-os",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 137,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "eol-os",
+                                    "self-signed"
+                                ],
+                                "jarm": "26d26d16d26d26d22c26d26d26d26dd7fc4c7c6ef19b77a4ca0787979cdc13",
+                                "certificate_sha256": "c673e9bb40dd41d1434d1eceb9c0fbe2a2924c34f260d5aafa3f8a41773f4802",
+                                "certificate_subject": "WIN-BPN93HA3NON",
+                                "certificate_issuer": "WIN-BPN93HA3NON"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-22T04:09:22Z",
+                    "last_observed": "2026-10-22T04:09:22Z",
+                    "data": {
+                        "org": "CAO GIA NANOMEDECINE TECHNOLOGY JOINT STOCK COMPANY",
+                        "isp": "EZTECH-VN - EZ TECHNOLOGY COMPANY LIMITED",
+                        "asn": "AS150895",
+                        "os": null,
                         "country_code": "VN",
                         "hostnames": [],
                         "domains": [],
