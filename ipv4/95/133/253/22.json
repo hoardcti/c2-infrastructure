@@ -8,7 +8,7 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-03T06:17:06Z",
+            "last_checked": "2026-10-23T14:49:45Z",
             "observations": [
                 {
                     "first_observed": "2026-10-03T06:17:06Z",
@@ -29,11 +29,29 @@
                             "95-133-253-22.nodes.verda.host"
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-10-23T14:49:45Z",
+                    "last_observed": "2026-10-23T14:49:45Z",
+                    "data": {
+                        "abuse_confidence_score": 3,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-10-20T01:18:07Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Verda Cloud Oy",
+                        "domain": "verda.com",
+                        "country_code": "FI",
+                        "hostnames": []
+                    }
                 }
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-16T08:54:42Z",
+            "last_checked": "2026-10-23T14:47:53Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T16:13:43Z",
@@ -68,6 +86,31 @@
                             "95-133-253-22.nodes.verda.host"
                         ],
                         "cpes": [
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "devops"
+                        ],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-23T14:47:53Z",
+                    "last_observed": "2026-10-23T14:47:53Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            6443,
+                            8089,
+                            9000,
+                            10250
+                        ],
+                        "hostnames": [
+                            "95-133-253-22.nodes.verda.host"
+                        ],
+                        "cpes": [
+                            "cpe:/a:amazon:elastic_load_balancing",
                             "cpe:/a:openbsd:openssh:9.6p1",
                             "cpe:/o:canonical:ubuntu_linux"
                         ],
@@ -140,7 +183,7 @@
         },
         "shodan": {
             "last_error": {
-                "occurred_at": "2026-10-16T04:02:25Z",
+                "occurred_at": "2026-10-23T14:54:35Z",
                 "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
             },
             "observations": []
