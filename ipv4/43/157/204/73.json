@@ -8,7 +8,7 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-03T00:20:47Z",
+            "last_checked": "2026-10-23T09:52:10Z",
             "observations": [
                 {
                     "first_observed": "2026-10-03T00:20:47Z",
@@ -17,6 +17,24 @@
                         "abuse_confidence_score": 0,
                         "total_reports": 5,
                         "distinct_reporters": 4,
+                        "last_reported_at": "2026-08-28T04:01:55Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Asia Pacific Network Information Center, Pty. Ltd.",
+                        "domain": "apnic.net",
+                        "country_code": "ID",
+                        "hostnames": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-23T09:52:10Z",
+                    "last_observed": "2026-10-23T09:52:10Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
                         "last_reported_at": "2026-08-28T04:01:55Z",
                         "max_age_in_days": 90,
                         "is_whitelisted": false,
@@ -163,6 +181,10 @@
         },
         "shodan": {
             "last_checked": "2026-10-16T04:01:15Z",
+            "last_error": {
+                "occurred_at": "2026-10-23T09:57:36Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-10-16T04:01:15Z",

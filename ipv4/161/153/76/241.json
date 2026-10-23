@@ -8,7 +8,7 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-03T00:20:53Z",
+            "last_checked": "2026-10-23T09:52:16Z",
             "observations": [
                 {
                     "first_observed": "2026-10-03T00:20:53Z",
@@ -18,6 +18,24 @@
                         "total_reports": 1,
                         "distinct_reporters": 1,
                         "last_reported_at": "2026-08-28T03:56:32Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Oracle Corporation",
+                        "domain": "oracle.com",
+                        "country_code": "US",
+                        "hostnames": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-23T09:52:16Z",
+                    "last_observed": "2026-10-23T09:52:16Z",
+                    "data": {
+                        "abuse_confidence_score": 10,
+                        "total_reports": 2,
+                        "distinct_reporters": 2,
+                        "last_reported_at": "2026-10-20T01:27:55Z",
                         "max_age_in_days": 90,
                         "is_whitelisted": false,
                         "is_tor": false,
@@ -122,6 +140,10 @@
         },
         "shodan": {
             "last_checked": "2026-10-16T04:01:21Z",
+            "last_error": {
+                "occurred_at": "2026-10-23T09:57:42Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": []
         },
         "spamhaus": {

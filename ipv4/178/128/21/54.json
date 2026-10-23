@@ -136,7 +136,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-15T23:45:50Z",
+            "last_checked": "2026-10-23T09:56:50Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T08:20:43Z",
@@ -160,6 +160,73 @@
                                 "transport": "tcp",
                                 "product": "OpenSSH",
                                 "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "3fd3fd00000000022c43d43d00043dabadbb43f9614a00c843a4ecd074ab81",
+                                "certificate_sha256": "25f70c6d4330f59e04e07c1d2614e9d0e4ed4a8a778d2215f4019c0fe837228c",
+                                "certificate_subject": "localhost",
+                                "certificate_organisation": "wicked zoot-suit"
+                            },
+                            {
+                                "port": 8888,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "b5eb6af96497bd333a02922a8b5afde55029aef5ead7edb672b14678c58452fc",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-23T09:56:50Z",
+                    "last_observed": "2026-10-23T09:56:50Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": "Linux",
+                        "country_code": "SG",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20",
                                 "tags": [
                                     "cloud"
                                 ]

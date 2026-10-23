@@ -8,11 +8,11 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-03T00:20:51Z",
+            "last_checked": "2026-10-23T09:52:14Z",
             "observations": [
                 {
                     "first_observed": "2026-10-03T00:20:51Z",
-                    "last_observed": "2026-10-03T00:20:51Z",
+                    "last_observed": "2026-10-23T09:52:14Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -120,7 +120,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-16T04:01:19Z",
+            "last_checked": "2026-10-23T09:57:40Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T08:21:33Z",
@@ -147,6 +147,55 @@
                                 "transport": "tcp",
                                 "product": "OpenSSH",
                                 "version": "9.6p1 Ubuntu 3ubuntu13.19"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8444,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "711621315aeec21118ab023d0604234ee40caa46b52792b3dcdabbfb83291cf1",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-23T09:57:40Z",
+                    "last_observed": "2026-10-23T09:57:40Z",
+                    "data": {
+                        "org": "OVH GmbH",
+                        "isp": "OVH SAS",
+                        "asn": "AS16276",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "vps-18ff038b.vps.ovh.net"
+                        ],
+                        "domains": [
+                            "ovh.net"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
                             },
                             {
                                 "port": 8443,
