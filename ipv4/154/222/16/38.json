@@ -281,11 +281,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-02T01:36:48Z",
-            "last_error": {
-                "occurred_at": "2026-10-15T20:21:26Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-23T04:11:47Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T01:36:48Z",
@@ -368,6 +364,79 @@
                                     "open-dir"
                                 ],
                                 "http_title": "Directory listing for /"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "SimpleHTTPServer",
+                                "version": "0.6",
+                                "tags": [
+                                    "open-dir"
+                                ],
+                                "http_title": "Directory listing for /"
+                            },
+                            {
+                                "port": 13333,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "401 Authorization Required"
+                            },
+                            {
+                                "port": 50000,
+                                "transport": "tcp",
+                                "product": "nginx"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-23T04:11:47Z",
+                    "last_observed": "2026-10-23T04:11:47Z",
+                    "data": {
+                        "org": "cognetcloud INC",
+                        "isp": "cognetcloud INC",
+                        "asn": "AS401701",
+                        "os": null,
+                        "country_code": "HK",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "eol-product",
+                            "open-dir"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 81,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "5eab723c3c2d22489e85233f6b16cfd0745e9de107b2bdb79bb7251702e04982",
+                                "certificate_organisation": "Gophish"
                             },
                             {
                                 "port": 8080,

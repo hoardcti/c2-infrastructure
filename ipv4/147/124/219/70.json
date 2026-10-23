@@ -134,7 +134,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-15T23:44:36Z",
+            "last_checked": "2026-10-23T04:12:21Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T01:37:22Z",
@@ -159,6 +159,43 @@
                             {
                                 "port": 53,
                                 "transport": "udp"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                                "certificate_sha256": "3537f0e120778e1fb2f18f55adcc62459e16aa01d123c7a7b8aa7f213a3de710",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "http_title": "ginx console"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-23T04:12:21Z",
+                    "last_observed": "2026-10-23T04:12:21Z",
+                    "data": {
+                        "org": "Majestic Hosting Solutions, LLC",
+                        "isp": "Majestic Hosting Solutions, LLC",
+                        "asn": "AS396073",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.2p1 Ubuntu 4ubuntu0.13"
                             },
                             {
                                 "port": 3333,

@@ -134,11 +134,46 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-15T23:45:04Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-23T04:12:49Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-23T04:12:49Z",
+                    "last_observed": "2026-10-23T04:12:49Z",
+                    "data": {
+                        "org": "IONOS SE",
+                        "isp": "IONOS SE",
+                        "asn": "AS8560",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "awoduesse1dorf.org",
+                            "ip217-154-244-221.pbiaas.com"
+                        ],
+                        "domains": [
+                            "awoduesse1dorf.org",
+                            "pbiaas.com"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "3fd3fd00000000000043d3fd3fd43d79451d8c63b099acafdbabb24551d0e6",
+                                "certificate_sha256": "26b9e9634a17483ecd4b13a94c5914b4fc1eb6f7a98495d775f8266c42b9d733",
+                                "certificate_subject": "*.awoduesse1dorf.org",
+                                "certificate_issuer": "Sectigo Public Server Authentication CA DV R36"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-22T19:09:22Z",

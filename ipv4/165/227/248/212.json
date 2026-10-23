@@ -148,7 +148,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-15T23:44:46Z",
+            "last_checked": "2026-10-23T04:12:31Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T01:37:32Z",
@@ -250,6 +250,87 @@
                                 "transport": "tcp",
                                 "product": "OpenSSH",
                                 "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.27.4",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "21d19d00021d21d00042d43d0000005ad20eceaf7f71ae0887d2ff117bf97f",
+                                "certificate_sha256": "ae2e5cad88e0b4cb8a05fa51410dc2523dc5f5b8b5f3e08687f8e61bd97300e3",
+                                "certificate_subject": "CloudFlare Origin Certificate",
+                                "certificate_organisation": "CloudFlare, Inc."
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "3fe9ff1ae28a608d0c912b8de0790f2ed33729189c7c58f04c93552a22358cde",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 4321,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 7946,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-23T04:12:31Z",
+                    "last_observed": "2026-10-23T04:12:31Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "bitbean.dev"
+                        ],
+                        "domains": [
+                            "bitbean.dev"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20",
                                 "tags": [
                                     "cloud"
                                 ]

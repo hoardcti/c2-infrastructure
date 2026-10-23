@@ -122,7 +122,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-15T20:21:46Z",
+            "last_checked": "2026-10-23T04:12:07Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T01:37:08Z",
@@ -194,6 +194,68 @@
                         "isp": "DigitalOcean, LLC",
                         "asn": "AS14061",
                         "os": "Linux",
+                        "country_code": "GB",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "560132d07a7c310cb50ad9d3e59e2aec52da4d76525de03cd5a1ac83c2080268",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 8081,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-23T04:12:07Z",
+                    "last_observed": "2026-10-23T04:12:07Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": "Ubuntu",
                         "country_code": "GB",
                         "hostnames": [],
                         "domains": [],

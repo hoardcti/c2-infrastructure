@@ -115,11 +115,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-02T01:36:44Z",
-            "last_error": {
-                "occurred_at": "2026-10-15T20:21:23Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-23T04:11:43Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T01:36:44Z",
@@ -153,6 +149,44 @@
                                 "product": "GoPhish",
                                 "tags": [
                                     "c2"
+                                ],
+                                "http_title": "Gophish - Login"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-23T04:11:43Z",
+                    "last_observed": "2026-10-23T04:11:43Z",
+                    "data": {
+                        "org": "Leaseweb Deutschland GmbH",
+                        "isp": "Leaseweb Deutschland GmbH",
+                        "asn": "AS28753",
+                        "os": "Linux",
+                        "country_code": "DE",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "malware"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.13"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "malware"
                                 ],
                                 "http_title": "Gophish - Login"
                             }

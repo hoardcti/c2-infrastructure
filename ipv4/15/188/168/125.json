@@ -118,11 +118,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-02T01:37:06Z",
-            "last_error": {
-                "occurred_at": "2026-10-15T20:21:45Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-23T04:12:05Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T01:37:06Z",
@@ -154,6 +150,46 @@
                                 "tags": [
                                     "c2",
                                     "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00042d42d0000002059a3b916699461c5923779b77cf06b",
+                                "certificate_sha256": "466af261edbcf42ae45a440f9285520458dd98ec19835b164d797cfdda018435",
+                                "certificate_subject": "CloudFlare Origin Certificate",
+                                "certificate_organisation": "CloudFlare, Inc."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-23T04:12:05Z",
+                    "last_observed": "2026-10-23T04:12:05Z",
+                    "data": {
+                        "org": "Amazon Technologies Inc.",
+                        "isp": "Amazon.com, Inc.",
+                        "asn": "AS16509",
+                        "os": null,
+                        "country_code": "FR",
+                        "hostnames": [
+                            "ec2-15-188-168-125.eu-west-3.compute.amazonaws.com",
+                            "yetic.io"
+                        ],
+                        "domains": [
+                            "amazonaws.com",
+                            "yetic.io"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "malware"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "cloud",
+                                    "malware"
                                 ],
                                 "http_title": "Gophish - Login",
                                 "jarm": "2ad2ad0002ad2ad00042d42d0000002059a3b916699461c5923779b77cf06b",

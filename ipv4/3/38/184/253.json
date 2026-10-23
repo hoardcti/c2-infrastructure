@@ -8,11 +8,11 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-02T20:34:42Z",
+            "last_checked": "2026-10-23T04:06:45Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T20:34:42Z",
-                    "last_observed": "2026-10-02T20:34:42Z",
+                    "last_observed": "2026-10-23T04:06:45Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -165,7 +165,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-15T23:45:16Z",
+            "last_checked": "2026-10-23T04:13:01Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T23:45:16Z",
@@ -243,6 +243,109 @@
                                     "cloud"
                                 ],
                                 "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Panda C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "충전돼지",
+                                "jarm": "2ad2ad20d2ad2ad22c2ad2ad2ad2ad58d85fb2e6ce46c97d342b3bf6064ac7",
+                                "certificate_sha256": "c663a75800eea11199546fe4d5123c7c35cdc9a56e5df4f99ff667b1d33c3a75",
+                                "certificate_subject": "hw.pandakorea.com",
+                                "certificate_organisation": "100percent Co., Ltd.",
+                                "certificate_issuer": "TuringSign RSA Secure CA"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-23T04:13:01Z",
+                    "last_observed": "2026-10-23T04:13:01Z",
+                    "data": {
+                        "org": "AWS Asia Pacific (Seoul) Region",
+                        "isp": "Amazon.com, Inc.",
+                        "asn": "AS16509",
+                        "os": null,
+                        "country_code": "KR",
+                        "hostnames": [
+                            "ec2-3-38-184-253.ap-northeast-2.compute.amazonaws.com",
+                            "hw.pandakorea.com"
+                        ],
+                        "domains": [
+                            "amazonaws.com",
+                            "pandakorea.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2007-3205",
+                            "CVE-2013-2220",
+                            "CVE-2022-31625",
+                            "CVE-2022-31626",
+                            "CVE-2022-31627",
+                            "CVE-2022-31628",
+                            "CVE-2022-31629",
+                            "CVE-2022-31630",
+                            "CVE-2022-31631",
+                            "CVE-2022-37454",
+                            "CVE-2023-0567",
+                            "CVE-2023-0568",
+                            "CVE-2023-0662",
+                            "CVE-2023-3247",
+                            "CVE-2023-3823",
+                            "CVE-2023-3824",
+                            "CVE-2024-11233",
+                            "CVE-2024-11234",
+                            "CVE-2024-11236",
+                            "CVE-2024-1874",
+                            "CVE-2024-2408",
+                            "CVE-2024-3096",
+                            "CVE-2024-3566",
+                            "CVE-2024-4577",
+                            "CVE-2024-5458",
+                            "CVE-2024-5585",
+                            "CVE-2024-8925",
+                            "CVE-2024-8926",
+                            "CVE-2024-8927",
+                            "CVE-2024-8929",
+                            "CVE-2024-8932",
+                            "CVE-2024-9026",
+                            "CVE-2025-1217",
+                            "CVE-2025-1219",
+                            "CVE-2025-1220",
+                            "CVE-2025-14177",
+                            "CVE-2025-14178",
+                            "CVE-2025-14180",
+                            "CVE-2025-1734",
+                            "CVE-2025-1735",
+                            "CVE-2025-1736",
+                            "CVE-2025-1861",
+                            "CVE-2025-6491"
+                        ],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 111,
+                                "transport": "udp",
+                                "tags": [
+                                    "cloud"
+                                ]
                             },
                             {
                                 "port": 443,

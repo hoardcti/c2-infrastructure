@@ -8,11 +8,11 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-02T20:34:38Z",
+            "last_checked": "2026-10-23T04:06:41Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T20:34:38Z",
-                    "last_observed": "2026-10-02T20:34:38Z",
+                    "last_observed": "2026-10-23T04:06:41Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -140,7 +140,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-15T23:45:12Z",
+            "last_checked": "2026-10-23T04:12:57Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T23:45:12Z",
@@ -180,6 +180,53 @@
                                 "port": 5060,
                                 "transport": "udp",
                                 "product": "Asterisk PBX 22.10.1"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-23T04:12:57Z",
+                    "last_observed": "2026-10-23T04:12:57Z",
+                    "data": {
+                        "org": "OVH SAS",
+                        "isp": "OVH SAS",
+                        "asn": "AS16276",
+                        "os": null,
+                        "country_code": "FR",
+                        "hostnames": [
+                            "mail.ckzmail.com"
+                        ],
+                        "domains": [
+                            "ckzmail.com"
+                        ],
+                        "tags": [
+                            "malware"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "malware"
+                                ],
+                                "http_title": "Gophish - Login"
+                            },
+                            {
+                                "port": 5060,
+                                "transport": "udp",
+                                "product": "Asterisk",
+                                "version": "22.10.1"
                             },
                             {
                                 "port": 8443,

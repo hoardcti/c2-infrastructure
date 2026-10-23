@@ -8,11 +8,11 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-02T20:34:40Z",
+            "last_checked": "2026-10-23T04:06:43Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T20:34:40Z",
-                    "last_observed": "2026-10-02T20:34:40Z",
+                    "last_observed": "2026-10-23T04:06:43Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -119,7 +119,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-15T23:45:14Z",
+            "last_checked": "2026-10-23T04:12:59Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T23:45:14Z",
@@ -145,6 +145,58 @@
                             {
                                 "port": 22,
                                 "transport": "tcp"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Panda C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "智能户外方舱厂家_户外机柜_首页-金华中兴通信技术有限公司"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Panda C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "智能户外方舱厂家_户外机柜_首页-金华中兴通信技术有限公司",
+                                "jarm": "3fd3fd0003fd3fd00042d42d0000002059a3b916699461c5923779b77cf06b",
+                                "certificate_sha256": "ccf5d8c01a9e429423eb8c60a18256c238df7b3086863e127a87c4bc97ce23c5",
+                                "certificate_subject": "jhzxct.com",
+                                "certificate_issuer": "Encryption Everywhere DV TLS CA - G2"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-23T04:12:59Z",
+                    "last_observed": "2026-10-23T04:12:59Z",
+                    "data": {
+                        "org": "Tencent cloud computing (Beijing) Co., Ltd.",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [
+                            "jhzxct.com",
+                            "www.jhzxct.com"
+                        ],
+                        "domains": [
+                            "jhzxct.com"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.16"
                             },
                             {
                                 "port": 80,

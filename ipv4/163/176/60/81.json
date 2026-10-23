@@ -176,7 +176,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-15T23:44:40Z",
+            "last_checked": "2026-10-23T04:12:25Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T01:37:26Z",
@@ -236,6 +236,104 @@
                                 "certificate_sha256": "7e5f8305647c624acdd8f6fa4e8954bc8e3a667f8eec48c4648e465ff7d44c42",
                                 "certificate_subject": "app.redfoot.eng.br",
                                 "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "776a1173f1808b901a463fe34c19e2d38dbe402d31c41b2781453d54684dcb1e",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 5006,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Actual"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 8081,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "500 Internal Server Error - Firefly III"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-23T04:12:25Z",
+                    "last_observed": "2026-10-23T04:12:25Z",
+                    "data": {
+                        "org": "Oracle Corporation",
+                        "isp": "Oracle Corporation",
+                        "asn": "AS31898",
+                        "os": "Ubuntu",
+                        "country_code": "US",
+                        "hostnames": [
+                            "app.redfoot.eng.br"
+                        ],
+                        "domains": [
+                            "redfoot.eng.br"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Apache2 Ubuntu Default Page: It works"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Actual",
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "4db0929d3250f555e2f6cb6ea44f0b061675ac494c64b52908cd70265913151b",
+                                "certificate_subject": "app.redfoot.eng.br",
+                                "certificate_issuer": "YE2"
                             },
                             {
                                 "port": 3333,

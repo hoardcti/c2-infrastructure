@@ -127,11 +127,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-02T01:36:42Z",
-            "last_error": {
-                "occurred_at": "2026-10-15T20:21:20Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-23T04:11:41Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T01:36:42Z",
@@ -181,6 +177,78 @@
                                 "product": "GoPhish",
                                 "tags": [
                                     "c2"
+                                ],
+                                "http_title": "Gophish - Login"
+                            },
+                            {
+                                "port": 6001,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 6002,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8000,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "Coolify"
+                            },
+                            {
+                                "port": 8085,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-23T04:11:41Z",
+                    "last_observed": "2026-10-23T04:11:41Z",
+                    "data": {
+                        "org": "OVH GmbH",
+                        "isp": "OVH SAS",
+                        "asn": "AS16276",
+                        "os": null,
+                        "country_code": "FR",
+                        "hostnames": [
+                            "vps-58759a90.vps.ovh.net"
+                        ],
+                        "domains": [
+                            "ovh.net"
+                        ],
+                        "tags": [
+                            "malware",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.0p2 Debian 7+deb13u4"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "3fd3fd00000000000043d43d00043dc3b2afa8a5ec09b510a8559aff7899fb",
+                                "certificate_sha256": "1c74df7446e5c4d5ab9a28478831818e89b896655790e4b1628e7d2bb40ac601",
+                                "certificate_subject": "TRAEFIK DEFAULT CERT",
+                                "certificate_issuer": "TRAEFIK DEFAULT CERT"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "malware"
                                 ],
                                 "http_title": "Gophish - Login"
                             },
