@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-22T14:58:17Z",
+            "last_checked": "2026-10-29T18:51:11Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T11:07:12Z",
@@ -87,6 +87,36 @@
                             "CVE-2025-23419"
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-10-29T18:51:11Z",
+                    "last_observed": "2026-10-29T18:51:11Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443,
+                            3306,
+                            5432,
+                            6379,
+                            8084,
+                            19000
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.22.1",
+                            "cpe:/a:oracle:mysql:8.0.43",
+                            "cpe:/a:redislabs:redis"
+                        ],
+                        "tags": [
+                            "database",
+                            "eol-product",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
                 }
             ]
         },
@@ -109,11 +139,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-22T15:02:29Z",
+            "last_checked": "2026-10-29T18:57:43Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T11:10:18Z",
-                    "last_observed": "2026-10-22T15:02:29Z",
+                    "last_observed": "2026-10-29T18:57:43Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS174 cogent communications",
@@ -125,11 +155,94 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-22T15:06:06Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-29T18:59:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T18:59:45Z",
+                    "last_observed": "2026-10-29T18:59:45Z",
+                    "data": {
+                        "org": "Cogent Communications, LLC",
+                        "isp": "cognetcloud INC",
+                        "asn": "AS401701",
+                        "os": null,
+                        "country_code": "VE",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "database",
+                            "eol-product",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.22.1",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.22.1",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Vite App",
+                                "jarm": "2ad2ad0002ad2ad00042d42d0000002059a3b916699461c5923779b77cf06b",
+                                "certificate_sha256": "6b9c6538228092c7c7ce50b924c7c87550bbeb7d6b0583f9f997d206c3392f03",
+                                "certificate_subject": "*.hubusec.com",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 3306,
+                                "transport": "tcp",
+                                "product": "MySQL",
+                                "version": "8.0.43",
+                                "tags": [
+                                    "database",
+                                    "eol-product"
+                                ]
+                            },
+                            {
+                                "port": 5432,
+                                "transport": "tcp",
+                                "product": "PostgreSQL",
+                                "tags": [
+                                    "database",
+                                    "self-signed"
+                                ],
+                                "certificate_sha256": "10116d66cd89c020dd5204480d9bf0d480e81596d32eabbf220a523783df2c0c",
+                                "certificate_subject": "rcy0155165197.local",
+                                "certificate_issuer": "rcy0155165197.local"
+                            },
+                            {
+                                "port": 6379,
+                                "transport": "tcp",
+                                "product": "Redis key-value store"
+                            },
+                            {
+                                "port": 8084,
+                                "transport": "tcp",
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 19000,
+                                "transport": "tcp",
+                                "http_title": "Welcome to nginx!"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-29T14:08:33Z",

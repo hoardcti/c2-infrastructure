@@ -31,11 +31,11 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-22T14:58:25Z",
+            "last_checked": "2026-10-29T18:51:19Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T11:07:20Z",
-                    "last_observed": "2026-10-22T14:58:25Z",
+                    "last_observed": "2026-10-29T18:51:19Z",
                     "data": {
                         "ports": [
                             80,
@@ -78,11 +78,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-22T15:02:45Z",
+            "last_checked": "2026-10-29T18:57:59Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T11:10:34Z",
-                    "last_observed": "2026-10-22T15:02:45Z",
+                    "last_observed": "2026-10-29T18:57:59Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS45090 shenzhen tencent computer systems company limited",
@@ -113,11 +113,58 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-22T15:06:22Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-29T19:00:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T19:00:01Z",
+                    "last_observed": "2026-10-29T19:00:01Z",
+                    "data": {
+                        "org": "Tencent cloud computing (Beijing) Co., Ltd.",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": "Ubuntu",
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Apache2 Ubuntu Default Page: It works"
+                            },
+                            {
+                                "port": 1443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-29T14:08:33Z",

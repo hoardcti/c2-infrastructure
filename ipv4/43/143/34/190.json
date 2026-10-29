@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-22T14:58:20Z",
+            "last_checked": "2026-10-29T18:51:14Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T11:07:15Z",
@@ -53,6 +53,31 @@
                             "cpe:/a:f5:nginx:1.29.4",
                             "cpe:/a:openbsd:openssh:8.2p1",
                             "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-29T18:51:14Z",
+                    "last_observed": "2026-10-29T18:51:14Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443,
+                            4444,
+                            8085,
+                            12345
+                        ],
+                        "hostnames": [
+                            "tike00.chat",
+                            "www.tike00.chat"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.29.4"
                         ],
                         "tags": [
                             "cloud",
@@ -82,11 +107,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-22T15:02:35Z",
+            "last_checked": "2026-10-29T18:57:49Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T11:10:24Z",
-                    "last_observed": "2026-10-22T15:02:35Z",
+                    "last_observed": "2026-10-29T18:57:49Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS45090 shenzhen tencent computer systems company limited",
@@ -111,11 +136,81 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-22T15:06:12Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-29T18:59:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T18:59:51Z",
+                    "last_observed": "2026-10-29T18:59:51Z",
+                    "data": {
+                        "org": "Tencent Cloud Computing (Beijing) Co., Ltd",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [
+                            "tike00.chat",
+                            "www.tike00.chat"
+                        ],
+                        "domains": [
+                            "tike00.chat"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "eol-product",
+                            "pqc"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.2p1 Ubuntu 4ubuntu0.13",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.29.4",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.29.4",
+                                "tags": [
+                                    "eol-product",
+                                    "pqc"
+                                ],
+                                "http_title": "Tike Map 0_0",
+                                "jarm": "2ad2ad0002ad2ad00042d42d0000002059a3b916699461c5923779b77cf06b",
+                                "certificate_sha256": "b87427672604007ccd31af4efb72f25d3dc39c4c936d58ed2b80b1d0fd761e90",
+                                "certificate_subject": "tike00.chat",
+                                "certificate_issuer": "TrustAsia DV TLS RSA CA 2024"
+                            },
+                            {
+                                "port": 4444,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8085,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 12345,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-29T14:08:33Z",
