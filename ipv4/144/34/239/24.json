@@ -114,11 +114,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-22T15:03:33Z",
+            "last_checked": "2026-10-29T23:14:05Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T11:11:22Z",
-                    "last_observed": "2026-10-22T15:03:33Z",
+                    "last_observed": "2026-10-29T23:14:05Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS25820 it7 networks inc",
@@ -130,11 +130,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-15T11:15:22Z",
-            "last_error": {
-                "occurred_at": "2026-10-22T15:07:10Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-29T23:18:09Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T11:15:22Z",
@@ -144,6 +140,38 @@
                         "isp": "IT7 Networks Inc",
                         "asn": "AS25820",
                         "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "144.34.239.24.16clouds.com"
+                        ],
+                        "domains": [
+                            "16clouds.com"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.15"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-29T23:18:09Z",
+                    "last_observed": "2026-10-29T23:18:09Z",
+                    "data": {
+                        "org": "Cluster Logic Inc",
+                        "isp": "IT7 Networks Inc",
+                        "asn": "AS25820",
+                        "os": "Linux",
                         "country_code": "US",
                         "hostnames": [
                             "144.34.239.24.16clouds.com"
