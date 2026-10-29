@@ -1,0 +1,431 @@
+{
+    "schema_version": 2,
+    "ip": "129.121.115.43",
+    "first_seen": "2026-10-29T14:08:26Z",
+    "last_seen": "2026-10-29T14:08:26Z",
+    "flags": [
+        "aisuru"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-29T14:11:55Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:11:55Z",
+                    "last_observed": "2026-10-29T14:11:55Z",
+                    "data": {
+                        "abuse_confidence_score": 12,
+                        "total_reports": 2,
+                        "distinct_reporters": 2,
+                        "last_reported_at": "2026-10-25T10:44:20Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Oso Grande IP Services, LLC",
+                        "domain": "newfold.com",
+                        "country_code": "US",
+                        "hostnames": [
+                            "129-121-115-43.unifiedlayer.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-29T14:08:52Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:52Z",
+                    "last_observed": "2026-10-29T14:08:52Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            2222,
+                            8080,
+                            50000
+                        ],
+                        "hostnames": [
+                            "129-121-115-43.unifiedlayer.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:eclipse:jetty:12.1.5",
+                            "cpe:/a:jenkins:jenkins:2.541.3",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/a:oracle:jre",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": [
+                            "CVE-2026-10050",
+                            "CVE-2026-10051",
+                            "CVE-2026-1605",
+                            "CVE-2026-2332",
+                            "CVE-2026-53435",
+                            "CVE-2026-53436",
+                            "CVE-2026-53437",
+                            "CVE-2026-53438",
+                            "CVE-2026-53439",
+                            "CVE-2026-53440",
+                            "CVE-2026-53441",
+                            "CVE-2026-53442",
+                            "CVE-2026-5795",
+                            "CVE-2026-6790",
+                            "CVE-2026-70427",
+                            "CVE-2026-70428",
+                            "CVE-2026-70429",
+                            "CVE-2026-70430",
+                            "CVE-2026-8384",
+                            "CVE-2026-84645",
+                            "CVE-2026-84646",
+                            "CVE-2026-84648",
+                            "CVE-2026-84650",
+                            "CVE-2026-84651",
+                            "CVE-2026-84652",
+                            "CVE-2026-84653",
+                            "CVE-2026-84655",
+                            "CVE-2026-84656",
+                            "CVE-2026-84657"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-29T14:08:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:37Z",
+                    "last_observed": "2026-10-29T14:08:37Z",
+                    "data": {
+                        "asn": "AS31898",
+                        "as_name": "Oracle Corporation",
+                        "as_domain": "oracle.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-29T14:15:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:15:59Z",
+                    "last_observed": "2026-10-29T14:15:59Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS62729 a small orange llc",
+                        "country_code": "US",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "6ad986f53c1e0c0d7b3f4dfb",
+                                "name": "Malware Filter - Botnet List - 21-10-2026 (Part 2)",
+                                "created": "2026-10-22T03:45:57.709Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-29T14:17:13Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-29T14:08:33Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-29T14:08:26Z",
+            "observations": [
+                {
+                    "key": "1983780",
+                    "first_observed": "2026-10-29T14:08:26Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
+                    "flags": [
+                        "aisuru"
+                    ],
+                    "data": {
+                        "ioc": "129.121.115.43:8001",
+                        "port": 8001,
+                        "threat_type": "botnet_cc",
+                        "malware": "Aisuru",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
+                        "confidence_level": 90,
+                        "first_seen": "2026-10-25T06:21:47Z",
+                        "reference": null,
+                        "tags": [
+                            "ADB",
+                            "AISURU",
+                            "DDoS",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-29T14:11:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:11:04Z",
+                    "last_observed": "2026-10-29T14:11:04Z",
+                    "data": {
+                        "urlhaus_reference": "https://urlhaus.abuse.ch/host/129.121.115.43/",
+                        "first_seen": "2026-10-25T06:35:01Z",
+                        "url_count": 10,
+                        "blacklists": {
+                            "spamhaus_dbl": "not listed",
+                            "surbl": "not listed"
+                        },
+                        "urls": [
+                            {
+                                "id": "3993105",
+                                "url": "http://129.121.115.43:9163/llx.mips",
+                                "status": "online",
+                                "date_added": "2026-10-25T06:35:20Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "adb",
+                                    "aisuru",
+                                    "ddos",
+                                    "elf",
+                                    "mips",
+                                    "mirai"
+                                ]
+                            },
+                            {
+                                "id": "3993471",
+                                "url": "http://129.121.115.43:9163/llx.i686",
+                                "status": "online",
+                                "date_added": "2026-10-25T06:39:54Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "adb",
+                                    "aisuru",
+                                    "ddos",
+                                    "elf",
+                                    "i686",
+                                    "mirai"
+                                ]
+                            },
+                            {
+                                "id": "3993824",
+                                "url": "http://129.121.115.43:9163/llx.mipsel",
+                                "status": "online",
+                                "date_added": "2026-10-25T06:44:17Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "adb",
+                                    "aisuru",
+                                    "ddos",
+                                    "elf",
+                                    "mipsel",
+                                    "mirai"
+                                ]
+                            },
+                            {
+                                "id": "3994411",
+                                "url": "http://129.121.115.43:9163/llx.apk",
+                                "status": "online",
+                                "date_added": "2026-10-25T06:52:06Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "Loader",
+                                    "adb",
+                                    "aisuru",
+                                    "android",
+                                    "apk ",
+                                    "mirai"
+                                ]
+                            },
+                            {
+                                "id": "3995235",
+                                "url": "http://129.121.115.43:9163/llx.armv5l",
+                                "status": "online",
+                                "date_added": "2026-10-25T07:02:46Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "adb",
+                                    "aisuru",
+                                    "arm",
+                                    "ddos",
+                                    "elf",
+                                    "mirai"
+                                ]
+                            },
+                            {
+                                "id": "3995269",
+                                "url": "http://129.121.115.43:9163/llx.powerpc",
+                                "status": "online",
+                                "date_added": "2026-10-25T07:03:19Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "PowerPC",
+                                    "adb",
+                                    "aisuru",
+                                    "ddos",
+                                    "elf",
+                                    "mirai"
+                                ]
+                            },
+                            {
+                                "id": "3996385",
+                                "url": "http://129.121.115.43:9163/llx.armv7l",
+                                "status": "online",
+                                "date_added": "2026-10-25T07:17:16Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "adb",
+                                    "aisuru",
+                                    "arm",
+                                    "ddos",
+                                    "elf",
+                                    "mirai"
+                                ]
+                            },
+                            {
+                                "id": "3996682",
+                                "url": "http://129.121.115.43:9163/llx.armv4l",
+                                "status": "online",
+                                "date_added": "2026-10-25T07:21:19Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "adb",
+                                    "aisuru",
+                                    "arm",
+                                    "ddos",
+                                    "elf",
+                                    "mirai"
+                                ]
+                            },
+                            {
+                                "id": "4001346",
+                                "url": "http://129.121.115.43:9163/llx.x86_64",
+                                "status": "online",
+                                "date_added": "2026-10-25T08:20:59Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "adb",
+                                    "aisuru",
+                                    "ddos",
+                                    "elf",
+                                    "mirai",
+                                    "x86-64"
+                                ]
+                            },
+                            {
+                                "id": "4002469",
+                                "url": "http://129.121.115.43:9163/llx.aarch64",
+                                "status": "online",
+                                "date_added": "2026-10-25T08:35:08Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "AArch64",
+                                    "adb",
+                                    "aisuru",
+                                    "ddos",
+                                    "elf",
+                                    "mirai"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "virustotal": {
+            "last_checked": "2026-10-29T14:22:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:22:01Z",
+                    "last_observed": "2026-10-29T14:22:01Z",
+                    "data": {
+                        "as_owner": "Oracle Corporation",
+                        "asn": 31898,
+                        "network": "129.121.96.0/19",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 8,
+                            "suspicious": 2,
+                            "undetected": 33,
+                            "harmless": 49,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Criminal IP",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Emsisoft",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "MalwarePatrol",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Webroot",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

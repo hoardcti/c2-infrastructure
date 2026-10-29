@@ -1,0 +1,175 @@
+{
+    "schema_version": 2,
+    "ip": "23.155.44.134",
+    "first_seen": "2026-10-29T14:08:26Z",
+    "last_seen": "2026-10-29T14:08:26Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-29T14:11:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:11:35Z",
+                    "last_observed": "2026-10-29T14:11:35Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Servury",
+                        "domain": "servury.com",
+                        "country_code": "CA",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-29T14:08:42Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:42Z",
+                    "last_observed": "2026-10-29T14:08:42Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            443
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "pqc"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-29T14:08:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:35Z",
+                    "last_observed": "2026-10-29T14:08:35Z",
+                    "data": {
+                        "asn": "AS395904",
+                        "as_name": "Servury",
+                        "as_domain": "servury.com",
+                        "country_code": "CA",
+                        "country": "Canada",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-29T14:13:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:13:25Z",
+                    "last_observed": "2026-10-29T14:13:25Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-29T14:16:53Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-29T14:08:33Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-29T14:08:26Z",
+            "observations": [
+                {
+                    "key": "1990008",
+                    "first_observed": "2026-10-29T14:08:26Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "23.155.44.134:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-10-26T06:36:17Z",
+                        "reference": null,
+                        "tags": [
+                            "395904",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-29T14:10:44Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-29T14:19:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:19:31Z",
+                    "last_observed": "2026-10-29T14:19:31Z",
+                    "data": {
+                        "as_owner": "Servury",
+                        "asn": 395904,
+                        "network": "23.155.44.0/24",
+                        "country": "CA",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 1,
+                            "undetected": 91,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "jarm": "40d40d40d00000000043d43d00043d6aff5ab0f4fc31897186312c9e639319",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

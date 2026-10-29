@@ -1,0 +1,200 @@
+{
+    "schema_version": 2,
+    "ip": "154.37.214.22",
+    "first_seen": "2026-10-29T14:08:26Z",
+    "last_seen": "2026-10-29T14:08:26Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-29T14:11:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:11:59Z",
+                    "last_observed": "2026-10-29T14:11:59Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Commercial",
+                        "isp": "NetLab",
+                        "domain": "as979.net",
+                        "country_code": "HK",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-29T14:08:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:54Z",
+                    "last_observed": "2026-10-29T14:08:54Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            3000,
+                            8443,
+                            55555
+                        ],
+                        "hostnames": [
+                            "vortexnode.kdns.fr"
+                        ],
+                        "cpes": [
+                            "cpe:/a:helpsystems:cobalt_strike",
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-29T14:08:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:37Z",
+                    "last_observed": "2026-10-29T14:08:37Z",
+                    "data": {
+                        "asn": "AS979",
+                        "as_name": "NetLab Global",
+                        "as_domain": "as979.net",
+                        "country_code": "HK",
+                        "country": "Hong Kong",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-29T14:16:03Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:16:03Z",
+                    "last_observed": "2026-10-29T14:16:03Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS174 cogent communications",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-29T14:17:17Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-29T14:08:33Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-29T14:08:26Z",
+            "observations": [
+                {
+                    "key": "1984111",
+                    "first_observed": "2026-10-29T14:08:26Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "154.37.214.22:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-10-25T06:20:48Z",
+                        "reference": null,
+                        "tags": [
+                            "979",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-29T14:11:08Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-29T14:22:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:22:31Z",
+                    "last_observed": "2026-10-29T14:22:31Z",
+                    "data": {
+                        "as_owner": "NetLab Global",
+                        "asn": 979,
+                        "network": "154.37.212.0/22",
+                        "country": "HK",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 2,
+                            "undetected": 35,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Certego",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "jarm": "06d06d07d06d06d06c42d42d000000644097aad2d54615f61ac543d994271f",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

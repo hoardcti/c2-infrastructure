@@ -1,0 +1,129 @@
+{
+    "schema_version": 2,
+    "ip": "213.139.77.217",
+    "first_seen": "2026-10-29T14:08:26Z",
+    "last_seen": "2026-10-29T14:08:26Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-29T14:12:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:12:13Z",
+                    "last_observed": "2026-10-29T14:12:13Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "New York Network",
+                        "domain": "clouvider.com",
+                        "country_code": "US",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-29T14:09:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:09:01Z",
+                    "last_observed": "2026-10-29T14:09:01Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            8443
+                        ],
+                        "hostnames": [
+                            "fecaboak.club"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.24.0",
+                            "cpe:/a:helpsystems:cobalt_strike",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-29T14:08:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:39Z",
+                    "last_observed": "2026-10-29T14:08:39Z",
+                    "data": {
+                        "asn": "AS398256",
+                        "as_name": "Ultahost, Inc.",
+                        "as_domain": "ultahost.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-29T14:17:31Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-29T14:08:33Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-29T14:08:26Z",
+            "observations": [
+                {
+                    "key": "1998507",
+                    "first_observed": "2026-10-29T14:08:26Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "213.139.77.217:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-10-28T06:35:48Z",
+                        "reference": null,
+                        "tags": [
+                            "398256",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-29T14:11:22Z",
+            "observations": []
+        }
+    }
+}

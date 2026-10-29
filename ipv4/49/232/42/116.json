@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "49.232.42.116",
     "first_seen": "2026-10-20T19:04:11Z",
-    "last_seen": "2026-10-23T14:46:39Z",
+    "last_seen": "2026-10-29T14:08:26Z",
     "flags": [
         "cobalt strike"
     ],
@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-20T19:04:21Z",
+            "last_checked": "2026-10-29T14:09:29Z",
             "observations": [
                 {
                     "first_observed": "2026-10-20T19:04:21Z",
@@ -56,6 +56,28 @@
                             15443,
                             16048,
                             18059
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:apache:http_server"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "proxy",
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-29T14:09:29Z",
+                    "last_observed": "2026-10-29T14:09:29Z",
+                    "data": {
+                        "ports": [
+                            443,
+                            8080,
+                            8081,
+                            15038
                         ],
                         "hostnames": [],
                         "cpes": [
@@ -107,6 +129,10 @@
         },
         "shodan": {
             "last_checked": "2026-10-20T19:11:57Z",
+            "last_error": {
+                "occurred_at": "2026-10-29T14:18:27Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-10-20T19:11:57Z",
@@ -245,16 +271,16 @@
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-22T23:05:56Z",
+            "last_checked": "2026-10-29T14:08:33Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-23T14:46:39Z",
+            "last_checked": "2026-10-29T14:08:26Z",
             "observations": [
                 {
                     "key": "1976010",
                     "first_observed": "2026-10-20T19:04:11Z",
-                    "last_observed": "2026-10-23T14:46:39Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
                     "flags": [
                         "cobalt strike"
                     ],

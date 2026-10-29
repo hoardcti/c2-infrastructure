@@ -2,13 +2,13 @@
     "schema_version": 2,
     "ip": "213.152.176.152",
     "first_seen": "2026-10-21T19:13:47Z",
-    "last_seen": "2026-10-23T14:46:39Z",
+    "last_seen": "2026-10-29T14:08:26Z",
     "flags": [
         "remcos"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-21T19:16:47Z",
+            "last_checked": "2026-10-29T14:12:33Z",
             "observations": [
                 {
                     "first_observed": "2026-10-21T19:16:47Z",
@@ -29,11 +29,31 @@
                             "connected-by.global-layer.com"
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-10-29T14:12:33Z",
+                    "last_observed": "2026-10-29T14:12:33Z",
+                    "data": {
+                        "abuse_confidence_score": 40,
+                        "total_reports": 45,
+                        "distinct_reporters": 13,
+                        "last_reported_at": "2026-10-29T02:56:03Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Global Layer B.V.",
+                        "domain": "global-layer.com",
+                        "country_code": "NL",
+                        "hostnames": [
+                            "connected-by.global-layer.com"
+                        ]
+                    }
                 }
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-21T19:13:57Z",
+            "last_checked": "2026-10-29T14:09:11Z",
             "observations": [
                 {
                     "first_observed": "2026-10-21T19:13:57Z",
@@ -43,6 +63,25 @@
                             88,
                             89,
                             8586,
+                            58585
+                        ],
+                        "hostnames": [
+                            "connected-by.global-layer.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-29T14:09:11Z",
+                    "last_observed": "2026-10-29T14:09:11Z",
+                    "data": {
+                        "ports": [
+                            88,
+                            89,
                             58585
                         ],
                         "hostnames": [
@@ -93,6 +132,10 @@
         },
         "shodan": {
             "last_checked": "2026-10-21T19:21:27Z",
+            "last_error": {
+                "occurred_at": "2026-10-29T14:17:51Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-10-21T19:21:27Z",
@@ -138,16 +181,16 @@
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-22T23:05:56Z",
+            "last_checked": "2026-10-29T14:08:33Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-23T14:46:39Z",
+            "last_checked": "2026-10-29T14:08:26Z",
             "observations": [
                 {
                     "key": "1978477",
                     "first_observed": "2026-10-21T19:13:47Z",
-                    "last_observed": "2026-10-23T14:46:39Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
                     "flags": [
                         "remcos"
                     ],

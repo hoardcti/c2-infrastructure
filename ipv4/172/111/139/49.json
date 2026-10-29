@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "172.111.139.49",
     "first_seen": "2026-10-20T19:04:11Z",
-    "last_seen": "2026-10-23T14:46:39Z",
+    "last_seen": "2026-10-29T14:08:26Z",
     "flags": [
         "remcos"
     ],
@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-20T19:04:26Z",
+            "last_checked": "2026-10-29T14:09:34Z",
             "observations": [
                 {
                     "first_observed": "2026-10-20T19:04:26Z",
@@ -43,6 +43,26 @@
                         "hostnames": [],
                         "cpes": [],
                         "tags": [],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-29T14:09:34Z",
+                    "last_observed": "2026-10-29T14:09:34Z",
+                    "data": {
+                        "ports": [
+                            135,
+                            443,
+                            445,
+                            902
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
                         "vulns": [
                             "CVE-2020-0796"
                         ]
@@ -85,16 +105,84 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-20T19:12:07Z",
-            "observations": []
+            "last_checked": "2026-10-29T14:18:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:18:37Z",
+                    "last_observed": "2026-10-29T14:18:37Z",
+                    "data": {
+                        "org": "Internet Security - US NY",
+                        "isp": "Datacamp Limited",
+                        "asn": "AS212238",
+                        "os": "Windows (build 10.0.19041)",
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad0002ad2ad0002ad2ad2ad2ad755a2cec4b52fb1bce1ac7f1e48c8a7d",
+                                "certificate_sha256": "ab3f4471751a2fd2493b31e72ee5158a051639f2fd465d77419960323100645c",
+                                "certificate_subject": "VMware",
+                                "certificate_issuer": "VMware"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 902,
+                                "transport": "tcp",
+                                "product": "VMware Authentication Daemon",
+                                "version": "1.10",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "ab3f4471751a2fd2493b31e72ee5158a051639f2fd465d77419960323100645c",
+                                "certificate_subject": "VMware",
+                                "certificate_issuer": "VMware"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "version": "10.0.19041",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "5063676fbf86ea2be4d2f0f6f906a02283c4391c547e7a820862ffdfbfa046b9",
+                                "certificate_subject": "DESKTOP-1JS75NJ",
+                                "certificate_issuer": "DESKTOP-1JS75NJ"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-22T23:05:56Z",
+            "last_checked": "2026-10-29T14:08:33Z",
             "observations": [
                 {
                     "key": "172.111.128.0/17",
                     "first_observed": "2026-10-20T19:04:18Z",
-                    "last_observed": "2026-10-22T23:05:56Z",
+                    "last_observed": "2026-10-29T14:08:33Z",
                     "data": {
                         "cidr": "172.111.128.0/17",
                         "sblid": "SBL688605",
@@ -104,12 +192,12 @@
             ]
         },
         "threatfox": {
-            "last_checked": "2026-10-23T14:46:39Z",
+            "last_checked": "2026-10-29T14:08:26Z",
             "observations": [
                 {
                     "key": "1976082",
                     "first_observed": "2026-10-20T19:04:11Z",
-                    "last_observed": "2026-10-23T14:46:39Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
                     "flags": [
                         "remcos"
                     ],

@@ -1,0 +1,173 @@
+{
+    "schema_version": 2,
+    "ip": "37.204.245.214",
+    "first_seen": "2026-10-29T14:08:26Z",
+    "last_seen": "2026-10-29T14:08:26Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-29T14:11:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:11:37Z",
+                    "last_observed": "2026-10-29T14:11:37Z",
+                    "data": {
+                        "abuse_confidence_score": 1,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-10-17T20:20:14Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Fixed Line ISP",
+                        "isp": "PJSC Rostelecom",
+                        "domain": "rt.ru",
+                        "country_code": "RU",
+                        "hostnames": [
+                            "broadband-37.204-245-214.ip.moscow.rt.ru"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-29T14:08:43Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-29T14:08:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:35Z",
+                    "last_observed": "2026-10-29T14:08:35Z",
+                    "data": {
+                        "asn": "AS42610",
+                        "as_name": "OJSC National Cable Networks",
+                        "as_domain": "rt.ru",
+                        "country_code": "RU",
+                        "country": "Russia",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-29T14:13:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:13:27Z",
+                    "last_observed": "2026-10-29T14:13:27Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS42610 pjsc rostelecom",
+                        "country_code": "RU",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-29T14:16:55Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-29T14:08:33Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-29T14:08:26Z",
+            "observations": [
+                {
+                    "key": "1982358",
+                    "first_observed": "2026-10-29T14:08:26Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "37.204.245.214:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-24T06:08:56Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "hunterhow",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-29T14:10:46Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-29T14:19:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:19:46Z",
+                    "last_observed": "2026-10-29T14:19:46Z",
+                    "data": {
+                        "as_owner": "Rostelecom",
+                        "asn": 42610,
+                        "network": "37.204.0.0/16",
+                        "country": "RU",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -12,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 2,
+                            "undetected": 36,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 2
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "2ad2ad00000000022c000000000000bf721f3875f59bd326d181ba4ca237fb",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

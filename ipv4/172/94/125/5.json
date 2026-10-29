@@ -2,17 +2,17 @@
     "schema_version": 2,
     "ip": "172.94.125.5",
     "first_seen": "2026-10-22T09:21:18Z",
-    "last_seen": "2026-10-23T14:46:39Z",
+    "last_seen": "2026-10-29T14:08:26Z",
     "flags": [
         "remcos"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-22T09:24:19Z",
+            "last_checked": "2026-10-29T14:12:19Z",
             "observations": [
                 {
                     "first_observed": "2026-10-22T09:24:19Z",
-                    "last_observed": "2026-10-22T09:24:19Z",
+                    "last_observed": "2026-10-29T14:12:19Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-22T09:21:27Z",
+            "last_checked": "2026-10-29T14:09:04Z",
             "observations": []
         },
         "ipinfo": {
@@ -70,22 +70,33 @@
         },
         "shodan": {
             "last_error": {
-                "occurred_at": "2026-10-22T09:29:37Z",
+                "occurred_at": "2026-10-29T14:17:37Z",
                 "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
             },
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-10-23T09:49:01Z",
-            "observations": []
+            "last_checked": "2026-10-29T14:08:33Z",
+            "observations": [
+                {
+                    "key": "172.94.0.0/17",
+                    "first_observed": "2026-10-29T14:08:33Z",
+                    "last_observed": "2026-10-29T14:08:33Z",
+                    "data": {
+                        "cidr": "172.94.0.0/17",
+                        "sblid": "SBL688689",
+                        "rir": "arin"
+                    }
+                }
+            ]
         },
         "threatfox": {
-            "last_checked": "2026-10-23T14:46:39Z",
+            "last_checked": "2026-10-29T14:08:26Z",
             "observations": [
                 {
                     "key": "1979663",
                     "first_observed": "2026-10-22T09:21:18Z",
-                    "last_observed": "2026-10-23T14:46:39Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
                     "flags": [
                         "remcos"
                     ],

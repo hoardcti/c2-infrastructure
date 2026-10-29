@@ -2,17 +2,17 @@
     "schema_version": 2,
     "ip": "94.154.32.128",
     "first_seen": "2026-10-22T09:21:18Z",
-    "last_seen": "2026-10-23T14:46:39Z",
+    "last_seen": "2026-10-29T14:08:26Z",
     "flags": [
         "remcos"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-22T09:24:15Z",
+            "last_checked": "2026-10-29T14:12:15Z",
             "observations": [
                 {
                     "first_observed": "2026-10-22T09:24:15Z",
-                    "last_observed": "2026-10-22T09:24:15Z",
+                    "last_observed": "2026-10-29T14:12:15Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-22T09:21:25Z",
+            "last_checked": "2026-10-29T14:09:02Z",
             "observations": [
                 {
                     "first_observed": "2026-10-22T09:21:25Z",
@@ -40,6 +40,25 @@
                         "ports": [
                             22,
                             135
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:9.2p1",
+                            "cpe:/o:debian:debian_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-29T14:09:02Z",
+                    "last_observed": "2026-10-29T14:09:02Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            135,
+                            5985
                         ],
                         "hostnames": [],
                         "cpes": [
@@ -89,6 +108,10 @@
         },
         "shodan": {
             "last_checked": "2026-10-22T09:29:33Z",
+            "last_error": {
+                "occurred_at": "2026-10-29T14:17:33Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-10-22T09:29:33Z",
@@ -116,16 +139,16 @@
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-23T09:49:01Z",
+            "last_checked": "2026-10-29T14:08:33Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-23T14:46:39Z",
+            "last_checked": "2026-10-29T14:08:26Z",
             "observations": [
                 {
                     "key": "1979567",
                     "first_observed": "2026-10-22T09:21:18Z",
-                    "last_observed": "2026-10-23T14:46:39Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
                     "flags": [
                         "remcos"
                     ],

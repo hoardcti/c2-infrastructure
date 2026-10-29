@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "189.150.94.134",
     "first_seen": "2026-10-20T19:04:11Z",
-    "last_seen": "2026-10-23T14:46:39Z",
+    "last_seen": "2026-10-29T14:08:26Z",
     "flags": [
         "darkcomet"
     ],
@@ -33,7 +33,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-20T19:04:27Z",
+            "last_checked": "2026-10-29T14:09:35Z",
             "observations": [
                 {
                     "first_observed": "2026-10-20T19:04:27Z",
@@ -47,6 +47,35 @@
                         ],
                         "cpes": [],
                         "tags": [],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-29T14:09:35Z",
+                    "last_observed": "2026-10-29T14:09:35Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443,
+                            1194,
+                            1604,
+                            5001,
+                            6001,
+                            7050,
+                            9050
+                        ],
+                        "hostnames": [
+                            "dsl-134-94-150-189-dynamic.prod-infinitum.com.mx",
+                            "mundi.synology.me"
+                        ],
+                        "cpes": [
+                            "cpe:/a:synology:diskstation_manager:7.4.1-90080",
+                            "cpe:/o:microsoft:windows"
+                        ],
+                        "tags": [
+                            "malware",
+                            "vpn"
+                        ],
                         "vulns": []
                     }
                 }
@@ -87,7 +116,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-20T19:12:09Z",
+            "last_checked": "2026-10-29T14:18:39Z",
             "observations": [
                 {
                     "first_observed": "2026-10-20T19:12:09Z",
@@ -134,20 +163,104 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-10-29T14:18:39Z",
+                    "last_observed": "2026-10-29T14:18:39Z",
+                    "data": {
+                        "org": "Gestión de direccionamiento UniNet",
+                        "isp": "UNINET",
+                        "asn": "AS8151",
+                        "os": null,
+                        "country_code": "MX",
+                        "hostnames": [
+                            "dsl-134-94-150-189-dynamic.prod-infinitum.com.mx",
+                            "mundi.synology.me"
+                        ],
+                        "domains": [
+                            "prod-infinitum.com.mx",
+                            "synology.me"
+                        ],
+                        "tags": [
+                            "malware",
+                            "vpn"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "http_title": "Descarga Disponible � Mundinas"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "http_title": "Descarga Disponible � Mundinas",
+                                "jarm": "27d27d27d29d27d00042d42d00000026a95928fa9b620834c2feff40bccb8f",
+                                "certificate_sha256": "9c8d1a85675c9094997027c0d2ea695f4fd121501ffbb42a426e1b12da05c0a6",
+                                "certificate_subject": "mundi.synology.me",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 1194,
+                                "transport": "udp",
+                                "tags": [
+                                    "vpn"
+                                ]
+                            },
+                            {
+                                "port": 1604,
+                                "transport": "tcp",
+                                "product": "DarkComet trojan",
+                                "tags": [
+                                    "malware"
+                                ]
+                            },
+                            {
+                                "port": 2320,
+                                "transport": "tcp",
+                                "product": "DarkComet trojan",
+                                "tags": [
+                                    "malware"
+                                ]
+                            },
+                            {
+                                "port": 5001,
+                                "transport": "tcp",
+                                "http_title": "Mundi&nbsp;-&nbsp;Synology&nbsp;NAS",
+                                "jarm": "27d27d27d29d27d00042d42d00000026a95928fa9b620834c2feff40bccb8f",
+                                "certificate_sha256": "9c8d1a85675c9094997027c0d2ea695f4fd121501ffbb42a426e1b12da05c0a6",
+                                "certificate_subject": "mundi.synology.me",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 6001,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 7050,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 9050,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-22T23:05:56Z",
+            "last_checked": "2026-10-29T14:08:33Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-10-23T14:46:39Z",
+            "last_checked": "2026-10-29T14:08:26Z",
             "observations": [
                 {
                     "key": "1976000",
                     "first_observed": "2026-10-20T19:04:11Z",
-                    "last_observed": "2026-10-23T14:46:39Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
                     "flags": [
                         "darkcomet"
                     ],

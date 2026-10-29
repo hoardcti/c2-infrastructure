@@ -1,0 +1,233 @@
+{
+    "schema_version": 2,
+    "ip": "64.188.67.232",
+    "first_seen": "2026-10-29T14:08:26Z",
+    "last_seen": "2026-10-29T14:08:26Z",
+    "flags": [
+        "xworm"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-29T14:11:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:11:41Z",
+                    "last_observed": "2026-10-29T14:11:41Z",
+                    "data": {
+                        "abuse_confidence_score": 10,
+                        "total_reports": 2,
+                        "distinct_reporters": 2,
+                        "last_reported_at": "2026-10-27T17:03:57Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "play2go.cloud - Cheap and reliable hosting",
+                        "domain": "play2go.cloud",
+                        "country_code": "DE",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-29T14:08:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:45Z",
+                    "last_observed": "2026-10-29T14:08:45Z",
+                    "data": {
+                        "ports": [
+                            22
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:10.2p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-29T14:08:36Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:36Z",
+                    "last_observed": "2026-10-29T14:08:36Z",
+                    "data": {
+                        "asn": "AS215439",
+                        "as_name": "PLAY2GO INTERNATIONAL LIMITED",
+                        "as_domain": "play2go.cloud",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-29T14:14:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:14:54Z",
+                    "last_observed": "2026-10-29T14:14:54Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS46339 csdvrs  llc",
+                        "country_code": "US",
+                        "pulse_count": 2,
+                        "pulses": [
+                            {
+                                "id": "6ad2a3a50164a7b4d5329c5b",
+                                "name": "XWorm - IOCs paquetes.xlsx 2026",
+                                "created": "2026-10-16T22:22:29.094Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "IOC",
+                                    "RENIC",
+                                    "malware",
+                                    "xworm"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6ad593ec15909ef9b7175c72",
+                                "name": "Malware Filter - Botnet List - 18-10-2026 (Part 7)",
+                                "created": "2026-10-19T03:52:12.385Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-29T14:16:59Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-29T14:08:33Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-29T14:08:26Z",
+            "observations": [
+                {
+                    "key": "1997966",
+                    "first_observed": "2026-10-29T14:08:26Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
+                    "flags": [
+                        "xworm"
+                    ],
+                    "data": {
+                        "ioc": "64.188.67.232:7000",
+                        "port": 7000,
+                        "threat_type": "botnet_cc",
+                        "malware": "XWorm",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.xworm",
+                        "confidence_level": 50,
+                        "first_seen": "2026-10-28T06:35:59Z",
+                        "reference": "https://www.virustotal.com/gui/file/c4a943df1d073bb3e918d69dd79c1f7b1e7681ae495cce100bf341ebcb4657c3",
+                        "tags": [
+                            "RAT",
+                            "XWorm",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-29T14:10:50Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-29T14:20:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:20:16Z",
+                    "last_observed": "2026-10-29T14:20:16Z",
+                    "data": {
+                        "as_owner": "Play2go International Limited",
+                        "asn": 215439,
+                        "network": "64.188.64.0/22",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 8,
+                            "suspicious": 1,
+                            "undetected": 34,
+                            "harmless": 49,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "CyRadar",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "2ad2ad0002ad2ad00042d42d000000d71691dd6844b6fa08f9c5c2b4b882cc",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -2,17 +2,17 @@
     "schema_version": 2,
     "ip": "91.92.41.120",
     "first_seen": "2026-10-21T09:18:16Z",
-    "last_seen": "2026-10-23T14:46:39Z",
+    "last_seen": "2026-10-29T14:08:26Z",
     "flags": [
         "remcos"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-21T09:21:13Z",
+            "last_checked": "2026-10-29T14:12:45Z",
             "observations": [
                 {
                     "first_observed": "2026-10-21T09:21:13Z",
-                    "last_observed": "2026-10-21T09:21:13Z",
+                    "last_observed": "2026-10-29T14:12:45Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-21T09:18:25Z",
+            "last_checked": "2026-10-29T14:09:17Z",
             "observations": [
                 {
                     "first_observed": "2026-10-21T09:18:25Z",
@@ -39,6 +39,21 @@
                     "data": {
                         "ports": [
                             53,
+                            3389
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-29T14:09:17Z",
+                    "last_observed": "2026-10-29T14:09:17Z",
+                    "data": {
+                        "ports": [
                             3389
                         ],
                         "hostnames": [],
@@ -87,6 +102,10 @@
         },
         "shodan": {
             "last_checked": "2026-10-21T09:25:51Z",
+            "last_error": {
+                "occurred_at": "2026-10-29T14:18:03Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-10-21T09:25:51Z",
@@ -133,16 +152,27 @@
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-23T09:49:01Z",
-            "observations": []
+            "last_checked": "2026-10-29T14:08:33Z",
+            "observations": [
+                {
+                    "key": "91.92.41.0/24",
+                    "first_observed": "2026-10-29T14:08:33Z",
+                    "last_observed": "2026-10-29T14:08:33Z",
+                    "data": {
+                        "cidr": "91.92.41.0/24",
+                        "sblid": "SBL701005",
+                        "rir": ""
+                    }
+                }
+            ]
         },
         "threatfox": {
-            "last_checked": "2026-10-23T14:46:39Z",
+            "last_checked": "2026-10-29T14:08:26Z",
             "observations": [
                 {
                     "key": "1977892",
                     "first_observed": "2026-10-21T09:18:16Z",
-                    "last_observed": "2026-10-23T14:46:39Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
                     "flags": [
                         "remcos"
                     ],

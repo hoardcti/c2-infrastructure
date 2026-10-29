@@ -1,0 +1,178 @@
+{
+    "schema_version": 2,
+    "ip": "2.50.131.213",
+    "first_seen": "2026-10-29T14:08:26Z",
+    "last_seen": "2026-10-29T14:08:26Z",
+    "flags": [
+        "asyncrat"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-29T14:11:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:11:30Z",
+                    "last_observed": "2026-10-29T14:11:30Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Fixed Line ISP",
+                        "isp": "Emirates Telecommunications Corporation",
+                        "domain": "etisalat.ae",
+                        "country_code": "AE",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-29T14:08:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:39Z",
+                    "last_observed": "2026-10-29T14:08:39Z",
+                    "data": {
+                        "ports": [
+                            443
+                        ],
+                        "hostnames": [
+                            "bba-2-50-131-213.alshamil.net.ae"
+                        ],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-29T14:08:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:35Z",
+                    "last_observed": "2026-10-29T14:08:35Z",
+                    "data": {
+                        "asn": "AS5384",
+                        "as_name": "Emirates Internet",
+                        "as_domain": "emirates.net.ae",
+                        "country_code": "AE",
+                        "country": "United Arab Emirates",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-29T14:13:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:13:21Z",
+                    "last_observed": "2026-10-29T14:13:21Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS5384 emirates telecommunications corporation",
+                        "country_code": "AE",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-29T14:16:48Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-29T14:08:33Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-29T14:08:26Z",
+            "observations": [
+                {
+                    "key": "1984120",
+                    "first_observed": "2026-10-29T14:08:26Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
+                    "flags": [
+                        "asyncrat"
+                    ],
+                    "data": {
+                        "ioc": "2.50.131.213:8808",
+                        "port": 8808,
+                        "threat_type": "botnet_cc",
+                        "malware": "AsyncRAT",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat",
+                        "confidence_level": 50,
+                        "first_seen": "2026-10-25T06:20:46Z",
+                        "reference": null,
+                        "tags": [
+                            "5384",
+                            "asyncrat",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-29T14:10:39Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-29T14:18:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:18:46Z",
+                    "last_observed": "2026-10-29T14:18:46Z",
+                    "data": {
+                        "as_owner": "Emirates Telecommunications Group Company (etisalat Group) Pjsc",
+                        "asn": 5384,
+                        "network": "2.50.0.0/15",
+                        "country": "AE",
+                        "continent": "AS",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 38,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "jarm": "29d29d00029d29d08c29d29d29d29dcd113334714fbefb4b0aba4000bcef62",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

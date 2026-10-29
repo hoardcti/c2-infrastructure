@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "172.94.111.51",
     "first_seen": "2026-10-21T03:59:44Z",
-    "last_seen": "2026-10-23T14:46:39Z",
+    "last_seen": "2026-10-29T14:08:26Z",
     "flags": [
         "remcos"
     ],
@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-21T03:59:55Z",
+            "last_checked": "2026-10-29T14:09:25Z",
             "observations": [
                 {
                     "first_observed": "2026-10-21T03:59:55Z",
@@ -88,22 +88,33 @@
         },
         "shodan": {
             "last_error": {
-                "occurred_at": "2026-10-21T04:07:24Z",
+                "occurred_at": "2026-10-29T14:18:19Z",
                 "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
             },
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-10-23T04:03:43Z",
-            "observations": []
+            "last_checked": "2026-10-29T14:08:33Z",
+            "observations": [
+                {
+                    "key": "172.94.0.0/17",
+                    "first_observed": "2026-10-29T14:08:33Z",
+                    "last_observed": "2026-10-29T14:08:33Z",
+                    "data": {
+                        "cidr": "172.94.0.0/17",
+                        "sblid": "SBL688689",
+                        "rir": "arin"
+                    }
+                }
+            ]
         },
         "threatfox": {
-            "last_checked": "2026-10-23T14:46:39Z",
+            "last_checked": "2026-10-29T14:08:26Z",
             "observations": [
                 {
                     "key": "1976754",
                     "first_observed": "2026-10-21T03:59:44Z",
-                    "last_observed": "2026-10-23T14:46:39Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
                     "flags": [
                         "remcos"
                     ],

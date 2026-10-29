@@ -1,0 +1,181 @@
+{
+    "schema_version": 2,
+    "ip": "111.229.162.72",
+    "first_seen": "2026-10-29T14:08:26Z",
+    "last_seen": "2026-10-29T14:08:26Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-29T14:11:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:11:51Z",
+                    "last_observed": "2026-10-29T14:11:51Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Tencent cloud computing (Beijing) Co., Ltd.",
+                        "domain": "tencentcloud.com",
+                        "country_code": "CN",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-29T14:08:50Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:50Z",
+                    "last_observed": "2026-10-29T14:08:50Z",
+                    "data": {
+                        "ports": [
+                            80
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-29T14:08:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:37Z",
+                    "last_observed": "2026-10-29T14:08:37Z",
+                    "data": {
+                        "asn": "AS45090",
+                        "as_name": "Shenzhen Tencent Computer Systems Company Limited",
+                        "as_domain": "tencent.com",
+                        "country_code": "CN",
+                        "country": "China",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-29T14:15:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:15:31Z",
+                    "last_observed": "2026-10-29T14:15:31Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS45090 shenzhen tencent computer systems company limited",
+                        "country_code": "CN",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-29T14:17:09Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-29T14:08:33Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-29T14:08:26Z",
+            "observations": [
+                {
+                    "key": "1990009",
+                    "first_observed": "2026-10-29T14:08:26Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "111.229.162.72:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-10-26T06:36:18Z",
+                        "reference": null,
+                        "tags": [
+                            "45090",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-29T14:11:00Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-29T14:21:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:21:31Z",
+                    "last_observed": "2026-10-29T14:21:31Z",
+                    "data": {
+                        "as_owner": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": 45090,
+                        "network": "111.229.0.0/16",
+                        "country": "CN",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

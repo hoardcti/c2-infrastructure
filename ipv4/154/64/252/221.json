@@ -1,0 +1,209 @@
+{
+    "schema_version": 2,
+    "ip": "154.64.252.221",
+    "first_seen": "2026-10-29T14:08:26Z",
+    "last_seen": "2026-10-29T14:08:26Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-29T14:12:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:12:01Z",
+                    "last_observed": "2026-10-29T14:12:01Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Commercial",
+                        "isp": "NetLab Global",
+                        "domain": "as979.net",
+                        "country_code": "HK",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-29T14:08:55Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:55Z",
+                    "last_observed": "2026-10-29T14:08:55Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            443,
+                            3000,
+                            8889,
+                            50050
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:f5:nginx",
+                            "cpe:/a:helpsystems:cobalt_strike",
+                            "cpe:/a:openbsd:openssh:9.2p1",
+                            "cpe:/o:debian:debian_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-29T14:08:38Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:38Z",
+                    "last_observed": "2026-10-29T14:08:38Z",
+                    "data": {
+                        "asn": "AS979",
+                        "as_name": "NetLab Global",
+                        "as_domain": "as979.net",
+                        "country_code": "HK",
+                        "country": "Hong Kong",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-29T14:16:10Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:16:10Z",
+                    "last_observed": "2026-10-29T14:16:10Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS174 cogent communications",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-29T14:17:19Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-29T14:08:33Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-29T14:08:26Z",
+            "observations": [
+                {
+                    "key": "1984110",
+                    "first_observed": "2026-10-29T14:08:26Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "154.64.252.221:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-10-25T06:20:49Z",
+                        "reference": null,
+                        "tags": [
+                            "979",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-29T14:11:10Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-29T14:22:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:22:46Z",
+                    "last_observed": "2026-10-29T14:22:46Z",
+                    "data": {
+                        "as_owner": "NetLab Global",
+                        "asn": 979,
+                        "network": "154.64.248.0/21",
+                        "country": "HK",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 1,
+                            "undetected": 36,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Kaspersky",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "jarm": "3fd3fd0003fd3fd21c42d42d000000bdfc58c9a46434368cf60aa440385763",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

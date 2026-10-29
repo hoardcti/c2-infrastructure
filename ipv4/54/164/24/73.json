@@ -1,0 +1,186 @@
+{
+    "schema_version": 2,
+    "ip": "54.164.24.73",
+    "first_seen": "2026-10-29T14:08:26Z",
+    "last_seen": "2026-10-29T14:08:26Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-29T14:11:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:11:39Z",
+                    "last_observed": "2026-10-29T14:11:39Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Amazon Technologies Inc.",
+                        "domain": "amazon.com",
+                        "country_code": "US",
+                        "hostnames": [
+                            "ec2-54-164-24-73.compute-1.amazonaws.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-29T14:08:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:44Z",
+                    "last_observed": "2026-10-29T14:08:44Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443
+                        ],
+                        "hostnames": [
+                            "ec2-54-164-24-73.compute-1.amazonaws.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:helpsystems:cobalt_strike"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-29T14:08:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:35Z",
+                    "last_observed": "2026-10-29T14:08:35Z",
+                    "data": {
+                        "asn": "AS14618",
+                        "as_name": "Amazon.com, Inc.",
+                        "as_domain": "amazon.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-29T14:13:29Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:13:29Z",
+                    "last_observed": "2026-10-29T14:13:29Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS14618 amazon.com  inc.",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-29T14:16:57Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-29T14:08:33Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-29T14:08:26Z",
+            "observations": [
+                {
+                    "key": "1984116",
+                    "first_observed": "2026-10-29T14:08:26Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "54.164.24.73:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-10-25T06:20:47Z",
+                        "reference": null,
+                        "tags": [
+                            "14618",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-29T14:10:48Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-29T14:20:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:20:01Z",
+                    "last_observed": "2026-10-29T14:20:01Z",
+                    "data": {
+                        "as_owner": "Amazon.com, Inc.",
+                        "asn": 14618,
+                        "network": "54.160.0.0/13",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 0,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Kaspersky",
+                                "category": "malicious",
+                                "result": "malware"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

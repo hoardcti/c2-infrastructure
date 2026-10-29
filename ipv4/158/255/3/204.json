@@ -1,0 +1,193 @@
+{
+    "schema_version": 2,
+    "ip": "158.255.3.204",
+    "first_seen": "2026-10-29T14:08:26Z",
+    "last_seen": "2026-10-29T14:08:26Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-29T14:12:03Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:12:03Z",
+                    "last_observed": "2026-10-29T14:12:03Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "LLC IT BASIS",
+                        "domain": "hostkey.ru",
+                        "country_code": "RU",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-29T14:08:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:56Z",
+                    "last_observed": "2026-10-29T14:08:56Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            443
+                        ],
+                        "hostnames": [
+                            "argusecurity.ru",
+                            "www.argusecurity.ru"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.24.0",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-29T14:08:38Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:38Z",
+                    "last_observed": "2026-10-29T14:08:38Z",
+                    "data": {
+                        "asn": "AS50867",
+                        "as_name": "HOSTKEY B.V.",
+                        "as_domain": "hostkey.ru",
+                        "country_code": "RU",
+                        "country": "Russia",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-29T14:16:10Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:16:10Z",
+                    "last_observed": "2026-10-29T14:16:10Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS50867 hostkey b.v.",
+                        "country_code": "RU",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-29T14:17:21Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-29T14:08:33Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-29T14:08:26Z",
+            "observations": [
+                {
+                    "key": "1982337",
+                    "first_observed": "2026-10-29T14:08:26Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "158.255.3.204:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-24T06:08:57Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "hunterio",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-29T14:11:12Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-29T14:23:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:23:01Z",
+                    "last_observed": "2026-10-29T14:23:01Z",
+                    "data": {
+                        "as_owner": "Hostkey B.v.",
+                        "asn": 50867,
+                        "network": "158.255.0.0/21",
+                        "country": "RU",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -12,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 38,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 2
+                        },
+                        "tags": [],
+                        "jarm": "1dd40d40d00040d00042d43d000000e1ea2a807a629b496b664cf07ad7c08d",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

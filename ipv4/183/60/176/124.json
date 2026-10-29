@@ -1,0 +1,153 @@
+{
+    "schema_version": 2,
+    "ip": "183.60.176.124",
+    "first_seen": "2026-10-29T14:08:26Z",
+    "last_seen": "2026-10-29T14:08:26Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-29T14:12:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:12:07Z",
+                    "last_observed": "2026-10-29T14:12:07Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Fixed Line ISP",
+                        "isp": "CHINANET Guangdong province network",
+                        "domain": "chinatelecom.cn",
+                        "country_code": "CN",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-29T14:08:58Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-29T14:08:38Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:38Z",
+                    "last_observed": "2026-10-29T14:08:38Z",
+                    "data": {
+                        "asn": "AS4134",
+                        "as_name": "CHINANET BACKBONE",
+                        "as_domain": "chinatelecom.com.cn",
+                        "country_code": "CN",
+                        "country": "China",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-29T14:16:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:16:39Z",
+                    "last_observed": "2026-10-29T14:16:39Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS4134 chinanet",
+                        "country_code": "CN",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-29T14:17:25Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-29T14:08:33Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-29T14:08:26Z",
+            "observations": [
+                {
+                    "key": "1982362",
+                    "first_observed": "2026-10-29T14:08:26Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "183.60.176.124:50008",
+                        "port": 50008,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-24T06:08:55Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "hunterhow",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-29T14:11:16Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-29T14:23:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:23:31Z",
+                    "last_observed": "2026-10-29T14:23:31Z",
+                    "data": {
+                        "as_owner": "Chinanet",
+                        "asn": 4134,
+                        "network": "183.60.176.0/20",
+                        "country": "CN",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -12,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 1,
+                            "undetected": 38,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 2
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

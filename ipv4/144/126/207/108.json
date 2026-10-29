@@ -1,0 +1,209 @@
+{
+    "schema_version": 2,
+    "ip": "144.126.207.108",
+    "first_seen": "2026-10-29T14:08:26Z",
+    "last_seen": "2026-10-29T14:08:26Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-29T14:11:57Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:11:57Z",
+                    "last_observed": "2026-10-29T14:11:57Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2025-03-06T03:55:32Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "DigitalOcean, LLC",
+                        "domain": "digitalocean.com",
+                        "country_code": "GB",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-29T14:08:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:53Z",
+                    "last_observed": "2026-10-29T14:08:53Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            3000
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:facebook:react",
+                            "cpe:/a:helpsystems:cobalt_strike",
+                            "cpe:/a:openbsd:openssh:9.9p1",
+                            "cpe:/a:vercel:next.js",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-29T14:08:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:08:37Z",
+                    "last_observed": "2026-10-29T14:08:37Z",
+                    "data": {
+                        "asn": "AS14061",
+                        "as_name": "DigitalOcean, LLC",
+                        "as_domain": "digitalocean.com",
+                        "country_code": "GB",
+                        "country": "United Kingdom",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-29T14:16:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:16:01Z",
+                    "last_observed": "2026-10-29T14:16:01Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS14061 digitalocean  llc",
+                        "country_code": "GB",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-29T14:17:15Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-29T14:08:33Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-29T14:08:26Z",
+            "observations": [
+                {
+                    "key": "1984112",
+                    "first_observed": "2026-10-29T14:08:26Z",
+                    "last_observed": "2026-10-29T14:08:26Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "144.126.207.108:80",
+                        "port": 80,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-10-25T06:20:49Z",
+                        "reference": null,
+                        "tags": [
+                            "14061",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-29T14:11:06Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-29T14:22:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-29T14:22:16Z",
+                    "last_observed": "2026-10-29T14:22:16Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "144.126.192.0/18",
+                        "country": "GB",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 1,
+                            "undetected": 35,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Criminal IP",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
