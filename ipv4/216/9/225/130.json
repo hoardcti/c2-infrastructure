@@ -166,11 +166,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-01T13:19:28Z",
-            "last_error": {
-                "occurred_at": "2026-10-21T23:14:54Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-30T23:00:32Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T13:19:28Z",
@@ -197,6 +193,40 @@
                             },
                             {
                                 "port": 139,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-30T23:00:32Z",
+                    "last_observed": "2026-10-30T23:00:32Z",
+                    "data": {
+                        "org": "DC HOST Inc.",
+                        "isp": "WhiteLabel Fiba Cloud Operation Company, LLC",
+                        "asn": "AS44382",
+                        "os": "Windows 7 or 8",
+                        "country_code": "TR",
+                        "hostnames": [
+                            "33380-28771.dchost.com"
+                        ],
+                        "domains": [
+                            "dchost.com"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 139,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 445,
                                 "transport": "tcp"
                             }
                         ]

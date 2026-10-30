@@ -1,0 +1,177 @@
+{
+    "schema_version": 2,
+    "ip": "209.38.84.233",
+    "first_seen": "2026-10-30T22:51:26Z",
+    "last_seen": "2026-10-30T22:51:26Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-30T22:54:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-30T22:54:37Z",
+                    "last_observed": "2026-10-30T22:54:37Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "DigitalOcean, LLC",
+                        "domain": "digitalocean.com",
+                        "country_code": "AU",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-30T22:51:42Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-30T22:51:42Z",
+                    "last_observed": "2026-10-30T22:51:42Z",
+                    "data": {
+                        "ports": [
+                            22
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:10.2p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-30T22:51:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-30T22:51:34Z",
+                    "last_observed": "2026-10-30T22:51:34Z",
+                    "data": {
+                        "asn": "AS14061",
+                        "as_name": "DigitalOcean, LLC",
+                        "as_domain": "digitalocean.com",
+                        "country_code": "AU",
+                        "country": "Australia",
+                        "continent_code": "OC",
+                        "continent": "Oceania"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-30T22:55:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-30T22:55:56Z",
+                    "last_observed": "2026-10-30T22:55:56Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-30T22:59:14Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-30T22:51:32Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-30T22:51:26Z",
+            "observations": [
+                {
+                    "key": "2005019",
+                    "first_observed": "2026-10-30T22:51:26Z",
+                    "last_observed": "2026-10-30T22:51:26Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "209.38.84.233:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-30T19:03:13Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-30T22:53:49Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-30T23:02:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-30T23:02:56Z",
+                    "last_observed": "2026-10-30T23:02:56Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "209.38.0.0/16",
+                        "country": "AU",
+                        "continent": "OC",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 38,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

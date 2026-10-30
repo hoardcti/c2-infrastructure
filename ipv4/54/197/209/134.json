@@ -1,0 +1,166 @@
+{
+    "schema_version": 2,
+    "ip": "54.197.209.134",
+    "first_seen": "2026-10-30T22:51:26Z",
+    "last_seen": "2026-10-30T22:51:26Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-30T22:54:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-30T22:54:30Z",
+                    "last_observed": "2026-10-30T22:54:30Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-08-26T16:47:24Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Amazon.com, Inc.",
+                        "domain": "amazon.com",
+                        "country_code": "US",
+                        "hostnames": [
+                            "ec2-54-197-209-134.compute-1.amazonaws.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-30T22:51:38Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-30T22:51:38Z",
+                    "last_observed": "2026-10-30T22:51:38Z",
+                    "data": {
+                        "ports": [
+                            80
+                        ],
+                        "hostnames": [
+                            "ec2-54-197-209-134.compute-1.amazonaws.com"
+                        ],
+                        "cpes": [],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-30T22:51:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-30T22:51:33Z",
+                    "last_observed": "2026-10-30T22:51:33Z",
+                    "data": {
+                        "asn": "AS14618",
+                        "as_name": "Amazon.com, Inc.",
+                        "as_domain": "amazon.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-30T22:55:48Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-30T22:55:48Z",
+                    "last_observed": "2026-10-30T22:55:48Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS14618 amazon.com  inc.",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-30T22:59:06Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-30T22:51:32Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-30T22:51:26Z",
+            "observations": [
+                {
+                    "key": "2005040",
+                    "first_observed": "2026-10-30T22:51:26Z",
+                    "last_observed": "2026-10-30T22:51:26Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "54.197.209.134:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-30T19:03:13Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-30T22:53:41Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-30T23:01:57Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-30T23:01:57Z",
+                    "last_observed": "2026-10-30T23:01:57Z",
+                    "data": {
+                        "as_owner": "Amazon.com, Inc.",
+                        "asn": 14618,
+                        "network": "54.196.0.0/15",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 0,
+                            "undetected": 38,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

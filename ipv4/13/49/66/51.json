@@ -1,0 +1,171 @@
+{
+    "schema_version": 2,
+    "ip": "13.49.66.51",
+    "first_seen": "2026-10-30T22:51:26Z",
+    "last_seen": "2026-10-30T22:51:26Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-30T22:54:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-30T22:54:23Z",
+                    "last_observed": "2026-10-30T22:54:23Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Amazon Data Services Sweden",
+                        "domain": "amazon.com",
+                        "country_code": "SE",
+                        "hostnames": [
+                            "ec2-13-49-66-51.eu-north-1.compute.amazonaws.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-30T22:51:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-30T22:51:35Z",
+                    "last_observed": "2026-10-30T22:51:35Z",
+                    "data": {
+                        "ports": [
+                            80
+                        ],
+                        "hostnames": [
+                            "ec2-13-49-66-51.eu-north-1.compute.amazonaws.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.28.3",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-30T22:51:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-30T22:51:33Z",
+                    "last_observed": "2026-10-30T22:51:33Z",
+                    "data": {
+                        "asn": "AS16509",
+                        "as_name": "Amazon.com, Inc.",
+                        "as_domain": "amazon.com",
+                        "country_code": "SE",
+                        "country": "Sweden",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-30T22:55:42Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-30T22:55:42Z",
+                    "last_observed": "2026-10-30T22:55:42Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS16509 amazon.com inc",
+                        "country_code": "SE",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-30T22:59:00Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-30T22:51:32Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-30T22:51:26Z",
+            "observations": [
+                {
+                    "key": "2005008",
+                    "first_observed": "2026-10-30T22:51:26Z",
+                    "last_observed": "2026-10-30T22:51:26Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "13.49.66.51:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-30T19:03:14Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-30T22:53:35Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-30T23:01:11Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-30T23:01:11Z",
+                    "last_observed": "2026-10-30T23:01:11Z",
+                    "data": {
+                        "as_owner": "Amazon.com, Inc.",
+                        "asn": 16509,
+                        "network": "13.32.0.0/11",
+                        "country": "SE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 0,
+                            "undetected": 92,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

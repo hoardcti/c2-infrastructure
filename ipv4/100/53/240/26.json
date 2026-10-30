@@ -1,0 +1,160 @@
+{
+    "schema_version": 2,
+    "ip": "100.53.240.26",
+    "first_seen": "2026-10-30T22:51:26Z",
+    "last_seen": "2026-10-30T22:51:26Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-30T22:54:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-30T22:54:31Z",
+                    "last_observed": "2026-10-30T22:54:31Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Amazon Data Services Northern Virginia",
+                        "domain": "amazon.com",
+                        "country_code": "US",
+                        "hostnames": [
+                            "ec2-100-53-240-26.compute-1.amazonaws.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-30T22:51:39Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-30T22:51:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-30T22:51:34Z",
+                    "last_observed": "2026-10-30T22:51:34Z",
+                    "data": {
+                        "asn": "AS14618",
+                        "as_name": "Amazon.com, Inc.",
+                        "as_domain": "amazon.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-30T22:55:50Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-30T22:55:50Z",
+                    "last_observed": "2026-10-30T22:55:50Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-30T22:59:08Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-30T22:51:32Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-30T22:51:26Z",
+            "observations": [
+                {
+                    "key": "2005044",
+                    "first_observed": "2026-10-30T22:51:26Z",
+                    "last_observed": "2026-10-30T22:51:26Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "100.53.240.26:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-10-30T19:03:12Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-30T22:53:43Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-30T23:02:11Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-30T23:02:11Z",
+                    "last_observed": "2026-10-30T23:02:11Z",
+                    "data": {
+                        "as_owner": "Amazon.com, Inc.",
+                        "asn": 14618,
+                        "network": "100.48.0.0/12",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 37,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -219,11 +219,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-01T13:19:02Z",
-            "last_error": {
-                "occurred_at": "2026-10-21T23:14:28Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-30T23:00:06Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T13:19:02Z",
@@ -248,6 +244,43 @@
                                 "tags": [
                                     "cloud"
                                 ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-30T23:00:06Z",
+                    "last_observed": "2026-10-30T23:00:06Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": "Windows Server 2016 (version 1607) (build 10.0.14393)",
+                        "country_code": "SG",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Not Found"
                             }
                         ]
                     }
