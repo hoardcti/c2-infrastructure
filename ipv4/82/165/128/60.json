@@ -221,7 +221,7 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-20T09:58:05Z",
+            "last_checked": "2026-10-30T05:07:17Z",
             "observations": [
                 {
                     "first_observed": "2026-10-13T07:35:24Z",
@@ -236,7 +236,7 @@
                 },
                 {
                     "first_observed": "2026-10-20T09:58:05Z",
-                    "last_observed": "2026-10-20T09:58:05Z",
+                    "last_observed": "2026-10-30T05:07:17Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS8560 1&1 ionos se",
@@ -262,11 +262,113 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-20T10:01:44Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-30T05:12:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-30T05:12:33Z",
+                    "last_observed": "2026-10-30T05:12:33Z",
+                    "data": {
+                        "org": "IONOS SE",
+                        "isp": "IONOS SE",
+                        "asn": "AS8560",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "ip82-165-128-60.pbiaas.com"
+                        ],
+                        "domains": [
+                            "pbiaas.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2007-4723",
+                            "CVE-2009-0796",
+                            "CVE-2009-2299",
+                            "CVE-2011-1176",
+                            "CVE-2011-2688",
+                            "CVE-2012-3526",
+                            "CVE-2012-4001",
+                            "CVE-2012-4360",
+                            "CVE-2013-0941",
+                            "CVE-2013-0942",
+                            "CVE-2013-2765",
+                            "CVE-2013-4365"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.0p2 Debian 7+deb13u4"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "version": "2.4.69"
+                            },
+                            {
+                                "port": 1337,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "cab4d15c1cc6986d5070fba0be84d00811bbaf665f4c5b763d2f351560eda79a",
+                                "certificate_subject": "jquery.com",
+                                "certificate_organisation": "jQuery",
+                                "certificate_issuer": "jquery.com"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol"
+                            },
+                            {
+                                "port": 7474,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "a3cdb53e5d8f9e6e942b537bb51895df274d1fd495c2a9fb507fdad18b2dc394",
+                                "certificate_subject": "100.86.155.65",
+                                "certificate_organisation": "Cobalt Strike",
+                                "certificate_issuer": "100.86.155.65"
+                            },
+                            {
+                                "port": 8001,
+                                "transport": "tcp",
+                                "product": "Apache httpd"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "Apache httpd"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "a3cdb53e5d8f9e6e942b537bb51895df274d1fd495c2a9fb507fdad18b2dc394",
+                                "certificate_subject": "100.86.155.65",
+                                "certificate_organisation": "Cobalt Strike",
+                                "certificate_issuer": "100.86.155.65"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-29T14:08:33Z",

@@ -111,11 +111,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-14T18:00:40Z",
-            "last_error": {
-                "occurred_at": "2026-10-21T19:21:51Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-30T05:11:11Z",
             "observations": [
                 {
                     "first_observed": "2026-10-14T18:00:40Z",
@@ -139,6 +135,54 @@
                                 "transport": "tcp",
                                 "product": "OpenSSH",
                                 "version": "9.6p1 Ubuntu 3ubuntu13.19",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud",
+                                    "self-signed"
+                                ],
+                                "jarm": "3fd3fd00000000000043d43d00043dc3b2afa8a5ec09b510a8559aff7899fb",
+                                "certificate_sha256": "bb103d0b564c175ca8c77124386f97416664fa5ffacc9f699ed1902a00fc3ea8",
+                                "certificate_subject": "TRAEFIK DEFAULT CERT",
+                                "certificate_issuer": "TRAEFIK DEFAULT CERT"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-30T05:11:11Z",
+                    "last_observed": "2026-10-30T05:11:11Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": "Linux",
+                        "country_code": "DE",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20",
                                 "tags": [
                                     "cloud"
                                 ]
