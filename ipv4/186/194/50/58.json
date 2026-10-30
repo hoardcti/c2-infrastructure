@@ -186,11 +186,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-06T10:03:16Z",
-            "last_error": {
-                "occurred_at": "2026-10-21T15:08:01Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-30T18:37:35Z",
             "observations": [
                 {
                     "first_observed": "2026-10-06T10:03:16Z",
@@ -241,11 +237,71 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-10-30T18:37:35Z",
+                    "last_observed": "2026-10-30T18:37:35Z",
+                    "data": {
+                        "org": "EVEO S.A.",
+                        "isp": "EVEO S.A.",
+                        "asn": "AS53107",
+                        "os": null,
+                        "country_code": "BR",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "eol-os",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u10"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.22.1",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 111,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 111,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 3128,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 9100,
+                                "transport": "tcp",
+                                "product": "Prometheus Node Exporter",
+                                "version": "1.12.1",
+                                "tags": [
+                                    "eol-os"
+                                ]
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-29T14:08:33Z",
+            "last_checked": "2026-10-30T18:28:49Z",
             "observations": []
         },
         "threatfox": {

@@ -265,11 +265,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-06T16:43:28Z",
-            "last_error": {
-                "occurred_at": "2026-10-21T15:07:19Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-30T18:36:53Z",
             "observations": [
                 {
                     "first_observed": "2026-10-06T16:43:28Z",
@@ -329,16 +325,81 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-10-30T18:36:53Z",
+                    "last_observed": "2026-10-30T18:36:53Z",
+                    "data": {
+                        "org": "Cyber-Security-SG",
+                        "isp": "Blatant",
+                        "asn": "AS403005",
+                        "os": "Windows",
+                        "country_code": "SG",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Microsoft IIS httpd",
+                                "version": "10.0",
+                                "http_title": "IIS Windows Server"
+                            },
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 2404,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            },
+                            {
+                                "port": 5986,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "Not Found",
+                                "jarm": "2ad2ad16d00000008c000000000000a8c820d3c34e26add345de07974cf54b",
+                                "certificate_sha256": "86aeadcd330f0608219e3e9e84ece978eace0da89d97d51e84ec76f96f52c5aa",
+                                "certificate_subject": "SERVER-SERVER",
+                                "certificate_issuer": "SERVER-SERVER"
+                            },
+                            {
+                                "port": 47001,
+                                "transport": "tcp",
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-29T14:08:33Z",
+            "last_checked": "2026-10-30T18:28:49Z",
             "observations": [
                 {
                     "key": "43.228.157.0/24",
                     "first_observed": "2026-10-06T16:36:02Z",
-                    "last_observed": "2026-10-29T14:08:33Z",
+                    "last_observed": "2026-10-30T18:28:49Z",
                     "data": {
                         "cidr": "43.228.157.0/24",
                         "sblid": "SBL692930",
@@ -348,7 +409,7 @@
                 {
                     "key": "43.228.156.0/22",
                     "first_observed": "2026-10-29T14:08:33Z",
-                    "last_observed": "2026-10-29T14:08:33Z",
+                    "last_observed": "2026-10-30T18:28:49Z",
                     "data": {
                         "cidr": "43.228.156.0/22",
                         "sblid": "SBL697584",

@@ -137,11 +137,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-06T10:02:56Z",
-            "last_error": {
-                "occurred_at": "2026-10-21T15:07:41Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-30T18:37:15Z",
             "observations": [
                 {
                     "first_observed": "2026-10-06T10:02:56Z",
@@ -177,16 +173,52 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-10-30T18:37:15Z",
+                    "last_observed": "2026-10-30T18:37:15Z",
+                    "data": {
+                        "org": "Blatant Technologies, LLC",
+                        "isp": "Blatant",
+                        "asn": "AS403005",
+                        "os": "Windows 11 (build 10.0.26100)",
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 1414,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "version": "10.0.26100",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d00014d14d08c00000000042da315ff5566ffb6c500367a12b45ed345",
+                                "certificate_sha256": "e86ae4a16a0d3483ba4c099bb6e8f5b6198b10ac2f928956ed0b90cdea9a6bdb",
+                                "certificate_subject": "WIN-GH5A67TS50Q",
+                                "certificate_issuer": "WIN-GH5A67TS50Q"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-29T14:08:33Z",
+            "last_checked": "2026-10-30T18:28:49Z",
             "observations": [
                 {
                     "key": "64.89.160.0/23",
                     "first_observed": "2026-10-06T09:55:21Z",
-                    "last_observed": "2026-10-29T14:08:33Z",
+                    "last_observed": "2026-10-30T18:28:49Z",
                     "data": {
                         "cidr": "64.89.160.0/23",
                         "sblid": "SBL692141",
@@ -196,7 +228,7 @@
                 {
                     "key": "64.89.160.0/22",
                     "first_observed": "2026-10-06T09:55:21Z",
-                    "last_observed": "2026-10-29T14:08:33Z",
+                    "last_observed": "2026-10-30T18:28:49Z",
                     "data": {
                         "cidr": "64.89.160.0/22",
                         "sblid": "SBL692143",

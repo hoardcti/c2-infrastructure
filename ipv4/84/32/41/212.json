@@ -172,11 +172,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-06T16:43:32Z",
-            "last_error": {
-                "occurred_at": "2026-10-21T15:07:23Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-30T18:36:57Z",
             "observations": [
                 {
                     "first_observed": "2026-10-06T16:43:32Z",
@@ -208,11 +204,52 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-10-30T18:36:57Z",
+                    "last_observed": "2026-10-30T18:36:57Z",
+                    "data": {
+                        "org": "UAB Nacionalinis Telekomunikaciju Tinklas",
+                        "isp": "HOSTGNOME LTD",
+                        "asn": "AS201579",
+                        "os": "Windows Server 2019 (version 1809) (build 10.0.17763)",
+                        "country_code": "GB",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad22c2ad2ad2ad2adfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "994bf4bfddeebbb1567449b52fd1949952f7abc9de14475f28f144fa871863cb",
+                                "certificate_subject": "WIN-ESUQ15FA9FR",
+                                "certificate_issuer": "WIN-ESUQ15FA9FR"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-29T14:08:33Z",
+            "last_checked": "2026-10-30T18:28:49Z",
             "observations": []
         },
         "threatfox": {
