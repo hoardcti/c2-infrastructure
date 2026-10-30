@@ -157,11 +157,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-07T12:25:12Z",
-            "last_error": {
-                "occurred_at": "2026-10-21T15:06:57Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-30T12:35:58Z",
             "observations": [
                 {
                     "first_observed": "2026-10-07T12:25:12Z",
@@ -198,6 +194,59 @@
                                 "port": 3389,
                                 "transport": "tcp",
                                 "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "79070b3c1ac2a752add86a042ec243d64805942b9f1a1c84ebc2bc6cbc8acef3",
+                                "certificate_subject": "WIN-F6NF7R6I6PJ",
+                                "certificate_issuer": "WIN-F6NF7R6I6PJ"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-30T12:35:58Z",
+                    "last_observed": "2026-10-30T12:35:58Z",
+                    "data": {
+                        "org": "Private Customer",
+                        "isp": "IXROOT LTD",
+                        "asn": "AS215286",
+                        "os": null,
+                        "country_code": "PL",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 139,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "version": "10.0.20348",
                                 "tags": [
                                     "self-signed"
                                 ],

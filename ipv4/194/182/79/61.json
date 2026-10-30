@@ -292,11 +292,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-09T16:06:33Z",
-            "last_error": {
-                "occurred_at": "2026-10-16T18:01:43Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-30T12:35:06Z",
             "observations": [
                 {
                     "first_observed": "2026-10-09T16:06:33Z",
@@ -408,6 +404,142 @@
                             },
                             {
                                 "port": 9001,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-30T12:35:06Z",
+                    "last_observed": "2026-10-30T12:35:06Z",
+                    "data": {
+                        "org": "Aruba S.p.A.",
+                        "isp": "INTERNET CZ, a.s.",
+                        "asn": "AS24806",
+                        "os": null,
+                        "country_code": "CZ",
+                        "hostnames": [
+                            "host61-79-182-194.serverdedicati.aruba.it"
+                        ],
+                        "domains": [
+                            "aruba.it"
+                        ],
+                        "tags": [
+                            "pqc",
+                            "proxy"
+                        ],
+                        "vulns": [
+                            "CVE-2007-2768",
+                            "CVE-2008-3844",
+                            "CVE-2023-51767",
+                            "CVE-2025-26465",
+                            "CVE-2025-26466",
+                            "CVE-2025-32728",
+                            "CVE-2026-35385",
+                            "CVE-2026-35387",
+                            "CVE-2026-35388",
+                            "CVE-2026-35414",
+                            "CVE-2026-59995",
+                            "CVE-2026-59996",
+                            "CVE-2026-59997",
+                            "CVE-2026-59998",
+                            "CVE-2026-59999",
+                            "CVE-2026-60000",
+                            "CVE-2026-60001",
+                            "CVE-2026-60002",
+                            "CVE-2026-73281",
+                            "CVE-2026-73282",
+                            "CVE-2026-73283"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.9"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "http_title": "Localtonet � Tunnel Stopped"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "pqc"
+                                ],
+                                "http_title": "Localtonet � Tunnel Stopped",
+                                "jarm": "2ad2ad00000000000042d42d000000bb38434970f9ff5df16a5227d5bd9fa2",
+                                "certificate_sha256": "2134f7520c153e78e9fb3569aa7302410f660add93134567fc7a9df2014a7935",
+                                "certificate_subject": "*.localto.net",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 1181,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 1224,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 1234,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 1355,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 1971,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 4104,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 4242,
+                                "transport": "tcp",
+                                "tags": [
+                                    "proxy"
+                                ]
+                            },
+                            {
+                                "port": 4344,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 6998,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8112,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8334,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8810,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8888,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 9001,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 10041,
                                 "transport": "tcp"
                             }
                         ]
