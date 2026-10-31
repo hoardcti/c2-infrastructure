@@ -133,11 +133,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-02T01:36:46Z",
-            "last_error": {
-                "occurred_at": "2026-10-23T04:11:45Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-31T23:21:37Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T01:36:46Z",
@@ -162,6 +158,44 @@
                                 "tags": [
                                     "cloud"
                                 ]
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-31T23:21:37Z",
+                    "last_observed": "2026-10-31T23:21:37Z",
+                    "data": {
+                        "org": "Microsoft Corporation",
+                        "isp": "Microsoft Corporation",
+                        "asn": "AS8075",
+                        "os": null,
+                        "country_code": "IE",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Your Azure Function App is up and running."
                             },
                             {
                                 "port": 3333,

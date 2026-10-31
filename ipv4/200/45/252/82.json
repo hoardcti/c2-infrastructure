@@ -166,11 +166,50 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-23T04:12:39Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-10-31T23:22:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-31T23:22:31Z",
+                    "last_observed": "2026-10-31T23:22:31Z",
+                    "data": {
+                        "org": "Telecom Argentina S.A.",
+                        "isp": "Telecom Argentina S.A.",
+                        "asn": "AS7303",
+                        "os": null,
+                        "country_code": "AR",
+                        "hostnames": [
+                            "host82.200-45-252.telecom.net.ar"
+                        ],
+                        "domains": [
+                            "telecom.net.ar"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "207a94f1ee9c48b131550b14b20e5696ced077f7435fcff06ce11851ed80d739",
+                                "certificate_subject": "200.45.252.82",
+                                "certificate_organisation": "Internet Widgits Pty Ltd",
+                                "certificate_issuer": "200.45.252.82"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-31T19:48:02Z",

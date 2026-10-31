@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-17T16:14:23Z",
+            "last_checked": "2026-10-31T23:14:44Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T20:31:49Z",
@@ -51,6 +51,30 @@
                         ],
                         "tags": [
                             "c2",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-31T23:14:44Z",
+                    "last_observed": "2026-10-31T23:14:44Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            25,
+                            3333,
+                            8080
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/a:postfix:postfix",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "malware",
                             "self-signed",
                             "starttls"
                         ],

@@ -33,7 +33,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-17T19:07:29Z",
+            "last_checked": "2026-10-31T23:16:09Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T20:33:14Z",
@@ -83,6 +83,43 @@
                         ],
                         "tags": [
                             "c2"
+                        ],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-10-31T23:16:09Z",
+                    "last_observed": "2026-10-31T23:16:09Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            25,
+                            80,
+                            110,
+                            143,
+                            443,
+                            587,
+                            993,
+                            995,
+                            3333,
+                            8080
+                        ],
+                        "hostnames": [
+                            "mail.poste-maroc.com",
+                            "poste-maroc.com",
+                            "www.poste-maroc.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:expressjs:express",
+                            "cpe:/a:f5:nginx:1.31.1",
+                            "cpe:/a:nodejs:node.js",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "malware",
+                            "pqc",
+                            "starttls"
                         ],
                         "vulns": []
                     }
