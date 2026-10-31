@@ -233,12 +233,12 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-10-30T18:28:50Z",
+            "last_checked": "2026-10-31T19:48:03Z",
             "observations": [
                 {
                     "key": "64.89.160.0/22",
                     "first_observed": "2026-10-01T12:19:59Z",
-                    "last_observed": "2026-10-30T18:28:50Z",
+                    "last_observed": "2026-10-31T19:48:03Z",
                     "data": {
                         "cidr": "64.89.160.0/22",
                         "sblid": "SBL692143",
@@ -271,6 +271,65 @@
         "urlhaus": {
             "last_checked": "2026-10-20T09:55:56Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-31T20:01:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-31T20:01:33Z",
+                    "last_observed": "2026-10-31T20:01:33Z",
+                    "data": {
+                        "as_owner": "PIO-Hosting GmbH",
+                        "asn": 198584,
+                        "network": "64.89.162.0/24",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -2,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 1,
+                            "undetected": 38,
+                            "harmless": 50,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 2
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Guardpot",
+                                "title": "Web application brute-force login attempts",
+                                "severity": "low"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 }
