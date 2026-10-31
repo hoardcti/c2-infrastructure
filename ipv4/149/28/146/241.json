@@ -1,0 +1,178 @@
+{
+    "schema_version": 2,
+    "ip": "149.28.146.241",
+    "first_seen": "2026-10-31T09:25:01Z",
+    "last_seen": "2026-10-31T09:25:01Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-31T09:28:00Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-31T09:28:00Z",
+                    "last_observed": "2026-10-31T09:28:00Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Vultr Holdings, LLC",
+                        "domain": "vultr.com",
+                        "country_code": "SG",
+                        "hostnames": [
+                            "149.28.146.241.vultrusercontent.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-31T09:25:10Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-31T09:25:10Z",
+                    "last_observed": "2026-10-31T09:25:10Z",
+                    "data": {
+                        "ports": [
+                            22
+                        ],
+                        "hostnames": [
+                            "149.28.146.241.vultrusercontent.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:10.2p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-31T09:25:08Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-31T09:25:08Z",
+                    "last_observed": "2026-10-31T09:25:08Z",
+                    "data": {
+                        "asn": "AS20473",
+                        "as_name": "The Constant Company, LLC",
+                        "as_domain": "vultr.com",
+                        "country_code": "SG",
+                        "country": "Singapore",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-31T09:29:18Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-31T09:29:18Z",
+                    "last_observed": "2026-10-31T09:29:18Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS20473 the constant company  llc",
+                        "country_code": "SG",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-10-31T09:32:36Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-31T09:25:08Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-31T09:25:01Z",
+            "observations": [
+                {
+                    "key": "2005324",
+                    "first_observed": "2026-10-31T09:25:01Z",
+                    "last_observed": "2026-10-31T09:25:01Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "149.28.146.241:80",
+                        "port": 80,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-10-31T07:38:10Z",
+                        "reference": null,
+                        "tags": [
+                            "20473",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-31T09:27:12Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-31T09:35:00Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-31T09:35:00Z",
+                    "last_observed": "2026-10-31T09:35:00Z",
+                    "data": {
+                        "as_owner": "The Constant Company, LLC",
+                        "asn": 20473,
+                        "network": "149.28.128.0/17",
+                        "country": "SG",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 1,
+                            "undetected": 38,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "jarm": "27d40d40d00040d00042d43d0000004ac24e77d76646867f0f6a0c6d9b9bb0",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -140,11 +140,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-15T00:31:33Z",
-            "last_error": {
-                "occurred_at": "2026-10-22T09:29:43Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-31T09:33:18Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T13:52:58Z",
@@ -184,6 +180,53 @@
                             {
                                 "port": 2404,
                                 "transport": "tcp"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-31T09:33:18Z",
+                    "last_observed": "2026-10-31T09:33:18Z",
+                    "data": {
+                        "org": "Blatant",
+                        "isp": "Blatant",
+                        "asn": "AS403005",
+                        "os": null,
+                        "country_code": "SC",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 2404,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "version": "10.0.20348",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "e1caab324dd2a3c02402ae38f0f8e25c639286335e763099b0e28360e440c991",
+                                "certificate_subject": "WIN-KB7TE55SS0A",
+                                "certificate_issuer": "WIN-KB7TE55SS0A"
                             }
                         ]
                     }

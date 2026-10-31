@@ -1,0 +1,206 @@
+{
+    "schema_version": 2,
+    "ip": "31.58.244.126",
+    "first_seen": "2026-10-31T09:25:01Z",
+    "last_seen": "2026-10-31T09:25:01Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-10-31T09:27:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-31T09:27:56Z",
+                    "last_observed": "2026-10-31T09:27:56Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "CGI GLOBAL LIMITED",
+                        "domain": "cloudbackbone.net",
+                        "country_code": "NL",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-10-31T09:25:08Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-10-31T09:25:08Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-31T09:25:08Z",
+                    "last_observed": "2026-10-31T09:25:08Z",
+                    "data": {
+                        "asn": "AS56971",
+                        "as_name": "AS56971 Cloud",
+                        "as_domain": "hostvds.com",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-10-31T09:29:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-31T09:29:14Z",
+                    "last_observed": "2026-10-31T09:29:14Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS43395 pooya parto qeshm cooperative company",
+                        "country_code": "IR",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-10-31T09:32:32Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-31T09:32:32Z",
+                    "last_observed": "2026-10-31T09:32:32Z",
+                    "data": {
+                        "org": "Private Customer",
+                        "isp": "AS56971 CGI GLOBAL LIMITED",
+                        "asn": "AS56971",
+                        "os": null,
+                        "country_code": "TR",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                                "certificate_sha256": "40c81ae6935d1c680e9b5ec9fddd78999b0ac8b96b841e6cb2d4a8d79a1822e5",
+                                "certificate_subject": "31.58.244.126",
+                                "certificate_issuer": "31.58.244.126"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-10-31T09:25:08Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-10-31T09:25:01Z",
+            "observations": [
+                {
+                    "key": "2005211",
+                    "first_observed": "2026-10-31T09:25:01Z",
+                    "last_observed": "2026-10-31T09:25:01Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "31.58.244.126:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 85,
+                        "first_seen": "2026-10-31T07:38:22Z",
+                        "reference": null,
+                        "tags": [
+                            "AS56971",
+                            "ClickFix",
+                            "c2",
+                            "stealer"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-10-31T09:27:08Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-10-31T09:34:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-10-31T09:34:31Z",
+                    "last_observed": "2026-10-31T09:34:31Z",
+                    "data": {
+                        "as_owner": "Cgi Global Limited",
+                        "asn": 56971,
+                        "network": "31.58.244.0/24",
+                        "country": "TR",
+                        "continent": "AS",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 1,
+                            "undetected": 33,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Certego",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Kaspersky",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Netcraft",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
