@@ -148,11 +148,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-14T21:35:03Z",
-            "last_error": {
-                "occurred_at": "2026-10-21T23:15:48Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-31T02:16:00Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T13:20:22Z",
@@ -183,6 +179,44 @@
                                 "port": 5357,
                                 "transport": "tcp",
                                 "http_title": "Service Unavailable"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-31T02:16:00Z",
+                    "last_observed": "2026-10-31T02:16:00Z",
+                    "data": {
+                        "org": "xTom GmbH",
+                        "isp": "xTom Japan Corporation",
+                        "asn": "AS3258",
+                        "os": null,
+                        "country_code": "JP",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 5357,
+                                "transport": "tcp",
+                                "http_title": "Service Unavailable"
+                            },
+                            {
+                                "port": 47001,
+                                "transport": "tcp",
+                                "http_title": "Not Found"
                             }
                         ]
                     }

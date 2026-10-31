@@ -207,11 +207,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-14T21:35:29Z",
-            "last_error": {
-                "occurred_at": "2026-10-22T04:08:48Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-10-31T02:16:26Z",
             "observations": [
                 {
                     "first_observed": "2026-10-14T21:35:29Z",
@@ -261,6 +257,83 @@
                                 "certificate_sha256": "e8a92adc24dc4c2775bda9572ca07319b531c153428cd53b6d62b1ec0057df59",
                                 "certificate_subject": "rcgen self signed cert",
                                 "certificate_issuer": "rcgen self signed cert"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-10-31T02:16:26Z",
+                    "last_observed": "2026-10-31T02:16:26Z",
+                    "data": {
+                        "org": "CTG Server Ltd.",
+                        "isp": "CTG Server Limited",
+                        "asn": "AS152194",
+                        "os": "Windows (build 10.0.22621)",
+                        "country_code": "HK",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 5357,
+                                "transport": "tcp",
+                                "http_title": "Service Unavailable"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            },
+                            {
+                                "port": 7788,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "Central server - Insecure Access"
+                            },
+                            {
+                                "port": 8020,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "Central server - Insecure Access"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8151,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "jarm": "2ad2ad0002ad2ad0002ad2ad2ad2ada5fc7ec76b7ed0b839211317d3844486",
+                                "certificate_sha256": "1f017fab41965a109d2cd74057cff97f486cfdbfdef02d97916c0a464cc4618f",
+                                "certificate_subject": "ManageEngine",
+                                "certificate_organisation": "Zoho Corporation",
+                                "certificate_issuer": "ManageEngineCA"
+                            },
+                            {
+                                "port": 8383,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "jarm": "2ad2ad0002ad2ad0002ad2ad2ad2ada5fc7ec76b7ed0b839211317d3844486",
+                                "certificate_sha256": "1f017fab41965a109d2cd74057cff97f486cfdbfdef02d97916c0a464cc4618f",
+                                "certificate_subject": "ManageEngine",
+                                "certificate_organisation": "Zoho Corporation",
+                                "certificate_issuer": "ManageEngineCA"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "jarm": "25d14d00025d25d00025d14d25d25de3c2cfe2a2540825b7b6488da7e43aca",
+                                "certificate_sha256": "1f017fab41965a109d2cd74057cff97f486cfdbfdef02d97916c0a464cc4618f",
+                                "certificate_subject": "ManageEngine",
+                                "certificate_organisation": "Zoho Corporation",
+                                "certificate_issuer": "ManageEngineCA"
+                            },
+                            {
+                                "port": 18443,
+                                "transport": "tcp"
                             }
                         ]
                     }
