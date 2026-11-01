@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "45.227.255.104",
     "first_seen": "2026-09-14T11:57:26.199689Z",
-    "last_seen": "2026-11-01T05:14:48Z",
+    "last_seen": "2026-11-01T12:55:30Z",
     "flags": [
         "sectoprat"
     ],
@@ -141,18 +141,56 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-23T14:55:15Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-01T13:05:29Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-01T13:05:29Z",
+                    "last_observed": "2026-11-01T13:05:29Z",
+                    "data": {
+                        "org": "Okpay Investment Company",
+                        "isp": "NForce Entertainment B.V.",
+                        "asn": "AS43350",
+                        "os": "Windows Server 2022 (build 10.0.20348)",
+                        "country_code": "NL",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "version": "10.0.20348",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "040e00d49e60f1ca9c8de773078d121de8dbab0614fa7d36e09fcb422a89a082",
+                                "certificate_subject": "WIN-KM3Q89H5V5G",
+                                "certificate_issuer": "WIN-KM3Q89H5V5G"
+                            },
+                            {
+                                "port": 5000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 9000,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-31T19:48:02Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-01T05:14:48Z",
+            "last_checked": "2026-11-01T12:55:30Z",
             "observations": [
                 {
                     "first_observed": "2026-09-14T11:57:26.199689Z",
@@ -196,7 +234,7 @@
                 {
                     "key": "1976001",
                     "first_observed": "2026-10-20T19:04:11Z",
-                    "last_observed": "2026-11-01T05:14:48Z",
+                    "last_observed": "2026-11-01T12:55:30Z",
                     "flags": [
                         "sectoprat"
                     ],

@@ -258,11 +258,69 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-23T14:55:09Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-01T13:05:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-01T13:05:23Z",
+                    "last_observed": "2026-11-01T13:05:23Z",
+                    "data": {
+                        "org": "AlexHost SRL",
+                        "isp": "ALEXHOST S.R.L.",
+                        "asn": "AS200019",
+                        "os": "Windows 7 or 8",
+                        "country_code": "RO",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 139,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "version": "10.0.20348",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "834fdb72059039fba552dfd9581c3b89856e1b547db985eaacb3d01e66fdf968",
+                                "certificate_subject": "WIN-KS8E7PK52O1",
+                                "certificate_issuer": "WIN-KS8E7PK52O1"
+                            },
+                            {
+                                "port": 5000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 5357,
+                                "transport": "tcp",
+                                "http_title": "Service Unavailable"
+                            },
+                            {
+                                "port": 9000,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-31T19:48:02Z",

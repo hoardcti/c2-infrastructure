@@ -175,11 +175,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-16T09:02:04Z",
-            "last_error": {
-                "occurred_at": "2026-10-23T14:55:13Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-01T13:05:27Z",
             "observations": [
                 {
                     "first_observed": "2026-10-16T09:02:04Z",
@@ -214,6 +210,41 @@
                                 "transport": "tcp",
                                 "product": "Microsoft HTTPAPI httpd",
                                 "version": "2.0"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-01T13:05:27Z",
+                    "last_observed": "2026-11-01T13:05:27Z",
+                    "data": {
+                        "org": "Hetzner Online GmbH",
+                        "isp": "Hetzner Online GmbH",
+                        "asn": "AS24940",
+                        "os": "Windows (build 10.0.26100)",
+                        "country_code": "FI",
+                        "hostnames": [
+                            "ss.tm.tp"
+                        ],
+                        "domains": [
+                            "tp"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 5000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            },
+                            {
+                                "port": 9000,
+                                "transport": "tcp"
                             }
                         ]
                     }

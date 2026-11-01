@@ -194,11 +194,59 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-23T14:55:07Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-01T13:05:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-01T13:05:21Z",
+                    "last_observed": "2026-11-01T13:05:21Z",
+                    "data": {
+                        "org": "VDSINA SERVERS TECH FZCO",
+                        "isp": "VDSINA SERVERS TECH FZCO",
+                        "asn": "AS216071",
+                        "os": null,
+                        "country_code": "IE",
+                        "hostnames": [
+                            "v958062.hosted-by-vdsina.com"
+                        ],
+                        "domains": [
+                            "hosted-by-vdsina.com"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.18"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 8787,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 9000,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-31T19:48:02Z",

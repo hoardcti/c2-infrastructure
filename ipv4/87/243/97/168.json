@@ -103,7 +103,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-23T14:55:43Z",
+            "last_checked": "2026-11-01T13:05:57Z",
             "observations": [
                 {
                     "first_observed": "2026-10-16T09:02:34Z",
@@ -186,6 +186,51 @@
                                     "malware"
                                 ]
                             },
+                            {
+                                "port": 1604,
+                                "transport": "tcp",
+                                "product": "DarkComet trojan",
+                                "tags": [
+                                    "malware"
+                                ]
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "version": "10.0.26100",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d00014d14d08c000000000000217f0fec773ec97f0b3fdd2de2993c31",
+                                "certificate_sha256": "9ea5104b5cb31f0843faa5cea0271e80dffd062ffc988c3799d1a0ced025ff92",
+                                "certificate_subject": "DESKTOP-VUPOED2",
+                                "certificate_issuer": "DESKTOP-VUPOED2"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-01T13:05:57Z",
+                    "last_observed": "2026-11-01T13:05:57Z",
+                    "data": {
+                        "org": "Vivacom Bulgaria EAD",
+                        "isp": "Vivacom Bulgaria EAD",
+                        "asn": "AS8866",
+                        "os": "Windows 11 (build 10.0.26100)",
+                        "country_code": "BG",
+                        "hostnames": [
+                            "87-243-97-168.ip.btc-net.bg"
+                        ],
+                        "domains": [
+                            "btc-net.bg"
+                        ],
+                        "tags": [
+                            "malware",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
                             {
                                 "port": 1604,
                                 "transport": "tcp",

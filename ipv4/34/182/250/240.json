@@ -1,0 +1,184 @@
+{
+    "schema_version": 2,
+    "ip": "34.182.250.240",
+    "first_seen": "2026-11-01T12:55:30Z",
+    "last_seen": "2026-11-01T12:55:30Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-01T13:00:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-01T13:00:23Z",
+                    "last_observed": "2026-11-01T13:00:23Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Google LLC",
+                        "domain": "google.com",
+                        "country_code": "US",
+                        "hostnames": [
+                            "240.250.182.34.bc.googleusercontent.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-01T12:57:36Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-01T12:57:36Z",
+                    "last_observed": "2026-11-01T12:57:36Z",
+                    "data": {
+                        "ports": [
+                            22
+                        ],
+                        "hostnames": [
+                            "240.250.182.34.bc.googleusercontent.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:10.0p2",
+                            "cpe:/o:debian:debian_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-01T12:55:36Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-01T12:55:36Z",
+                    "last_observed": "2026-11-01T12:55:36Z",
+                    "data": {
+                        "asn": "AS396982",
+                        "as_name": "Google LLC",
+                        "as_domain": "google.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-01T13:01:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-01T13:01:41Z",
+                    "last_observed": "2026-11-01T13:01:41Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS15169 google llc",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-01T13:05:00Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-01T12:55:36Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-01T12:55:30Z",
+            "observations": [
+                {
+                    "key": "2007091",
+                    "first_observed": "2026-11-01T12:55:30Z",
+                    "last_observed": "2026-11-01T12:55:30Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "34.182.250.240:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-11-01T06:40:25Z",
+                        "reference": null,
+                        "tags": [
+                            "396982",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-01T12:59:36Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-01T13:06:58Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-01T13:06:58Z",
+                    "last_observed": "2026-11-01T13:06:58Z",
+                    "data": {
+                        "as_owner": "Google LLC",
+                        "asn": 396982,
+                        "network": "34.176.0.0/13",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 0,
+                            "undetected": 38,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "jarm": "28d28d28d00028d00042d42d00042de0d120da90d5910c5de2af43b74a6bd8",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
