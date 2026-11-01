@@ -54,11 +54,11 @@
             ]
         },
         "ipinfo": {
-            "last_checked": "2026-10-01T16:11:43Z",
+            "last_checked": "2026-11-01T05:15:36Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T16:11:43Z",
-                    "last_observed": "2026-10-01T16:11:43Z",
+                    "last_observed": "2026-11-01T05:15:36Z",
                     "data": {
                         "asn": "AS14061",
                         "as_name": "DigitalOcean, LLC",
@@ -122,6 +122,61 @@
         "urlhaus": {
             "last_checked": "2026-10-20T19:06:43Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-01T05:27:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-01T05:27:26Z",
+                    "last_observed": "2026-11-01T05:27:26Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "206.189.0.0/16",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -1,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 2,
+                            "undetected": 34,
+                            "harmless": 55,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "29d3fd00029d29d00042d43d00041d598ac0c1012db967bb1ad0ff2491b3ae",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Guardpot",
+                                "title": "SSH brute-force login attempts",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 }

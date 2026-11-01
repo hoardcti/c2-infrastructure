@@ -273,11 +273,179 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-23T09:58:00Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-01T05:25:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-01T05:25:15Z",
+                    "last_observed": "2026-11-01T05:25:15Z",
+                    "data": {
+                        "org": "Namecheap, Inc.",
+                        "isp": "Namecheap, Inc.",
+                        "asn": "AS22612",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "server1.macroviewjournal.com"
+                        ],
+                        "domains": [
+                            "macroviewjournal.com"
+                        ],
+                        "tags": [
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 21,
+                                "transport": "tcp",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "certificate_sha256": "2f77e1c8a88aaaaf165bc7a2d9075a11d9368c2dcf847a792790c3706b336c3f",
+                                "certificate_subject": "server1.macroviewjournal.com",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "certificate_sha256": "a5f6d04125a43c1985fa8d7fb84c7a9b2c84d0e166aa6b1af9496ce4931c6b99",
+                                "certificate_subject": "server1.macroviewjournal.com",
+                                "certificate_organisation": "Hestia Control Panel",
+                                "certificate_issuer": "server1.macroviewjournal.com"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "Success!"
+                            },
+                            {
+                                "port": 110,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "certificate_sha256": "a5f6d04125a43c1985fa8d7fb84c7a9b2c84d0e166aa6b1af9496ce4931c6b99",
+                                "certificate_subject": "server1.macroviewjournal.com",
+                                "certificate_organisation": "Hestia Control Panel",
+                                "certificate_issuer": "server1.macroviewjournal.com"
+                            },
+                            {
+                                "port": 143,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "certificate_sha256": "a5f6d04125a43c1985fa8d7fb84c7a9b2c84d0e166aa6b1af9496ce4931c6b99",
+                                "certificate_subject": "server1.macroviewjournal.com",
+                                "certificate_organisation": "Hestia Control Panel",
+                                "certificate_issuer": "server1.macroviewjournal.com"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "301 Moved Permanently",
+                                "jarm": "29d29d15d29d29d00041d41d000000df133019600a83abfb096ff3e86cd79d",
+                                "certificate_sha256": "a5f6d04125a43c1985fa8d7fb84c7a9b2c84d0e166aa6b1af9496ce4931c6b99",
+                                "certificate_subject": "server1.macroviewjournal.com",
+                                "certificate_organisation": "Hestia Control Panel",
+                                "certificate_issuer": "server1.macroviewjournal.com"
+                            },
+                            {
+                                "port": 465,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "a5f6d04125a43c1985fa8d7fb84c7a9b2c84d0e166aa6b1af9496ce4931c6b99",
+                                "certificate_subject": "server1.macroviewjournal.com",
+                                "certificate_organisation": "Hestia Control Panel",
+                                "certificate_issuer": "server1.macroviewjournal.com"
+                            },
+                            {
+                                "port": 587,
+                                "transport": "tcp",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "certificate_sha256": "2f77e1c8a88aaaaf165bc7a2d9075a11d9368c2dcf847a792790c3706b336c3f",
+                                "certificate_subject": "server1.macroviewjournal.com",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 993,
+                                "transport": "tcp",
+                                "jarm": "29d29d15d29d29d00041d41d000000a5308aa908d3edc2392a602b7adac57a",
+                                "certificate_sha256": "2f77e1c8a88aaaaf165bc7a2d9075a11d9368c2dcf847a792790c3706b336c3f",
+                                "certificate_subject": "server1.macroviewjournal.com",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 995,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "29d29d15d29d29d00041d41d000000a5308aa908d3edc2392a602b7adac57a",
+                                "certificate_sha256": "a5f6d04125a43c1985fa8d7fb84c7a9b2c84d0e166aa6b1af9496ce4931c6b99",
+                                "certificate_subject": "server1.macroviewjournal.com",
+                                "certificate_organisation": "Hestia Control Panel",
+                                "certificate_issuer": "server1.macroviewjournal.com"
+                            },
+                            {
+                                "port": 8083,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "LOGIN - server1.macroviewjournal.com - Hestia Control Panel",
+                                "jarm": "29d29d15d29d29d00041d41d000000df133019600a83abfb096ff3e86cd79d",
+                                "certificate_sha256": "a5f6d04125a43c1985fa8d7fb84c7a9b2c84d0e166aa6b1af9496ce4931c6b99",
+                                "certificate_subject": "server1.macroviewjournal.com",
+                                "certificate_organisation": "Hestia Control Panel",
+                                "certificate_issuer": "server1.macroviewjournal.com"
+                            },
+                            {
+                                "port": 9100,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 55555,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-31T19:48:02Z",
