@@ -165,11 +165,104 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-16T13:58:06Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-01T18:29:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-01T18:29:35Z",
+                    "last_observed": "2026-11-01T18:29:35Z",
+                    "data": {
+                        "org": "Tencent cloud computing (Beijing) Co., Ltd.",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [
+                            "blog.cl0ser.top"
+                        ],
+                        "domains": [
+                            "cl0ser.top"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "eol-product",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.14\\r\\n",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "502 Bad Gateway",
+                                "jarm": "28d28d28d00028d00042d42d000000e1ea2a807a629b496b664cf07ad7c08d",
+                                "certificate_sha256": "02869805ef234f6b2458e00c1581ce844e55062b94ecbc26cfd47b2a7a1cc99a",
+                                "certificate_subject": "blog.cl0ser.top",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 8181,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 8787,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "ARTEX — 自主渗透测试控制台"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "56a06a233bd30f693de25ef12cc19e8b2c92d3eb97dd969a2578df084c376478",
+                                "certificate_subject": "Major Cobalt Strike",
+                                "certificate_organisation": "cobaltstrike",
+                                "certificate_issuer": "Major Cobalt Strike"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-10-31T19:48:02Z",
