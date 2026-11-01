@@ -153,14 +153,78 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-16T18:02:07Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-01T22:45:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-01T22:45:56Z",
+                    "last_observed": "2026-11-01T22:45:56Z",
+                    "data": {
+                        "org": "OVH SAS",
+                        "isp": "OVH SAS",
+                        "asn": "AS16276",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "ilan21.net",
+                            "www.ilan21.net"
+                        ],
+                        "domains": [
+                            "ilan21.net"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u7"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.22.1",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.22.1",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "İlan21 — Diyarbakır İline Özel Ücretsiz İlan Sitesi",
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "c9a2f103f46f980a88ee4b4f9e5cd5cac85a28acd8ba706e353773068091e4b6",
+                                "certificate_subject": "ilan21.net",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 3000,
+                                "transport": "tcp",
+                                "http_title": "İlan21 — Diyarbakır İline Özel Ücretsiz İlan Sitesi"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-10-31T19:48:02Z",
+            "last_checked": "2026-11-01T22:38:13Z",
             "observations": []
         },
         "threatfox": {

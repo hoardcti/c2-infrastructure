@@ -104,7 +104,7 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-10-31T19:48:03Z",
+            "last_checked": "2026-11-01T22:38:13Z",
             "observations": []
         },
         "threatfox": {
@@ -131,6 +131,80 @@
         "urlhaus": {
             "last_checked": "2026-10-21T15:00:41Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-01T22:48:36Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-01T22:48:36Z",
+                    "last_observed": "2026-11-01T22:48:36Z",
+                    "data": {
+                        "as_owner": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": 45090,
+                        "network": "124.220.0.0/14",
+                        "country": "CN",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 1,
+                            "undetected": 34,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Kaspersky",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Cluster25",
+                                "title": "Activity related to COBALTSTRIKE",
+                                "severity": "high"
+                            },
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 }
