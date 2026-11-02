@@ -1,0 +1,111 @@
+{
+    "schema_version": 2,
+    "ip": "45.136.154.99",
+    "first_seen": "2026-11-02T20:40:11Z",
+    "last_seen": "2026-11-02T20:40:11Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-11-02T20:43:09Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-02T20:40:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:40:28Z",
+                    "last_observed": "2026-11-02T20:40:28Z",
+                    "data": {
+                        "asn": "AS212238",
+                        "as_name": "Datacamp Limited",
+                        "as_domain": "datacamp.co.uk",
+                        "country_code": "CA",
+                        "country": "Canada",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-02T20:49:11Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:49:11Z",
+                    "last_observed": "2026-11-02T20:49:11Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS212238 datacamp limited",
+                        "country_code": "TR",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-02T20:52:06Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-02T20:40:18Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-02T20:40:11Z",
+            "observations": [
+                {
+                    "key": "2010759",
+                    "first_observed": "2026-11-02T20:40:11Z",
+                    "last_observed": "2026-11-02T20:40:11Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "45.136.154.99:5000",
+                        "port": 5000,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-02T12:45:42Z",
+                        "reference": null,
+                        "tags": [
+                            "AppSalt",
+                            "c2",
+                            "honeygain"
+                        ]
+                    }
+                },
+                {
+                    "key": "2010755",
+                    "first_observed": "2026-11-02T20:40:11Z",
+                    "last_observed": "2026-11-02T20:40:11Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "45.136.154.99:5001",
+                        "port": 5001,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-02T12:45:42Z",
+                        "reference": null,
+                        "tags": [
+                            "AppSalt",
+                            "c2",
+                            "honeygain"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

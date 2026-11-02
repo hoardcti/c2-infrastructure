@@ -1,0 +1,88 @@
+{
+    "schema_version": 2,
+    "ip": "46.4.89.122",
+    "first_seen": "2026-11-02T20:40:11Z",
+    "last_seen": "2026-11-02T20:40:11Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-11-02T20:43:12Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-02T20:40:29Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:40:29Z",
+                    "last_observed": "2026-11-02T20:40:29Z",
+                    "data": {
+                        "asn": "AS24940",
+                        "as_name": "Hetzner Online GmbH",
+                        "as_domain": "hetzner.de",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-02T20:49:18Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:49:18Z",
+                    "last_observed": "2026-11-02T20:49:18Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS24940 hetzner online gmbh",
+                        "country_code": "DE",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-02T20:52:12Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-02T20:40:18Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-02T20:40:11Z",
+            "observations": [
+                {
+                    "key": "2010889",
+                    "first_observed": "2026-11-02T20:40:11Z",
+                    "last_observed": "2026-11-02T20:40:11Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "46.4.89.122:5001",
+                        "port": 5001,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-02T12:45:48Z",
+                        "reference": null,
+                        "tags": [
+                            "AppSalt",
+                            "c2",
+                            "honeygain"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

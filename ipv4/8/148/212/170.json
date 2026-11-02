@@ -1,0 +1,197 @@
+{
+    "schema_version": 2,
+    "ip": "8.148.212.170",
+    "first_seen": "2026-11-02T20:40:11Z",
+    "last_seen": "2026-11-02T20:40:11Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-02T20:45:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:45:22Z",
+                    "last_observed": "2026-11-02T20:45:22Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2026-07-20T03:49:08Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Aliyun Computing Co.LTD",
+                        "domain": "alibabacloud.com",
+                        "country_code": "CN",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-02T20:42:26Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-02T20:40:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:40:20Z",
+                    "last_observed": "2026-11-02T20:40:20Z",
+                    "data": {
+                        "asn": "AS37963",
+                        "as_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
+                        "as_domain": "alibabagroup.com",
+                        "country_code": "CN",
+                        "country": "China",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-02T20:46:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:46:40Z",
+                    "last_observed": "2026-11-02T20:46:40Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "SG",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-02T20:50:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:50:40Z",
+                    "last_observed": "2026-11-02T20:50:40Z",
+                    "data": {
+                        "org": "Aliyun Computing Co.LTD",
+                        "isp": "Hangzhou Alibaba Advertising Co.,Ltd.",
+                        "asn": "AS37963",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [
+                            "2c.jcynl.xyz"
+                        ],
+                        "domains": [
+                            "jcynl.xyz"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "OpenResty",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "27d40d40d00040d00042d43d000000e1ea2a807a629b496b664cf07ad7c08d",
+                                "certificate_sha256": "68f5c9f474dca5e93963f6c0ea047bd9dc76e96119a74ab00025c68bc71fea0c",
+                                "certificate_subject": "2c.jcynl.xyz",
+                                "certificate_issuer": "YE1"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-02T20:40:18Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-02T20:40:11Z",
+            "observations": [
+                {
+                    "key": "2011230",
+                    "first_observed": "2026-11-02T20:40:11Z",
+                    "last_observed": "2026-11-02T20:40:11Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "8.148.212.170:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-02T16:04:04Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-02T20:44:33Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-02T20:54:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:54:23Z",
+                    "last_observed": "2026-11-02T20:54:23Z",
+                    "data": {
+                        "as_owner": "Hangzhou Alibaba Advertising Co.,Ltd.",
+                        "asn": 37963,
+                        "network": "8.148.128.0/17",
+                        "country": "CN",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 0,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "27d40d40d00040d00042d43d000000e1ea2a807a629b496b664cf07ad7c08d",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

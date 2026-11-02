@@ -1,0 +1,134 @@
+{
+    "schema_version": 2,
+    "ip": "49.12.237.199",
+    "first_seen": "2026-11-02T20:40:11Z",
+    "last_seen": "2026-11-02T20:40:11Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-11-02T20:43:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:43:17Z",
+                    "last_observed": "2026-11-02T20:43:17Z",
+                    "data": {
+                        "ports": [
+                            8443
+                        ],
+                        "hostnames": [
+                            "earn.fm",
+                            "static.199.237.12.49.clients.your-server.de"
+                        ],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-02T20:40:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:40:30Z",
+                    "last_observed": "2026-11-02T20:40:30Z",
+                    "data": {
+                        "asn": "AS24940",
+                        "as_name": "Hetzner Online GmbH",
+                        "as_domain": "hetzner.de",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-02T20:49:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:49:27Z",
+                    "last_observed": "2026-11-02T20:49:27Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS24940 hetzner online gmbh",
+                        "country_code": "DE",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-02T20:52:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:52:22Z",
+                    "last_observed": "2026-11-02T20:52:22Z",
+                    "data": {
+                        "org": "Hetzner Online GmbH",
+                        "isp": "Hetzner Online GmbH",
+                        "asn": "AS24940",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "earn.fm",
+                            "static.199.237.12.49.clients.your-server.de"
+                        ],
+                        "domains": [
+                            "earn.fm",
+                            "your-server.de"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "5cf2e7076c93af4ba2c599238bfa3e03ff9c550853e562264cd78cea4124aebc",
+                                "certificate_subject": "*.earn.fm",
+                                "certificate_issuer": "SSL.com TLS Issuing RSA CA R1"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-02T20:40:18Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-02T20:40:11Z",
+            "observations": [
+                {
+                    "key": "2010171",
+                    "first_observed": "2026-11-02T20:40:11Z",
+                    "last_observed": "2026-11-02T20:40:11Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "49.12.237.199:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-02T12:45:20Z",
+                        "reference": null,
+                        "tags": [
+                            "Evomi",
+                            "c2",
+                            "earnfm"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,195 @@
+{
+    "schema_version": 2,
+    "ip": "23.109.123.241",
+    "first_seen": "2026-11-02T20:40:11Z",
+    "last_seen": "2026-11-02T20:40:11Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-02T20:45:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:45:35Z",
+                    "last_observed": "2026-11-02T20:45:35Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Servers.com B.V.",
+                        "domain": "servers.com",
+                        "country_code": "SG",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-02T20:42:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:42:33Z",
+                    "last_observed": "2026-11-02T20:42:33Z",
+                    "data": {
+                        "ports": [
+                            80
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-02T20:40:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:40:21Z",
+                    "last_observed": "2026-11-02T20:40:21Z",
+                    "data": {
+                        "asn": "AS7979",
+                        "as_name": "Servers.com, Inc.",
+                        "as_domain": "servers.com",
+                        "country_code": "SG",
+                        "country": "Singapore",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-02T20:47:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:47:33Z",
+                    "last_observed": "2026-11-02T20:47:33Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS39134 united network llc",
+                        "country_code": "NL",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-02T20:50:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:50:54Z",
+                    "last_observed": "2026-11-02T20:50:54Z",
+                    "data": {
+                        "org": "Servers.com, Inc.",
+                        "isp": "Servers.com, Inc.",
+                        "asn": "AS7979",
+                        "os": null,
+                        "country_code": "SG",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 83,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-02T20:40:18Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-02T20:40:11Z",
+            "observations": [
+                {
+                    "key": "2010225",
+                    "first_observed": "2026-11-02T20:40:11Z",
+                    "last_observed": "2026-11-02T20:40:11Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "23.109.123.241:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-02T12:45:23Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "soax"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-02T20:44:47Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-02T20:56:08Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:56:08Z",
+                    "last_observed": "2026-11-02T20:56:08Z",
+                    "data": {
+                        "as_owner": "Servers.com, Inc.",
+                        "asn": 7979,
+                        "network": "23.109.120.0/22",
+                        "country": "SG",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "29d29d00000000000042d42d000000dd5c266caaa8baaf93008418f7774284",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

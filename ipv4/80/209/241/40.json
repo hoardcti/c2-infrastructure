@@ -1,0 +1,97 @@
+{
+    "schema_version": 2,
+    "ip": "80.209.241.40",
+    "first_seen": "2026-11-02T20:40:11Z",
+    "last_seen": "2026-11-02T20:40:11Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-11-02T20:44:00Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:44:00Z",
+                    "last_observed": "2026-11-02T20:44:00Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            1000,
+                            3333,
+                            9999,
+                            10050
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:apache:tomcat",
+                            "cpe:/a:f5:nginx:1.14.2"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2018-16845",
+                            "CVE-2019-20372",
+                            "CVE-2019-9511",
+                            "CVE-2019-9513",
+                            "CVE-2019-9516",
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-02T20:40:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:40:39Z",
+                    "last_observed": "2026-11-02T20:40:39Z",
+                    "data": {
+                        "asn": "AS395839",
+                        "as_name": "HOSTKEY",
+                        "as_domain": "hostkey.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-02T20:40:18Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-02T20:40:11Z",
+            "observations": [
+                {
+                    "key": "2010203",
+                    "first_observed": "2026-11-02T20:40:11Z",
+                    "last_observed": "2026-11-02T20:40:11Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "80.209.241.40:9999",
+                        "port": 9999,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-02T12:45:22Z",
+                        "reference": null,
+                        "tags": [
+                            "IpMoYu",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

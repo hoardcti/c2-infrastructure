@@ -1,0 +1,88 @@
+{
+    "schema_version": 2,
+    "ip": "47.253.200.164",
+    "first_seen": "2026-11-02T20:40:11Z",
+    "last_seen": "2026-11-02T20:40:11Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "internetdb": {
+            "last_checked": "2026-11-02T20:43:16Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-02T20:40:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:40:30Z",
+                    "last_observed": "2026-11-02T20:40:30Z",
+                    "data": {
+                        "asn": "AS45102",
+                        "as_name": "Alibaba (US) Technology Co., Ltd.",
+                        "as_domain": "alibabagroup.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-02T20:49:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T20:49:25Z",
+                    "last_observed": "2026-11-02T20:49:25Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS45102 alibaba (us) technology co.  ltd.",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-02T20:52:20Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-02T20:40:18Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-02T20:40:11Z",
+            "observations": [
+                {
+                    "key": "2010689",
+                    "first_observed": "2026-11-02T20:40:11Z",
+                    "last_observed": "2026-11-02T20:40:11Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "47.253.200.164:21001",
+                        "port": 21001,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-02T12:45:39Z",
+                        "reference": null,
+                        "tags": [
+                            "IPIPGO",
+                            "c2",
+                            "jaguar"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
