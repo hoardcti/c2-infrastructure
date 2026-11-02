@@ -242,11 +242,72 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-16T20:51:07Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-02T02:21:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T02:21:04Z",
+                    "last_observed": "2026-11-02T02:21:04Z",
+                    "data": {
+                        "org": "Cogent Communications, LLC",
+                        "isp": "NetLab Global",
+                        "asn": "AS979",
+                        "os": null,
+                        "country_code": "HK",
+                        "hostnames": [
+                            "aliyun.com",
+                            "manager.channel.aliyun.com",
+                            "tianchi-global.com",
+                            "whois.www.net.cn"
+                        ],
+                        "domains": [
+                            "aliyun.com",
+                            "tianchi-global.com",
+                            "www.net.cn"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.18"
+                            },
+                            {
+                                "port": 4433,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "3fd21b20d00000021c43d21b21b43d41226dd5dfc615dd4a96265559485910",
+                                "certificate_sha256": "4d44738b9ca78371fbd2633101c0fa17cf3ed6902c4e89a30c7786c2e8b81326",
+                                "certificate_subject": "*.aliyun.com",
+                                "certificate_organisation": "Alibaba (China) Technology Co., Ltd.",
+                                "certificate_issuer": "*.aliyun.com"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 9944,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 9988,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 12580,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-01T22:38:13Z",
