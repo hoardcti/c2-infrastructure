@@ -192,7 +192,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-16T23:29:36Z",
+            "last_checked": "2026-11-02T10:51:42Z",
             "observations": [
                 {
                     "first_observed": "2026-10-16T23:29:36Z",
@@ -216,6 +216,55 @@
                                 "port": 135,
                                 "transport": "tcp",
                                 "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-02T10:51:42Z",
+                    "last_observed": "2026-11-02T10:51:42Z",
+                    "data": {
+                        "org": "FibaCloud",
+                        "isp": "WhiteLabel Fiba Cloud Operation Company, LLC",
+                        "asn": "AS44382",
+                        "os": null,
+                        "country_code": "",
+                        "hostnames": [
+                            "32082-1681.dchost.com",
+                            "34294-28897",
+                            "tr.xnetguard.stream"
+                        ],
+                        "domains": [
+                            "34294-28897",
+                            "dchost.com",
+                            "xnetguard.stream"
+                        ],
+                        "tags": [
+                            "pqc"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "pqc"
+                                ],
+                                "http_title": "Ember Port — Access",
+                                "jarm": "27d40d40d00040d00042d43d0000007d20e9b9a3e87aa1ec17cb4d646ce9a5",
+                                "certificate_sha256": "bde63af9ca03334cee9f10ec6fbf64c0640a19c367cb26a4b68df9f1722ccf9d",
+                                "certificate_subject": "tr.xnetguard.stream",
+                                "certificate_issuer": "YE2"
                             },
                             {
                                 "port": 445,

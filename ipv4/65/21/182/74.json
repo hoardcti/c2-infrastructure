@@ -1,0 +1,191 @@
+{
+    "schema_version": 2,
+    "ip": "65.21.182.74",
+    "first_seen": "2026-11-02T10:43:59Z",
+    "last_seen": "2026-11-02T10:43:59Z",
+    "flags": [
+        "vidar"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-02T10:46:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T10:46:54Z",
+                    "last_observed": "2026-11-02T10:46:54Z",
+                    "data": {
+                        "abuse_confidence_score": 4,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-11-02T06:41:57Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Hetzner Online GmbH",
+                        "domain": "hetzner.com",
+                        "country_code": "FI",
+                        "hostnames": [
+                            "static.74.182.21.65.clients.your-server.de"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-02T10:44:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T10:44:07Z",
+                    "last_observed": "2026-11-02T10:44:07Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            443
+                        ],
+                        "hostnames": [
+                            "alrayahealth.dawatech.com",
+                            "static.74.182.21.65.clients.your-server.de"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.18.0",
+                            "cpe:/a:openbsd:openssh:8.2p1",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-02T10:44:06Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T10:44:06Z",
+                    "last_observed": "2026-11-02T10:44:06Z",
+                    "data": {
+                        "asn": "AS24940",
+                        "as_name": "Hetzner Online GmbH",
+                        "as_domain": "hetzner.de",
+                        "country_code": "FI",
+                        "country": "Finland",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-02T10:48:12Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T10:48:12Z",
+                    "last_observed": "2026-11-02T10:48:12Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS24940 hetzner online gmbh",
+                        "country_code": "FI",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-02T10:51:30Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-02T10:44:06Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-02T10:43:59Z",
+            "observations": [
+                {
+                    "key": "2009762",
+                    "first_observed": "2026-11-02T10:43:59Z",
+                    "last_observed": "2026-11-02T10:43:59Z",
+                    "flags": [
+                        "vidar"
+                    ],
+                    "data": {
+                        "ioc": "65.21.182.74:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Vidar",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.vidar",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-02T07:03:20Z",
+                        "reference": "https://www.virustotal.com/gui/file/704a87faf7f55df094988bcd431f21dc31b66852938f232f221ec36d51f9a8f9",
+                        "tags": [
+                            "Vidar",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-02T10:46:06Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-02T10:53:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T10:53:28Z",
+                    "last_observed": "2026-11-02T10:53:28Z",
+                    "data": {
+                        "as_owner": "Hetzner Online GmbH",
+                        "asn": 24940,
+                        "network": "65.21.0.0/16",
+                        "country": "FI",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 36,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Kaspersky",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

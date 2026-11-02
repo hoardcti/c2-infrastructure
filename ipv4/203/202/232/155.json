@@ -145,11 +145,41 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-16T23:29:38Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-02T10:51:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-02T10:51:44Z",
+                    "last_observed": "2026-11-02T10:51:44Z",
+                    "data": {
+                        "org": "White Label Services, LLC",
+                        "isp": "WhiteLabel Fiba Cloud Operation Company, LLC",
+                        "asn": "AS44382",
+                        "os": "Linux",
+                        "country_code": "TR",
+                        "hostnames": [
+                            "wdeaf.vpn"
+                        ],
+                        "domains": [
+                            "vpn."
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u10"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-01T22:38:13Z",
