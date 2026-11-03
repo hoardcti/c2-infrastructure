@@ -1,0 +1,171 @@
+{
+    "schema_version": 2,
+    "ip": "45.83.31.203",
+    "first_seen": "2026-11-03T18:17:46Z",
+    "last_seen": "2026-11-03T18:17:46Z",
+    "flags": [
+        "xworm"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-03T18:20:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-03T18:20:41Z",
+                    "last_observed": "2026-11-03T18:20:41Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "1337 Services GmbH",
+                        "domain": "as210558.net",
+                        "country_code": "US",
+                        "hostnames": [
+                            "45.83.31.203.powered.by.rdp.sh"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-03T18:17:54Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-03T18:17:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-03T18:17:53Z",
+                    "last_observed": "2026-11-03T18:17:53Z",
+                    "data": {
+                        "asn": "AS210558",
+                        "as_name": "1337 Services GmbH",
+                        "as_domain": "rdp.sh",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-03T18:21:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-03T18:21:59Z",
+                    "last_observed": "2026-11-03T18:21:59Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS210636 ",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-03T18:25:17Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-03T18:17:53Z",
+            "observations": [
+                {
+                    "key": "45.83.31.0/24",
+                    "first_observed": "2026-11-03T18:17:53Z",
+                    "last_observed": "2026-11-03T18:17:53Z",
+                    "data": {
+                        "cidr": "45.83.31.0/24",
+                        "sblid": "SBL697646",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-11-03T18:17:46Z",
+            "observations": [
+                {
+                    "key": "2013369",
+                    "first_observed": "2026-11-03T18:17:46Z",
+                    "last_observed": "2026-11-03T18:17:46Z",
+                    "flags": [
+                        "xworm"
+                    ],
+                    "data": {
+                        "ioc": "45.83.31.203:1177",
+                        "port": 1177,
+                        "threat_type": "botnet_cc",
+                        "malware": "XWorm",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.xworm",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-03T17:42:09Z",
+                        "reference": "",
+                        "tags": [
+                            "XWorm",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-03T18:19:53Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-03T18:27:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-03T18:27:16Z",
+                    "last_observed": "2026-11-03T18:27:16Z",
+                    "data": {
+                        "as_owner": "",
+                        "asn": 0,
+                        "network": "",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 0,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "2ad2ad16d2ad2ad00042d42d00000061256d32ed7779c14686ad100544dc8d",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
