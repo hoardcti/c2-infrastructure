@@ -1,0 +1,159 @@
+{
+    "schema_version": 2,
+    "ip": "99.79.33.43",
+    "first_seen": "2026-11-03T10:36:50Z",
+    "last_seen": "2026-11-03T10:36:50Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-03T10:39:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-03T10:39:51Z",
+                    "last_observed": "2026-11-03T10:39:51Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Amazon Data Services Canada",
+                        "domain": "amazon.com",
+                        "country_code": "CA",
+                        "hostnames": [
+                            "ec2-99-79-33-43.ca-central-1.compute.amazonaws.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-03T10:37:01Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-03T10:36:58Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-03T10:36:58Z",
+                    "last_observed": "2026-11-03T10:36:58Z",
+                    "data": {
+                        "asn": "AS16509",
+                        "as_name": "Amazon.com, Inc.",
+                        "as_domain": "amazon.com",
+                        "country_code": "CA",
+                        "country": "Canada",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-03T10:41:09Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-03T10:41:09Z",
+                    "last_observed": "2026-11-03T10:41:09Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS16509 amazon.com inc",
+                        "country_code": "CA",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-03T10:45:10Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-03T10:36:57Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-03T10:36:50Z",
+            "observations": [
+                {
+                    "key": "2012183",
+                    "first_observed": "2026-11-03T10:36:50Z",
+                    "last_observed": "2026-11-03T10:36:50Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "99.79.33.43:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-11-03T05:28:46Z",
+                        "reference": null,
+                        "tags": [
+                            "16509",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-03T10:39:03Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-03T10:47:48Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-03T10:47:48Z",
+                    "last_observed": "2026-11-03T10:47:48Z",
+                    "data": {
+                        "as_owner": "Amazon.com, Inc.",
+                        "asn": 16509,
+                        "network": "99.79.0.0/16",
+                        "country": "CA",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 91,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

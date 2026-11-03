@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "38.55.17.100",
     "first_seen": "2026-11-02T20:40:11Z",
-    "last_seen": "2026-11-03T02:49:00Z",
+    "last_seen": "2026-11-03T10:36:50Z",
     "flags": [
         "unknown malware"
     ],
@@ -96,12 +96,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-03T02:49:00Z",
+            "last_checked": "2026-11-03T10:36:50Z",
             "observations": [
                 {
                     "key": "2010627",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-03T02:49:00Z",
+                    "last_observed": "2026-11-03T10:36:50Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -119,6 +119,59 @@
                             "c2",
                             "jaguar"
                         ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-03T10:39:09Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-03T10:51:02Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-03T10:51:02Z",
+                    "last_observed": "2026-11-03T10:51:02Z",
+                    "data": {
+                        "as_owner": "FASTNET DATA INC",
+                        "asn": 8796,
+                        "network": "38.55.0.0/18",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "3fd3fd0003fd3fd21c42d42d000000bdfc58c9a46434368cf60aa440385763",
+                        "crowdsourced_context": []
                     }
                 }
             ]
