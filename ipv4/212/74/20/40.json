@@ -1,0 +1,190 @@
+{
+    "schema_version": 2,
+    "ip": "212.74.20.40",
+    "first_seen": "2026-11-03T02:49:00Z",
+    "last_seen": "2026-11-03T02:49:00Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-03T02:52:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-03T02:52:05Z",
+                    "last_observed": "2026-11-03T02:52:05Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "GTT - EMEA Ltd.",
+                        "domain": "gtt.net",
+                        "country_code": "US",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-03T02:49:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-03T02:49:15Z",
+                    "last_observed": "2026-11-03T02:49:15Z",
+                    "data": {
+                        "ports": [
+                            8443
+                        ],
+                        "hostnames": [
+                            "earn.fm"
+                        ],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-03T02:49:10Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-03T02:49:10Z",
+                    "last_observed": "2026-11-03T02:49:10Z",
+                    "data": {
+                        "asn": "AS7979",
+                        "as_name": "Servers.com, Inc.",
+                        "as_domain": "servers.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-03T02:53:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-03T02:53:23Z",
+                    "last_observed": "2026-11-03T02:53:23Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS3257 gtt communications inc.",
+                        "country_code": "GB",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-03T02:56:41Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-03T02:49:07Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-03T02:49:00Z",
+            "observations": [
+                {
+                    "key": "2010139",
+                    "first_observed": "2026-11-03T02:49:00Z",
+                    "last_observed": "2026-11-03T02:49:00Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "212.74.20.40:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-02T12:45:19Z",
+                        "reference": null,
+                        "tags": [
+                            "Evomi",
+                            "c2",
+                            "earnfm"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-03T02:51:17Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-03T02:59:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-03T02:59:19Z",
+                    "last_observed": "2026-11-03T02:59:19Z",
+                    "data": {
+                        "as_owner": "Servers.com, Inc.",
+                        "asn": 7979,
+                        "network": "212.74.20.0/24",
+                        "country": "GB",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -12,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 1,
+                            "undetected": 35,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lumu",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Synthient",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 2
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Synthient",
+                                "title": "Proxyware.FleetSDK",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

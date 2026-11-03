@@ -1,0 +1,178 @@
+{
+    "schema_version": 2,
+    "ip": "128.140.35.236",
+    "first_seen": "2026-11-03T02:49:00Z",
+    "last_seen": "2026-11-03T02:49:00Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-03T02:52:03Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-03T02:52:03Z",
+                    "last_observed": "2026-11-03T02:52:03Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Hetzner Online GmbH",
+                        "domain": "hetzner.com",
+                        "country_code": "DE",
+                        "hostnames": [
+                            "static.236.35.140.128.clients.your-server.de"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-03T02:49:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-03T02:49:14Z",
+                    "last_observed": "2026-11-03T02:49:14Z",
+                    "data": {
+                        "ports": [
+                            8443
+                        ],
+                        "hostnames": [
+                            "earn.fm",
+                            "static.236.35.140.128.clients.your-server.de"
+                        ],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-03T02:49:09Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-03T02:49:09Z",
+                    "last_observed": "2026-11-03T02:49:09Z",
+                    "data": {
+                        "asn": "AS24940",
+                        "as_name": "Hetzner Online GmbH",
+                        "as_domain": "hetzner.de",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-03T02:53:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-03T02:53:21Z",
+                    "last_observed": "2026-11-03T02:53:21Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS24940 hetzner online gmbh",
+                        "country_code": "IR",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-03T02:56:39Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-03T02:49:07Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-03T02:49:00Z",
+            "observations": [
+                {
+                    "key": "2010150",
+                    "first_observed": "2026-11-03T02:49:00Z",
+                    "last_observed": "2026-11-03T02:49:00Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "128.140.35.236:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-02T12:45:19Z",
+                        "reference": null,
+                        "tags": [
+                            "Evomi",
+                            "c2",
+                            "earnfm"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-03T02:51:15Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-03T02:59:03Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-03T02:59:03Z",
+                    "last_observed": "2026-11-03T02:59:03Z",
+                    "data": {
+                        "as_owner": "Hetzner Online GmbH",
+                        "asn": 24940,
+                        "network": "128.140.0.0/17",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -12,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 39,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Synthient",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 2
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Synthient",
+                                "title": "Proxyware.FleetSDK",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
