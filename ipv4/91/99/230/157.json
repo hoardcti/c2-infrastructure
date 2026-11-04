@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "91.99.230.157",
     "first_seen": "2026-11-02T20:40:11Z",
-    "last_seen": "2026-11-03T23:53:53Z",
+    "last_seen": "2026-11-04T05:35:28Z",
     "flags": [
         "unknown malware"
     ],
@@ -126,12 +126,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-03T23:53:53Z",
+            "last_checked": "2026-11-04T05:35:28Z",
             "observations": [
                 {
                     "key": "2010183",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-03T23:53:53Z",
+                    "last_observed": "2026-11-04T05:35:28Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -156,6 +156,70 @@
         "urlhaus": {
             "last_checked": "2026-11-03T23:56:31Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-04T05:48:58Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-04T05:48:58Z",
+                    "last_observed": "2026-11-04T05:48:58Z",
+                    "data": {
+                        "as_owner": "Hetzner Online GmbH",
+                        "asn": 24940,
+                        "network": "91.98.0.0/15",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -12,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 1,
+                            "undetected": 35,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Lumu",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Synthient",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 2
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Synthient",
+                                "title": "Proxyware.FleetSDK",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 }

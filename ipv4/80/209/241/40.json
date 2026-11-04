@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "80.209.241.40",
     "first_seen": "2026-11-02T20:40:11Z",
-    "last_seen": "2026-11-03T23:53:53Z",
+    "last_seen": "2026-11-04T05:35:28Z",
     "flags": [
         "unknown malware"
     ],
@@ -113,12 +113,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-03T23:53:53Z",
+            "last_checked": "2026-11-04T05:35:28Z",
             "observations": [
                 {
                     "key": "2010203",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-03T23:53:53Z",
+                    "last_observed": "2026-11-04T05:35:28Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -142,6 +142,59 @@
         "urlhaus": {
             "last_checked": "2026-11-03T23:56:23Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-04T05:47:58Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-04T05:47:58Z",
+                    "last_observed": "2026-11-04T05:47:58Z",
+                    "data": {
+                        "as_owner": "HOSTKEY",
+                        "asn": 395839,
+                        "network": "80.209.240.0/22",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 1,
+                            "undetected": 33,
+                            "harmless": 55,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Criminal IP",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }
