@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "96.46.188.236",
     "first_seen": "2026-11-02T20:40:11Z",
-    "last_seen": "2026-11-04T21:07:20Z",
+    "last_seen": "2026-11-05T02:04:08Z",
     "flags": [
         "unknown malware"
     ],
@@ -93,16 +93,16 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-11-03T23:54:00Z",
+            "last_checked": "2026-11-05T02:04:15Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-04T21:07:20Z",
+            "last_checked": "2026-11-05T02:04:08Z",
             "observations": [
                 {
                     "key": "2010227",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-04T21:07:20Z",
+                    "last_observed": "2026-11-05T02:04:08Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -126,6 +126,50 @@
         "urlhaus": {
             "last_checked": "2026-11-04T14:03:23Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-05T02:18:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-05T02:18:17Z",
+                    "last_observed": "2026-11-05T02:18:17Z",
+                    "data": {
+                        "as_owner": "Servers.com, Inc.",
+                        "asn": 7979,
+                        "network": "96.46.184.0/21",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "29d29d00029d29d00042d42d000000591965a32830c32b3ad57d4bfd247359",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }
