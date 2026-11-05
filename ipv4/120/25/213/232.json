@@ -1,0 +1,230 @@
+{
+    "schema_version": 2,
+    "ip": "120.25.213.232",
+    "first_seen": "2026-11-05T10:32:28Z",
+    "last_seen": "2026-11-05T10:32:28Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-05T10:35:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-05T10:35:27Z",
+                    "last_observed": "2026-11-05T10:35:27Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Aliyun Computing Co., LTD",
+                        "domain": "alibabacloud.com",
+                        "country_code": "CN",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-05T10:32:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-05T10:32:40Z",
+                    "last_observed": "2026-11-05T10:32:40Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            3000,
+                            8888,
+                            9999
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:expressjs:express",
+                            "cpe:/a:nodejs:node.js",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/a:python:python:3.12.3",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": [
+                            "CVE-2009-2940",
+                            "CVE-2009-3720",
+                            "CVE-2020-29396",
+                            "CVE-2021-32052",
+                            "CVE-2023-27043",
+                            "CVE-2024-6232",
+                            "CVE-2024-7592",
+                            "CVE-2024-9287",
+                            "CVE-2025-12084",
+                            "CVE-2025-12781",
+                            "CVE-2025-13462",
+                            "CVE-2025-13836",
+                            "CVE-2025-13837",
+                            "CVE-2026-0864",
+                            "CVE-2026-15308",
+                            "CVE-2026-3087",
+                            "CVE-2026-3644",
+                            "CVE-2026-4519",
+                            "CVE-2026-6019",
+                            "CVE-2026-7210"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-05T10:32:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-05T10:32:37Z",
+                    "last_observed": "2026-11-05T10:32:37Z",
+                    "data": {
+                        "asn": "AS37963",
+                        "as_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
+                        "as_domain": "alibabagroup.com",
+                        "country_code": "CN",
+                        "country": "China",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-05T10:36:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-05T10:36:45Z",
+                    "last_observed": "2026-11-05T10:36:45Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS37963 hangzhou alibaba advertising co. ltd.",
+                        "country_code": "CN",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "6ab4acf13adcc60c7c0b8fd9",
+                                "name": "Twitter Feed - Fact_Finder03 - 23-09-2026",
+                                "created": "2026-09-24T04:54:09.252Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "C2",
+                                    "RAT"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-05T10:40:20Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-05T10:32:35Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-05T10:32:28Z",
+            "observations": [
+                {
+                    "key": "2015052",
+                    "first_observed": "2026-11-05T10:32:28Z",
+                    "last_observed": "2026-11-05T10:32:28Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "120.25.213.232:8443",
+                        "port": 8443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-11-05T05:59:47Z",
+                        "reference": null,
+                        "tags": [
+                            "37963",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-05T10:34:39Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-05T10:42:18Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-05T10:42:18Z",
+                    "last_observed": "2026-11-05T10:42:18Z",
+                    "data": {
+                        "as_owner": "Hangzhou Alibaba Advertising Co.,Ltd.",
+                        "asn": 37963,
+                        "network": "120.24.0.0/14",
+                        "country": "CN",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 2,
+                            "undetected": 36,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Certego",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
