@@ -530,11 +530,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-20T10:01:30Z",
-            "last_error": {
-                "occurred_at": "2026-10-29T14:18:43Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-06T00:08:23Z",
             "observations": [
                 {
                     "first_observed": "2026-10-20T10:01:30Z",
@@ -569,6 +565,47 @@
                                 "certificate_sha256": "70ae49911c774d7513c2b9979307a7f346e702ca2adf5a8d60a936455a43134e",
                                 "certificate_subject": "WIN-IK7N6SD2UBU",
                                 "certificate_issuer": "WIN-IK7N6SD2UBU"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-06T00:08:23Z",
+                    "last_observed": "2026-11-06T00:08:23Z",
+                    "data": {
+                        "org": "Internet Magnate (Pty) Ltd",
+                        "isp": "Internet Magnate (Pty) Ltd",
+                        "asn": "AS214209",
+                        "os": "Windows Server 2022 (build 10.0.20348)",
+                        "country_code": "RO",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 2404,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "70ae49911c774d7513c2b9979307a7f346e702ca2adf5a8d60a936455a43134e",
+                                "certificate_subject": "WIN-IK7N6SD2UBU",
+                                "certificate_issuer": "WIN-IK7N6SD2UBU"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
                             }
                         ]
                     }
