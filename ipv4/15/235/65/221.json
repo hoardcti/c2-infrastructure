@@ -92,11 +92,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-29T18:57:27Z",
+            "last_checked": "2026-11-06T06:29:03Z",
             "observations": [
                 {
                     "first_observed": "2026-10-17T08:28:09Z",
-                    "last_observed": "2026-10-29T18:57:27Z",
+                    "last_observed": "2026-11-06T06:29:03Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS16276 ovh sas",
@@ -108,11 +108,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-17T08:31:28Z",
-            "last_error": {
-                "occurred_at": "2026-10-29T18:59:31Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-06T06:30:49Z",
             "observations": [
                 {
                     "first_observed": "2026-10-17T08:31:28Z",
@@ -136,6 +132,58 @@
                             "CVE-2020-0796"
                         ],
                         "services": [
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d00014d14d08c000000000000217f0fec773ec97f0b3fdd2de2993c31",
+                                "certificate_sha256": "60da85e5e11abead33e583bdc5c9f7f239adf1f6d13c5d07bb713e49ba498b29",
+                                "certificate_subject": "ns5019403",
+                                "certificate_issuer": "ns5019403"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-06T06:30:49Z",
+                    "last_observed": "2026-11-06T06:30:49Z",
+                    "data": {
+                        "org": "OVH Hosting, Inc.",
+                        "isp": "OVH SAS",
+                        "asn": "AS16276",
+                        "os": "Windows (build 10.0.26100)",
+                        "country_code": "CA",
+                        "hostnames": [
+                            "ns5019403.ip-15-235-65.net"
+                        ],
+                        "domains": [
+                            "ip-15-235-65.net"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
                             {
                                 "port": 445,
                                 "transport": "tcp"

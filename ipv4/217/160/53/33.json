@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-30T05:03:00Z",
+            "last_checked": "2026-11-06T06:22:45Z",
             "observations": [
                 {
                     "first_observed": "2026-10-16T03:53:27Z",
@@ -48,6 +48,30 @@
                             "cpe:/a:openbsd:openssh:9.2p1",
                             "cpe:/o:debian:debian_linux",
                             "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-06T06:22:45Z",
+                    "last_observed": "2026-11-06T06:22:45Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            8080
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.22.1",
+                            "cpe:/a:getbootstrap:bootstrap",
+                            "cpe:/a:jquery:jquery",
+                            "cpe:/a:jqueryui:jquery_ui"
                         ],
                         "tags": [
                             "eol-product"
@@ -79,11 +103,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-30T05:07:05Z",
+            "last_checked": "2026-11-06T06:29:11Z",
             "observations": [
                 {
                     "first_observed": "2026-10-16T03:57:32Z",
-                    "last_observed": "2026-10-30T05:07:05Z",
+                    "last_observed": "2026-11-06T06:29:11Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS8560 1&1 ionos se",
@@ -95,11 +119,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-16T04:00:53Z",
-            "last_error": {
-                "occurred_at": "2026-10-30T05:11:05Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-06T06:30:55Z",
             "observations": [
                 {
                     "first_observed": "2026-10-16T04:00:53Z",
@@ -109,6 +129,54 @@
                         "isp": "IONOS SE",
                         "asn": "AS8560",
                         "os": "Linux",
+                        "country_code": "DE",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u10"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.22.1",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Apache2 Debian Default Page: It works"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.22.1",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "phpMyAdmin"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-06T06:30:55Z",
+                    "last_observed": "2026-11-06T06:30:55Z",
+                    "data": {
+                        "org": "IONOS SE",
+                        "isp": "IONOS SE",
+                        "asn": "AS8560",
+                        "os": null,
                         "country_code": "DE",
                         "hostnames": [],
                         "domains": [],

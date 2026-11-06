@@ -121,11 +121,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-29T23:13:23Z",
+            "last_checked": "2026-11-06T06:29:17Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T20:15:52Z",
-                    "last_observed": "2026-10-29T23:13:23Z",
+                    "last_observed": "2026-11-06T06:29:17Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS12576 ee limited",
@@ -137,11 +137,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-15T20:19:52Z",
-            "last_error": {
-                "occurred_at": "2026-10-29T23:17:23Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-06T06:31:01Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T20:19:52Z",
@@ -167,6 +163,48 @@
                             {
                                 "port": 2222,
                                 "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "bfc80c47df4eb76bcd14e67db24e33e3397e8e371f045439c1cf4bdf570825ef",
+                                "certificate_subject": "VM-0da93cee-cc26-4087-a722-aaef5d326e70",
+                                "certificate_issuer": "VM-0da93cee-cc26-4087-a722-aaef5d326e70"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-06T06:31:01Z",
+                    "last_observed": "2026-11-06T06:31:01Z",
+                    "data": {
+                        "org": "Andris Jakovlevs",
+                        "isp": "Andris-Jakovlevs Andris Jakovlevs",
+                        "asn": "AS218731",
+                        "os": "Linux",
+                        "country_code": "GB",
+                        "hostnames": [
+                            "vm139029.hosted-by.qwins.co",
+                            "vm204598.hosted-by.qwins.co"
+                        ],
+                        "domains": [
+                            "qwins.co"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.19"
                             },
                             {
                                 "port": 3389,

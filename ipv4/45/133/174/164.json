@@ -90,11 +90,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-29T23:13:25Z",
+            "last_checked": "2026-11-06T06:29:19Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T20:15:54Z",
-                    "last_observed": "2026-10-29T23:13:25Z",
+                    "last_observed": "2026-11-06T06:29:19Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS210846 dedispot web solution pvt ltd",
@@ -115,11 +115,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-15T20:19:54Z",
-            "last_error": {
-                "occurred_at": "2026-10-29T23:17:25Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-06T06:31:03Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T20:19:54Z",
@@ -171,6 +167,55 @@
                             {
                                 "port": 47001,
                                 "transport": "tcp",
+                                "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-06T06:31:03Z",
+                    "last_observed": "2026-11-06T06:31:03Z",
+                    "data": {
+                        "org": "Company 64d3452e7kwAd9ZY",
+                        "isp": "Dedispot-Web-Solution Dedispot Web Solution pvt ltd",
+                        "asn": "AS210846",
+                        "os": "Windows Server 2016 (version 1607) (build 10.0.14393)",
+                        "country_code": "NL",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "eol-os",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 139,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp",
+                                "tags": [
+                                    "eol-os"
+                                ]
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad22c2ad2ad2ad2adfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "7d359826add1105b34f78717098419d928f0c9a573c52b3d90d20f4b8acd4cb0",
+                                "certificate_subject": "WIN-8FO1E1CIDNH",
+                                "certificate_issuer": "WIN-8FO1E1CIDNH"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
                                 "http_title": "Not Found"
                             }
                         ]

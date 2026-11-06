@@ -150,11 +150,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-29T18:57:53Z",
+            "last_checked": "2026-11-06T06:30:03Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T11:10:28Z",
-                    "last_observed": "2026-10-29T18:57:53Z",
+                    "last_observed": "2026-11-06T06:30:03Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS52048 dataclub s.a.",
@@ -166,11 +166,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-15T11:14:28Z",
-            "last_error": {
-                "occurred_at": "2026-10-29T18:59:55Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-06T06:31:47Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T11:14:28Z",
@@ -199,6 +195,70 @@
                                 "port": 5357,
                                 "transport": "tcp",
                                 "http_title": "Service Unavailable"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-06T06:31:47Z",
+                    "last_observed": "2026-11-06T06:31:47Z",
+                    "data": {
+                        "org": "RixHost SIA RixHost",
+                        "isp": "RixHost SIA RixHost",
+                        "asn": "AS52048",
+                        "os": null,
+                        "country_code": "LV",
+                        "hostnames": [
+                            "ip-223-125.dataclub.info"
+                        ],
+                        "domains": [
+                            "dataclub.info"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Microsoft IIS httpd",
+                                "version": "10.0",
+                                "http_title": "IIS Windows Server"
+                            },
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "version": "10.0.20348",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "adee790f3b8846f11b282f0cccac47ece9afb00da8dd6ee0babb937657a3c6b6",
+                                "certificate_subject": "IP-223-125.dataclub.eu",
+                                "certificate_issuer": "IP-223-125.dataclub.eu"
+                            },
+                            {
+                                "port": 5357,
+                                "transport": "tcp",
+                                "http_title": "Service Unavailable"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            },
+                            {
+                                "port": 47001,
+                                "transport": "tcp",
+                                "http_title": "Not Found"
                             }
                         ]
                     }

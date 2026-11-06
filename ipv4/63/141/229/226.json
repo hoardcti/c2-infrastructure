@@ -514,7 +514,7 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-29T18:58:05Z",
+            "last_checked": "2026-11-06T06:30:15Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T11:10:40Z",
@@ -561,15 +561,75 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-06T06:30:15Z",
+                    "last_observed": "2026-11-06T06:30:15Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS33387 nocix  llc",
+                        "country_code": "US",
+                        "pulse_count": 4,
+                        "pulses": [
+                            {
+                                "id": "62ed397d23b4894198f2816e",
+                                "name": "DatasoftComnet-AntiSpam-Pulse1",
+                                "created": "2022-08-05T15:38:37.221Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "Latest",
+                                    "malware",
+                                    "phishing",
+                                    "ransomware"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6ad303cf687c32846dffcb32",
+                                "name": "IOC_block",
+                                "created": "2026-10-17T05:12:47.039Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "cdaksh",
+                                    "chdaksh",
+                                    "compromise",
+                                    "daksh",
+                                    "domain",
+                                    "domains",
+                                    "file hash",
+                                    "file name",
+                                    "hash",
+                                    "iocs",
+                                    "ip address",
+                                    "malicious files",
+                                    "mdaksh",
+                                    "name file"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6ae59737f7a4fc19dc8b3000",
+                                "name": "IOC Blocking",
+                                "created": "2026-10-31T07:22:31.902Z",
+                                "tlp": "white",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6aeb9c5390ec5ef00681f07f",
+                                "name": "adaavavqew",
+                                "created": "2026-11-04T20:57:55.099Z",
+                                "tlp": "white",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-15T11:14:40Z",
-            "last_error": {
-                "occurred_at": "2026-10-29T19:00:07Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-06T06:31:59Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T11:14:40Z",
@@ -733,6 +793,141 @@
                             {
                                 "port": 9443,
                                 "transport": "tcp"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-06T06:31:59Z",
+                    "last_observed": "2026-11-06T06:31:59Z",
+                    "data": {
+                        "org": "Nocix, LLC",
+                        "isp": "Nocix, LLC",
+                        "asn": "AS33387",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "pqc",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2007-2768",
+                            "CVE-2008-3844",
+                            "CVE-2009-2940",
+                            "CVE-2009-3720",
+                            "CVE-2016-20012",
+                            "CVE-2019-16905",
+                            "CVE-2020-14145",
+                            "CVE-2020-15778",
+                            "CVE-2020-29396",
+                            "CVE-2021-32052",
+                            "CVE-2021-36368",
+                            "CVE-2021-41617",
+                            "CVE-2023-38408",
+                            "CVE-2023-48795",
+                            "CVE-2023-51385",
+                            "CVE-2023-51767",
+                            "CVE-2025-12084",
+                            "CVE-2025-12781",
+                            "CVE-2025-13462",
+                            "CVE-2025-13836",
+                            "CVE-2025-13837",
+                            "CVE-2025-26465",
+                            "CVE-2025-32728",
+                            "CVE-2026-0864",
+                            "CVE-2026-106552",
+                            "CVE-2026-106553",
+                            "CVE-2026-106555",
+                            "CVE-2026-106582",
+                            "CVE-2026-106583",
+                            "CVE-2026-106584",
+                            "CVE-2026-106585",
+                            "CVE-2026-106586",
+                            "CVE-2026-106587",
+                            "CVE-2026-15308",
+                            "CVE-2026-35385",
+                            "CVE-2026-35387",
+                            "CVE-2026-35388",
+                            "CVE-2026-35414",
+                            "CVE-2026-3644",
+                            "CVE-2026-4519",
+                            "CVE-2026-59995",
+                            "CVE-2026-59996",
+                            "CVE-2026-59997",
+                            "CVE-2026-59998",
+                            "CVE-2026-59999",
+                            "CVE-2026-60000",
+                            "CVE-2026-60001",
+                            "CVE-2026-60002",
+                            "CVE-2026-6019",
+                            "CVE-2026-7210",
+                            "CVE-2026-73281",
+                            "CVE-2026-73282",
+                            "CVE-2026-73283"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.0"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "BaseHTTPServer",
+                                "version": "0.6"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "pqc",
+                                    "self-signed"
+                                ],
+                                "jarm": "40d40d40d00000000043d43d00043d6aff5ab0f4fc31897186312c9e639319",
+                                "certificate_sha256": "ede8be8d2265b09cc3b3bf4b52578cbf9518eab53f914d33b1a938b4f8c80dc2",
+                                "certificate_subject": "mpmpc-win-beacon",
+                                "certificate_issuer": "mpmpc-win-beacon"
+                            },
+                            {
+                                "port": 4443,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8084,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8086,
+                                "transport": "tcp",
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 9443,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 20449,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "40d40d40d00000000043d43d00043d6aff5ab0f4fc31897186312c9e639319",
+                                "certificate_sha256": "e0b33a4d339b1c5b50ae68be10bfb52652991ee21b67d253257f68e8ab44dd51",
+                                "certificate_subject": "cdn-assets-node",
+                                "certificate_issuer": "cdn-assets-node"
                             }
                         ]
                     }

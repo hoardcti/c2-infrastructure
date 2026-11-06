@@ -162,11 +162,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-29T23:13:31Z",
+            "last_checked": "2026-11-06T06:29:25Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T20:16:00Z",
-                    "last_observed": "2026-10-29T23:13:31Z",
+                    "last_observed": "2026-11-06T06:29:25Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS135824 gelexiy cab net",
@@ -178,11 +178,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-15T20:20:00Z",
-            "last_error": {
-                "occurred_at": "2026-10-29T23:17:31Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-06T06:31:09Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T20:20:00Z",
@@ -222,6 +218,76 @@
                             {
                                 "port": 2222,
                                 "transport": "tcp"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-06T06:31:09Z",
+                    "last_observed": "2026-11-06T06:31:09Z",
+                    "data": {
+                        "org": "White Label Services, LLC",
+                        "isp": "WhiteLabel Fiba Cloud Operation Company, LLC",
+                        "asn": "AS44382",
+                        "os": null,
+                        "country_code": "TR",
+                        "hostnames": [
+                            "34085-28096.dchost.com",
+                            "crank.cloud"
+                        ],
+                        "domains": [
+                            "crank.cloud",
+                            "dchost.com"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.17"
+                            },
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 2222,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "version": "10.0.17763",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad22c2ad2ad2ad2adfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "e5307b94d4f559f289f0f7b93f51dff13dd45c3f83b40ba7d984534313eeca3b",
+                                "certificate_subject": "34085-28096",
+                                "certificate_issuer": "34085-28096"
+                            },
+                            {
+                                "port": 5986,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "Not Found",
+                                "jarm": "2ad2ad16d00000022c2ad2ad2ad2ad46ff59a659b30fd8aeaa6755c67691b4",
+                                "certificate_sha256": "c6d9861a099fb32c300a13082b51d0242821934df2463d38f28659f531969942",
+                                "certificate_subject": "SERVER-SERVER",
+                                "certificate_issuer": "SERVER-SERVER"
                             }
                         ]
                     }

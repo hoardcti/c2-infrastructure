@@ -132,11 +132,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-29T23:13:21Z",
+            "last_checked": "2026-11-06T06:29:15Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T20:15:51Z",
-                    "last_observed": "2026-10-29T23:13:21Z",
+                    "last_observed": "2026-11-06T06:29:15Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS7018 att services inc",
@@ -148,11 +148,54 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-29T23:17:21Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-06T06:30:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T06:30:59Z",
+                    "last_observed": "2026-11-06T06:30:59Z",
+                    "data": {
+                        "org": "White Label Services, LLC",
+                        "isp": "WhiteLabel Fiba Cloud Operation Company, LLC",
+                        "asn": "AS44382",
+                        "os": "Windows 7 or 8",
+                        "country_code": "TR",
+                        "hostnames": [
+                            "34068-15212.dchost.com"
+                        ],
+                        "domains": [
+                            "dchost.com"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 139,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "version": "10.0.17763",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad22c2ad2ad2ad2adfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "b1c135815026d2f87a7ad17f1adeba66210b1753e9a7af78ac4bcfb2a8dbbc51",
+                                "certificate_subject": "WIN-OCCK0AEU2TT",
+                                "certificate_issuer": "WIN-OCCK0AEU2TT"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-05T10:32:35Z",

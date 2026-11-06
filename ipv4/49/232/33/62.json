@@ -90,11 +90,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-29T18:57:57Z",
+            "last_checked": "2026-11-06T06:30:07Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T11:10:32Z",
-                    "last_observed": "2026-10-29T18:57:57Z",
+                    "last_observed": "2026-11-06T06:30:07Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS45090 shenzhen tencent computer systems company limited",
@@ -106,11 +106,77 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-29T18:59:59Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-06T06:31:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T06:31:51Z",
+                    "last_observed": "2026-11-06T06:31:51Z",
+                    "data": {
+                        "org": "Tencent cloud computing (Beijing) Co., Ltd.",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "ai",
+                            "cloud",
+                            "pqc"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Edge Cache Status"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud",
+                                    "pqc"
+                                ],
+                                "http_title": "Edge Cache Status",
+                                "jarm": "40d40d40d00000000043d43d00043d6aff5ab0f4fc31897186312c9e639319",
+                                "certificate_sha256": "b1bf2c156bcbf367c14a2f2754f84707b9f4240f63161c7c9392bf3dbe19461d",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 8084,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "3fd3fd0003fd3fd00043d43d00043d3bef2bf79cd6719851e8198c1e8f9a14",
+                                "certificate_sha256": "4b1a14c9589d2f9addf6bfdd9c6b5e181e58087fba18a25355f39fc1c88e5be0"
+                            },
+                            {
+                                "port": 8787,
+                                "transport": "tcp",
+                                "product": "ARTEX",
+                                "tags": [
+                                    "ai",
+                                    "cloud"
+                                ],
+                                "http_title": "ARTEX — 自主渗透测试控制台"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-05T10:32:35Z",
