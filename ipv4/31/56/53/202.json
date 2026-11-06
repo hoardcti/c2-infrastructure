@@ -1,0 +1,236 @@
+{
+    "schema_version": 2,
+    "ip": "31.56.53.202",
+    "first_seen": "2026-11-06T14:51:56Z",
+    "last_seen": "2026-11-06T14:51:56Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-06T14:54:57Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T14:54:57Z",
+                    "last_observed": "2026-11-06T14:54:57Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Snowcore Inc",
+                        "domain": "snowcore.io",
+                        "country_code": "NL",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-06T14:52:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T14:52:07Z",
+                    "last_observed": "2026-11-06T14:52:07Z",
+                    "data": {
+                        "ports": [
+                            22
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:10.0p2",
+                            "cpe:/o:debian:debian_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-06T14:52:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T14:52:04Z",
+                    "last_observed": "2026-11-06T14:52:04Z",
+                    "data": {
+                        "asn": "AS218986",
+                        "as_name": "Snowcore Inc",
+                        "as_domain": "snowcore.io",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-06T14:56:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T14:56:15Z",
+                    "last_observed": "2026-11-06T14:56:15Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS31549 aria shatel company ltd",
+                        "country_code": "IR",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-06T14:59:42Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T14:59:42Z",
+                    "last_observed": "2026-11-06T14:59:42Z",
+                    "data": {
+                        "org": "Snowcore Inc",
+                        "isp": "SnowcoreInc Snowcore Inc",
+                        "asn": "AS218986",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "open-dir",
+                            "pqc",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.0p2 Debian 7+deb13u4"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "open-dir",
+                                    "pqc",
+                                    "self-signed"
+                                ],
+                                "http_title": "Index of /",
+                                "jarm": "21d19d00021d21d00042d43d0000005ad20eceaf7f71ae0887d2ff117bf97f",
+                                "certificate_sha256": "2b6dc51684d672d5422b5ec02f1ee899f88dd930048e8b006ebd9a0c48b1490d",
+                                "certificate_subject": "systems.local",
+                                "certificate_issuer": "systems.local"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-06T14:52:02Z",
+            "observations": [
+                {
+                    "key": "31.56.52.0/23",
+                    "first_observed": "2026-11-06T14:52:02Z",
+                    "last_observed": "2026-11-06T14:52:02Z",
+                    "data": {
+                        "cidr": "31.56.52.0/23",
+                        "sblid": "SBL699585",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-11-06T14:51:56Z",
+            "observations": [
+                {
+                    "key": "2017600",
+                    "first_observed": "2026-11-06T14:51:56Z",
+                    "last_observed": "2026-11-06T14:51:56Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "31.56.53.202:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-06T13:41:34Z",
+                        "reference": "",
+                        "tags": [
+                            "Slciver",
+                            "c2",
+                            "hunterhow"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-06T14:54:07Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-06T15:01:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T15:01:40Z",
+                    "last_observed": "2026-11-06T15:01:40Z",
+                    "data": {
+                        "as_owner": "Snowcore Inc",
+                        "asn": 218986,
+                        "network": "31.56.52.0/23",
+                        "country": "AE",
+                        "continent": "AS",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "21d19d00021d21d00042d43d0000005ad20eceaf7f71ae0887d2ff117bf97f",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

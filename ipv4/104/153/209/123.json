@@ -1,0 +1,298 @@
+{
+    "schema_version": 2,
+    "ip": "104.153.209.123",
+    "first_seen": "2026-11-06T14:51:56Z",
+    "last_seen": "2026-11-06T14:51:56Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-06T14:54:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T14:54:59Z",
+                    "last_observed": "2026-11-06T14:54:59Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Fixed Line ISP",
+                        "isp": "Virpus LLC",
+                        "domain": "virpus.com",
+                        "country_code": "US",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-06T14:52:08Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T14:52:08Z",
+                    "last_observed": "2026-11-06T14:52:08Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            8001,
+                            8190,
+                            9000,
+                            31337
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/a:python:python:3.12.3",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "c2",
+                            "open-dir"
+                        ],
+                        "vulns": [
+                            "CVE-2009-2940",
+                            "CVE-2009-3720",
+                            "CVE-2020-29396",
+                            "CVE-2021-32052",
+                            "CVE-2023-27043",
+                            "CVE-2024-6232",
+                            "CVE-2024-7592",
+                            "CVE-2024-9287",
+                            "CVE-2025-12084",
+                            "CVE-2025-12781",
+                            "CVE-2025-13462",
+                            "CVE-2025-13836",
+                            "CVE-2025-13837",
+                            "CVE-2026-0864",
+                            "CVE-2026-15308",
+                            "CVE-2026-3644",
+                            "CVE-2026-4519",
+                            "CVE-2026-6019",
+                            "CVE-2026-7210"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-06T14:52:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T14:52:04Z",
+                    "last_observed": "2026-11-06T14:52:04Z",
+                    "data": {
+                        "asn": "AS174",
+                        "as_name": "Cogent Communications, LLC",
+                        "as_domain": "cogentco.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-06T14:56:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T14:56:17Z",
+                    "last_observed": "2026-11-06T14:56:17Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS32875 wowrack.com",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-06T14:59:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T14:59:44Z",
+                    "last_observed": "2026-11-06T14:59:44Z",
+                    "data": {
+                        "org": "Virpus LLC",
+                        "isp": "Cogent Communications, LLC",
+                        "asn": "AS174",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "open-dir"
+                        ],
+                        "vulns": [
+                            "CVE-2009-2940",
+                            "CVE-2009-3720",
+                            "CVE-2020-29396",
+                            "CVE-2021-32052",
+                            "CVE-2023-27043",
+                            "CVE-2024-6232",
+                            "CVE-2024-7592",
+                            "CVE-2024-9287",
+                            "CVE-2025-12084",
+                            "CVE-2025-12781",
+                            "CVE-2025-13462",
+                            "CVE-2025-13836",
+                            "CVE-2025-13837",
+                            "CVE-2026-0864",
+                            "CVE-2026-15308",
+                            "CVE-2026-3087",
+                            "CVE-2026-3644",
+                            "CVE-2026-4519",
+                            "CVE-2026-6019",
+                            "CVE-2026-7210"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "SimpleHTTPServer",
+                                "version": "0.6",
+                                "tags": [
+                                    "open-dir"
+                                ],
+                                "http_title": "Directory listing for /"
+                            },
+                            {
+                                "port": 8001,
+                                "transport": "tcp",
+                                "product": "SimpleHTTPServer",
+                                "version": "0.6",
+                                "tags": [
+                                    "open-dir"
+                                ],
+                                "http_title": "Directory listing for /"
+                            },
+                            {
+                                "port": 8009,
+                                "transport": "tcp",
+                                "product": "SimpleHTTPServer",
+                                "version": "0.6",
+                                "tags": [
+                                    "open-dir"
+                                ],
+                                "http_title": "Directory listing for /"
+                            },
+                            {
+                                "port": 8190,
+                                "transport": "tcp",
+                                "tags": [
+                                    "open-dir"
+                                ],
+                                "http_title": "Directory listing for /"
+                            },
+                            {
+                                "port": 9000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 9013,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-06T14:52:02Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-06T14:51:56Z",
+            "observations": [
+                {
+                    "key": "2017604",
+                    "first_observed": "2026-11-06T14:51:56Z",
+                    "last_observed": "2026-11-06T14:51:56Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "104.153.209.123:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-06T14:08:36Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-06T14:54:08Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-06T15:01:55Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T15:01:55Z",
+                    "last_observed": "2026-11-06T15:01:55Z",
+                    "data": {
+                        "as_owner": "Cogent Communications, LLC",
+                        "asn": 174,
+                        "network": "104.153.208.0/22",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -12,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 0,
+                            "undetected": 38,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 2
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
