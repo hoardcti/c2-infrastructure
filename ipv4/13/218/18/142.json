@@ -1,0 +1,201 @@
+{
+    "schema_version": 2,
+    "ip": "13.218.18.142",
+    "first_seen": "2026-11-06T20:45:11Z",
+    "last_seen": "2026-11-06T20:45:11Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-06T20:48:11Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:48:11Z",
+                    "last_observed": "2026-11-06T20:48:11Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Amazon Data Services Northern Virginia",
+                        "domain": "amazon.com",
+                        "country_code": "US",
+                        "hostnames": [
+                            "ec2-13-218-18-142.compute-1.amazonaws.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-06T20:45:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:45:21Z",
+                    "last_observed": "2026-11-06T20:45:21Z",
+                    "data": {
+                        "ports": [
+                            443
+                        ],
+                        "hostnames": [
+                            "ec2-13-218-18-142.compute-1.amazonaws.com"
+                        ],
+                        "cpes": [],
+                        "tags": [
+                            "cloud",
+                            "pqc"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-06T20:45:18Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:45:18Z",
+                    "last_observed": "2026-11-06T20:45:18Z",
+                    "data": {
+                        "asn": "AS14618",
+                        "as_name": "Amazon.com, Inc.",
+                        "as_domain": "amazon.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-06T20:49:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:49:30Z",
+                    "last_observed": "2026-11-06T20:49:30Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-06T20:53:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:53:30Z",
+                    "last_observed": "2026-11-06T20:53:30Z",
+                    "data": {
+                        "org": "Amazon Data Services Northern Virginia",
+                        "isp": "Amazon.com, Inc.",
+                        "asn": "AS14618",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "ec2-13-218-18-142.compute-1.amazonaws.com"
+                        ],
+                        "domains": [
+                            "amazonaws.com"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "pqc"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud",
+                                    "pqc"
+                                ],
+                                "jarm": "3fd3fd20d00000021c43d43d00043d204204071741c36579e355f830d285a5",
+                                "certificate_sha256": "8eb4de4c723562eb727fff6570ba53af493bfcb0783f9dc4b20336c617202631",
+                                "certificate_subject": "localhost",
+                                "certificate_organisation": "spleen, Enterprises"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-06T20:45:18Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-06T20:45:11Z",
+            "observations": [
+                {
+                    "key": "2018031",
+                    "first_observed": "2026-11-06T20:45:11Z",
+                    "last_observed": "2026-11-06T20:45:11Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "13.218.18.142:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-06T15:59:36Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-06T20:47:20Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-06T20:55:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:55:28Z",
+                    "last_observed": "2026-11-06T20:55:28Z",
+                    "data": {
+                        "as_owner": "Amazon.com, Inc.",
+                        "asn": 14618,
+                        "network": "13.216.0.0/13",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 0,
+                            "undetected": 37,
+                            "harmless": 55,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

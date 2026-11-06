@@ -1,0 +1,258 @@
+{
+    "schema_version": 2,
+    "ip": "167.99.146.146",
+    "first_seen": "2026-11-06T20:45:11Z",
+    "last_seen": "2026-11-06T20:45:11Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-06T20:48:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:48:34Z",
+                    "last_observed": "2026-11-06T20:48:34Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2026-06-26T00:25:32Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "DigitalOcean, LLC",
+                        "domain": "digitalocean.com",
+                        "country_code": "US",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-06T20:45:32Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:45:32Z",
+                    "last_observed": "2026-11-06T20:45:32Z",
+                    "data": {
+                        "ports": [
+                            4000,
+                            31337
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-06T20:45:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:45:20Z",
+                    "last_observed": "2026-11-06T20:45:20Z",
+                    "data": {
+                        "asn": "AS14061",
+                        "as_name": "DigitalOcean, LLC",
+                        "as_domain": "digitalocean.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-06T20:49:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:49:51Z",
+                    "last_observed": "2026-11-06T20:49:51Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS14061 digitalocean  llc",
+                        "country_code": "US",
+                        "pulse_count": 3,
+                        "pulses": [
+                            {
+                                "id": "69f4022bbc9f2eb63058f951",
+                                "name": "Honeypot Data – T-Pot - Sydney, Australia - May 2026",
+                                "created": "2026-05-01T01:30:19.093Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "cowrie",
+                                    "dionaea",
+                                    "fatt",
+                                    "honeypot",
+                                    "honeytrap",
+                                    "mailoney",
+                                    "p0f",
+                                    "sensor-tagged",
+                                    "sentrypeer",
+                                    "suricata",
+                                    "tanner",
+                                    "tpot"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a0fb65d1948a4b8e30f010f",
+                                "name": "SOHO Router Scanning",
+                                "created": "2026-05-22T01:50:17.952Z",
+                                "tlp": "white",
+                                "tags": [
+                                    "Inbound Scan"
+                                ],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a16a94ecf51205a8695f5cc",
+                                "name": "Vultr Melbourne (Australia) Port Scanning Hosts for 2026-05-26",
+                                "created": "2026-05-27T08:20:29.996Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners",
+                                    "vultr"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-06T20:53:51Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:53:51Z",
+                    "last_observed": "2026-11-06T20:53:51Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "5f3ce12d616e4e5695457a027bfa61ede9ffc28a96a3737c707e5a2daa867519",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-06T20:45:18Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-06T20:45:11Z",
+            "observations": [
+                {
+                    "key": "2018033",
+                    "first_observed": "2026-11-06T20:45:11Z",
+                    "last_observed": "2026-11-06T20:45:11Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "167.99.146.146:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-06T15:59:37Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-06T20:47:42Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-06T20:58:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:58:13Z",
+                    "last_observed": "2026-11-06T20:58:13Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "167.99.0.0/16",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 35,
+                            "harmless": 55,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "21d19d00021d21d00042d43d0000005ad20eceaf7f71ae0887d2ff117bf97f",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

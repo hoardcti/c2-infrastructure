@@ -1,0 +1,151 @@
+{
+    "schema_version": 2,
+    "ip": "66.179.30.72",
+    "first_seen": "2026-11-06T20:45:11Z",
+    "last_seen": "2026-11-06T20:45:11Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-06T20:48:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:48:23Z",
+                    "last_observed": "2026-11-06T20:48:23Z",
+                    "data": {
+                        "abuse_confidence_score": 11,
+                        "total_reports": 3,
+                        "distinct_reporters": 2,
+                        "last_reported_at": "2026-10-26T03:34:17Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "BL Networks",
+                        "domain": "blnwx.com",
+                        "country_code": "SG",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-06T20:45:27Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-06T20:45:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:45:19Z",
+                    "last_observed": "2026-11-06T20:45:19Z",
+                    "data": {
+                        "asn": "AS399629",
+                        "as_name": "BL Networks",
+                        "as_domain": "blnwx.com",
+                        "country_code": "SG",
+                        "country": "Singapore",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-06T20:49:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:49:41Z",
+                    "last_observed": "2026-11-06T20:49:41Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS7381 sungard availability services lp",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-06T20:53:42Z",
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-06T20:45:18Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-06T20:45:11Z",
+            "observations": [
+                {
+                    "key": "2018026",
+                    "first_observed": "2026-11-06T20:45:11Z",
+                    "last_observed": "2026-11-06T20:45:11Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "66.179.30.72:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-06T15:59:38Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "hunterhow",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-06T20:47:32Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-06T20:56:58Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:56:58Z",
+                    "last_observed": "2026-11-06T20:56:58Z",
+                    "data": {
+                        "as_owner": "BL Networks",
+                        "asn": 399629,
+                        "network": "66.179.30.0/23",
+                        "country": "SG",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

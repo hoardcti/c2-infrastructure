@@ -122,7 +122,7 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-30T05:07:59Z",
+            "last_checked": "2026-11-06T20:51:39Z",
             "observations": [
                 {
                     "first_observed": "2026-10-12T07:11:04Z",
@@ -137,7 +137,7 @@
                 },
                 {
                     "first_observed": "2026-10-19T13:01:49Z",
-                    "last_observed": "2026-10-30T05:07:59Z",
+                    "last_observed": "2026-11-06T20:51:39Z",
                     "data": {
                         "reputation": 0,
                         "asn": "ASNone ",
@@ -171,11 +171,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-12T07:14:22Z",
-            "last_error": {
-                "occurred_at": "2026-10-30T12:34:24Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-06T20:55:23Z",
             "observations": [
                 {
                     "first_observed": "2026-10-12T07:14:22Z",
@@ -209,6 +205,67 @@
                                 "certificate_sha256": "f29af41cb4e95df6b875d9e30a45da92b2aed87c8b9f7ab28cb9900ec6a8e177",
                                 "certificate_subject": "national-people.org",
                                 "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "f29af41cb4e95df6b875d9e30a45da92b2aed87c8b9f7ab28cb9900ec6a8e177",
+                                "certificate_subject": "national-people.org",
+                                "certificate_issuer": "YR2"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-06T20:55:23Z",
+                    "last_observed": "2026-11-06T20:55:23Z",
+                    "data": {
+                        "org": "Amazon Data Services Northern Virginia",
+                        "isp": "Amazon.com, Inc.",
+                        "asn": "AS14618",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "ec2-100-57-32-60.compute-1.amazonaws.com",
+                            "national-people.org"
+                        ],
+                        "domains": [
+                            "amazonaws.com",
+                            "national-people.org"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "AWS ELB",
+                                "version": "2.0",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "503 Service Temporarily Unavailable"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "AWS ELB",
+                                "version": "2.0",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "503 Service Temporarily Unavailable",
+                                "jarm": "29d29d00029d29d00041d41d00041dcb3f8752a2d70d1dbf446fc46ab5df96",
+                                "certificate_sha256": "592cf5722294e9886d7d879f70320173bbfabccae70ab42d1b18d9904f56868b",
+                                "certificate_subject": "*.aspiringminds.com",
+                                "certificate_issuer": "Amazon RSA 2048 M01"
                             },
                             {
                                 "port": 8443,

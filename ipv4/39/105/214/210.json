@@ -1,0 +1,232 @@
+{
+    "schema_version": 2,
+    "ip": "39.105.214.210",
+    "first_seen": "2026-11-06T20:45:11Z",
+    "last_seen": "2026-11-06T20:45:11Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-06T20:48:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:48:15Z",
+                    "last_observed": "2026-11-06T20:48:15Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Aliyun Computing Co., LTD",
+                        "domain": "alibabacloud.com",
+                        "country_code": "CN",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-06T20:45:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:45:23Z",
+                    "last_observed": "2026-11-06T20:45:23Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.18.0",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-06T20:45:18Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:45:18Z",
+                    "last_observed": "2026-11-06T20:45:18Z",
+                    "data": {
+                        "asn": "AS37963",
+                        "as_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
+                        "as_domain": "alibabagroup.com",
+                        "country_code": "CN",
+                        "country": "China",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-06T20:49:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:49:33Z",
+                    "last_observed": "2026-11-06T20:49:33Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS37963 hangzhou alibaba advertising co. ltd.",
+                        "country_code": "CN",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-06T20:53:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:53:34Z",
+                    "last_observed": "2026-11-06T20:53:34Z",
+                    "data": {
+                        "org": "Aliyun Computing Co., LTD",
+                        "isp": "Hangzhou Alibaba Advertising Co.,Ltd.",
+                        "asn": "AS37963",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "eol-product",
+                            "mptcp"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "资产监控 // 访问"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "mptcp"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "1ea3bb8b1d33759b194f78c430783cd5253655159f9ec55a28056f884e009f38",
+                                "certificate_subject": "0.0.0.0"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-06T20:45:18Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-06T20:45:11Z",
+            "observations": [
+                {
+                    "key": "2018161",
+                    "first_observed": "2026-11-06T20:45:11Z",
+                    "last_observed": "2026-11-06T20:45:11Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "39.105.214.210:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-06T17:24:10Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-06T20:47:24Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-06T20:55:58Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:55:58Z",
+                    "last_observed": "2026-11-06T20:55:58Z",
+                    "data": {
+                        "as_owner": "Hangzhou Alibaba Advertising Co.,Ltd.",
+                        "asn": 37963,
+                        "network": "39.104.0.0/14",
+                        "country": "CN",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

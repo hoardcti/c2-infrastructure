@@ -1,0 +1,152 @@
+{
+    "schema_version": 2,
+    "ip": "103.153.183.144",
+    "first_seen": "2026-11-06T20:45:11Z",
+    "last_seen": "2026-11-06T20:45:11Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-06T20:48:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:48:27Z",
+                    "last_observed": "2026-11-06T20:48:27Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2022-06-01T22:06:02Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "SnTHostings.com",
+                        "domain": "snthostings.com",
+                        "country_code": "US",
+                        "hostnames": [
+                            "144.183.153.103.in-addr.arpa.snthostings.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-06T20:45:29Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-06T20:45:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:45:20Z",
+                    "last_observed": "2026-11-06T20:45:20Z",
+                    "data": {
+                        "asn": "AS140947",
+                        "as_name": "SnTHostings",
+                        "as_domain": "snthostings.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-06T20:49:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:49:45Z",
+                    "last_observed": "2026-11-06T20:49:45Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS140947 snthostings",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-06T20:53:45Z",
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-06T20:45:18Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-06T20:45:11Z",
+            "observations": [
+                {
+                    "key": "2018036",
+                    "first_observed": "2026-11-06T20:45:11Z",
+                    "last_observed": "2026-11-06T20:45:11Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "103.153.183.144:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-06T15:59:36Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-06T20:47:36Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-06T20:57:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:57:28Z",
+                    "last_observed": "2026-11-06T20:57:28Z",
+                    "data": {
+                        "as_owner": "SnTHostings",
+                        "asn": 140947,
+                        "network": "103.153.182.0/23",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 38,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

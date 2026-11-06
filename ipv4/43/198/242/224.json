@@ -1,0 +1,199 @@
+{
+    "schema_version": 2,
+    "ip": "43.198.242.224",
+    "first_seen": "2026-11-06T20:45:11Z",
+    "last_seen": "2026-11-06T20:45:11Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-06T20:48:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:48:17Z",
+                    "last_observed": "2026-11-06T20:48:17Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Amazon.com, Inc.",
+                        "domain": "amazon.com",
+                        "country_code": "HK",
+                        "hostnames": [
+                            "ec2-43-198-242-224.ap-east-1.compute.amazonaws.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-06T20:45:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:45:24Z",
+                    "last_observed": "2026-11-06T20:45:24Z",
+                    "data": {
+                        "ports": [
+                            443
+                        ],
+                        "hostnames": [
+                            "ec2-43-198-242-224.ap-east-1.compute.amazonaws.com"
+                        ],
+                        "cpes": [],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-06T20:45:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:45:19Z",
+                    "last_observed": "2026-11-06T20:45:19Z",
+                    "data": {
+                        "asn": "AS16509",
+                        "as_name": "Amazon.com, Inc.",
+                        "as_domain": "amazon.com",
+                        "country_code": "HK",
+                        "country": "Hong Kong",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-06T20:49:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:49:35Z",
+                    "last_observed": "2026-11-06T20:49:35Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS16509 amazon.com inc",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-06T20:53:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:53:35Z",
+                    "last_observed": "2026-11-06T20:53:35Z",
+                    "data": {
+                        "org": "Amazon.com, Inc.",
+                        "isp": "Amazon.com, Inc.",
+                        "asn": "AS16509",
+                        "os": null,
+                        "country_code": "HK",
+                        "hostnames": [
+                            "ec2-43-198-242-224.ap-east-1.compute.amazonaws.com"
+                        ],
+                        "domains": [
+                            "amazonaws.com"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "879c4f7298e5736829369553b929a40c9ec826b9f62e4a5ba19f5514f804dca9"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-06T20:45:18Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-06T20:45:11Z",
+            "observations": [
+                {
+                    "key": "2018169",
+                    "first_observed": "2026-11-06T20:45:11Z",
+                    "last_observed": "2026-11-06T20:45:11Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "43.198.242.224:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-06T17:30:59Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-06T20:47:26Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-06T20:56:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:56:13Z",
+                    "last_observed": "2026-11-06T20:56:13Z",
+                    "data": {
+                        "as_owner": "Amazon.com, Inc.",
+                        "asn": 16509,
+                        "network": "43.198.0.0/15",
+                        "country": "HK",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 0,
+                            "undetected": 92,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

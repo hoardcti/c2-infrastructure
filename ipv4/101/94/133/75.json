@@ -1,0 +1,225 @@
+{
+    "schema_version": 2,
+    "ip": "101.94.133.75",
+    "first_seen": "2026-11-06T20:45:11Z",
+    "last_seen": "2026-11-06T20:45:11Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-06T20:48:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:48:25Z",
+                    "last_observed": "2026-11-06T20:48:25Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Fixed Line ISP",
+                        "isp": "CHINANET SHANGHAI PROVINCE NETWORK",
+                        "domain": "online.sh.cn",
+                        "country_code": "CN",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-06T20:45:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:45:28Z",
+                    "last_observed": "2026-11-06T20:45:28Z",
+                    "data": {
+                        "ports": [
+                            8443
+                        ],
+                        "hostnames": [
+                            "shiroko.blue"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.28.3",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-06T20:45:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:45:19Z",
+                    "last_observed": "2026-11-06T20:45:19Z",
+                    "data": {
+                        "asn": "AS4812",
+                        "as_name": "China Telecom (Group)",
+                        "as_domain": "chinatelecom.com.cn",
+                        "country_code": "CN",
+                        "country": "China",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-06T20:49:43Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:49:43Z",
+                    "last_observed": "2026-11-06T20:49:43Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS4812 china telecom (group)",
+                        "country_code": "CN",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-06T20:53:43Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:53:43Z",
+                    "last_observed": "2026-11-06T20:53:43Z",
+                    "data": {
+                        "org": "CHINANET SHANGHAI PROVINCE NETWORK",
+                        "isp": "China Telecom (Group)",
+                        "asn": "AS4812",
+                        "os": "Ubuntu",
+                        "country_code": "CN",
+                        "hostnames": [
+                            "shiroko.blue"
+                        ],
+                        "domains": [
+                            "shiroko.blue"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.28.3",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "服务器-霜",
+                                "jarm": "1dd40d40d00040d00042d43d000000831b6af40378e2dd35eeac4e9311926e",
+                                "certificate_sha256": "a57f91c839a556b0626e22c49cbdd8903c55974cdbcbd2038f1e2b0ae7d69264",
+                                "certificate_subject": "shiroko.blue",
+                                "certificate_issuer": "YE1"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-06T20:45:18Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-06T20:45:11Z",
+            "observations": [
+                {
+                    "key": "2018166",
+                    "first_observed": "2026-11-06T20:45:11Z",
+                    "last_observed": "2026-11-06T20:45:11Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "101.94.133.75:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-06T17:31:00Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-06T20:47:34Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-06T20:57:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-06T20:57:13Z",
+                    "last_observed": "2026-11-06T20:57:13Z",
+                    "data": {
+                        "as_owner": "China Telecom (Group)",
+                        "asn": 4812,
+                        "network": "101.94.0.0/16",
+                        "country": "CN",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 1,
+                            "undetected": 36,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
