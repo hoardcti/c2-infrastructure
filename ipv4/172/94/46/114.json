@@ -315,20 +315,44 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-14T21:34:53Z",
-            "last_error": {
-                "occurred_at": "2026-10-31T02:15:50Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-07T18:40:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-07T18:40:33Z",
+                    "last_observed": "2026-11-07T18:40:33Z",
+                    "data": {
+                        "org": "Internet Security - CA",
+                        "isp": "M247 Europe SRL",
+                        "asn": "AS9009",
+                        "os": null,
+                        "country_code": "CA",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 139,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-06T14:52:03Z",
+            "last_checked": "2026-11-07T18:32:24Z",
             "observations": [
                 {
                     "key": "172.94.0.0/17",
                     "first_observed": "2026-10-29T14:08:33Z",
-                    "last_observed": "2026-11-06T14:52:03Z",
+                    "last_observed": "2026-11-07T18:32:24Z",
                     "data": {
                         "cidr": "172.94.0.0/17",
                         "sblid": "SBL688689",

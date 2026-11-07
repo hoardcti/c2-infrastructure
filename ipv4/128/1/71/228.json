@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "128.1.71.228",
     "first_seen": "2026-11-02T20:40:11Z",
-    "last_seen": "2026-11-07T13:49:24Z",
+    "last_seen": "2026-11-07T18:32:17Z",
     "flags": [
         "unknown malware"
     ],
@@ -122,12 +122,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-07T13:49:24Z",
+            "last_checked": "2026-11-07T18:32:17Z",
             "observations": [
                 {
                     "key": "2010685",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-07T13:49:24Z",
+                    "last_observed": "2026-11-07T18:32:17Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -152,6 +152,49 @@
         "urlhaus": {
             "last_checked": "2026-11-06T20:48:04Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-07T18:45:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-07T18:45:44Z",
+                    "last_observed": "2026-11-07T18:45:44Z",
+                    "data": {
+                        "as_owner": "Zenlayer Inc",
+                        "asn": 21859,
+                        "network": "128.1.68.0/22",
+                        "country": "HK",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }
