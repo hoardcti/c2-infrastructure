@@ -8,11 +8,11 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-31T09:27:58Z",
+            "last_checked": "2026-11-07T13:52:28Z",
             "observations": [
                 {
                     "first_observed": "2026-10-31T09:27:58Z",
-                    "last_observed": "2026-10-31T09:27:58Z",
+                    "last_observed": "2026-11-07T13:52:28Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -31,8 +31,26 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-31T09:25:09Z",
-            "observations": []
+            "last_checked": "2026-11-07T13:49:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-07T13:49:37Z",
+                    "last_observed": "2026-11-07T13:49:37Z",
+                    "data": {
+                        "ports": [
+                            80
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:helpsystems:cobalt_strike"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
         },
         "ipinfo": {
             "last_checked": "2026-10-31T09:25:08Z",
@@ -53,11 +71,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-31T09:29:16Z",
+            "last_checked": "2026-11-07T13:53:46Z",
             "observations": [
                 {
                     "first_observed": "2026-10-31T09:29:16Z",
-                    "last_observed": "2026-10-31T09:29:16Z",
+                    "last_observed": "2026-11-07T13:53:46Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS14061 digitalocean  llc",
@@ -69,11 +87,36 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-31T09:32:34Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-07T13:57:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-07T13:57:46Z",
+                    "last_observed": "2026-11-07T13:57:46Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-07T06:55:10Z",

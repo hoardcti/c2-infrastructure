@@ -8,11 +8,11 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-10-31T09:28:00Z",
+            "last_checked": "2026-11-07T13:52:30Z",
             "observations": [
                 {
                     "first_observed": "2026-10-31T09:28:00Z",
-                    "last_observed": "2026-10-31T09:28:00Z",
+                    "last_observed": "2026-11-07T13:52:30Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -33,7 +33,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-10-31T09:25:10Z",
+            "last_checked": "2026-11-07T13:49:38Z",
             "observations": [
                 {
                     "first_observed": "2026-10-31T09:25:10Z",
@@ -51,6 +51,31 @@
                         ],
                         "tags": [
                             "cloud"
+                        ],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-11-07T13:49:38Z",
+                    "last_observed": "2026-11-07T13:49:38Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            50050
+                        ],
+                        "hostnames": [
+                            "149.28.146.241.vultrusercontent.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:helpsystems:cobalt_strike",
+                            "cpe:/a:openbsd:openssh:10.2p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "self-signed"
                         ],
                         "vulns": []
                     }
@@ -76,11 +101,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-10-31T09:29:18Z",
+            "last_checked": "2026-11-07T13:53:48Z",
             "observations": [
                 {
                     "first_observed": "2026-10-31T09:29:18Z",
-                    "last_observed": "2026-10-31T09:29:18Z",
+                    "last_observed": "2026-11-07T13:53:48Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS20473 the constant company  llc",
@@ -92,11 +117,66 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-31T09:32:36Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-07T13:57:48Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-07T13:57:48Z",
+                    "last_observed": "2026-11-07T13:57:48Z",
+                    "data": {
+                        "org": "Vultr Holdings, LLC",
+                        "isp": "The Constant Company, LLC",
+                        "asn": "AS20473",
+                        "os": "Linux",
+                        "country_code": "SG",
+                        "hostnames": [
+                            "149.28.146.241.vultrusercontent.com"
+                        ],
+                        "domains": [
+                            "vultrusercontent.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.2p1 Ubuntu 2ubuntu3.8",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "4dee14e0908d3eb2e2458284b83b9ed41316c41c731819632e96a34fc354055c",
+                                "certificate_subject": "Major Cobalt Strike",
+                                "certificate_organisation": "cobaltstrike",
+                                "certificate_issuer": "Major Cobalt Strike"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-07T06:55:10Z",

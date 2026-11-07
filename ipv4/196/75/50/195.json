@@ -1,0 +1,189 @@
+{
+    "schema_version": 2,
+    "ip": "196.75.50.195",
+    "first_seen": "2026-11-07T13:49:24Z",
+    "last_seen": "2026-11-07T13:49:24Z",
+    "flags": [
+        "meterpreter"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-07T13:52:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-07T13:52:24Z",
+                    "last_observed": "2026-11-07T13:52:24Z",
+                    "data": {
+                        "abuse_confidence_score": 19,
+                        "total_reports": 4,
+                        "distinct_reporters": 4,
+                        "last_reported_at": "2026-10-11T16:28:30Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Fixed Line ISP",
+                        "isp": "ADSL_Maroc_telecom",
+                        "domain": "menara.ma",
+                        "country_code": "MA",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-07T13:49:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-07T13:49:35Z",
+                    "last_observed": "2026-11-07T13:49:35Z",
+                    "data": {
+                        "ports": [
+                            47001
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-07T13:49:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-07T13:49:31Z",
+                    "last_observed": "2026-11-07T13:49:31Z",
+                    "data": {
+                        "asn": "AS36903",
+                        "as_name": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
+                        "as_domain": "iam.ma",
+                        "country_code": "MA",
+                        "country": "Morocco",
+                        "continent_code": "AF",
+                        "continent": "Africa"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-07T13:53:42Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-07T13:53:42Z",
+                    "last_observed": "2026-11-07T13:53:42Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS36903 african network information center",
+                        "country_code": "MA",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-07T13:57:42Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-07T13:49:31Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-07T13:49:24Z",
+            "observations": [
+                {
+                    "key": "2018390",
+                    "first_observed": "2026-11-07T13:49:24Z",
+                    "last_observed": "2026-11-07T13:49:24Z",
+                    "flags": [
+                        "meterpreter"
+                    ],
+                    "data": {
+                        "ioc": "196.75.50.195:2222",
+                        "port": 2222,
+                        "threat_type": "botnet_cc",
+                        "malware": "Meterpreter",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.meterpreter",
+                        "confidence_level": 50,
+                        "first_seen": "2026-11-07T07:48:15Z",
+                        "reference": null,
+                        "tags": [
+                            "36903",
+                            "MetaSploit",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-07T13:51:36Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-07T14:00:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-07T14:00:07Z",
+                    "last_observed": "2026-11-07T14:00:07Z",
+                    "data": {
+                        "as_owner": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
+                        "asn": 36903,
+                        "network": "196.74.0.0/15",
+                        "country": "MA",
+                        "continent": "AF",
+                        "regional_internet_registry": "AFRINIC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 2,
+                            "undetected": 35,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "GreyNoise",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Cluster25",
+                                "title": "Activity related to METASPLOIT",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

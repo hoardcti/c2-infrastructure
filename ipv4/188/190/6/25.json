@@ -1,0 +1,162 @@
+{
+    "schema_version": 2,
+    "ip": "188.190.6.25",
+    "first_seen": "2026-11-07T13:49:24Z",
+    "last_seen": "2026-11-07T13:49:24Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-07T13:52:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-07T13:52:22Z",
+                    "last_observed": "2026-11-07T13:52:22Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "EDIS Infrastructure in Austria",
+                        "domain": "edis.at",
+                        "country_code": "AT",
+                        "hostnames": [
+                            "25.6.190.188.static.edisglobal.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-07T13:49:34Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-07T13:49:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-07T13:49:31Z",
+                    "last_observed": "2026-11-07T13:49:31Z",
+                    "data": {
+                        "asn": "AS57169",
+                        "as_name": "EDIS GmbH",
+                        "as_domain": "edis.at",
+                        "country_code": "AT",
+                        "country": "Austria",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-07T13:53:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-07T13:53:40Z",
+                    "last_observed": "2026-11-07T13:53:40Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS56370 inttel ltd.",
+                        "country_code": "UA",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-07T13:57:40Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-07T13:49:31Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-07T13:49:24Z",
+            "observations": [
+                {
+                    "key": "2018391",
+                    "first_observed": "2026-11-07T13:49:24Z",
+                    "last_observed": "2026-11-07T13:49:24Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "188.190.6.25:8080",
+                        "port": 8080,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-11-07T07:48:14Z",
+                        "reference": null,
+                        "tags": [
+                            "57169",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-07T13:51:34Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-07T13:59:52Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-07T13:59:52Z",
+                    "last_observed": "2026-11-07T13:59:52Z",
+                    "data": {
+                        "as_owner": "EDIS GmbH",
+                        "asn": 57169,
+                        "network": "188.190.6.0/23",
+                        "country": "AT",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Kaspersky",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "jarm": "28d28d28d00028d00042d42d000000831b6af40378e2dd35eeac4e9311926e",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
