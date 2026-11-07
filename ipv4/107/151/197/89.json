@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "107.151.197.89",
     "first_seen": "2026-11-02T20:40:11Z",
-    "last_seen": "2026-11-07T00:44:30Z",
+    "last_seen": "2026-11-07T06:55:04Z",
     "flags": [
         "unknown malware"
     ],
@@ -93,16 +93,16 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-11-06T06:22:44Z",
+            "last_checked": "2026-11-07T06:55:10Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-07T00:44:30Z",
+            "last_checked": "2026-11-07T06:55:04Z",
             "observations": [
                 {
                     "key": "2010441",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-07T00:44:30Z",
+                    "last_observed": "2026-11-07T06:55:04Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -126,6 +126,55 @@
         "urlhaus": {
             "last_checked": "2026-11-06T06:25:16Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-07T07:07:47Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-07T07:07:47Z",
+                    "last_observed": "2026-11-07T07:07:47Z",
+                    "data": {
+                        "as_owner": "Zenlayer Inc",
+                        "asn": 62610,
+                        "network": "107.151.196.0/22",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 2,
+                            "undetected": 37,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "GreyNoise",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

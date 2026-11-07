@@ -193,12 +193,46 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-02T15:42:15Z",
-            "last_error": {
-                "occurred_at": "2026-10-30T18:38:09Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-07T07:04:43Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-07T07:04:43Z",
+                    "last_observed": "2026-11-07T07:04:43Z",
+                    "data": {
+                        "org": "Saigon Postel Corporation",
+                        "isp": "Sai gon Postel Corporation",
+                        "asn": "AS7602",
+                        "os": "Windows (build 10.0.18362)",
+                        "country_code": "VN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "version": "10.0.18362",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "0a6b65a6a1f580c7508daa72aa64decd7b6ddd3b8a8a5a8b19f3959682ef30a4",
+                                "certificate_subject": "Win27006",
+                                "certificate_issuer": "Win27006"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-06T14:52:03Z",
