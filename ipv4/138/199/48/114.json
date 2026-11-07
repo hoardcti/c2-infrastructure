@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "138.199.48.114",
     "first_seen": "2026-11-02T20:40:11Z",
-    "last_seen": "2026-11-07T18:32:17Z",
+    "last_seen": "2026-11-07T22:34:08Z",
     "flags": [
         "unknown malware"
     ],
@@ -109,12 +109,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-07T18:32:17Z",
+            "last_checked": "2026-11-07T22:34:08Z",
             "observations": [
                 {
                     "key": "2010928",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-07T18:32:17Z",
+                    "last_observed": "2026-11-07T22:34:08Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -137,7 +137,7 @@
                 {
                     "key": "2010919",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-07T18:32:17Z",
+                    "last_observed": "2026-11-07T22:34:08Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -162,6 +162,50 @@
         "urlhaus": {
             "last_checked": "2026-11-07T00:47:06Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-07T22:47:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-07T22:47:35Z",
+                    "last_observed": "2026-11-07T22:47:35Z",
+                    "data": {
+                        "as_owner": "Datacamp Limited",
+                        "asn": 212238,
+                        "network": "138.199.48.0/23",
+                        "country": "CA",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 38,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "3fd3fd16d3fd3fd00042d42d0000008829d962df49d3a8bfde9e71d906bc88",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }
