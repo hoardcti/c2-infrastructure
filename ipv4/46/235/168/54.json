@@ -292,11 +292,83 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-31T15:49:25Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-08T02:18:10Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-08T02:18:10Z",
+                    "last_observed": "2026-11-08T02:18:10Z",
+                    "data": {
+                        "org": "The Nostrum Group",
+                        "isp": "Redcentric Solutions Ltd",
+                        "asn": "AS13009",
+                        "os": null,
+                        "country_code": "GB",
+                        "hostnames": [
+                            "interlinksoftware.com"
+                        ],
+                        "domains": [
+                            "interlinksoftware.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "pqc"
+                        ],
+                        "vulns": [
+                            "CVE-2007-4723",
+                            "CVE-2009-0796",
+                            "CVE-2009-2299",
+                            "CVE-2011-1176",
+                            "CVE-2011-2688",
+                            "CVE-2012-3526",
+                            "CVE-2012-4001",
+                            "CVE-2012-4360",
+                            "CVE-2013-0941",
+                            "CVE-2013-0942",
+                            "CVE-2013-2765",
+                            "CVE-2013-4365"
+                        ],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "version": "2.4.69",
+                                "http_title": "302 Found"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "version": "2.4.69",
+                                "tags": [
+                                    "pqc"
+                                ],
+                                "http_title": "Login",
+                                "jarm": "16d16d16d2ad16d00042d42d000000ed3bcba39b97e2d41fffa7e67a75c095",
+                                "certificate_sha256": "41e232f6749ac33164206cf7efd727850ed53a29c5f6db2fbbe66185b6200e1f",
+                                "certificate_subject": "*.interlinksoftware.com",
+                                "certificate_issuer": "Go Daddy Secure Certificate Authority - G2"
+                            },
+                            {
+                                "port": 5701,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042de5fb3038104f457d92ba02e9311512c2",
+                                "certificate_sha256": "41e232f6749ac33164206cf7efd727850ed53a29c5f6db2fbbe66185b6200e1f",
+                                "certificate_subject": "*.interlinksoftware.com",
+                                "certificate_issuer": "Go Daddy Secure Certificate Authority - G2"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-07T18:32:24Z",

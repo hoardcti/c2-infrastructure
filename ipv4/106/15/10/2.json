@@ -227,11 +227,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-15T05:51:51Z",
-            "last_error": {
-                "occurred_at": "2026-10-31T15:48:57Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-08T02:17:42Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T16:22:47Z",
@@ -292,6 +288,74 @@
                                 "certificate_subject": "Major Cobalt Strike",
                                 "certificate_organisation": "cobaltstrike",
                                 "certificate_issuer": "Major Cobalt Strike"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-08T02:17:42Z",
+                    "last_observed": "2026-11-08T02:17:42Z",
+                    "data": {
+                        "org": "Aliyun Computing Co., LTD",
+                        "isp": "Hangzhou Alibaba Advertising Co.,Ltd.",
+                        "asn": "AS37963",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "eol-product",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2021-22116",
+                            "CVE-2021-32718",
+                            "CVE-2021-32719",
+                            "CVE-2022-31008",
+                            "CVE-2023-46118"
+                        ],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon"
+                            },
+                            {
+                                "port": 111,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 111,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 4369,
+                                "transport": "tcp",
+                                "product": "Erlang Port Mapper Daemon"
+                            },
+                            {
+                                "port": 5672,
+                                "transport": "tcp",
+                                "product": "RabbitMQ",
+                                "version": "3.3.5",
+                                "tags": [
+                                    "eol-product"
+                                ]
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "jarm": "07d14d16d21d21d00042d41d00041d47e4e0ae17960b2a5b4fd6107fbb0926",
+                                "certificate_sha256": "9ea0425d37fd378f4dd305aad778cb6344166a33e51a5b9e43a3adcbcedd73a5",
+                                "certificate_subject": "*.microsoft.com",
+                                "certificate_organisation": "Microsoft Corporation",
+                                "certificate_issuer": "*.microsoft.com"
                             }
                         ]
                     }

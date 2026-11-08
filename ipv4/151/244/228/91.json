@@ -224,11 +224,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-01T21:52:10Z",
-            "last_error": {
-                "occurred_at": "2026-10-31T15:50:05Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-08T02:18:50Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T21:52:10Z",
@@ -272,6 +268,92 @@
                                 "certificate_sha256": "af30a7e245fa6177f74e436c4e9f53c242e1e452a3b58a7f7aeddf570b2acd68",
                                 "certificate_subject": "officesrv.com",
                                 "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 4434,
+                                "transport": "tcp",
+                                "product": "Microsoft IIS httpd",
+                                "version": "10.0",
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "af30a7e245fa6177f74e436c4e9f53c242e1e452a3b58a7f7aeddf570b2acd68",
+                                "certificate_subject": "officesrv.com",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 4443,
+                                "transport": "tcp",
+                                "product": "Microsoft IIS httpd",
+                                "version": "10.0",
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "af30a7e245fa6177f74e436c4e9f53c242e1e452a3b58a7f7aeddf570b2acd68",
+                                "certificate_subject": "officesrv.com",
+                                "certificate_issuer": "YR1"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "Microsoft IIS httpd",
+                                "version": "10.0"
+                            },
+                            {
+                                "port": 8085,
+                                "transport": "tcp",
+                                "product": "Microsoft IIS httpd",
+                                "version": "10.0"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "b2c48b913336ad29c90bc6efb0e021b3da558bc8e9eb23d87df805b7bf8ac290",
+                                "certificate_subject": "Major Cobalt Strike",
+                                "certificate_organisation": "cobaltstrike",
+                                "certificate_issuer": "Major Cobalt Strike"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-08T02:18:50Z",
+                    "last_observed": "2026-11-08T02:18:50Z",
+                    "data": {
+                        "org": "FREAKHOSTING LTD",
+                        "isp": "FREAKHOSTING LTD",
+                        "asn": "AS215703",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "officesrv.com"
+                        ],
+                        "domains": [
+                            "officesrv.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Microsoft IIS httpd",
+                                "version": "10.0"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp"
                             },
                             {
                                 "port": 4434,

@@ -169,11 +169,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-01T21:51:18Z",
-            "last_error": {
-                "occurred_at": "2026-10-31T15:49:13Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-08T02:17:58Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T21:51:18Z",
@@ -216,6 +212,55 @@
                                 "certificate_sha256": "41e232f6749ac33164206cf7efd727850ed53a29c5f6db2fbbe66185b6200e1f",
                                 "certificate_subject": "*.interlinksoftware.com",
                                 "certificate_issuer": "Go Daddy Secure Certificate Authority - G2"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-08T02:17:58Z",
+                    "last_observed": "2026-11-08T02:17:58Z",
+                    "data": {
+                        "org": "The Nostrum Group",
+                        "isp": "Redcentric Solutions Ltd",
+                        "asn": "AS13009",
+                        "os": null,
+                        "country_code": "GB",
+                        "hostnames": [
+                            "interlinksoftware.com"
+                        ],
+                        "domains": [
+                            "interlinksoftware.com"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "Sign in to ASI",
+                                "jarm": "21d19d00021d21d00042d43d00000056e413178d5f184cc6adfb749623f434",
+                                "certificate_sha256": "41e232f6749ac33164206cf7efd727850ed53a29c5f6db2fbbe66185b6200e1f",
+                                "certificate_subject": "*.interlinksoftware.com",
+                                "certificate_issuer": "Go Daddy Secure Certificate Authority - G2"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "41e232f6749ac33164206cf7efd727850ed53a29c5f6db2fbbe66185b6200e1f",
+                                "certificate_subject": "*.interlinksoftware.com",
+                                "certificate_issuer": "Go Daddy Secure Certificate Authority - G2"
+                            },
+                            {
+                                "port": 55000,
+                                "transport": "tcp"
                             }
                         ]
                     }

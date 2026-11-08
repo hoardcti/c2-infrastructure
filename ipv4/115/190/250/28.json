@@ -533,11 +533,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-01T16:22:49Z",
-            "last_error": {
-                "occurred_at": "2026-10-31T15:48:59Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-08T02:17:44Z",
             "observations": [
                 {
                     "first_observed": "2026-10-01T16:22:49Z",
@@ -567,6 +563,83 @@
                             "CVE-2024-6387",
                             "CVE-2025-26465",
                             "CVE-2025-32728",
+                            "CVE-2026-35385",
+                            "CVE-2026-35387",
+                            "CVE-2026-35388",
+                            "CVE-2026-35414",
+                            "CVE-2026-59995",
+                            "CVE-2026-59996",
+                            "CVE-2026-59997",
+                            "CVE-2026-59998",
+                            "CVE-2026-59999",
+                            "CVE-2026-60000",
+                            "CVE-2026-60001",
+                            "CVE-2026-60002",
+                            "CVE-2026-73281",
+                            "CVE-2026-73282",
+                            "CVE-2026-73283"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.7"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "485bdd4346989b2fbbb20b93b95d184acb0d8ff7ce577c5d38a25abccc7863ca",
+                                "certificate_subject": "TZH",
+                                "certificate_organisation": "WUWU",
+                                "certificate_issuer": "TZH"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-08T02:17:44Z",
+                    "last_observed": "2026-11-08T02:17:44Z",
+                    "data": {
+                        "org": "Beijing Volcano Engine Technology Co., Ltd.",
+                        "isp": "Beijing Volcano Engine Technology Co., Ltd.",
+                        "asn": "AS137718",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2007-2768",
+                            "CVE-2008-3844",
+                            "CVE-2016-20012",
+                            "CVE-2021-36368",
+                            "CVE-2021-41617",
+                            "CVE-2023-38408",
+                            "CVE-2023-48795",
+                            "CVE-2023-51385",
+                            "CVE-2023-51767",
+                            "CVE-2024-6387",
+                            "CVE-2025-26465",
+                            "CVE-2025-32728",
+                            "CVE-2026-106552",
+                            "CVE-2026-106553",
+                            "CVE-2026-106555",
+                            "CVE-2026-106582",
+                            "CVE-2026-106583",
+                            "CVE-2026-106584",
+                            "CVE-2026-106585",
+                            "CVE-2026-106586",
+                            "CVE-2026-106587",
                             "CVE-2026-35385",
                             "CVE-2026-35387",
                             "CVE-2026-35388",

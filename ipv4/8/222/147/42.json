@@ -587,11 +587,153 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-31T15:49:21Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-08T02:18:06Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-08T02:18:06Z",
+                    "last_observed": "2026-11-08T02:18:06Z",
+                    "data": {
+                        "org": "Alibaba Cloud (Singapore) Private Limited",
+                        "isp": "Alibaba (US) Technology Co., Ltd.",
+                        "asn": "AS45102",
+                        "os": null,
+                        "country_code": "SG",
+                        "hostnames": [
+                            "ptclnetwork.it.com"
+                        ],
+                        "domains": [
+                            "it.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2007-4723",
+                            "CVE-2009-0796",
+                            "CVE-2009-2299",
+                            "CVE-2011-1176",
+                            "CVE-2011-2688",
+                            "CVE-2012-3526",
+                            "CVE-2012-4001",
+                            "CVE-2012-4360",
+                            "CVE-2013-0941",
+                            "CVE-2013-0942",
+                            "CVE-2013-2765",
+                            "CVE-2013-4365",
+                            "CVE-2023-38709",
+                            "CVE-2024-24795",
+                            "CVE-2024-27316",
+                            "CVE-2024-36387",
+                            "CVE-2024-38472",
+                            "CVE-2024-38473",
+                            "CVE-2024-38474",
+                            "CVE-2024-38475",
+                            "CVE-2024-38476",
+                            "CVE-2024-38477",
+                            "CVE-2024-39573",
+                            "CVE-2024-40898",
+                            "CVE-2024-42516",
+                            "CVE-2024-43204",
+                            "CVE-2024-43394",
+                            "CVE-2024-47252",
+                            "CVE-2025-23048",
+                            "CVE-2025-49630",
+                            "CVE-2025-49812",
+                            "CVE-2025-53020",
+                            "CVE-2025-55753",
+                            "CVE-2025-58098",
+                            "CVE-2025-59775",
+                            "CVE-2025-65082",
+                            "CVE-2025-66200",
+                            "CVE-2026-24072",
+                            "CVE-2026-28780",
+                            "CVE-2026-29167",
+                            "CVE-2026-29168",
+                            "CVE-2026-29169",
+                            "CVE-2026-29170",
+                            "CVE-2026-33006",
+                            "CVE-2026-33007",
+                            "CVE-2026-33523",
+                            "CVE-2026-33857",
+                            "CVE-2026-34032",
+                            "CVE-2026-34059",
+                            "CVE-2026-34355",
+                            "CVE-2026-34356",
+                            "CVE-2026-42356",
+                            "CVE-2026-42528",
+                            "CVE-2026-42535",
+                            "CVE-2026-42536",
+                            "CVE-2026-43951",
+                            "CVE-2026-44119",
+                            "CVE-2026-44185",
+                            "CVE-2026-44186",
+                            "CVE-2026-44631",
+                            "CVE-2026-46729",
+                            "CVE-2026-48005",
+                            "CVE-2026-48913",
+                            "CVE-2026-49975",
+                            "CVE-2026-56153",
+                            "CVE-2026-56154",
+                            "CVE-2026-56449",
+                            "CVE-2026-57941",
+                            "CVE-2026-58415",
+                            "CVE-2026-59685",
+                            "CVE-2026-59797",
+                            "CVE-2026-63045",
+                            "CVE-2026-63292",
+                            "CVE-2026-63686",
+                            "CVE-2026-63718",
+                            "CVE-2026-73636",
+                            "CVE-2026-73637",
+                            "CVE-2026-79768",
+                            "CVE-2026-93546"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "version": "2.4.58",
+                                "http_title": "302 Found"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "version": "2.4.58",
+                                "http_title": "302 Found",
+                                "jarm": "1dd40d40d00040d00042d43d000000b5ce48eb9aaa95d750e8df42b900e12b",
+                                "certificate_sha256": "eafa320971e1b388a77e95522bc0f54cd8fd6f0cf7b63bf216385feb9905f659",
+                                "certificate_subject": "ptclnetwork.it.com",
+                                "certificate_issuer": "E7"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "ec0d57d9410b5f7c6d0dc6f49fd99c6eebcab21e8fa1f087ee3f6e254a5e30c6",
+                                "certificate_subject": "Pwn3rs Striked",
+                                "certificate_organisation": "Pwn3rs",
+                                "certificate_issuer": "Pwn3rs Striked"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-07T18:32:24Z",

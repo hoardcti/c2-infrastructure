@@ -213,11 +213,59 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-31T15:49:01Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-08T02:17:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-08T02:17:46Z",
+                    "last_observed": "2026-11-08T02:17:46Z",
+                    "data": {
+                        "org": "Tencent cloud computing (Beijing) Co., Ltd.",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.6"
+                            },
+                            {
+                                "port": 123,
+                                "transport": "udp",
+                                "product": "ntpd",
+                                "version": "3"
+                            },
+                            {
+                                "port": 8000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8081,
+                                "transport": "tcp",
+                                "http_title": "Skyhowl 登录"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "87f2085c32b6a2cc709b365f55873e207a9caa10bffecf2fd16d3cf9d94d390c"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-07T18:32:24Z",

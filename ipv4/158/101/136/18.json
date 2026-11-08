@@ -229,11 +229,140 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-31T15:49:29Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-08T02:18:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-08T02:18:14Z",
+                    "last_observed": "2026-11-08T02:18:14Z",
+                    "data": {
+                        "org": "Oracle Public Cloud",
+                        "isp": "Oracle Corporation",
+                        "asn": "AS31898",
+                        "os": null,
+                        "country_code": "JP",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "database",
+                            "devops",
+                            "pqc",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.18",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 111,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 111,
+                                "transport": "udp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud",
+                                    "pqc",
+                                    "self-signed"
+                                ],
+                                "jarm": "3fd3fd00000000000043d43d00043dc3b2afa8a5ec09b510a8559aff7899fb",
+                                "certificate_sha256": "3c8344798be46c40ed44072da4aeb1dbd752f3c1203f3e7e5a5f189292dd3562",
+                                "certificate_subject": "TRAEFIK DEFAULT CERT",
+                                "certificate_issuer": "TRAEFIK DEFAULT CERT"
+                            },
+                            {
+                                "port": 2049,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 3306,
+                                "transport": "tcp",
+                                "product": "MariaDB",
+                                "version": "10.6.23-MariaDB-0ubuntu0.22.04.1",
+                                "tags": [
+                                    "cloud",
+                                    "database"
+                                ]
+                            },
+                            {
+                                "port": 6443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "40d40d40d00000000043d43d00043d6aff5ab0f4fc31897186312c9e639319",
+                                "certificate_sha256": "71e9a10314a8083e5b6d160f5022b65c002c31c9cc9a6aacdd9c881981ae9542",
+                                "certificate_subject": "k3s",
+                                "certificate_organisation": "k3s",
+                                "certificate_issuer": "k3s-server-ca@1649167675"
+                            },
+                            {
+                                "port": 9064,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 10250,
+                                "transport": "tcp",
+                                "product": "Kubernetes",
+                                "tags": [
+                                    "cloud",
+                                    "devops"
+                                ],
+                                "jarm": "40d40d40d00040d00043d43d00043d3bef2bf79cd6719851e8198c1e8f9a14",
+                                "certificate_sha256": "879e121c41d5d6b0178662ec9ec9c5e8cad32dd0919da06f962cc4095e2145c9",
+                                "certificate_subject": "jp-k3s-master-01.chronos.icu",
+                                "certificate_issuer": "k3s-server-ca@1649167675"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud",
+                                    "self-signed"
+                                ],
+                                "jarm": "07d14d16d21d21d00042d43d00041de5fb3038104f457d92ba02e9311512c2",
+                                "certificate_sha256": "ba188f6c55e9d4d7e31f55c7cc7fee1ac0e4ed1a9771885f8c56191efe199620",
+                                "certificate_subject": "Outlook.live.com",
+                                "certificate_organisation": "Microsoft Corporation",
+                                "certificate_issuer": "Outlook.live.com"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-07T18:32:24Z",

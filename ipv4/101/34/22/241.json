@@ -183,11 +183,157 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-31T19:57:37Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-08T02:19:08Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-08T02:19:08Z",
+                    "last_observed": "2026-11-08T02:19:08Z",
+                    "data": {
+                        "org": "Tencent Cloud Computing (Beijing) Co., Ltd",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2007-2768",
+                            "CVE-2008-3844",
+                            "CVE-2023-51767",
+                            "CVE-2026-106552",
+                            "CVE-2026-106553",
+                            "CVE-2026-106555",
+                            "CVE-2026-106582",
+                            "CVE-2026-106583",
+                            "CVE-2026-106584",
+                            "CVE-2026-106585",
+                            "CVE-2026-106586",
+                            "CVE-2026-106587",
+                            "CVE-2026-73281",
+                            "CVE-2026-73282",
+                            "CVE-2026-73283"
+                        ],
+                        "services": [
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "cloud",
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "certificate_sha256": "b5be44686250e7c2fbcd8522fa08ce0226e6aac8472949dac9c5fd3ac8f1a406",
+                                "certificate_subject": "localhost.localdomain",
+                                "certificate_issuer": "localhost.localdomain"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "OpenResty",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "502 Bad Gateway"
+                            },
+                            {
+                                "port": 81,
+                                "transport": "tcp",
+                                "product": "OpenResty",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Nginx Proxy Manager"
+                            },
+                            {
+                                "port": 82,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "2301fc88f1447318d71a83c4256b23274e49d9663c3ef091fc74ea5373f1236f",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 6002,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.13",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 7000,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 8085,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 8086,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 9090,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 9091,
+                                "transport": "tcp",
+                                "product": "Transmission",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 12422,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.4",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-07T18:32:24Z",

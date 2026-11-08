@@ -314,11 +314,95 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-10-31T19:57:47Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-08T02:19:18Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-08T02:19:18Z",
+                    "last_observed": "2026-11-08T02:19:18Z",
+                    "data": {
+                        "org": "Hetzner Online GmbH",
+                        "isp": "Hetzner Online GmbH",
+                        "asn": "AS24940",
+                        "os": "Linux",
+                        "country_code": "DE",
+                        "hostnames": [
+                            "gf.infra.dyncloud.io",
+                            "mail.dynnapps.be",
+                            "static.249.2.167.89.clients.your-server.de"
+                        ],
+                        "domains": [
+                            "dyncloud.io",
+                            "dynnapps.be",
+                            "your-server.de"
+                        ],
+                        "tags": [
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2015-9251",
+                            "CVE-2016-10735",
+                            "CVE-2016-7103",
+                            "CVE-2018-14040",
+                            "CVE-2018-14042",
+                            "CVE-2018-20676",
+                            "CVE-2018-20677",
+                            "CVE-2019-11358",
+                            "CVE-2019-8331",
+                            "CVE-2020-11023",
+                            "CVE-2021-41182",
+                            "CVE-2021-41183",
+                            "CVE-2021-41184",
+                            "CVE-2022-31160",
+                            "CVE-2024-21490"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "certificate_sha256": "1c8e29b5d2fad61512c0407a75863fa50facd9c5fe482e5a10948191ab00c689",
+                                "certificate_subject": "mail.dynnapps.be",
+                                "certificate_issuer": "mail.dynnapps.be"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 587,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "ab16e295abcede262a7890e411db50a41895987a3913ab86a670e6c0e5ed72df",
+                                "certificate_subject": "gf.infra.dyncloud.io",
+                                "certificate_issuer": "E8"
+                            },
+                            {
+                                "port": 8025,
+                                "transport": "tcp",
+                                "http_title": "MailHog"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-07T18:32:24Z",
