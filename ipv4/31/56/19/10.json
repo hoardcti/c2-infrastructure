@@ -1,0 +1,195 @@
+{
+    "schema_version": 2,
+    "ip": "31.56.19.10",
+    "first_seen": "2026-11-08T10:00:13Z",
+    "last_seen": "2026-11-08T10:00:13Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-08T10:03:11Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-08T10:03:11Z",
+                    "last_observed": "2026-11-08T10:03:11Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2024-11-13T04:36:02Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Blatant Technologies, LLC",
+                        "domain": "blatant.host",
+                        "country_code": "DE",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-08T10:00:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-08T10:00:22Z",
+                    "last_observed": "2026-11-08T10:00:22Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            443
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-08T10:00:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-08T10:00:20Z",
+                    "last_observed": "2026-11-08T10:00:20Z",
+                    "data": {
+                        "asn": "AS403005",
+                        "as_name": "Blatant Technologies, LLC",
+                        "as_domain": "blatant.host",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-08T10:04:29Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-08T10:04:29Z",
+                    "last_observed": "2026-11-08T10:04:29Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS31549 aria shatel company ltd",
+                        "country_code": "IR",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-08T10:08:29Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-08T10:00:20Z",
+            "observations": [
+                {
+                    "key": "31.56.19.0/24",
+                    "first_observed": "2026-11-08T10:00:20Z",
+                    "last_observed": "2026-11-08T10:00:20Z",
+                    "data": {
+                        "cidr": "31.56.19.0/24",
+                        "sblid": "SBL700257",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-11-08T10:00:13Z",
+            "observations": [
+                {
+                    "key": "2019389",
+                    "first_observed": "2026-11-08T10:00:13Z",
+                    "last_observed": "2026-11-08T10:00:13Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "31.56.19.10:8080",
+                        "port": 8080,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-08T07:48:11Z",
+                        "reference": "",
+                        "tags": [
+                            "Android",
+                            "RAT",
+                            "banker",
+                            "c2",
+                            "novavpn",
+                            "port-8080"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-08T10:02:22Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-08T10:10:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-08T10:10:40Z",
+                    "last_observed": "2026-11-08T10:10:40Z",
+                    "data": {
+                        "as_owner": "Blatant",
+                        "asn": 403005,
+                        "network": "31.56.19.0/24",
+                        "country": "AE",
+                        "continent": "AS",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -14,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 1,
+                            "undetected": 35,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 4
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

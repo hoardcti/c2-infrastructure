@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "149.36.49.100",
     "first_seen": "2026-11-02T20:40:11Z",
-    "last_seen": "2026-11-08T02:09:18Z",
+    "last_seen": "2026-11-08T10:00:13Z",
     "flags": [
         "unknown malware"
     ],
@@ -78,16 +78,16 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-11-07T06:55:10Z",
+            "last_checked": "2026-11-08T10:00:20Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-08T02:09:18Z",
+            "last_checked": "2026-11-08T10:00:13Z",
             "observations": [
                 {
                     "key": "2011058",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-08T02:09:18Z",
+                    "last_observed": "2026-11-08T10:00:13Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -110,7 +110,7 @@
                 {
                     "key": "2010938",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-08T02:09:18Z",
+                    "last_observed": "2026-11-08T10:00:13Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -135,6 +135,55 @@
         "urlhaus": {
             "last_checked": "2026-11-07T13:51:40Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-08T10:13:10Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-08T10:13:10Z",
+                    "last_observed": "2026-11-08T10:13:10Z",
+                    "data": {
+                        "as_owner": "Datacamp Limited",
+                        "asn": 212238,
+                        "network": "149.36.48.0/22",
+                        "country": "CA",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "40d40d40d00040d00042d42d000000d2e61cae37a985f75ecafb81b33ca523",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "148.251.184.150",
     "first_seen": "2026-11-02T20:40:11Z",
-    "last_seen": "2026-11-08T02:09:18Z",
+    "last_seen": "2026-11-08T10:00:13Z",
     "flags": [
         "unknown malware"
     ],
@@ -75,16 +75,16 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-11-07T06:55:10Z",
+            "last_checked": "2026-11-08T10:00:20Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-08T02:09:18Z",
+            "last_checked": "2026-11-08T10:00:13Z",
             "observations": [
                 {
                     "key": "2010844",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-08T02:09:18Z",
+                    "last_observed": "2026-11-08T10:00:13Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -109,6 +109,49 @@
         "urlhaus": {
             "last_checked": "2026-11-07T06:57:48Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-08T10:11:10Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-08T10:11:10Z",
+                    "last_observed": "2026-11-08T10:11:10Z",
+                    "data": {
+                        "as_owner": "Hetzner Online GmbH",
+                        "asn": 24940,
+                        "network": "148.251.0.0/16",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

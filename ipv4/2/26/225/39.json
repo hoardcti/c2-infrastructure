@@ -1,0 +1,206 @@
+{
+    "schema_version": 2,
+    "ip": "2.26.225.39",
+    "first_seen": "2026-11-08T10:00:13Z",
+    "last_seen": "2026-11-08T10:00:13Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-08T10:03:09Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-08T10:03:09Z",
+                    "last_observed": "2026-11-08T10:03:09Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-08-30T07:10:18Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "VPSPay - vpspay.cloud",
+                        "domain": "vpspay.cloud",
+                        "country_code": "PL",
+                        "hostnames": [
+                            "2-26-225-39.rdns.vpspay.net"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-08T10:00:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-08T10:00:21Z",
+                    "last_observed": "2026-11-08T10:00:21Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            443
+                        ],
+                        "hostnames": [
+                            "2-26-225-39.rdns.vpspay.net"
+                        ],
+                        "cpes": [
+                            "cpe:/a:caddyserver:caddy",
+                            "cpe:/a:golang:go",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-08T10:00:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-08T10:00:20Z",
+                    "last_observed": "2026-11-08T10:00:20Z",
+                    "data": {
+                        "asn": "AS201988",
+                        "as_name": "VPSPay ASN",
+                        "as_domain": "vpspay.cloud",
+                        "country_code": "PL",
+                        "country": "Poland",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-08T10:04:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-08T10:04:27Z",
+                    "last_observed": "2026-11-08T10:04:27Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS12576 ee limited",
+                        "country_code": "GB",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "6a968b177be45db272b493a5",
+                                "name": "Vultr Tokyo (Japan) Port Scanning Hosts for 2026-08-31",
+                                "created": "2026-09-01T08:21:43.94Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "honeypot",
+                                    "portscan",
+                                    "scanners",
+                                    "vultr"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-08T10:08:27Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-08T10:00:20Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-08T10:00:13Z",
+            "observations": [
+                {
+                    "key": "2019390",
+                    "first_observed": "2026-11-08T10:00:13Z",
+                    "last_observed": "2026-11-08T10:00:13Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "2.26.225.39:8080",
+                        "port": 8080,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-08T07:48:11Z",
+                        "reference": "",
+                        "tags": [
+                            "Android",
+                            "RAT",
+                            "banker",
+                            "c2",
+                            "novavpn",
+                            "port-8080"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-08T10:02:21Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-08T10:10:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-08T10:10:25Z",
+                    "last_observed": "2026-11-08T10:10:25Z",
+                    "data": {
+                        "as_owner": "VPSPay Networks LTD",
+                        "asn": 201988,
+                        "network": "2.26.224.0/22",
+                        "country": "PL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 1,
+                            "undetected": 35,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "GreyNoise",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "28d28d28d00000000042d42d000000592e3a5efc1c92ee4819fe43787a9444",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
