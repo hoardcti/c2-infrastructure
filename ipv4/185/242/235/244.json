@@ -33,7 +33,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-01T05:18:16Z",
+            "last_checked": "2026-11-08T16:39:19Z",
             "observations": [
                 {
                     "first_observed": "2026-10-03T00:18:49Z",
@@ -243,6 +243,59 @@
                             "starttls"
                         ],
                         "vulns": [
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-08T16:39:19Z",
+                    "last_observed": "2026-11-08T16:39:19Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            25,
+                            80,
+                            110,
+                            143,
+                            443,
+                            465,
+                            587,
+                            993,
+                            995,
+                            3306,
+                            3333,
+                            7000,
+                            8000,
+                            8010,
+                            8018,
+                            8020,
+                            9901
+                        ],
+                        "hostnames": [
+                            "cib-fund.cloud",
+                            "spk.laws.ms",
+                            "www.cib-fund.cloud"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx",
+                            "cpe:/a:f5:nginx:1.18.0",
+                            "cpe:/a:f5:nginx:1.20.1",
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/a:oracle:mysql",
+                            "cpe:/a:postfix:postfix",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "database",
+                            "eol-product",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
                             "CVE-2021-3618",
                             "CVE-2023-44487",
                             "CVE-2025-23419"

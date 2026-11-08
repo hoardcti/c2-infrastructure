@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "152.233.84.23",
     "first_seen": "2026-11-02T20:40:11Z",
-    "last_seen": "2026-11-08T10:00:13Z",
+    "last_seen": "2026-11-08T16:37:24Z",
     "flags": [
         "unknown malware"
     ],
@@ -82,12 +82,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-08T10:00:13Z",
+            "last_checked": "2026-11-08T16:37:24Z",
             "observations": [
                 {
                     "key": "2011099",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-08T10:00:13Z",
+                    "last_observed": "2026-11-08T16:37:24Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -110,7 +110,7 @@
                 {
                     "key": "2010762",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-08T10:00:13Z",
+                    "last_observed": "2026-11-08T16:37:24Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -135,6 +135,54 @@
         "urlhaus": {
             "last_checked": "2026-11-07T13:52:06Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-08T16:48:36Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-08T16:48:36Z",
+                    "last_observed": "2026-11-08T16:48:36Z",
+                    "data": {
+                        "as_owner": "Datacamp Limited",
+                        "asn": 212238,
+                        "network": "152.233.84.0/22",
+                        "country": "BR",
+                        "continent": "SA",
+                        "regional_internet_registry": "LACNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }
