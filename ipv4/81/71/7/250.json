@@ -128,11 +128,91 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-01T18:29:39Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-09T07:55:49Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-09T07:55:49Z",
+                    "last_observed": "2026-11-09T07:55:49Z",
+                    "data": {
+                        "org": "Tencent Cloud Computing (Beijing) Co., Ltd",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": "Linux",
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "eol-product",
+                            "proxy",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.16"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "302 Found"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product",
+                                    "self-signed"
+                                ],
+                                "http_title": "302 Found",
+                                "jarm": "3fd3fd0003fd3fd00042d42d00000000f78d2dc0ce6e5bbc5b8149a4872356",
+                                "certificate_sha256": "ac73a9ccd88265910f3277ca5a1d44d0408b6466b8499b3617acd0681a246f95",
+                                "certificate_subject": "*.360.net",
+                                "certificate_organisation": "360.Net Inc",
+                                "certificate_issuer": "*.360.net"
+                            },
+                            {
+                                "port": 7000,
+                                "transport": "tcp",
+                                "product": "Fast Reverse Proxy",
+                                "version": "0.35.1",
+                                "tags": [
+                                    "proxy"
+                                ]
+                            },
+                            {
+                                "port": 12305,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 12347,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad22c42d42d00042de4f6cde49b80ad1e14c340f9e47ccd3a",
+                                "certificate_sha256": "2470dda5ded1dd96e9d2afcf6b94628bfb02f444cca0be1528d1f0d9e394dd87",
+                                "certificate_subject": "*.360.net",
+                                "certificate_organisation": "360.Net Inc",
+                                "certificate_issuer": "*.360.net"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-08T20:59:42Z",

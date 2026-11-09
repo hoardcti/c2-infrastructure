@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "154.197.57.134",
     "first_seen": "2026-11-02T20:40:11Z",
-    "last_seen": "2026-11-09T00:45:30Z",
+    "last_seen": "2026-11-09T07:46:26Z",
     "flags": [
         "unknown malware"
     ],
@@ -97,12 +97,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-09T00:45:30Z",
+            "last_checked": "2026-11-09T07:46:26Z",
             "observations": [
                 {
                     "key": "2010399",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-09T00:45:30Z",
+                    "last_observed": "2026-11-09T07:46:26Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -126,6 +126,55 @@
         "urlhaus": {
             "last_checked": "2026-11-08T02:11:25Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-09T07:57:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-09T07:57:07Z",
+                    "last_observed": "2026-11-09T07:57:07Z",
+                    "data": {
+                        "as_owner": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+                        "asn": 135377,
+                        "network": "154.197.56.0/23",
+                        "country": "SC",
+                        "continent": "AF",
+                        "regional_internet_registry": "AFRINIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "21d14d00021d21d00042d43d0000007ee659769b367ed43174f0486d0ab737",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

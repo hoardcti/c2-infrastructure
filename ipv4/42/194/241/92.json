@@ -198,7 +198,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-11-01T18:29:35Z",
+            "last_checked": "2026-11-09T07:55:45Z",
             "observations": [
                 {
                     "first_observed": "2026-11-01T18:29:35Z",
@@ -291,6 +291,80 @@
                                 "certificate_subject": "Major Cobalt Strike",
                                 "certificate_organisation": "cobaltstrike",
                                 "certificate_issuer": "Major Cobalt Strike"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-09T07:55:45Z",
+                    "last_observed": "2026-11-09T07:55:45Z",
+                    "data": {
+                        "org": "Tencent cloud computing (Beijing) Co., Ltd.",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": "Ubuntu",
+                        "country_code": "CN",
+                        "hostnames": [
+                            "blog.cl0ser.top"
+                        ],
+                        "domains": [
+                            "cl0ser.top"
+                        ],
+                        "tags": [
+                            "ai",
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.14",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "502 Bad Gateway",
+                                "jarm": "28d28d28d00028d00042d42d000000e1ea2a807a629b496b664cf07ad7c08d",
+                                "certificate_sha256": "02869805ef234f6b2458e00c1581ce844e55062b94ecbc26cfd47b2a7a1cc99a",
+                                "certificate_subject": "blog.cl0ser.top",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 8787,
+                                "transport": "tcp",
+                                "product": "ARTEX",
+                                "version": "0.3.23",
+                                "tags": [
+                                    "ai",
+                                    "cloud"
+                                ],
+                                "http_title": "ARTEX — 自主渗透测试控制台"
                             }
                         ]
                     }
