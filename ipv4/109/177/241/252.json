@@ -1,0 +1,163 @@
+{
+    "schema_version": 2,
+    "ip": "109.177.241.252",
+    "first_seen": "2026-11-09T18:31:35Z",
+    "last_seen": "2026-11-09T18:31:35Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-09T18:34:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-09T18:34:35Z",
+                    "last_observed": "2026-11-09T18:34:35Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Fixed Line ISP",
+                        "isp": "Emirates Telecommunications Corporation",
+                        "domain": "etisalat.ae",
+                        "country_code": "AE",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-09T18:31:45Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-09T18:31:43Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-09T18:31:43Z",
+                    "last_observed": "2026-11-09T18:31:43Z",
+                    "data": {
+                        "asn": "AS5384",
+                        "as_name": "Emirates Internet",
+                        "as_domain": "emirates.net.ae",
+                        "country_code": "AE",
+                        "country": "United Arab Emirates",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-09T18:35:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-09T18:35:53Z",
+                    "last_observed": "2026-11-09T18:35:53Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS5384 emirates telecommunications corporation",
+                        "country_code": "AE",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-09T18:39:11Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-09T18:31:42Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-09T18:31:35Z",
+            "observations": [
+                {
+                    "key": "2020828",
+                    "first_observed": "2026-11-09T18:31:35Z",
+                    "last_observed": "2026-11-09T18:31:35Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "109.177.241.252:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-09T07:50:32Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-09T18:33:46Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-09T18:41:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-09T18:41:35Z",
+                    "last_observed": "2026-11-09T18:41:35Z",
+                    "data": {
+                        "as_owner": "Emirates Telecommunications Group Company (etisalat Group) Pjsc",
+                        "asn": 5384,
+                        "network": "109.177.0.0/16",
+                        "country": "AE",
+                        "continent": "AS",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

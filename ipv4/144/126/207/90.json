@@ -8,11 +8,11 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-02T10:46:58Z",
+            "last_checked": "2026-11-09T18:34:42Z",
             "observations": [
                 {
                     "first_observed": "2026-11-02T10:46:58Z",
-                    "last_observed": "2026-11-02T10:46:58Z",
+                    "last_observed": "2026-11-09T18:34:42Z",
                     "data": {
                         "abuse_confidence_score": 16,
                         "total_reports": 5,
@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-02T10:44:09Z",
+            "last_checked": "2026-11-09T18:31:49Z",
             "observations": [
                 {
                     "first_observed": "2026-11-02T10:44:09Z",
@@ -140,6 +140,113 @@
                             "CVE-2026-93546"
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-09T18:31:49Z",
+                    "last_observed": "2026-11-09T18:31:49Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            443,
+                            4443,
+                            5901,
+                            50050
+                        ],
+                        "hostnames": [
+                            "www.echolakefoods.net"
+                        ],
+                        "cpes": [
+                            "cpe:/a:apache:http_server:2.4.55",
+                            "cpe:/a:helpsystems:cobalt_strike",
+                            "cpe:/a:openbsd:openssh:9.0p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2007-4723",
+                            "CVE-2009-0796",
+                            "CVE-2009-2299",
+                            "CVE-2011-1176",
+                            "CVE-2011-2688",
+                            "CVE-2012-3526",
+                            "CVE-2012-4001",
+                            "CVE-2012-4360",
+                            "CVE-2013-0941",
+                            "CVE-2013-0942",
+                            "CVE-2013-2765",
+                            "CVE-2013-4365",
+                            "CVE-2023-25690",
+                            "CVE-2023-27522",
+                            "CVE-2023-31122",
+                            "CVE-2023-38709",
+                            "CVE-2023-43622",
+                            "CVE-2023-45802",
+                            "CVE-2024-24795",
+                            "CVE-2024-27316",
+                            "CVE-2024-36387",
+                            "CVE-2024-38472",
+                            "CVE-2024-38473",
+                            "CVE-2024-38474",
+                            "CVE-2024-38475",
+                            "CVE-2024-38476",
+                            "CVE-2024-38477",
+                            "CVE-2024-39573",
+                            "CVE-2024-40898",
+                            "CVE-2024-42516",
+                            "CVE-2024-43204",
+                            "CVE-2024-43394",
+                            "CVE-2024-47252",
+                            "CVE-2025-23048",
+                            "CVE-2025-49630",
+                            "CVE-2025-49812",
+                            "CVE-2025-53020",
+                            "CVE-2025-55753",
+                            "CVE-2025-58098",
+                            "CVE-2025-59775",
+                            "CVE-2025-65082",
+                            "CVE-2025-66200",
+                            "CVE-2026-28780",
+                            "CVE-2026-29167",
+                            "CVE-2026-29168",
+                            "CVE-2026-29169",
+                            "CVE-2026-29170",
+                            "CVE-2026-34355",
+                            "CVE-2026-34356",
+                            "CVE-2026-42356",
+                            "CVE-2026-42528",
+                            "CVE-2026-42535",
+                            "CVE-2026-42536",
+                            "CVE-2026-43951",
+                            "CVE-2026-44119",
+                            "CVE-2026-44185",
+                            "CVE-2026-44186",
+                            "CVE-2026-44631",
+                            "CVE-2026-46729",
+                            "CVE-2026-48005",
+                            "CVE-2026-48913",
+                            "CVE-2026-49975",
+                            "CVE-2026-56153",
+                            "CVE-2026-56154",
+                            "CVE-2026-56449",
+                            "CVE-2026-57941",
+                            "CVE-2026-58415",
+                            "CVE-2026-59685",
+                            "CVE-2026-59797",
+                            "CVE-2026-63045",
+                            "CVE-2026-63292",
+                            "CVE-2026-63686",
+                            "CVE-2026-63718",
+                            "CVE-2026-73636",
+                            "CVE-2026-73637",
+                            "CVE-2026-79768",
+                            "CVE-2026-93546"
+                        ]
+                    }
                 }
             ]
         },
@@ -162,11 +269,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-02T10:48:16Z",
+            "last_checked": "2026-11-09T18:36:01Z",
             "observations": [
                 {
                     "first_observed": "2026-11-02T10:48:16Z",
-                    "last_observed": "2026-11-02T10:48:16Z",
+                    "last_observed": "2026-11-09T18:36:01Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS14061 digitalocean  llc",
@@ -179,6 +286,10 @@
         },
         "shodan": {
             "last_checked": "2026-11-02T10:51:34Z",
+            "last_error": {
+                "occurred_at": "2026-11-09T18:39:19Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-11-02T10:51:34Z",

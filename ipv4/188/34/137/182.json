@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "188.34.137.182",
     "first_seen": "2026-11-02T20:40:11Z",
-    "last_seen": "2026-11-09T07:46:26Z",
+    "last_seen": "2026-11-09T18:31:35Z",
     "flags": [
         "unknown malware"
     ],
@@ -78,16 +78,16 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-11-08T10:00:20Z",
+            "last_checked": "2026-11-09T18:31:42Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-09T07:46:26Z",
+            "last_checked": "2026-11-09T18:31:35Z",
             "observations": [
                 {
                     "key": "2011125",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-09T07:46:26Z",
+                    "last_observed": "2026-11-09T18:31:35Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -110,7 +110,7 @@
                 {
                     "key": "2010845",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-09T07:46:26Z",
+                    "last_observed": "2026-11-09T18:31:35Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -135,6 +135,54 @@
         "urlhaus": {
             "last_checked": "2026-11-08T10:02:30Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-09T18:44:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-09T18:44:35Z",
+                    "last_observed": "2026-11-09T18:44:35Z",
+                    "data": {
+                        "as_owner": "Hetzner Online GmbH",
+                        "asn": 24940,
+                        "network": "188.34.128.0/17",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 1,
+                            "undetected": 33,
+                            "harmless": 56,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

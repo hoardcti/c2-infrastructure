@@ -95,7 +95,7 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-11-08T10:00:20Z",
+            "last_checked": "2026-11-09T18:31:42Z",
             "observations": []
         },
         "threatfox": {
@@ -129,6 +129,60 @@
         "urlhaus": {
             "last_checked": "2026-11-08T02:12:08Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-09T18:43:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-09T18:43:05Z",
+                    "last_observed": "2026-11-09T18:43:05Z",
+                    "data": {
+                        "as_owner": "Hetzner Online GmbH",
+                        "asn": 213230,
+                        "network": "178.156.128.0/17",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -12,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 1,
+                            "undetected": 36,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Lumu",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Synthient",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 2
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Synthient",
+                                "title": "Proxyware.FleetSDK",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 }
