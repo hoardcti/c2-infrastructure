@@ -149,11 +149,49 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-01T13:06:31Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-09T00:54:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-09T00:54:22Z",
+                    "last_observed": "2026-11-09T00:54:22Z",
+                    "data": {
+                        "org": "Stack Network Sdn. Bhd.",
+                        "isp": "Stack Network Sdn. Bhd.",
+                        "asn": "AS153706",
+                        "os": null,
+                        "country_code": "HK",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "Sorry, the website has been stopped"
+                            },
+                            {
+                                "port": 888,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "403 Forbidden"
+                            },
+                            {
+                                "port": 3622,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.18"
+                            },
+                            {
+                                "port": 5998,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-08T20:59:42Z",

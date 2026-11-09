@@ -169,11 +169,50 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-01T18:28:23Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-09T00:55:02Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-09T00:55:02Z",
+                    "last_observed": "2026-11-09T00:55:02Z",
+                    "data": {
+                        "org": "Tencent Cloud Computing (Beijing) Co., Ltd",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "ai"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.15"
+                            },
+                            {
+                                "port": 123,
+                                "transport": "udp",
+                                "product": "ntpd",
+                                "version": "3"
+                            },
+                            {
+                                "port": 8787,
+                                "transport": "tcp",
+                                "product": "ARTEX",
+                                "version": "0.3.12",
+                                "tags": [
+                                    "ai"
+                                ],
+                                "http_title": "ARTEX — 自主渗透测试控制台"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-08T20:59:42Z",
