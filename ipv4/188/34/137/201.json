@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "188.34.137.201",
     "first_seen": "2026-11-02T20:40:11Z",
-    "last_seen": "2026-11-09T18:31:35Z",
+    "last_seen": "2026-11-10T01:55:39Z",
     "flags": [
         "unknown malware"
     ],
@@ -82,12 +82,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-09T18:31:35Z",
+            "last_checked": "2026-11-10T01:55:39Z",
             "observations": [
                 {
                     "key": "2010898",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-09T18:31:35Z",
+                    "last_observed": "2026-11-10T01:55:39Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -110,7 +110,7 @@
                 {
                     "key": "2010776",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-09T18:31:35Z",
+                    "last_observed": "2026-11-10T01:55:39Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -135,6 +135,50 @@
         "urlhaus": {
             "last_checked": "2026-11-08T10:03:03Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-10T02:08:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-10T02:08:22Z",
+                    "last_observed": "2026-11-10T02:08:22Z",
+                    "data": {
+                        "as_owner": "Hetzner Online GmbH",
+                        "asn": 24940,
+                        "network": "188.34.128.0/17",
+                        "country": "DE",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 38,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "15d3fd16d21d21d00042d43d000000fe02290512647416dcf0a400ccbc0b6b",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }
