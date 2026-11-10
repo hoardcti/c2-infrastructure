@@ -2,13 +2,13 @@
     "schema_version": 2,
     "ip": "61.220.133.191",
     "first_seen": "2026-11-03T10:36:50Z",
-    "last_seen": "2026-11-10T09:29:52Z",
+    "last_seen": "2026-11-10T17:34:36Z",
     "flags": [
         "sliver"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-03T10:39:47Z",
+            "last_checked": "2026-11-10T17:37:29Z",
             "observations": [
                 {
                     "first_observed": "2026-11-03T10:39:47Z",
@@ -27,11 +27,29 @@
                         "country_code": "TW",
                         "hostnames": []
                     }
+                },
+                {
+                    "first_observed": "2026-11-10T17:37:29Z",
+                    "last_observed": "2026-11-10T17:37:29Z",
+                    "data": {
+                        "abuse_confidence_score": 2,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-11-08T19:12:44Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Fixed Line ISP",
+                        "isp": "Data Communication Business Group,",
+                        "domain": "cht.com.tw",
+                        "country_code": "TW",
+                        "hostnames": []
+                    }
                 }
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-03T10:36:59Z",
+            "last_checked": "2026-11-10T17:34:38Z",
             "observations": [
                 {
                     "first_observed": "2026-11-03T10:36:59Z",
@@ -52,6 +70,35 @@
                             "cpe:/a:f5:nginx:1.24.0",
                             "cpe:/a:getbootstrap:bootstrap:5.3.3",
                             "cpe:/a:jquery:jquery:3.7.1",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-10T17:34:38Z",
+                    "last_observed": "2026-11-10T17:34:38Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            137,
+                            443,
+                            1080
+                        ],
+                        "hostnames": [
+                            "61-220-133-191.hinet-ip.hinet.net"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.24.0",
                             "cpe:/a:openbsd:openssh:9.6p1",
                             "cpe:/o:canonical:ubuntu_linux",
                             "cpe:/o:linux:linux_kernel"
@@ -86,11 +133,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-03T10:41:06Z",
+            "last_checked": "2026-11-10T17:38:47Z",
             "observations": [
                 {
                     "first_observed": "2026-11-03T10:41:06Z",
-                    "last_observed": "2026-11-03T10:41:06Z",
+                    "last_observed": "2026-11-10T17:38:47Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS3462 data communication business group",
@@ -103,7 +150,7 @@
         },
         "shodan": {
             "last_error": {
-                "occurred_at": "2026-11-03T10:45:06Z",
+                "occurred_at": "2026-11-10T17:42:47Z",
                 "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
             },
             "observations": []
@@ -113,12 +160,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-10T09:29:52Z",
+            "last_checked": "2026-11-10T17:34:36Z",
             "observations": [
                 {
                     "key": "2011416",
                     "first_observed": "2026-11-03T10:36:50Z",
-                    "last_observed": "2026-11-10T09:29:52Z",
+                    "last_observed": "2026-11-10T17:34:36Z",
                     "flags": [
                         "sliver"
                     ],

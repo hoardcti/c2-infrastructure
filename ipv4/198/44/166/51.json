@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "198.44.166.51",
     "first_seen": "2026-11-02T20:40:11Z",
-    "last_seen": "2026-11-10T09:29:52Z",
+    "last_seen": "2026-11-10T17:34:36Z",
     "flags": [
         "unknown malware"
     ],
@@ -97,12 +97,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-10T09:29:52Z",
+            "last_checked": "2026-11-10T17:34:36Z",
             "observations": [
                 {
                     "key": "2010568",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-10T09:29:52Z",
+                    "last_observed": "2026-11-10T17:34:36Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -124,7 +124,7 @@
                 {
                     "key": "2010428",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-10T09:29:52Z",
+                    "last_observed": "2026-11-10T17:34:36Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -148,6 +148,54 @@
         "urlhaus": {
             "last_checked": "2026-11-08T21:02:06Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-10T17:47:58Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-10T17:47:58Z",
+                    "last_observed": "2026-11-10T17:47:58Z",
+                    "data": {
+                        "as_owner": "Zenlayer Inc",
+                        "asn": 62610,
+                        "network": "198.44.166.0/23",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

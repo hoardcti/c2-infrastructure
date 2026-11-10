@@ -2,17 +2,17 @@
     "schema_version": 2,
     "ip": "99.79.33.43",
     "first_seen": "2026-11-03T10:36:50Z",
-    "last_seen": "2026-11-10T09:29:52Z",
+    "last_seen": "2026-11-10T17:34:36Z",
     "flags": [
         "cobalt strike"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-03T10:39:51Z",
+            "last_checked": "2026-11-10T17:37:33Z",
             "observations": [
                 {
                     "first_observed": "2026-11-03T10:39:51Z",
-                    "last_observed": "2026-11-03T10:39:51Z",
+                    "last_observed": "2026-11-10T17:37:33Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -33,8 +33,29 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-03T10:37:01Z",
-            "observations": []
+            "last_checked": "2026-11-10T17:34:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-10T17:34:40Z",
+                    "last_observed": "2026-11-10T17:34:40Z",
+                    "data": {
+                        "ports": [
+                            443
+                        ],
+                        "hostnames": [
+                            "ec2-99-79-33-43.ca-central-1.compute.amazonaws.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:helpsystems:cobalt_strike"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
         },
         "ipinfo": {
             "last_checked": "2026-11-03T10:36:58Z",
@@ -55,11 +76,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-03T10:41:09Z",
+            "last_checked": "2026-11-10T17:38:51Z",
             "observations": [
                 {
                     "first_observed": "2026-11-03T10:41:09Z",
-                    "last_observed": "2026-11-03T10:41:09Z",
+                    "last_observed": "2026-11-10T17:38:51Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS16509 amazon.com inc",
@@ -72,7 +93,7 @@
         },
         "shodan": {
             "last_error": {
-                "occurred_at": "2026-11-03T10:45:10Z",
+                "occurred_at": "2026-11-10T17:42:51Z",
                 "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
             },
             "observations": []
@@ -82,12 +103,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-10T09:29:52Z",
+            "last_checked": "2026-11-10T17:34:36Z",
             "observations": [
                 {
                     "key": "2012183",
                     "first_observed": "2026-11-03T10:36:50Z",
-                    "last_observed": "2026-11-10T09:29:52Z",
+                    "last_observed": "2026-11-10T17:34:36Z",
                     "flags": [
                         "cobalt strike"
                     ],
