@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "101.47.20.109",
     "first_seen": "2026-11-02T20:40:11Z",
-    "last_seen": "2026-11-10T17:34:36Z",
+    "last_seen": "2026-11-10T23:00:11Z",
     "flags": [
         "unknown malware"
     ],
@@ -93,23 +93,66 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-03T18:25:35Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-10T23:08:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-10T23:08:04Z",
+                    "last_observed": "2026-11-10T23:08:04Z",
+                    "data": {
+                        "org": "BYTEPLUS",
+                        "isp": "Byteplus Pte. Ltd.",
+                        "asn": "AS150436",
+                        "os": "Linux",
+                        "country_code": "SG",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "devops",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.8"
+                            },
+                            {
+                                "port": 10250,
+                                "transport": "tcp",
+                                "product": "Kubernetes",
+                                "tags": [
+                                    "devops",
+                                    "self-signed"
+                                ],
+                                "jarm": "3fd3fd00000000000043d3fd3fd43d79451d8c63b099acafdbabb24551d0e6",
+                                "certificate_sha256": "2df85eff3d2d9b6dba886bd7120d8c15b731908e3187e523c1c33eaa4c0a2d93",
+                                "certificate_subject": "kubernetes",
+                                "certificate_organisation": "k8s",
+                                "certificate_issuer": "kubernetes"
+                            },
+                            {
+                                "port": 30001,
+                                "transport": "tcp",
+                                "http_title": "Media.X"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-09T18:31:42Z",
+            "last_checked": "2026-11-10T23:00:18Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-10T17:34:36Z",
+            "last_checked": "2026-11-10T23:00:11Z",
             "observations": [
                 {
                     "key": "2010616",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-10T17:34:36Z",
+                    "last_observed": "2026-11-10T23:00:11Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -131,7 +174,7 @@
                 {
                     "key": "2010350",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-10T17:34:36Z",
+                    "last_observed": "2026-11-10T23:00:11Z",
                     "flags": [
                         "unknown malware"
                     ],

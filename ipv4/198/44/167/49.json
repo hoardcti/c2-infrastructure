@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "198.44.167.49",
     "first_seen": "2026-11-02T20:40:11Z",
-    "last_seen": "2026-11-10T17:34:36Z",
+    "last_seen": "2026-11-10T23:00:11Z",
     "flags": [
         "unknown malware"
     ],
@@ -93,16 +93,16 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-11-09T18:31:42Z",
+            "last_checked": "2026-11-10T23:00:19Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-10T17:34:36Z",
+            "last_checked": "2026-11-10T23:00:11Z",
             "observations": [
                 {
                     "key": "2010391",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-10T17:34:36Z",
+                    "last_observed": "2026-11-10T23:00:11Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -124,7 +124,7 @@
                 {
                     "key": "2010279",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-10T17:34:36Z",
+                    "last_observed": "2026-11-10T23:00:11Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -148,6 +148,50 @@
         "urlhaus": {
             "last_checked": "2026-11-09T00:47:42Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-10T23:11:55Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-10T23:11:55Z",
+                    "last_observed": "2026-11-10T23:11:55Z",
+                    "data": {
+                        "as_owner": "Zenlayer Inc",
+                        "asn": 62610,
+                        "network": "198.44.166.0/23",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 36,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "3fd3fd0003fd3fd21c42d42d000000bdfc58c9a46434368cf60aa440385763",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

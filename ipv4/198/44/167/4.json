@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "198.44.167.4",
     "first_seen": "2026-11-02T20:40:11Z",
-    "last_seen": "2026-11-10T17:34:36Z",
+    "last_seen": "2026-11-10T23:00:11Z",
     "flags": [
         "unknown malware"
     ],
@@ -73,16 +73,16 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-11-09T18:31:42Z",
+            "last_checked": "2026-11-10T23:00:19Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-10T17:34:36Z",
+            "last_checked": "2026-11-10T23:00:11Z",
             "observations": [
                 {
                     "key": "2010551",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-10T17:34:36Z",
+                    "last_observed": "2026-11-10T23:00:11Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -104,7 +104,7 @@
                 {
                     "key": "2010297",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-10T17:34:36Z",
+                    "last_observed": "2026-11-10T23:00:11Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -128,6 +128,50 @@
         "urlhaus": {
             "last_checked": "2026-11-09T00:47:38Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-10T23:11:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-10T23:11:26Z",
+                    "last_observed": "2026-11-10T23:11:26Z",
+                    "data": {
+                        "as_owner": "Zenlayer Inc",
+                        "asn": 62610,
+                        "network": "198.44.166.0/23",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "21d14d00021d21d00042d43d0000007ee659769b367ed43174f0486d0ab737",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

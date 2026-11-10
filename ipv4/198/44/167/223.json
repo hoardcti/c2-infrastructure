@@ -2,7 +2,7 @@
     "schema_version": 2,
     "ip": "198.44.167.223",
     "first_seen": "2026-11-02T20:40:11Z",
-    "last_seen": "2026-11-10T17:34:36Z",
+    "last_seen": "2026-11-10T23:00:11Z",
     "flags": [
         "unknown malware"
     ],
@@ -196,16 +196,16 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-11-09T18:31:42Z",
+            "last_checked": "2026-11-10T23:00:19Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-10T17:34:36Z",
+            "last_checked": "2026-11-10T23:00:11Z",
             "observations": [
                 {
                     "key": "2010546",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-10T17:34:36Z",
+                    "last_observed": "2026-11-10T23:00:11Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -229,6 +229,45 @@
         "urlhaus": {
             "last_checked": "2026-11-09T00:47:56Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-10T23:13:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-10T23:13:40Z",
+                    "last_observed": "2026-11-10T23:13:40Z",
+                    "data": {
+                        "as_owner": "Zenlayer Inc",
+                        "asn": 62610,
+                        "network": "198.44.166.0/23",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 1,
+                            "undetected": 38,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "3fd3fd0003fd3fd21c42d42d000000307ee0eb468e9fdb5cfcd698a80a67ef",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }
