@@ -1,0 +1,175 @@
+{
+    "schema_version": 2,
+    "ip": "217.60.63.238",
+    "first_seen": "2026-11-10T09:29:52Z",
+    "last_seen": "2026-11-10T09:29:52Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-10T09:32:49Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-10T09:32:49Z",
+                    "last_observed": "2026-11-10T09:32:49Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "CGI GLOBAL LIMITED",
+                        "domain": "cloudbackbone.net",
+                        "country_code": "FR",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-10T09:30:01Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-10T09:29:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-10T09:29:59Z",
+                    "last_observed": "2026-11-10T09:29:59Z",
+                    "data": {
+                        "asn": "AS56971",
+                        "as_name": "AS56971 Cloud",
+                        "as_domain": "hostvds.com",
+                        "country_code": "FR",
+                        "country": "France",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-10T09:34:08Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-10T09:34:08Z",
+                    "last_observed": "2026-11-10T09:34:08Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS58224 iran telecommunication company pjs",
+                        "country_code": "IR",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-10T09:38:08Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-10T09:38:08Z",
+                    "last_observed": "2026-11-10T09:38:08Z",
+                    "data": {
+                        "org": "CGI GLOBAL LIMITED",
+                        "isp": "AS56971 CGI GLOBAL LIMITED",
+                        "asn": "AS56971",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.0p2 Debian 7+deb13u4"
+                            },
+                            {
+                                "port": 8000,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-10T09:29:59Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-10T09:29:52Z",
+            "observations": [
+                {
+                    "key": "2022444",
+                    "first_observed": "2026-11-10T09:29:52Z",
+                    "last_observed": "2026-11-10T09:29:52Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "217.60.63.238:8000",
+                        "port": 8000,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 50,
+                        "first_seen": "2026-11-10T06:48:41Z",
+                        "reference": null,
+                        "tags": [
+                            "56971",
+                            "Cobalt Strike",
+                            "c2",
+                            "censys"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-10T09:32:01Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-10T09:40:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-10T09:40:19Z",
+                    "last_observed": "2026-11-10T09:40:19Z",
+                    "data": {
+                        "as_owner": "Cgi Global Limited",
+                        "asn": 56971,
+                        "network": "217.60.60.0/22",
+                        "country": "AE",
+                        "continent": "AS",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 0,
+                            "undetected": 92,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "27d28d28d00028d00042d43d0000007d20e9b9a3e87aa1ec17cb4d646ce9a5",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
