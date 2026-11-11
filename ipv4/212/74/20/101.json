@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-04T05:35:47Z",
+            "last_checked": "2026-11-11T10:32:43Z",
             "observations": [
                 {
                     "first_observed": "2026-11-04T05:35:47Z",
@@ -43,6 +43,19 @@
                         "hostnames": [
                             "earn.fm"
                         ],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-11-11T10:32:43Z",
+                    "last_observed": "2026-11-11T10:32:43Z",
+                    "data": {
+                        "ports": [
+                            8443
+                        ],
+                        "hostnames": [],
                         "cpes": [],
                         "tags": [],
                         "vulns": []
@@ -126,6 +139,60 @@
         "urlhaus": {
             "last_checked": "2026-11-09T07:49:04Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-11T10:44:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-11T10:44:19Z",
+                    "last_observed": "2026-11-11T10:44:19Z",
+                    "data": {
+                        "as_owner": "Servers.com, Inc.",
+                        "asn": 7979,
+                        "network": "212.74.20.0/24",
+                        "country": "GB",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -12,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 1,
+                            "undetected": 36,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Lumu",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Synthient",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 2
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Synthient",
+                                "title": "Proxyware.FleetSDK",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 }
