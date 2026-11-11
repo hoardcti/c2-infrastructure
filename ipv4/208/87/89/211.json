@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-03T23:55:45Z",
+            "last_checked": "2026-11-11T02:45:11Z",
             "observations": [
                 {
                     "first_observed": "2026-11-03T23:55:45Z",
@@ -45,6 +45,23 @@
                         ],
                         "cpes": [],
                         "tags": [],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-11-11T02:45:11Z",
+                    "last_observed": "2026-11-11T02:45:11Z",
+                    "data": {
+                        "ports": [
+                            443
+                        ],
+                        "hostnames": [
+                            "emkmoh.com"
+                        ],
+                        "cpes": [],
+                        "tags": [
+                            "pqc"
+                        ],
                         "vulns": []
                     }
                 }
@@ -125,6 +142,54 @@
         "urlhaus": {
             "last_checked": "2026-11-09T00:48:06Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-11T02:53:02Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-11T02:53:02Z",
+                    "last_observed": "2026-11-11T02:53:02Z",
+                    "data": {
+                        "as_owner": "Servers.com, Inc.",
+                        "asn": 7979,
+                        "network": "208.87.88.0/22",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 1,
+                            "undetected": 36,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lumu",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

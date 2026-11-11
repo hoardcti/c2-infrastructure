@@ -31,8 +31,25 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-03T23:55:46Z",
-            "observations": []
+            "last_checked": "2026-11-11T02:45:12Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-11T02:45:12Z",
+                    "last_observed": "2026-11-11T02:45:12Z",
+                    "data": {
+                        "ports": [
+                            22
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
         },
         "ipinfo": {
             "last_checked": "2026-11-02T20:42:13Z",
@@ -109,6 +126,49 @@
         "urlhaus": {
             "last_checked": "2026-11-09T00:48:08Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-11T02:53:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-11T02:53:17Z",
+                    "last_observed": "2026-11-11T02:53:17Z",
+                    "data": {
+                        "as_owner": "Servers.com, Inc.",
+                        "asn": 7979,
+                        "network": "208.87.88.0/22",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Lumu",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }
