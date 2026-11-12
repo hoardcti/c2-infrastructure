@@ -2,17 +2,17 @@
     "schema_version": 2,
     "ip": "88.211.218.234",
     "first_seen": "2026-11-04T21:07:20Z",
-    "last_seen": "2026-11-11T18:29:08Z",
+    "last_seen": "2026-11-12T01:24:11Z",
     "flags": [
         "unknown malware"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-04T21:10:19Z",
+            "last_checked": "2026-11-12T01:27:08Z",
             "observations": [
                 {
                     "first_observed": "2026-11-04T21:10:19Z",
-                    "last_observed": "2026-11-04T21:10:19Z",
+                    "last_observed": "2026-11-12T01:27:08Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -31,8 +31,28 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-04T21:07:30Z",
-            "observations": []
+            "last_checked": "2026-11-12T01:24:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-12T01:24:20Z",
+                    "last_observed": "2026-11-12T01:24:20Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            443
+                        ],
+                        "hostnames": [
+                            "emkmoh.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
         },
         "ipinfo": {
             "last_checked": "2026-11-04T21:07:27Z",
@@ -53,11 +73,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-04T21:11:37Z",
+            "last_checked": "2026-11-12T01:28:26Z",
             "observations": [
                 {
                     "first_observed": "2026-11-04T21:11:37Z",
-                    "last_observed": "2026-11-04T21:11:37Z",
+                    "last_observed": "2026-11-12T01:28:26Z",
                     "data": {
                         "reputation": 0,
                         "asn": "ASNone ",
@@ -70,6 +90,10 @@
         },
         "shodan": {
             "last_checked": "2026-11-04T21:15:01Z",
+            "last_error": {
+                "occurred_at": "2026-11-12T01:31:45Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-11-04T21:15:01Z",
@@ -107,12 +131,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-11T18:29:08Z",
+            "last_checked": "2026-11-12T01:24:11Z",
             "observations": [
                 {
                     "key": "2014662",
                     "first_observed": "2026-11-04T21:07:20Z",
-                    "last_observed": "2026-11-11T18:29:08Z",
+                    "last_observed": "2026-11-12T01:24:11Z",
                     "flags": [
                         "unknown malware"
                     ],
