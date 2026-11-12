@@ -217,7 +217,7 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-11-11T02:43:24Z",
+            "last_checked": "2026-11-12T09:31:17Z",
             "observations": []
         },
         "threatfox": {
@@ -237,6 +237,37 @@
                         "id": "1817131",
                         "ioc": "59.110.81.93:80",
                         "threat_type": "botnet_cc"
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-12T09:33:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-12T09:33:59Z",
+                    "last_observed": "2026-11-12T09:33:59Z",
+                    "data": {
+                        "urlhaus_reference": "https://urlhaus.abuse.ch/host/59.110.81.93/",
+                        "first_seen": "2025-07-20T06:09:05Z",
+                        "url_count": 1,
+                        "blacklists": {
+                            "spamhaus_dbl": "not listed",
+                            "surbl": "not listed"
+                        },
+                        "urls": [
+                            {
+                                "id": "3586201",
+                                "url": "http://59.110.81.93:9999/02.08.2022.exe",
+                                "status": "offline",
+                                "date_added": "2025-07-20T06:09:35Z",
+                                "threat": "malware_download",
+                                "tags": [
+                                    "CobaltStrike",
+                                    "censys"
+                                ]
+                            }
+                        ]
                     }
                 }
             ]

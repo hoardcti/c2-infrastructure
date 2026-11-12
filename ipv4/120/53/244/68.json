@@ -132,7 +132,7 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-11-11T02:43:24Z",
+            "last_checked": "2026-11-12T09:31:17Z",
             "observations": []
         },
         "threatfox": {
@@ -159,6 +159,61 @@
         "urlhaus": {
             "last_checked": "2026-10-22T15:00:25Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-12T09:43:55Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-12T09:43:55Z",
+                    "last_observed": "2026-11-12T09:43:55Z",
+                    "data": {
+                        "as_owner": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": 45090,
+                        "network": "120.53.128.0/17",
+                        "country": "CN",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -1,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 2,
+                            "undetected": 35,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "3fd3fd00000000021c43d43d00043dabadbb43f9614a00c843a4ecd074ab81",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 }
