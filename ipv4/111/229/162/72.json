@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-05T18:35:38Z",
+            "last_checked": "2026-11-12T23:31:07Z",
             "observations": [
                 {
                     "first_observed": "2026-10-29T14:08:50Z",
@@ -50,7 +50,7 @@
                 },
                 {
                     "first_observed": "2026-11-05T18:35:38Z",
-                    "last_observed": "2026-11-05T18:35:38Z",
+                    "last_observed": "2026-11-12T23:31:07Z",
                     "data": {
                         "ports": [
                             22,
@@ -88,11 +88,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-05T18:39:55Z",
+            "last_checked": "2026-11-12T23:36:49Z",
             "observations": [
                 {
                     "first_observed": "2026-10-29T14:15:31Z",
-                    "last_observed": "2026-11-05T18:39:55Z",
+                    "last_observed": "2026-11-12T23:36:49Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS45090 shenzhen tencent computer systems company limited",
@@ -104,11 +104,69 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-05T18:44:57Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-12T23:40:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-12T23:40:30Z",
+                    "last_observed": "2026-11-12T23:40:30Z",
+                    "data": {
+                        "org": "Tencent cloud computing (Beijing) Co., Ltd.",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": "Linux",
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.2p1 Ubuntu 2ubuntu3.5",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "tags": [
+                                    "cloud",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "87f2085c32b6a2cc709b365f55873e207a9caa10bffecf2fd16d3cf9d94d390c"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "5b3e988b4b11752899bb2d44151f228fd04842f959cc81691dc060a6a1d3090d",
+                                "certificate_subject": "update.microsoft.com",
+                                "certificate_organisation": "Microsoft Corporation",
+                                "certificate_issuer": "update.microsoft.com"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-12T09:31:16Z",

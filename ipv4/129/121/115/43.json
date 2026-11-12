@@ -53,7 +53,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-05T18:35:40Z",
+            "last_checked": "2026-11-12T23:31:09Z",
             "observations": [
                 {
                     "first_observed": "2026-10-29T14:08:52Z",
@@ -164,6 +164,28 @@
                             "CVE-2026-84657"
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-12T23:31:09Z",
+                    "last_observed": "2026-11-12T23:31:09Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            443,
+                            2222,
+                            2345,
+                            50000
+                        ],
+                        "hostnames": [
+                            "129-121-115-43.unifiedlayer.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
                 }
             ]
         },
@@ -186,11 +208,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-05T18:39:59Z",
+            "last_checked": "2026-11-12T23:36:53Z",
             "observations": [
                 {
                     "first_observed": "2026-10-29T14:15:59Z",
-                    "last_observed": "2026-11-05T18:39:59Z",
+                    "last_observed": "2026-11-12T23:36:53Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS62729 a small orange llc",
@@ -211,11 +233,54 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-05T18:45:01Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-12T23:40:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-12T23:40:34Z",
+                    "last_observed": "2026-11-12T23:40:34Z",
+                    "data": {
+                        "org": "Oso Grande IP Services, LLC",
+                        "isp": "Oracle Corporation",
+                        "asn": "AS31898",
+                        "os": "Linux",
+                        "country_code": "US",
+                        "hostnames": [
+                            "129-121-115-43.unifiedlayer.com"
+                        ],
+                        "domains": [
+                            "unifiedlayer.com"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 2222,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 2345,
+                                "transport": "tcp",
+                                "product": "ELF Executable File",
+                                "version": "1"
+                            },
+                            {
+                                "port": 50000,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-12T09:31:16Z",

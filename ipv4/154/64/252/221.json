@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-05T18:35:43Z",
+            "last_checked": "2026-11-12T23:31:12Z",
             "observations": [
                 {
                     "first_observed": "2026-10-29T14:08:55Z",
@@ -62,7 +62,7 @@
                 },
                 {
                     "first_observed": "2026-11-05T18:35:43Z",
-                    "last_observed": "2026-11-05T18:35:43Z",
+                    "last_observed": "2026-11-12T23:31:12Z",
                     "data": {
                         "ports": [
                             22,
@@ -107,11 +107,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-05T18:40:05Z",
+            "last_checked": "2026-11-12T23:36:59Z",
             "observations": [
                 {
                     "first_observed": "2026-10-29T14:16:10Z",
-                    "last_observed": "2026-11-05T18:40:05Z",
+                    "last_observed": "2026-11-12T23:36:59Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS174 cogent communications",
@@ -123,11 +123,71 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-05T18:45:07Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-12T23:40:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-12T23:40:40Z",
+                    "last_observed": "2026-11-12T23:40:40Z",
+                    "data": {
+                        "org": "Cogent Communications, LLC",
+                        "isp": "NetLab Global",
+                        "asn": "AS979",
+                        "os": null,
+                        "country_code": "HK",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u6"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon"
+                            },
+                            {
+                                "port": 8889,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "404 Not Found",
+                                "jarm": "29d29d00029d29d00042d42d000000ad9bf51cc3f5a1e29eecb81d0c7b06eb",
+                                "certificate_sha256": "71e89e4de6fc546450bc2273ef2f8941aa67528014fdcdbc0d15b2e78cdca4dc",
+                                "certificate_subject": "58.63.83.179",
+                                "certificate_organisation": "58.63.83.179",
+                                "certificate_issuer": "宝塔面板"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "dd46bbb5554b8ba92d2ec2080fd12500001bf0f0adeb72eae1f2492946e2c26d",
+                                "certificate_subject": "www.freesoft.org/emailAddress=baccala@freesoft.org",
+                                "certificate_organisation": "Brent Baccala",
+                                "certificate_issuer": "www.freesoft.org/emailAddress=baccala@freesoft.org"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-12T09:31:16Z",

@@ -33,11 +33,11 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-05T18:35:32Z",
+            "last_checked": "2026-11-12T23:31:01Z",
             "observations": [
                 {
                     "first_observed": "2026-10-29T14:08:44Z",
-                    "last_observed": "2026-11-05T18:35:32Z",
+                    "last_observed": "2026-11-12T23:31:01Z",
                     "data": {
                         "ports": [
                             80,
@@ -77,11 +77,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-05T18:39:43Z",
+            "last_checked": "2026-11-12T23:36:37Z",
             "observations": [
                 {
                     "first_observed": "2026-10-29T14:13:29Z",
-                    "last_observed": "2026-11-05T18:39:43Z",
+                    "last_observed": "2026-11-12T23:36:37Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS14618 amazon.com  inc.",
@@ -93,11 +93,61 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-05T18:44:45Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-12T23:40:18Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-12T23:40:18Z",
+                    "last_observed": "2026-11-12T23:40:18Z",
+                    "data": {
+                        "org": "Amazon Technologies Inc.",
+                        "isp": "Amazon.com, Inc.",
+                        "asn": "AS14618",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "ec2-54-164-24-73.compute-1.amazonaws.com"
+                        ],
+                        "domains": [
+                            "amazonaws.com"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "tags": [
+                                    "cloud",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "bb0a7225b295289f9312a449ed1a6969196985aa8c862ee02597a0beb8f68bc9",
+                                "certificate_subject": "www.bing.com",
+                                "certificate_organisation": "Microsoft Corporation",
+                                "certificate_issuer": "www.bing.com"
+                            },
+                            {
+                                "port": 8081,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-12T09:31:16Z",
