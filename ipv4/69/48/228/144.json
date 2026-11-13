@@ -130,14 +130,50 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-06T06:32:13Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-13T14:27:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-13T14:27:26Z",
+                    "last_observed": "2026-11-13T14:27:26Z",
+                    "data": {
+                        "org": "BL Networks",
+                        "isp": "BL Networks",
+                        "asn": "AS399629",
+                        "os": "Linux",
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
+                            },
+                            {
+                                "port": 4321,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "404 Not Found",
+                                "jarm": "29d29d00000000000043d43d00043dc3b2afa8a5ec09b510a8559aff7899fb",
+                                "certificate_sha256": "8667ab0dc7cdd5ac54c310fd62812bfc7fc679240f963beb280fa9b029816458",
+                                "certificate_subject": "adaptix",
+                                "certificate_issuer": "adaptix"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-12T09:31:16Z",
+            "last_checked": "2026-11-13T14:17:40Z",
             "observations": []
         },
         "threatfox": {
