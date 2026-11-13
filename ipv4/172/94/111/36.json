@@ -69,11 +69,42 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-06T00:08:29Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-13T06:01:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-13T06:01:33Z",
+                    "last_observed": "2026-11-13T06:01:33Z",
+                    "data": {
+                        "org": "Internet Security - DE",
+                        "isp": "M247 Europe SRL",
+                        "asn": "AS9009",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "Welcome to your SWAG instance",
+                                "jarm": "15d3fd16d29d29d00042d43d000000ea552d307cdd65a9a94fec1293390a04",
+                                "certificate_sha256": "082a4b4af603cf8edd4e6e9178a1d6e282a464abf0566256ee7239308d237740",
+                                "certificate_subject": "*",
+                                "certificate_organisation": "Linuxserver.io",
+                                "certificate_issuer": "*"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-12T09:31:16Z",
