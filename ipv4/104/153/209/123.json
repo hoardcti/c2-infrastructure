@@ -2,17 +2,17 @@
     "schema_version": 2,
     "ip": "104.153.209.123",
     "first_seen": "2026-11-06T14:51:56Z",
-    "last_seen": "2026-11-13T14:17:33Z",
+    "last_seen": "2026-11-13T21:17:53Z",
     "flags": [
         "sliver"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-06T14:54:59Z",
+            "last_checked": "2026-11-13T21:21:16Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T14:54:59Z",
-                    "last_observed": "2026-11-06T14:54:59Z",
+                    "last_observed": "2026-11-13T21:21:16Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-06T14:52:08Z",
+            "last_checked": "2026-11-13T21:18:16Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T14:52:08Z",
@@ -76,6 +76,74 @@
                             "CVE-2026-7210"
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-13T21:18:16Z",
+                    "last_observed": "2026-11-13T21:18:16Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            111,
+                            1080,
+                            2223,
+                            2224,
+                            2225,
+                            3306,
+                            4444,
+                            8000,
+                            8001,
+                            8002,
+                            8005,
+                            8008,
+                            8009,
+                            8023,
+                            8091,
+                            8190,
+                            8899,
+                            9000,
+                            9003,
+                            9004,
+                            9013,
+                            18101,
+                            18181,
+                            19090,
+                            31337
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/a:python:python:3.12.3",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "c2",
+                            "open-dir"
+                        ],
+                        "vulns": [
+                            "CVE-2009-2940",
+                            "CVE-2009-3720",
+                            "CVE-2020-29396",
+                            "CVE-2021-32052",
+                            "CVE-2023-27043",
+                            "CVE-2024-6232",
+                            "CVE-2024-7592",
+                            "CVE-2024-9287",
+                            "CVE-2025-12084",
+                            "CVE-2025-12781",
+                            "CVE-2025-13462",
+                            "CVE-2025-13836",
+                            "CVE-2025-13837",
+                            "CVE-2026-0864",
+                            "CVE-2026-15308",
+                            "CVE-2026-3087",
+                            "CVE-2026-3644",
+                            "CVE-2026-4519",
+                            "CVE-2026-6019",
+                            "CVE-2026-7210"
+                        ]
+                    }
                 }
             ]
         },
@@ -98,11 +166,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-06T14:56:17Z",
+            "last_checked": "2026-11-13T21:22:34Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T14:56:17Z",
-                    "last_observed": "2026-11-06T14:56:17Z",
+                    "last_observed": "2026-11-13T21:22:34Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS32875 wowrack.com",
@@ -114,7 +182,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-11-06T14:59:44Z",
+            "last_checked": "2026-11-13T21:26:34Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T14:59:44Z",
@@ -207,6 +275,198 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-13T21:26:34Z",
+                    "last_observed": "2026-11-13T21:26:34Z",
+                    "data": {
+                        "org": "Virpus LLC",
+                        "isp": "Cogent Communications, LLC",
+                        "asn": "AS174",
+                        "os": "Linux",
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "database",
+                            "open-dir"
+                        ],
+                        "vulns": [
+                            "CVE-2009-2940",
+                            "CVE-2009-3720",
+                            "CVE-2020-29396",
+                            "CVE-2021-32052",
+                            "CVE-2023-27043",
+                            "CVE-2024-6232",
+                            "CVE-2024-7592",
+                            "CVE-2024-9287",
+                            "CVE-2025-12084",
+                            "CVE-2025-12781",
+                            "CVE-2025-13462",
+                            "CVE-2025-13836",
+                            "CVE-2025-13837",
+                            "CVE-2026-0864",
+                            "CVE-2026-15308",
+                            "CVE-2026-3087",
+                            "CVE-2026-3644",
+                            "CVE-2026-4519",
+                            "CVE-2026-6019",
+                            "CVE-2026-7210"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 111,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 111,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 1080,
+                                "transport": "tcp",
+                                "product": "SOCKS5 Proxy"
+                            },
+                            {
+                                "port": 2223,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.10\\r\\n"
+                            },
+                            {
+                                "port": 2224,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.10\\r\\n"
+                            },
+                            {
+                                "port": 2225,
+                                "transport": "tcp",
+                                "product": "Paramiko Python sshd",
+                                "version": "5.1.0"
+                            },
+                            {
+                                "port": 3306,
+                                "transport": "tcp",
+                                "product": "MariaDB",
+                                "version": "10.11.14-MariaDB-0ubuntu0.24.04.1",
+                                "tags": [
+                                    "database"
+                                ]
+                            },
+                            {
+                                "port": 4444,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8000,
+                                "transport": "tcp",
+                                "product": "SimpleHTTPServer",
+                                "version": "0.6"
+                            },
+                            {
+                                "port": 8001,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8002,
+                                "transport": "tcp",
+                                "product": "SimpleHTTPServer",
+                                "version": "0.6",
+                                "tags": [
+                                    "open-dir"
+                                ],
+                                "http_title": "Directory listing for /"
+                            },
+                            {
+                                "port": 8005,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8008,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8009,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8023,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8091,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8190,
+                                "transport": "tcp",
+                                "tags": [
+                                    "open-dir"
+                                ],
+                                "http_title": "Directory listing for /"
+                            },
+                            {
+                                "port": 8899,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 9000,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 9003,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 9004,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 9013,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 18101,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 18111,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 18181,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 19090,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "8b0b94ec0730c217c614c6d843228c63d783b2da9f81805983ec0f66b0932f92",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
                 }
             ]
         },
@@ -215,12 +475,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-13T14:17:33Z",
+            "last_checked": "2026-11-13T21:17:53Z",
             "observations": [
                 {
                     "key": "2017604",
                     "first_observed": "2026-11-06T14:51:56Z",
-                    "last_observed": "2026-11-13T14:17:33Z",
+                    "last_observed": "2026-11-13T21:17:53Z",
                     "flags": [
                         "sliver"
                     ],

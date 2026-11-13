@@ -2,13 +2,13 @@
     "schema_version": 2,
     "ip": "66.179.30.72",
     "first_seen": "2026-11-06T20:45:11Z",
-    "last_seen": "2026-11-13T14:17:33Z",
+    "last_seen": "2026-11-13T21:17:53Z",
     "flags": [
         "sliver"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-06T20:48:23Z",
+            "last_checked": "2026-11-13T21:21:02Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T20:48:23Z",
@@ -27,11 +27,29 @@
                         "country_code": "SG",
                         "hostnames": []
                     }
+                },
+                {
+                    "first_observed": "2026-11-13T21:21:02Z",
+                    "last_observed": "2026-11-13T21:21:02Z",
+                    "data": {
+                        "abuse_confidence_score": 10,
+                        "total_reports": 3,
+                        "distinct_reporters": 2,
+                        "last_reported_at": "2026-10-26T03:34:17Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "BL Networks",
+                        "domain": "blnwx.com",
+                        "country_code": "SG",
+                        "hostnames": []
+                    }
                 }
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-06T20:45:27Z",
+            "last_checked": "2026-11-13T21:18:09Z",
             "observations": []
         },
         "ipinfo": {
@@ -53,11 +71,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-06T20:49:41Z",
+            "last_checked": "2026-11-13T21:22:20Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T20:49:41Z",
-                    "last_observed": "2026-11-06T20:49:41Z",
+                    "last_observed": "2026-11-13T21:22:20Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS7381 sungard availability services lp",
@@ -70,6 +88,10 @@
         },
         "shodan": {
             "last_checked": "2026-11-06T20:53:42Z",
+            "last_error": {
+                "occurred_at": "2026-11-13T21:26:20Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": []
         },
         "spamhaus": {
@@ -77,12 +99,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-13T14:17:33Z",
+            "last_checked": "2026-11-13T21:17:53Z",
             "observations": [
                 {
                     "key": "2018026",
                     "first_observed": "2026-11-06T20:45:11Z",
-                    "last_observed": "2026-11-13T14:17:33Z",
+                    "last_observed": "2026-11-13T21:17:53Z",
                     "flags": [
                         "sliver"
                     ],

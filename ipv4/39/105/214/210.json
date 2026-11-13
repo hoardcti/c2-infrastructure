@@ -2,17 +2,17 @@
     "schema_version": 2,
     "ip": "39.105.214.210",
     "first_seen": "2026-11-06T20:45:11Z",
-    "last_seen": "2026-11-13T14:17:33Z",
+    "last_seen": "2026-11-13T21:17:53Z",
     "flags": [
         "sliver"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-06T20:48:15Z",
+            "last_checked": "2026-11-13T21:20:54Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T20:48:15Z",
-                    "last_observed": "2026-11-06T20:48:15Z",
+                    "last_observed": "2026-11-13T21:20:54Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-06T20:45:23Z",
+            "last_checked": "2026-11-13T21:18:05Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T20:45:23Z",
@@ -49,6 +49,32 @@
                         ],
                         "tags": [
                             "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-13T21:18:05Z",
+                    "last_observed": "2026-11-13T21:18:05Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.18.0",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "mptcp"
                         ],
                         "vulns": [
                             "CVE-2021-23017",
@@ -79,11 +105,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-06T20:49:33Z",
+            "last_checked": "2026-11-13T21:22:12Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T20:49:33Z",
-                    "last_observed": "2026-11-06T20:49:33Z",
+                    "last_observed": "2026-11-13T21:22:12Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS37963 hangzhou alibaba advertising co. ltd.",
@@ -96,6 +122,10 @@
         },
         "shodan": {
             "last_checked": "2026-11-06T20:53:34Z",
+            "last_error": {
+                "occurred_at": "2026-11-13T21:26:13Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-11-06T20:53:34Z",
@@ -149,12 +179,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-13T14:17:33Z",
+            "last_checked": "2026-11-13T21:17:53Z",
             "observations": [
                 {
                     "key": "2018161",
                     "first_observed": "2026-11-06T20:45:11Z",
-                    "last_observed": "2026-11-13T14:17:33Z",
+                    "last_observed": "2026-11-13T21:17:53Z",
                     "flags": [
                         "sliver"
                     ],
