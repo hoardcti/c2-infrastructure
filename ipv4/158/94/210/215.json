@@ -203,11 +203,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-14T06:11:27Z",
-            "last_error": {
-                "occurred_at": "2026-11-06T15:01:40Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-14T02:12:53Z",
             "observations": [
                 {
                     "first_observed": "2026-10-14T06:11:27Z",
@@ -233,6 +229,51 @@
                                 "port": 80,
                                 "transport": "tcp",
                                 "product": "Cobalt Strike Beacon"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-14T02:12:53Z",
+                    "last_observed": "2026-11-14T02:12:53Z",
+                    "data": {
+                        "org": "Omegatech LTD",
+                        "isp": "Omegatech LTD",
+                        "asn": "AS202412",
+                        "os": null,
+                        "country_code": "GB",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon"
+                            },
+                            {
+                                "port": 50050,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike C2",
+                                "tags": [
+                                    "c2",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "6be61db7f7a371e90986f4d363af92cca6f042b939fd92644904a0f6452f1120",
+                                "certificate_subject": "Pwn3rs Striked",
+                                "certificate_organisation": "Pwn3rs",
+                                "certificate_issuer": "Pwn3rs Striked"
                             }
                         ]
                     }

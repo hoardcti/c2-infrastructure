@@ -276,11 +276,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-14T18:00:46Z",
-            "last_error": {
-                "occurred_at": "2026-11-06T15:01:08Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-14T02:12:21Z",
             "observations": [
                 {
                     "first_observed": "2026-10-14T18:00:46Z",
@@ -326,6 +322,38 @@
                                 "transport": "tcp",
                                 "product": "WinRM",
                                 "http_title": "Not Found"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-14T02:12:21Z",
+                    "last_observed": "2026-11-14T02:12:21Z",
+                    "data": {
+                        "org": "Omegatech LTD",
+                        "isp": "Omegatech LTD",
+                        "asn": "AS202412",
+                        "os": "Windows 11 (build 10.0.26100)",
+                        "country_code": "DE",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "version": "10.0.26100",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d00014d14d08c000000000000217f0fec773ec97f0b3fdd2de2993c31",
+                                "certificate_sha256": "cc0ad887f0a931bbde7a3559cc6a52629301a3637d1d2ebb1657d048c2ac6bd3",
+                                "certificate_subject": "178-16-52-195",
+                                "certificate_issuer": "178-16-52-195"
                             }
                         ]
                     }

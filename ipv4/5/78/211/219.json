@@ -33,7 +33,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-07T00:44:37Z",
+            "last_checked": "2026-11-14T02:04:30Z",
             "observations": [
                 {
                     "first_observed": "2026-10-30T22:51:34Z",
@@ -54,6 +54,35 @@
                             "cpe:/o:canonical:ubuntu_linux"
                         ],
                         "tags": [],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-11-14T02:04:30Z",
+                    "last_observed": "2026-11-14T02:04:30Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            53,
+                            80,
+                            443,
+                            5353,
+                            8443,
+                            8445,
+                            31337
+                        ],
+                        "hostnames": [
+                            "salceolatino.com",
+                            "static.219.211.78.5.clients.your-server.de",
+                            "www.salceolatino.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
                         "vulns": []
                     }
                 }
@@ -78,11 +107,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-07T00:48:42Z",
+            "last_checked": "2026-11-14T02:08:36Z",
             "observations": [
                 {
                     "first_observed": "2026-10-30T22:55:40Z",
-                    "last_observed": "2026-11-07T00:48:42Z",
+                    "last_observed": "2026-11-14T02:08:36Z",
                     "data": {
                         "reputation": 0,
                         "asn": "ASNone ",
@@ -94,7 +123,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-11-07T00:52:42Z",
+            "last_checked": "2026-11-14T02:12:03Z",
             "observations": [
                 {
                     "first_observed": "2026-10-30T22:58:58Z",
@@ -180,6 +209,84 @@
                                 "certificate_sha256": "a373fa7729abe0c0e94fa3285d61b4d9ba585eff722ff8726fd3eab0d39afe6b",
                                 "certificate_subject": "salceolatino.com",
                                 "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "a96fa5101dc5361770b52e1b94b6fd41d3cb472794ea27caddc47005e33a7e4f",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-14T02:12:03Z",
+                    "last_observed": "2026-11-14T02:12:03Z",
+                    "data": {
+                        "org": "Hetzner Online GmbH",
+                        "isp": "Hetzner Online GmbH",
+                        "asn": "AS212317",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "salceolatino.com",
+                            "static.219.211.78.5.clients.your-server.de",
+                            "www.salceolatino.com"
+                        ],
+                        "domains": [
+                            "salceolatino.com",
+                            "your-server.de"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.18"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "http_title": "El Salseo Latino: farándula y chismes latinos",
+                                "jarm": "27d40d40d00040d00042d43d000000aa5feb68b57d31b6dc713b6917a988e3",
+                                "certificate_sha256": "a373fa7729abe0c0e94fa3285d61b4d9ba585eff722ff8726fd3eab0d39afe6b",
+                                "certificate_subject": "salceolatino.com",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 5353,
+                                "transport": "udp",
+                                "product": "mDNS"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "jarm": "3fd3fd00000000021c43d43d00043dabadbb43f9614a00c843a4ecd074ab81",
+                                "certificate_sha256": "406e6ad89413435c3f40decc49b9fda347e91bea95e2426b553f6cd772b2e51c",
+                                "certificate_subject": "salceolatino.com",
+                                "certificate_organisation": "sophisticated rotate"
+                            },
+                            {
+                                "port": 8445,
+                                "transport": "tcp"
                             },
                             {
                                 "port": 31337,
