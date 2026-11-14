@@ -1,0 +1,171 @@
+{
+    "schema_version": 2,
+    "ip": "92.118.232.18",
+    "first_seen": "2026-11-14T09:57:04Z",
+    "last_seen": "2026-11-14T09:57:04Z",
+    "flags": [
+        "unknown stealer"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-14T10:00:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-14T10:00:05Z",
+                    "last_observed": "2026-11-14T10:00:05Z",
+                    "data": {
+                        "abuse_confidence_score": 4,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-11-13T21:45:09Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "UOWH LLC",
+                        "domain": "uowh.net",
+                        "country_code": "DE",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-14T09:57:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-14T09:57:15Z",
+                    "last_observed": "2026-11-14T09:57:15Z",
+                    "data": {
+                        "ports": [
+                            3389
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-14T09:57:12Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-14T09:57:12Z",
+                    "last_observed": "2026-11-14T09:57:12Z",
+                    "data": {
+                        "asn": "AS212171",
+                        "as_name": "Local NCC Ltd.",
+                        "as_domain": "byoip.ru",
+                        "country_code": "DE",
+                        "country": "Germany",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-14T10:01:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-14T10:01:22Z",
+                    "last_observed": "2026-11-14T10:01:22Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS35913 dedipath",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-14T10:04:49Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-14T09:57:11Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-14T09:57:04Z",
+            "observations": [
+                {
+                    "key": "2028252",
+                    "first_observed": "2026-11-14T09:57:04Z",
+                    "last_observed": "2026-11-14T09:57:04Z",
+                    "flags": [
+                        "unknown stealer"
+                    ],
+                    "data": {
+                        "ioc": "92.118.232.18:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown Stealer",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown_stealer",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-14T07:51:26Z",
+                        "reference": "",
+                        "tags": [
+                            "c2",
+                            "stealer"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-14T09:59:16Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-14T10:07:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-14T10:07:13Z",
+                    "last_observed": "2026-11-14T10:07:13Z",
+                    "data": {
+                        "as_owner": "Local NCC Ltd.",
+                        "asn": 212171,
+                        "network": "92.118.232.0/23",
+                        "country": "CY",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 91,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "2ad2ad0002ad2ad00042d42d000000ad9bf51cc3f5a1e29eecb81d0c7b06eb",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
