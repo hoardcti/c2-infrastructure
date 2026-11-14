@@ -134,7 +134,7 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-11-13T14:17:41Z",
+            "last_checked": "2026-11-14T16:30:09Z",
             "observations": []
         },
         "threatfox": {
@@ -161,6 +161,68 @@
         "urlhaus": {
             "last_checked": "2026-10-29T18:53:20Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-14T16:42:06Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-14T16:42:06Z",
+                    "last_observed": "2026-11-14T16:42:06Z",
+                    "data": {
+                        "as_owner": "Baxet Group Inc.",
+                        "asn": 26383,
+                        "network": "212.192.15.0/24",
+                        "country": "HK",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 1,
+                            "undetected": 35,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "3fd21b20d00000021c43d21b21b43d41226dd5dfc615dd4a96265559485910",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 }

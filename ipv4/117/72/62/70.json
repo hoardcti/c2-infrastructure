@@ -2,17 +2,17 @@
     "schema_version": 2,
     "ip": "117.72.62.70",
     "first_seen": "2026-11-07T13:49:24Z",
-    "last_seen": "2026-11-14T09:57:04Z",
+    "last_seen": "2026-11-14T16:30:02Z",
     "flags": [
         "cobalt strike"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-07T13:52:20Z",
+            "last_checked": "2026-11-14T16:33:09Z",
             "observations": [
                 {
                     "first_observed": "2026-11-07T13:52:20Z",
-                    "last_observed": "2026-11-07T13:52:20Z",
+                    "last_observed": "2026-11-14T16:33:09Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -31,13 +31,27 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-07T13:49:33Z",
+            "last_checked": "2026-11-14T16:30:20Z",
             "observations": [
                 {
                     "first_observed": "2026-11-07T13:49:33Z",
                     "last_observed": "2026-11-07T13:49:33Z",
                     "data": {
                         "ports": [
+                            10001
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-11-14T16:30:20Z",
+                    "last_observed": "2026-11-14T16:30:20Z",
+                    "data": {
+                        "ports": [
+                            10000,
                             10001
                         ],
                         "hostnames": [],
@@ -67,11 +81,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-07T13:53:38Z",
+            "last_checked": "2026-11-14T16:34:27Z",
             "observations": [
                 {
                     "first_observed": "2026-11-07T13:53:38Z",
-                    "last_observed": "2026-11-07T13:53:38Z",
+                    "last_observed": "2026-11-14T16:34:27Z",
                     "data": {
                         "reputation": 0,
                         "asn": "ASNone ",
@@ -773,6 +787,10 @@
         },
         "shodan": {
             "last_checked": "2026-11-07T13:57:38Z",
+            "last_error": {
+                "occurred_at": "2026-11-14T16:38:09Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-11-07T13:57:38Z",
@@ -803,12 +821,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-14T09:57:04Z",
+            "last_checked": "2026-11-14T16:30:02Z",
             "observations": [
                 {
                     "key": "2018389",
                     "first_observed": "2026-11-07T13:49:24Z",
-                    "last_observed": "2026-11-14T09:57:04Z",
+                    "last_observed": "2026-11-14T16:30:02Z",
                     "flags": [
                         "cobalt strike"
                     ],

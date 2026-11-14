@@ -316,12 +316,12 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-11-13T14:17:41Z",
+            "last_checked": "2026-11-14T16:30:09Z",
             "observations": [
                 {
                     "key": "27.124.0.0/18",
                     "first_observed": "2026-10-01T12:19:59Z",
-                    "last_observed": "2026-11-13T14:17:41Z",
+                    "last_observed": "2026-11-14T16:30:09Z",
                     "data": {
                         "cidr": "27.124.0.0/18",
                         "sblid": "SBL668364",
@@ -354,6 +354,95 @@
         "urlhaus": {
             "last_checked": "2026-10-29T18:53:14Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-14T16:41:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-14T16:41:20Z",
+                    "last_observed": "2026-11-14T16:41:20Z",
+                    "data": {
+                        "as_owner": "CTG Server Limited",
+                        "asn": 152194,
+                        "network": "27.124.20.0/22",
+                        "country": "IN",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -1,
+                        "analysis_stats": {
+                            "malicious": 8,
+                            "suspicious": 3,
+                            "undetected": 32,
+                            "harmless": 49,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Chong Lua Dao",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "ESET",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Forcepoint ThreatSeeker",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "VIPRE",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "21d14d00021d21d21c42d43d00000006fd2bdfa07544bb0e37a7b379eee0d7",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

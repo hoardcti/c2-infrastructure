@@ -2,17 +2,17 @@
     "schema_version": 2,
     "ip": "188.190.6.25",
     "first_seen": "2026-11-07T13:49:24Z",
-    "last_seen": "2026-11-14T09:57:04Z",
+    "last_seen": "2026-11-14T16:30:02Z",
     "flags": [
         "cobalt strike"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-07T13:52:22Z",
+            "last_checked": "2026-11-14T16:33:11Z",
             "observations": [
                 {
                     "first_observed": "2026-11-07T13:52:22Z",
-                    "last_observed": "2026-11-07T13:52:22Z",
+                    "last_observed": "2026-11-14T16:33:11Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -33,8 +33,38 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-07T13:49:34Z",
-            "observations": []
+            "last_checked": "2026-11-14T16:30:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-14T16:30:21Z",
+                    "last_observed": "2026-11-14T16:30:21Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            8080
+                        ],
+                        "hostnames": [
+                            "25.6.190.188.static.edisglobal.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.24.0",
+                            "cpe:/a:helpsystems:cobalt_strike",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
         },
         "ipinfo": {
             "last_checked": "2026-11-07T13:49:31Z",
@@ -55,11 +85,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-07T13:53:40Z",
+            "last_checked": "2026-11-14T16:34:29Z",
             "observations": [
                 {
                     "first_observed": "2026-11-07T13:53:40Z",
-                    "last_observed": "2026-11-07T13:53:40Z",
+                    "last_observed": "2026-11-14T16:34:29Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS56370 inttel ltd.",
@@ -72,7 +102,7 @@
         },
         "shodan": {
             "last_error": {
-                "occurred_at": "2026-11-07T13:57:40Z",
+                "occurred_at": "2026-11-14T16:38:11Z",
                 "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
             },
             "observations": []
@@ -82,12 +112,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-14T09:57:04Z",
+            "last_checked": "2026-11-14T16:30:02Z",
             "observations": [
                 {
                     "key": "2018391",
                     "first_observed": "2026-11-07T13:49:24Z",
-                    "last_observed": "2026-11-14T09:57:04Z",
+                    "last_observed": "2026-11-14T16:30:02Z",
                     "flags": [
                         "cobalt strike"
                     ],

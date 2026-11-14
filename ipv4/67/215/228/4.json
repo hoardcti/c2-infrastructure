@@ -1,0 +1,287 @@
+{
+    "schema_version": 2,
+    "ip": "67.215.228.4",
+    "first_seen": "2026-11-14T16:30:02Z",
+    "last_seen": "2026-11-14T16:30:02Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-14T16:33:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-14T16:33:07Z",
+                    "last_observed": "2026-11-14T16:33:07Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "HostPapa",
+                        "domain": "hostpapa.com",
+                        "country_code": "US",
+                        "hostnames": [
+                            "67-215-228-4-host.colocrossing.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-14T16:30:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-14T16:30:19Z",
+                    "last_observed": "2026-11-14T16:30:19Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            81,
+                            82,
+                            443,
+                            1701,
+                            2087,
+                            3478,
+                            4500,
+                            8877,
+                            20000
+                        ],
+                        "hostnames": [
+                            "67-215-228-4-host.colocrossing.com",
+                            "cfrn.5671234.xyz"
+                        ],
+                        "cpes": [
+                            "cpe:/a:encode:uvicorn",
+                            "cpe:/a:f5:nginx",
+                            "cpe:/a:getbootstrap:bootstrap:3.4.1",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/a:openresty:openresty",
+                            "cpe:/a:python:python",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "self-signed",
+                            "vpn"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-14T16:30:10Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-14T16:30:10Z",
+                    "last_observed": "2026-11-14T16:30:10Z",
+                    "data": {
+                        "asn": "AS36352",
+                        "as_name": "HostPapa",
+                        "as_domain": "colocrossing.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-14T16:34:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-14T16:34:25Z",
+                    "last_observed": "2026-11-14T16:34:25Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS55154 madgenius.com",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-14T16:38:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-14T16:38:07Z",
+                    "last_observed": "2026-11-14T16:38:07Z",
+                    "data": {
+                        "org": "HostPapa",
+                        "isp": "HostPapa",
+                        "asn": "AS36352",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "67-215-228-4-host.colocrossing.com",
+                            "cfrn.5671234.xyz"
+                        ],
+                        "domains": [
+                            "5671234.xyz",
+                            "colocrossing.com"
+                        ],
+                        "tags": [
+                            "self-signed",
+                            "vpn"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "OpenResty",
+                                "http_title": "Default Site"
+                            },
+                            {
+                                "port": 81,
+                                "transport": "tcp",
+                                "product": "OpenResty",
+                                "http_title": "Nginx 代理管理器"
+                            },
+                            {
+                                "port": 82,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 1701,
+                                "transport": "udp",
+                                "product": "L2TP"
+                            },
+                            {
+                                "port": 2087,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "3fd3fd0003fd3fd00043d43d00043d3bef2bf79cd6719851e8198c1e8f9a14",
+                                "certificate_sha256": "9edc05f1f29566eded78a2d4603f845481797be682a8ba5ee0fd6b96f867e879",
+                                "certificate_subject": "cfrn.5671234.xyz",
+                                "certificate_issuer": "cfrn.5671234.xyz"
+                            },
+                            {
+                                "port": 3478,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 4433,
+                                "transport": "tcp",
+                                "jarm": "2ad2ad0002ad2ad22c42d42d000000faabb8fd156aa8b4d8a37853e1063261",
+                                "certificate_sha256": "dcff65d277f10d80c3b87143f01e6caad5b5751ad209bb3156f0355edac06580",
+                                "certificate_subject": "c.5671234.xyz",
+                                "certificate_issuer": "MeshCentralRoot-ae36dc"
+                            },
+                            {
+                                "port": 4500,
+                                "transport": "udp",
+                                "tags": [
+                                    "vpn"
+                                ]
+                            },
+                            {
+                                "port": 8877,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 20000,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-14T16:30:08Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-14T16:30:02Z",
+            "observations": [
+                {
+                    "key": "2028665",
+                    "first_observed": "2026-11-14T16:30:02Z",
+                    "last_observed": "2026-11-14T16:30:02Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "67.215.228.4:25774",
+                        "port": 25774,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 75,
+                        "first_seen": "2026-11-14T15:18:54Z",
+                        "reference": "https://www.huntress.com/blog/komari-c2-agent-abuse",
+                        "tags": [
+                            "c2",
+                            "komari",
+                            "komari-agent",
+                            "proxmox"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-14T16:32:19Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-14T16:40:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-14T16:40:05Z",
+                    "last_observed": "2026-11-14T16:40:05Z",
+                    "data": {
+                        "as_owner": "HostPapa",
+                        "asn": 36352,
+                        "network": "67.215.228.0/22",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 0,
+                            "undetected": 91,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
