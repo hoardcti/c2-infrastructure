@@ -111,12 +111,43 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-01T13:19:24Z",
-            "last_error": {
-                "occurred_at": "2026-11-07T13:58:52Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-14T21:22:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-14T21:22:28Z",
+                    "last_observed": "2026-11-14T21:22:28Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": null,
+                        "country_code": "SG",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "cloud",
+                                    "self-signed"
+                                ],
+                                "http_title": "CloudPanel | Log In",
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "6d1360ecefd501f8f491c32d4191489ce1023ec8e9125d96aea75303fb624f2b",
+                                "certificate_subject": "cloudpanel.clp",
+                                "certificate_issuer": "cloudpanel.clp"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-14T16:30:08Z",
