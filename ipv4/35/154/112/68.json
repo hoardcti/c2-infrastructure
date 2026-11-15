@@ -173,11 +173,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-02T01:36:22Z",
-            "last_error": {
-                "occurred_at": "2026-11-08T10:09:45Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-15T21:42:52Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T01:36:22Z",
@@ -231,11 +227,64 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-15T21:42:52Z",
+                    "last_observed": "2026-11-15T21:42:52Z",
+                    "data": {
+                        "org": "Amazon Data Services India",
+                        "isp": "Amazon.com, Inc.",
+                        "asn": "AS16509",
+                        "os": "Ubuntu",
+                        "country_code": "IN",
+                        "hostnames": [
+                            "crocs.sliceit.com",
+                            "ec2-35-154-112-68.ap-south-1.compute.amazonaws.com"
+                        ],
+                        "domains": [
+                            "amazonaws.com",
+                            "sliceit.com"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "eol-product",
+                            "malware"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.28.3",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product",
+                                    "malware"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "d838b6cffc6a75bc94fc9506c9d30b611bb371691ae709c7d0202bc07297e6ab",
+                                "certificate_subject": "crocs.sliceit.com",
+                                "certificate_issuer": "YE2"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-14T16:30:09Z",
+            "last_checked": "2026-11-15T21:32:59Z",
             "observations": []
         },
         "threatfox": {

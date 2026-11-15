@@ -186,14 +186,68 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-08T10:09:17Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-15T21:42:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T21:42:24Z",
+                    "last_observed": "2026-11-15T21:42:24Z",
+                    "data": {
+                        "org": "Oracle Svenska AB",
+                        "isp": "Oracle Corporation",
+                        "asn": "AS31898",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "edutesty.com.pl"
+                        ],
+                        "domains": [
+                            "edutesty.com.pl"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.18",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "808987a3d53f06000395225bb43cf77e2ff93e7f379d65478241f444e20faa4e",
+                                "certificate_subject": "edutesty.com.pl",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "808987a3d53f06000395225bb43cf77e2ff93e7f379d65478241f444e20faa4e",
+                                "certificate_subject": "edutesty.com.pl",
+                                "certificate_issuer": "YR2"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-14T16:30:09Z",
+            "last_checked": "2026-11-15T21:32:59Z",
             "observations": []
         },
         "threatfox": {

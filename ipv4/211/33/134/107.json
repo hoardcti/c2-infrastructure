@@ -173,11 +173,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-02T01:35:52Z",
-            "last_error": {
-                "occurred_at": "2026-11-08T10:09:15Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-15T21:42:22Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T01:35:52Z",
@@ -230,11 +226,63 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-15T21:42:22Z",
+                    "last_observed": "2026-11-15T21:42:22Z",
+                    "data": {
+                        "org": "Korea Telecom",
+                        "isp": "Korea Telecom",
+                        "asn": "AS4766",
+                        "os": null,
+                        "country_code": "KR",
+                        "hostnames": [
+                            "hansbiomed.com"
+                        ],
+                        "domains": [
+                            "hansbiomed.com"
+                        ],
+                        "tags": [
+                            "malware"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "malware"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "21d19d00021d21d00042d43d0000005ad20eceaf7f71ae0887d2ff117bf97f",
+                                "certificate_sha256": "85523f1c0b9da6cd275b87e9a2c9b2a1fa20da651a6ee0d56e19b7a605c3798e",
+                                "certificate_subject": "*.hansbiomed.com",
+                                "certificate_issuer": "GlobalSign GCC R3 DV TLS CA 2020"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.31.1",
+                                "http_title": "404 Not Found",
+                                "jarm": "21d19d00021d21d00042d43d0000005ad20eceaf7f71ae0887d2ff117bf97f",
+                                "certificate_sha256": "85523f1c0b9da6cd275b87e9a2c9b2a1fa20da651a6ee0d56e19b7a605c3798e",
+                                "certificate_subject": "*.hansbiomed.com",
+                                "certificate_issuer": "GlobalSign GCC R3 DV TLS CA 2020"
+                            },
+                            {
+                                "port": 32800,
+                                "transport": "tcp",
+                                "http_title": "Vaultwarden Web"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-14T16:30:09Z",
+            "last_checked": "2026-11-15T21:32:59Z",
             "observations": []
         },
         "threatfox": {

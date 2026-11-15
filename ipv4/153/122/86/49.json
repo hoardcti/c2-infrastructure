@@ -186,14 +186,68 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-08T10:08:47Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-15T21:41:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T21:41:54Z",
+                    "last_observed": "2026-11-15T21:41:54Z",
+                    "data": {
+                        "org": "DIX Co., Ltd.",
+                        "isp": "GMO GlobalSign Holdings K.K.",
+                        "asn": "AS131921",
+                        "os": null,
+                        "country_code": "JP",
+                        "hostnames": [
+                            "sec.dimage.work",
+                            "sub0000545552.hmk-temp.com"
+                        ],
+                        "domains": [
+                            "dimage.work",
+                            "hmk-temp.com"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "http_title": "500 Proxy Error",
+                                "jarm": "05d02d20d21d20d05c05d02d05d20d74fcf6501ae7a92319e575bfafd2a827",
+                                "certificate_sha256": "ddcbb9c56ca5552f559bc534390011b5cd552abfbbe00e0d90a33aed03fc243c",
+                                "certificate_subject": "sec.dimage.work",
+                                "certificate_issuer": "ZeroSSL RSA Domain Secure Site CA"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00043d2ad2ad43dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "7f477b7af58c4038bd7fa88de53a37064aa4cfd76e17b100fea28e61dbbf360a",
+                                "certificate_subject": "sec.dimage.work",
+                                "certificate_issuer": "ZeroSSL RSA DV SSL CA 2"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "jarm": "2ad2ad0002ad2ad00043d2ad2ad43dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "7f477b7af58c4038bd7fa88de53a37064aa4cfd76e17b100fea28e61dbbf360a",
+                                "certificate_subject": "sec.dimage.work",
+                                "certificate_issuer": "ZeroSSL RSA DV SSL CA 2"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-14T16:30:09Z",
+            "last_checked": "2026-11-15T21:32:59Z",
             "observations": []
         },
         "threatfox": {

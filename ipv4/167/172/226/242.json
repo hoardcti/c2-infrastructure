@@ -117,14 +117,68 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-08T02:19:06Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-15T21:41:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T21:41:14Z",
+                    "last_observed": "2026-11-15T21:41:14Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "gop.xpoint.cl"
+                        ],
+                        "domains": [
+                            "xpoint.cl"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.7p1 Ubuntu 7ubuntu4.3",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "b113cd7bcd006e966707cd82f8dcee9b738368b4917be5c8ad6ccec9c58339ee",
+                                "certificate_subject": "gop.xpoint.cl",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "b113cd7bcd006e966707cd82f8dcee9b738368b4917be5c8ad6ccec9c58339ee",
+                                "certificate_subject": "gop.xpoint.cl",
+                                "certificate_issuer": "YE1"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-14T16:30:09Z",
+            "last_checked": "2026-11-15T21:32:59Z",
             "observations": []
         },
         "threatfox": {

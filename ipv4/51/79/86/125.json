@@ -178,11 +178,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-02T01:36:20Z",
-            "last_error": {
-                "occurred_at": "2026-11-08T10:09:43Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-15T21:42:50Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T01:36:20Z",
@@ -250,11 +246,80 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-15T21:42:50Z",
+                    "last_observed": "2026-11-15T21:42:50Z",
+                    "data": {
+                        "org": "OVH Hosting, Inc.",
+                        "isp": "OVH SAS",
+                        "asn": "AS16276",
+                        "os": null,
+                        "country_code": "CA",
+                        "hostnames": [
+                            "app-vivirseguros.lat",
+                            "vps-ec1b4035.vps.ovh.ca"
+                        ],
+                        "domains": [
+                            "app-vivirseguros.lat",
+                            "ovh.ca"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "pqc"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.2p1 Ubuntu 2ubuntu3.8"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.28.3",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.28.3",
+                                "tags": [
+                                    "eol-product",
+                                    "pqc"
+                                ],
+                                "jarm": "1dd40d40d00040d00042d43d000000e1ea2a807a629b496b664cf07ad7c08d",
+                                "certificate_sha256": "55c4cd3353b8ed88479b226c468a7404d7f2b0c98e096d4f5cd1eee129b17c90",
+                                "certificate_subject": "app-vivirseguros.lat",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "19f2870b0a9522c227be2c3716512643f873311d97e09e2ea59431149c8dd954",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-14T16:30:09Z",
+            "last_checked": "2026-11-15T21:32:59Z",
             "observations": []
         },
         "threatfox": {

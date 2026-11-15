@@ -113,12 +113,12 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-11-14T16:30:09Z",
+            "last_checked": "2026-11-15T21:33:00Z",
             "observations": [
                 {
                     "key": "45.83.31.0/24",
                     "first_observed": "2026-10-01T12:19:59Z",
-                    "last_observed": "2026-11-14T16:30:09Z",
+                    "last_observed": "2026-11-15T21:33:00Z",
                     "data": {
                         "cidr": "45.83.31.0/24",
                         "sblid": "SBL697646",
@@ -151,6 +151,90 @@
         "urlhaus": {
             "last_checked": "2026-10-30T12:29:17Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-15T21:43:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T21:43:19Z",
+                    "last_observed": "2026-11-15T21:43:19Z",
+                    "data": {
+                        "as_owner": "1337 Services GmbH",
+                        "asn": 210558,
+                        "network": "45.83.31.0/24",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 9,
+                            "suspicious": 1,
+                            "undetected": 33,
+                            "harmless": 49,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "ESET",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Forcepoint ThreatSeeker",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Seclookup",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Sophos",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "2ad2ad16d00000022c2ad2ad2ad2ad46ff59a659b30fd8aeaa6755c67691b4",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
         }
     }
 }

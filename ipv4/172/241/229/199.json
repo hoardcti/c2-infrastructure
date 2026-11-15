@@ -114,11 +114,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-22T23:14:42Z",
-            "last_error": {
-                "occurred_at": "2026-11-08T10:09:41Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-15T21:42:48Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T01:36:18Z",
@@ -160,11 +156,52 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-15T21:42:48Z",
+                    "last_observed": "2026-11-15T21:42:48Z",
+                    "data": {
+                        "org": "Leaseweb USA, Inc.",
+                        "isp": "Leaseweb USA, Inc.",
+                        "asn": "AS394380",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "2z7k83c9.championfor.com",
+                            "tiraza.com"
+                        ],
+                        "domains": [
+                            "championfor.com",
+                            "tiraza.com"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "c3573568aae3a953dcf85811122b7d78e42299e160664503196ac379584182fe",
+                                "certificate_subject": "*.tiraza.com",
+                                "certificate_issuer": "GlobalSign GCC R46 AlphaSSL CA 2025"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "2ad2ad0002ad2ad00041d2ad2ad41dc347a1c956987fa29fb299da896c61ea",
+                                "certificate_sha256": "c3573568aae3a953dcf85811122b7d78e42299e160664503196ac379584182fe",
+                                "certificate_subject": "*.tiraza.com",
+                                "certificate_issuer": "GlobalSign GCC R46 AlphaSSL CA 2025"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-14T16:30:09Z",
+            "last_checked": "2026-11-15T21:32:59Z",
             "observations": []
         },
         "threatfox": {

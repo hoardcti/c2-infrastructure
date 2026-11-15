@@ -635,14 +635,215 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-08T10:08:53Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-15T21:42:00Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T21:42:00Z",
+                    "last_observed": "2026-11-15T21:42:00Z",
+                    "data": {
+                        "org": "Tencent cloud computing (Beijing) Co., Ltd.",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [
+                            "mail.ic-capital.online"
+                        ],
+                        "domains": [
+                            "ic-capital.online"
+                        ],
+                        "tags": [
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2007-2768",
+                            "CVE-2008-3844",
+                            "CVE-2016-20012",
+                            "CVE-2017-15906",
+                            "CVE-2018-15473",
+                            "CVE-2018-15919",
+                            "CVE-2018-20685",
+                            "CVE-2019-6109",
+                            "CVE-2019-6110",
+                            "CVE-2019-6111",
+                            "CVE-2020-11441",
+                            "CVE-2020-14145",
+                            "CVE-2020-15778",
+                            "CVE-2020-22278",
+                            "CVE-2020-22452",
+                            "CVE-2020-26934",
+                            "CVE-2020-26935",
+                            "CVE-2021-36368",
+                            "CVE-2021-41617",
+                            "CVE-2022-0813",
+                            "CVE-2023-25727",
+                            "CVE-2023-38408",
+                            "CVE-2023-48795",
+                            "CVE-2023-51385",
+                            "CVE-2023-51767",
+                            "CVE-2025-26465",
+                            "CVE-2025-32728",
+                            "CVE-2026-106552",
+                            "CVE-2026-106553",
+                            "CVE-2026-106555",
+                            "CVE-2026-106582",
+                            "CVE-2026-106583",
+                            "CVE-2026-106584",
+                            "CVE-2026-106585",
+                            "CVE-2026-106586",
+                            "CVE-2026-106587",
+                            "CVE-2026-119426",
+                            "CVE-2026-119427",
+                            "CVE-2026-119428",
+                            "CVE-2026-119429",
+                            "CVE-2026-119561",
+                            "CVE-2026-119562",
+                            "CVE-2026-119563",
+                            "CVE-2026-123158",
+                            "CVE-2026-35385",
+                            "CVE-2026-35387",
+                            "CVE-2026-35388",
+                            "CVE-2026-35414",
+                            "CVE-2026-59995",
+                            "CVE-2026-59996",
+                            "CVE-2026-59997",
+                            "CVE-2026-59998",
+                            "CVE-2026-59999",
+                            "CVE-2026-60000",
+                            "CVE-2026-60001",
+                            "CVE-2026-60002",
+                            "CVE-2026-73281",
+                            "CVE-2026-73282",
+                            "CVE-2026-73283"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "7.4"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "certificate_sha256": "7dcd225ff948a17cbf805b17771ae2dc61f00a42642597ecc238a3a77572201e",
+                                "certificate_subject": "mail.ic-capital.online",
+                                "certificate_issuer": "R13"
+                            },
+                            {
+                                "port": 110,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "certificate_sha256": "24092cecbe824763abc7002bf33e12b9b95bd112f7bd8410ce2c0f6a3281cb1f",
+                                "certificate_subject": "*.xxx.com",
+                                "certificate_issuer": "*.xxx.com"
+                            },
+                            {
+                                "port": 143,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 465,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "jarm": "07d29d15d21d21d07c07d29d07d21def69dabf1e0945f1582f67294f1f713f",
+                                "certificate_sha256": "7dcd225ff948a17cbf805b17771ae2dc61f00a42642597ecc238a3a77572201e",
+                                "certificate_subject": "mail.ic-capital.online",
+                                "certificate_issuer": "R13"
+                            },
+                            {
+                                "port": 587,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "certificate_sha256": "7dcd225ff948a17cbf805b17771ae2dc61f00a42642597ecc238a3a77572201e",
+                                "certificate_subject": "mail.ic-capital.online",
+                                "certificate_issuer": "R13"
+                            },
+                            {
+                                "port": 993,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad0002ad2ad2ad2adea0f89a2e5fb09e4d8e099befed92cfa",
+                                "certificate_sha256": "24092cecbe824763abc7002bf33e12b9b95bd112f7bd8410ce2c0f6a3281cb1f",
+                                "certificate_subject": "*.xxx.com",
+                                "certificate_issuer": "*.xxx.com"
+                            },
+                            {
+                                "port": 995,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad0002ad2ad2ad2adea0f89a2e5fb09e4d8e099befed92cfa",
+                                "certificate_sha256": "24092cecbe824763abc7002bf33e12b9b95bd112f7bd8410ce2c0f6a3281cb1f",
+                                "certificate_subject": "*.xxx.com",
+                                "certificate_issuer": "*.xxx.com"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "b5aabe6f0f149fff2a76c5c7795cefe045330bc745d258e349b9117646461d84",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 7000,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "302 Found"
+                            },
+                            {
+                                "port": 7010,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "302 Found"
+                            },
+                            {
+                                "port": 8000,
+                                "transport": "tcp",
+                                "http_title": "您的浏览器过时了"
+                            },
+                            {
+                                "port": 8010,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "http_title": "ewomail.com-邮箱管理后台"
+                            },
+                            {
+                                "port": 8020,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "phpMyAdmin",
+                                "jarm": "2ad2ad0002ad2ad22b2ad2ad2ad2ad6a7bd8f51d54bfc07e1cd34e5ca50bb3",
+                                "certificate_sha256": "24092cecbe824763abc7002bf33e12b9b95bd112f7bd8410ce2c0f6a3281cb1f",
+                                "certificate_subject": "*.xxx.com",
+                                "certificate_issuer": "*.xxx.com"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-14T16:30:09Z",
+            "last_checked": "2026-11-15T21:32:59Z",
             "observations": []
         },
         "threatfox": {

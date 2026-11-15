@@ -236,14 +236,173 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-08T10:08:57Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-15T21:42:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T21:42:04Z",
+                    "last_observed": "2026-11-15T21:42:04Z",
+                    "data": {
+                        "org": "Keyweb AG IP Network",
+                        "isp": "Keyweb AG",
+                        "asn": "AS31103",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [
+                            "ns2.s1117509.keymachine.de",
+                            "s1117509.keymachine.de",
+                            "scheer-qroup.com"
+                        ],
+                        "domains": [
+                            "keymachine.de",
+                            "scheer-qroup.com"
+                        ],
+                        "tags": [
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2026-10723",
+                            "CVE-2026-10822",
+                            "CVE-2026-11331",
+                            "CVE-2026-11622",
+                            "CVE-2026-11721",
+                            "CVE-2026-12617",
+                            "CVE-2026-13204",
+                            "CVE-2026-13321",
+                            "CVE-2026-1519",
+                            "CVE-2026-3039",
+                            "CVE-2026-3592",
+                            "CVE-2026-5946",
+                            "CVE-2026-5950"
+                        ],
+                        "services": [
+                            {
+                                "port": 21,
+                                "transport": "tcp",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "certificate_sha256": "2f3dcfb01d6e8b04ad2df5924879495370269f90e41d2bdebc90b2bc7531e93f",
+                                "certificate_subject": "s1117509.keymachine.de",
+                                "certificate_issuer": "R12"
+                            },
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
+                            },
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "certificate_sha256": "2f3dcfb01d6e8b04ad2df5924879495370269f90e41d2bdebc90b2bc7531e93f",
+                                "certificate_subject": "s1117509.keymachine.de",
+                                "certificate_issuer": "R12"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "tcp",
+                                "product": "ISC BIND",
+                                "version": "9.18.39"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "udp",
+                                "product": "ISC BIND",
+                                "version": "9.18.39"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "Apache httpd",
+                                "http_title": "302 Found"
+                            },
+                            {
+                                "port": 110,
+                                "transport": "tcp",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "certificate_sha256": "2f3dcfb01d6e8b04ad2df5924879495370269f90e41d2bdebc90b2bc7531e93f",
+                                "certificate_subject": "s1117509.keymachine.de",
+                                "certificate_issuer": "R12"
+                            },
+                            {
+                                "port": 143,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                                "certificate_sha256": "e22ce9b767b32689be9c4a4d10c02a53d262df32e8f3ce30926400dd1012d697",
+                                "certificate_subject": "scheer-qroup.com",
+                                "certificate_issuer": "E7"
+                            },
+                            {
+                                "port": 465,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "jarm": "07d19d1ad21d21d00042d43d000000aa99ce74e2c6d013c745aa52b5cc042d",
+                                "certificate_sha256": "2f3dcfb01d6e8b04ad2df5924879495370269f90e41d2bdebc90b2bc7531e93f",
+                                "certificate_subject": "s1117509.keymachine.de",
+                                "certificate_issuer": "R12"
+                            },
+                            {
+                                "port": 587,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "starttls"
+                                ],
+                                "certificate_sha256": "2f3dcfb01d6e8b04ad2df5924879495370269f90e41d2bdebc90b2bc7531e93f",
+                                "certificate_subject": "s1117509.keymachine.de",
+                                "certificate_issuer": "R12"
+                            },
+                            {
+                                "port": 993,
+                                "transport": "tcp",
+                                "jarm": "15d3fd16d29d29d00042d43d0000005aa9877b7a5d6a671d1e56af48dc9ce6",
+                                "certificate_sha256": "2f3dcfb01d6e8b04ad2df5924879495370269f90e41d2bdebc90b2bc7531e93f",
+                                "certificate_subject": "s1117509.keymachine.de",
+                                "certificate_issuer": "R12"
+                            },
+                            {
+                                "port": 995,
+                                "transport": "tcp",
+                                "jarm": "15d3fd16d29d29d00042d43d0000005aa9877b7a5d6a671d1e56af48dc9ce6",
+                                "certificate_sha256": "2f3dcfb01d6e8b04ad2df5924879495370269f90e41d2bdebc90b2bc7531e93f",
+                                "certificate_subject": "s1117509.keymachine.de",
+                                "certificate_issuer": "R12"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                                "certificate_sha256": "ba1cb176ecfdd3b556e034a65a823c9a5332e9cc7e541a632cae3da56bd54ac5",
+                                "certificate_organisation": "Gophish"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "http_title": "s1117509.keymachine.de | KeyHelp",
+                                "jarm": "15d3fd16d29d29d00042d43d000000dbc8859ec5c93c3d80eba6c8e9820a03",
+                                "certificate_sha256": "2f3dcfb01d6e8b04ad2df5924879495370269f90e41d2bdebc90b2bc7531e93f",
+                                "certificate_subject": "s1117509.keymachine.de",
+                                "certificate_issuer": "R12"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-14T16:30:09Z",
+            "last_checked": "2026-11-15T21:32:59Z",
             "observations": []
         },
         "threatfox": {

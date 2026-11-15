@@ -182,14 +182,78 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-08T02:19:20Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-15T21:41:28Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T21:41:28Z",
+                    "last_observed": "2026-11-15T21:41:28Z",
+                    "data": {
+                        "org": "OVH Ltd",
+                        "isp": "OVH SAS",
+                        "asn": "AS16276",
+                        "os": "Ubuntu",
+                        "country_code": "GB",
+                        "hostnames": [
+                            "doc-partage.net",
+                            "mail.doc-partage.net",
+                            "www.doc-partage.net"
+                        ],
+                        "domains": [
+                            "doc-partage.net"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "malware",
+                            "pqc"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.2p1 Ubuntu 2ubuntu3.8"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.28.3",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.28.3",
+                                "tags": [
+                                    "eol-product",
+                                    "pqc"
+                                ],
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "e40d3144364e3469e60c92bf0e32d787731b532f79606904d43d1d32b96a5668",
+                                "certificate_subject": "doc-partage.net",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "malware"
+                                ],
+                                "http_title": "Gophish - Login"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-14T16:30:09Z",
+            "last_checked": "2026-11-15T21:32:59Z",
             "observations": []
         },
         "threatfox": {

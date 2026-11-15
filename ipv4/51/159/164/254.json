@@ -165,11 +165,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-02T01:36:26Z",
-            "last_error": {
-                "occurred_at": "2026-11-08T10:09:49Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-15T21:42:56Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T01:36:26Z",
@@ -213,11 +209,54 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-15T21:42:56Z",
+                    "last_observed": "2026-11-15T21:42:56Z",
+                    "data": {
+                        "org": "Scaleway",
+                        "isp": "Scaleway SAS",
+                        "asn": "AS12876",
+                        "os": null,
+                        "country_code": "FR",
+                        "hostnames": [
+                            "254-164-159-51.instances.scw.cloud",
+                            "gophish.timmy.ninja",
+                            "gp.klararh.com"
+                        ],
+                        "domains": [
+                            "klararh.com",
+                            "scw.cloud",
+                            "timmy.ninja"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                                "certificate_sha256": "0beea86b13bf2c696a1efd45cf619e9d0f6c5b8ae5e7edfb567c01b52a166964",
+                                "certificate_subject": "gp.klararh.com",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                                "certificate_sha256": "dd0dc37f5d88efe2ae01a5a6496f9193417d41cb9ffba44d56710dccf9e1e641",
+                                "certificate_subject": "gophish.timmy.ninja",
+                                "certificate_issuer": "YE1"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-14T16:30:09Z",
+            "last_checked": "2026-11-15T21:32:59Z",
             "observations": []
         },
         "threatfox": {

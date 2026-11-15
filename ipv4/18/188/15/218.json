@@ -173,14 +173,67 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-08T02:19:16Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-15T21:41:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T21:41:24Z",
+                    "last_observed": "2026-11-15T21:41:24Z",
+                    "data": {
+                        "org": "Amazon Technologies Inc.",
+                        "isp": "Amazon.com, Inc.",
+                        "asn": "AS16509",
+                        "os": "Ubuntu",
+                        "country_code": "US",
+                        "hostnames": [
+                            "ec2-18-188-15-218.us-east-2.compute.amazonaws.com",
+                            "gophish.infra.local.express"
+                        ],
+                        "domains": [
+                            "amazonaws.com",
+                            "local.express"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "eol-product",
+                            "malware",
+                            "pqc"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.28.3",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product",
+                                    "malware",
+                                    "pqc"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "1dd40d40d00040d00042d43d000000831b6af40378e2dd35eeac4e9311926e",
+                                "certificate_sha256": "0f9319efe553950692b4a4b77b780190e85056e7ecd3b6e7643e7f30d1e2a946",
+                                "certificate_subject": "gophish.infra.local.express",
+                                "certificate_issuer": "YE2"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-14T16:30:09Z",
+            "last_checked": "2026-11-15T21:32:59Z",
             "observations": []
         },
         "threatfox": {

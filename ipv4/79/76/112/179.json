@@ -184,11 +184,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-02T01:35:44Z",
-            "last_error": {
-                "occurred_at": "2026-11-08T10:09:07Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-15T21:42:14Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T01:35:44Z",
@@ -236,11 +232,58 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-15T21:42:14Z",
+                    "last_observed": "2026-11-15T21:42:14Z",
+                    "data": {
+                        "org": "Oracle Svenska AB",
+                        "isp": "Oracle Corporation",
+                        "asn": "AS31898",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.18",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 3333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "9518f93ee41e4e5039512c7a3745737f395314897707e6f259126fc3ffe09443",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-14T16:30:09Z",
+            "last_checked": "2026-11-15T21:32:59Z",
             "observations": []
         },
         "threatfox": {

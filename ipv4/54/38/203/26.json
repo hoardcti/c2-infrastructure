@@ -197,14 +197,105 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-08T02:19:22Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-15T21:41:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T21:41:30Z",
+                    "last_observed": "2026-11-15T21:41:30Z",
+                    "data": {
+                        "org": "OVH Sp. z o. o.",
+                        "isp": "OVH SAS",
+                        "asn": "AS16276",
+                        "os": null,
+                        "country_code": "FR",
+                        "hostnames": [
+                            "e-notification.pl",
+                            "mail.e-notification.pl",
+                            "panel.misjacyber.pl",
+                            "vps-101da63e.vps.ovh.net"
+                        ],
+                        "domains": [
+                            "e-notification.pl",
+                            "misjacyber.pl",
+                            "ovh.net"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "malware",
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 25,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "certificate_sha256": "a9b8caa4661af0e5e565f713ecff0f202930aee5cd35fc99d5c9af504634a9d4",
+                                "certificate_subject": "vps-101da63e.vps.ovh.net",
+                                "certificate_issuer": "vps-101da63e.vps.ovh.net"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "jarm": "15d3fd16d29d29d00042d43d000000fe02290512647416dcf0a400ccbc0b6b",
+                                "certificate_sha256": "20ead8ea5277b46a3af8c15fdc500012873cc2dbb090b1c1a40975eda0f0ab6d",
+                                "certificate_subject": "e-notification.pl",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 4433,
+                                "transport": "tcp",
+                                "product": "GoPhish",
+                                "tags": [
+                                    "eol-product",
+                                    "malware"
+                                ],
+                                "http_title": "Gophish - Login",
+                                "jarm": "15d3fd16d29d29d00042d43d000000fe02290512647416dcf0a400ccbc0b6b",
+                                "certificate_sha256": "f4b711de6503d168760b4ac7e042aa5fd4b5b7a0cf4e735b4a5d11e57039e837",
+                                "certificate_subject": "panel.misjacyber.pl",
+                                "certificate_issuer": "YR2"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "jarm": "3fd3fd00000000000043d3fd3fd43d1f95be2da273ef2c8a48299dbff3c2cf",
+                                "certificate_sha256": "20ead8ea5277b46a3af8c15fdc500012873cc2dbb090b1c1a40975eda0f0ab6d",
+                                "certificate_subject": "e-notification.pl",
+                                "certificate_issuer": "YR2"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-14T16:30:09Z",
+            "last_checked": "2026-11-15T21:32:59Z",
             "observations": []
         },
         "threatfox": {
