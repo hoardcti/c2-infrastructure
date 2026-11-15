@@ -1,0 +1,266 @@
+{
+    "schema_version": 2,
+    "ip": "103.236.55.218",
+    "first_seen": "2026-11-15T08:58:47Z",
+    "last_seen": "2026-11-15T08:58:47Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-15T09:01:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T09:01:44Z",
+                    "last_observed": "2026-11-15T09:01:44Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2026-07-15T23:53:26Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Fixed Line ISP",
+                        "isp": "Shenzhen Yunshang Wuyou Network Technology Co., Ltd",
+                        "domain": "wuyouyun.com",
+                        "country_code": "CN",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-15T08:58:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T08:58:56Z",
+                    "last_observed": "2026-11-15T08:58:56Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443,
+                            5432,
+                            21116
+                        ],
+                        "hostnames": [
+                            "injecode.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.29.8",
+                            "cpe:/a:rustdesk:rustdesk"
+                        ],
+                        "tags": [
+                            "database",
+                            "eol-product",
+                            "pqc",
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-15T08:58:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T08:58:53Z",
+                    "last_observed": "2026-11-15T08:58:53Z",
+                    "data": {
+                        "asn": "AS4816",
+                        "as_name": "China Telecom (Group)",
+                        "as_domain": "chinatelecom.com.cn",
+                        "country_code": "CN",
+                        "country": "China",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-15T09:03:02Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T09:03:02Z",
+                    "last_observed": "2026-11-15T09:03:02Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "CN",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-15T09:06:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T09:06:34Z",
+                    "last_observed": "2026-11-15T09:06:34Z",
+                    "data": {
+                        "org": "Shenzhen Yunshang Wuyou Network Technology Co., Ltd",
+                        "isp": "China Telecom (Group)",
+                        "asn": "AS4816",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [
+                            "injecode.com"
+                        ],
+                        "domains": [
+                            "injecode.com"
+                        ],
+                        "tags": [
+                            "database",
+                            "eol-product",
+                            "pqc",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.29.8",
+                                "tags": [
+                                    "eol-product",
+                                    "pqc"
+                                ],
+                                "http_title": "银河中转站",
+                                "jarm": "28d28d28d00028d00042d42d000000831b6af40378e2dd35eeac4e9311926e",
+                                "certificate_sha256": "97575e9030e66957f5e2371f87b4af406e8013c08ac21e051aa66969178bb281",
+                                "certificate_subject": "injecode.com",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 5432,
+                                "transport": "tcp",
+                                "product": "PostgreSQL",
+                                "tags": [
+                                    "database",
+                                    "self-signed"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "33f53f02b864d481a0cfd2b1972641df70be0ffa9b7d99deb779df4cd794e31e",
+                                "certificate_subject": "RainYun-ldLleuiN",
+                                "certificate_issuer": "RainYun-ldLleuiN"
+                            },
+                            {
+                                "port": 21116,
+                                "transport": "tcp",
+                                "product": "RustDesk"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-15T08:58:53Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-15T08:58:47Z",
+            "observations": [
+                {
+                    "key": "2028947",
+                    "first_observed": "2026-11-15T08:58:47Z",
+                    "last_observed": "2026-11-15T08:58:47Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "103.236.55.218:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 75,
+                        "first_seen": "2026-11-15T06:56:15Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-15T09:00:56Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-15T09:08:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T09:08:46Z",
+                    "last_observed": "2026-11-15T09:08:46Z",
+                    "data": {
+                        "as_owner": "China Telecom (Group)",
+                        "asn": 4816,
+                        "network": "103.236.52.0/22",
+                        "country": "CN",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -12,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 0,
+                            "undetected": 36,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "phishing"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 2
+                        },
+                        "tags": [],
+                        "jarm": "28d28d28d00028d00042d42d000000e1ea2a807a629b496b664cf07ad7c08d",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

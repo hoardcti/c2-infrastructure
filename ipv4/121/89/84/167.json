@@ -1,0 +1,173 @@
+{
+    "schema_version": 2,
+    "ip": "121.89.84.167",
+    "first_seen": "2026-11-15T08:58:47Z",
+    "last_seen": "2026-11-15T08:58:47Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-15T09:01:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T09:01:46Z",
+                    "last_observed": "2026-11-15T09:01:46Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-10-03T19:25:45Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Aliyun Computing Co., LTD",
+                        "domain": "alibabacloud.com",
+                        "country_code": "CN",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-15T08:58:57Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-15T08:58:53Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T08:58:53Z",
+                    "last_observed": "2026-11-15T08:58:53Z",
+                    "data": {
+                        "asn": "AS37963",
+                        "as_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
+                        "as_domain": "alibabagroup.com",
+                        "country_code": "CN",
+                        "country": "China",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-15T09:03:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T09:03:04Z",
+                    "last_observed": "2026-11-15T09:03:04Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS37963 hangzhou alibaba advertising co. ltd.",
+                        "country_code": "CN",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-15T09:06:36Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-15T08:58:53Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-15T08:58:47Z",
+            "observations": [
+                {
+                    "key": "2028946",
+                    "first_observed": "2026-11-15T08:58:47Z",
+                    "last_observed": "2026-11-15T08:58:47Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "121.89.84.167:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 75,
+                        "first_seen": "2026-11-15T06:56:17Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-15T09:00:58Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-15T09:09:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T09:09:01Z",
+                    "last_observed": "2026-11-15T09:09:01Z",
+                    "data": {
+                        "as_owner": "Hangzhou Alibaba Advertising Co.,Ltd.",
+                        "asn": 37963,
+                        "network": "121.89.0.0/16",
+                        "country": "CN",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -12,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 1,
+                            "undetected": 36,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 2
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

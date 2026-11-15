@@ -1,0 +1,173 @@
+{
+    "schema_version": 2,
+    "ip": "124.156.204.199",
+    "first_seen": "2026-11-15T08:58:47Z",
+    "last_seen": "2026-11-15T08:58:47Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-15T09:01:48Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T09:01:48Z",
+                    "last_observed": "2026-11-15T09:01:48Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Tencent Building, Kejizhongyi Avenue",
+                        "domain": "tencent.com",
+                        "country_code": "SG",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-15T08:58:58Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-15T08:58:54Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T08:58:54Z",
+                    "last_observed": "2026-11-15T08:58:54Z",
+                    "data": {
+                        "asn": "AS132203",
+                        "as_name": "Tencent Building, Kejizhongyi Avenue",
+                        "as_domain": "tencent.com",
+                        "country_code": "SG",
+                        "country": "Singapore",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-15T09:03:06Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T09:03:06Z",
+                    "last_observed": "2026-11-15T09:03:06Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS132203 tencent building  kejizhongyi avenue",
+                        "country_code": "SG",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-15T09:06:38Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-15T08:58:53Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-15T08:58:47Z",
+            "observations": [
+                {
+                    "key": "2028948",
+                    "first_observed": "2026-11-15T08:58:47Z",
+                    "last_observed": "2026-11-15T08:58:47Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "124.156.204.199:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-15T06:56:15Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-15T09:01:00Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-15T09:09:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-15T09:09:16Z",
+                    "last_observed": "2026-11-15T09:09:16Z",
+                    "data": {
+                        "as_owner": "Tencent Building, Kejizhongyi Avenue",
+                        "asn": 132203,
+                        "network": "124.156.128.0/17",
+                        "country": "SG",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 2,
+                            "undetected": 36,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
