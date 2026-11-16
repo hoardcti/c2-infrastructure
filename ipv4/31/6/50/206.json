@@ -243,11 +243,49 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-09T00:54:16Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-16T20:17:50Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-16T20:17:50Z",
+                    "last_observed": "2026-11-16T20:17:50Z",
+                    "data": {
+                        "org": "XSPEEDIENT, LLC",
+                        "isp": "FZink Ferdinand Zink trading as Tube-Hosting",
+                        "asn": "AS213200",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "pqc"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.2p1 Ubuntu 4ubuntu0.13"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "pqc"
+                                ],
+                                "http_title": "Pritunl",
+                                "jarm": "40d40d40d00000000043d43d00043d6aff5ab0f4fc31897186312c9e639319",
+                                "certificate_sha256": "100c74d4cf18e531e55fcf123c21fa2560a0e9ff3dda5c7e8e8b3c2cc183c561",
+                                "certificate_organisation": "Internet Widgits Pty Ltd"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-15T21:33:00Z",
