@@ -201,11 +201,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-02T01:37:10Z",
-            "last_error": {
-                "occurred_at": "2026-11-08T16:45:45Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-16T01:48:50Z",
             "observations": [
                 {
                     "first_observed": "2026-10-02T01:37:10Z",
@@ -245,6 +241,64 @@
                             },
                             {
                                 "port": 8082,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-16T01:48:50Z",
+                    "last_observed": "2026-11-16T01:48:50Z",
+                    "data": {
+                        "org": "Tencent cloud computing (Beijing) Co., Ltd.",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "cloud",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u6",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.22.1",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 9998,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 9999,
                                 "transport": "tcp",
                                 "tags": [
                                     "cloud"

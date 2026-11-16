@@ -246,11 +246,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-15T23:45:44Z",
-            "last_error": {
-                "occurred_at": "2026-11-08T16:47:06Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-16T01:50:10Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T23:45:44Z",
@@ -280,6 +276,79 @@
                                 "product": "CUPS (IPP)",
                                 "version": "2.4.19",
                                 "http_title": "Forbidden - CUPS v2.4.19"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "2e415e825fd13fb521061490d58fff0e478b43f41f807755cd4cec247587cb0f",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-16T01:50:10Z",
+                    "last_observed": "2026-11-16T01:50:10Z",
+                    "data": {
+                        "org": "Noyan Abr Arvan Co. ( Private Joint Stock)",
+                        "isp": "Noyan Abr Arvan Co. ( Private Joint Stock)",
+                        "asn": "AS202468",
+                        "os": null,
+                        "country_code": "IR",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.2p1 Ubuntu 2ubuntu3.8"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "http_title": "ERROR 404 - Nothing Found"
+                            },
+                            {
+                                "port": 631,
+                                "transport": "tcp",
+                                "product": "CUPS (IPP)",
+                                "version": "2.4.20",
+                                "http_title": "Forbidden - CUPS v2.4.20"
+                            },
+                            {
+                                "port": 4321,
+                                "transport": "tcp",
+                                "product": "Adaptix",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "404 - Page Not Found",
+                                "jarm": "29d29d00000000000043d43d00043dc3b2afa8a5ec09b510a8559aff7899fb",
+                                "certificate_sha256": "c3a527ddb9f184eb26ccbab504927bfb4eefa6f05afeb5923fe17af9bcad4537",
+                                "certificate_organisation": "Blu Update Repository"
+                            },
+                            {
+                                "port": 4444,
+                                "transport": "tcp"
                             },
                             {
                                 "port": 31337,

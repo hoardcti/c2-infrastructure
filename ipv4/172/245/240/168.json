@@ -129,11 +129,130 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-08T16:46:28Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-16T01:49:32Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-16T01:49:32Z",
+                    "last_observed": "2026-11-16T01:49:32Z",
+                    "data": {
+                        "org": "RackNerd LLC",
+                        "isp": "HostPapa",
+                        "asn": "AS36352",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "172-245-240-168-host.colocrossing.com",
+                            "gemeco.com.cn",
+                            "www.gemeco.com.cn"
+                        ],
+                        "domains": [
+                            "colocrossing.com",
+                            "gemeco.com.cn"
+                        ],
+                        "tags": [
+                            "self-signed",
+                            "starttls"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
+                            },
+                            {
+                                "port": 99,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "32eca08c442ddb35b83274639c5ebde7b0f560db2904294608013e2fa021753e",
+                                "certificate_subject": "gemeco.com.cn",
+                                "certificate_issuer": "YE2"
+                            },
+                            {
+                                "port": 110,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "9396f97f7290aecac2fe061887964cb9ff572ac91b805a821f390da5394378ab",
+                                "certificate_subject": "imap.top",
+                                "certificate_issuer": "imap.top"
+                            },
+                            {
+                                "port": 143,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "9396f97f7290aecac2fe061887964cb9ff572ac91b805a821f390da5394378ab",
+                                "certificate_subject": "imap.top",
+                                "certificate_issuer": "imap.top"
+                            },
+                            {
+                                "port": 465,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "05b02b12b04b04b05b05b02b05b04ba441f40918707087561e2af18cf76f0e",
+                                "certificate_sha256": "9396f97f7290aecac2fe061887964cb9ff572ac91b805a821f390da5394378ab",
+                                "certificate_subject": "imap.top",
+                                "certificate_issuer": "imap.top"
+                            },
+                            {
+                                "port": 587,
+                                "transport": "tcp",
+                                "product": "Postfix smtpd",
+                                "tags": [
+                                    "self-signed",
+                                    "starttls"
+                                ],
+                                "certificate_sha256": "9396f97f7290aecac2fe061887964cb9ff572ac91b805a821f390da5394378ab",
+                                "certificate_subject": "imap.top",
+                                "certificate_issuer": "imap.top"
+                            },
+                            {
+                                "port": 993,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "05d02d20d21d20d05c05d02d05d20da23a7a927f270a23608b3c7a72999cab",
+                                "certificate_sha256": "9396f97f7290aecac2fe061887964cb9ff572ac91b805a821f390da5394378ab",
+                                "certificate_subject": "imap.top",
+                                "certificate_issuer": "imap.top"
+                            },
+                            {
+                                "port": 995,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "05d02d20d21d20d05c05d02d05d20da23a7a927f270a23608b3c7a72999cab",
+                                "certificate_sha256": "9396f97f7290aecac2fe061887964cb9ff572ac91b805a821f390da5394378ab",
+                                "certificate_subject": "imap.top",
+                                "certificate_issuer": "imap.top"
+                            },
+                            {
+                                "port": 8333,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "http_title": "Gophish - Login",
+                                "jarm": "28d28d28d00028d00041d28d28d41dd279b0cf765af27fa62e66d7c8281124",
+                                "certificate_sha256": "329b3c245af18e629500324302ec3a32669f83df4f6f2f6c366ef64bb2c37327",
+                                "certificate_organisation": "Gophish"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-15T21:32:59Z",
