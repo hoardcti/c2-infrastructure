@@ -2,17 +2,17 @@
     "schema_version": 2,
     "ip": "217.60.63.238",
     "first_seen": "2026-11-10T09:29:52Z",
-    "last_seen": "2026-11-17T03:32:03Z",
+    "last_seen": "2026-11-17T12:54:58Z",
     "flags": [
         "cobalt strike"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-10T09:32:49Z",
+            "last_checked": "2026-11-17T12:58:02Z",
             "observations": [
                 {
                     "first_observed": "2026-11-10T09:32:49Z",
-                    "last_observed": "2026-11-10T09:32:49Z",
+                    "last_observed": "2026-11-17T12:58:02Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -31,8 +31,24 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-10T09:30:01Z",
-            "observations": []
+            "last_checked": "2026-11-17T12:55:08Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-17T12:55:08Z",
+                    "last_observed": "2026-11-17T12:55:08Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443,
+                            8000
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
         },
         "ipinfo": {
             "last_checked": "2026-11-10T09:29:59Z",
@@ -53,11 +69,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-10T09:34:08Z",
+            "last_checked": "2026-11-17T12:59:30Z",
             "observations": [
                 {
                     "first_observed": "2026-11-10T09:34:08Z",
-                    "last_observed": "2026-11-10T09:34:08Z",
+                    "last_observed": "2026-11-17T12:59:30Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS58224 iran telecommunication company pjs",
@@ -70,6 +86,10 @@
         },
         "shodan": {
             "last_checked": "2026-11-10T09:38:08Z",
+            "last_error": {
+                "occurred_at": "2026-11-17T13:02:57Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-11-10T09:38:08Z",
@@ -106,12 +126,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-17T03:32:03Z",
+            "last_checked": "2026-11-17T12:54:58Z",
             "observations": [
                 {
                     "key": "2022444",
                     "first_observed": "2026-11-10T09:29:52Z",
-                    "last_observed": "2026-11-17T03:32:03Z",
+                    "last_observed": "2026-11-17T12:54:58Z",
                     "flags": [
                         "cobalt strike"
                     ],
@@ -135,7 +155,7 @@
             ]
         },
         "urlhaus": {
-            "last_checked": "2026-11-10T09:32:01Z",
+            "last_checked": "2026-11-17T12:57:10Z",
             "observations": []
         },
         "virustotal": {

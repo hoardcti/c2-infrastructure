@@ -1,0 +1,258 @@
+{
+    "schema_version": 2,
+    "ip": "103.235.74.71",
+    "first_seen": "2026-11-17T12:54:58Z",
+    "last_seen": "2026-11-17T12:54:58Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-17T12:57:58Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-17T12:57:58Z",
+                    "last_observed": "2026-11-17T12:57:58Z",
+                    "data": {
+                        "abuse_confidence_score": 54,
+                        "total_reports": 37,
+                        "distinct_reporters": 24,
+                        "last_reported_at": "2026-11-07T12:49:08Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "PT Ikubaru Indonesia",
+                        "domain": "ikubaru.co.id",
+                        "country_code": "ID",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-17T12:55:06Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-17T12:55:06Z",
+                    "last_observed": "2026-11-17T12:55:06Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            3389,
+                            5985,
+                            8090,
+                            8091
+                        ],
+                        "hostnames": [
+                            "103-235-74-71.indovm.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:apache:http_server:2.4.69",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/a:php:php:8.3.36",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:debian:debian_linux"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2007-3205",
+                            "CVE-2007-4723",
+                            "CVE-2009-0796",
+                            "CVE-2009-2299",
+                            "CVE-2011-1176",
+                            "CVE-2011-2688",
+                            "CVE-2012-3526",
+                            "CVE-2012-4001",
+                            "CVE-2012-4360",
+                            "CVE-2013-0941",
+                            "CVE-2013-0942",
+                            "CVE-2013-2220",
+                            "CVE-2013-2765",
+                            "CVE-2013-4365"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-17T12:55:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-17T12:55:05Z",
+                    "last_observed": "2026-11-17T12:55:05Z",
+                    "data": {
+                        "asn": "AS135444",
+                        "as_name": "PT Ikubaru Indonesia",
+                        "as_domain": "ikubaru.co.id",
+                        "country_code": "ID",
+                        "country": "Indonesia",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-17T12:59:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-17T12:59:26Z",
+                    "last_observed": "2026-11-17T12:59:26Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS135444 pt ikubaru indonesia",
+                        "country_code": "ID",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "6adc2e596576e629ee390469",
+                                "name": "Malware Filter - Botnet List - 23-10-2026 (Part 1)",
+                                "created": "2026-10-24T04:04:41.422Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-17T13:02:53Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-17T12:55:05Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-17T12:54:58Z",
+            "observations": [
+                {
+                    "key": "2031878",
+                    "first_observed": "2026-11-17T12:54:58Z",
+                    "last_observed": "2026-11-17T12:54:58Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "103.235.74.71:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-17T07:54:03Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-17T12:57:06Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-17T13:05:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-17T13:05:05Z",
+                    "last_observed": "2026-11-17T13:05:05Z",
+                    "data": {
+                        "as_owner": "PT Ikubaru Indonesia",
+                        "asn": 135444,
+                        "network": "103.235.74.0/23",
+                        "country": "ID",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 7,
+                            "suspicious": 3,
+                            "undetected": 33,
+                            "harmless": 49,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "2ad2ad0002ad2ad00042d42d000000ad9bf51cc3f5a1e29eecb81d0c7b06eb",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
