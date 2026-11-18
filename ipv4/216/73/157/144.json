@@ -1,0 +1,214 @@
+{
+    "schema_version": 2,
+    "ip": "216.73.157.144",
+    "first_seen": "2026-11-18T21:12:18Z",
+    "last_seen": "2026-11-18T21:12:18Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-18T21:15:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:15:26Z",
+                    "last_observed": "2026-11-18T21:15:26Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "EXTRAVM LLC",
+                        "domain": "extravm.com",
+                        "country_code": "NL",
+                        "hostnames": [
+                            "144.157.73.216.in-addr.arpa"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-18T21:12:32Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:12:32Z",
+                    "last_observed": "2026-11-18T21:12:32Z",
+                    "data": {
+                        "ports": [
+                            22
+                        ],
+                        "hostnames": [
+                            "144.157.73.216.in-addr.arpa"
+                        ],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-18T21:12:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:12:26Z",
+                    "last_observed": "2026-11-18T21:12:26Z",
+                    "data": {
+                        "asn": "AS53724",
+                        "as_name": "EXTRAVM LLC",
+                        "as_domain": "extravm.com",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-18T21:16:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:16:45Z",
+                    "last_observed": "2026-11-18T21:16:45Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS1239 sprint",
+                        "country_code": "",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-18T21:20:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:20:45Z",
+                    "last_observed": "2026-11-18T21:20:45Z",
+                    "data": {
+                        "org": "EXTRAVM LLC",
+                        "isp": "EVM - EXTRAVM LLC",
+                        "asn": "AS53724",
+                        "os": "Ubuntu",
+                        "country_code": "US",
+                        "hostnames": [
+                            "144.157.73.216.in-addr.arpa"
+                        ],
+                        "domains": [
+                            "216.in-addr.arpa"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.18"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-18T21:12:25Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-18T21:12:18Z",
+            "observations": [
+                {
+                    "key": "2034483",
+                    "first_observed": "2026-11-18T21:12:18Z",
+                    "last_observed": "2026-11-18T21:12:18Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "216.73.157.144:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-18T19:23:57Z",
+                        "reference": "https://www.shodan.io/host/216.73.157.144",
+                        "tags": [
+                            "Cobalt Strike",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-18T21:14:34Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-18T21:23:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:23:22Z",
+                    "last_observed": "2026-11-18T21:23:22Z",
+                    "data": {
+                        "as_owner": "EXTRAVM LLC",
+                        "asn": 53724,
+                        "network": "216.73.156.0/23",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 0,
+                            "undetected": 92,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

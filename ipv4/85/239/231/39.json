@@ -1,0 +1,185 @@
+{
+    "schema_version": 2,
+    "ip": "85.239.231.39",
+    "first_seen": "2026-11-18T21:12:18Z",
+    "last_seen": "2026-11-18T21:12:18Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-18T21:15:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:15:21Z",
+                    "last_observed": "2026-11-18T21:15:21Z",
+                    "data": {
+                        "abuse_confidence_score": 2,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-11-01T19:01:49Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Contabo GmbH",
+                        "domain": "contabo.com",
+                        "country_code": "US",
+                        "hostnames": [
+                            "vmi3294431.contaboserver.net"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-18T21:12:29Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:12:29Z",
+                    "last_observed": "2026-11-18T21:12:29Z",
+                    "data": {
+                        "ports": [
+                            22
+                        ],
+                        "hostnames": [
+                            "vmi3294431.contaboserver.net"
+                        ],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:10.0p2",
+                            "cpe:/o:debian:debian_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-18T21:12:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:12:25Z",
+                    "last_observed": "2026-11-18T21:12:25Z",
+                    "data": {
+                        "asn": "AS40021",
+                        "as_name": "Contabo Inc.",
+                        "as_domain": "contabo.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-18T21:16:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:16:39Z",
+                    "last_observed": "2026-11-18T21:16:39Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS15685 casablanca int",
+                        "country_code": "CZ",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-18T21:20:39Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-18T21:12:25Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-18T21:12:18Z",
+            "observations": [
+                {
+                    "key": "2034135",
+                    "first_observed": "2026-11-18T21:12:18Z",
+                    "last_observed": "2026-11-18T21:12:18Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "85.239.231.39:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-18T13:22:57Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-18T21:14:28Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-18T21:22:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:22:37Z",
+                    "last_observed": "2026-11-18T21:22:37Z",
+                    "data": {
+                        "as_owner": "Contabo Inc.",
+                        "asn": 40021,
+                        "network": "85.239.230.0/23",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 1,
+                            "undetected": 36,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Criminal IP",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "15d3fd16d29d29d00042d43d000000fbc10435df141b3459e26f69e76d5947",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

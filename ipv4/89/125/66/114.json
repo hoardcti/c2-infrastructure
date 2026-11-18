@@ -1,0 +1,261 @@
+{
+    "schema_version": 2,
+    "ip": "89.125.66.114",
+    "first_seen": "2026-11-18T21:12:18Z",
+    "last_seen": "2026-11-18T21:12:18Z",
+    "flags": [
+        "cobalt strike"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-18T21:15:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:15:23Z",
+                    "last_observed": "2026-11-18T21:15:23Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "RCS Technologies FZE LLC",
+                        "domain": "rcstech.ae",
+                        "country_code": "NL",
+                        "hostnames": [
+                            "114.66.125.89.nl217.servers.guru"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-18T21:12:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:12:30Z",
+                    "last_observed": "2026-11-18T21:12:30Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80
+                        ],
+                        "hostnames": [
+                            "114.66.125.89.nl217.servers.guru"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.22.1",
+                            "cpe:/a:openbsd:openssh:9.2p1",
+                            "cpe:/o:debian:debian_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-18T21:12:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:12:26Z",
+                    "last_observed": "2026-11-18T21:12:26Z",
+                    "data": {
+                        "asn": "AS212477",
+                        "as_name": "RoyaleHosting BV",
+                        "as_domain": "royalehosting.net",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-18T21:16:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:16:41Z",
+                    "last_observed": "2026-11-18T21:16:41Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS25441 imagine communications group limited",
+                        "country_code": "IE",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-18T21:20:41Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:20:41Z",
+                    "last_observed": "2026-11-18T21:20:41Z",
+                    "data": {
+                        "org": "RoyaleHosting BV",
+                        "isp": "RoyaleHosting BV",
+                        "asn": "AS212477",
+                        "os": null,
+                        "country_code": "IE",
+                        "hostnames": [
+                            "114.66.125.89.nl217.servers.guru",
+                            "dnsupdatezone.net"
+                        ],
+                        "domains": [
+                            "dnsupdatezone.net",
+                            "servers.guru"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.2p1 Debian 2+deb12u10"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.22.1",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "fd26f2f94adb144bf87978542e9384c4e94de48c06e8dc296bb0441f84d6c876",
+                                "certificate_subject": "dnsupdatezone.net",
+                                "certificate_issuer": "YE1"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-18T21:12:25Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-18T21:12:18Z",
+            "observations": [
+                {
+                    "key": "2034484",
+                    "first_observed": "2026-11-18T21:12:18Z",
+                    "last_observed": "2026-11-18T21:12:18Z",
+                    "flags": [
+                        "cobalt strike"
+                    ],
+                    "data": {
+                        "ioc": "89.125.66.114:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Cobalt Strike",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-18T19:23:57Z",
+                        "reference": "https://www.shodan.io/host/89.125.66.114",
+                        "tags": [
+                            "Cobalt Strike",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-18T21:14:30Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-18T21:22:52Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:22:52Z",
+                    "last_observed": "2026-11-18T21:22:52Z",
+                    "data": {
+                        "as_owner": "RoyaleHosting BV",
+                        "asn": 212477,
+                        "network": "89.125.66.0/24",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 2,
+                            "undetected": 34,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Criminal IP",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Kaspersky",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

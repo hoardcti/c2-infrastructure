@@ -1,0 +1,157 @@
+{
+    "schema_version": 2,
+    "ip": "144.24.15.130",
+    "first_seen": "2026-11-18T21:12:18Z",
+    "last_seen": "2026-11-18T21:12:18Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-18T21:15:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:15:24Z",
+                    "last_observed": "2026-11-18T21:15:24Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Oracle Corp UK Ltd",
+                        "domain": "oracle.com",
+                        "country_code": "US",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-18T21:12:31Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-18T21:12:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:12:26Z",
+                    "last_observed": "2026-11-18T21:12:26Z",
+                    "data": {
+                        "asn": "AS31898",
+                        "as_name": "Oracle Corporation",
+                        "as_domain": "oracle.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-18T21:16:43Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:16:43Z",
+                    "last_observed": "2026-11-18T21:16:43Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS31898 oracle corporation",
+                        "country_code": "GB",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-18T21:20:43Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-18T21:12:25Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-18T21:12:18Z",
+            "observations": [
+                {
+                    "key": "2034144",
+                    "first_observed": "2026-11-18T21:12:18Z",
+                    "last_observed": "2026-11-18T21:12:18Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "144.24.15.130:7443",
+                        "port": 7443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-18T13:22:53Z",
+                        "reference": null,
+                        "tags": [
+                            "Mythic",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-18T21:14:32Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-18T21:23:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-18T21:23:07Z",
+                    "last_observed": "2026-11-18T21:23:07Z",
+                    "data": {
+                        "as_owner": "Oracle Corporation",
+                        "asn": 31898,
+                        "network": "144.24.0.0/16",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 36,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
