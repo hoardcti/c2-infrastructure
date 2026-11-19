@@ -88,11 +88,42 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-12T09:39:22Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-19T20:25:35Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-19T20:25:35Z",
+                    "last_observed": "2026-11-19T20:25:35Z",
+                    "data": {
+                        "org": "Scloud Pte Ltd",
+                        "isp": "Scloud Pte Ltd",
+                        "asn": "AS142002",
+                        "os": null,
+                        "country_code": "DE",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 123,
+                                "transport": "udp",
+                                "product": "ntpd",
+                                "version": "3"
+                            },
+                            {
+                                "port": 3080,
+                                "transport": "tcp",
+                                "product": "Apache Tomcat",
+                                "http_title": "Apache Tomcat/9.0.98"
+                            },
+                            {
+                                "port": 9999,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-19T03:00:20Z",
