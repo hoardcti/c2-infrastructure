@@ -174,11 +174,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-13T14:21:54Z",
+            "last_checked": "2026-11-20T19:52:37Z",
             "observations": [
                 {
                     "first_observed": "2026-10-21T09:22:33Z",
-                    "last_observed": "2026-11-13T14:21:54Z",
+                    "last_observed": "2026-11-20T19:52:37Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS135824 gelexiy cab net",
@@ -190,11 +190,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-29T14:18:05Z",
-            "last_error": {
-                "occurred_at": "2026-11-13T06:00:49Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-20T19:58:13Z",
             "observations": [
                 {
                     "first_observed": "2026-10-21T09:25:53Z",
@@ -227,6 +223,69 @@
                             {
                                 "port": 445,
                                 "transport": "tcp"
+                            },
+                            {
+                                "port": 5986,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "Not Found",
+                                "jarm": "2ad2ad16d00000022c2ad2ad2ad2ad46ff59a659b30fd8aeaa6755c67691b4",
+                                "certificate_sha256": "c6d9861a099fb32c300a13082b51d0242821934df2463d38f28659f531969942",
+                                "certificate_subject": "SERVER-SERVER",
+                                "certificate_issuer": "SERVER-SERVER"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-20T19:58:13Z",
+                    "last_observed": "2026-11-20T19:58:13Z",
+                    "data": {
+                        "org": "White Label Services, LLC",
+                        "isp": "WhiteLabel Fiba Cloud Operation Company, LLC",
+                        "asn": "AS44382",
+                        "os": null,
+                        "country_code": "TR",
+                        "hostnames": [
+                            "34083-28096.dchost.com"
+                        ],
+                        "domains": [
+                            "dchost.com"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 139,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "version": "10.0.17763",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad22c2ad2ad2ad2adfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "86892c34dd5102e815467fb5a6a067c1917559f651228910eb0d036b478c3115",
+                                "certificate_subject": "34083-28096",
+                                "certificate_issuer": "34083-28096"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
                             },
                             {
                                 "port": 5986,
