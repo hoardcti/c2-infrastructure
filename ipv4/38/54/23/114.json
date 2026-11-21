@@ -1,0 +1,174 @@
+{
+    "schema_version": 2,
+    "ip": "38.54.23.114",
+    "first_seen": "2026-11-21T17:13:11Z",
+    "last_seen": "2026-11-21T17:13:11Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-21T17:16:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-21T17:16:07Z",
+                    "last_observed": "2026-11-21T17:16:07Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "LIGHT NODE LIMITED",
+                        "domain": "lightnode.com",
+                        "country_code": "HK",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-21T17:13:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-21T17:13:19Z",
+                    "last_observed": "2026-11-21T17:13:19Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            5006,
+                            9100
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-21T17:13:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-21T17:13:19Z",
+                    "last_observed": "2026-11-21T17:13:19Z",
+                    "data": {
+                        "asn": "AS154177",
+                        "as_name": "LIGHT NODE LIMITED",
+                        "as_domain": "lightnode.com",
+                        "country_code": "HK",
+                        "country": "Hong Kong",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-21T17:17:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-21T17:17:25Z",
+                    "last_observed": "2026-11-21T17:17:25Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS138915 kaopu cloud hk limited",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-21T17:21:25Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-21T17:13:18Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-21T17:13:11Z",
+            "observations": [
+                {
+                    "key": "2038144",
+                    "first_observed": "2026-11-21T17:13:11Z",
+                    "last_observed": "2026-11-21T17:13:11Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "38.54.23.114:7443",
+                        "port": 7443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-21T13:51:07Z",
+                        "reference": null,
+                        "tags": [
+                            "Mythic",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-21T17:15:19Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-21T17:23:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-21T17:23:26Z",
+                    "last_observed": "2026-11-21T17:23:26Z",
+                    "data": {
+                        "as_owner": "LIGHT NODE LIMITED",
+                        "asn": 154177,
+                        "network": "38.54.23.0/24",
+                        "country": "HK",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 1,
+                            "undetected": 38,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "3fd3fd00000000000043d3fd3fd43d79451d8c63b099acafdbabb24551d0e6",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

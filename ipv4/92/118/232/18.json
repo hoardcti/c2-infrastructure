@@ -2,13 +2,13 @@
     "schema_version": 2,
     "ip": "92.118.232.18",
     "first_seen": "2026-11-14T09:57:04Z",
-    "last_seen": "2026-11-21T09:25:39Z",
+    "last_seen": "2026-11-21T17:13:11Z",
     "flags": [
         "unknown stealer"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-14T10:00:05Z",
+            "last_checked": "2026-11-21T17:16:14Z",
             "observations": [
                 {
                     "first_observed": "2026-11-14T10:00:05Z",
@@ -27,11 +27,29 @@
                         "country_code": "DE",
                         "hostnames": []
                     }
+                },
+                {
+                    "first_observed": "2026-11-21T17:16:14Z",
+                    "last_observed": "2026-11-21T17:16:14Z",
+                    "data": {
+                        "abuse_confidence_score": 3,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-11-13T21:45:09Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "UOWH LLC",
+                        "domain": "uowh.net",
+                        "country_code": "DE",
+                        "hostnames": []
+                    }
                 }
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-14T09:57:15Z",
+            "last_checked": "2026-11-21T17:13:23Z",
             "observations": [
                 {
                     "first_observed": "2026-11-14T09:57:15Z",
@@ -46,6 +64,44 @@
                             "self-signed"
                         ],
                         "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-11-21T17:13:23Z",
+                    "last_observed": "2026-11-21T17:13:23Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            443,
+                            3389
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:for_Windows_9.5",
+                            "cpe:/a:palletsprojects:flask:3.1.9",
+                            "cpe:/a:python:python:3.12.7"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2009-2940",
+                            "CVE-2009-3720",
+                            "CVE-2020-29396",
+                            "CVE-2021-32052",
+                            "CVE-2024-9287",
+                            "CVE-2025-12084",
+                            "CVE-2025-12781",
+                            "CVE-2025-13462",
+                            "CVE-2025-13836",
+                            "CVE-2025-13837",
+                            "CVE-2026-0864",
+                            "CVE-2026-3087",
+                            "CVE-2026-3644",
+                            "CVE-2026-4519",
+                            "CVE-2026-6019",
+                            "CVE-2026-7210"
+                        ]
                     }
                 }
             ]
@@ -69,11 +125,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-14T10:01:22Z",
+            "last_checked": "2026-11-21T17:18:43Z",
             "observations": [
                 {
                     "first_observed": "2026-11-14T10:01:22Z",
-                    "last_observed": "2026-11-14T10:01:22Z",
+                    "last_observed": "2026-11-21T17:18:43Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS35913 dedipath",
@@ -86,22 +142,22 @@
         },
         "shodan": {
             "last_error": {
-                "occurred_at": "2026-11-14T10:04:49Z",
+                "occurred_at": "2026-11-21T17:21:33Z",
                 "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
             },
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-11-20T11:06:26Z",
+            "last_checked": "2026-11-21T17:13:18Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-21T09:25:39Z",
+            "last_checked": "2026-11-21T17:13:11Z",
             "observations": [
                 {
                     "key": "2028252",
                     "first_observed": "2026-11-14T09:57:04Z",
-                    "last_observed": "2026-11-21T09:25:39Z",
+                    "last_observed": "2026-11-21T17:13:11Z",
                     "flags": [
                         "unknown stealer"
                     ],
@@ -123,7 +179,7 @@
             ]
         },
         "urlhaus": {
-            "last_checked": "2026-11-14T09:59:16Z",
+            "last_checked": "2026-11-21T17:15:26Z",
             "observations": []
         },
         "virustotal": {
