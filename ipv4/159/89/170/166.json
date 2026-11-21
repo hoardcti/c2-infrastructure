@@ -183,11 +183,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-18T20:28:53Z",
-            "last_error": {
-                "occurred_at": "2026-11-13T14:25:52Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-21T01:21:40Z",
             "observations": [
                 {
                     "first_observed": "2026-10-18T20:28:53Z",
@@ -281,11 +277,103 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-21T01:21:40Z",
+                    "last_observed": "2026-11-21T01:21:40Z",
+                    "data": {
+                        "org": "DigitalOcean, LLC",
+                        "isp": "DigitalOcean, LLC",
+                        "asn": "AS14061",
+                        "os": null,
+                        "country_code": "IN",
+                        "hostnames": [
+                            "admin.globalbusinesspages.com",
+                            "globalbusinesspages.com",
+                            "www.globalbusinesspages.com"
+                        ],
+                        "domains": [
+                            "globalbusinesspages.com"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "database",
+                            "eol-product",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2019-11358",
+                            "CVE-2020-11022",
+                            "CVE-2020-11023",
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.2p1 Ubuntu 4ubuntu0.13",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Global Business Pages"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "cloud",
+                                    "eol-product"
+                                ],
+                                "http_title": "Global Business Pages",
+                                "jarm": "28d28d28d00028d00042d42d0000005a3e96c1dfa4bdb24b8b3c04cae18cc3",
+                                "certificate_sha256": "2b41f937ddfa32550c8cabad799e076ce4b183e09b66542f3c0ab6db8fc9ff7e",
+                                "certificate_subject": "globalbusinesspages.com",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 5000,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 5432,
+                                "transport": "tcp",
+                                "product": "PostgreSQL",
+                                "version": "12.14 - 12.22",
+                                "tags": [
+                                    "cloud",
+                                    "database",
+                                    "self-signed"
+                                ],
+                                "certificate_sha256": "6f77a7e21d264c0be45e44e56caed8aa4d9e904c9f893d75cdd1366d38116809",
+                                "certificate_subject": "gobal-business-pages",
+                                "certificate_issuer": "gobal-business-pages"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-19T20:16:26Z",
+            "last_checked": "2026-11-21T01:12:51Z",
             "observations": []
         },
         "threatfox": {

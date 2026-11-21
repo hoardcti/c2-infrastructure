@@ -199,11 +199,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-18T22:59:42Z",
-            "last_error": {
-                "occurred_at": "2026-11-13T06:02:13Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-21T01:21:36Z",
             "observations": [
                 {
                     "first_observed": "2026-10-18T22:59:42Z",
@@ -286,11 +282,89 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-21T01:21:36Z",
+                    "last_observed": "2026-11-21T01:21:36Z",
+                    "data": {
+                        "org": "GHOSTnet GmbH",
+                        "isp": "PacketsDecreaserNET Marc Fischer",
+                        "asn": "AS214243",
+                        "os": "Linux",
+                        "country_code": "DE",
+                        "hostnames": [
+                            "mtahosting",
+                            "node.free-vps.xyz",
+                            "panel.free-vps.xyz"
+                        ],
+                        "domains": [
+                            "free-vps.xyz",
+                            "mtahosting"
+                        ],
+                        "tags": [
+                            "database",
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "404 Not Found"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "free-vps.xyz",
+                                "jarm": "27d40d40d00040d00042d43d000000d2e61cae37a985f75ecafb81b33ca523",
+                                "certificate_sha256": "64dfc8d5327ddc4f69d2defd03bfe7977567d75de5e0362f87e3903a05eb5ca0",
+                                "certificate_subject": "panel.free-vps.xyz",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 3306,
+                                "transport": "tcp",
+                                "product": "MariaDB",
+                                "version": "10.11.14-MariaDB-0ubuntu0.24.04.1",
+                                "tags": [
+                                    "database"
+                                ]
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "Ncat http proxy",
+                                "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                                "certificate_sha256": "f92a6cb36c7c432c31bbe638c29d9712c13929e9211c1606389cf07919fe608a",
+                                "certificate_subject": "node.free-vps.xyz",
+                                "certificate_issuer": "YE1"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-19T20:16:26Z",
+            "last_checked": "2026-11-21T01:12:51Z",
             "observations": []
         },
         "threatfox": {

@@ -2,17 +2,17 @@
     "schema_version": 2,
     "ip": "104.153.209.123",
     "first_seen": "2026-11-06T14:51:56Z",
-    "last_seen": "2026-11-20T19:48:25Z",
+    "last_seen": "2026-11-21T01:12:44Z",
     "flags": [
         "sliver"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-13T21:21:16Z",
+            "last_checked": "2026-11-21T01:16:09Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T14:54:59Z",
-                    "last_observed": "2026-11-13T21:21:16Z",
+                    "last_observed": "2026-11-21T01:16:09Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-13T21:18:16Z",
+            "last_checked": "2026-11-21T01:13:06Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T14:52:08Z",
@@ -144,6 +144,76 @@
                             "CVE-2026-7210"
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-21T01:13:06Z",
+                    "last_observed": "2026-11-21T01:13:06Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            111,
+                            1080,
+                            2223,
+                            2224,
+                            2225,
+                            3306,
+                            4444,
+                            8000,
+                            8001,
+                            8002,
+                            8005,
+                            8008,
+                            8009,
+                            8023,
+                            8091,
+                            8190,
+                            8899,
+                            9000,
+                            9003,
+                            9004,
+                            9013,
+                            18101,
+                            18181,
+                            19090,
+                            31337
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:mariadb:mariadb:10.11.14-MariaDB-0ubuntu0.24.04.1",
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/a:python:python:3.12.3",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "c2",
+                            "database",
+                            "open-dir"
+                        ],
+                        "vulns": [
+                            "CVE-2009-2940",
+                            "CVE-2009-3720",
+                            "CVE-2020-29396",
+                            "CVE-2021-32052",
+                            "CVE-2023-27043",
+                            "CVE-2024-6232",
+                            "CVE-2024-7592",
+                            "CVE-2024-9287",
+                            "CVE-2025-12084",
+                            "CVE-2025-12781",
+                            "CVE-2025-13462",
+                            "CVE-2025-13836",
+                            "CVE-2025-13837",
+                            "CVE-2026-0864",
+                            "CVE-2026-15308",
+                            "CVE-2026-3087",
+                            "CVE-2026-3644",
+                            "CVE-2026-4519",
+                            "CVE-2026-6019",
+                            "CVE-2026-7210"
+                        ]
+                    }
                 }
             ]
         },
@@ -166,11 +236,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-13T21:22:34Z",
+            "last_checked": "2026-11-21T01:17:28Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T14:56:17Z",
-                    "last_observed": "2026-11-13T21:22:34Z",
+                    "last_observed": "2026-11-21T01:17:28Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS32875 wowrack.com",
@@ -183,6 +253,10 @@
         },
         "shodan": {
             "last_checked": "2026-11-13T21:26:34Z",
+            "last_error": {
+                "occurred_at": "2026-11-21T01:20:51Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-11-06T14:59:44Z",
@@ -471,16 +545,16 @@
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-19T20:16:26Z",
+            "last_checked": "2026-11-21T01:12:51Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-20T19:48:25Z",
+            "last_checked": "2026-11-21T01:12:44Z",
             "observations": [
                 {
                     "key": "2017604",
                     "first_observed": "2026-11-06T14:51:56Z",
-                    "last_observed": "2026-11-20T19:48:25Z",
+                    "last_observed": "2026-11-21T01:12:44Z",
                     "flags": [
                         "sliver"
                     ],
