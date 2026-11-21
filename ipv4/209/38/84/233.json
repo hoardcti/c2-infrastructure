@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-14T02:04:38Z",
+            "last_checked": "2026-11-21T09:25:55Z",
             "observations": [
                 {
                     "first_observed": "2026-10-30T22:51:42Z",
@@ -70,6 +70,27 @@
                         ],
                         "vulns": []
                     }
+                },
+                {
+                    "first_observed": "2026-11-21T09:25:55Z",
+                    "last_observed": "2026-11-21T09:25:55Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            8003,
+                            8008,
+                            8080
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:openbsd:openssh:10.2p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
                 }
             ]
         },
@@ -92,7 +113,7 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-14T02:08:54Z",
+            "last_checked": "2026-11-21T09:30:08Z",
             "observations": [
                 {
                     "first_observed": "2026-10-30T22:55:56Z",
@@ -104,11 +125,40 @@
                         "pulse_count": 0,
                         "pulses": []
                     }
+                },
+                {
+                    "first_observed": "2026-11-21T09:30:08Z",
+                    "last_observed": "2026-11-21T09:30:08Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "US",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "6afcc1f3c66fe5e7a611328d",
+                                "name": "Sliver - IOCs paquetes.xlsx 2026",
+                                "created": "2026-11-17T21:06:59.882Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "IOC",
+                                    "RENIC",
+                                    "malware",
+                                    "sliver"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "shodan": {
             "last_checked": "2026-11-14T02:12:19Z",
+            "last_error": {
+                "occurred_at": "2026-11-21T09:33:48Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-11-07T00:52:58Z",

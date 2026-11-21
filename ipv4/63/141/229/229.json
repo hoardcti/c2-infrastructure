@@ -527,11 +527,73 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-13T14:27:18Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-21T09:34:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-21T09:34:40Z",
+                    "last_observed": "2026-11-21T09:34:40Z",
+                    "data": {
+                        "org": "Nocix, LLC",
+                        "isp": "Nocix, LLC",
+                        "asn": "AS33387",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "pqc",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "pqc",
+                                    "self-signed"
+                                ],
+                                "jarm": "40d40d40d00000000043d43d00043d6aff5ab0f4fc31897186312c9e639319",
+                                "certificate_sha256": "ede8be8d2265b09cc3b3bf4b52578cbf9518eab53f914d33b1a938b4f8c80dc2",
+                                "certificate_subject": "mpmpc-win-beacon",
+                                "certificate_issuer": "mpmpc-win-beacon"
+                            },
+                            {
+                                "port": 4443,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8081,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8090,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 9443,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 10001,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-21T01:12:51Z",

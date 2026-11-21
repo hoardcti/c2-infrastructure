@@ -33,7 +33,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-14T02:04:30Z",
+            "last_checked": "2026-11-21T09:25:46Z",
             "observations": [
                 {
                     "first_observed": "2026-10-30T22:51:34Z",
@@ -59,7 +59,7 @@
                 },
                 {
                     "first_observed": "2026-11-14T02:04:30Z",
-                    "last_observed": "2026-11-14T02:04:30Z",
+                    "last_observed": "2026-11-21T09:25:46Z",
                     "data": {
                         "ports": [
                             22,
@@ -107,7 +107,7 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-14T02:08:36Z",
+            "last_checked": "2026-11-21T09:29:52Z",
             "observations": [
                 {
                     "first_observed": "2026-10-30T22:55:40Z",
@@ -119,11 +119,36 @@
                         "pulse_count": 0,
                         "pulses": []
                     }
+                },
+                {
+                    "first_observed": "2026-11-21T09:29:52Z",
+                    "last_observed": "2026-11-21T09:29:52Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "IR",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "6afcc1f3c66fe5e7a611328d",
+                                "name": "Sliver - IOCs paquetes.xlsx 2026",
+                                "created": "2026-11-17T21:06:59.882Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "IOC",
+                                    "RENIC",
+                                    "malware",
+                                    "sliver"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "shodan": {
-            "last_checked": "2026-11-14T02:12:03Z",
+            "last_checked": "2026-11-21T09:33:28Z",
             "observations": [
                 {
                     "first_observed": "2026-10-30T22:58:58Z",
@@ -283,6 +308,83 @@
                                 "certificate_sha256": "406e6ad89413435c3f40decc49b9fda347e91bea95e2426b553f6cd772b2e51c",
                                 "certificate_subject": "salceolatino.com",
                                 "certificate_organisation": "sophisticated rotate"
+                            },
+                            {
+                                "port": 8445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "a96fa5101dc5361770b52e1b94b6fd41d3cb472794ea27caddc47005e33a7e4f",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-21T09:33:28Z",
+                    "last_observed": "2026-11-21T09:33:28Z",
+                    "data": {
+                        "org": "Hetzner Online GmbH",
+                        "isp": "Hetzner Online GmbH",
+                        "asn": "AS212317",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "salceolatino.com",
+                            "static.219.211.78.5.clients.your-server.de",
+                            "www.salceolatino.com"
+                        ],
+                        "domains": [
+                            "salceolatino.com",
+                            "your-server.de"
+                        ],
+                        "tags": [
+                            "c2"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.18"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "jarm": "27d40d40d00040d00042d43d000000aa5feb68b57d31b6dc713b6917a988e3",
+                                "certificate_sha256": "a373fa7729abe0c0e94fa3285d61b4d9ba585eff722ff8726fd3eab0d39afe6b",
+                                "certificate_subject": "salceolatino.com",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 5353,
+                                "transport": "udp",
+                                "product": "mDNS"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "jarm": "27d40d40d00040d00042d43d000000aa5feb68b57d31b6dc713b6917a988e3",
+                                "certificate_sha256": "a373fa7729abe0c0e94fa3285d61b4d9ba585eff722ff8726fd3eab0d39afe6b",
+                                "certificate_subject": "salceolatino.com",
+                                "certificate_issuer": "YE1"
                             },
                             {
                                 "port": 8445,

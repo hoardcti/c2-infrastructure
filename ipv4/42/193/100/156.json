@@ -148,11 +148,66 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-13T14:26:52Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-21T09:34:14Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-21T09:34:14Z",
+                    "last_observed": "2026-11-21T09:34:14Z",
+                    "data": {
+                        "org": "Tencent cloud computing (Beijing) Co., Ltd.",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!",
+                                "jarm": "2ad2ad0002ad2ad00042d42d000000301510f56407964db9434a9bb0d4ee4a",
+                                "certificate_sha256": "6d8222172d34658323f86674e4dc8c9dd5260fe52c4ab6977d2615166d739f4c",
+                                "certificate_subject": "111.229.190.77",
+                                "certificate_issuer": "ZeroSSL RSA Domain Secure Site CA"
+                            },
+                            {
+                                "port": 18082,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 18085,
+                                "transport": "tcp",
+                                "http_title": "Welcome to nginx!"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-21T01:12:51Z",

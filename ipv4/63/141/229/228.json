@@ -298,11 +298,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-11-06T06:32:03Z",
-            "last_error": {
-                "occurred_at": "2026-11-13T14:27:16Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-21T09:34:38Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T06:32:03Z",
@@ -376,6 +372,58 @@
                             },
                             {
                                 "port": 10080,
+                                "transport": "tcp"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-21T09:34:38Z",
+                    "last_observed": "2026-11-21T09:34:38Z",
+                    "data": {
+                        "org": "Nocix, LLC",
+                        "isp": "Nocix, LLC",
+                        "asn": "AS33387",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "pqc",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "pqc",
+                                    "self-signed"
+                                ],
+                                "jarm": "40d40d40d00000000043d43d00043d6aff5ab0f4fc31897186312c9e639319",
+                                "certificate_sha256": "ede8be8d2265b09cc3b3bf4b52578cbf9518eab53f914d33b1a938b4f8c80dc2",
+                                "certificate_subject": "mpmpc-win-beacon",
+                                "certificate_issuer": "mpmpc-win-beacon"
+                            },
+                            {
+                                "port": 4433,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 4443,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8084,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8090,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 9443,
                                 "transport": "tcp"
                             }
                         ]

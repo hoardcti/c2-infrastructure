@@ -108,11 +108,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-22T15:06:48Z",
-            "last_error": {
-                "occurred_at": "2026-11-13T14:27:32Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-21T09:34:54Z",
             "observations": [
                 {
                     "first_observed": "2026-10-22T15:06:48Z",
@@ -128,6 +124,32 @@
                         "tags": [],
                         "vulns": [],
                         "services": [
+                            {
+                                "port": 8121,
+                                "transport": "tcp",
+                                "http_title": "Welcome to nginx!"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-21T09:34:54Z",
+                    "last_observed": "2026-11-21T09:34:54Z",
+                    "data": {
+                        "org": "CHINANET HUNAN PROVINCE NETWORK",
+                        "isp": "IDC, China Telecommunications Corporation",
+                        "asn": "AS23724",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 8082,
+                                "transport": "tcp"
+                            },
                             {
                                 "port": 8121,
                                 "transport": "tcp",
