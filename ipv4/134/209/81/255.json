@@ -353,6 +353,56 @@
         "urlhaus": {
             "last_checked": "2026-11-11T02:45:50Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-22T18:34:43Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-22T18:34:43Z",
+                    "last_observed": "2026-11-22T18:34:43Z",
+                    "data": {
+                        "as_owner": "DigitalOcean, LLC",
+                        "asn": 14061,
+                        "network": "134.209.0.0/16",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -12,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 36,
+                            "harmless": 54,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 2
+                        },
+                        "tags": [],
+                        "jarm": "2ad2ad0002ad2ad0002ad2ad2ad2ade1a3c0d7ca6ad8388057924be83dfc6a",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Guardpot",
+                                "title": "SSH brute-force login attempts",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 }
