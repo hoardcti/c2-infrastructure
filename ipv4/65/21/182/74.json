@@ -8,7 +8,7 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-16T20:10:52Z",
+            "last_checked": "2026-11-23T21:03:18Z",
             "observations": [
                 {
                     "first_observed": "2026-11-02T10:46:54Z",
@@ -52,7 +52,7 @@
                 },
                 {
                     "first_observed": "2026-11-16T20:10:52Z",
-                    "last_observed": "2026-11-16T20:10:52Z",
+                    "last_observed": "2026-11-23T21:03:18Z",
                     "data": {
                         "abuse_confidence_score": 2,
                         "total_reports": 1,
@@ -73,7 +73,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-16T20:07:56Z",
+            "last_checked": "2026-11-23T21:00:25Z",
             "observations": [
                 {
                     "first_observed": "2026-11-02T10:44:07Z",
@@ -126,6 +126,24 @@
                         ],
                         "vulns": []
                     }
+                },
+                {
+                    "first_observed": "2026-11-23T21:00:25Z",
+                    "last_observed": "2026-11-23T21:00:25Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443
+                        ],
+                        "hostnames": [
+                            "static.74.182.21.65.clients.your-server.de"
+                        ],
+                        "cpes": [],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": []
+                    }
                 }
             ]
         },
@@ -148,11 +166,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-16T20:12:10Z",
+            "last_checked": "2026-11-23T21:05:59Z",
             "observations": [
                 {
                     "first_observed": "2026-11-02T10:48:12Z",
-                    "last_observed": "2026-11-16T20:12:10Z",
+                    "last_observed": "2026-11-23T21:05:59Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS24940 hetzner online gmbh",
@@ -164,11 +182,47 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-16T20:16:10Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-23T21:08:36Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-23T21:08:36Z",
+                    "last_observed": "2026-11-23T21:08:36Z",
+                    "data": {
+                        "org": "Hetzner Online GmbH",
+                        "isp": "Hetzner Online GmbH",
+                        "asn": "AS24940",
+                        "os": null,
+                        "country_code": "FI",
+                        "hostnames": [
+                            "static.74.182.21.65.clients.your-server.de"
+                        ],
+                        "domains": [
+                            "your-server.de"
+                        ],
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "40d40d40d00000000043d40d40d43d684d61a135bd962c8dd9c541ddbaefa8",
+                                "certificate_sha256": "089a90ddf12569b98f2cb7070c444d287c1f09bc71ba0c8c4534df63624c999d",
+                                "certificate_subject": "65.21.182.74",
+                                "certificate_issuer": "65.21.182.74"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-23T08:44:48Z",
