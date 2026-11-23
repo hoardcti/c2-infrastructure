@@ -1527,11 +1527,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-10-31T02:16:38Z",
-            "last_error": {
-                "occurred_at": "2026-11-15T01:45:26Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-23T00:15:28Z",
             "observations": [
                 {
                     "first_observed": "2026-10-15T00:30:01Z",
@@ -1775,6 +1771,44 @@
                                 "certificate_sha256": "65e34dee29fb40f5488b735af843c6dad403dd04670d170b595c214a2a79720f",
                                 "certificate_subject": "shadowscan.local",
                                 "certificate_issuer": "shadowscan.local"
+                            },
+                            {
+                                "port": 9090,
+                                "transport": "tcp",
+                                "http_title": "l7ctl login"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-23T00:15:28Z",
+                    "last_observed": "2026-11-23T00:15:28Z",
+                    "data": {
+                        "org": "SWISSNET LLC",
+                        "isp": "SWISSNET LLC",
+                        "asn": "AS209373",
+                        "os": null,
+                        "country_code": "JP",
+                        "hostnames": [
+                            "bhj8s83dsg1g.server.swissnetwork.io"
+                        ],
+                        "domains": [
+                            "swissnetwork.io"
+                        ],
+                        "tags": [],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.2p1 Ubuntu 2ubuntu3.8"
+                            },
+                            {
+                                "port": 2345,
+                                "transport": "tcp",
+                                "product": "ELF Executable File",
+                                "version": "1"
                             },
                             {
                                 "port": 9090,
