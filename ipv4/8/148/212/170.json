@@ -2,13 +2,13 @@
     "schema_version": 2,
     "ip": "8.148.212.170",
     "first_seen": "2026-11-02T20:40:11Z",
-    "last_seen": "2026-11-23T21:00:11Z",
+    "last_seen": "2026-11-24T05:16:17Z",
     "flags": [
         "sliver"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-17T03:35:15Z",
+            "last_checked": "2026-11-24T05:19:28Z",
             "observations": [
                 {
                     "first_observed": "2026-11-02T20:45:22Z",
@@ -45,11 +45,29 @@
                         "country_code": "CN",
                         "hostnames": []
                     }
+                },
+                {
+                    "first_observed": "2026-11-24T05:19:28Z",
+                    "last_observed": "2026-11-24T05:19:28Z",
+                    "data": {
+                        "abuse_confidence_score": 1,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-11-08T19:13:55Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Aliyun Computing Co.LTD",
+                        "domain": "alibabacloud.com",
+                        "country_code": "CN",
+                        "hostnames": []
+                    }
                 }
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-17T03:32:20Z",
+            "last_checked": "2026-11-24T05:16:33Z",
             "observations": [
                 {
                     "first_observed": "2026-11-10T01:55:55Z",
@@ -74,7 +92,7 @@
                 },
                 {
                     "first_observed": "2026-11-17T03:32:20Z",
-                    "last_observed": "2026-11-17T03:32:20Z",
+                    "last_observed": "2026-11-24T05:16:33Z",
                     "data": {
                         "ports": [
                             22,
@@ -159,11 +177,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-17T03:36:33Z",
+            "last_checked": "2026-11-24T05:22:13Z",
             "observations": [
                 {
                     "first_observed": "2026-11-02T20:46:40Z",
-                    "last_observed": "2026-11-17T03:36:33Z",
+                    "last_observed": "2026-11-24T05:22:13Z",
                     "data": {
                         "reputation": 0,
                         "asn": "ASNone ",
@@ -175,7 +193,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-11-17T03:40:33Z",
+            "last_checked": "2026-11-24T05:24:46Z",
             "observations": [
                 {
                     "first_observed": "2026-11-02T20:50:40Z",
@@ -367,6 +385,130 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-24T05:24:46Z",
+                    "last_observed": "2026-11-24T05:24:46Z",
+                    "data": {
+                        "org": "Aliyun Computing Co.LTD",
+                        "isp": "Hangzhou Alibaba Advertising Co.,Ltd.",
+                        "asn": "AS37963",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [
+                            "2c.jcynl.xyz"
+                        ],
+                        "domains": [
+                            "jcynl.xyz"
+                        ],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [
+                            "CVE-2007-2768",
+                            "CVE-2008-3844",
+                            "CVE-2016-20012",
+                            "CVE-2019-16905",
+                            "CVE-2020-14145",
+                            "CVE-2020-15778",
+                            "CVE-2021-36368",
+                            "CVE-2021-41617",
+                            "CVE-2023-38408",
+                            "CVE-2023-48795",
+                            "CVE-2023-51385",
+                            "CVE-2023-51767",
+                            "CVE-2025-26465",
+                            "CVE-2025-32728",
+                            "CVE-2026-106552",
+                            "CVE-2026-106553",
+                            "CVE-2026-106555",
+                            "CVE-2026-106582",
+                            "CVE-2026-106583",
+                            "CVE-2026-106584",
+                            "CVE-2026-106585",
+                            "CVE-2026-106586",
+                            "CVE-2026-106587",
+                            "CVE-2026-123158",
+                            "CVE-2026-35385",
+                            "CVE-2026-35387",
+                            "CVE-2026-35388",
+                            "CVE-2026-35414",
+                            "CVE-2026-59995",
+                            "CVE-2026-59996",
+                            "CVE-2026-59997",
+                            "CVE-2026-59998",
+                            "CVE-2026-59999",
+                            "CVE-2026-60000",
+                            "CVE-2026-60001",
+                            "CVE-2026-60002",
+                            "CVE-2026-73281",
+                            "CVE-2026-73282",
+                            "CVE-2026-73283"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.0"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "OpenResty",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "OpenResty",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "27d40d40d00040d00042d43d000000e1ea2a807a629b496b664cf07ad7c08d",
+                                "certificate_sha256": "68f5c9f474dca5e93963f6c0ea047bd9dc76e96119a74ab00025c68bc71fea0c",
+                                "certificate_subject": "2c.jcynl.xyz",
+                                "certificate_issuer": "YE1"
+                            },
+                            {
+                                "port": 8090,
+                                "transport": "tcp",
+                                "http_title": "暂时无法访问"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "6ea8a8b7b259ba969ecbcc2d923b4dc3f657dcd4108471e662a43bc4e33f1726",
+                                "certificate_subject": "0.0.0.0"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "279d5d6756008a533bd7479b6df30bf2f7ea7ec60aac3fc467601e930a9456fb",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            },
+                            {
+                                "port": 47990,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            }
+                        ]
+                    }
                 }
             ]
         },
@@ -375,12 +517,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-23T21:00:11Z",
+            "last_checked": "2026-11-24T05:16:17Z",
             "observations": [
                 {
                     "key": "2011230",
                     "first_observed": "2026-11-02T20:40:11Z",
-                    "last_observed": "2026-11-23T21:00:11Z",
+                    "last_observed": "2026-11-24T05:16:17Z",
                     "flags": [
                         "sliver"
                     ],
