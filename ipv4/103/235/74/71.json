@@ -2,13 +2,13 @@
     "schema_version": 2,
     "ip": "103.235.74.71",
     "first_seen": "2026-11-17T12:54:58Z",
-    "last_seen": "2026-11-24T05:16:17Z",
+    "last_seen": "2026-11-24T17:16:18Z",
     "flags": [
         "sliver"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-17T12:57:58Z",
+            "last_checked": "2026-11-24T17:19:26Z",
             "observations": [
                 {
                     "first_observed": "2026-11-17T12:57:58Z",
@@ -27,11 +27,29 @@
                         "country_code": "ID",
                         "hostnames": []
                     }
+                },
+                {
+                    "first_observed": "2026-11-24T17:19:26Z",
+                    "last_observed": "2026-11-24T17:19:26Z",
+                    "data": {
+                        "abuse_confidence_score": 46,
+                        "total_reports": 37,
+                        "distinct_reporters": 24,
+                        "last_reported_at": "2026-11-07T12:49:08Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "PT Ikubaru Indonesia",
+                        "domain": "ikubaru.co.id",
+                        "country_code": "ID",
+                        "hostnames": []
+                    }
                 }
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-17T12:55:06Z",
+            "last_checked": "2026-11-24T17:16:33Z",
             "observations": [
                 {
                     "first_observed": "2026-11-17T12:55:06Z",
@@ -74,6 +92,78 @@
                             "CVE-2013-4365"
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-24T17:16:33Z",
+                    "last_observed": "2026-11-24T17:16:33Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            443,
+                            5985,
+                            8080,
+                            8090,
+                            8091,
+                            8888,
+                            8899
+                        ],
+                        "hostnames": [
+                            "103-235-74-71.indovm.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:apache:http_server:2.4.69",
+                            "cpe:/a:f5:nginx",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/a:php:php:8.3.36",
+                            "cpe:/a:python:python:3.12.3",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:debian:debian_linux"
+                        ],
+                        "tags": [
+                            "open-dir",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2007-3205",
+                            "CVE-2007-4723",
+                            "CVE-2009-0796",
+                            "CVE-2009-2299",
+                            "CVE-2009-2940",
+                            "CVE-2009-3720",
+                            "CVE-2011-1176",
+                            "CVE-2011-2688",
+                            "CVE-2012-3526",
+                            "CVE-2012-4001",
+                            "CVE-2012-4360",
+                            "CVE-2013-0941",
+                            "CVE-2013-0942",
+                            "CVE-2013-2220",
+                            "CVE-2013-2765",
+                            "CVE-2013-4365",
+                            "CVE-2020-29396",
+                            "CVE-2021-32052",
+                            "CVE-2023-27043",
+                            "CVE-2024-6232",
+                            "CVE-2024-7592",
+                            "CVE-2024-9287",
+                            "CVE-2025-12084",
+                            "CVE-2025-12781",
+                            "CVE-2025-13462",
+                            "CVE-2025-13836",
+                            "CVE-2025-13837",
+                            "CVE-2026-0864",
+                            "CVE-2026-106023",
+                            "CVE-2026-109163",
+                            "CVE-2026-119618",
+                            "CVE-2026-15308",
+                            "CVE-2026-3087",
+                            "CVE-2026-3644",
+                            "CVE-2026-4519",
+                            "CVE-2026-6019",
+                            "CVE-2026-7210"
+                        ]
+                    }
                 }
             ]
         },
@@ -96,7 +186,7 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-17T12:59:26Z",
+            "last_checked": "2026-11-24T17:20:45Z",
             "observations": [
                 {
                     "first_observed": "2026-11-17T12:59:26Z",
@@ -117,27 +207,195 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-24T17:20:45Z",
+                    "last_observed": "2026-11-24T17:20:45Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS135444 pt ikubaru indonesia",
+                        "country_code": "ID",
+                        "pulse_count": 2,
+                        "pulses": [
+                            {
+                                "id": "6adc2e596576e629ee390469",
+                                "name": "Malware Filter - Botnet List - 23-10-2026 (Part 1)",
+                                "created": "2026-10-24T04:04:41.422Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6b051a1ca42c8ce58b78f013",
+                                "name": "Twitter Feed - skocherhan - 23-11-2026",
+                                "created": "2026-11-24T05:01:16.66Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "Kimsuky",
+                                    "malware",
+                                    "phishing",
+                                    "ransomware"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-17T13:02:53Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-24T17:24:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-24T17:24:45Z",
+                    "last_observed": "2026-11-24T17:24:45Z",
+                    "data": {
+                        "org": "PT Ikubaru Indonesia",
+                        "isp": "PT Ikubaru Indonesia",
+                        "asn": "AS135444",
+                        "os": null,
+                        "country_code": "ID",
+                        "hostnames": [
+                            "103-235-74-71.indovm.com"
+                        ],
+                        "domains": [
+                            "indovm.com"
+                        ],
+                        "tags": [
+                            "c2",
+                            "open-dir",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2007-3205",
+                            "CVE-2007-4723",
+                            "CVE-2009-0796",
+                            "CVE-2009-2299",
+                            "CVE-2009-2940",
+                            "CVE-2009-3720",
+                            "CVE-2011-1176",
+                            "CVE-2011-2688",
+                            "CVE-2012-3526",
+                            "CVE-2012-4001",
+                            "CVE-2012-4360",
+                            "CVE-2013-0941",
+                            "CVE-2013-0942",
+                            "CVE-2013-2220",
+                            "CVE-2013-2765",
+                            "CVE-2013-4365",
+                            "CVE-2020-29396",
+                            "CVE-2021-32052",
+                            "CVE-2023-27043",
+                            "CVE-2024-6232",
+                            "CVE-2024-7592",
+                            "CVE-2024-9287",
+                            "CVE-2025-12084",
+                            "CVE-2025-12781",
+                            "CVE-2025-13462",
+                            "CVE-2025-13836",
+                            "CVE-2025-13837",
+                            "CVE-2026-0864",
+                            "CVE-2026-106023",
+                            "CVE-2026-109163",
+                            "CVE-2026-119618",
+                            "CVE-2026-15308",
+                            "CVE-2026-3087",
+                            "CVE-2026-3644",
+                            "CVE-2026-4519",
+                            "CVE-2026-6019",
+                            "CVE-2026-7210"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad0002ad2ad00042d42d000000ad9bf51cc3f5a1e29eecb81d0c7b06eb",
+                                "certificate_sha256": "f30f314d41c94487928439280e3a42f26562410c919f05eb6858c3a0ea6b46d8",
+                                "certificate_subject": "cdn-static-01",
+                                "certificate_issuer": "cdn-static-01"
+                            },
+                            {
+                                "port": 5985,
+                                "transport": "tcp",
+                                "product": "WinRM",
+                                "http_title": "Not Found"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "SimpleHTTPServer",
+                                "version": "0.6",
+                                "tags": [
+                                    "open-dir"
+                                ],
+                                "http_title": "Directory listing for /"
+                            },
+                            {
+                                "port": 8090,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8091,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8181,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8888,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8899,
+                                "transport": "tcp",
+                                "tags": [
+                                    "open-dir"
+                                ],
+                                "http_title": "Directory listing for /"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "68ed5867ae3b35ef271eb005de9d014445350c8a985b8be2d614bb051274a562",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-23T21:00:18Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-24T05:16:17Z",
+            "last_checked": "2026-11-24T17:16:18Z",
             "observations": [
                 {
                     "key": "2031878",
                     "first_observed": "2026-11-17T12:54:58Z",
-                    "last_observed": "2026-11-24T05:16:17Z",
+                    "last_observed": "2026-11-24T17:16:18Z",
                     "flags": [
                         "sliver"
                     ],
@@ -159,7 +417,7 @@
             ]
         },
         "urlhaus": {
-            "last_checked": "2026-11-17T12:57:06Z",
+            "last_checked": "2026-11-24T17:18:38Z",
             "observations": []
         },
         "virustotal": {

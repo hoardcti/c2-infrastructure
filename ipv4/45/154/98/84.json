@@ -178,12 +178,12 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-11-23T08:44:48Z",
+            "last_checked": "2026-11-24T17:16:26Z",
             "observations": [
                 {
                     "key": "45.154.98.0/24",
                     "first_observed": "2026-10-01T12:19:59Z",
-                    "last_observed": "2026-11-23T08:44:48Z",
+                    "last_observed": "2026-11-24T17:16:26Z",
                     "data": {
                         "cidr": "45.154.98.0/24",
                         "sblid": "SBL687510",
@@ -216,6 +216,86 @@
         "urlhaus": {
             "last_checked": "2026-11-12T01:27:02Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-24T17:28:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-24T17:28:31Z",
+                    "last_observed": "2026-11-24T17:28:31Z",
+                    "data": {
+                        "as_owner": "1337 Services GmbH",
+                        "asn": 210558,
+                        "network": "45.154.98.0/24",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 6,
+                            "suspicious": 1,
+                            "undetected": 33,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Forcepoint ThreatSeeker",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "jarm": "15d3fd16d29d29d00042d43d000000fe02290512647416dcf0a400ccbc0b6b",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Cluster25",
+                                "title": "Activity related to ASYNCRAT",
+                                "severity": "high"
+                            },
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 }

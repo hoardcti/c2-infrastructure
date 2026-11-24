@@ -1,0 +1,249 @@
+{
+    "schema_version": 2,
+    "ip": "175.24.232.135",
+    "first_seen": "2026-11-24T17:16:18Z",
+    "last_seen": "2026-11-24T17:16:18Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-24T17:19:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-24T17:19:20Z",
+                    "last_observed": "2026-11-24T17:19:20Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": "2025-08-27T00:20:53Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Tencent cloud computing (Beijing) Co., Ltd.",
+                        "domain": "tencentcloud.com",
+                        "country_code": "CN",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-24T17:16:30Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-24T17:16:30Z",
+                    "last_observed": "2026-11-24T17:16:30Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            123,
+                            443,
+                            2022,
+                            7443
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:ntp:ntp:3"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-24T17:16:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-24T17:16:27Z",
+                    "last_observed": "2026-11-24T17:16:27Z",
+                    "data": {
+                        "asn": "AS45090",
+                        "as_name": "Shenzhen Tencent Computer Systems Company Limited",
+                        "as_domain": "tencent.com",
+                        "country_code": "CN",
+                        "country": "China",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-24T17:20:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-24T17:20:39Z",
+                    "last_observed": "2026-11-24T17:20:39Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS45090 shenzhen tencent computer systems company limited",
+                        "country_code": "CN",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-24T17:24:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-24T17:24:39Z",
+                    "last_observed": "2026-11-24T17:24:39Z",
+                    "data": {
+                        "org": "Tencent cloud computing (Beijing) Co., Ltd.",
+                        "isp": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": "AS45090",
+                        "os": null,
+                        "country_code": "CN",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "cloud"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "网站已关闭"
+                            },
+                            {
+                                "port": 123,
+                                "transport": "udp",
+                                "product": "ntpd",
+                                "version": "3",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 2022,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 7443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ],
+                                "http_title": "网站已关闭"
+                            },
+                            {
+                                "port": 10443,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2",
+                                    "cloud"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "d8251efaf0668507dfdcc5953919eea2cf72579e5a8e40501cc6a4909dd9041f",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-24T17:16:25Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-24T17:16:18Z",
+            "observations": [
+                {
+                    "key": "2048502",
+                    "first_observed": "2026-11-24T17:16:18Z",
+                    "last_observed": "2026-11-24T17:16:18Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "175.24.232.135:10443",
+                        "port": 10443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-24T09:43:27Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-24T17:18:32Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-24T17:27:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-24T17:27:16Z",
+                    "last_observed": "2026-11-24T17:27:16Z",
+                    "data": {
+                        "as_owner": "Shenzhen Tencent Computer Systems Company Limited",
+                        "asn": 45090,
+                        "network": "175.24.0.0/16",
+                        "country": "CN",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
