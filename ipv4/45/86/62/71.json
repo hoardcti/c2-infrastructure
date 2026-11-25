@@ -1,0 +1,266 @@
+{
+    "schema_version": 2,
+    "ip": "45.86.62.71",
+    "first_seen": "2026-11-25T12:21:13Z",
+    "last_seen": "2026-11-25T12:21:13Z",
+    "flags": [
+        "meterpreter"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-25T12:24:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T12:24:13Z",
+                    "last_observed": "2026-11-25T12:24:13Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "UOWH LLC",
+                        "domain": "uowh.net",
+                        "country_code": "NL",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-25T12:21:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T12:21:22Z",
+                    "last_observed": "2026-11-25T12:21:22Z",
+                    "data": {
+                        "ports": [
+                            135,
+                            445,
+                            3389,
+                            3790
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:f5:nginx"
+                        ],
+                        "tags": [
+                            "c2",
+                            "eol-os",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-25T12:21:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T12:21:20Z",
+                    "last_observed": "2026-11-25T12:21:20Z",
+                    "data": {
+                        "asn": "AS212171",
+                        "as_name": "Local NCC Ltd.",
+                        "as_domain": "byoip.ru",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-25T12:25:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T12:25:31Z",
+                    "last_observed": "2026-11-25T12:25:31Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS35913 dedipath",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-25T12:29:13Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T12:29:13Z",
+                    "last_observed": "2026-11-25T12:29:13Z",
+                    "data": {
+                        "org": "UOWH LLC",
+                        "isp": "Local-as Local NCC Ltd.",
+                        "asn": "AS212171",
+                        "os": null,
+                        "country_code": "GB",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "eol-os",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2020-0796"
+                        ],
+                        "services": [
+                            {
+                                "port": 135,
+                                "transport": "tcp",
+                                "product": "Microsoft RPC Endpoint Mapper"
+                            },
+                            {
+                                "port": 445,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 3389,
+                                "transport": "tcp",
+                                "product": "Remote Desktop Protocol",
+                                "version": "10.0.19041",
+                                "tags": [
+                                    "eol-os",
+                                    "self-signed"
+                                ],
+                                "jarm": "14d14d16d14d14d08c14d14d14d14dfd9c9d14e4f4f67f94f0359f8b28f532",
+                                "certificate_sha256": "21a6efa337bdb6234f50107780adff88977b00e0aabe7ca4c98d79eaefe0135b",
+                                "certificate_subject": "DESKTOP-TCRDU4C",
+                                "certificate_issuer": "DESKTOP-TCRDU4C"
+                            },
+                            {
+                                "port": 3790,
+                                "transport": "tcp",
+                                "product": "Metasploit",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "http_title": "Metasploit",
+                                "jarm": "29d29d00029d29d00042d42d00000000f78d2dc0ce6e5bbc5b8149a4872356",
+                                "certificate_sha256": "831fee0c2cddd79dcfb73dd73f907bf17003bfcb1b45395bf918f736c7a067d0",
+                                "certificate_subject": "localhost",
+                                "certificate_organisation": "Rapid7",
+                                "certificate_issuer": "MetasploitSelfSignedCA"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-25T12:21:20Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-25T12:21:13Z",
+            "observations": [
+                {
+                    "key": "2051117",
+                    "first_observed": "2026-11-25T12:21:13Z",
+                    "last_observed": "2026-11-25T12:21:13Z",
+                    "flags": [
+                        "meterpreter"
+                    ],
+                    "data": {
+                        "ioc": "45.86.62.71:3790",
+                        "port": 3790,
+                        "threat_type": "botnet_cc",
+                        "malware": "Meterpreter",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.meterpreter",
+                        "confidence_level": 75,
+                        "first_seen": "2026-11-25T10:18:25Z",
+                        "reference": null,
+                        "tags": [
+                            "Meterpreter",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-25T12:23:22Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-25T12:31:24Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T12:31:24Z",
+                    "last_observed": "2026-11-25T12:31:24Z",
+                    "data": {
+                        "as_owner": "Local NCC Ltd.",
+                        "asn": 212171,
+                        "network": "45.86.62.0/23",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 2,
+                            "undetected": 34,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Cluster25",
+                                "title": "Activity related to METASPLOIT",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

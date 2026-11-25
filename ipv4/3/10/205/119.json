@@ -1,0 +1,165 @@
+{
+    "schema_version": 2,
+    "ip": "3.10.205.119",
+    "first_seen": "2026-11-25T12:21:13Z",
+    "last_seen": "2026-11-25T12:21:13Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-25T12:24:11Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T12:24:11Z",
+                    "last_observed": "2026-11-25T12:24:11Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Amazon Data Services UK",
+                        "domain": "amazon.com",
+                        "country_code": "GB",
+                        "hostnames": [
+                            "ec2-3-10-205-119.eu-west-2.compute.amazonaws.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-25T12:21:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T12:21:21Z",
+                    "last_observed": "2026-11-25T12:21:21Z",
+                    "data": {
+                        "ports": [
+                            443
+                        ],
+                        "hostnames": [
+                            "ec2-3-10-205-119.eu-west-2.compute.amazonaws.com"
+                        ],
+                        "cpes": [],
+                        "tags": [
+                            "cloud",
+                            "mptcp",
+                            "pqc"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-25T12:21:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T12:21:20Z",
+                    "last_observed": "2026-11-25T12:21:20Z",
+                    "data": {
+                        "asn": "AS16509",
+                        "as_name": "Amazon.com, Inc.",
+                        "as_domain": "amazon.com",
+                        "country_code": "GB",
+                        "country": "United Kingdom",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-25T12:25:29Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T12:25:29Z",
+                    "last_observed": "2026-11-25T12:25:29Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS16509 amazon.com inc",
+                        "country_code": "GB",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-25T12:29:11Z",
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-25T12:21:20Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-25T12:21:13Z",
+            "observations": [
+                {
+                    "key": "2051076",
+                    "first_observed": "2026-11-25T12:21:13Z",
+                    "last_observed": "2026-11-25T12:21:13Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "3.10.205.119:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-25T10:18:37Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-25T12:23:20Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-25T12:31:09Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T12:31:09Z",
+                    "last_observed": "2026-11-25T12:31:09Z",
+                    "data": {
+                        "as_owner": "Amazon.com, Inc.",
+                        "asn": 16509,
+                        "network": "3.8.0.0/13",
+                        "country": "GB",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 0,
+                            "undetected": 92,
+                            "harmless": 0,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

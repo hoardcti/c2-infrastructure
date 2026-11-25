@@ -1,0 +1,164 @@
+{
+    "schema_version": 2,
+    "ip": "111.91.19.85",
+    "first_seen": "2026-11-25T12:21:13Z",
+    "last_seen": "2026-11-25T12:21:13Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-25T12:24:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T12:24:15Z",
+                    "last_observed": "2026-11-25T12:24:15Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Huawei-Cloud-SG",
+                        "domain": "huawei.com",
+                        "country_code": "SG",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-25T12:21:22Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-25T12:21:20Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T12:21:20Z",
+                    "last_observed": "2026-11-25T12:21:20Z",
+                    "data": {
+                        "asn": "AS136907",
+                        "as_name": "HUAWEI CLOUDS",
+                        "as_domain": "huaweicloud.com",
+                        "country_code": "SG",
+                        "country": "Singapore",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-25T12:25:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T12:25:33Z",
+                    "last_observed": "2026-11-25T12:25:33Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS38457 honesty net solution",
+                        "country_code": "IN",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-25T12:29:15Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-25T12:21:20Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-25T12:21:13Z",
+            "observations": [
+                {
+                    "key": "2050393",
+                    "first_observed": "2026-11-25T12:21:13Z",
+                    "last_observed": "2026-11-25T12:21:13Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "111.91.19.85:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-25T06:24:14Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-25T12:23:24Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-25T12:31:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T12:31:39Z",
+                    "last_observed": "2026-11-25T12:31:39Z",
+                    "data": {
+                        "as_owner": "HUAWEI CLOUDS",
+                        "asn": 136907,
+                        "network": "111.91.0.0/17",
+                        "country": "SG",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Hunt.io Intelligence",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "29d29d00000000008c43d43d00043dabadbb43f9614a00c843a4ecd074ab81",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

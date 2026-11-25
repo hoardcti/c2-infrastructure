@@ -604,6 +604,71 @@
         "urlhaus": {
             "last_checked": "2026-11-12T18:02:54Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-25T12:34:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T12:34:39Z",
+                    "last_observed": "2026-11-25T12:34:39Z",
+                    "data": {
+                        "as_owner": "Hangzhou Alibaba Advertising Co.,Ltd.",
+                        "asn": 37963,
+                        "network": "47.96.0.0/12",
+                        "country": "CN",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": 2,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 3,
+                            "undetected": 34,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Certego",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Guardpot",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": -2
+                        },
+                        "tags": [],
+                        "jarm": "29d29d00029d29d21c29d29d29d29d4e2288047286426ce53420cd83dff40f",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Guardpot",
+                                "title": "SSH brute-force login attempts",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 }
