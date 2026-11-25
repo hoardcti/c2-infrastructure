@@ -2,13 +2,13 @@
     "schema_version": 2,
     "ip": "61.220.133.191",
     "first_seen": "2026-11-03T10:36:50Z",
-    "last_seen": "2026-11-24T17:16:18Z",
+    "last_seen": "2026-11-25T02:03:52Z",
     "flags": [
         "sliver"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-17T21:39:37Z",
+            "last_checked": "2026-11-25T02:06:53Z",
             "observations": [
                 {
                     "first_observed": "2026-11-03T10:39:47Z",
@@ -45,11 +45,29 @@
                         "country_code": "TW",
                         "hostnames": []
                     }
+                },
+                {
+                    "first_observed": "2026-11-25T02:06:53Z",
+                    "last_observed": "2026-11-25T02:06:53Z",
+                    "data": {
+                        "abuse_confidence_score": 1,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-11-08T19:12:44Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Fixed Line ISP",
+                        "isp": "Data Communication Business Group,",
+                        "domain": "cht.com.tw",
+                        "country_code": "TW",
+                        "hostnames": []
+                    }
                 }
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-17T21:36:48Z",
+            "last_checked": "2026-11-25T02:04:02Z",
             "observations": [
                 {
                     "first_observed": "2026-11-03T10:36:59Z",
@@ -144,6 +162,35 @@
                             "CVE-2025-23419"
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-25T02:04:02Z",
+                    "last_observed": "2026-11-25T02:04:02Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            137,
+                            443,
+                            1080
+                        ],
+                        "hostnames": [
+                            "61-220-133-191.hinet-ip.hinet.net"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.24.0",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
                 }
             ]
         },
@@ -166,11 +213,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-17T21:40:56Z",
+            "last_checked": "2026-11-25T02:08:10Z",
             "observations": [
                 {
                     "first_observed": "2026-11-03T10:41:06Z",
-                    "last_observed": "2026-11-17T21:40:56Z",
+                    "last_observed": "2026-11-25T02:08:10Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS3462 data communication business group",
@@ -182,23 +229,88 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-17T21:44:56Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-25T02:11:29Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T02:11:29Z",
+                    "last_observed": "2026-11-25T02:11:29Z",
+                    "data": {
+                        "org": "Data Communication Business Group,",
+                        "isp": "Data Communication Business Group",
+                        "asn": "AS3462",
+                        "os": "Ubuntu",
+                        "country_code": "TW",
+                        "hostnames": [
+                            "61-220-133-191.hinet-ip.hinet.net",
+                            "ts.petpharmbio.com",
+                            "ts.petpharmbio.com.tw"
+                        ],
+                        "domains": [
+                            "hinet.net",
+                            "petpharmbio.com",
+                            "petpharmbio.com.tw"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 137,
+                                "transport": "udp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ]
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp",
+                                "jarm": "40d40d40d0000001dc43d43d00043d204204071741c36579e355f830d285a5",
+                                "certificate_sha256": "65edd5185dfe68656cef8158e7f0ad4be7af6290e8d35edee306b586b27ad243",
+                                "certificate_subject": "ts.petpharmbio.com.tw",
+                                "certificate_issuer": "YE1"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-24T17:16:25Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-24T17:16:18Z",
+            "last_checked": "2026-11-25T02:03:52Z",
             "observations": [
                 {
                     "key": "2011416",
                     "first_observed": "2026-11-03T10:36:50Z",
-                    "last_observed": "2026-11-24T17:16:18Z",
+                    "last_observed": "2026-11-25T02:03:52Z",
                     "flags": [
                         "sliver"
                     ],

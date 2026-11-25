@@ -8,11 +8,11 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-17T21:39:39Z",
+            "last_checked": "2026-11-25T02:06:55Z",
             "observations": [
                 {
                     "first_observed": "2026-11-03T10:39:49Z",
-                    "last_observed": "2026-11-17T21:39:39Z",
+                    "last_observed": "2026-11-25T02:06:55Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -33,7 +33,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-17T21:36:49Z",
+            "last_checked": "2026-11-25T02:04:03Z",
             "observations": [
                 {
                     "first_observed": "2026-11-03T10:37:00Z",
@@ -94,6 +94,36 @@
                             "CVE-2019-8331"
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-25T02:04:03Z",
+                    "last_observed": "2026-11-25T02:04:03Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443,
+                            993
+                        ],
+                        "hostnames": [
+                            "server170-5.web-hosting.com",
+                            "web-hosting.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:getbootstrap:bootstrap:3.3.7",
+                            "cpe:/a:litespeedtech:litespeed_web_server"
+                        ],
+                        "tags": [
+                            "pqc"
+                        ],
+                        "vulns": [
+                            "CVE-2016-10735",
+                            "CVE-2018-14040",
+                            "CVE-2018-14042",
+                            "CVE-2018-20676",
+                            "CVE-2018-20677",
+                            "CVE-2019-8331"
+                        ]
+                    }
                 }
             ]
         },
@@ -116,11 +146,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-17T21:40:58Z",
+            "last_checked": "2026-11-25T02:08:12Z",
             "observations": [
                 {
                     "first_observed": "2026-11-03T10:41:08Z",
-                    "last_observed": "2026-11-17T21:40:58Z",
+                    "last_observed": "2026-11-25T02:08:12Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS22612 namecheap  inc.",
@@ -157,11 +187,76 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-17T21:44:58Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-25T02:11:31Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T02:11:31Z",
+                    "last_observed": "2026-11-25T02:11:31Z",
+                    "data": {
+                        "org": "Namecheap, Inc.",
+                        "isp": "Namecheap, Inc.",
+                        "asn": "AS22612",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "server170-5.web-hosting.com",
+                            "web-hosting.com"
+                        ],
+                        "domains": [
+                            "web-hosting.com"
+                        ],
+                        "tags": [
+                            "pqc"
+                        ],
+                        "vulns": [
+                            "CVE-2016-10735",
+                            "CVE-2018-14040",
+                            "CVE-2018-14042",
+                            "CVE-2018-20676",
+                            "CVE-2018-20677",
+                            "CVE-2019-8331"
+                        ],
+                        "services": [
+                            {
+                                "port": 21,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 53,
+                                "transport": "udp",
+                                "product": "ISC BIND"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "LiteSpeed httpd",
+                                "http_title": "Unauthorized Access"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "LiteSpeed httpd",
+                                "tags": [
+                                    "pqc"
+                                ],
+                                "http_title": "Unauthorized Access",
+                                "jarm": "29d29d00029d00000000043d0000000a810ad7c5fcec55926b593135a17a1b",
+                                "certificate_sha256": "2edc4befb8331480d72c9b51ed992d005f2be22eb6fb6859739e59af821962b2",
+                                "certificate_subject": "*.web-hosting.com",
+                                "certificate_issuer": "SSL.com TLS Issuing RSA CA R1"
+                            },
+                            {
+                                "port": 993,
+                                "transport": "tcp",
+                                "jarm": "00000000000000000000000000000000000000000000000000000000000000",
+                                "certificate_sha256": "2edc4befb8331480d72c9b51ed992d005f2be22eb6fb6859739e59af821962b2",
+                                "certificate_subject": "*.web-hosting.com",
+                                "certificate_issuer": "SSL.com TLS Issuing RSA CA R1"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-24T17:16:25Z",
