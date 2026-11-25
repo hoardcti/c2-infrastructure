@@ -8,11 +8,11 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-18T21:15:23Z",
+            "last_checked": "2026-11-25T22:17:05Z",
             "observations": [
                 {
                     "first_observed": "2026-11-18T21:15:23Z",
-                    "last_observed": "2026-11-18T21:15:23Z",
+                    "last_observed": "2026-11-25T22:17:05Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -33,7 +33,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-18T21:12:30Z",
+            "last_checked": "2026-11-25T22:14:16Z",
             "observations": [
                 {
                     "first_observed": "2026-11-18T21:12:30Z",
@@ -48,6 +48,35 @@
                         ],
                         "cpes": [
                             "cpe:/a:f5:nginx:1.22.1",
+                            "cpe:/a:openbsd:openssh:9.2p1",
+                            "cpe:/o:debian:debian_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                },
+                {
+                    "first_observed": "2026-11-25T22:14:16Z",
+                    "last_observed": "2026-11-25T22:14:16Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            443
+                        ],
+                        "hostnames": [
+                            "114.66.125.89.nl217.servers.guru",
+                            "dnsupdatezone.net"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.22.1",
+                            "cpe:/a:helpsystems:cobalt_strike",
                             "cpe:/a:openbsd:openssh:9.2p1",
                             "cpe:/o:debian:debian_linux",
                             "cpe:/o:linux:linux_kernel"
@@ -82,11 +111,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-18T21:16:41Z",
+            "last_checked": "2026-11-25T22:18:23Z",
             "observations": [
                 {
                     "first_observed": "2026-11-18T21:16:41Z",
-                    "last_observed": "2026-11-18T21:16:41Z",
+                    "last_observed": "2026-11-25T22:18:23Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS25441 imagine communications group limited",
@@ -99,6 +128,10 @@
         },
         "shodan": {
             "last_checked": "2026-11-18T21:20:41Z",
+            "last_error": {
+                "occurred_at": "2026-11-25T22:22:23Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
             "observations": [
                 {
                     "first_observed": "2026-11-18T21:20:41Z",
@@ -190,7 +223,7 @@
             ]
         },
         "urlhaus": {
-            "last_checked": "2026-11-18T21:14:30Z",
+            "last_checked": "2026-11-25T22:16:17Z",
             "observations": []
         },
         "virustotal": {

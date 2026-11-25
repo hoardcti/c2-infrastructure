@@ -120,7 +120,7 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-11-24T17:16:26Z",
+            "last_checked": "2026-11-25T22:14:15Z",
             "observations": []
         },
         "threatfox": {
@@ -147,6 +147,73 @@
         "urlhaus": {
             "last_checked": "2026-11-12T23:33:06Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-25T22:27:04Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T22:27:04Z",
+                    "last_observed": "2026-11-25T22:27:04Z",
+                    "data": {
+                        "as_owner": "RoyaleHosting BV",
+                        "asn": 212477,
+                        "network": "78.17.70.0/23",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 2,
+                            "undetected": 36,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "29d3fd00029d29d21c42d43d00041df61f6b5fa6973e9fa14c8155669c6633",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 }

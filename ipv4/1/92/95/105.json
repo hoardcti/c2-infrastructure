@@ -115,7 +115,7 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-11-24T17:16:26Z",
+            "last_checked": "2026-11-25T22:14:15Z",
             "observations": []
         },
         "threatfox": {
@@ -142,6 +142,70 @@
         "urlhaus": {
             "last_checked": "2026-11-12T18:03:10Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-25T22:24:49Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T22:24:49Z",
+                    "last_observed": "2026-11-25T22:24:49Z",
+                    "data": {
+                        "as_owner": "Huawei Cloud Service data center",
+                        "asn": 55990,
+                        "network": "1.92.0.0/16",
+                        "country": "CN",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -1,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 1,
+                            "undetected": 36,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "Cluster25",
+                                "title": "Activity related to COBALTSTRIKE",
+                                "severity": "high"
+                            },
+                            {
+                                "source": "Hunt.io Intelligence",
+                                "title": "Malicious activity",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 }

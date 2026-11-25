@@ -132,7 +132,7 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-11-24T17:16:26Z",
+            "last_checked": "2026-11-25T22:14:15Z",
             "observations": [
                 {
                     "key": "217.145.226.0/23",
@@ -162,6 +162,81 @@
                     "data": {
                         "firstSeen": "2026-05-01T00:00:00",
                         "login": "http://217.145.227.150/stealer/public/login.php"
+                    }
+                }
+            ]
+        },
+        "virustotal": {
+            "last_checked": "2026-11-25T22:27:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-25T22:27:34Z",
+                    "last_observed": "2026-11-25T22:27:34Z",
+                    "data": {
+                        "as_owner": "ALINDA LLC",
+                        "asn": 209946,
+                        "network": "217.145.226.0/23",
+                        "country": "RU",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 6,
+                            "suspicious": 1,
+                            "undetected": 33,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "CyRadar",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Forcepoint ThreatSeeker",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "phishing"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "jarm": "2ad2ad16d2ad2ad00042d42d00000061256d32ed7779c14686ad100544dc8d",
+                        "crowdsourced_context": [
+                            {
+                                "source": "ViriBack",
+                                "title": "CnC Panel",
+                                "severity": "high"
+                            }
+                        ]
                     }
                 }
             ]

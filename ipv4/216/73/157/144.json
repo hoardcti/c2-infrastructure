@@ -8,11 +8,11 @@
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-18T21:15:26Z",
+            "last_checked": "2026-11-25T22:17:09Z",
             "observations": [
                 {
                     "first_observed": "2026-11-18T21:15:26Z",
-                    "last_observed": "2026-11-18T21:15:26Z",
+                    "last_observed": "2026-11-25T22:17:09Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -33,7 +33,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-18T21:12:32Z",
+            "last_checked": "2026-11-25T22:14:18Z",
             "observations": [
                 {
                     "first_observed": "2026-11-18T21:12:32Z",
@@ -51,6 +51,37 @@
                         ],
                         "tags": [],
                         "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-11-25T22:14:18Z",
+                    "last_observed": "2026-11-25T22:14:18Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            443
+                        ],
+                        "hostnames": [
+                            "144.157.73.216.in-addr.arpa"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.18.0",
+                            "cpe:/a:microsoft:internet_information_services:10.0",
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel",
+                            "cpe:/o:microsoft:windows"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
                     }
                 }
             ]
@@ -74,11 +105,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-18T21:16:45Z",
+            "last_checked": "2026-11-25T22:19:03Z",
             "observations": [
                 {
                     "first_observed": "2026-11-18T21:16:45Z",
-                    "last_observed": "2026-11-18T21:16:45Z",
+                    "last_observed": "2026-11-25T22:19:03Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS1239 sprint",
@@ -90,7 +121,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-11-18T21:20:45Z",
+            "last_checked": "2026-11-25T22:22:27Z",
             "observations": [
                 {
                     "first_observed": "2026-11-18T21:20:45Z",
@@ -140,6 +171,56 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-25T22:22:27Z",
+                    "last_observed": "2026-11-25T22:22:27Z",
+                    "data": {
+                        "org": "EXTRAVM LLC",
+                        "isp": "EVM - EXTRAVM LLC",
+                        "asn": "AS53724",
+                        "os": "Windows",
+                        "country_code": "US",
+                        "hostnames": [
+                            "144.157.73.216.in-addr.arpa"
+                        ],
+                        "domains": [
+                            "216.in-addr.arpa"
+                        ],
+                        "tags": [
+                            "eol-product"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.18"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "Welcome to nginx!"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "Microsoft IIS httpd",
+                                "version": "10.0"
+                            }
+                        ]
+                    }
                 }
             ]
         },
@@ -175,7 +256,7 @@
             ]
         },
         "urlhaus": {
-            "last_checked": "2026-11-18T21:14:34Z",
+            "last_checked": "2026-11-25T22:16:21Z",
             "observations": []
         },
         "virustotal": {
