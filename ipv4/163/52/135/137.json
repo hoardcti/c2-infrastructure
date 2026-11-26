@@ -1,0 +1,288 @@
+{
+    "schema_version": 2,
+    "ip": "163.52.135.137",
+    "first_seen": "2026-11-26T04:46:54Z",
+    "last_seen": "2026-11-26T04:46:54Z",
+    "flags": [
+        "sliver"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-26T04:49:49Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T04:49:49Z",
+                    "last_observed": "2026-11-26T04:49:49Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "CV Griya Cloud Server",
+                        "domain": "griyacloud.com",
+                        "country_code": "ID",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-26T04:47:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T04:47:01Z",
+                    "last_observed": "2026-11-26T04:47:01Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            443,
+                            7878
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:encode:uvicorn",
+                            "cpe:/a:f5:nginx:1.18.0",
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/a:python:python",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2021-23017",
+                            "CVE-2021-3618",
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-26T04:47:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T04:47:01Z",
+                    "last_observed": "2026-11-26T04:47:01Z",
+                    "data": {
+                        "asn": "AS154896",
+                        "as_name": "CV Griya Cloud Server",
+                        "as_domain": "griyacloud.com",
+                        "country_code": "ID",
+                        "country": "Indonesia",
+                        "continent_code": "AS",
+                        "continent": "Asia"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-26T04:51:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T04:51:07Z",
+                    "last_observed": "2026-11-26T04:51:07Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-26T04:55:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T04:55:07Z",
+                    "last_observed": "2026-11-26T04:55:07Z",
+                    "data": {
+                        "org": "CV Griya Cloud Server",
+                        "isp": "CV Griya Cloud Server",
+                        "asn": "AS154896",
+                        "os": "Linux",
+                        "country_code": "AU",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "eol-product",
+                            "open-dir",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2009-2940",
+                            "CVE-2009-3720",
+                            "CVE-2020-29396",
+                            "CVE-2021-23017",
+                            "CVE-2021-32052",
+                            "CVE-2021-3618",
+                            "CVE-2023-27043",
+                            "CVE-2023-36632",
+                            "CVE-2023-40217",
+                            "CVE-2023-44487",
+                            "CVE-2024-6232",
+                            "CVE-2024-7592",
+                            "CVE-2024-9287",
+                            "CVE-2025-12084",
+                            "CVE-2025-12781",
+                            "CVE-2025-13462",
+                            "CVE-2025-13836",
+                            "CVE-2025-13837",
+                            "CVE-2025-23419",
+                            "CVE-2026-0864",
+                            "CVE-2026-15308",
+                            "CVE-2026-3087",
+                            "CVE-2026-3644",
+                            "CVE-2026-4519",
+                            "CVE-2026-6019",
+                            "CVE-2026-7210"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "8.9p1 Ubuntu 3ubuntu0.18"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.18.0",
+                                "tags": [
+                                    "eol-product",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad0002ad2ad00042d42d000000301510f56407964db9434a9bb0d4ee4a",
+                                "certificate_sha256": "6b25a372cb5fc208f20ce2a5b02ae824b7c0066f448ba3ed5b78f2bcb7269944",
+                                "certificate_subject": "administrator",
+                                "certificate_issuer": "administrator"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "SimpleHTTPServer",
+                                "version": "0.6",
+                                "tags": [
+                                    "open-dir"
+                                ],
+                                "http_title": "Directory listing for /"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "8b982b61f57987a11a23bf538ab7390cca5a66cf10c9129fe4d0dda1784e334c",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-26T04:47:01Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-26T04:46:54Z",
+            "observations": [
+                {
+                    "key": "2052212",
+                    "first_observed": "2026-11-26T04:46:54Z",
+                    "last_observed": "2026-11-26T04:46:54Z",
+                    "flags": [
+                        "sliver"
+                    ],
+                    "data": {
+                        "ioc": "163.52.135.137:31337",
+                        "port": 31337,
+                        "threat_type": "botnet_cc",
+                        "malware": "Sliver",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-25T19:02:14Z",
+                        "reference": null,
+                        "tags": [
+                            "c2",
+                            "sliver"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-26T04:49:01Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-26T04:57:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T04:57:05Z",
+                    "last_observed": "2026-11-26T04:57:05Z",
+                    "data": {
+                        "as_owner": "CV Griya Cloud Server",
+                        "asn": 154896,
+                        "network": "163.52.135.0/24",
+                        "country": "ID",
+                        "continent": "AS",
+                        "regional_internet_registry": "APNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "2ad2ad0002ad2ad00042d42d000000301510f56407964db9434a9bb0d4ee4a",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
