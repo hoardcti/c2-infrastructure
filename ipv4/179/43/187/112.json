@@ -1,0 +1,199 @@
+{
+    "schema_version": 2,
+    "ip": "179.43.187.112",
+    "first_seen": "2026-11-26T23:35:25Z",
+    "last_seen": "2026-11-26T23:35:25Z",
+    "flags": [
+        "unknown stealer"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-26T23:38:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:38:33Z",
+                    "last_observed": "2026-11-26T23:38:33Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "PRIVATE LAYER INC",
+                        "domain": "privatelayer.com",
+                        "country_code": "CH",
+                        "hostnames": [
+                            "hostedby.privatelayer.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-26T23:35:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:35:40Z",
+                    "last_observed": "2026-11-26T23:35:40Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            443
+                        ],
+                        "hostnames": [
+                            "hostedby.privatelayer.com",
+                            "self.laferraricorp.bond"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx:1.30.6",
+                            "cpe:/a:openbsd:openssh:10.0p2",
+                            "cpe:/o:debian:debian_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "mptcp",
+                            "pqc"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-26T23:35:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:35:34Z",
+                    "last_observed": "2026-11-26T23:35:34Z",
+                    "data": {
+                        "asn": "AS51852",
+                        "as_name": "Private Layer INC",
+                        "as_domain": "phaselayer.com",
+                        "country_code": "CH",
+                        "country": "Switzerland",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-26T23:39:52Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:39:52Z",
+                    "last_observed": "2026-11-26T23:39:52Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS51852 private layer inc",
+                        "country_code": "CH",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-26T23:43:29Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-26T23:35:31Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-26T23:35:25Z",
+            "observations": [
+                {
+                    "key": "2054063",
+                    "first_observed": "2026-11-26T23:35:25Z",
+                    "last_observed": "2026-11-26T23:35:25Z",
+                    "flags": [
+                        "unknown stealer"
+                    ],
+                    "data": {
+                        "ioc": "179.43.187.112:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown Stealer",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown_stealer",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-26T15:59:35Z",
+                        "reference": "https://bazaar.abuse.ch/sample/704ae926d90c58d9b6477a25a774d1e9334f9eb5e356a2a8c17baf4f9d598f31/",
+                        "tags": [
+                            "CoralCobra",
+                            "MetaMaskRAT",
+                            "VLESS",
+                            "banker",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-26T23:37:45Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-26T23:46:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:46:45Z",
+                    "last_observed": "2026-11-26T23:46:45Z",
+                    "data": {
+                        "as_owner": "Private Layer INC",
+                        "asn": 51852,
+                        "network": "179.43.128.0/18",
+                        "country": "CH",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 3,
+                            "suspicious": 1,
+                            "undetected": 38,
+                            "harmless": 50,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Webroot",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "1dd40d40d00040d00042d43d000000e1ea2a807a629b496b664cf07ad7c08d",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

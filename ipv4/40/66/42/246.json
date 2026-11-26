@@ -113,12 +113,72 @@
             "observations": []
         },
         "spamhaus": {
-            "last_checked": "2026-11-25T22:14:15Z",
+            "last_checked": "2026-11-26T23:35:33Z",
             "observations": []
         },
         "urlhaus": {
             "last_checked": "2026-11-13T14:20:04Z",
             "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-26T23:49:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:49:15Z",
+                    "last_observed": "2026-11-26T23:49:15Z",
+                    "data": {
+                        "as_owner": "Microsoft Corporation",
+                        "asn": 8075,
+                        "network": "40.66.0.0/15",
+                        "country": "FR",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -12,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 0,
+                            "undetected": 36,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "Forcepoint ThreatSeeker",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Lionic",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 2
+                        },
+                        "tags": [],
+                        "jarm": "3fd21b20d00000021c43d21b21b43d76e1f79b8645e08ae7fa8f07eb5e4202",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Cluster25",
+                                "title": "Activity related to HAVOC",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 }

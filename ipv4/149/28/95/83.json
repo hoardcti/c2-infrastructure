@@ -1,0 +1,236 @@
+{
+    "schema_version": 2,
+    "ip": "149.28.95.83",
+    "first_seen": "2026-11-26T23:35:25Z",
+    "last_seen": "2026-11-26T23:35:25Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-26T23:38:27Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:38:27Z",
+                    "last_observed": "2026-11-26T23:38:27Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Vultr Holdings, LLC",
+                        "domain": "vultr.com",
+                        "country_code": "US",
+                        "hostnames": [
+                            "149.28.95.83"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-26T23:35:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:35:37Z",
+                    "last_observed": "2026-11-26T23:35:37Z",
+                    "data": {
+                        "ports": [
+                            123
+                        ],
+                        "hostnames": [
+                            "149.28.95.83"
+                        ],
+                        "cpes": [
+                            "cpe:/a:ntp:ntp:3"
+                        ],
+                        "tags": [
+                            "cloud"
+                        ],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-26T23:35:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:35:33Z",
+                    "last_observed": "2026-11-26T23:35:33Z",
+                    "data": {
+                        "asn": "AS20473",
+                        "as_name": "The Constant Company, LLC",
+                        "as_domain": "vultr.com",
+                        "country_code": "US",
+                        "country": "United States",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-26T23:39:46Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:39:46Z",
+                    "last_observed": "2026-11-26T23:39:46Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS20473 the constant company  llc",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_checked": "2026-11-26T23:43:23Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:43:23Z",
+                    "last_observed": "2026-11-26T23:43:23Z",
+                    "data": {
+                        "org": "Vultr Holdings, LLC",
+                        "isp": "The Constant Company, LLC",
+                        "asn": "AS20473",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "149.28.95.83"
+                        ],
+                        "domains": [
+                            "149.28.95.83"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "pqc",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 123,
+                                "transport": "udp",
+                                "product": "ntpd",
+                                "version": "3",
+                                "tags": [
+                                    "cloud"
+                                ]
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.31.10",
+                                "tags": [
+                                    "cloud",
+                                    "pqc",
+                                    "self-signed"
+                                ],
+                                "jarm": "21d19d00021d21d00042d43d0000005ad20eceaf7f71ae0887d2ff117bf97f",
+                                "certificate_sha256": "07897b20be8e6e16bd3445ca438527ecf53253e7f94d2199ccf24452c8fe58e7",
+                                "certificate_subject": "149.28.95.83",
+                                "certificate_issuer": "149.28.95.83"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-26T23:35:31Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-26T23:35:25Z",
+            "observations": [
+                {
+                    "key": "2054494",
+                    "first_observed": "2026-11-26T23:35:25Z",
+                    "last_observed": "2026-11-26T23:35:25Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "149.28.95.83:7443",
+                        "port": 7443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-26T19:44:39Z",
+                        "reference": null,
+                        "tags": [
+                            "Mythic",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-26T23:37:39Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-26T23:46:00Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:46:00Z",
+                    "last_observed": "2026-11-26T23:46:00Z",
+                    "data": {
+                        "as_owner": "The Constant Company, LLC",
+                        "asn": 20473,
+                        "network": "149.28.64.0/18",
+                        "country": "US",
+                        "continent": "NA",
+                        "regional_internet_registry": "ARIN",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 1,
+                            "suspicious": 1,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "21d19d00021d21d00042d43d0000005ad20eceaf7f71ae0887d2ff117bf97f",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

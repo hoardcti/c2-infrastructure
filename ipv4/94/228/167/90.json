@@ -1,0 +1,179 @@
+{
+    "schema_version": 2,
+    "ip": "94.228.167.90",
+    "first_seen": "2026-11-26T23:35:25Z",
+    "last_seen": "2026-11-26T23:35:25Z",
+    "flags": [
+        "unknown stealer"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-26T23:38:26Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:38:26Z",
+                    "last_observed": "2026-11-26T23:38:26Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Pronet LLC",
+                        "domain": "netcrafters.host",
+                        "country_code": "RU",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-26T23:35:36Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:35:36Z",
+                    "last_observed": "2026-11-26T23:35:36Z",
+                    "data": {
+                        "ports": [
+                            9800
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:python:python:3.14"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-26T23:35:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:35:33Z",
+                    "last_observed": "2026-11-26T23:35:33Z",
+                    "data": {
+                        "asn": "AS203273",
+                        "as_name": "NetCrafters OU",
+                        "as_domain": "netcrafters.host",
+                        "country_code": "RU",
+                        "country": "Russia",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-26T23:39:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:39:44Z",
+                    "last_observed": "2026-11-26T23:39:44Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS48467 pronet llc",
+                        "country_code": "RU",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-26T23:43:21Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-26T23:35:31Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-26T23:35:25Z",
+            "observations": [
+                {
+                    "key": "2054048",
+                    "first_observed": "2026-11-26T23:35:25Z",
+                    "last_observed": "2026-11-26T23:35:25Z",
+                    "flags": [
+                        "unknown stealer"
+                    ],
+                    "data": {
+                        "ioc": "94.228.167.90:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown Stealer",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown_stealer",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-26T16:00:03Z",
+                        "reference": "https://bazaar.abuse.ch/sample/1aa3417b66d2b520fc271dd7dbd53ace5f890d338cb5c530b1774ddd6d1588ff/",
+                        "tags": [
+                            "Android",
+                            "SVM1",
+                            "ShadowSVM1",
+                            "banker",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-26T23:37:37Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-26T23:45:45Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:45:45Z",
+                    "last_observed": "2026-11-26T23:45:45Z",
+                    "data": {
+                        "as_owner": "NetCrafters OU",
+                        "asn": 203273,
+                        "network": "94.228.166.0/23",
+                        "country": "RU",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 0,
+                            "suspicious": 2,
+                            "undetected": 37,
+                            "harmless": 53,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [
+                            "self-signed"
+                        ],
+                        "jarm": "2ad2ad0002ad2ad00042d42d00000000f78d2dc0ce6e5bbc5b8149a4872356",
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

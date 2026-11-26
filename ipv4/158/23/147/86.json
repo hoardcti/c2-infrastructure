@@ -1,0 +1,167 @@
+{
+    "schema_version": 2,
+    "ip": "158.23.147.86",
+    "first_seen": "2026-11-26T23:35:25Z",
+    "last_seen": "2026-11-26T23:35:25Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-26T23:38:29Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:38:29Z",
+                    "last_observed": "2026-11-26T23:38:29Z",
+                    "data": {
+                        "abuse_confidence_score": 3,
+                        "total_reports": 1,
+                        "distinct_reporters": 1,
+                        "last_reported_at": "2026-11-26T00:49:15Z",
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "Microsoft Singapore Pte. Ltd.",
+                        "domain": "microsoft.com",
+                        "country_code": "MX",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-26T23:35:38Z",
+            "observations": []
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-26T23:35:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:35:34Z",
+                    "last_observed": "2026-11-26T23:35:34Z",
+                    "data": {
+                        "asn": "AS8075",
+                        "as_name": "Microsoft Corporation",
+                        "as_domain": "microsoft.com",
+                        "country_code": "MX",
+                        "country": "Mexico",
+                        "continent_code": "NA",
+                        "continent": "North America"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-26T23:39:48Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:39:48Z",
+                    "last_observed": "2026-11-26T23:39:48Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "US",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-26T23:43:25Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-26T23:35:31Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-26T23:35:25Z",
+            "observations": [
+                {
+                    "key": "2054071",
+                    "first_observed": "2026-11-26T23:35:25Z",
+                    "last_observed": "2026-11-26T23:35:25Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "158.23.147.86:7443",
+                        "port": 7443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-26T15:41:13Z",
+                        "reference": null,
+                        "tags": [
+                            "Mythic",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-26T23:37:41Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-26T23:46:16Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:46:16Z",
+                    "last_observed": "2026-11-26T23:46:16Z",
+                    "data": {
+                        "as_owner": "Microsoft Corporation",
+                        "asn": 8075,
+                        "network": "158.23.0.0/16",
+                        "country": "MX",
+                        "continent": "NA",
+                        "regional_internet_registry": "LACNIC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 0,
+                            "undetected": 36,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "CRDF",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "MalwareURL",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "malicious",
+                                "result": "malicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}

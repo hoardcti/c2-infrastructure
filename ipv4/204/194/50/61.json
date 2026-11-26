@@ -2,17 +2,17 @@
     "schema_version": 2,
     "ip": "204.194.50.61",
     "first_seen": "2026-11-19T20:16:20Z",
-    "last_seen": "2026-11-26T14:50:36Z",
+    "last_seen": "2026-11-26T23:35:25Z",
     "flags": [
         "sliver"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-19T20:19:19Z",
+            "last_checked": "2026-11-26T23:38:39Z",
             "observations": [
                 {
                     "first_observed": "2026-11-19T20:19:19Z",
-                    "last_observed": "2026-11-19T20:19:19Z",
+                    "last_observed": "2026-11-26T23:38:39Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-19T20:16:31Z",
+            "last_checked": "2026-11-26T23:35:43Z",
             "observations": [
                 {
                     "first_observed": "2026-11-19T20:16:31Z",
@@ -53,6 +53,23 @@
                             "ai",
                             "self-signed"
                         ],
+                        "vulns": []
+                    }
+                },
+                {
+                    "first_observed": "2026-11-26T23:35:43Z",
+                    "last_observed": "2026-11-26T23:35:43Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443,
+                            8080,
+                            8443,
+                            9443
+                        ],
+                        "hostnames": [],
+                        "cpes": [],
+                        "tags": [],
                         "vulns": []
                     }
                 }
@@ -77,7 +94,7 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-19T20:21:22Z",
+            "last_checked": "2026-11-26T23:39:58Z",
             "observations": [
                 {
                     "first_observed": "2026-11-19T20:21:22Z",
@@ -89,11 +106,39 @@
                         "pulse_count": 0,
                         "pulses": []
                     }
+                },
+                {
+                    "first_observed": "2026-11-26T23:39:58Z",
+                    "last_observed": "2026-11-26T23:39:58Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "US",
+                        "pulse_count": 1,
+                        "pulses": [
+                            {
+                                "id": "6b07bc17178aafbf57d6c301",
+                                "name": "Twitter Feed - skocherhan - 25-11-2026",
+                                "created": "2026-11-26T04:56:55.747Z",
+                                "tlp": "green",
+                                "tags": [
+                                    "APT",
+                                    "AiTM",
+                                    "ClickFix",
+                                    "RAT",
+                                    "infostealer",
+                                    "malware",
+                                    "phishing"
+                                ],
+                                "malware_families": []
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "shodan": {
-            "last_checked": "2026-11-19T20:24:37Z",
+            "last_checked": "2026-11-26T23:43:35Z",
             "observations": [
                 {
                     "first_observed": "2026-11-19T20:24:37Z",
@@ -135,16 +180,90 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-26T23:43:35Z",
+                    "last_observed": "2026-11-26T23:43:35Z",
+                    "data": {
+                        "org": "Decision Focus Incorporated",
+                        "isp": "Turing Group Limited",
+                        "asn": "AS140869",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "ai",
+                            "c2",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 80,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "SimpleHTTPServer",
+                                "version": "0.6"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "CyberStrikeAI",
+                                "version": "1.7.24",
+                                "tags": [
+                                    "ai",
+                                    "self-signed"
+                                ],
+                                "http_title": "CyberStrikeAI",
+                                "jarm": "40d40d40d00000000043d43d00043d6aff5ab0f4fc31897186312c9e639319",
+                                "certificate_sha256": "c71d6b51e07c8a87c2c60a99c6b2ef2c246579327ab7b96ee607bd7ee51c67ca",
+                                "certificate_subject": "CyberStrikeAI",
+                                "certificate_issuer": "CyberStrikeAI"
+                            },
+                            {
+                                "port": 8099,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8443,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 8848,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 9443,
+                                "transport": "tcp"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "3d496a390bcf1e87f7c4d69deb5f4ff8ed0ac2d9180890170350c7e1bd070c07",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-25T22:14:14Z",
+            "last_checked": "2026-11-26T23:35:31Z",
             "observations": [
                 {
                     "key": "204.194.48.0/21",
                     "first_observed": "2026-11-19T20:16:26Z",
-                    "last_observed": "2026-11-25T22:14:14Z",
+                    "last_observed": "2026-11-26T23:35:31Z",
                     "data": {
                         "cidr": "204.194.48.0/21",
                         "sblid": "SBL692952",
@@ -154,12 +273,12 @@
             ]
         },
         "threatfox": {
-            "last_checked": "2026-11-26T14:50:36Z",
+            "last_checked": "2026-11-26T23:35:25Z",
             "observations": [
                 {
                     "key": "2035593",
                     "first_observed": "2026-11-19T20:16:20Z",
-                    "last_observed": "2026-11-26T14:50:36Z",
+                    "last_observed": "2026-11-26T23:35:25Z",
                     "flags": [
                         "sliver"
                     ],
@@ -181,7 +300,7 @@
             ]
         },
         "urlhaus": {
-            "last_checked": "2026-11-19T20:18:31Z",
+            "last_checked": "2026-11-26T23:37:51Z",
             "observations": []
         },
         "virustotal": {

@@ -1,0 +1,188 @@
+{
+    "schema_version": 2,
+    "ip": "2.26.225.108",
+    "first_seen": "2026-11-26T23:35:25Z",
+    "last_seen": "2026-11-26T23:35:25Z",
+    "flags": [
+        "unknown stealer"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-26T23:38:22Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:38:22Z",
+                    "last_observed": "2026-11-26T23:38:22Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "VPSPay - vpspay.cloud",
+                        "domain": "vpspay.cloud",
+                        "country_code": "PL",
+                        "hostnames": [
+                            "2-26-225-108.rdns.vpspay.net"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-26T23:35:34Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:35:34Z",
+                    "last_observed": "2026-11-26T23:35:34Z",
+                    "data": {
+                        "ports": [
+                            80,
+                            443
+                        ],
+                        "hostnames": [
+                            "2-26-225-108.rdns.vpspay.net",
+                            "pl3.speedtest.projectshitpost.fun"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx",
+                            "cpe:/a:f5:nginx:1.30.7"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-26T23:35:33Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:35:33Z",
+                    "last_observed": "2026-11-26T23:35:33Z",
+                    "data": {
+                        "asn": "AS201988",
+                        "as_name": "VPSPay ASN",
+                        "as_domain": "vpspay.cloud",
+                        "country_code": "PL",
+                        "country": "Poland",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-26T23:39:40Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:39:40Z",
+                    "last_observed": "2026-11-26T23:39:40Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS12576 ee limited",
+                        "country_code": "GB",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-26T23:43:17Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-26T23:35:31Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-26T23:35:25Z",
+            "observations": [
+                {
+                    "key": "2054064",
+                    "first_observed": "2026-11-26T23:35:25Z",
+                    "last_observed": "2026-11-26T23:35:25Z",
+                    "flags": [
+                        "unknown stealer"
+                    ],
+                    "data": {
+                        "ioc": "2.26.225.108:443",
+                        "port": 443,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown Stealer",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown_stealer",
+                        "confidence_level": 100,
+                        "first_seen": "2026-11-26T15:59:34Z",
+                        "reference": "https://bazaar.abuse.ch/sample/704ae926d90c58d9b6477a25a774d1e9334f9eb5e356a2a8c17baf4f9d598f31/",
+                        "tags": [
+                            "CoralCobra",
+                            "MetaMaskRAT",
+                            "VLESS",
+                            "banker",
+                            "c2"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-26T23:37:34Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-26T23:45:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-26T23:45:15Z",
+                    "last_observed": "2026-11-26T23:45:15Z",
+                    "data": {
+                        "as_owner": "VPSPay Networks LTD",
+                        "asn": 201988,
+                        "network": "2.26.224.0/22",
+                        "country": "PL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -11,
+                        "analysis_stats": {
+                            "malicious": 2,
+                            "suspicious": 1,
+                            "undetected": 38,
+                            "harmless": 51,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "crowdsourced_context": []
+                    }
+                }
+            ]
+        }
+    }
+}
