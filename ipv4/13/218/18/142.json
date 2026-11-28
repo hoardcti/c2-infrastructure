@@ -2,17 +2,17 @@
     "schema_version": 2,
     "ip": "13.218.18.142",
     "first_seen": "2026-11-06T20:45:11Z",
-    "last_seen": "2026-11-27T17:57:27Z",
+    "last_seen": "2026-11-28T01:20:31Z",
     "flags": [
         "sliver"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-21T01:15:43Z",
+            "last_checked": "2026-11-28T01:23:27Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T20:48:11Z",
-                    "last_observed": "2026-11-21T01:15:43Z",
+                    "last_observed": "2026-11-28T01:23:27Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -33,7 +33,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-21T01:12:53Z",
+            "last_checked": "2026-11-28T01:20:39Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T20:45:21Z",
@@ -55,7 +55,7 @@
                 },
                 {
                     "first_observed": "2026-11-21T01:12:53Z",
-                    "last_observed": "2026-11-21T01:12:53Z",
+                    "last_observed": "2026-11-28T01:20:39Z",
                     "data": {
                         "ports": [
                             443
@@ -93,11 +93,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-21T01:17:02Z",
+            "last_checked": "2026-11-28T01:24:45Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T20:49:30Z",
-                    "last_observed": "2026-11-21T01:17:02Z",
+                    "last_observed": "2026-11-28T01:24:45Z",
                     "data": {
                         "reputation": 0,
                         "asn": "ASNone ",
@@ -109,11 +109,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-11-06T20:53:30Z",
-            "last_error": {
-                "occurred_at": "2026-11-21T01:20:21Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-28T01:28:04Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T20:53:30Z",
@@ -150,20 +146,58 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-28T01:28:04Z",
+                    "last_observed": "2026-11-28T01:28:04Z",
+                    "data": {
+                        "org": "Amazon Data Services Northern Virginia",
+                        "isp": "Amazon.com, Inc.",
+                        "asn": "AS14618",
+                        "os": null,
+                        "country_code": "US",
+                        "hostnames": [
+                            "ec2-13-218-18-142.compute-1.amazonaws.com"
+                        ],
+                        "domains": [
+                            "amazonaws.com"
+                        ],
+                        "tags": [
+                            "cloud",
+                            "mptcp",
+                            "pqc"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "tags": [
+                                    "cloud",
+                                    "mptcp",
+                                    "pqc"
+                                ],
+                                "jarm": "3fd3fd20d00000021c43d43d00043d204204071741c36579e355f830d285a5",
+                                "certificate_sha256": "8eb4de4c723562eb727fff6570ba53af493bfcb0783f9dc4b20336c617202631",
+                                "certificate_subject": "localhost",
+                                "certificate_organisation": "spleen, Enterprises"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-26T23:35:31Z",
+            "last_checked": "2026-11-28T01:20:38Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-27T17:57:27Z",
+            "last_checked": "2026-11-28T01:20:31Z",
             "observations": [
                 {
                     "key": "2018031",
                     "first_observed": "2026-11-06T20:45:11Z",
-                    "last_observed": "2026-11-27T17:57:27Z",
+                    "last_observed": "2026-11-28T01:20:31Z",
                     "flags": [
                         "sliver"
                     ],

@@ -2,17 +2,17 @@
     "schema_version": 2,
     "ip": "31.56.53.202",
     "first_seen": "2026-11-06T14:51:56Z",
-    "last_seen": "2026-11-27T17:57:27Z",
+    "last_seen": "2026-11-28T01:20:31Z",
     "flags": [
         "sliver"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-21T01:16:07Z",
+            "last_checked": "2026-11-28T01:23:51Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T14:54:57Z",
-                    "last_observed": "2026-11-21T01:16:07Z",
+                    "last_observed": "2026-11-28T01:23:51Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -31,7 +31,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-21T01:13:05Z",
+            "last_checked": "2026-11-28T01:20:51Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T14:52:07Z",
@@ -52,7 +52,7 @@
                 },
                 {
                     "first_observed": "2026-11-13T21:18:15Z",
-                    "last_observed": "2026-11-21T01:13:05Z",
+                    "last_observed": "2026-11-28T01:20:51Z",
                     "data": {
                         "ports": [
                             22,
@@ -95,11 +95,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-21T01:17:26Z",
+            "last_checked": "2026-11-28T01:25:09Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T14:56:15Z",
-                    "last_observed": "2026-11-21T01:17:26Z",
+                    "last_observed": "2026-11-28T01:25:09Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS31549 aria shatel company ltd",
@@ -111,11 +111,7 @@
             ]
         },
         "shodan": {
-            "last_checked": "2026-11-06T14:59:42Z",
-            "last_error": {
-                "occurred_at": "2026-11-21T01:20:49Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
+            "last_checked": "2026-11-28T01:28:28Z",
             "observations": [
                 {
                     "first_observed": "2026-11-06T14:59:42Z",
@@ -158,16 +154,71 @@
                             }
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-28T01:28:28Z",
+                    "last_observed": "2026-11-28T01:28:28Z",
+                    "data": {
+                        "org": "Snowcore Inc",
+                        "isp": "SnowcoreInc Snowcore Inc",
+                        "asn": "AS218986",
+                        "os": "Linux",
+                        "country_code": "US",
+                        "hostnames": [],
+                        "domains": [],
+                        "tags": [
+                            "c2",
+                            "open-dir",
+                            "pqc",
+                            "self-signed"
+                        ],
+                        "vulns": [],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "10.0p2 Debian 7+deb13u4"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "open-dir",
+                                    "pqc",
+                                    "self-signed"
+                                ],
+                                "http_title": "Index of /",
+                                "jarm": "21d19d00021d21d00042d43d0000005ad20eceaf7f71ae0887d2ff117bf97f",
+                                "certificate_sha256": "2b6dc51684d672d5422b5ec02f1ee899f88dd930048e8b006ebd9a0c48b1490d",
+                                "certificate_subject": "systems.local",
+                                "certificate_issuer": "systems.local"
+                            },
+                            {
+                                "port": 31337,
+                                "transport": "tcp",
+                                "product": "Sliver C2",
+                                "tags": [
+                                    "c2"
+                                ],
+                                "jarm": "00000000000000000043d43d00043de2a97eabb398317329f027c66e4c1b01",
+                                "certificate_sha256": "0fca7e257a81e8b9e237962a06a2bd876ad9bfc0e0e66bcb34bb0c4b20d3d3d1",
+                                "certificate_subject": "multiplayer",
+                                "certificate_issuer": "operators"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "spamhaus": {
-            "last_checked": "2026-11-26T23:35:31Z",
+            "last_checked": "2026-11-28T01:20:38Z",
             "observations": [
                 {
                     "key": "31.56.52.0/23",
                     "first_observed": "2026-11-06T14:52:02Z",
-                    "last_observed": "2026-11-26T23:35:31Z",
+                    "last_observed": "2026-11-28T01:20:38Z",
                     "data": {
                         "cidr": "31.56.52.0/23",
                         "sblid": "SBL699585",
@@ -177,12 +228,12 @@
             ]
         },
         "threatfox": {
-            "last_checked": "2026-11-27T17:57:27Z",
+            "last_checked": "2026-11-28T01:20:31Z",
             "observations": [
                 {
                     "key": "2017600",
                     "first_observed": "2026-11-06T14:51:56Z",
-                    "last_observed": "2026-11-27T17:57:27Z",
+                    "last_observed": "2026-11-28T01:20:31Z",
                     "flags": [
                         "sliver"
                     ],
