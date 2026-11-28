@@ -1,0 +1,238 @@
+{
+    "schema_version": 2,
+    "ip": "176.65.144.165",
+    "first_seen": "2026-11-28T09:58:48Z",
+    "last_seen": "2026-11-28T09:58:48Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-28T10:02:21Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T10:02:21Z",
+                    "last_observed": "2026-11-28T10:02:21Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "DEDIK SERVICES LIMITED",
+                        "domain": "dedik.io",
+                        "country_code": "CH",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-28T09:59:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T09:59:17Z",
+                    "last_observed": "2026-11-28T09:59:17Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            8000
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:f5:nginx",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-28T09:58:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T09:58:59Z",
+                    "last_observed": "2026-11-28T09:58:59Z",
+                    "data": {
+                        "asn": "AS209413",
+                        "as_name": "DEDIK SERVICES LIMITED",
+                        "as_domain": "dedik.io",
+                        "country_code": "CH",
+                        "country": "Switzerland",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-28T10:03:39Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T10:03:39Z",
+                    "last_observed": "2026-11-28T10:03:39Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "ASNone ",
+                        "country_code": "DE",
+                        "pulse_count": 2,
+                        "pulses": [
+                            {
+                                "id": "672f6ed2b564f00b7c5cb13f",
+                                "name": "Threatfox Recent Additions",
+                                "created": "2024-11-09T14:16:50.032Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            },
+                            {
+                                "id": "6a5e28c60876ef7822a6dce3",
+                                "name": "Nov9,,2024-May14,2025 credit ameermane title Threatfox Recent Additions",
+                                "created": "2026-07-20T13:55:18.967Z",
+                                "tlp": "green",
+                                "tags": [],
+                                "malware_families": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-28T10:07:08Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-28T09:58:55Z",
+            "observations": [
+                {
+                    "key": "176.65.144.0/24",
+                    "first_observed": "2026-11-28T09:58:55Z",
+                    "last_observed": "2026-11-28T09:58:55Z",
+                    "data": {
+                        "cidr": "176.65.144.0/24",
+                        "sblid": "SBL701006",
+                        "rir": "ripencc"
+                    }
+                }
+            ]
+        },
+        "threatfox": {
+            "last_checked": "2026-11-28T09:58:48Z",
+            "observations": [
+                {
+                    "key": "2056209",
+                    "first_observed": "2026-11-28T09:58:48Z",
+                    "last_observed": "2026-11-28T09:58:48Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "176.65.144.165:8000",
+                        "port": 8000,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-11-28T07:25:27Z",
+                        "reference": "https://tracker.viriback.com/",
+                        "tags": [
+                            "Lunex",
+                            "c2",
+                            "panel"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-28T10:01:33Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-28T10:12:47Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T10:12:47Z",
+                    "last_observed": "2026-11-28T10:12:47Z",
+                    "data": {
+                        "as_owner": "Dedik Services Limited",
+                        "asn": 209413,
+                        "network": "176.65.144.0/24",
+                        "country": "CH",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": -1,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 2,
+                            "undetected": 34,
+                            "harmless": 52,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Dr.Web",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Sophos",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "ViriBack",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 1
+                        },
+                        "tags": [],
+                        "jarm": "29d3fd00029d29d21c42d43d00041df61f6b5fa6973e9fa14c8155669c6633",
+                        "crowdsourced_context": [
+                            {
+                                "source": "Cluster25",
+                                "title": "Activity related to ASYNCRAT",
+                                "severity": "high"
+                            },
+                            {
+                                "source": "ViriBack",
+                                "title": "CnC Panel",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,218 @@
+{
+    "schema_version": 2,
+    "ip": "5.104.72.207",
+    "first_seen": "2026-11-28T09:58:48Z",
+    "last_seen": "2026-11-28T09:58:48Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-28T10:01:49Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T10:01:49Z",
+                    "last_observed": "2026-11-28T10:01:49Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "MHost LLC",
+                        "domain": "mhost.ee",
+                        "country_code": "NL",
+                        "hostnames": [
+                            "svc-22537-daffodil-dichroite.mhost.ee"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-28T09:59:01Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T09:59:01Z",
+                    "last_observed": "2026-11-28T09:59:01Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            8000,
+                            8080
+                        ],
+                        "hostnames": [
+                            "5-104-72-207.hostingsecurityes.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx",
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-28T09:58:55Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T09:58:55Z",
+                    "last_observed": "2026-11-28T09:58:55Z",
+                    "data": {
+                        "asn": "AS200823",
+                        "as_name": "MHost LLC",
+                        "as_domain": "mhost.ee",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-28T10:03:07Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T10:03:07Z",
+                    "last_observed": "2026-11-28T10:03:07Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS207710 sia singularity telecom",
+                        "country_code": "TR",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-28T10:06:36Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-28T09:58:55Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-28T09:58:48Z",
+            "observations": [
+                {
+                    "key": "2056224",
+                    "first_observed": "2026-11-28T09:58:48Z",
+                    "last_observed": "2026-11-28T09:58:48Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "5.104.72.207:8000",
+                        "port": 8000,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-11-28T07:25:18Z",
+                        "reference": "https://tracker.viriback.com/",
+                        "tags": [
+                            "Lunex",
+                            "c2",
+                            "panel"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-28T10:01:01Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-28T10:08:47Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T10:08:47Z",
+                    "last_observed": "2026-11-28T10:08:47Z",
+                    "data": {
+                        "as_owner": "MHost LLC",
+                        "asn": 200823,
+                        "network": "5.104.72.0/23",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 6,
+                            "suspicious": 2,
+                            "undetected": 35,
+                            "harmless": 49,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Dr.Web",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "Fortinet",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "ViriBack",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "alphaMountain.ai",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "ViriBack",
+                                "title": "CnC Panel",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

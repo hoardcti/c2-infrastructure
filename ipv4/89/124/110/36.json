@@ -1,0 +1,213 @@
+{
+    "schema_version": 2,
+    "ip": "89.124.110.36",
+    "first_seen": "2026-11-28T09:58:48Z",
+    "last_seen": "2026-11-28T09:58:48Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-28T10:01:57Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T10:01:57Z",
+                    "last_observed": "2026-11-28T10:01:57Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "SERVERS TECH FZCO",
+                        "domain": "vdsina.com",
+                        "country_code": "NL",
+                        "hostnames": [
+                            "v1060426.hosted-by-vdsina.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-28T09:59:05Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T09:59:05Z",
+                    "last_observed": "2026-11-28T09:59:05Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            8000,
+                            8080
+                        ],
+                        "hostnames": [
+                            "v1060426.hosted-by-vdsina.com"
+                        ],
+                        "cpes": [
+                            "cpe:/a:f5:nginx",
+                            "cpe:/a:openbsd:openssh:8.9p1",
+                            "cpe:/o:canonical:ubuntu_linux"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-28T09:58:56Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T09:58:56Z",
+                    "last_observed": "2026-11-28T09:58:56Z",
+                    "data": {
+                        "asn": "AS216071",
+                        "as_name": "SERVERS TECH FZCO",
+                        "as_domain": "vdsina.com",
+                        "country_code": "NL",
+                        "country": "The Netherlands",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-28T10:03:15Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T10:03:15Z",
+                    "last_observed": "2026-11-28T10:03:15Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS25441 imagine communications group limited",
+                        "country_code": "IE",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-28T10:06:44Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-28T09:58:55Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-28T09:58:48Z",
+            "observations": [
+                {
+                    "key": "2056219",
+                    "first_observed": "2026-11-28T09:58:48Z",
+                    "last_observed": "2026-11-28T09:58:48Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "89.124.110.36:8000",
+                        "port": 8000,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-11-28T07:25:21Z",
+                        "reference": "https://tracker.viriback.com/",
+                        "tags": [
+                            "Lunex",
+                            "c2",
+                            "panel"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-28T10:01:09Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-28T10:09:47Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T10:09:47Z",
+                    "last_observed": "2026-11-28T10:09:47Z",
+                    "data": {
+                        "as_owner": "Servers Tech Fzco",
+                        "asn": 216071,
+                        "network": "89.124.64.0/18",
+                        "country": "NL",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 5,
+                            "suspicious": 2,
+                            "undetected": 35,
+                            "harmless": 50,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "AlphaSOC",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Criminal IP",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "Dr.Web",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "ViriBack",
+                                "category": "malicious",
+                                "result": "malware"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "ViriBack",
+                                "title": "CnC Panel",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

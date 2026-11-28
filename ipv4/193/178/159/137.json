@@ -1,0 +1,201 @@
+{
+    "schema_version": 2,
+    "ip": "193.178.159.137",
+    "first_seen": "2026-11-28T09:58:48Z",
+    "last_seen": "2026-11-28T09:58:48Z",
+    "flags": [
+        "unknown malware"
+    ],
+    "sources": {
+        "abuseipdb": {
+            "last_checked": "2026-11-28T10:02:25Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T10:02:25Z",
+                    "last_observed": "2026-11-28T10:02:25Z",
+                    "data": {
+                        "abuse_confidence_score": 0,
+                        "total_reports": 0,
+                        "distinct_reporters": 0,
+                        "last_reported_at": null,
+                        "max_age_in_days": 90,
+                        "is_whitelisted": false,
+                        "is_tor": false,
+                        "usage_type": "Data Center/Web Hosting/Transit",
+                        "isp": "UFO TECHNOLOGIES LIMITED",
+                        "domain": "ufocorp.net",
+                        "country_code": "FR",
+                        "hostnames": []
+                    }
+                }
+            ]
+        },
+        "internetdb": {
+            "last_checked": "2026-11-28T09:59:19Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T09:59:19Z",
+                    "last_observed": "2026-11-28T09:59:19Z",
+                    "data": {
+                        "ports": [
+                            8000,
+                            8080
+                        ],
+                        "hostnames": [],
+                        "cpes": [
+                            "cpe:/a:f5:nginx"
+                        ],
+                        "tags": [],
+                        "vulns": []
+                    }
+                }
+            ]
+        },
+        "ipinfo": {
+            "last_checked": "2026-11-28T09:58:59Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T09:58:59Z",
+                    "last_observed": "2026-11-28T09:58:59Z",
+                    "data": {
+                        "asn": "AS218974",
+                        "as_name": "UFO TECHNOLOGIES LIMITED",
+                        "as_domain": "ufocorp.net",
+                        "country_code": "FR",
+                        "country": "France",
+                        "continent_code": "EU",
+                        "continent": "Europe"
+                    }
+                }
+            ]
+        },
+        "otx": {
+            "last_checked": "2026-11-28T10:03:44Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T10:03:44Z",
+                    "last_observed": "2026-11-28T10:03:44Z",
+                    "data": {
+                        "reputation": 0,
+                        "asn": "AS20499 ip communications ltd.",
+                        "country_code": "RU",
+                        "pulse_count": 0,
+                        "pulses": []
+                    }
+                }
+            ]
+        },
+        "shodan": {
+            "last_error": {
+                "occurred_at": "2026-11-28T10:07:12Z",
+                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
+            },
+            "observations": []
+        },
+        "spamhaus": {
+            "last_checked": "2026-11-28T09:58:55Z",
+            "observations": []
+        },
+        "threatfox": {
+            "last_checked": "2026-11-28T09:58:48Z",
+            "observations": [
+                {
+                    "key": "2056211",
+                    "first_observed": "2026-11-28T09:58:48Z",
+                    "last_observed": "2026-11-28T09:58:48Z",
+                    "flags": [
+                        "unknown malware"
+                    ],
+                    "data": {
+                        "ioc": "193.178.159.137:8000",
+                        "port": 8000,
+                        "threat_type": "botnet_cc",
+                        "malware": "Unknown malware",
+                        "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                        "confidence_level": 50,
+                        "first_seen": "2026-11-28T07:25:26Z",
+                        "reference": "https://tracker.viriback.com/",
+                        "tags": [
+                            "Lunex",
+                            "c2",
+                            "panel"
+                        ]
+                    }
+                }
+            ]
+        },
+        "urlhaus": {
+            "last_checked": "2026-11-28T10:01:37Z",
+            "observations": []
+        },
+        "virustotal": {
+            "last_checked": "2026-11-28T10:13:17Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T10:13:17Z",
+                    "last_observed": "2026-11-28T10:13:17Z",
+                    "data": {
+                        "as_owner": "Ufo Technologies Limited",
+                        "asn": 218974,
+                        "network": "193.178.159.0/24",
+                        "country": "FR",
+                        "continent": "EU",
+                        "regional_internet_registry": "RIPE NCC",
+                        "reputation": 0,
+                        "analysis_stats": {
+                            "malicious": 4,
+                            "suspicious": 2,
+                            "undetected": 37,
+                            "harmless": 49,
+                            "timeout": 0
+                        },
+                        "flagging_vendors": [
+                            {
+                                "vendor": "BitDefender",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Dr.Web",
+                                "category": "malicious",
+                                "result": "malicious"
+                            },
+                            {
+                                "vendor": "G-Data",
+                                "category": "malicious",
+                                "result": "malware"
+                            },
+                            {
+                                "vendor": "Gridinsoft",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "SOCRadar",
+                                "category": "suspicious",
+                                "result": "suspicious"
+                            },
+                            {
+                                "vendor": "ViriBack",
+                                "category": "malicious",
+                                "result": "malware"
+                            }
+                        ],
+                        "total_votes": {
+                            "harmless": 0,
+                            "malicious": 0
+                        },
+                        "tags": [],
+                        "crowdsourced_context": [
+                            {
+                                "source": "ViriBack",
+                                "title": "CnC Panel",
+                                "severity": "high"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
