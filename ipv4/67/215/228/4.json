@@ -2,17 +2,17 @@
     "schema_version": 2,
     "ip": "67.215.228.4",
     "first_seen": "2026-11-14T16:30:02Z",
-    "last_seen": "2026-11-28T09:58:48Z",
+    "last_seen": "2026-11-28T18:08:02Z",
     "flags": [
         "unknown malware"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-21T17:16:08Z",
+            "last_checked": "2026-11-28T18:11:05Z",
             "observations": [
                 {
                     "first_observed": "2026-11-14T16:33:07Z",
-                    "last_observed": "2026-11-21T17:16:08Z",
+                    "last_observed": "2026-11-28T18:11:05Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -33,7 +33,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-21T17:13:20Z",
+            "last_checked": "2026-11-28T18:08:16Z",
             "observations": [
                 {
                     "first_observed": "2026-11-14T16:30:19Z",
@@ -116,6 +116,53 @@
                             "CVE-2025-23419"
                         ]
                     }
+                },
+                {
+                    "first_observed": "2026-11-28T18:08:16Z",
+                    "last_observed": "2026-11-28T18:08:16Z",
+                    "data": {
+                        "ports": [
+                            22,
+                            80,
+                            81,
+                            82,
+                            443,
+                            500,
+                            1701,
+                            2087,
+                            3478,
+                            4500,
+                            8000,
+                            8080,
+                            8877,
+                            18096,
+                            20000
+                        ],
+                        "hostnames": [
+                            "67-215-228-4-host.colocrossing.com",
+                            "cfrn.5671234.xyz",
+                            "embyo.5671234.xyz"
+                        ],
+                        "cpes": [
+                            "cpe:/a:encode:uvicorn",
+                            "cpe:/a:f5:nginx",
+                            "cpe:/a:f5:nginx:1.24.0",
+                            "cpe:/a:openbsd:openssh:9.6p1",
+                            "cpe:/a:openresty:openresty",
+                            "cpe:/a:python:python",
+                            "cpe:/o:canonical:ubuntu_linux",
+                            "cpe:/o:linux:linux_kernel"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "self-signed",
+                            "vpn"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ]
+                    }
                 }
             ]
         },
@@ -138,11 +185,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-21T17:17:27Z",
+            "last_checked": "2026-11-28T18:12:23Z",
             "observations": [
                 {
                     "first_observed": "2026-11-14T16:34:25Z",
-                    "last_observed": "2026-11-21T17:17:27Z",
+                    "last_observed": "2026-11-28T18:12:23Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS55154 madgenius.com",
@@ -156,7 +203,7 @@
         "shodan": {
             "last_checked": "2026-11-14T16:38:07Z",
             "last_error": {
-                "occurred_at": "2026-11-21T17:21:27Z",
+                "occurred_at": "2026-11-28T18:16:23Z",
                 "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
             },
             "observations": [
@@ -262,12 +309,12 @@
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-28T09:58:48Z",
+            "last_checked": "2026-11-28T18:08:02Z",
             "observations": [
                 {
                     "key": "2028665",
                     "first_observed": "2026-11-14T16:30:02Z",
-                    "last_observed": "2026-11-28T09:58:48Z",
+                    "last_observed": "2026-11-28T18:08:02Z",
                     "flags": [
                         "unknown malware"
                     ],
@@ -291,7 +338,7 @@
             ]
         },
         "urlhaus": {
-            "last_checked": "2026-11-21T17:15:20Z",
+            "last_checked": "2026-11-28T18:10:17Z",
             "observations": []
         },
         "virustotal": {

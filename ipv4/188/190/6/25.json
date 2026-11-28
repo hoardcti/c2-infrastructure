@@ -2,17 +2,17 @@
     "schema_version": 2,
     "ip": "188.190.6.25",
     "first_seen": "2026-11-07T13:49:24Z",
-    "last_seen": "2026-11-28T09:58:48Z",
+    "last_seen": "2026-11-28T18:08:02Z",
     "flags": [
         "cobalt strike"
     ],
     "sources": {
         "abuseipdb": {
-            "last_checked": "2026-11-21T17:16:23Z",
+            "last_checked": "2026-11-28T18:11:19Z",
             "observations": [
                 {
                     "first_observed": "2026-11-07T13:52:22Z",
-                    "last_observed": "2026-11-21T17:16:23Z",
+                    "last_observed": "2026-11-28T18:11:19Z",
                     "data": {
                         "abuse_confidence_score": 0,
                         "total_reports": 0,
@@ -33,7 +33,7 @@
             ]
         },
         "internetdb": {
-            "last_checked": "2026-11-21T17:13:27Z",
+            "last_checked": "2026-11-28T18:08:23Z",
             "observations": [
                 {
                     "first_observed": "2026-11-14T16:30:21Z",
@@ -66,7 +66,7 @@
                 },
                 {
                     "first_observed": "2026-11-21T17:13:27Z",
-                    "last_observed": "2026-11-21T17:13:27Z",
+                    "last_observed": "2026-11-28T18:08:23Z",
                     "data": {
                         "ports": [
                             22,
@@ -117,11 +117,11 @@
             ]
         },
         "otx": {
-            "last_checked": "2026-11-21T17:18:56Z",
+            "last_checked": "2026-11-28T18:12:49Z",
             "observations": [
                 {
                     "first_observed": "2026-11-07T13:53:40Z",
-                    "last_observed": "2026-11-21T17:18:56Z",
+                    "last_observed": "2026-11-28T18:12:49Z",
                     "data": {
                         "reputation": 0,
                         "asn": "AS56370 inttel ltd.",
@@ -133,23 +133,91 @@
             ]
         },
         "shodan": {
-            "last_error": {
-                "occurred_at": "2026-11-21T17:21:41Z",
-                "message": "querying Shodan: the upstream rejected this request: the key's plan doesn't include this host: \"{\\\"error\\\": \\\"Requires membership or higher to access\\\"}\""
-            },
-            "observations": []
+            "last_checked": "2026-11-28T18:16:37Z",
+            "observations": [
+                {
+                    "first_observed": "2026-11-28T18:16:37Z",
+                    "last_observed": "2026-11-28T18:16:37Z",
+                    "data": {
+                        "org": "EDIS GmbH",
+                        "isp": "EDIS GmbH",
+                        "asn": "AS57169",
+                        "os": null,
+                        "country_code": "NL",
+                        "hostnames": [
+                            "25.6.190.188.static.edisglobal.com",
+                            "globalmining-services.top"
+                        ],
+                        "domains": [
+                            "edisglobal.com",
+                            "globalmining-services.top"
+                        ],
+                        "tags": [
+                            "eol-product",
+                            "self-signed"
+                        ],
+                        "vulns": [
+                            "CVE-2023-44487",
+                            "CVE-2025-23419"
+                        ],
+                        "services": [
+                            {
+                                "port": 22,
+                                "transport": "tcp",
+                                "product": "OpenSSH",
+                                "version": "9.6p1 Ubuntu 3ubuntu13.20"
+                            },
+                            {
+                                "port": 80,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "version": "1.24.0",
+                                "tags": [
+                                    "eol-product"
+                                ],
+                                "http_title": "301 Moved Permanently"
+                            },
+                            {
+                                "port": 443,
+                                "transport": "tcp",
+                                "product": "nginx",
+                                "tags": [
+                                    "self-signed"
+                                ],
+                                "http_title": "Global Mining Services — Integrated Mine Site Operations",
+                                "jarm": "2ad2ad0002ad2ad00042d42d0000002059a3b916699461c5923779b77cf06b",
+                                "certificate_sha256": "982bd8c8fc3fe95435430b0029632256d3e0e0016e7a35442aeb1cc5777ee83f",
+                                "certificate_subject": "globalmining-services.top",
+                                "certificate_organisation": "Global Mining Services",
+                                "certificate_issuer": "globalmining-services.top"
+                            },
+                            {
+                                "port": 8080,
+                                "transport": "tcp",
+                                "product": "Cobalt Strike Beacon",
+                                "tags": [
+                                    "eol-product",
+                                    "self-signed"
+                                ],
+                                "jarm": "2ad2ad16d2ad2ad00042d42d00042ddb04deffa1705e2edc44cae1ed24a4da",
+                                "certificate_sha256": "87f2085c32b6a2cc709b365f55873e207a9caa10bffecf2fd16d3cf9d94d390c"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         "spamhaus": {
             "last_checked": "2026-11-28T09:58:55Z",
             "observations": []
         },
         "threatfox": {
-            "last_checked": "2026-11-28T09:58:48Z",
+            "last_checked": "2026-11-28T18:08:02Z",
             "observations": [
                 {
                     "key": "2018391",
                     "first_observed": "2026-11-07T13:49:24Z",
-                    "last_observed": "2026-11-28T09:58:48Z",
+                    "last_observed": "2026-11-28T18:08:02Z",
                     "flags": [
                         "cobalt strike"
                     ],
